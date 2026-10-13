@@ -58,9 +58,9 @@ open public class DecalAnimationInterfaceFactory : Object {
             animationInterfaceFactoryInterface =
                 FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(
                     basicGameResources!!.RESOURCE
-                )
+                )!!
         } else {
-            animationInterfaceFactoryInterface = NullRotationAnimationFactory.getFactoryInstance()
+            animationInterfaceFactoryInterface = NullRotationAnimationFactory.getFactoryInstance()!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

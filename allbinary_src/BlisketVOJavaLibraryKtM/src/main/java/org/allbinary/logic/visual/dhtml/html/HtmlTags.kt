@@ -48,8 +48,6 @@ this.htmlTagVector= BasicArrayListD()
 : HtmlTag{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.htmlTagVector!!.get(index) as HtmlTag
 }
@@ -66,8 +64,6 @@ this.htmlTagVector!!.add(htmlTag)
     open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.htmlTagVector!!.size()

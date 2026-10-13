@@ -50,8 +50,6 @@ var transformInfoInterface = transformInfoInterface
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -60,8 +58,6 @@ var transformInfoInterface = transformInfoInterface
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MESSAGES.CONTACTADMIN
@@ -72,8 +68,6 @@ var transformInfoInterface = transformInfoInterface
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -83,8 +77,6 @@ var transformInfoInterface = transformInfoInterface
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

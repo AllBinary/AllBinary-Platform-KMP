@@ -79,8 +79,6 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -94,8 +92,6 @@ var transformInfoInterface = transformInfoInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -133,8 +129,6 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -149,8 +143,6 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -162,8 +154,6 @@ var transformInfoInterface = transformInfoInterface
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -173,8 +163,6 @@ var transformInfoInterface = transformInfoInterface
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

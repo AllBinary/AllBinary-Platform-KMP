@@ -53,8 +53,6 @@ this.setMotionRectangles(motionRectangles)
         //nullable = true from not(false or (false and true)) = true
 : MotionRectangles{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.motionRectangles
 }
@@ -71,8 +69,6 @@ this.motionRectangles= motionRectangles
     open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frame

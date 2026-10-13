@@ -58,32 +58,32 @@ open public class DirectionalAnalogLocationInputProcessor :
                 GameKeyEventFactory.getInstance()!!.getInstanceForInput(
                     this,
                     this.gameKeyFactory!!.LEFT,
-                )
+                )!!
             this.rightGameKeyEvent =
                 GameKeyEventFactory.getInstance()!!.getInstanceForInput(
                     this,
                     this.gameKeyFactory!!.RIGHT,
-                )
+                )!!
             this.upGameKeyEvent =
                 GameKeyEventFactory.getInstance()!!.getInstanceForInput(
                     this,
                     this.gameKeyFactory!!.UP,
-                )
+                )!!
             this.downGameKeyEvent =
                 GameKeyEventFactory.getInstance()!!.getInstanceForInput(
                     this,
                     this.gameKeyFactory!!.DOWN,
-                )
+                )!!
             this.leftTriggerGameKeyEvent =
                 GameKeyEventFactory.getInstance()!!.getInstanceForInput(
                     this,
                     this.gameKeyFactory!!.KEY_NUM0,
-                )
+                )!!
             this.rightTriggerGameKeyEvent =
                 GameKeyEventFactory.getInstance()!!.getInstanceForInput(
                     this,
                     this.gameKeyFactory!!.KEY_NUM5,
-                )
+                )!!
         } catch (e: Exception) {
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -105,7 +105,7 @@ open public class DirectionalAnalogLocationInputProcessor :
 
             var customGPoint: CustomGPoint
 
-            customGPoint = analogLocationInput!!.getCustomGPoint()
+            customGPoint = analogLocationInput!!.getCustomGPoint()!!
 
             var x: Int = customGPoint!!.getX()
 

@@ -92,7 +92,7 @@ this.volume= 0
 
                                     }
                                 
-image= this.createImage(caller, width, height)
+image= this.createImage(caller, width, height)!!
 
     
                         if(foundIndex ==  -1)
@@ -109,8 +109,6 @@ this.listOfList[foundIndex]!!.add(image)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -145,7 +143,7 @@ this.listOfList[foundIndex]!!.add(image)
 
         try {
             this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
-image= this.createImage(key, inputStream)
+image= this.createImage(key, inputStream)!!
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
@@ -155,15 +153,13 @@ this.tsUtil!!.gc()
 this.tsUtil!!.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
 Thread.sleep(100)
-image= this.createImage(key, inputStream)
+image= this.createImage(key, inputStream)!!
 }
 
 this.hashtable.put(resourceId, image)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -197,8 +193,6 @@ this.hashtable.put(resourceId, image)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return index
 
@@ -222,8 +216,6 @@ this.logUtil!!.putF(StringMaker().
 : Image{
     //var key = key
     //var inputStream = inputStream
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Image.createImageLater(key as String,  -1,  -1)

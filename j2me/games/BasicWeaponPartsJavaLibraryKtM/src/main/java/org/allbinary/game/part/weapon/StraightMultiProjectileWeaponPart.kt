@@ -143,7 +143,7 @@ open public class StraightMultiProjectileWeaponPart : BasicWeaponPart {
                     otherAngle.toInt(),
                     weaponProperties,
                     scoreableInterface,
-                )
+                )!!
             allbinaryLayerManager!!.append(weaponLayer)
             next += increment
         }

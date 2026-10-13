@@ -66,8 +66,6 @@ this.tableName= tableName
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tableName
 }
@@ -91,8 +89,6 @@ var data = data
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tableName +this.sqlStrings!!.CREATE_RETURN
 } catch(e: Exception)
@@ -106,8 +102,6 @@ var data = data
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Failed to Create " +this.tableName +" table."
@@ -136,8 +130,6 @@ var data = data
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return tableName +this.DROPPED_SUCCESS
 } catch(e: Exception)
@@ -151,8 +143,6 @@ var data = data
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Failed to Drop " +tableName +" table."

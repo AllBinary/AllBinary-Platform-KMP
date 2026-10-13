@@ -55,8 +55,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : BlisketBackupFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BlisketBackupFactory.instance
 }
@@ -88,8 +86,6 @@ var pathString = pathString
 
 
     var file: AbFile = AbFile.createAbFileFromAbPath(path)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,7 +169,7 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.VIEWS_PATH)
 stringBuffer!!.append(nextStore)
-viewsPath= stringBuffer!!.toString()
+viewsPath= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Backup Store Views: ")
 stringBuffer!!.append(nextStore)
@@ -238,12 +234,12 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
         {
 nextStore= storeFrontNamesBasicArrayList!!.get(index) as String
-storeFrontInterface= storeFrontsEntity!!.getStoreFrontInterface(nextStore)
+storeFrontInterface= storeFrontsEntity!!.getStoreFrontInterface(nextStore)!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(storeFrontInterface!!.getCurrentHostNamePath())
 stringBuffer!!.append(storeFrontInterface!!.getCategoryPath())
-resourcesPath= stringBuffer!!.toString()
+resourcesPath= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Backup Store Resrouces: ")
 stringBuffer!!.append(nextStore)

@@ -34,8 +34,6 @@ var encryptedExtension = encryptedExtension
 : String?{
 var fileAbPath = fileAbPath
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -47,8 +45,6 @@ var fileAbPath = fileAbPath
         //nullable = true from not(false or (false and false)) = true
 : InputStream?{
 var fileAbPath = fileAbPath
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

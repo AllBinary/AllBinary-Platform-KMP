@@ -61,8 +61,6 @@ var direction = direction
     var healthBarAnimationInterfaceFactory: HealthBarAnimationInterfaceFactory = featuredAnimationInterfaceFactoryInterfaceFactory!!.get(Health.NAME) as HealthBarAnimationInterfaceFactory
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HealthBar(layerInterface, healthInterface, healthBarAnimationInterfaceFactory!!.getInstanceByLocation(layerInterface, location), direction)
 
@@ -70,8 +68,6 @@ var direction = direction
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HealthBar(layerInterface, healthInterface, HealthBarTwodAnimation(layerInterface, location), direction)
 

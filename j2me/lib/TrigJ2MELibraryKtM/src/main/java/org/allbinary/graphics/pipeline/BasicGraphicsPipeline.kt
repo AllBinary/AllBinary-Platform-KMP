@@ -122,7 +122,7 @@ open public class BasicGraphicsPipeline : Object {
                 y = secondPoint!!.getY() * sin
                 secondX = (secondPoint!!.getX() * cos) - y
                 secondY = (secondPoint!!.getX() * sin) + (secondPoint!!.getY() * cos)
-                point = pointFactory!!.createXY(secondX.toInt() / 10000, secondY.toInt() / 10000)
+                point = pointFactory!!.createXY(secondX.toInt() / 10000, secondY.toInt() / 10000)!!
                 newBasicArrayList!!.add(point)
             } else {
                 newBasicArrayList!!.add(secondPoint)
@@ -167,7 +167,7 @@ open public class BasicGraphicsPipeline : Object {
                     newX = halfWidth + (halfWidth - secondPoint!!.getX())
                 }
 
-                point = pointFactory!!.createXY(newX, secondPoint!!.getY())
+                point = pointFactory!!.createXY(newX, secondPoint!!.getY())!!
                 newBasicArrayList!!.add(point)
             } else {
                 newBasicArrayList!!.add(secondPoint)

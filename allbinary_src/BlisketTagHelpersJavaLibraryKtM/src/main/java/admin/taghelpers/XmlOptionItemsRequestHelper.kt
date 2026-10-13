@@ -70,11 +70,11 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(basicItemData!!.ID)
-this.xmlFileStatus= this.request.getParameter(XmlOptionItemData.XML_FILE_STATUS)
-this.optionXmlFile= this.request.getParameter(XmlOptionItemData.OPTION_XML_FILE)
-this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
+this.xmlFileStatus= this.request.getParameter(XmlOptionItemData.XML_FILE_STATUS)!!
+this.optionXmlFile= this.request.getParameter(XmlOptionItemData.OPTION_XML_FILE)!!
+this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)!!
+this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)!!
 }
 
 
@@ -96,8 +96,6 @@ values.put(XmlOptionItemData.OPTION_XML_FILE, this.optionXmlFile)
                                 
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -139,8 +137,6 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -157,8 +153,6 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -186,8 +180,6 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -204,8 +196,6 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -237,8 +227,6 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -255,8 +243,6 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

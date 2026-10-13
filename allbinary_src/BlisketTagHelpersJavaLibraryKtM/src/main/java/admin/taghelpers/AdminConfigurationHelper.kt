@@ -58,8 +58,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -76,8 +74,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -104,8 +100,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -123,8 +117,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -139,8 +131,6 @@ var pageContext = pageContext
         try {
             
     var success: String = "No Imp"
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -159,8 +149,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -187,8 +175,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -205,8 +191,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

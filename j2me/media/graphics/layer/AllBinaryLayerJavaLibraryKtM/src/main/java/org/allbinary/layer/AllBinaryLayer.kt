@@ -72,14 +72,14 @@ open public class AllBinaryLayer : Layer, LayerInterface {
 
         if (name == null) {
 
-            localName = this::class.toString()!!
+            localName = this::class.toString()!! !!
         } else {
             localName =
                 StringMaker()
                     .append(name)!!
                     .append(CommonSeps.getInstance()!!.COLON)!!
                     .append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(this)))!!
-                    .toString()
+                    .toString()!!
         }
 
         this.name = localName
@@ -272,19 +272,19 @@ open public class AllBinaryLayer : Layer, LayerInterface {
         stringBuffer!!.appendint(this.getType())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(positionStrings!!.X_LABEL)
-        stringBuffer!!.appendint(this.getXP())
+        stringBuffer!!.appendint(this.getXP().toInt())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(positionStrings!!.Y_LABEL)
-        stringBuffer!!.appendint(this.getYP())
+        stringBuffer!!.appendint(this.getYP().toInt())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(positionStrings!!.Z_LABEL)
-        stringBuffer!!.appendint(this.getZP())
+        stringBuffer!!.appendint(this.getZP().toInt())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-        stringBuffer!!.appendint(this.getWidth())
+        stringBuffer!!.appendint(this.getWidth().toInt())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-        stringBuffer!!.appendint(this.getHeight())
+        stringBuffer!!.appendint(this.getHeight().toInt())
     }
 
     override fun toString()

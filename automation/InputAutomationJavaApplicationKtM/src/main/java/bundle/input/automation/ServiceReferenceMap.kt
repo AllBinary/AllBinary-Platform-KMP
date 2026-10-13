@@ -49,8 +49,6 @@ var map = map
     var stringBuffer: StringMaker = StringMaker()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -71,8 +69,6 @@ this.serviceReference= serviceReference
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return  -1
 }
@@ -81,8 +77,6 @@ this.serviceReference= serviceReference
     open fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -94,8 +88,6 @@ this.serviceReference= serviceReference
 : Boolean{
 var key = key
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -106,8 +98,6 @@ var key = key
 : Boolean{
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -117,8 +107,6 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var key = key
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.serviceReference!!.getProperty(key as String)
@@ -131,8 +119,6 @@ var key = key
 var key = key
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -142,8 +128,6 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 : Any?{
 var key = key
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -170,8 +154,6 @@ var m = m
     var keyStringArray: Array<String?> = this.serviceReference!!.getPropertyKeys()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -181,8 +163,6 @@ var m = m
         //nullable = true from not(false or (false and true)) = true
 : Collection<Any>?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -191,8 +171,6 @@ var m = m
     open fun entrySet()
         //nullable = true from not(false or (false and true)) = true
 : Set?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

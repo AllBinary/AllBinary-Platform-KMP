@@ -74,8 +74,6 @@ this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -83,8 +81,6 @@ this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -102,8 +98,6 @@ this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -117,8 +111,6 @@ this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "No Users"
 } catch(e: Exception)
@@ -133,8 +125,6 @@ this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -146,8 +136,6 @@ this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -157,8 +145,6 @@ this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

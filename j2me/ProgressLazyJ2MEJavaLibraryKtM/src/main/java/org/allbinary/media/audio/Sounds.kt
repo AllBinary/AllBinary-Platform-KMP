@@ -102,8 +102,8 @@ this.soundsFactoryInterface!!.init()
                                 )
                         
                                     {
-                                    indexInteger= smallIntegerSingletonFactory!!.getAt(i)
-indexString= indexInteger!!.toString()
+                                    indexInteger= smallIntegerSingletonFactory!!.getAt(i)!!
+indexString= indexInteger!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.append(indexString)
@@ -152,7 +152,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, this.soundStrings!!.STOP_A
                                 )
                         
                                     {
-                                    player= soundInterfaceArray[index]!!.getPlayerP()
+                                    player= soundInterfaceArray[index]!!.getPlayerP()!!
 
     
                         if(player != 
@@ -202,7 +202,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, this.soundStrings!!.CLOSE_
                                 )
                         
                                     {
-                                    player= soundInterfaceArray[index]!!.getPlayerP()
+                                    player= soundInterfaceArray[index]!!.getPlayerP()!!
 
     
                         if(player != 

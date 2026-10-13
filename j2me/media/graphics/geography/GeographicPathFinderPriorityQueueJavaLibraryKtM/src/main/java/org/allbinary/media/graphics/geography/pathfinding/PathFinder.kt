@@ -302,7 +302,7 @@ open public class PathFinder : GeographicPathFinderBase {
         var current: PathFindingNodeCost
 
         do {
-            current = this.openPriorityQueue!!.poll()
+            current = this.openPriorityQueue!!.poll()!!
             this.closedSet!!.add(current)
 
             if (current.equals(targetNode)) {
@@ -448,7 +448,7 @@ open public class PathFinder : GeographicPathFinderBase {
         var total: Int = 0
 
         do {
-            current = this.openPriorityQueue!!.poll()
+            current = this.openPriorityQueue!!.poll()!!
             this.closedSet!!.add(current)
 
             if (current.equals(targetNode)) {

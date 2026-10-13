@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : UserName{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserName.instance
 }
@@ -63,15 +61,11 @@ var aUserName = aUserName
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Please enter a User Name with more than 5 characters.<br/>"
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
@@ -102,8 +96,6 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isValid(this.userName)
 } catch(e: Exception)
@@ -118,8 +110,6 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -130,8 +120,6 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
     open fun get()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
@@ -181,8 +169,6 @@ valid= booleanFactory!!.FALSE
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -196,8 +182,6 @@ valid= booleanFactory!!.FALSE
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

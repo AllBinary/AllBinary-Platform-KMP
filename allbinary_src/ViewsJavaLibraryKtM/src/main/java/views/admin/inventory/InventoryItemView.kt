@@ -107,8 +107,6 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InventoryItemView.TYPE_ID
 }
@@ -139,15 +137,15 @@ this.setRequestHashMap(MultipartRequestParams(this.request).
                                  && fileItem!!.getSize() > 1)
                         
                                     {
-                                    this.imageFileName= HttpRequestUtil.getInstance()!!.generateFileName(fileItem!!.getName())
+                                    this.imageFileName= HttpRequestUtil.getInstance()!!.generateFileName(fileItem!!.getName())!!
 
     var pathData: AbPathData = AbPathData.getInstance()!!
 
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
 
-this.mediaData= MediaData.get(pathData!!.getExtension(this.imageFileName))
-this.imageFileName= pathUtil!!.getWithoutExtension(this.imageFileName)
+this.mediaData= MediaData.get(pathData!!.getExtension(this.imageFileName))!!
+this.imageFileName= pathUtil!!.getWithoutExtension(this.imageFileName)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -205,8 +203,6 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
         //nullable = true from not(false or (false and true)) = true
 : ItemInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.itemInterface
 }
@@ -220,8 +216,6 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
@@ -284,7 +278,7 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
 
     var fileItem: FileItem = this.getRequestHashMap()!!.get(basicItemData!!.IMAGE) as FileItem
 
-this.itemInterface= inventoryUploadMediaUtil!!.saveFiles(fileItem!!.get(), this.imageFileName, this.mediaData)
+this.itemInterface= inventoryUploadMediaUtil!!.saveFiles(fileItem!!.get(), this.imageFileName, this.mediaData)!!
 
                                     }
                                 
@@ -304,8 +298,6 @@ this.requestHashMap= requestHashMap
     open fun getRequestHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.requestHashMap

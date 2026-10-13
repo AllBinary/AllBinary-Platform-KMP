@@ -57,8 +57,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TrueTypeFontUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TrueTypeFontUtil.instance
 }
@@ -96,14 +94,10 @@ private constructor ()
                             
 this.widthScale= if((this.scale == 2)) {
                             
-                            
-                                        //Otherwise - thenExpr - DoubleLiteralExpr
-
+                            1.2f
                         
                             } else {
-                            
-                                        //Otherwise - expression - elseExpr - DoubleLiteralExpr
-
+                            1f
                             }
     
 }
@@ -174,8 +168,6 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fontImage
 
@@ -183,8 +175,6 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fontImage
 
@@ -320,8 +310,6 @@ graphics.drawChar(this.characterArray[0]!!, x, y, 0)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
 }
@@ -389,8 +377,6 @@ _characterWidth[index]= w.toInt()
                             
 _characterWidth[index] *= this.widthScale
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

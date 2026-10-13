@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AcceptableResponseGenerator{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AcceptableResponseGenerator.instance
 }
@@ -109,7 +107,7 @@ var httpServletRequest = httpServletRequest
                         if(acceptable.compareTo(acceptableResponseUtil!!.get(index)) == 0)
                         
                                     {
-                                    result= acceptableResponseUtil!!.getTagName(index)
+                                    result= acceptableResponseUtil!!.getTagName(index)!!
 
                                     }
                                 
@@ -127,8 +125,6 @@ var httpServletRequest = httpServletRequest
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result

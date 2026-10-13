@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PathFindingInfoFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PathFindingInfoFactory.instance
 }
@@ -73,8 +71,6 @@ PreLogUtil.put(commonStrings!!.START, this, commonStrings!!.GET_INSTANCE)
 
 RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
 this.init(geographicMapInterface, pathFindingInfo, graphArray)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return pathFindingInfo

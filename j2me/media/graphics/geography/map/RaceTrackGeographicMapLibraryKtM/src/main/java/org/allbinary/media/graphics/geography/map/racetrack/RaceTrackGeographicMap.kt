@@ -60,7 +60,7 @@ open public class RaceTrackGeographicMap : BaseRaceTrackGeographicMap {
 
         // For kotlin this is before the body of the constructor.
 
-        this.customMapGenerator = customMapGeneratorBaseFactory!!.create(this)
+        this.customMapGenerator = customMapGeneratorBaseFactory!!.create(this)!!
     }
 
     open fun getCustomMapGenerator()
@@ -86,7 +86,7 @@ open public class RaceTrackGeographicMap : BaseRaceTrackGeographicMap {
             var stringBuffer: StringMaker = StringMaker()
 
             stringBuffer!!.append("Column: ")
-            stringBuffer!!.appendint(geographicMapCellPosition!!.getColumn())
+            stringBuffer!!.appendint(geographicMapCellPosition!!.getColumn().toInt())
             stringBuffer!!.append(" not in: ")
             stringBuffer!!.appendint(customMapArray[0]!!.size)
             this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
@@ -105,7 +105,7 @@ open public class RaceTrackGeographicMap : BaseRaceTrackGeographicMap {
             var stringBuffer: StringMaker = StringMaker()
 
             stringBuffer!!.append("Row: ")
-            stringBuffer!!.appendint(geographicMapCellPosition!!.getRow())
+            stringBuffer!!.appendint(geographicMapCellPosition!!.getRow().toInt())
             stringBuffer!!.append(" not in: ")
             stringBuffer!!.appendint(customMapArray!!.size)
             this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)

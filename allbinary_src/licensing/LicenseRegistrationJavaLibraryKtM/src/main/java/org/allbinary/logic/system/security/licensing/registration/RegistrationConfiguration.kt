@@ -51,8 +51,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : RegistrationConfiguration{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return RegistrationConfiguration.SINGLETON
 }
@@ -153,8 +151,6 @@ dataOutputStream!!.flush()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
                             append("Registration Code: ")!!.append(this.getRegistrationCode())!!.toString()
@@ -172,8 +168,6 @@ this.registrationCode= registrationCode
     open fun getRegistrationCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.registrationCode

@@ -52,8 +52,6 @@ this.userFactoryInterface= aUserFactoryInterface
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basicUserRole!!.toString()
 }
@@ -62,8 +60,6 @@ this.userFactoryInterface= aUserFactoryInterface
     open fun getBasicUserRole()
         //nullable = true from not(false or (false and true)) = true
 : BasicUserRole{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basicUserRole
@@ -76,8 +72,6 @@ this.userFactoryInterface= aUserFactoryInterface
         //nullable = true from not(false or (false and true)) = true
 : UserFactoryInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userFactoryInterface
 }
@@ -87,8 +81,6 @@ this.userFactoryInterface= aUserFactoryInterface
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basicUserRole!!.getSessionTimeout()
 }
@@ -97,8 +89,6 @@ this.userFactoryInterface= aUserFactoryInterface
     open fun getSessionInactivityTimeout()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basicUserRole!!.getSessionInactivityTimeout()

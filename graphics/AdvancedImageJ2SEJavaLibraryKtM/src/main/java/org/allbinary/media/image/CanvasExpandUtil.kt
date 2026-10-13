@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : CanvasExpandUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CanvasExpandUtil.instance
 }
@@ -93,7 +91,7 @@ companion object {
 
         {
 bufferedImage= bufferedImageArray[index]!!
-subBufferedImageArray[index]= imageUtil!!.createBufferedImage(bufferedImage, bufferedImage!!.getWidth() +increaseX, bufferedImage!!.getHeight() +increaseY, false)
+subBufferedImageArray[index]= imageUtil!!.createBufferedImage(bufferedImage, bufferedImage!!.getWidth() +increaseX, bufferedImage!!.getHeight() +increaseY, false)!!
 visitor.visit(subBufferedImageArray[index]!!, this.stringUtil!!.EMPTY_STRING, index)
 }
 

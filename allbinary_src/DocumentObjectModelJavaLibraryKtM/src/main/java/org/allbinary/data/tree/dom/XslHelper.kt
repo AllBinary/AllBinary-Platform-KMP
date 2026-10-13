@@ -50,8 +50,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : XslHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XslHelper.instance
 }
@@ -81,8 +79,6 @@ companion object {
     var transformer: Transformer = transformerFactory!!.newTransformer(xsltStreamSource)!!
 
 transformer.transform(xmlStreamSource, streamResult)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streamResult!!.getOutputStream()
@@ -117,8 +113,6 @@ tFactory!!.setURIResolver(resolver)
 
 transformer.transform(xmlStreamSource, streamResult)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streamResult!!.getOutputStream()
 } catch(e: Exception)
@@ -143,8 +137,6 @@ transformer.transform(xmlStreamSource, streamResult)
         try {
             
     var outputStream: ByteArrayOutputStream = ByteArrayOutputStream()
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,8 +165,6 @@ transformer.transform(xmlStreamSource, streamResult)
     var outputStream: ByteArrayOutputStream = ByteArrayOutputStream()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.translate(xsltStreamSource, xmlStreamSource, StreamResult(outputStream))!!.toString()
 } catch(e: Exception)
@@ -200,8 +190,6 @@ transformer.transform(xmlStreamSource, streamResult)
         try {
             
     var outputStream: ByteArrayOutputStream = ByteArrayOutputStream()
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

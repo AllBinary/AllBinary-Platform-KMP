@@ -81,9 +81,9 @@ open public class AndroidGameStatistics : BaseGameStatistics {
 
         totalTime = (totalTime / 10000)
         this.ANDROID_STRING_ARRAY[10] = this.TOTAL_ONDRAWS
-        this.ANDROID_STRING_ARRAY[11] = (this.totalOnDraws).toString()
+        this.ANDROID_STRING_ARRAY[11] = (this.totalOnDraws).toString()!!
         this.ANDROID_STRING_ARRAY[12] = this.ONDRAWS_RATE
-        this.ANDROID_STRING_ARRAY[13] = (this.totalOnDraws / totalTime).toString()
+        this.ANDROID_STRING_ARRAY[13] = (this.totalOnDraws / totalTime).toString()!!
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.ANDROID_STRING_ARRAY

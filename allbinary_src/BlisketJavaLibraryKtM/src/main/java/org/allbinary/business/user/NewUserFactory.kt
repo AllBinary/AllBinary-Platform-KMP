@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : UserInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return User()
 }
@@ -73,8 +71,6 @@ var transformInfoInterface = transformInfoInterface
     var role: String = httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(UserRoleData.NAME.toString()) as String
 
 hashMap!!.put(UserRoleData.NAME.toString(), role)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CreateUserFactory.getInstance(hashMap)
@@ -103,8 +99,6 @@ var propertiesHashMap = propertiesHashMap
     var roleString: String = propertiesHashMap!!.get(UserRoleData.NAME.toString()) as String
 
 requestHashMap!!.put(UserRoleData.NAME.toString(), roleString)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CreateUserFactory.getInstance(requestHashMap)

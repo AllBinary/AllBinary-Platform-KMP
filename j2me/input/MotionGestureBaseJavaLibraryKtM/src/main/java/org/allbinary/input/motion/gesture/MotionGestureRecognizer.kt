@@ -56,7 +56,7 @@ open public class MotionGestureRecognizer : Object {
 
     public constructor(id: Int) : super() {
         // var id = id
-        this.motionEventCircularPool = MotionEventCircularPool.createPool(id)
+        this.motionEventCircularPool = MotionEventCircularPool.createPool(id)!!
 
         var motionGesturesHandler: BasicEventHandler = BasicEventHandler()
 
@@ -65,9 +65,9 @@ open public class MotionGestureRecognizer : Object {
         var scrolledMotionGesturesHandler: BasicEventHandler = motionGesturesHandler
 
         try {
-            motionGesturesHandler = BasicMotionGesturesHandler.getInstance()
-            movedMotionGesturesHandler = MovedMotionGesturesHandler.getInstance()
-            scrolledMotionGesturesHandler = ScrolledMotionGesturesHandler.getInstance()
+            motionGesturesHandler = BasicMotionGesturesHandler.getInstance()!!
+            movedMotionGesturesHandler = MovedMotionGesturesHandler.getInstance()!!
+            scrolledMotionGesturesHandler = ScrolledMotionGesturesHandler.getInstance()!!
         } catch (e: Exception) {
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!

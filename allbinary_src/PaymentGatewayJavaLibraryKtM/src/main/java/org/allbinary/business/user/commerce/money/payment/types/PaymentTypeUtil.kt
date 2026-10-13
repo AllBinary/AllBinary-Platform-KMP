@@ -63,8 +63,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PaymentTypeUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PaymentTypeUtil.instance
 }
@@ -107,7 +105,7 @@ stringBuffer!!.append("payment")
 stringBuffer!!.append(sep)
 stringBuffer!!.append("gateway")
 stringBuffer!!.append(sep)
-this.PAYMENTGATEWAYFILEPATHSTRING= stringBuffer!!.toString()
+this.PAYMENTGATEWAYFILEPATHSTRING= stringBuffer!!.toString()!!
 }
 
 
@@ -144,8 +142,6 @@ var paymentTypeString = paymentTypeString
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentType
 
@@ -265,8 +261,6 @@ this.initDefault(storeName)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.get(this.defaultName)
 
@@ -283,8 +277,6 @@ this.initDefault(storeName)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var paymentType = paymentType
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentTypeVector!!.contains(paymentType)
@@ -316,8 +308,6 @@ var a_PaymentTypeVector = a_PaymentTypeVector
                         if(!a_PaymentTypeVector!!.contains(paymentType))
                         diff.add(paymentType)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

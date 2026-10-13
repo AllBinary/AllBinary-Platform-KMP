@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FREEBLISKET_PATH_GLOBALS{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FREEBLISKET_PATH_GLOBALS.instance
 }
@@ -81,27 +79,27 @@ private constructor ()
 
 stringBuffer!!.append("install")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-this.INSTALLPATH= stringBuffer!!.toString()
+this.INSTALLPATH= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.INIT_PATH)
 stringBuffer!!.append("views")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-this.XSLPATH= stringBuffer!!.toString()
+this.XSLPATH= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(this.XSLPATH)
 stringBuffer!!.append("configuration")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-this.CONFIGURATIONPATH= stringBuffer!!.toString()
+this.CONFIGURATIONPATH= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(this.CONFIGURATIONPATH)
 stringBuffer!!.append("user")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-this.USERCONFIGURATIONPATH= stringBuffer!!.toString()
+this.USERCONFIGURATIONPATH= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(this.CONFIGURATIONPATH)
 stringBuffer!!.append("context")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-this.CONTEXTCONFIGURATIONPATH= stringBuffer!!.toString()
+this.CONTEXTCONFIGURATIONPATH= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 }
 

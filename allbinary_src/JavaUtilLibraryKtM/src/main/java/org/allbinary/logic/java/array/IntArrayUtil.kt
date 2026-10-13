@@ -61,8 +61,6 @@ stringBuffer!!.appendint(array[index]!!)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -90,7 +88,7 @@ stringBuffer!!.append("{")
                         for (index2 in 0 until array[index]!!.size)
 
         {
-stringBuffer!!.appendint(array[index]!![index2]!!)
+stringBuffer!!.appendint(array[index]!![index2]!!.toInt())
 
     
                         if(index2 < array[index]!!.size -1)
@@ -113,8 +111,6 @@ stringBuffer!!.append("}")
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -152,7 +148,7 @@ stringBuffer!!.append("{")
                         for (index3 in 0 until array[index]!![index2]!!.length)
 
         {
-stringBuffer!!.appendint(array[index]!![index2]!![index3]!!)
+stringBuffer!!.appendint(array[index]!![index2]!![index3]!!.toInt())
 
     
                         if(index3 < array[index]!![index2]!!.length -1)
@@ -187,8 +183,6 @@ stringBuffer!!.append("}")
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

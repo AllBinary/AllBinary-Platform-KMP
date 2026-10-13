@@ -55,8 +55,6 @@ var htmlMetaAttributeData = htmlMetaAttributeData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -64,8 +62,6 @@ var htmlMetaAttributeData = htmlMetaAttributeData
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -77,8 +73,6 @@ var htmlMetaAttributeData = htmlMetaAttributeData
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name

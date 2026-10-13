@@ -46,21 +46,21 @@ open public class GenericOperatingSystem : Object, OperatingSystemInterface {
 
             this.osName = EMPTY_STRING
         } else {
-            this.osName = systemProperties!!.getName()
+            this.osName = systemProperties!!.getName()!!
         }
 
         if (stringValidationUtil!!.isEmpty(systemProperties!!.getArch())) {
 
             this.osArch = EMPTY_STRING
         } else {
-            this.osArch = systemProperties!!.getArch()
+            this.osArch = systemProperties!!.getArch()!!
         }
 
         if (stringValidationUtil!!.isEmpty(systemProperties!!.getVersion())) {
 
             this.osVersion = EMPTY_STRING
         } else {
-            this.osVersion = systemProperties!!.getVersion()
+            this.osVersion = systemProperties!!.getVersion()!!
         }
     }
 

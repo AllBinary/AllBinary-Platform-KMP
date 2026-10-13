@@ -65,13 +65,13 @@ open public class GeographicMapCellPositionArea : GeographicMapCellPositionAreaB
                 this.layerInterface!!.getXP(),
                 this.layerInterface!!.getYP(),
                 this.reusableOccupyingGeographicMapCellPositionList,
-            )
+            )!!
         this.surroundingGeographicMapCellPositionList =
             this.cellPositionsUtil!!.getAllSurrounding(
                 geographicMapInterface,
                 this.occupyingGeographicMapCellPositionList,
                 this.reusableSurroundingGeographicMapCellPositionList,
-            )
+            )!!
         this.surroundingCircularIndexUtil!!.setSize(
             this.surroundingGeographicMapCellPositionList!!.size()
         )

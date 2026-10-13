@@ -58,8 +58,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : File{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return File(FILENAME)
 }
@@ -82,8 +80,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.installed
 }
@@ -101,8 +97,6 @@ this.logUtil!!.putF("Installed: " +installed, this, "setIntalled")
     open fun getInputAutomationModuleConfigurationList()
         //nullable = true from not(false or (false and true)) = true
 : List<InputAutomationModuleConfiguration>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputAutomationModuleConfigurationList

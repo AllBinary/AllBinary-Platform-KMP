@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FullScreenPaintable{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FullScreenPaintable()
 }
@@ -77,7 +75,7 @@ private constructor (){
 
 this.Y= 4 *font.getHeight()
 this.beginWidth= (font.stringWidth(this.FULLSCREEN_TEXT) shr 1)
-this.myFontProcessor= MyFontProcessor.getInstance()
+this.myFontProcessor= MyFontProcessor.getInstance()!!
 }
 
 

@@ -69,7 +69,7 @@ this.imageProcessorInput= imageProcessorInput
 
     var numberStringArray: Array<String?> = arrayOfNulls(101)
 
-numberStringArray[0]= Integer.toString( -1)
+numberStringArray[0]= Integer.toString( -1)!!
 
 
 
@@ -77,7 +77,7 @@ numberStringArray[0]= Integer.toString( -1)
                         for (index in 1 until 100)
 
         {
-numberStringArray[index]= index.toString()
+numberStringArray[index]= index.toString()!!
 }
 
 
@@ -158,12 +158,8 @@ iconHeightList!!.add(864)
                         for (index2 in 0 until size)
 
         {
-width= get = iconWidthList!!.get(index2)get as Integer
-get.
-                    toInt()
-height= get = iconHeightList!!.get(index2)get as Integer
-get.
-                    toInt()
+width= (iconWidthList!!.get(index2) as Integer).toInt()
+height= (iconHeightList!!.get(index2) as Integer).toInt()
 
     var generatedBufferedImageArray: Array<BufferedImage?> = imageUtil!!.createBufferedImage3(imageProcessorInput!!.getBufferedImageArray(), width, height, true)!!
 
@@ -194,7 +190,7 @@ stringMaker!!.append(path)!!.append(ANDROID)!!.appendint(width)!!.append(CanvasS
 imagePersistanceUtil!!.saveWithBatik(AbFile.createAbFile(newFilePath), generatedBufferedImageArray[index]!!)
 stringMaker!!.delete(0, stringMaker!!.length())
 stringMaker!!.append(path)!!.append(IOS)!!.appendint(width)!!.append(CanvasStrings.getInstance()!!._PNG)
-newFilePath= stringMaker!!.toString()
+newFilePath= stringMaker!!.toString()!!
 imagePersistanceUtil!!.saveWithBatik(AbFile.createAbFile(newFilePath), generatedBufferedImageArray[index]!!)
 }
 
@@ -217,8 +213,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageProcessorInput

@@ -82,7 +82,7 @@ open public class LicenseServerInitFileUtil : Object {
                 fileStreamFactory!!.getFileOutputStreamInstance(
                     StringUtil.getInstance()!!.EMPTY_STRING,
                     filePath,
-                )
+                )!!
 
             var b: Int = 0
 

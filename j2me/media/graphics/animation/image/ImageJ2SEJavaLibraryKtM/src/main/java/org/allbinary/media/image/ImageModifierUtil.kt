@@ -47,8 +47,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageModifierUtil.instance
 }
@@ -129,9 +127,9 @@ companion object {
                         for (index2 in 0 until height)
 
         {
-colorModel= newBufferedImage!!.getColorModel()
+colorModel= newBufferedImage!!.getColorModel()!!
 dataElements= newBufferedImage!!.getRaster()!!.getDataElements(index, index2, 
-                            null)
+                            null)!!
 ax= colorModel!!.getAlpha(dataElements)
 rx= colorModel!!.getRed(dataElements)
 gx= colorModel!!.getGreen(dataElements)
@@ -163,7 +161,7 @@ bx= colorModel!!.getBlue(dataElements)
     var newBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(image)!!
 
 
-    var MAX: Float = 255
+    var MAX: Float = 255f
 
 
     var r: Float = (basicColor!!.red.toFloat()) /MAX
@@ -212,16 +210,16 @@ bx= colorModel!!.getBlue(dataElements)
                         for (index2 in 0 until height)
 
         {
-colorModel= newBufferedImage!!.getColorModel()
+colorModel= newBufferedImage!!.getColorModel()!!
 dataElements= newBufferedImage!!.getRaster()!!.getDataElements(index, index2, 
-                            null)
+                            null)!!
 ax= colorModel!!.getAlpha(dataElements)
 rx= colorModel!!.getRed(dataElements)
 gx= colorModel!!.getGreen(dataElements)
 bx= colorModel!!.getBlue(dataElements)
-rx *= r
-gx *= g
-bx *= b
+rx = (rx * r).toInt()
+gx = (gx * g).toInt()
+bx = (bx * b).toInt()
 newBufferedImage!!.setRGB(index, index2, (ax shl 24) or (rx shl 16) or (gx shl 8) or (bx))
 }
 
@@ -308,8 +306,6 @@ newImageArray[index]= image
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newImageArray
 } catch(e: Exception)
@@ -318,8 +314,6 @@ newImageArray[index]= image
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "getImageArray", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImageArray

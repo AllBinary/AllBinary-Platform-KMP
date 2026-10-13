@@ -52,8 +52,6 @@ this.paymentGatewayInterface= paymentGatewayInterface
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentGatewayInterface!!.toHashMap(false)
 }
@@ -62,8 +60,6 @@ this.paymentGatewayInterface= paymentGatewayInterface
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentGatewayInterface!!.toVector(false)
@@ -75,8 +71,6 @@ this.paymentGatewayInterface= paymentGatewayInterface
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentGatewayInterface!!.getKey() as Object

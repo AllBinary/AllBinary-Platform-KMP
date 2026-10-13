@@ -71,8 +71,7 @@ public constructor ()
                         
                                     {
                                     
-    var imageComparisonResultFrameCacheable: ImageComparisonResultFrameCacheable = 
-                                    (getInstance as AutomaticCacheInterface).get(frame) as ImageComparisonResultFrameCacheable
+    var imageComparisonResultFrameCacheable: ImageComparisonResultFrameCacheable = (ImageComparisonResultCacheSingleton.getInstance() as AutomaticCacheInterface).get(frame) as ImageComparisonResultFrameCacheable
 
 
     
@@ -146,8 +145,8 @@ this.logUtil!!.putF("Comparison Image File Path 2: " +filePath2, this, commonStr
 
     var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(2)
 
-bufferedImageArray[0]= bufferedImageCacheables[0]!!.getBufferedImage()
-bufferedImageArray[1]= bufferedImageCacheables[1]!!.getBufferedImage()
+bufferedImageArray[0]= bufferedImageCacheables[0]!!.getBufferedImage()!!
+bufferedImageArray[1]= bufferedImageCacheables[1]!!.getBufferedImage()!!
 
     var imagePersistanceUtil: ImagePersistanceUtil = ImagePersistanceUtil.getInstance()!!
 

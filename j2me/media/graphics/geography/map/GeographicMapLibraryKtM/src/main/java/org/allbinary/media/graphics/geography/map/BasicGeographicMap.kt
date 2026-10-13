@@ -70,7 +70,7 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
 
         this.geographicMapCellPositionFactoryInterface = geographicMapCellPositionFactoryInterface
         this.geographicMapCellPositionFactory =
-            geographicMapCellPositionBaseFactory!!.getInstance(this)
+            geographicMapCellPositionBaseFactory!!.getInstance(this)!!
         this.geographicMapCellTypeFactory = geographicMapCellTypeFactory
     }
 
@@ -86,7 +86,6 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
 
         when (direction) {
             0 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return this.geographicMapCellPositionFactory!!.getAt(
                     oldGeographicMapCellPosition!!.getColumn() - 1,
@@ -94,7 +93,6 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
                 )
             }
             1 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return this.geographicMapCellPositionFactory!!.getAt(
                     oldGeographicMapCellPosition!!.getColumn() + 1,
@@ -102,7 +100,6 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
                 )
             }
             2 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return this.geographicMapCellPositionFactory!!.getAt(
                     oldGeographicMapCellPosition!!.getColumn(),
@@ -110,7 +107,6 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
                 )
             }
             3 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return this.geographicMapCellPositionFactory!!.getAt(
                     oldGeographicMapCellPosition!!.getColumn(),
@@ -210,7 +206,6 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
                 }
             }
             else -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
             }

@@ -132,16 +132,12 @@ var pixelDelta = pixelDelta
                                 
 motionRectangle!!.getRectangle()!!.setSize(newWidth, newHeight)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -211,15 +207,11 @@ var pixelDelta = pixelDelta
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isPixelDeltaLikelyPartOfMotionRectangle(motionRectangle, pixelDelta)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -251,15 +243,11 @@ var pixelDelta = pixelDelta
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

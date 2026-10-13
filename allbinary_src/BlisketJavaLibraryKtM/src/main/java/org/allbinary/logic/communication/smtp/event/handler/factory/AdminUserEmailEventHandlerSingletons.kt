@@ -50,8 +50,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AdminUserEmailEventHandlerSingletons{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AdminUserEmailEventHandlerSingletons.instance
 }
@@ -122,8 +120,6 @@ var userEmailEventNameData = userEmailEventNameData
 
 this.userEmailEventHandlerHashMap!!.put(userEmailEventNameData, newUserEmailEventHandler)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newUserEmailEventHandler
 
@@ -139,8 +135,6 @@ this.userEmailEventHandlerHashMap!!.put(userEmailEventNameData, newUserEmailEven
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return userEmailEventHandler

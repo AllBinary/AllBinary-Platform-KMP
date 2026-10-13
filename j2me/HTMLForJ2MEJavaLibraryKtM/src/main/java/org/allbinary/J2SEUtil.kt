@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : J2SEUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return J2SEUtil.instance
 }
@@ -65,8 +63,6 @@ companion object {
     var objectArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return objectArray
 }
@@ -80,8 +76,6 @@ companion object {
     var objectArray: Array<Any?> = map.keySet()!!.toTypedArray()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return objectArray
 }
@@ -93,8 +87,6 @@ companion object {
     //var set = set
 
     var objectArray: Array<Any?> = set.toTypedArray()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

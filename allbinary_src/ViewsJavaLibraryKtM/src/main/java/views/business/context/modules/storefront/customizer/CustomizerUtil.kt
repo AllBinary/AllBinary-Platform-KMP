@@ -52,8 +52,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : CustomizerUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CustomizerUtil.instance
 }
@@ -97,8 +95,6 @@ var transformInfoInterface = transformInfoInterface
     var customizedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewName, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return customizedTransformInfoInterface
 }
@@ -133,8 +129,6 @@ var transformInfoInterface = transformInfoInterface
     var customizedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewName, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransformInfoObjectConfigComponentNodes(customizedTransformInfoInterface)
 }
@@ -159,8 +153,6 @@ var transformInfoInterface = transformInfoInterface
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = transformInfoInterface!!.getObjectConfigInterface()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return transformInfoObjectConfigInterface!!.getTransforms()
 }
@@ -183,8 +175,6 @@ var transformInfoInterface = transformInfoInterface
                                 
 
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = transformInfoInterface!!.getObjectConfigInterface()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -400,8 +390,6 @@ var transformInfoInterface = transformInfoInterface
 
 
     var specifiedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewNameOfViewToBeModified, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

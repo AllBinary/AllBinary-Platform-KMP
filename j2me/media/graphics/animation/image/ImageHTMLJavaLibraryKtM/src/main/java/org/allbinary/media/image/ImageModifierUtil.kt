@@ -44,8 +44,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageModifierUtil.instance
 }
@@ -92,8 +90,6 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var originalImageArray = originalImageArray
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImageArray

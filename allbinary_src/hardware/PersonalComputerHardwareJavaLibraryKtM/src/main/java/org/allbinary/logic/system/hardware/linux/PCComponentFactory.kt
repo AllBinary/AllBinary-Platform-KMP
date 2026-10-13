@@ -53,8 +53,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PCComponentFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PCComponentFactory.instance
 }
@@ -91,8 +89,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Ethernet(componentData) as HardwareComponentInterface
 
@@ -104,8 +100,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Bridge(componentData) as HardwareComponentInterface
 
@@ -117,8 +111,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HardDriveController(componentData) as HardwareComponentInterface
 
@@ -130,8 +122,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Media(componentData) as HardwareComponentInterface
 
@@ -143,8 +133,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HardDriveController(componentData) as HardwareComponentInterface
 
@@ -156,8 +144,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Usb(componentData) as HardwareComponentInterface
 
@@ -169,8 +155,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Video(componentData) as HardwareComponentInterface
 
@@ -182,8 +166,6 @@ var componentData = componentData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PCI(componentData) as HardwareComponentInterface
 
@@ -192,8 +174,6 @@ var componentData = componentData
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Unknown(componentData) as HardwareComponentInterface
@@ -212,8 +192,6 @@ var componentData = componentData
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Unknown(commonStrings!!.EXCEPTION)
 }
@@ -231,8 +209,6 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.ETHERNET.toString()
 
@@ -244,8 +220,6 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.BRIDGE.toString()
 
@@ -257,8 +231,6 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.IDE.toString()
 
@@ -270,8 +242,6 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.MULTIMEDIA.toString()
 
@@ -283,8 +253,6 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.SCSI.toString()
 
@@ -296,8 +264,6 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.USB.toString()
 
@@ -309,8 +275,6 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.VGA.toString()
 
@@ -322,15 +286,11 @@ var component = component
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.PCI.toString()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentFactory!!.UNKNOWN.toString()

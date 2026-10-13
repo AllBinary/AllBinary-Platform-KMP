@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ColorUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ColorUtil.instance
 }
@@ -66,15 +64,11 @@ companion object {
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -91,15 +85,11 @@ companion object {
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

@@ -52,8 +52,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : StylesValidationFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StylesValidationFactory.instance
 }
@@ -67,8 +65,6 @@ companion object {
 var hashMap = hashMap
 
     var stylesDocument: Document = hashMap!!.get(NameSpaceRequestParamData.DOCUMENT) as Document
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,8 +156,6 @@ var document = document
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CssElementsValidationFactory.getInstance(cssElementStyleNodeList)
 }
@@ -177,8 +171,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicArrayListD()

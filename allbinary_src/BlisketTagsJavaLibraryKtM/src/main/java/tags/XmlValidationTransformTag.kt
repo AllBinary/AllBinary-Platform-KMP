@@ -59,8 +59,6 @@ public constructor (){
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -98,8 +96,6 @@ public constructor (){
                                     {
                                     super.doStartTag()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.EVAL_BODY_INCLUDE
 
@@ -107,8 +103,6 @@ public constructor (){
                                 
                         else {
                             super.doStartTag()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.SKIP_BODY
@@ -119,16 +113,12 @@ public constructor (){
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 }
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

@@ -260,7 +260,7 @@ open public class BasicArrayList : Object {
                 newCapacity = minSize
             }
 
-            this.objectArray = this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
+            this.objectArray = this.arrayUtil!!.copyOf(this.objectArray, newCapacity)!!
         }
     }
 
@@ -272,7 +272,7 @@ open public class BasicArrayList : Object {
 
         if (this.currentIndex < oldCapacity) {
 
-            this.objectArray = this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)
+            this.objectArray = this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)!!
         }
     }
 

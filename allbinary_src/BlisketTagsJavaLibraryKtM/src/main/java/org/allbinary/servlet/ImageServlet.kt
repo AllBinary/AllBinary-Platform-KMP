@@ -73,7 +73,7 @@ open public class ImageServlet : HttpServlet {
 
     var file: AbFile = AbFile.createAbFile(URLGLOBALS.getWebappPath() +requestURI)!!
 
-inputStream= CloudStreamUtil.getInstance()!!.getFileLocal(file)
+inputStream= CloudStreamUtil.getInstance()!!.getFileLocal(file)!!
 
     var outputStream: ByteArrayOutputStream = ByteArrayOutputStream(8000)
 
@@ -137,8 +137,6 @@ this.processRequest(request, response)
     open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Serves Up Image"

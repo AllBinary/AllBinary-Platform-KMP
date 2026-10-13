@@ -75,7 +75,7 @@ public constructor (fileName: String)
 var fileName = fileName
 this.fileName= fileName
 this.profilesDefaultListModelHelper= DefaultListModelHelper()
-this.hashMap= StdUtil.getInstance()!!.createHashMap()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     
                         if(File(fileName).
@@ -177,8 +177,6 @@ this.getDefaultListModelHelper()!!.add(genericProfile!!.getName())
         //nullable = true from not(false or (false and true)) = true
 : DefaultListModelHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.profilesDefaultListModelHelper
 }
@@ -207,8 +205,6 @@ this.logUtil!!.putF("No Generic Profile Named: " +name +" availability was: " +t
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return genericProfile
@@ -274,8 +270,6 @@ node.appendChild(genericProfile!!.toXmlNode(document))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -293,8 +287,6 @@ node.appendChild(genericProfile!!.toXmlNode(document))
     var node: Node = this.toXmlNode(document)!!
 
 document.appendChild(node)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document

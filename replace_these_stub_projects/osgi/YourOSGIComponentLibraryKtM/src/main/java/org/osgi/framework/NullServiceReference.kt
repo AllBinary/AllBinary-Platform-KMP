@@ -44,8 +44,6 @@ open public class NullServiceReference
 : Any{
 var key = key
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullUtil.getInstance()!!.NULL_OBJECT
 }
@@ -54,8 +52,6 @@ var key = key
     open fun getPropertyKeys()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.getArrayInstance()

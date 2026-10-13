@@ -97,7 +97,7 @@ node.appendChild(basicItemView!!.toXmlNode(document))
 
     var value: String = hashMap!!.get(name as Object) as String
 
-value= stringUtil!!.getNonNull(value)
+value= stringUtil!!.getNonNull(value)!!
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
@@ -105,8 +105,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
     var shippingAddressNode: Node = document.createElement(StreetAddressData.NAME)!!
 
 shippingAddressNode!!.appendChild(this.itemInterface!!.getShippingAddress()!!.toXmlNode(document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node

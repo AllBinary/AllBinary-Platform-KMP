@@ -53,8 +53,6 @@ this.maxPathWeight= maxPathWeight
 : PathFinderGraphVisitorBase{
 var geographicMapInterface = geographicMapInterface
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasePathFinderGraphVisitor(geographicMapInterface, this.edgeMinimum, this.minPathWeight, this.maxPathWeight)
 }

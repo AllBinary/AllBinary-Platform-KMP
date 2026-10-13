@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbFileSystem{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFileSystem.instance
 }
@@ -67,8 +65,6 @@ companion object {
 : Boolean{
     //var path = path
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -79,8 +75,6 @@ companion object {
 : Boolean{
     //var path = path
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -90,8 +84,6 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
     //var currentDirPath = currentDirPath
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.getArrayInstance()
@@ -106,8 +98,6 @@ companion object {
     var bytes: ByteArray = ByteArray(1000000)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.readAsString(fileName, bytes)
 }
@@ -118,8 +108,6 @@ companion object {
 : String{
     //var fileName = fileName
     //var bytes = bytes
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
@@ -147,15 +135,11 @@ inputStream!!.close()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CLOSE, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

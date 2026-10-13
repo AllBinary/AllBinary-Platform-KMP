@@ -70,8 +70,6 @@ this.setObjectFile("views.generic.basket.mini.ValidationView")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -85,16 +83,12 @@ this.setObjectFile("views.generic.basket.mini.ValidationView")
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 }
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

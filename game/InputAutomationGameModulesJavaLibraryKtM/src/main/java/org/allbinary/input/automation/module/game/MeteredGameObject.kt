@@ -117,8 +117,6 @@ this.getRatios()[index]= Double(nominator /this.getSize())
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.good
 }
@@ -136,8 +134,6 @@ this.good= good
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.dropping
 }
@@ -154,8 +150,6 @@ this.dropping= dropping
     open fun getRatios()
         //nullable = true from not(false or (false and true)) = true
 : Array<Double?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ratios
@@ -177,13 +171,13 @@ stringBuffer!!.append(this.RATIOS_LABEL)
 
 
 
-                        for (index in 0 until this.getRatios()!!.length)
+                        for (index in 0 until this.getRatios()!!.size)
 
         {
 stringBuffer!!.append(this.getRatios()[index]!!.toString())
 
     
-                        if(index < this.getRatios()!!.length -1)
+                        if(index < this.getRatios()!!.size -1)
                         
                                     {
                                     stringBuffer!!.append(commonSeps!!.COMMA_SEP)
@@ -198,8 +192,6 @@ stringBuffer!!.appendboolean(this.isGood())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(this.IS_DROPPPING_LABEL)
 stringBuffer!!.appendboolean(this.isDropping())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -218,8 +210,6 @@ this.ratios= ratios
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minX
 }
@@ -236,8 +226,6 @@ this.minX= minX
     open fun getMaxX()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxX
@@ -256,8 +244,6 @@ this.maxX= maxX
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.y
 }
@@ -274,8 +260,6 @@ this.y= y
     open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.size

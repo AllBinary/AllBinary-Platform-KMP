@@ -69,7 +69,7 @@ open public class AllBinaryNoFlickerAndroidImageRotationAnimation : ImageBaseRot
         this.increment = (this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()).toShort()
         this.imageToShow = image
         this.twoImages[0] = image
-        this.twoImages[1] = ImageCopyUtil.getInstance()!!.createImage(image)
+        this.twoImages[1] = ImageCopyUtil.getInstance()!!.createImage(image)!!
     }
 
     override fun setBasicColorP(basicColor: BasicColor)

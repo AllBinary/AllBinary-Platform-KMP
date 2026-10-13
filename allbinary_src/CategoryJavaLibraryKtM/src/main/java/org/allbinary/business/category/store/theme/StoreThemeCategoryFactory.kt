@@ -77,8 +77,6 @@ this.transformInfoInterface= transformInfoInterface
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreThemeCategoryPropertiesFactory(this.transformInfoInterface) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, 0) as CategoryInterface
 } catch(e: Exception)
@@ -92,8 +90,6 @@ this.transformInfoInterface= transformInfoInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -115,8 +111,6 @@ var categoryAbPath = categoryAbPath
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreThemeCategoryPropertiesFactory(this.transformInfoInterface, categoryAbPath) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
@@ -130,8 +124,6 @@ var categoryAbPath = categoryAbPath
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -156,8 +148,6 @@ var node = node
     var level: Int = CategoryUtil.getPathLevel(categoryPath)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, node, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
@@ -171,8 +161,6 @@ var node = node
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -192,8 +180,6 @@ var level = level
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(categoryPath) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
@@ -207,8 +193,6 @@ var level = level
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -229,8 +213,6 @@ var categoryPath = categoryPath
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(categoryPath) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -244,8 +226,6 @@ var categoryPath = categoryPath
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -265,8 +245,6 @@ var level = level
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(node) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
@@ -280,8 +258,6 @@ var level = level
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -302,8 +278,6 @@ var node = node
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(node) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -317,8 +291,6 @@ var node = node
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -338,8 +310,6 @@ var level = level
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(categoryPropertiesHashMap) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
@@ -353,8 +323,6 @@ var level = level
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -375,8 +343,6 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(categoryPropertiesHashMap) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -390,8 +356,6 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -76,7 +76,7 @@ open public class CustomTextBoxIndexedAnimation :
         var font: Font = graphics.getFont()!!
 
         this.textChangeListener!!.onMeasure()
-        this.textChangeListener = TextChangeListener.getInstance()
+        this.textChangeListener = TextChangeListener.getInstance()!!
     }
 
     override fun setText(text: String)

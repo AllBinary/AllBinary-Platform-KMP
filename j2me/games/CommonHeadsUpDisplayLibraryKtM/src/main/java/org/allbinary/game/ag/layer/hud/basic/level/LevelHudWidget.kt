@@ -69,11 +69,11 @@ open public class LevelHudWidget : BasicHud, PaintableInterface {
 
         // For kotlin this is before the body of the constructor.
 
-        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(1000)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(1000)!!
 
         var LEVEL: String = "Lv "
 
-        this.levelString = LEVEL.toCharArray()
+        this.levelString = LEVEL.toCharArray()!!
         this.maxlevel = maxlevel
         this.level = maxlevel
         this.update()
@@ -95,7 +95,7 @@ open public class LevelHudWidget : BasicHud, PaintableInterface {
     open fun update()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.levelNumberCharArray = this.primitiveLongUtil!!.getCharArray(this.level)
+        this.levelNumberCharArray = this.primitiveLongUtil!!.getCharArray(this.level)!!
         this.levelNumberTotalDigits = this.primitiveLongUtil!!.getCurrentTotalDigits()
     }
 

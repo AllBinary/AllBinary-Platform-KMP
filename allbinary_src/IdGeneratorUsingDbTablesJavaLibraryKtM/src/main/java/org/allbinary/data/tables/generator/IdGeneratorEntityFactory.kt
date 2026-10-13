@@ -41,8 +41,6 @@ companion object {
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.generator.IdGeneratorEntity() as IdGeneratorEntityInterface
 } catch(e: Exception)
@@ -54,8 +52,6 @@ companion object {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, "ServerLicenseRequestEntityFactory", commonStrings!!.GET_INSTANCE, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

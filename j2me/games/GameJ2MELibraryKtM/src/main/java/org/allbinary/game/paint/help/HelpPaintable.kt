@@ -75,7 +75,7 @@ open public class HelpPaintable : Paintable, UpdateMyFontInterface {
             this.beginWidthArray[index] = (font.stringWidth(this.inputInfo[index]!!) shr 1)
         }
 
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun setInputInfoP(inputInfo: Array<String?>)

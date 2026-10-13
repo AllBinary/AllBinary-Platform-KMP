@@ -38,8 +38,6 @@ import org.allbinary.logic.string.StringMaker
         //nullable =  from not(true or (false and true)) = 
 : GameStatisticsFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GameStatisticsFactory.instance
 }
@@ -75,8 +73,6 @@ this.stringBuffer!!.append(string)
     /*actual*/ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().

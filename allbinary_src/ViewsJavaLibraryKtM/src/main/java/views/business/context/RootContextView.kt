@@ -86,8 +86,6 @@ var transformInfoInterface = transformInfoInterface
     var componentInterface: TransformInterface = TransformFactory.getInstance()!!.getInstance(this.abeClientInformation, viewName, this.getTransformInfoInterface())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return componentInterface!!.view()
 } catch(e: Exception)
@@ -174,8 +172,6 @@ var transformInfoInterface = transformInfoInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewName

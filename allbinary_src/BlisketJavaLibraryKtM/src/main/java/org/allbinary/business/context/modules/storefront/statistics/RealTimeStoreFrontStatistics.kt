@@ -64,8 +64,6 @@ this.storeFrontOrderHistoryStatisticsInterface= StoreFrontOrdersHistoryStatistic
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontAdvertisementsStatisticsInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeFrontAdvertisementsStatisticsInterface
 }
@@ -74,8 +72,6 @@ this.storeFrontOrderHistoryStatisticsInterface= StoreFrontOrdersHistoryStatistic
     open fun getUsers()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontUsersStatisticsInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeFrontUsersStatisticsInterface
@@ -86,8 +82,6 @@ this.storeFrontOrderHistoryStatisticsInterface= StoreFrontOrdersHistoryStatistic
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontInventoryStatisticsInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeFrontInventoryStatisticsInterface
 }
@@ -96,8 +90,6 @@ this.storeFrontOrderHistoryStatisticsInterface= StoreFrontOrdersHistoryStatistic
     open fun getOrders()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontOrdersHistoryStatisticsInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeFrontOrderHistoryStatisticsInterface

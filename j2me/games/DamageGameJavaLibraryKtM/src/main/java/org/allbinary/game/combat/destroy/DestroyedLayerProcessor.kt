@@ -76,7 +76,7 @@ open public class DestroyedLayerProcessor : BasicLayerProcessor {
                 layerInterface = layerInterfaceCanBeNull as AllBinaryLayer
                 allBinaryLayerManager!!.remove(layerInterface)
                 destroyedEvent =
-                    destroyEventCircularStaticPool!!.getInstanceForLayer(layerInterface)
+                    destroyEventCircularStaticPool!!.getInstanceForLayer(layerInterface)!!
                 destroyedEventHandler!!.fireEvent(destroyedEvent)
             } else {
 

@@ -55,13 +55,13 @@ open public class BasicProbabilityAIDataFactory : Object {
 
         var repeatLikelyhoodIntegerArray: Array<Integer?> = arrayOfNulls(Canvas.KEY_NUM9 + 1)
 
-        repeatLikelyhoodIntegerArray[Canvas.UP] = smallIntegerSingletonFactory!!.getAt(0)
-        repeatLikelyhoodIntegerArray[Canvas.DOWN] = smallIntegerSingletonFactory!!.getAt(0)
-        repeatLikelyhoodIntegerArray[Canvas.LEFT] = smallIntegerSingletonFactory!!.getAt(0)
-        repeatLikelyhoodIntegerArray[Canvas.RIGHT] = smallIntegerSingletonFactory!!.getAt(0)
-        repeatLikelyhoodIntegerArray[Canvas.KEY_NUM7] = smallIntegerSingletonFactory!!.getAt(0)
-        repeatLikelyhoodIntegerArray[Canvas.KEY_NUM9] = smallIntegerSingletonFactory!!.getAt(0)
-        repeatLikelyhoodIntegerArray[Canvas.KEY_NUM1] = smallIntegerSingletonFactory!!.getAt(10)
+        repeatLikelyhoodIntegerArray[Canvas.UP] = smallIntegerSingletonFactory!!.getAt(0)!!
+        repeatLikelyhoodIntegerArray[Canvas.DOWN] = smallIntegerSingletonFactory!!.getAt(0)!!
+        repeatLikelyhoodIntegerArray[Canvas.LEFT] = smallIntegerSingletonFactory!!.getAt(0)!!
+        repeatLikelyhoodIntegerArray[Canvas.RIGHT] = smallIntegerSingletonFactory!!.getAt(0)!!
+        repeatLikelyhoodIntegerArray[Canvas.KEY_NUM7] = smallIntegerSingletonFactory!!.getAt(0)!!
+        repeatLikelyhoodIntegerArray[Canvas.KEY_NUM9] = smallIntegerSingletonFactory!!.getAt(0)!!
+        repeatLikelyhoodIntegerArray[Canvas.KEY_NUM1] = smallIntegerSingletonFactory!!.getAt(10)!!
 
         var inputProbability: InputProbability =
             InputProbability(

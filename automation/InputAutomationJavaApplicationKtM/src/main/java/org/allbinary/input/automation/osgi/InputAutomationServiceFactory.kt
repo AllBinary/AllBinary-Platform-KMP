@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationServiceFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InputAutomationServiceFactory.inputAutomationServiceFactory
 }
@@ -70,8 +68,6 @@ private constructor ()
     //var bundle = bundle
     //var registration = registration
 this.logUtil!!.putF(this.commonStrings!!.START, this, "getService")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InputAutomationJFrame.getInstance()

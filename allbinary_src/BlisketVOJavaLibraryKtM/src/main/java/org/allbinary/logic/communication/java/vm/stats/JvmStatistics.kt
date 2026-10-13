@@ -40,15 +40,13 @@ open public class JvmStatistics
 public constructor ()
             : super()
         {
-this.runtime= Runtime.getRuntime()
+this.runtime= Runtime.getRuntime()!!
 }
 
 
     open fun getFreeMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.runtime.freeMemory()
@@ -59,8 +57,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryBytes() /1024
 }
@@ -69,8 +65,6 @@ this.runtime= Runtime.getRuntime()
     open fun getFreeMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryKilobytes() /1024
@@ -81,8 +75,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.runtime.maxMemory()
 }
@@ -91,8 +83,6 @@ this.runtime= Runtime.getRuntime()
     open fun getMaxMemoryKilobytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryBytes() /1024
@@ -103,8 +93,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryKilobytes() /1024
 }
@@ -113,8 +101,6 @@ this.runtime= Runtime.getRuntime()
     open fun getTotalMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.runtime.totalMemory()
@@ -125,8 +111,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryBytes() /1024
 }
@@ -135,8 +119,6 @@ this.runtime= Runtime.getRuntime()
     open fun getTotalMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryKilobytes() /1024
@@ -147,8 +129,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryBytes() as Long
 }
@@ -157,8 +137,6 @@ this.runtime= Runtime.getRuntime()
     open fun getFreeMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryKilobytes() as Long
@@ -169,8 +147,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryMegabytes() as Long
 }
@@ -179,8 +155,6 @@ this.runtime= Runtime.getRuntime()
     open fun getMaxMemoryBytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryBytes() as Long
@@ -191,8 +165,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryKilobytes() as Long
 }
@@ -201,8 +173,6 @@ this.runtime= Runtime.getRuntime()
     open fun getMaxMemoryMegabytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryMegabytes() as Long
@@ -213,8 +183,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryBytes() as Long
 }
@@ -223,8 +191,6 @@ this.runtime= Runtime.getRuntime()
     open fun getTotalMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryKilobytes() as Long
@@ -235,8 +201,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryMegabytes() as Long
 }
@@ -245,8 +209,6 @@ this.runtime= Runtime.getRuntime()
     open fun getFreeMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryBytesLong()!!.toString()
@@ -257,8 +219,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryKilobytesLong()!!.toString()
 }
@@ -267,8 +227,6 @@ this.runtime= Runtime.getRuntime()
     open fun getFreeMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getFreeMemoryMegabytesLong()!!.toString()
@@ -279,8 +237,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryBytesLong()!!.toString()
 }
@@ -289,8 +245,6 @@ this.runtime= Runtime.getRuntime()
     open fun getMaxMemoryKilobytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryKilobytesLong()!!.toString()
@@ -301,8 +255,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMaxMemoryMegabytesLong()!!.toString()
 }
@@ -311,8 +263,6 @@ this.runtime= Runtime.getRuntime()
     open fun getTotalMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryBytesLong()!!.toString()
@@ -323,8 +273,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryKilobytesLong()!!.toString()
 }
@@ -333,8 +281,6 @@ this.runtime= Runtime.getRuntime()
     open fun getTotalMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTotalMemoryMegabytesLong()!!.toString()
@@ -345,8 +291,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Thread.activeCount()
 }
@@ -356,8 +300,6 @@ this.runtime= Runtime.getRuntime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getNumberOfThreads() as Long
 }
@@ -366,8 +308,6 @@ this.runtime= Runtime.getRuntime()
     open fun getNumberOfThreadsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getNumberOfThreadsLong()!!.toString()

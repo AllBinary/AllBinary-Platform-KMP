@@ -63,7 +63,7 @@ open public class VelocityWidget : BasicHud {
         this.powerOfTenVelocity = powerOfTenVelocity
         this.maxVelocity = powerOfTenVelocity
         this.velocity = 0
-        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(powerOfTenVelocity)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(powerOfTenVelocity)!!
         this.updateMaxHeight = 14
     }
 
@@ -118,7 +118,7 @@ open public class VelocityWidget : BasicHud {
 
         if (lastVelocity != this.velocity) {
 
-            this.string = this.primitiveLongUtil!!.getCharArray(this.velocity * 18)
+            this.string = this.primitiveLongUtil!!.getCharArray(this.velocity * 18)!!
 
             if (OpenGLFeatureUtil.getInstance()!!.isAnyThreed()) {
 

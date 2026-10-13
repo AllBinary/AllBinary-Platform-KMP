@@ -45,8 +45,6 @@ public constructor ()
 : Any{
 var anyType = anyType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.visit(anyType as AbFile) as Object
 }
@@ -62,15 +60,11 @@ var file = file
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

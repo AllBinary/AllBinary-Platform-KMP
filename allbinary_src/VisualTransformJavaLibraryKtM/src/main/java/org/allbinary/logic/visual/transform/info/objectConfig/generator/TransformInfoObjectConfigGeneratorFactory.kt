@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoObjectConfigGeneratorFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoObjectConfigGeneratorFactory.instance
 }
@@ -89,8 +87,6 @@ this.logUtil!!.putF("Generating Instance for type: " +type, this, commonStrings!
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicGenerator()
 
@@ -102,8 +98,6 @@ this.logUtil!!.putF("Generating Instance for type: " +type, this, commonStrings!
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreFileGenerator(transformInfoInterface)
 

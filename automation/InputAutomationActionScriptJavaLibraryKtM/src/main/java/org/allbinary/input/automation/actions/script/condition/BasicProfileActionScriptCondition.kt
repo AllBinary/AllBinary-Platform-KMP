@@ -206,8 +206,6 @@ jMenu!!.add(jMenuItemColorAt)
 jMenu!!.add(jMenuItemAlways)
 jMenu!!.add(jMenuItemTimeInterval)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return jMenu
 }
@@ -235,8 +233,6 @@ jMenu!!.add(jMenuItemKey)
 jMenu!!.add(jMenuItemMouse)
 jMenu!!.add(jMenuItemJoystick)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return jMenu
 }
@@ -253,8 +249,6 @@ jMenu!!.add(jMenuItemJoystick)
 
 jMenuItemImage!!.addActionListener(this)
 jMenu!!.add(jMenuItemImage)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return jMenu
@@ -349,8 +343,6 @@ node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -359,8 +351,6 @@ node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
     open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.profileActionConditionInterfaceVector
@@ -475,8 +465,6 @@ this.logUtil!!.put("Error", this, "actionPerformed", e)
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.profileActionProcessorInterfaceVector
 }
@@ -529,16 +517,12 @@ var frame = frame
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

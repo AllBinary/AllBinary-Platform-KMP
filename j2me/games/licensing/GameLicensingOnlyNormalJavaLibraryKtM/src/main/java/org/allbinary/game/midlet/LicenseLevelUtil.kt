@@ -39,8 +39,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : LicenseLevelUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LicenseLevelUtil.instance
 }
@@ -58,8 +56,6 @@ companion object {
 : Int{
 var maxLevel = maxLevel
 var demoLevel = demoLevel
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return maxLevel

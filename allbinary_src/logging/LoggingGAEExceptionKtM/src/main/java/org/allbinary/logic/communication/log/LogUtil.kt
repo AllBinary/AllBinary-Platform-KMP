@@ -43,8 +43,6 @@ import org.allbinary.string.CommonStrings
         //nullable =  from not(true or (false and true)) = 
 : LogUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LogUtil.instance
 }
@@ -106,7 +104,7 @@ PreLogUtil.put("Loggin Initialized", this, "init()")
                                 )
                         
                                     {
-                                    className= clazz.toString()!!
+                                    className= clazz.toString()!!!!
 
                                     }
                                 
@@ -146,7 +144,7 @@ this.logger.log(Level.INFO, message)
                                 )
                         
                                     {
-                                    className= clazz.toString()!!
+                                    className= clazz.toString()!!!!
 
                                     }
                                 

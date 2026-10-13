@@ -107,7 +107,7 @@ object: Thread()
 
     var totalAngle: Integer = Integer(Integer.valueOf(this@RotationSpriteImageJPanel.totalAngleJComboBox!!.getSelectedItem() as String))!!
 
-generatedBufferedImageArray= ImageJ2SERotationUtil.getInstance()!!.getRotatedImages(bufferedImageArray[index]!!, totalFrames, totalAngle)
+generatedBufferedImageArray= ImageJ2SERotationUtil.getInstance()!!.getRotatedImages(bufferedImageArray[index]!!, totalFrames, totalAngle)!!
 this@RotationSpriteImageJPanel.result= ImageJ2SERotationUtil.getInstance()!!.createSpriteImage(generatedBufferedImageArray)
 this@RotationSpriteImageJPanel.getParent()!!.repaint()
 
@@ -125,7 +125,7 @@ this@RotationSpriteImageJPanel.getParent()!!.repaint()
     var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append("sprite")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append("sprite")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()!!
 logUtil!!.putF("New File Path: " +filePath, this, commonStrings!!.RUN)
 file= File(filePath)
 
@@ -283,8 +283,6 @@ var evt = evt
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageProcessorInput

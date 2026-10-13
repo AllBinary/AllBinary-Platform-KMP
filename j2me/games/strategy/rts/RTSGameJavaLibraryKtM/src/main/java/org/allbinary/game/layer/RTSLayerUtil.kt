@@ -193,7 +193,7 @@ open public class RTSLayerUtil : Object {
         for (index in size - 1 downTo 0) {
 
             partInterface = partInterfaceArray[index]!! as BasicWeaponPart
-            weaponProperties = partInterface!!.getWeaponProperties()
+            weaponProperties = partInterface!!.getWeaponProperties()!!
             total += this.getWeaponPropertiesCost(weaponProperties)
         }
 
@@ -225,7 +225,7 @@ open public class RTSLayerUtil : Object {
         for (index in size - 1 downTo 0) {
 
             partInterface = partInterfaceArray[index]!! as BasicWeaponPart
-            weaponProperties = partInterface!!.getWeaponProperties()
+            weaponProperties = partInterface!!.getWeaponProperties()!!
             downgradeWeaponCost =
                 this.getWeaponPropertiesCost(
                     this.createWeaponProperties(
@@ -273,7 +273,7 @@ open public class RTSLayerUtil : Object {
         for (index in size - 1 downTo 0) {
 
             partInterface = partInterfaceArray[index]!! as BasicWeaponPart
-            weaponProperties = partInterface!!.getWeaponProperties()
+            weaponProperties = partInterface!!.getWeaponProperties()!!
             upgradedWeaponCost =
                 this.getWeaponPropertiesCost(
                     this.createWeaponProperties(

@@ -62,8 +62,7 @@ var frame = frame
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
-    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = (
-                                    (getInstance as AutomaticCacheInterface).get(frame) as BufferedImageFrameCacheable)
+    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = ((CapturedBufferedImagesCacheSingleton.getInstance() as AutomaticCacheInterface).get(frame) as BufferedImageFrameCacheable)
 
 this.logUtil!!.putF(("Saving: " +capturedBufferedImageCacheable!!.toString()), this, commonStrings!!.SAVE)
 this.save(capturedBufferedImageCacheable!!.getBufferedImage(), frame)

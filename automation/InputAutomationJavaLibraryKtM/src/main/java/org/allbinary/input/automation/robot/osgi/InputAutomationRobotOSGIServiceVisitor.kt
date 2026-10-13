@@ -54,8 +54,6 @@ public constructor ()
 : Any{
     //var anyType = anyType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.visit(anyType as OSGIServiceInterface)
 }
@@ -86,15 +84,11 @@ InputRobotFactory.getInstance()!!.add(inputRobotInterfaceArray[index]!!)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

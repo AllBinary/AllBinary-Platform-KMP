@@ -44,8 +44,6 @@ companion object {
 var pageContext = pageContext
 var weblisketSession = weblisketSession
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformStoreDocument(pageContext, weblisketSession) as TransformDocumentInterface
 }
@@ -57,8 +55,6 @@ var weblisketSession = weblisketSession
         //nullable =  from not(true or (false and false)) = 
 : TransformDocumentInterface{
 var searchRequest = searchRequest
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformStoreDocument(searchRequest) as TransformDocumentInterface

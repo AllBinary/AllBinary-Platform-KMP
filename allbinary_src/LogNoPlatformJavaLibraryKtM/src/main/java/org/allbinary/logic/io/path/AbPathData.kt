@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbPathData{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPathData.instance
 }
@@ -78,8 +76,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return  -1
 
@@ -91,15 +87,11 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return  -1
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return indexOfFileExtensionDelmiter
@@ -121,12 +113,10 @@ private constructor ()
                         if(indexOfFileExtensionDelmiter >= 0)
                         
                                     {
-                                    extension= filePath!!.substring(indexOfFileExtensionDelmiter)
+                                    extension= filePath!!.substring(indexOfFileExtensionDelmiter)!!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return extension
@@ -148,12 +138,10 @@ private constructor ()
                         if(indexOfFileExtensionDelmiter >= 0)
                         
                                     {
-                                    extension= filePath!!.substring(indexOfFileExtensionDelmiter +1)
+                                    extension= filePath!!.substring(indexOfFileExtensionDelmiter +1)!!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return extension
@@ -182,8 +170,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return path
 
@@ -198,8 +184,6 @@ private constructor ()
     var categoryName: String = path.substring(0, endIndex)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getNameFromPath(categoryName)
 
@@ -208,8 +192,6 @@ private constructor ()
                         else {
                             
     var categoryName: String = path.substring(endIndex +1)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -242,8 +224,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -255,8 +235,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.removeNameFromPath(path.substring(0, endIndex -1))
 
@@ -265,8 +243,6 @@ private constructor ()
                         else {
                             
     var pathWithoutName: String = path.substring(0, endIndex)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -38,7 +38,7 @@ open public class HtmlTag
 public constructor ()
             : super()
         {
-this.otherAttributes= StdUtil.getInstance()!!.createHashMap()
+this.otherAttributes= StdUtil.getInstance()!!.createHashMap()!!
 }
 
 

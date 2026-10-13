@@ -94,8 +94,6 @@ public constructor (databaseConnectionInfoInterface: DbConnectionInfo)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.stringUtil!!.EMPTY_STRING
 
@@ -103,8 +101,6 @@ public constructor (databaseConnectionInfoInterface: DbConnectionInfo)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return value
 
@@ -164,7 +160,7 @@ stringBuffer!!.append(this.EQUAL_QUOTE)
                                 
                         else {
                             columnValue= Replace(this.sqlStrings!!.CLOSE_QUOTE, this.ESCAPE_QUOTES).
-                            all(columnValue)
+                            all(columnValue)!!
 
                         }
                             
@@ -276,7 +272,7 @@ stringBuffer!!.append(this.EQUAL_QUOTE)
                                 
                         else {
                             columnValue= Replace(this.sqlStrings!!.CLOSE_QUOTE, this.ESCAPE_QUOTES).
-                            all(columnValue)
+                            all(columnValue)!!
 
                         }
                             
@@ -523,7 +519,7 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
     var value: String = this.getValue(values.get(i) as String)!!
 
 value= Replace(this.sqlStrings!!.ESCAPE, this.sqlStrings!!.DOUBLE_ESCAPE).
-                            all(value)
+                            all(value)!!
 stringBuffer!!.append(value)
 stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 }
@@ -532,7 +528,7 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
     var value: String = this.getValue(values.get(values.size() -1) as String)!!
 
 value= Replace(this.sqlStrings!!.ESCAPE, this.sqlStrings!!.DOUBLE_ESCAPE).
-                            all(value)
+                            all(value)!!
 stringBuffer!!.append(value)
 stringBuffer!!.append(this.INSERT_END)
 
@@ -640,7 +636,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= this.stdUtil!!.createHashMap()
+result= this.stdUtil!!.createHashMap()!!
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()
 
@@ -670,8 +666,6 @@ result.put(columnName, field)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 }
@@ -685,8 +679,6 @@ result.put(columnName, field)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -702,8 +694,6 @@ result.put(columnName, field)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -715,8 +705,6 @@ result.put(columnName, field)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var keysAndValues = keysAndValues
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getRows(keysAndValues, StringUtil.getInstance()!!.EMPTY_STRING)
@@ -837,8 +825,6 @@ rows.add(result)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
@@ -852,8 +838,6 @@ rows.add(result)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -931,8 +915,6 @@ rows.add(result)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
@@ -946,8 +928,6 @@ rows.add(result)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -1051,7 +1031,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= this.stdUtil!!.createHashMap()
+result= this.stdUtil!!.createHashMap()!!
 columnNames= BasicArrayListD()
 columnCount= resultSetMetaData!!.getColumnCount()
 
@@ -1061,8 +1041,8 @@ columnCount= resultSetMetaData!!.getColumnCount()
                         for (index in 1 until columnCount)
 
         {
-columnName= resultSetMetaData!!.getColumnName(index)
-field= rset.getString(columnName)
+columnName= resultSetMetaData!!.getColumnName(index)!!
+field= rset.getString(columnName)!!
 result.put(columnName, field)
 }
 
@@ -1079,8 +1059,6 @@ rows.add(result)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
@@ -1094,8 +1072,6 @@ rows.add(result)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -1166,7 +1142,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= this.stdUtil!!.createHashMap()
+result= this.stdUtil!!.createHashMap()!!
 columnNames= BasicArrayListD()
 columnCount= resultSetMetaData!!.getColumnCount()
 
@@ -1176,8 +1152,8 @@ columnCount= resultSetMetaData!!.getColumnCount()
                         for (index in 1 until columnCount)
 
         {
-columnName= resultSetMetaData!!.getColumnName(index)
-field= rset.getString(columnName)
+columnName= resultSetMetaData!!.getColumnName(index)!!
+field= rset.getString(columnName)!!
 result.put(columnName, field)
 }
 
@@ -1194,8 +1170,6 @@ rows.add(result)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
@@ -1209,8 +1183,6 @@ rows.add(result)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

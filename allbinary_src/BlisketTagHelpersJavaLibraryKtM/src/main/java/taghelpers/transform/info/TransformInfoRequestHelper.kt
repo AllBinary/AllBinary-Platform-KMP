@@ -71,8 +71,6 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -89,8 +87,6 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -121,8 +117,6 @@ TransformInfoEntityBuilder.getInstance()!!.insert(values)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -139,8 +133,6 @@ TransformInfoEntityBuilder.getInstance()!!.insert(values)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -168,8 +160,6 @@ TransformInfoEntityBuilder.getInstance()!!.delete(this.transformInfoInterface!!.
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -186,8 +176,6 @@ TransformInfoEntityBuilder.getInstance()!!.delete(this.transformInfoInterface!!.
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

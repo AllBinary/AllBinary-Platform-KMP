@@ -54,7 +54,7 @@ open public class CanvasDrawLineString : Object, UpdateMyFontInterface {
         var font: Font = graphics.getFont()!!
 
         this.fontHeight = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun paint(graphics: Graphics, string: String, line: Int)

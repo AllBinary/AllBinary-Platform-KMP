@@ -83,7 +83,7 @@ open public class AbPathData : Object {
 
         if (indexOfFileExtensionDelmiter >= 0) {
 
-            extension = filePath!!.substring(indexOfFileExtensionDelmiter)
+            extension = filePath!!.substring(indexOfFileExtensionDelmiter)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +103,7 @@ open public class AbPathData : Object {
 
         if (indexOfFileExtensionDelmiter >= 0) {
 
-            extension = filePath!!.substring(indexOfFileExtensionDelmiter + 1)
+            extension = filePath!!.substring(indexOfFileExtensionDelmiter + 1)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

@@ -89,7 +89,7 @@ open public class PositionWidget : BasicHud {
     {
         var position = position
         this.position = position
-        this.positionString = PositionWidget.toString(this.get())
+        this.positionString = PositionWidget.toString(this.get())!!
     }
 
     open fun paint(graphics: Graphics)

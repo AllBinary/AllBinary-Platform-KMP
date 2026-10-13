@@ -54,8 +54,6 @@ this.setBufferedImage(bufferedImage)
         //nullable = true from not(false or (false and true)) = true
 : BufferedImage{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.bufferedImage
 }
@@ -72,8 +70,6 @@ this.bufferedImage= bufferedImage
     open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frame

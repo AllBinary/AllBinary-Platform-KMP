@@ -266,8 +266,8 @@ open public class RTSLayer :
         this.setPosition(x, y, this.z)
         this.verticleBuildAnimationInterface =
             verticleBuildAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
-        this.buildAnimationInterface = buildAnimationInterfaceFactoryInterface!!.getInstance(0)
-        this.baseAnimationInterface = baseAnimationInterfaceFactoryInterface!!.getInstance(0)
+        this.buildAnimationInterface = buildAnimationInterfaceFactoryInterface!!.getInstance(0)!!
+        this.baseAnimationInterface = baseAnimationInterfaceFactoryInterface!!.getInstance(0)!!
         this.emptyAnimationInterface =
             emptyAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
         this.indexedButShouldBeRotationAnimationInterface =

@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PaymentTransactionInterfaceFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PaymentTransactionInterfaceFactory.instance
 }
@@ -86,8 +84,6 @@ var orderReview = orderReview
 
 
     var paymentTransactionInterface: PaymentTransactionInterface = paymentTransactionInterfaceFactoryInterface!!.getInstance(orderReview)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

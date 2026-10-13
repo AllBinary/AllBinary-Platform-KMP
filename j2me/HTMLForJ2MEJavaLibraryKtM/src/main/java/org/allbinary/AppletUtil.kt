@@ -38,8 +38,6 @@ companion object {
 : Boolean{
 var anyType = anyType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }

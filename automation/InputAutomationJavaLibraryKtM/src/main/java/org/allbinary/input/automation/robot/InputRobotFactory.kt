@@ -59,8 +59,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InputRobotFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InputRobotFactory.inputRobotFactory
 }
@@ -279,7 +277,7 @@ this.logUtil!!.putF("Unloading Libraries", this, "unloadLibraries")
                         for (index in 0 until size)
 
         {
-inputRobotInterface= this.get(inputRobotArray[index]!! as String)
+inputRobotInterface= this.get(inputRobotArray[index]!! as String)!!
 
     
                         if(InterfaceUtil.isImplemented(SecuredNativeLibraryInterface::class, inputRobotInterface))
@@ -304,8 +302,6 @@ securedNativeLibraryInterface!!.unload()
         //nullable = true from not(false or (false and true)) = true
 : ABHashtable<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hashtable
 }
@@ -316,8 +312,6 @@ securedNativeLibraryInterface!!.unload()
 : InputRobotInterface{
     //var name = name
 this.logUtil!!.putF("Getting Robot: " +name, this, "getRobots")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hashtable.get(name as Object) as InputRobotInterface

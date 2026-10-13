@@ -60,7 +60,7 @@ import playn.core.PlayN
                                     }
                                 
 className= StringMaker().
-                            append(className)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(StringUtil.getInstance()!!.toString(anyType))!!.toString()
+                            append(className)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(StringUtil.getInstance()!!.toString(anyType))!!.toString()!!
 
     var message: String = LogFormatUtil.getInstance()!!.getS(className, functionName, specialMessage)!!
 
@@ -92,7 +92,7 @@ PlayN.getInstance()!!.log()!!.debug(PreLogUtil.LOG_SUCCESS +message)
                                     }
                                 
 className= StringMaker().
-                            append(className)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(StringUtil.getInstance()!!.toString(anyType))!!.toString()
+                            append(className)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(StringUtil.getInstance()!!.toString(anyType))!!.toString()!!
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 

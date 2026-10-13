@@ -67,7 +67,7 @@ open public class OperatingSystemFactory : Object {
 
                     this.logUtil!!.putF("Found a Android OS", this, commonStrings!!.GET_INSTANCE)
                     this.genericOperatingSystem =
-                        AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                        AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
                     this.logUtil!!.putF(
                         StringMaker()
                             .append("Operating System Info: ")!!
@@ -80,7 +80,7 @@ open public class OperatingSystemFactory : Object {
 
                     this.logUtil!!.putF("Found a Harmony OS", this, commonStrings!!.GET_INSTANCE)
                     this.genericOperatingSystem =
-                        AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                        AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
                     this.logUtil!!.putF(
                         StringMaker()
                             .append("Operating System Info: ")!!

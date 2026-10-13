@@ -116,12 +116,12 @@ OpenGLLogUtil.getInstance()!!.logError(gl10, this)
     //var x = x
     //var y = y
     //var z = z
-this.regionRectangleFloatArray[0]= x
-this.regionRectangleFloatArray[7]= viewHeight -y
+this.regionRectangleFloatArray[0]= x.toFloat()
+this.regionRectangleFloatArray[7]= (viewHeight -y).toFloat()
 this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -height
 this.regionRectangleFloatArray[3]= x +width
 this.regionRectangleFloatArray[4]= this.regionRectangleFloatArray[1]!!
-this.regionRectangleFloatArray[6]= x
+this.regionRectangleFloatArray[6]= x.toFloat()
 this.regionRectangleFloatArray[9]= this.regionRectangleFloatArray[3]!!
 this.regionRectangleFloatArray[10]= this.regionRectangleFloatArray[7]!!
 this.regionTextureRectangleFloatArray[0]= x_src /this.getWidth()
@@ -154,12 +154,12 @@ gl.glDisable(GL10.GL_TEXTURE_2D)
     //var x = x
     //var y = y
     //var z = z
-this.regionRectangleFloatArray[0]= x
+this.regionRectangleFloatArray[0]= x.toFloat()
 this.regionRectangleFloatArray[7]= DisplayInfoSingleton.getInstance()!!.getLastHeight() -y
 this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -this.getHeight()
 this.regionRectangleFloatArray[3]= x +this.getWidth()
 this.regionRectangleFloatArray[4]= this.regionRectangleFloatArray[1]!!
-this.regionRectangleFloatArray[6]= x
+this.regionRectangleFloatArray[6]= x.toFloat()
 this.regionRectangleFloatArray[9]= this.regionRectangleFloatArray[3]!!
 this.regionRectangleFloatArray[10]= this.regionRectangleFloatArray[7]!!
 this.glUtil!!.position(this.regionRectangleVertexFloatBuffer, 0)

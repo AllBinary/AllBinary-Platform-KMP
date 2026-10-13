@@ -64,7 +64,7 @@ open public class SelectionHudPaintable : InitUpdatePaintable, UpdateMyFontInter
 
     protected constructor() {
         this.update()
-        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(10000)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(10000)!!
     }
 
     override fun updateMeasurement(graphics: Graphics)
@@ -77,7 +77,7 @@ open public class SelectionHudPaintable : InitUpdatePaintable, UpdateMyFontInter
         var font: Font = graphics.getFont()!!
 
         this.setHeight(commonButtons!!.STANDARD_BUTTON_SIZE + font.getHeight())
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun update()

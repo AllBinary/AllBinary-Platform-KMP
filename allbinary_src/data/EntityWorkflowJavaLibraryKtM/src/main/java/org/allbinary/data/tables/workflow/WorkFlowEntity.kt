@@ -156,8 +156,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
     var hashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DbWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap) as WorkFlowInterface
 } catch(e: LicensingException)
@@ -239,8 +237,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return workFlowsVector
 } catch(e: Exception)
@@ -254,8 +250,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -303,8 +297,6 @@ super.updateWhere(wherekeysAndValues, updatedValues)
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(workFlowData!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DynamicObjectData.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(workFlowData!!.DATA)!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(workFlowData!!.NAME)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -314,8 +306,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -324,8 +314,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

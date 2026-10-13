@@ -51,8 +51,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageModifierUtil.instance
 }
@@ -207,8 +205,6 @@ openGLESImage!!.openGLESImageProperties!!.redf= basicColor!!.getRedComponent()
 openGLESImage!!.openGLESImageProperties!!.greenf= basicColor!!.getGreenComponent()
 openGLESImage!!.openGLESImageProperties!!.bluef= basicColor!!.getBlueComponent()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -241,7 +237,7 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
                         }
                             
 
-    var MAX: Float = 255
+    var MAX: Float = 255f
 
 
     var r: Float = (basicColor!!.red.toFloat()) /MAX
@@ -282,9 +278,9 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 rx= (imageData!!.data[index] and 0xFF) shl 16
 gx= (imageData!!.data[index +1] and 0xFF) shl 8
 bx= (imageData!!.data[index +2] and 0xFF)
-rx *= r
-gx *= g
-bx *= b
+rx = (rx * r).toInt()
+gx = (gx * g).toInt()
+bx = (bx * b).toInt()
 imageData!!.data[index]= rx.toByte()
 imageData!!.data[index +1]= gx.toByte()
 imageData!!.data[index +2]= bx.toByte()
@@ -318,8 +314,6 @@ imageData!!.data[index +2]= bx.toByte()
 
 openGLESImage!!.imageProcessor= ModifierOpenGLESImageProcessor.getInstance()
 openGLESImage!!.openGLESImageProperties!!.alphaf= (alphaInt.toFloat()) /255f
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -399,8 +393,6 @@ newImageArray[index]= image
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newImageArray
 } catch(e: Exception)
@@ -409,8 +401,6 @@ newImageArray[index]= image
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "getImageArray", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImageArray

@@ -129,7 +129,7 @@ open public class SmallLongFactory : Object {
 
         if (this.STRING_ARRAY[i] == null) {
 
-            this.STRING_ARRAY[i] = this.INTEGER_ARRAY[i]!!.toString()
+            this.STRING_ARRAY[i] = this.INTEGER_ARRAY[i]!!.toString()!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

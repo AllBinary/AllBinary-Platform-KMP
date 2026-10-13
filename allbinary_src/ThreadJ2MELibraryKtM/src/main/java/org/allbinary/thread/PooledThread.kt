@@ -59,7 +59,7 @@ open public class PooledThread : Thread {
             var task2: Runnable = this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
             try {
-                task2 = this.threadPool!!.getTask()
+                task2 = this.threadPool!!.getTask()!!
                 this.threadPool!!.runningTask = true
                 this.threadPool!!.startTask(task2)
             } catch (ex: InterruptedException) {

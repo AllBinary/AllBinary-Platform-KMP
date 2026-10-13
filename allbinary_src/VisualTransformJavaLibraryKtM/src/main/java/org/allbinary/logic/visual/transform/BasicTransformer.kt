@@ -299,8 +299,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "setTemplateAsInputStream()
                                     {
                                     this.setEncryptedTemplateFileAsInputStream(encFile)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -347,8 +345,6 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
                                 
 this.setInputStream(ByteArrayInputStream(outputStream!!.toByteArray()) as InputStream)
 this.setURIResolver(BasicUriResolver(transformInfoTemplateData!!.UNCRYPTED_EXTENSION) as URIResolver)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 

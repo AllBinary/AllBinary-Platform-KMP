@@ -51,7 +51,7 @@ open public class IndependentVectorExplosionRotationAnimationFactory :
     open fun init()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.framePoints = VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo)
+        this.framePoints = VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo)!!
     }
 
     private val vectorExplosionGenerator: VectorExplosionGenerator =

@@ -66,8 +66,6 @@ this.setTagRequestHelperFactory(PaymentGatewayHelperFactory())
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -131,8 +129,6 @@ this.logUtil!!.put("LicensingException", this, this.commonStrings!!.PROCESS, e)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.SKIP_BODY
 
@@ -140,8 +136,6 @@ this.logUtil!!.put("LicensingException", this, this.commonStrings!!.PROCESS, e)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.EVAL_BODY_INCLUDE
 
@@ -152,8 +146,6 @@ this.logUtil!!.put("LicensingException", this, this.commonStrings!!.PROCESS, e)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -163,15 +155,11 @@ this.logUtil!!.put("LicensingException", this, this.commonStrings!!.PROCESS, e)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

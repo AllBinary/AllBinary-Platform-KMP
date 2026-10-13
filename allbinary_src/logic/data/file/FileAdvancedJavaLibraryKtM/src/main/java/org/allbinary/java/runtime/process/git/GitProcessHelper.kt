@@ -53,8 +53,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : GitProcessHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GitProcessHelper.instance
 }
@@ -86,8 +84,6 @@ logUtil!!.putF(THIS_IS_SLOW, this, commonStrings!!.CONSTRUCTOR)
 : List<String>{
     //var rootAsString = rootAsString
     //var pathspec = pathspec
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.trackedFiles(rootAsString, pathspec, ".java")
@@ -143,7 +139,7 @@ logUtil!!.putF(THIS_IS_SLOW, this, commonStrings!!.CONSTRUCTOR)
         {
 
     
-                        if(output[index] == 0)
+                        if(output[index].toInt() == 0)
                         
                                     {
                                     relativePath= output.decodeToString()
@@ -161,8 +157,6 @@ start= index +1
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -188,14 +182,10 @@ start= index +1
 
 process.getInputStream()!!.readAllBytes()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return process.waitFor() == 0
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

@@ -59,7 +59,7 @@ open public class BasicColorCacheFactory : Object {
 
         if (basicColor == null) {
 
-            basicColor = BasicColorFactory.getInstance()!!.createInstance(integer.toInt())
+            basicColor = BasicColorFactory.getInstance()!!.createInstance(integer.toInt())!!
             this.hashtable.put(integer, basicColor)
         }
 

@@ -55,8 +55,6 @@ this.inputSensor= inputSensor
         //nullable = true from not(false or (false and true)) = true
 : AllBinarySensor{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputSensor
 }
@@ -89,8 +87,6 @@ var anyType = anyType
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -98,8 +94,6 @@ var anyType = anyType
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 

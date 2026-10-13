@@ -66,7 +66,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, anyType, serviceName, StdUtil
 
     var serviceReference: ServiceReference = serviceRegistration!!.getReference()!!
 
-serviceReference= bundleContext!!.getServiceReference(serviceName)
+serviceReference= bundleContext!!.getServiceReference(serviceName)!!
 
     
                         if(serviceReference == NullServiceReferenceFactory.getInstance()!!.NULL_SERVICE_REFERENCE)

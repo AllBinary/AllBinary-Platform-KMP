@@ -49,16 +49,16 @@ open public class AngleIncrementInfo : Object {
         this.DOWN_FRAME =
             smallIntegerSingletonFactory!!.getAt(
                 angleFactory!!.DOWN.getValue() / this.angleIncrement
-            )
-        this.UP_FRAME = smallIntegerSingletonFactory!!.getAt(angleFactory!!.UP.getValue().toInt())
+            )!!
+        this.UP_FRAME = smallIntegerSingletonFactory!!.getAt(angleFactory!!.UP.getValue().toInt())!!
         this.LEFT_FRAME =
             smallIntegerSingletonFactory!!.getAt(
                 angleFactory!!.LEFT.getValue() / this.angleIncrement
-            )
+            )!!
         this.RIGHT_FRAME =
             smallIntegerSingletonFactory!!.getAt(
                 angleFactory!!.RIGHT.getValue() / this.angleIncrement
-            )
+            )!!
     }
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!

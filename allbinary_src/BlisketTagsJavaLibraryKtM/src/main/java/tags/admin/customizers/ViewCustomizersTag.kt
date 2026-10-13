@@ -46,15 +46,11 @@ public constructor (){
             this.setName("Add Validation Customizers View")
 this.setObjectFile("views.admin.customizers.CustomizersValidationView")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 } catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

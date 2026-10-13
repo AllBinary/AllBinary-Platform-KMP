@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageSwtRotationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageSwtRotationUtil.instance
 }
@@ -84,15 +82,11 @@ private constructor ()
                                     {
                                     this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage
@@ -113,15 +107,11 @@ private constructor ()
                                     {
                                     this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage
@@ -136,8 +126,6 @@ private constructor ()
     //var gc = gc
     //var totalAngle = totalAngle
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getRotatedImage2(originalSwtImage, newSwtImage, gc, totalAngle)
 }
@@ -150,8 +138,6 @@ private constructor ()
     //var newSwtImage = newSwtImage
     //var gc = gc
     //var totalAngle = totalAngle
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getRotatedImage2(bufferedImage, newSwtImage, gc, totalAngle)
@@ -182,10 +168,8 @@ private constructor ()
 
         {
 angle= (totalAngle /size) *index
-bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)
+bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -267,14 +251,12 @@ columnIndex= 0
                                     }
                                 
 nextBufferedImage= bufferedImageArray[index]!!
-imageData= nextBufferedImage!!.getImageData()
+imageData= nextBufferedImage!!.getImageData()!!
 gc.drawImage(bufferedImage, 0, 0, bufferedImage!!.getBounds()!!.width, bufferedImage!!.getBounds()!!.height, imageData!!.width *columnIndex, imageData!!.height *rowIndex, imageData!!.width, imageData!!.height)
 columnIndex++
 }
 
 gc.dispose()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage

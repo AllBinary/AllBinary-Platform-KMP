@@ -128,7 +128,7 @@ open public class TechRTSFormInput : RTSFormInput {
                 stringMaker!!
                     .appendint(cost)!!
                     .append("<=")!!
-                    .appendint(capital.getTotalMoney())!!
+                    .appendint(capital.getTotalMoney().toInt())!!
                     .toString(),
                 this,
                 commonStrings!!.PROCESS,

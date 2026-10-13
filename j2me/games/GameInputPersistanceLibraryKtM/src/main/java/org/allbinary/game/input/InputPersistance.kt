@@ -63,7 +63,8 @@ open public class InputPersistance : BasicPersitance {
         var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
         try {
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
 
             var recordEnum: RecordEnumeration =
                 recordStore!!.enumerateRecords(
@@ -112,13 +113,13 @@ open public class InputPersistance : BasicPersitance {
                     this,
                     this.persistanceStrings!!.LOAD_ALL,
                 )
-                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
+                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)!!
 
                 if (recordAsBytes != null) {
 
                     byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
                     inputStream = DataInputStream(byteArrayInputStream)
-                    hashtable = stdUtil!!.createHashtable()
+                    hashtable = stdUtil!!.createHashtable()!!
 
                     var value: Int = 0
 
@@ -133,8 +134,8 @@ open public class InputPersistance : BasicPersitance {
                         value = inputStream!!.readUTF().toInt()
 
                         inputId = value.toLong()
-                        gameActionInput = gameKeyFactory!!.getGameKey(gameActionInputId.toInt())
-                        input = inputFactory!!.getInstanceById(inputId.toInt())
+                        gameActionInput = gameKeyFactory!!.getGameKey(gameActionInputId.toInt())!!
+                        input = inputFactory!!.getInstanceById(inputId.toInt())!!
 
                         if (input == inputFactory!!.NO_INPUT || gameActionInput == null) {
 
@@ -216,7 +217,8 @@ open public class InputPersistance : BasicPersitance {
                 this,
                 this.commonStrings!!.SAVE,
             )
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
 
             var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
 
@@ -262,7 +264,7 @@ open public class InputPersistance : BasicPersitance {
                 }
             }
 
-            savedGameBytes = byteArrayOutputStream!!.toByteArray()
+            savedGameBytes = byteArrayOutputStream!!.toByteArray()!!
             recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
         } catch (e: Exception) {
 

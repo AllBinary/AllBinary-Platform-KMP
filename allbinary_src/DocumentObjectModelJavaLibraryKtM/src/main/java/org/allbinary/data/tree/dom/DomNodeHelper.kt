@@ -61,7 +61,7 @@ var parentNode = parentNode
                         for (index in 0 until nodeList!!.getLength()!!)
 
         {
-node= nodeList!!.item(index)
+node= nodeList!!.item(index)!!
 
     
                         if(node.getNodeType() == 1)
@@ -78,8 +78,6 @@ node= nodeList!!.item(index)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
@@ -101,8 +99,6 @@ var node = node
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return nodeTextNode!!.getNodeValue()
 
@@ -110,8 +106,6 @@ var node = node
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -129,8 +123,6 @@ var nodeName = nodeName
 var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNode(nodeName, nodeList)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -178,8 +170,6 @@ var node = node
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

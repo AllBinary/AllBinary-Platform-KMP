@@ -78,8 +78,6 @@ ImageCacheFactory.getInstance()!!.hasAnyLazyAnimationFactories= true
                                     {
                                     this.animationInterfaceFactoryInterface!!.setInitialScale(this.scaleProperties)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animationInterfaceFactoryInterface!!.getInstance(instanceId)
 
@@ -87,8 +85,6 @@ ImageCacheFactory.getInstance()!!.hasAnyLazyAnimationFactories= true
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LazyImageRotationAnimation(this.layoutIndex, instanceId, this.scaleProperties, this.animationInterfaceFactoryInterface, this.animationInterfaceFactoryInterface!!.animationBehaviorFactory!!.getOrCreateInstance())
 

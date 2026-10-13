@@ -73,7 +73,7 @@ open public class WorkWaypoint : Waypoint {
 
                 geologicalGeographicMapCellPosition =
                     occupyList!!.get(index) as GeologicalGeographicMapCellPosition
-                geologicalResource = geologicalGeographicMapCellPosition!!.getGeologicalResource()
+                geologicalResource = geologicalGeographicMapCellPosition!!.getGeologicalResource()!!
 
                 if (geologicalResource!!.getTotal() >= 1) {
 

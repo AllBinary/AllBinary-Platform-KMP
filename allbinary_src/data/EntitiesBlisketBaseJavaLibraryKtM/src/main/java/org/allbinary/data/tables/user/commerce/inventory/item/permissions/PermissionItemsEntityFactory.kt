@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PermissionItemsEntityFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PermissionItemsEntityFactory.instance
 }
@@ -57,8 +55,6 @@ companion object {
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.inventory.item.permissions.PermissionItemsEntity()
 } catch(e: Exception)
@@ -75,8 +71,6 @@ companion object {
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

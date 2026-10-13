@@ -45,8 +45,6 @@ open public class WebAppUrlGlobals : UrlGlobalsInterface {
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InitInfo.getInstance()!!.isTesting()
 }
@@ -55,8 +53,6 @@ open public class WebAppUrlGlobals : UrlGlobalsInterface {
     open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.path
@@ -77,8 +73,6 @@ this.isWebappPathSet= true
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InitInfo.getInstance()!!.getTestHtmlPath()
 }
@@ -98,8 +92,6 @@ this.isWebappPathSet= true
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return mainPath
 
@@ -111,8 +103,6 @@ this.isWebappPathSet= true
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getWebappPath()
 

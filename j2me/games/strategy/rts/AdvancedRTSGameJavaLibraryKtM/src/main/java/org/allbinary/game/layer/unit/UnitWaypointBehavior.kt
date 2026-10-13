@@ -417,7 +417,7 @@ open public class UnitWaypointBehavior : WaypointBehaviorBase, WaypointEventList
             stringBuffer!!.appendint(this.getCurrentTargetDistance())
             stringBuffer!!.append(" >= ")
             stringBuffer!!.appendint(
-                this.longWeaponRange + this.currentTargetLayerInterfaceP!!.getHalfHeight()
+                (this.longWeaponRange + this.currentTargetLayerInterfaceP!!.getHalfHeight()).toInt()
             )
         }
 

@@ -53,8 +53,6 @@ companion object {
 {
     //var texture = texture
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -65,8 +63,6 @@ companion object {
 {
     //var func = func
     //var ref = ref
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -87,8 +83,6 @@ var ref = ref
     //var target = target
     //var texture = texture
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -100,8 +94,6 @@ var ref = ref
     //var sfactor = sfactor
     //var dfactor = dfactor
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -111,8 +103,6 @@ var ref = ref
         //nullable = true from not(false or (false and false)) = true
 {
     //var mask = mask
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -126,8 +116,6 @@ var ref = ref
     //var green = green
     //var blue = blue
     //var alpha = alpha
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -149,8 +137,6 @@ var alpha = alpha
 {
     //var depth = depth
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -168,8 +154,6 @@ var depth = depth
 {
     //var s = s
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -179,8 +163,6 @@ var depth = depth
         //nullable = true from not(false or (false and false)) = true
 {
     //var texture = texture
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -194,8 +176,6 @@ var depth = depth
     //var green = green
     //var blue = blue
     //var alpha = alpha
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -220,8 +200,6 @@ var alpha = alpha
     //var blue = blue
     //var alpha = alpha
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -234,8 +212,6 @@ var alpha = alpha
     //var type = type
     //var stride = stride
     //var pointer = pointer
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -253,8 +229,6 @@ var alpha = alpha
     //var border = border
     //var imageSize = imageSize
     //var data = data
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -274,8 +248,6 @@ var alpha = alpha
     //var imageSize = imageSize
     //var data = data
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -292,8 +264,6 @@ var alpha = alpha
     //var width = width
     //var height = height
     //var border = border
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -312,8 +282,6 @@ var alpha = alpha
     //var width = width
     //var height = height
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -323,8 +291,6 @@ var alpha = alpha
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -338,8 +304,6 @@ var alpha = alpha
     //var textures = textures
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -351,8 +315,6 @@ var alpha = alpha
     //var n = n
     //var textures = textures
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -362,8 +324,6 @@ var alpha = alpha
         //nullable = true from not(false or (false and false)) = true
 {
     //var func = func
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -375,8 +335,6 @@ var alpha = alpha
 {
     //var flag = flag
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -387,8 +345,6 @@ var alpha = alpha
 {
     //var zNear = zNear
     //var zFar = zFar
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -408,8 +364,6 @@ var zFar = zFar
 {
     //var cap = cap
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -419,8 +373,6 @@ var zFar = zFar
         //nullable = true from not(false or (false and false)) = true
 {
     //var array = array
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -433,8 +385,6 @@ var zFar = zFar
     //var mode = mode
     //var first = first
     //var count = count
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -449,8 +399,6 @@ var zFar = zFar
     //var type = type
     //var indices = indices
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -460,8 +408,6 @@ var zFar = zFar
         //nullable = true from not(false or (false and false)) = true
 {
     //var cap = cap
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -473,8 +419,6 @@ var zFar = zFar
 {
     //var array = array
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -484,8 +428,6 @@ var zFar = zFar
         //nullable = true from not(false or (false and true)) = true
 {
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -494,8 +436,6 @@ var zFar = zFar
     override fun glFlush()
         //nullable = true from not(false or (false and true)) = true
 {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -507,8 +447,6 @@ var zFar = zFar
 {
     //var pname = pname
     //var param = param
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -522,8 +460,6 @@ var zFar = zFar
     //var params = params
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -534,8 +470,6 @@ var zFar = zFar
 {
     //var pname = pname
     //var params = params
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -572,8 +506,6 @@ var params = params
 {
     //var mode = mode
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -588,8 +520,6 @@ var params = params
     //var top = top
     //var zNear = zNear
     //var zFar = zFar
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -615,8 +545,6 @@ var zFar = zFar
     //var textures = textures
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -628,8 +556,6 @@ var zFar = zFar
     //var n = n
     //var textures = textures
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -638,8 +564,6 @@ var zFar = zFar
     override fun glGetError()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
@@ -653,8 +577,6 @@ var zFar = zFar
     //var params = params
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -666,8 +588,6 @@ var zFar = zFar
     //var pname = pname
     //var params = params
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -677,8 +597,6 @@ var zFar = zFar
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var name = name
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
@@ -691,8 +609,6 @@ var zFar = zFar
     //var target = target
     //var mode = mode
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -703,8 +619,6 @@ var zFar = zFar
 {
     //var pname = pname
     //var param = param
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -718,8 +632,6 @@ var zFar = zFar
     //var params = params
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -730,8 +642,6 @@ var zFar = zFar
 {
     //var pname = pname
     //var params = params
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -770,8 +680,6 @@ var params = params
     //var pname = pname
     //var param = param
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -785,8 +693,6 @@ var params = params
     //var params = params
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -798,8 +704,6 @@ var params = params
     //var light = light
     //var pname = pname
     //var params = params
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -839,8 +743,6 @@ var params = params
 {
     //var width = width
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -857,8 +759,6 @@ var width = width
         //nullable = true from not(false or (false and true)) = true
 {
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -870,8 +770,6 @@ var width = width
     //var m = m
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -881,8 +779,6 @@ var width = width
         //nullable = true from not(false or (false and false)) = true
 {
     //var m = m
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -909,8 +805,6 @@ var m = m
 {
     //var opcode = opcode
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -922,8 +816,6 @@ var m = m
     //var face = face
     //var pname = pname
     //var param = param
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -938,8 +830,6 @@ var m = m
     //var params = params
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -951,8 +841,6 @@ var m = m
     //var face = face
     //var pname = pname
     //var params = params
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -992,8 +880,6 @@ var params = params
 {
     //var mode = mode
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1005,8 +891,6 @@ var params = params
     //var m = m
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1016,8 +900,6 @@ var params = params
         //nullable = true from not(false or (false and false)) = true
 {
     //var m = m
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1048,8 +930,6 @@ var m = m
     //var r = r
     //var q = q
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1073,8 +953,6 @@ var q = q
     //var ny = ny
     //var nz = nz
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1096,8 +974,6 @@ var nz = nz
     //var stride = stride
     //var pointer = pointer
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1112,8 +988,6 @@ var nz = nz
     //var top = top
     //var zNear = zNear
     //var zFar = zFar
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1138,8 +1012,6 @@ var zFar = zFar
     //var pname = pname
     //var param = param
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1149,8 +1021,6 @@ var zFar = zFar
         //nullable = true from not(false or (false and false)) = true
 {
     //var size = size
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1170,8 +1040,6 @@ var size = size
     //var factor = factor
     //var units = units
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1189,8 +1057,6 @@ var units = units
         //nullable = true from not(false or (false and true)) = true
 {
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1199,8 +1065,6 @@ var units = units
     override fun glPushMatrix()
         //nullable = true from not(false or (false and true)) = true
 {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1218,8 +1082,6 @@ var units = units
     //var type = type
     //var pixels = pixels
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1232,8 +1094,6 @@ var units = units
     //var x = x
     //var y = y
     //var z = z
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1248,8 +1108,6 @@ var units = units
     //var y = y
     //var z = z
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1260,8 +1118,6 @@ var units = units
 {
     //var value = value
     //var invert = invert
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1283,8 +1139,6 @@ var invert = invert
     //var y = y
     //var z = z
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1296,8 +1150,6 @@ var invert = invert
     //var x = x
     //var y = y
     //var z = z
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1312,8 +1164,6 @@ var invert = invert
     //var width = width
     //var height = height
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1323,8 +1173,6 @@ var invert = invert
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1338,8 +1186,6 @@ var invert = invert
     //var ref = ref
     //var mask = mask
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1349,8 +1195,6 @@ var invert = invert
         //nullable = true from not(false or (false and false)) = true
 {
     //var mask = mask
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1363,8 +1207,6 @@ var invert = invert
     //var fail = fail
     //var zfail = zfail
     //var zpass = zpass
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1379,8 +1221,6 @@ var invert = invert
     //var stride = stride
     //var pointer = pointer
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1392,8 +1232,6 @@ var invert = invert
     //var target = target
     //var pname = pname
     //var param = param
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1408,8 +1246,6 @@ var invert = invert
     //var params = params
     //var offset = offset
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1421,8 +1257,6 @@ var invert = invert
     //var target = target
     //var pname = pname
     //var params = params
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1470,8 +1304,6 @@ var params = params
     //var type = type
     //var pixels = pixels
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1483,8 +1315,6 @@ var params = params
     //var target = target
     //var pname = pname
     //var param = param
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1513,8 +1343,6 @@ var param = param
     //var type = type
     //var pixels = pixels
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1526,8 +1354,6 @@ var param = param
     //var x = x
     //var y = y
     //var z = z
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -1551,8 +1377,6 @@ var z = z
     //var stride = stride
     //var pointer = pointer
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -1565,8 +1389,6 @@ var z = z
     //var y = y
     //var width = width
     //var height = height
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 

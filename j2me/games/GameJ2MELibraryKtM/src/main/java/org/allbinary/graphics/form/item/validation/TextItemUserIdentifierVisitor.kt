@@ -79,7 +79,7 @@ open public class TextItemUserIdentifierVisitor : Visitor {
         : Boolean {
         var charValue = charValue
 
-        var value: Int = charValue.toInt()
+        var value: Int = charValue.code
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return (value > 64 && value < 91) || (value > 96 && value < 123)

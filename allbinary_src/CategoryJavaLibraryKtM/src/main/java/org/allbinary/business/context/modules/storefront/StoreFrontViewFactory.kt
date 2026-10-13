@@ -51,8 +51,6 @@ var storeName = storeName
     var storeFronts: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreFrontView(storeFronts!!.getStoreFrontInterface(storeName)) as DomNodeInterface
 } catch(e: Exception)
@@ -69,8 +67,6 @@ var storeName = storeName
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

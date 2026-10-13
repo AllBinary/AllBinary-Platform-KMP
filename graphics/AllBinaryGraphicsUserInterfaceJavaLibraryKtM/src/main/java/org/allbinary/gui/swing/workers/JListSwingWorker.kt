@@ -46,8 +46,6 @@ this.setListModel(listModel)
         //nullable = true from not(false or (false and true)) = true
 : Any?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -63,8 +61,6 @@ this.getJList()!!.setModel(this.getListModel())
     open fun getJList()
         //nullable = true from not(false or (false and true)) = true
 : JList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.jList
@@ -82,8 +78,6 @@ this.jList= jList
     open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
 : ListModel{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.listModel

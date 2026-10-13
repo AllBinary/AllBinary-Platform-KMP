@@ -91,23 +91,21 @@ this.isEnabled= BooleanUtil.getInstance()!!.getFromString(isEnabledString)
 
     var nameValueNode: Node = DomSearchHelper.getNode(logConfigData!!.NAME, node.getChildNodes())!!
 
-this.name= DomNodeHelper.getTextNodeValue(nameValueNode)
+this.name= DomNodeHelper.getTextNodeValue(nameValueNode)!!
 
     var descriptionValueNode: Node = DomSearchHelper.getNode(logConfigData!!.DESCRIPTION, node.getChildNodes())!!
 
-this.description= DomNodeHelper.getTextNodeValue(descriptionValueNode)
+this.description= DomNodeHelper.getTextNodeValue(descriptionValueNode)!!
 
     var fileValueNode: Node = DomSearchHelper.getNode(logConfigData!!.FILE, node.getChildNodes())!!
 
-this.fileName= DomNodeHelper.getTextNodeValue(fileValueNode)
+this.fileName= DomNodeHelper.getTextNodeValue(fileValueNode)!!
 }
 
 
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -117,8 +115,6 @@ this.fileName= DomNodeHelper.getTextNodeValue(fileValueNode)
     open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isEnabled
@@ -143,8 +139,6 @@ this.isEnabled= false
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.description
 }
@@ -153,8 +147,6 @@ this.isEnabled= false
     open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fileName
@@ -211,8 +203,6 @@ stringBuffer!!.append(this.getFileName())
     var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(file))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 }
@@ -256,8 +246,6 @@ stringBuffer!!.append(this.getFileName())
 
 logKeyVector!!.add(logType)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

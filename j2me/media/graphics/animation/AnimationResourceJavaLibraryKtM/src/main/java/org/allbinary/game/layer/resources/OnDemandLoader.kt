@@ -108,7 +108,7 @@ open public class OnDemandLoader : Object {
 
         for (onDemandIndex in this.onDemandResourcesFactory!!.size()!! - 1 downTo 0) {
 
-            onDemandResources = this.onDemandResourcesFactory!!.remove(onDemandIndex)
+            onDemandResources = this.onDemandResourcesFactory!!.remove(onDemandIndex)!!
 
             if (onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES) {
 
@@ -163,7 +163,7 @@ open public class OnDemandLoader : Object {
         for (onDemandIndex in onDemandArray!!.size - 1 downTo 0) {
 
             onDemandResources =
-                this.onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
+                this.onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)!!
 
             if (onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES) {
 

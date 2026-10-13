@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ChoiceGroupImageUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ChoiceGroupImageUtil.instance
 }
@@ -90,7 +88,7 @@ companion object {
                         for (index in 0 until size)
 
         {
-imageArray[index]= preResourceImageUtil!!.encapsulate(imageArray[index]!!)
+imageArray[index]= preResourceImageUtil!!.encapsulate(imageArray[index]!!)!!
 }
 
 choiceGroupFactory!!.init(imageArray)

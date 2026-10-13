@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InitInfo2{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InitInfo2.instance
 }
@@ -62,8 +60,6 @@ companion object {
 : Boolean{
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.directory.create(value)
 }
@@ -73,8 +69,6 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.directory.create(value)

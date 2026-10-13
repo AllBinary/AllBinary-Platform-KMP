@@ -56,8 +56,6 @@ classes[0]=
 
 params[0]= userInterface as Object
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeFactory.getInstance()!!.getInstance(abeClientInformation, userEmailEventConfigurationInterface!!.getEventListenerClassPath(), classes, params) as UserEmailEventListenerInterface
 }

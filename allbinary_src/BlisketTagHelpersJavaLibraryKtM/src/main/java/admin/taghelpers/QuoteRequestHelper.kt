@@ -67,7 +67,7 @@ this.quoteRequest= QuoteRequest(this.weblisketSession!!.getUserName(), request)
                                 )
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 
                                     }
                                 
@@ -78,8 +78,6 @@ this.quoteRequest= QuoteRequest(this.weblisketSession!!.getUserName(), request)
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.quoteRequest!!.isValid()
 }
@@ -88,8 +86,6 @@ this.quoteRequest= QuoteRequest(this.weblisketSession!!.getUserName(), request)
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.quoteRequest!!.validationInfo()
@@ -118,8 +114,6 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.inse
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -136,8 +130,6 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.inse
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -168,8 +160,6 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.upda
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -187,8 +177,6 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.upda
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -199,8 +187,6 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.upda
     open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return commonStrings!!.NOT_IMPLEMENTED

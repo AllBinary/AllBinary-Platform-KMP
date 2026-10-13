@@ -92,8 +92,6 @@ this.result= "Needs to have the hashmap converted to string for other constructo
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.result
 }
@@ -102,8 +100,6 @@ this.result= "Needs to have the hashmap converted to string for other constructo
     open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs
@@ -141,8 +137,6 @@ verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION4.toString()
 verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION5.toString())
 verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION6.toString())
 verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION7.toString())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return verisignResponseKeys
@@ -191,8 +185,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valueVector
 }
@@ -201,8 +193,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getPnRef()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.PNREF.toString()) as String
@@ -213,8 +203,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.RESPMSG.toString()) as String
 }
@@ -223,8 +211,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getResult()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.RESULT.toString()) as String
@@ -235,8 +221,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.SCORE.toString()) as String
 }
@@ -245,8 +229,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getStatus()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.STATUS.toString()) as String
@@ -257,8 +239,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.FRAUDCODE.toString()) as String
 }
@@ -267,8 +247,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getFraudMsg()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.FRAUDMSG.toString()) as String
@@ -279,8 +257,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.ORIGRESULT.toString()) as String
 }
@@ -289,8 +265,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getAvsAddr()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.AVSADDR.toString()) as String
@@ -301,8 +275,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.AVSZIP.toString()) as String
 }
@@ -311,8 +283,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getErrCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.ERRCODE.toString()) as String
@@ -323,8 +293,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.EXCEPTION1.toString()) as String
 }
@@ -333,8 +301,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getException2()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.EXCEPTION2.toString()) as String
@@ -345,8 +311,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.EXCEPTION3.toString()) as String
 }
@@ -355,8 +319,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getException4()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.EXCEPTION4.toString()) as String
@@ -367,8 +329,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.EXCEPTION5.toString()) as String
 }
@@ -377,8 +337,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getException6()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.EXCEPTION6.toString()) as String
@@ -389,8 +347,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.EXCEPTION7.toString()) as String
 }
@@ -399,8 +355,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getReason1()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.REASON1.toString()) as String
@@ -411,8 +365,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.REASON2.toString()) as String
 }
@@ -421,8 +373,6 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
     open fun getReason3()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyValuePairs!!.get(PaymentTransactionKeysFactory.getInstance()!!.REASON3.toString()) as String

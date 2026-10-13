@@ -52,8 +52,6 @@ companion object {
 : InputImageType{
 var imageTypeString = imageTypeString
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InputImageType.hashMap!!.get(imageTypeString as Object) as InputImageType
 }
@@ -62,8 +60,6 @@ var imageTypeString = imageTypeString
     open fun getAllAsVector()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InputImageType.TYPE_VECTOR
@@ -91,8 +87,6 @@ InputImageType.hashMap!!.put(this.getName(), this)
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "ImageType: " +this.getName()
 }
@@ -102,8 +96,6 @@ InputImageType.hashMap!!.put(this.getName(), this)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -112,8 +104,6 @@ InputImageType.hashMap!!.put(this.getName(), this)
     open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.index

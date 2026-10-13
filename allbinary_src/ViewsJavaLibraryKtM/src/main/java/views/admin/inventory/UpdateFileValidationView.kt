@@ -95,8 +95,6 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -117,8 +115,6 @@ var transformInfoInterface = transformInfoInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -155,8 +151,6 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -173,8 +167,6 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -204,8 +196,6 @@ HttpFileUploadUtil.log(fileItem)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -214,8 +204,6 @@ HttpFileUploadUtil.log(fileItem)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -231,8 +219,6 @@ HttpFileUploadUtil.log(fileItem)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -244,8 +230,6 @@ HttpFileUploadUtil.log(fileItem)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -255,8 +239,6 @@ HttpFileUploadUtil.log(fileItem)
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -282,8 +264,6 @@ var document = document
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CommonSeps.getInstance()!!.SPACE
 
@@ -357,8 +337,6 @@ this.validationInfo(stringBuffer, fileName, fileItemFieldName, size)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -390,8 +368,6 @@ var size = size
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -412,13 +388,11 @@ var size = size
 stringBuffer!!.append("File Size To Large: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
-stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE.toInt())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -429,8 +403,6 @@ this.processImageFiles()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -468,9 +440,9 @@ var size = size
                         
                                     {
                                     stringBuffer!!.append("FileName must be >")
-stringBuffer!!.appendint(fileData!!.MINLEN)
+stringBuffer!!.appendint(fileData!!.MINLEN.toInt())
 stringBuffer!!.append("and <")
-stringBuffer!!.appendint(fileData!!.MAXLEN)
+stringBuffer!!.appendint(fileData!!.MAXLEN.toInt())
 stringBuffer!!.append("<br />")
 
                                     }
@@ -480,9 +452,9 @@ stringBuffer!!.append("<br />")
                                 
                         else {
                             stringBuffer!!.append("Image File Is Not The Right Size. ")
-stringBuffer!!.appendint(fileData!!.MINIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MINIMAGEFILESIZE.toInt())
 stringBuffer!!.append("< > ")
-stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE.toInt())
 stringBuffer!!.append("<br />")
 
                         }

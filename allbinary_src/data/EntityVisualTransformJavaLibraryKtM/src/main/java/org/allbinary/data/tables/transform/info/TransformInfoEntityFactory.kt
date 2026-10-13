@@ -50,8 +50,6 @@ var transformInfoFactoryInterface = transformInfoFactoryInterface
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoEntity(transformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface, transformInfoFactoryInterface)
 } catch(e: Exception)
@@ -68,8 +66,6 @@ var transformInfoFactoryInterface = transformInfoFactoryInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

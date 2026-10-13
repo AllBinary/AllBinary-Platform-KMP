@@ -100,8 +100,6 @@ this.setObjectFile("views.generic.address.shipping.UpdateTaxValidationView")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -115,16 +113,12 @@ this.setObjectFile("views.generic.address.shipping.UpdateTaxValidationView")
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 }
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

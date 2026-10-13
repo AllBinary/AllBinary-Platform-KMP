@@ -83,7 +83,7 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(this.sqlStrings!!.PRIMARY_KEY)
 stringBuffer!!.append(this.NOTHING)
 stringBuffer!!.append(this.sqlStrings!!.END)
-this.tableData= stringBuffer!!.toString()
+this.tableData= stringBuffer!!.toString()!!
 this.setTable(this.tableName)
 }
 
@@ -109,8 +109,6 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
                                     {
                                     InitInfo.getInstance()!!.set(hashMap)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -126,8 +124,6 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -145,8 +141,6 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -175,8 +169,6 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -192,8 +184,6 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -211,8 +201,6 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -266,8 +254,6 @@ insert(values)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tableName +this.CREATED_SUCCESS
 
@@ -280,8 +266,6 @@ insert(values)
 stringBuffer!!.append(this.FAILED_TO_CREATE)
 stringBuffer!!.append(this.tableData)
 stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

@@ -94,8 +94,6 @@ index++
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -207,8 +205,6 @@ eventListenerInterface!!.onEvent(eventObject)
     open fun getEventListenerInterfaceListP()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.eventListenerInterfaceList

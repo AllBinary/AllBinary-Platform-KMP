@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbSqlTableUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbSqlTableUtil.instance
 }
@@ -77,8 +75,6 @@ var abSqlTable = abSqlTable
     var tableName: String = abSqlTable!!.getTableName()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.TABLE_LABEL +tableName +" Backup Failed"
 }
@@ -99,8 +95,6 @@ var portion = portion
 stringBuffer!!.append(this.TABLE_LABEL)
 stringBuffer!!.append(tableName)
 stringBuffer!!.append(" Restoration Failed")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

@@ -31,8 +31,6 @@ companion object {
 : BufferedImage{
 var file = file
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageIO.read(AbFileNativeUtil.get(file))
 }
@@ -46,8 +44,6 @@ var file = file
 var renderedImage = renderedImage
 var name = name
 var file = file
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageIO.write(renderedImage, name, AbFileNativeUtil.get(file))

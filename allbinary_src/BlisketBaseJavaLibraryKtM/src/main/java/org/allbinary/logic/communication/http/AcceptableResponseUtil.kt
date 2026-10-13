@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AcceptableResponseUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AcceptableResponseUtil.instance
 }
@@ -70,8 +68,6 @@ TsUtil.getInstance()!!.hashCode(AcceptableResponseFactory.getInstance()!!.HTML)
 : String{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.candidateVector!!.get(index) as String
 }
@@ -82,8 +78,6 @@ var index = index
 : String{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tagNameVector!!.get(index) as String
 }
@@ -92,8 +86,6 @@ var index = index
     open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.candidateVector!!.size()

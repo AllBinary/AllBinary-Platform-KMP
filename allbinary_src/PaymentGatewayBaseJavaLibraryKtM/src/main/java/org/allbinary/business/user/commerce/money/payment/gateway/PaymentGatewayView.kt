@@ -58,8 +58,6 @@ this.paymentGatewayInterface= paymentGatewayInterface
         //nullable = true from not(false or (false and true)) = true
 : PaymentGatewayInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentGatewayInterface
 }
@@ -72,8 +70,6 @@ this.paymentGatewayInterface= paymentGatewayInterface
 : HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,8 +101,6 @@ this.paymentGatewayInterface= paymentGatewayInterface
 hashMap!!.putAll(this.toHashMap())
 
     var paymentGatewayNode: Node = ModDomHelper.createNodeWithValueNodes(document, PaymentGatewayData.NAME.toString(), hashMap)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

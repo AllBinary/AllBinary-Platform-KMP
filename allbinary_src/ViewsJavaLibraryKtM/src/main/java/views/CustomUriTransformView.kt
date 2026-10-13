@@ -78,8 +78,6 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NO_TYPE
 }
@@ -88,8 +86,6 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
     open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface
@@ -108,8 +104,6 @@ this.transformInfoInterface= transformInfoInterface
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformDocumentInterface
 }
@@ -126,8 +120,6 @@ this.transformDocumentInterface= transformDocumentInterface
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformDocumentInterface!!.getDoc()
@@ -157,8 +149,6 @@ this.transformDocumentInterface= transformDocumentInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransformDocumentInterface()!!.getDoc()
 }
@@ -177,8 +167,6 @@ this.transformDocumentInterface= transformDocumentInterface
 
     var result: String = TransformInfoCustomUriTransformer(this.abeClientInformation, this.getTransformInfoInterface()).
                             translate(success)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

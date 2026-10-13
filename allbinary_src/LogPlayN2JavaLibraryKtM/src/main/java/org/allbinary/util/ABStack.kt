@@ -42,8 +42,6 @@ open public class ABStack<E> : Stack<E> {
 : E{
 var item = item
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.push(item)
 }
@@ -52,8 +50,6 @@ var item = item
     override fun pop()
         //nullable = true from not(false or (false and true)) = true
 : E{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.pop()
@@ -64,8 +60,6 @@ var item = item
         //nullable = true from not(false or (false and true)) = true
 : E{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.peek()
 }
@@ -74,8 +68,6 @@ var item = item
     override fun empty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.empty()
@@ -87,8 +79,6 @@ var item = item
 : Int{
 var obj = obj
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.search(obj)
 }
@@ -98,8 +88,6 @@ var obj = obj
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var obj = obj
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.removeElement(obj)

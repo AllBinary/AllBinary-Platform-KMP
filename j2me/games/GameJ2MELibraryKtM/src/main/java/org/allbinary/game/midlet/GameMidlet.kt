@@ -177,7 +177,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
         // For kotlin this is before the body of the constructor.
 
         SmallIntegerSingletonFactory.getInstance()!!.initWithRange(0x291, 6)
-        this.loadGameForm = CommandForm.getNullCommandForm()
+        this.loadGameForm = CommandForm.getNullCommandForm()!!
 
         var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -186,7 +186,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
             ChangedGameFeatureListener.getInstance()
         )
         GamePersistanceSingleton.getInstance()!!.clear()
-        this.debugInterface = DebugFactory.getInstance()
+        this.debugInterface = DebugFactory.getInstance()!!
         this.init()
     }
 
@@ -396,14 +396,14 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
 
             if (displayable != null) {
 
-                displayableAsString = displayable.toString()
+                displayableAsString = displayable.toString()!!
             }
 
             var label: String = this.NO_COMMAND
 
             if (command != null) {
 
-                label = command.getLabel()
+                label = command.getLabel()!!
             }
 
             PreLogUtil.put(
@@ -947,11 +947,11 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
         this.thread =
             threadFactoryUtil!!.getInstanceGameCanvasRunnable(
                 this.allbinaryGameCanvasRunnableInterface
-            )
+            )!!
         this.logUtil!!.putF(
             StringMaker()
                 .append("Thread Priority: ")!!
-                .appendint(this.thread.getPriority())!!
+                .appendint(this.thread.getPriority().toInt())!!
                 .toString(),
             this,
             "startGameCanvasRunnableInterface",

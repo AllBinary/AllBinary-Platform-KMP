@@ -49,8 +49,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getColumns()!!.toInt() *this.getImageUnifierCell()!!.getWidth()!!.toInt()
 }
@@ -60,8 +58,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getRows()!!.toInt() *this.getImageUnifierCell()!!.getHeight()!!.toInt()
 }
@@ -70,8 +66,6 @@ public constructor ()
     open fun getRows()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rows
@@ -90,8 +84,6 @@ this.rows= rows
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.columns
 }
@@ -108,8 +100,6 @@ this.columns= columns
     open fun getImageUnifierCell()
         //nullable = true from not(false or (false and true)) = true
 : ImageUnifierCell{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageUnifierCell

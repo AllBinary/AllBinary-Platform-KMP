@@ -165,7 +165,7 @@ open public class RecordStoreHighScores : HighScores {
             this.logUtil!!.putF(
                 StringMaker()
                     .append("Adding HighScore: ")!!
-                    .appendlong(newHighScore!!.getScore())!!
+                    .appendlong(newHighScore!!.getScore().toLong())!!
                     .toString(),
                 this,
                 this.commonStrings!!.ADD,
@@ -178,7 +178,7 @@ open public class RecordStoreHighScores : HighScores {
             }
 
             recordStore =
-                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
+                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)!!
 
             var highScoreBytes: ByteArray = newHighScore!!.getAsBytes()!!
 
@@ -219,7 +219,7 @@ open public class RecordStoreHighScores : HighScores {
 
         try {
             recordStore =
-                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
+                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)!!
 
             var recordEnum: RecordEnumeration =
                 recordStore!!.enumerateRecords(
@@ -244,7 +244,7 @@ open public class RecordStoreHighScores : HighScores {
 
                 var id: Int = recordEnum!!.nextRecordId()
 
-                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
+                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)!!
 
                 if (recordAsBytes != null) {
 
@@ -274,7 +274,7 @@ open public class RecordStoreHighScores : HighScores {
                 this.logUtil!!.putF(
                     StringMaker()
                         .append("Removing Lowest HighScore: ")!!
-                        .appendlong(bestHighScore!!.getScore())!!
+                        .appendlong(bestHighScore!!.getScore().toLong())!!
                         .toString(),
                     this,
                     this.commonStrings!!.LOAD,
@@ -308,7 +308,7 @@ open public class RecordStoreHighScores : HighScores {
 
         try {
             recordStore =
-                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
+                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)!!
             this.setList(BasicArrayListD())
 
             var recordEnum: RecordEnumeration =
@@ -328,7 +328,7 @@ open public class RecordStoreHighScores : HighScores {
 
                 var id: Int = recordEnum!!.nextRecordId()
 
-                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
+                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)!!
 
                 if (recordAsBytes != null) {
 

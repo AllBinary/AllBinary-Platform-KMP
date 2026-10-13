@@ -77,7 +77,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
         var font: Font = graphics.getFont()!!
 
         this.fontHeight = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun getTotalVisited()

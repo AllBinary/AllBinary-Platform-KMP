@@ -138,8 +138,6 @@ var name = name
     var fileName: String = DEFAULT_PROFILE_ACTIONS_PATH +name +this.commonFileStrings!!._XML
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return File(fileName)
 }
@@ -285,8 +283,6 @@ this.getDefaultListModelHelper()!!.add(genericConfigurationProfileAction!!.getNa
         //nullable = true from not(false or (false and true)) = true
 : DefaultListModelHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.actionsDefaultListModelHelper
 }
@@ -296,8 +292,6 @@ this.getDefaultListModelHelper()!!.add(genericConfigurationProfileAction!!.getNa
         //nullable = true from not(false or (false and false)) = true
 : GenericProfileAction{
 var string = string
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getHashMap()!!.get(string as Object) as GenericProfileAction
@@ -341,8 +335,6 @@ this.save()
 
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -384,8 +376,6 @@ node.appendChild(nextGenericProfileAction!!.toXmlNode(document))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -404,8 +394,6 @@ node.appendChild(nextGenericProfileAction!!.toXmlNode(document))
 
 document.appendChild(node)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 }
@@ -414,8 +402,6 @@ document.appendChild(node)
     open fun getGenericProfileActionsJPanel()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionsJPanel{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileActionsJPanel
@@ -434,8 +420,6 @@ this.genericProfileActionsJPanel= genericProfileActionsJPanel
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hashMap
 }
@@ -452,8 +436,6 @@ this.hashMap= hashMap
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name

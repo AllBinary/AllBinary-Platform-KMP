@@ -139,8 +139,6 @@ keywords.addAllList(substoreKeywords)
     var keywordHashSet: HashSet = uniqueTokens!!.getWhithoutDashesAndSkipNumberOnlyTokens(keywords)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return keywordHashSet
 }
@@ -283,7 +281,7 @@ this.searchRequest!!.setFileBaseName(pageName)
                         
                                     {
                                     indexStr= Integer(index).
-                            toString()
+                            toString()!!
 
                                     }
                                 
@@ -407,8 +405,6 @@ stringBuffer!!.append("Products For ")
 stringBuffer!!.append(storeFront!!.getName())
 stringBuffer!!.append(" Store Not Found")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 
@@ -448,8 +444,6 @@ stringBuffer!!.append(storeFront!!.getName())
 stringBuffer!!.append(" it used packages ")
 stringBuffer!!.append(storeFront!!.getPackageLocation())
 stringBuffer!!.append(this.INVENTORY)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -521,16 +515,12 @@ stringBuffer!!.append("<br />")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Generation Failed No Store Specified<br/>"
 
                         }
                             
 stringBuffer!!.append("All Static Pages Generated<br/>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

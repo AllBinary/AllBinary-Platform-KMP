@@ -247,7 +247,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
         // nullable = true from not(false or (false and false)) = true
     {
         // var graphics = graphics
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun processTempHorizontalForm()
@@ -269,7 +269,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
 
         for (index in 0 until size) {
 
-            item = this.get(index)
+            item = this.get(index)!!
             totalWidth += item.getMinimumWidth() + this.border
         }
 
@@ -299,7 +299,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
 
         for (index in 0 until size) {
 
-            item2 = this.get(index)
+            item2 = this.get(index)!!
 
             if (this.maxWidth < item2.getMinimumWidth()) {
 
@@ -429,7 +429,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
 
             for (index in 0 until size) {
 
-                item = this.get(index)
+                item = this.get(index)!!
 
                 var diffX: Int = this.preItemIndexDx!!.getDx(index, item, this.dx, this.dy)
 

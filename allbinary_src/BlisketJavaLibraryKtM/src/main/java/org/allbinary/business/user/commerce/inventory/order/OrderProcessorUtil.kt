@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OrderProcessorUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OrderProcessorUtil.instance
 }
@@ -75,8 +73,6 @@ order.setId(OrderIdGenerator().
                             getNext())
 orderItems!!.insert(userName, order)
 orderHistory!!.insert(userName, order)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ORDER_PROCESSED

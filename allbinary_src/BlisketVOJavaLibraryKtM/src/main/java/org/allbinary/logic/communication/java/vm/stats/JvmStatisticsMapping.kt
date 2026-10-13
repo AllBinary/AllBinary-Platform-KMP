@@ -62,8 +62,6 @@ hashMap!!.put(JvmStatisticsData.TOTAL_MEMORY_BYTES, this.getTotalMemoryBytesStri
 hashMap!!.put(JvmStatisticsData.TOTAL_MEMORY_KILOBYTES, this.getTotalMemoryKilobytesString())
 hashMap!!.put(JvmStatisticsData.TOTAL_MEMORY_MEGABYTES, this.getTotalMemoryMegabytesString())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -74,8 +72,6 @@ hashMap!!.put(JvmStatisticsData.TOTAL_MEMORY_MEGABYTES, this.getTotalMemoryMegab
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return JvmStatisticsData.NAME
@@ -100,8 +96,6 @@ vector.add(this.getNumberOfThreadsString())
 vector.add(this.getTotalMemoryBytesString())
 vector.add(this.getTotalMemoryKilobytesString())
 vector.add(this.getTotalMemoryMegabytesString())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector

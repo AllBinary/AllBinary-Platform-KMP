@@ -52,8 +52,6 @@ this.setMotionRectangles(motionRectangles)
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frame
 }
@@ -62,8 +60,6 @@ this.setMotionRectangles(motionRectangles)
     open fun getMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 : MotionRectangles{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.motionRectangles
@@ -87,8 +83,6 @@ this.motionRectangles= motionRectangles
 stringBuffer!!.append(this::class.toString()!!)
 stringBuffer!!.append(" Frame: ")
 stringBuffer!!.append(this.getKey()!!.toString())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

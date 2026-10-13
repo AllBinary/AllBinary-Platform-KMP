@@ -44,8 +44,6 @@ companion object {
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity()
 } catch(e: Exception)
@@ -62,8 +60,6 @@ companion object {
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

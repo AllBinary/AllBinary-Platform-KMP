@@ -74,10 +74,8 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "getScreenAsBufferedImages
 
     var inputRobotInterface: InputRobotInterface = robotHashtable!!.get("Java Robot") as InputRobotInterface
 
-bufferedImageArray[index]= inputRobotInterface!!.createScreenCapture(rectScreenSize)
+bufferedImageArray[index]= inputRobotInterface!!.createScreenCapture(rectScreenSize)!!
 this.logUtil!!.putF("Finish", this, "getScreenAsBufferedImages")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImageArray

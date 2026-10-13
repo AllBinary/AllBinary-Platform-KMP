@@ -266,7 +266,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 topLeftGeographicMapCellPosition,
                 velocityProperties,
                 layer,
-            )
+            )!!
 
         if (
             geographicMapCellPosition ==
@@ -287,7 +287,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 topRightGeographicMapCellPosition,
                 velocityProperties,
                 layer,
-            )
+            )!!
 
         if (
             geographicMapCellPosition ==
@@ -308,7 +308,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 bottomLeftGeographicMapCellPosition,
                 velocityProperties,
                 layer,
-            )
+            )!!
 
         if (
             geographicMapCellPosition ==
@@ -329,7 +329,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 bottomRightGeographicMapCellPosition,
                 velocityProperties,
                 layer,
-            )
+            )!!
 
         if (
             geographicMapCellPosition ==

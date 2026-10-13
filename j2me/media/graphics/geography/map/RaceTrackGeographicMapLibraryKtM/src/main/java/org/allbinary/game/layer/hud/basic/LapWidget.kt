@@ -54,10 +54,10 @@ open public class LapWidget : BasicHud {
 
         stringBuffer!!.delete(0, stringBuffer!!.length())
         stringBuffer!!.append(this.LAP_STR)
-        stringBuffer!!.appendint(lapInfo!!.getCurrentLap())
+        stringBuffer!!.appendint(lapInfo!!.getCurrentLap().toInt())
         stringBuffer!!.append(this.OF_STR)
-        stringBuffer!!.appendint(lapInfo!!.getTotalLaps())
-        this.string = stringBuffer!!.toString()
+        stringBuffer!!.appendint(lapInfo!!.getTotalLaps().toInt())
+        this.string = stringBuffer!!.toString()!!
     }
 
     open fun paint(graphics: Graphics)

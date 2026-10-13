@@ -53,17 +53,15 @@ public constructor (abeClientInformation: AbeClientInformationInterface, storeFr
     //var abeClientInformation = abeClientInformation
     //var storeFrontInterface = storeFrontInterface
 this.defaultShippingMethodInterface= ShippingMethodsFactory(abeClientInformation, storeFrontInterface).
-                            getDefaultInstance()
+                            getDefaultInstance()!!
 this.shippingVector= ShippingMethodsFactory(abeClientInformation, storeFrontInterface).
-                            getInstance()
+                            getInstance()!!
 }
 
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingVector
@@ -94,8 +92,6 @@ shipping= this.shippingVector!!.get(index) as ShippingInterface
     
                         if(name.compareTo(shipping.getName()) == 0)
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return shipping
 }
@@ -124,8 +120,6 @@ shipping= this.shippingVector!!.get(index) as ShippingInterface
     open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : ShippingInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.defaultShippingMethodInterface

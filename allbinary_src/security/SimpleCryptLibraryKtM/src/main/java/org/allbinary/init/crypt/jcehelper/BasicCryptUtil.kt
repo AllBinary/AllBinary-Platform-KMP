@@ -79,7 +79,7 @@ open public class BasicCryptUtil : Object {
 
         if (index > 0) {
 
-            decryptedString = decryptedString!!.substring(index)
+            decryptedString = decryptedString!!.substring(index)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

@@ -134,8 +134,6 @@ this.roles= values
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -156,8 +154,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -189,8 +185,6 @@ this.roles= values
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -211,8 +205,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -244,8 +236,6 @@ this.roles= values
                             null) as Integer
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return resultInteger!!.toInt()
 } catch(e: LicensingException)
@@ -266,8 +256,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
@@ -299,8 +287,6 @@ this.roles= values
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return resultBoolean
 } catch(e: LicensingException)
@@ -321,8 +307,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -358,8 +342,6 @@ this.roles= values
     var resultBoolean: Boolean = method.invoke(anyType, methodArgs) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return resultBoolean
 } catch(e: LicensingException)
@@ -380,8 +362,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -413,8 +393,6 @@ this.roles= values
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -438,8 +416,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -471,8 +447,6 @@ this.roles= values
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -496,8 +470,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -533,8 +505,6 @@ this.roles= values
     var resultBoolean: Boolean = method.invoke(anyType, methodArgs) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return resultBoolean
 } catch(e: LicensingException)
@@ -555,8 +525,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -592,8 +560,6 @@ this.roles= values
     var resultBoolean: Boolean = method.invoke(anyType, methodArgs) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return resultBoolean
 } catch(e: LicensingException)
@@ -614,8 +580,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -647,8 +611,6 @@ this.roles= values
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return resultBoolean
 } catch(e: LicensingException)
@@ -669,8 +631,6 @@ this.roles= values
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -713,7 +673,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 )
                         
                                     {
-                                    this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
+                                    this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     
                         if(this.command.compareTo(org.allbinary.globals.GLOBALS2.NEWPASSWORD) == 0)
@@ -735,8 +695,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                     {
                                     pageContext!!.getOut()!!.print("New Password Request Failed.<p/>")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -744,8 +702,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 
                         else {
                             pageContext!!.getOut()!!.print("New Password Was Sent.<p/>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -776,8 +732,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                     {
                                     pageContext!!.getOut()!!.print("Password Change Attempt Failed.<p/>")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -785,8 +739,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 
                         else {
                             pageContext!!.getOut()!!.print("Password Changed Successfully.<p/>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -810,8 +762,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.invalidateSession()
@@ -845,8 +795,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -854,8 +802,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -880,8 +826,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -889,8 +833,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -928,8 +870,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -937,8 +877,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -986,8 +924,6 @@ pageContext!!.getOut()!!.print(validRole())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -995,8 +931,6 @@ pageContext!!.getOut()!!.print(validRole())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -1022,8 +956,6 @@ pageContext!!.getOut()!!.print(invalidRole())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -1031,8 +963,6 @@ pageContext!!.getOut()!!.print(invalidRole())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -1086,8 +1016,6 @@ pageContext!!.getOut()!!.print(invalidRole())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -1095,8 +1023,6 @@ pageContext!!.getOut()!!.print(invalidRole())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -1109,15 +1035,11 @@ pageContext!!.getOut()!!.print(invalidRole())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -1125,8 +1047,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

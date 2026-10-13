@@ -431,7 +431,7 @@ open public class BuildingRTSFormInput : RTSFormInput {
             geographicMapCellType =
                 geographicMapInterface!!.getCellTypeAt(
                     occupyList!!.get(index) as GeographicMapCellPosition
-                )
+                )!!
 
             var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory =
                 geographicMapInterface!!.getGeographicMapCellTypeFactory()
@@ -465,7 +465,7 @@ open public class BuildingRTSFormInput : RTSFormInput {
         stringBuffer!!.append(" for: $")
         stringBuffer!!.appendint(cost)
         stringBuffer!!.append(" with ")
-        stringBuffer!!.appendint(capital.getTotalMoney())
+        stringBuffer!!.appendint(capital.getTotalMoney().toInt())
         this.logUtil!!.putF(stringBuffer!!.toString(), this, "attemptBuild")
 
         if (cost <= capital.getTotalMoney()) {

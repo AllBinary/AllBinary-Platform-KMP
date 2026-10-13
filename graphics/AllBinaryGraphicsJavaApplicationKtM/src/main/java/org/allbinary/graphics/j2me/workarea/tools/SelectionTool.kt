@@ -55,8 +55,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SelectionTool.NAME
 }
@@ -90,8 +88,6 @@ var color = color
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -100,8 +96,6 @@ var color = color
     open fun getPointsInterface()
         //nullable = true from not(false or (false and true)) = true
 : Points?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -119,8 +113,6 @@ var points = points
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -129,8 +121,6 @@ var points = points
     open fun isActive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.active
@@ -198,10 +188,8 @@ var angle = angle
         //nullable = true from not(false or (false and true)) = true
 : Double{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
+                        return 0.0
 }
 
 
@@ -296,8 +284,6 @@ item.deactivate()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return xRect
 }
@@ -321,8 +307,6 @@ item.deactivate()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return yRect
@@ -361,8 +345,6 @@ g.drawRect(xRect, yRect, width, height)
 : Node?{
 var canvasDom = canvasDom
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -371,8 +353,6 @@ var canvasDom = canvasDom
     open fun removePoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -389,8 +369,6 @@ var point = point
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SelectionTool.NAME
@@ -440,7 +418,7 @@ var mouseEvent = mouseEvent
 var xPixelsPerCell = xPixelsPerCell
 var yPixelsPerCell = yPixelsPerCell
 this.logUtil!!.putF(this.commonStrings!!.START, this, MouseStrings.getInstance()!!.MOUSE_PRESSED)
-this.startPoint= PointFactory.getInstance()!!.createXY(mouseEvent!!.getX(), mouseEvent!!.getY())
+this.startPoint= PointFactory.getInstance()!!.createXY(mouseEvent!!.getX(), mouseEvent!!.getY())!!
 this.endPoint= this.startPoint
 }
 
@@ -452,7 +430,7 @@ var mouseEvent = mouseEvent
 var xPixelsPerCell = xPixelsPerCell
 var yPixelsPerCell = yPixelsPerCell
 this.logUtil!!.putF(this.commonStrings!!.START, this, MouseStrings.getInstance()!!.MOUSE_RELEASED)
-this.endPoint= PointFactory.getInstance()!!.createXY(mouseEvent!!.getX(), mouseEvent!!.getY())
+this.endPoint= PointFactory.getInstance()!!.createXY(mouseEvent!!.getX(), mouseEvent!!.getY())!!
 this.active= false
 this.makeSelection()
 }
@@ -464,7 +442,7 @@ this.makeSelection()
 var mouseEvent = mouseEvent
 var xPixelsPerCell = xPixelsPerCell
 var yPixelsPerCell = yPixelsPerCell
-this.endPoint= PointFactory.getInstance()!!.createXY(mouseEvent!!.getX(), mouseEvent!!.getY())
+this.endPoint= PointFactory.getInstance()!!.createXY(mouseEvent!!.getX(), mouseEvent!!.getY())!!
 }
 
 
@@ -512,8 +490,6 @@ var keyEvent = keyEvent
     open fun duplicate()
         //nullable = true from not(false or (false and true)) = true
 : GraphicItemInterface?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

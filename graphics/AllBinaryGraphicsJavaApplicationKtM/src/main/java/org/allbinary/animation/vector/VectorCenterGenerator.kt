@@ -60,8 +60,6 @@ var y = y
 graphicsPipe!!.createMatrix()
 graphicsPipe!!.translate(x, y)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return graphicsPipe!!.getMatrix()
 }
@@ -279,8 +277,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GE
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.width
 }
@@ -297,8 +293,6 @@ this.width= width
     open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.height

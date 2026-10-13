@@ -51,8 +51,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : BundleContext{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AllBinaryPreloaderActivator.context
 }
@@ -106,7 +104,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
 
     var serviceReference: ServiceReference = serviceRegistration!!.getReference()!!
 
-serviceReference= AllBinaryPreloaderActivator.context.getServiceReference(CRYPT_REGISTRY_NAME)
+serviceReference= AllBinaryPreloaderActivator.context.getServiceReference(CRYPT_REGISTRY_NAME)!!
 
     
                         if(serviceReference == 

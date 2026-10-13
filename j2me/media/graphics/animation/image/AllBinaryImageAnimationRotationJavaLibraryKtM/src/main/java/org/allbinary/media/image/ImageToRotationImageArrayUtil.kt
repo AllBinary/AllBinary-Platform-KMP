@@ -59,7 +59,7 @@ open public class ImageToRotationImageArrayUtil : Object {
         for (index in 1 until totalFrames) {
 
             imageArray[index] =
-                imageRotationUtil!!.createRotatedImage(image, index * angleIncrement)
+                imageRotationUtil!!.createRotatedImage(image, index * angleIncrement)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

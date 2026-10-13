@@ -68,8 +68,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return WorkAreaJPanel.document
 }
@@ -126,7 +124,7 @@ var dimension = dimension
 
         try {
             this.initComponents()
-this.name= workAreaDom!!.getName()
+this.name= workAreaDom!!.getName()!!
 this.initMyComponents(dimension)
 
     var canvasNodeList: BasicArrayList = workAreaDom!!.getCanvasNodes()!!
@@ -247,8 +245,6 @@ canvasJPanelHashMap!!.put(canvasJPanel!!.getTreeNode(), Integer(index))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return canvasJPanelHashMap
 }
@@ -275,8 +271,6 @@ this.isPlaying= false
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isPlaying
 }
@@ -285,8 +279,6 @@ this.isPlaying= false
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -377,8 +369,6 @@ canvasJPanel!!.getGrid()!!.setZoom(canvasJPanel!!.getGrid()!!.getZoom() +factor)
     open fun getCurrentFrame()
         //nullable = true from not(false or (false and true)) = true
 : CanvasJPanel{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.canvasJPanelList!!.get(this.selectedFrame) as CanvasJPanel
@@ -611,8 +601,6 @@ framesNode!!.appendChild(canvasJPanel!!.toDom())
 workAreaNode!!.appendChild(nameNode)
 workAreaNode!!.appendChild(framesNode)
 WorkAreaJPanel.document.appendChild(workAreaNode)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document

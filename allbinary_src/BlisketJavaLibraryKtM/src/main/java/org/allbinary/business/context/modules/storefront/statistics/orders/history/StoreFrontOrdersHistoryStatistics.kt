@@ -97,8 +97,6 @@ this.numberOfOrdersLong= numberOfOrders as Long
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.numberOfOrdersLong
 }
@@ -107,8 +105,6 @@ this.numberOfOrdersLong= numberOfOrders as Long
     open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.subTotalMoney
@@ -119,8 +115,6 @@ this.numberOfOrdersLong= numberOfOrders as Long
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingCostMoney
 }
@@ -130,8 +124,6 @@ this.numberOfOrdersLong= numberOfOrders as Long
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.taxesMoney
 }
@@ -140,8 +132,6 @@ this.numberOfOrdersLong= numberOfOrders as Long
     open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.totalMoney
@@ -163,8 +153,6 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.SHIPPINGCOST, this.getShip
 hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TAXES, this.getTaxes()!!.toString())
 hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.toString())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -174,8 +162,6 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -184,8 +170,6 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -81,8 +81,6 @@ var thread = thread
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.running
 }
@@ -109,15 +107,11 @@ this.running= running
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -215,8 +209,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RU
         //nullable = true from not(false or (false and true)) = true
 : InputAutomationActionInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputAutomationActionInterface
 }
@@ -233,8 +225,6 @@ this.inputAutomationActionInterface= inputAutomationActionInterface
     open fun getCaptureWorker()
         //nullable = true from not(false or (false and true)) = true
 : CaptureWorkerInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.captureWorkerInterface
@@ -253,8 +243,6 @@ this.captureWorkerInterface= captureWorkerInterface
         //nullable = true from not(false or (false and true)) = true
 : ImageComparisonWorker{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageComparisonWorker
 }
@@ -271,8 +259,6 @@ this.imageComparisonWorker= imageComparisonWorker
     open fun getMotionRectanglesWorker()
         //nullable = true from not(false or (false and true)) = true
 : MotionRectanglesWorker{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.motionRectanglesWorker

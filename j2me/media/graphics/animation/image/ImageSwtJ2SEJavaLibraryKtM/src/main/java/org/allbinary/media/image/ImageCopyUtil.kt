@@ -57,8 +57,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageCopyUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageCopyUtil.instance
 }
@@ -103,9 +101,7 @@ private constructor ()
                                     
     var image: Image = originalImage
 
-image= this.openGLUtil!!.addImage(image)
-
-
+image= this.openGLUtil!!.addImage(image)!!
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -114,8 +110,6 @@ image= this.openGLUtil!!.addImage(image)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImage(originalImage)
 
@@ -136,8 +130,6 @@ image= this.openGLUtil!!.addImage(image)
                         
                                     {
                                     this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImage
@@ -160,7 +152,7 @@ image= this.openGLUtil!!.addImage(image)
                                     
     var openGLESImage: OpenGLESImage = (originalImage as OpenGLESImage)
 
-originalImage2= openGLESImage!!.openGLBitmap!!.getImage()
+originalImage2= openGLESImage!!.openGLBitmap!!.getImage()!!
 
                                     }
                                 
@@ -192,9 +184,7 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(originalImmutableImage!!.i
 
                         }
                             
-image= this.openGLUtil!!.addImage(image)
-
-
+image= this.openGLUtil!!.addImage(image)!!
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -220,8 +210,6 @@ image= this.openGLUtil!!.addImage(image)
                                     {
                                     this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImage
 
@@ -238,8 +226,6 @@ image= this.openGLUtil!!.addImage(image)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImage2(originalImage, width, height, mutable)
 
@@ -253,7 +239,7 @@ image= this.openGLUtil!!.addImage(image)
                                     
     var openGLESImage: OpenGLESImage = (originalImage as OpenGLESImage)
 
-originalImage2= openGLESImage!!.openGLBitmap!!.getImage()
+originalImage2= openGLESImage!!.openGLBitmap!!.getImage()!!
 
                                     }
                                 
@@ -341,9 +327,7 @@ image= SwtImmutableImage(originalImmutableImage!!.getName(), PostLoadSwtImmutabl
 
                         }
                             
-image= this.openGLUtil!!.addImage(image)
-
-
+image= this.openGLUtil!!.addImage(image)!!
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -372,8 +356,6 @@ image= this.openGLUtil!!.addImage(image)
                         
                                     {
                                     this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImage
@@ -410,8 +392,10 @@ image= this.openGLUtil!!.addImage(image)
 
     var openGLHeight: Int = openGLESImage!!.openGLBitmap!!.getHeight()
 
-openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2= ((width.toFloat()) /openGLWidth)
-openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLHeight)
+openGLESImageProperties!!.scaleX2= ((width.toFloat()) /openGLWidth)
+openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2
+openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLHeight)
+openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2
 openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX *0.75f
 openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY *0.75f
 
@@ -436,8 +420,10 @@ image= openGLESImage
 
     var openGLESImageProperties: OpenGLESImageProperties = openGLESImage!!.openGLESImageProperties
 
-openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2= ((width.toFloat()) /openGLESImage!!.getWidth()).toFloat()
-openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLESImage!!.getHeight()).toFloat()
+openGLESImageProperties!!.scaleX2= ((width.toFloat()) /openGLESImage!!.getWidth()).toFloat()
+openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2
+openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLESImage!!.getHeight()).toFloat()
+openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2
 
     
                         if(image.getName()!!.startsWith(this.INFORMATION))
@@ -557,12 +543,10 @@ image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createIma
 
                         }
                             
-image= this.openGLUtil!!.addImage(image)
+image= this.openGLUtil!!.addImage(image)!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -583,8 +567,6 @@ image= this.openGLUtil!!.addImage(image)
                         
                                     {
                                     this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImage
@@ -632,8 +614,7 @@ image= this.openGLUtil!!.addImage(image)
                         
                                     {
                                     
-    var originalImageData: ImageData = 
-                                    (getImage as Image).getImageData()!!
+    var originalImageData: ImageData = (originalImage!!.getImage() as Image).getImageData()!!
 
 
     var mutableImage2: SwtMutableImage = image as SwtMutableImage
@@ -685,11 +666,7 @@ newPixelArray[index +(index2 *width)]= originalPixelArray[(index -halfWidthDelta
 
 }
 
-getImage = mutableImage2!!.getImage()getImage as org.eclipse.swt.graphics.Image
-getImage.
-                    getImageData()!!.setPixels(0, 0, image.getWidth(), newPixelArray, 0)
-
-
+(mutableImage2!!.getImage() as org.eclipse.swt.graphics.Image).getImageData()!!.setPixels(0, 0, image.getWidth(), newPixelArray, 0)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -701,8 +678,7 @@ getImage.
     var originalImmutableImage: SwtImmutableImage = image as SwtImmutableImage
 
 
-    var originalImageData: ImageData = 
-                                    (getImage as Image).getImageData()!!
+    var originalImageData: ImageData = (originalImage!!.getImage() as Image).getImageData()!!
 
 
     var halfWidthDelta: Int = (newWidth -originalImage!!.getWidth()) /2
@@ -751,11 +727,7 @@ newPixelArray[index +(index2 *width)]= originalPixelArray[(index -halfWidthDelta
 
 }
 
-getImage = originalImmutableImage!!.getImage()getImage as org.eclipse.swt.graphics.Image
-getImage.
-                    getImageData()!!.setPixels(0, 0, image.getWidth(), newPixelArray, 0)
-
-
+(originalImmutableImage!!.getImage() as org.eclipse.swt.graphics.Image).getImageData()!!.setPixels(0, 0, image.getWidth(), newPixelArray, 0)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image

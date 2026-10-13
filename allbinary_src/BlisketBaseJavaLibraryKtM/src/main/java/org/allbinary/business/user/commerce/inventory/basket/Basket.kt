@@ -165,8 +165,6 @@ totalWeight!!.add(weightFloat!!.toString())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return totalWeight!!.toString()
 }
@@ -175,8 +173,6 @@ totalWeight!!.add(weightFloat!!.toString())
     open fun getNumberOfItems()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(this.items.size())
@@ -190,8 +186,6 @@ totalWeight!!.add(weightFloat!!.toString())
     var set: Set = this.items.keySet()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return set
 }
@@ -200,8 +194,6 @@ totalWeight!!.add(weightFloat!!.toString())
     open fun getItems()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.items
@@ -214,8 +206,6 @@ totalWeight!!.add(weightFloat!!.toString())
 var product = product
 
     var numStr: String = this.items.get(product) as String
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -278,8 +268,6 @@ subTotal!!.add(productTotal!!.toString())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subTotal

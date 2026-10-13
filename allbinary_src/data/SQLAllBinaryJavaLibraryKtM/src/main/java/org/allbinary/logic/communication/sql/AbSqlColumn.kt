@@ -125,8 +125,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_LARGETS_INT
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return largestAsString
 } catch(e: Exception)
@@ -140,8 +138,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_LARGETS_INT
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.INVALID_RESULT
@@ -196,8 +192,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_COLUMN)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return column
 } catch(e: Exception)
@@ -211,8 +205,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_COLUMN)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return column
@@ -253,11 +245,11 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
 
         try {
-            rset= executeSQLStatement(sqlStatement)
+            rset= executeSQLStatement(sqlStatement)!!
 
         while(rset.next())
         {
-field= rset.getObject(columnName)!!.toString()
+field= rset.getObject(columnName)!!.toString()!!
 column.add(field)
 }
 
@@ -276,8 +268,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_COLUMN_WHER
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return column
 } catch(e: Exception)
@@ -291,8 +281,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_COLUMN_WHER
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return column

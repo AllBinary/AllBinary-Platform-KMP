@@ -909,8 +909,6 @@ this.getSelectedWorkArea()!!.autoRotate(angleIncrementInteger!!.toInt(), totalRo
         //nullable = true from not(false or (false and true)) = true
 : WorkAreaJPanelInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.jTabbedPane!!.getSelectedComponent() as WorkAreaJPanelInterface
 }

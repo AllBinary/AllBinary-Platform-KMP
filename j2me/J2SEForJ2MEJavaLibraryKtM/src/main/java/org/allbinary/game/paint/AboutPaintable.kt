@@ -100,7 +100,7 @@ open public class AboutPaintable : Paintable, UpdateMyFontInterface {
             this.developersBeginWidth[index] = (font.stringWidth(this.developers[index]!!) shr 1)
         }
 
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun getPaintableArrayInstance()

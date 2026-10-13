@@ -61,16 +61,12 @@ var nodeList = nodeList
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,8 +92,6 @@ var nodeList = nodeList
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 
@@ -123,8 +117,6 @@ var nodeName = nodeName
 var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNode(nodeName, nodeList)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -158,8 +150,6 @@ var nodeList = nodeList
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 
@@ -199,8 +189,6 @@ var nodeList = nodeList
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

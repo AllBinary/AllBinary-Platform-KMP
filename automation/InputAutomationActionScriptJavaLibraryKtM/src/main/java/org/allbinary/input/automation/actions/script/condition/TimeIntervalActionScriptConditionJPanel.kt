@@ -68,8 +68,6 @@ this.timeIntervalActionScriptConditionInterface!!.log()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeIntervalJTextField
 }
@@ -86,8 +84,6 @@ this.timeIntervalJTextField= timeIntervalJTextField
     open fun getTimeIntervalActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeIntervalActionJDialog

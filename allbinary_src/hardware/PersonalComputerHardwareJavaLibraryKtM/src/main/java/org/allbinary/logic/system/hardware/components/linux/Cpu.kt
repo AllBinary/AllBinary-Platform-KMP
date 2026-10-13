@@ -120,7 +120,7 @@ var filePath = filePath
     var fileReader: FileReader = FileReader(filePath)
 
 lineNumberReader= LineNumberReader(fileReader)
-this.cpuHashMap= StdUtil.getInstance()!!.createHashMap()
+this.cpuHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     
                         if(lineNumberReader == 
@@ -225,7 +225,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
 
                                     }
                                 
-nextLine= lineNumberReader!!.readLine()
+nextLine= lineNumberReader!!.readLine()!!
 }
 
 
@@ -249,8 +249,6 @@ nextLine= lineNumberReader!!.readLine()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.PROCESSOR) as String
 }
@@ -259,8 +257,6 @@ nextLine= lineNumberReader!!.readLine()
     open fun getVendorId()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.VENDORID) as String
@@ -271,8 +267,6 @@ nextLine= lineNumberReader!!.readLine()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.CPUFAMILY) as String
 }
@@ -281,8 +275,6 @@ nextLine= lineNumberReader!!.readLine()
     open fun getModel()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.MODEL) as String
@@ -293,8 +285,6 @@ nextLine= lineNumberReader!!.readLine()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.MODELNAME) as String
 }
@@ -303,8 +293,6 @@ nextLine= lineNumberReader!!.readLine()
     open fun getStepping()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.STEPPING) as String
@@ -315,8 +303,6 @@ nextLine= lineNumberReader!!.readLine()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.CPUMHZ) as String
 }
@@ -325,8 +311,6 @@ nextLine= lineNumberReader!!.readLine()
     open fun getCacheSize()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuHashMap!!.get(CpuInfo.CACHESIZE) as String
@@ -338,8 +322,6 @@ nextLine= lineNumberReader!!.readLine()
 : Boolean{
 var cpuInterface = cpuInterface
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -349,8 +331,6 @@ var cpuInterface = cpuInterface
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var componentInterface = componentInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -384,8 +364,6 @@ stringMaker!!.append(commonSeps!!.NEW_LINE)
 stringMaker!!.append(CpuInfo.CPUMHZ.toString())!!.append(commonLabels!!.COLON_SEP)!!.append(this.getCpuSpeed())
 stringMaker!!.append(commonSeps!!.NEW_LINE)
 stringMaker!!.append(CpuInfo.CACHESIZE.toString())!!.append(commonLabels!!.COLON_SEP)!!.append(this.getCacheSize())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringMaker!!.toString()

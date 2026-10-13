@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OwnershipPaintable{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OwnershipPaintable()
 }
@@ -84,7 +82,7 @@ private constructor (){
 
 this.COPYRIGHT_Y= 2 *font.getHeight()
 this.beginWidth= (font.stringWidth(this.COPYRIGHT) shr 1)
-this.myFontProcessor= MyFontProcessor.getInstance()
+this.myFontProcessor= MyFontProcessor.getInstance()!!
 }
 
 
@@ -100,8 +98,6 @@ this.color= basicColor!!.toInt()
     open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basicColor

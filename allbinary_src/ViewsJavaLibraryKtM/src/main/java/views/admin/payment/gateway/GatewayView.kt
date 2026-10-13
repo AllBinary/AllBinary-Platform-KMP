@@ -77,8 +77,6 @@ super.getFormData(request)
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayEntityFactory.getInstance()!!.getPaymentGatewayInterface(this.getPaymentGatewayPrimaryKey()!!.getStoreName(), BasicPaymentTypeUtil.getInstance()!!.get(this.getPaymentGatewayPrimaryKey()!!.getName()))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PaymentGatewayComponent(this.getTransformInfoInterface(), paymentGatewayInterface).
                             view()

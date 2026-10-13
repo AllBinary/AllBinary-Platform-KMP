@@ -40,8 +40,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : DisplayPointScalar{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DisplayPointScalar.instance
 }
@@ -58,8 +56,6 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
     //var point = point
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return point

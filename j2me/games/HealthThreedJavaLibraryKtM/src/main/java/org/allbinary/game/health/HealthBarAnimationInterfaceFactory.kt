@@ -52,8 +52,6 @@ public constructor ()
 var layerInterface = layerInterface
 var location = location
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HealthBarThreedAnimation(layerInterface, location)
 }
@@ -66,8 +64,6 @@ var location = location
 : Animation{
     //var instanceId = instanceId
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -79,8 +75,6 @@ var location = location
         //nullable = true from not(false or (false and false)) = true
 : Animation?{
 var animationInterface = animationInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

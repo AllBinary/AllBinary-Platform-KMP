@@ -97,11 +97,9 @@ PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.
 
         {
 basicGeographicMapCellPosition= pathList!!.get(index) as CellPosition
-geographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())
+geographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())!!
 list.add(geographicMapCellPosition)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -163,7 +161,7 @@ list.add(geographicMapCellPosition)
                         for (index in 0 until size)
 
         {
-pathList= this.getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory, basicList!!.get(index) as BasicArrayList)
+pathList= this.getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory, basicList!!.get(index) as BasicArrayList)!!
 list.add(pathList)
 }
 
@@ -175,15 +173,11 @@ pathCacheFactory!!.remove(smallIntegerSingletonFactory!!.getAt(id))
 this.logUtil!!.putF(StringMaker().
                             append("Using Cached Path(s): ")!!.append(StringUtil.getInstance()!!.toString(list))!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return list
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicArrayListD()

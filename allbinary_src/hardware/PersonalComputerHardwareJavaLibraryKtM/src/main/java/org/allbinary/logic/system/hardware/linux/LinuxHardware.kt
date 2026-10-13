@@ -283,7 +283,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
 
                                     }
                                 
-nextLine= lineNumberReader!!.readLine()
+nextLine= lineNumberReader!!.readLine()!!
 }
 
 
@@ -303,7 +303,7 @@ nextLine= lineNumberReader!!.readLine()
                                 
 componentData!!.append(nextLine)
 componentData!!.append(CommonSeps.getInstance()!!.NEW_LINE)
-nextLine= lineNumberReader!!.readLine()
+nextLine= lineNumberReader!!.readLine()!!
 
     var componentType: String = PCComponentFactory.getInstance()!!.java.componentType!!
 
@@ -314,7 +314,7 @@ nextLine= lineNumberReader!!.readLine()
         {
 componentData!!.append(nextLine)
 componentData!!.append(CommonSeps.getInstance()!!.NEW_LINE)
-nextLine= lineNumberReader!!.readLine()
+nextLine= lineNumberReader!!.readLine()!!
 
     
                         if(nextLine == 
@@ -382,8 +382,6 @@ lineNumberReader!!.close()
 : MediaInterface{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.multimediaInterfaceVector!!.get(index) as MediaInterface
 }
@@ -393,8 +391,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : BridgeInterface{
 var index = index
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.bridgeInterfaceVector!!.get(index) as BridgeInterface
@@ -406,8 +402,6 @@ var index = index
 : CpuInterface{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cpuInterfaceVector!!.get(index) as CpuInterface
 }
@@ -417,8 +411,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : EthernetInterface{
 var index = index
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ethernetInterfaceVector!!.get(index) as EthernetInterface
@@ -430,8 +422,6 @@ var index = index
 : FireWireInterface{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fireWireInterfaceVector!!.get(index) as FireWireInterface
 }
@@ -441,8 +431,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : HardDriveControllerInterface{
 var index = index
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hardDriveControllerInterfaceVector!!.get(index) as HardDriveControllerInterface
@@ -454,8 +442,6 @@ var index = index
 : HardDriveInterface{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hardDriveInterfaceVector!!.get(index) as HardDriveInterface
 }
@@ -465,8 +451,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : MachineAccessControlAddressInterface{
 var index = index
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.macInterfaceVector!!.get(index) as MachineAccessControlAddressInterface
@@ -478,8 +462,6 @@ var index = index
 : MonitorInterface{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.monitorInterfaceVector!!.get(index) as MonitorInterface
 }
@@ -489,8 +471,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : UsbInterface{
 var index = index
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.usbInterfaceVector!!.get(index) as UsbInterface
@@ -502,8 +482,6 @@ var index = index
 : VideoInterface{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.videoInterfaceVector!!.get(index) as VideoInterface
 }
@@ -513,8 +491,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : HardwareComponentInterface{
 var index = index
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentInterfaceVector!!.get(index) as HardwareComponentInterface
@@ -548,8 +524,6 @@ hardwareBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hardwareBuffer!!.toString()
 }
@@ -560,8 +534,6 @@ hardwareBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 : Boolean{
 var hardwareInterface = hardwareInterface
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -571,8 +543,6 @@ var hardwareInterface = hardwareInterface
         //nullable = true from not(false or (false and false)) = true
 : ABHashtable<Any, Any>{
 var hardwareInterface = hardwareInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StdUtil.getInstance()!!.NULL_TABLE
@@ -599,8 +569,6 @@ var nextLine = nextLine
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -609,8 +577,6 @@ var nextLine = nextLine
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

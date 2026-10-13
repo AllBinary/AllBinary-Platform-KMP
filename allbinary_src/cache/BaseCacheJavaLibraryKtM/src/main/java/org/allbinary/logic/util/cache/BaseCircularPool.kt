@@ -54,7 +54,7 @@ open public class BaseCircularPool : Object {
 
         for (index in 0 until size) {
 
-            this.OBJECT_ARRAY[index] = allBinaryObjectFactoryInterface!!.getInstance()
+            this.OBJECT_ARRAY[index] = allBinaryObjectFactoryInterface!!.getInstance()!!
         }
     }
 

@@ -242,7 +242,7 @@ public constructor (){
                         if(isHTML)
                         
                                     {
-                                    this.processor= Processor.getInstance()
+                                    this.processor= Processor.getInstance()!!
 this.endProcessor= HTMLEndProcessor()
 
                                     }
@@ -357,8 +357,6 @@ this.firstTime= false
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -395,8 +393,6 @@ this.firstTime= false
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -580,15 +576,11 @@ this.loadImageForAnimation()
                                     {
                                     lazyImageRotationAnimation!!.setRealAnimation()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -618,8 +610,6 @@ this.loadImageForAnimation()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -644,8 +634,6 @@ this.loadImage(image)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -670,8 +658,6 @@ this.loadImage(image)
                         
                                     {
                                     this.totalLoaded++
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -698,8 +684,6 @@ this.loadImage(image)
                                     {
                                     this.init(image, image2)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -716,8 +700,6 @@ this.loadImage(image)
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -748,8 +730,6 @@ image.init(image2.getImage())
     var image: Image = ImageFactory.getInstance()!!.createImageFromInputStream(inputStream)!!
 
 image.setName(key)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -786,7 +766,7 @@ this.volume= 0
 
                                     }
                                 
-image= this.createImage(caller, width, height)
+image= this.createImage(caller, width, height)!!
 
     
                         if(this.nextIndex > this.widths.length -1)
@@ -811,8 +791,6 @@ this.listOfList[foundIndex]!!.add(image)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -840,7 +818,7 @@ this.listOfList[foundIndex]!!.add(image)
 
 
         try {
-            image= this.createImageFromInputStream(key, inputStream)
+            image= this.createImageFromInputStream(key, inputStream)!!
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
@@ -850,15 +828,13 @@ this.tsUtil!!.gc()
 this.tsUtil!!.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
 Thread.sleep(100)
-image= this.createImageFromInputStream(key, inputStream)
+image= this.createImageFromInputStream(key, inputStream)!!
 }
 
 this.hashtable.put(key, image)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -892,8 +868,6 @@ this.hashtable.put(key, image)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return index
 
@@ -940,8 +914,6 @@ this.logUtil!!.putF(StringMaker().
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.creatImage(key as String)
 
@@ -973,8 +945,6 @@ this.loadList!!.add(image)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
 }
@@ -988,8 +958,6 @@ this.loadList!!.add(image)
     //var key = key
     //var width = width
     //var height = height
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Image.createImageLater(key, width, height)
@@ -1051,8 +1019,6 @@ this.loadAfterList!!.remove(list.get(index))
 }
 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1144,8 +1110,6 @@ this.processor.process()
     open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

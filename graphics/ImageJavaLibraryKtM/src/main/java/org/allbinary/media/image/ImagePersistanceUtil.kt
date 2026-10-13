@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImagePersistanceUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImagePersistanceUtil.instance
 }
@@ -128,15 +126,13 @@ this.saveWithImageIO(File(filePath), bufferedImage)
                                     {
                                     this.logUtil!!.putF("Unable to save image to jpeg file type.", this, this.commonStrings!!.SAVE)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
                                     }
                                 
 writer= iter.next() as ImageWriter
-ios= ImageIO.createImageOutputStream(file)
+ios= ImageIO.createImageOutputStream(file)!!
 writer.setOutput(ios)
 
     var iwp: ImageWriteParam = writer.getDefaultWriteParam()!!

@@ -59,8 +59,6 @@ this.storeFrontInterface= storeFrontInterface
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeFrontInterface!!.getName()
 }
@@ -69,8 +67,6 @@ this.storeFrontInterface= storeFrontInterface
     open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return commonStrings!!.NOT_IMPLEMENTED
@@ -88,8 +84,6 @@ var hashMap = hashMap
         //nullable = true from not(false or (false and true)) = true
 : String?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -98,8 +92,6 @@ var hashMap = hashMap
     open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -110,8 +102,6 @@ var hashMap = hashMap
         //nullable = true from not(false or (false and true)) = true
 : Any?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -120,8 +110,6 @@ var hashMap = hashMap
     open fun getObjectConfigInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoObjectConfigInterface?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -139,8 +127,6 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
         //nullable = true from not(false or (false and true)) = true
 : AbPath?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -149,8 +135,6 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
     open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -161,8 +145,6 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
         //nullable = true from not(false or (false and true)) = true
 : String?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -172,8 +154,6 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
         //nullable = true from not(false or (false and true)) = true
 : AbPath?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -182,8 +162,6 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
     open fun getDataFile()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -275,8 +253,6 @@ var value = value
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -285,8 +261,6 @@ var value = value
     open fun getImportUriPath()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -306,8 +280,6 @@ var importUriPath = importUriPath
         //nullable = true from not(false or (false and true)) = true
 : Any?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -319,8 +291,6 @@ var importUriPath = importUriPath
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -331,8 +301,6 @@ var importUriPath = importUriPath
     open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

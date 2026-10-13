@@ -75,7 +75,7 @@ open public class AnimationFactoryImageScaleUtil : Object {
 
                 var scaledHeight: Int = (scaleY * height).toInt()
 
-                scaledImage = this.imageScaleUtil!!.scale(image, scaledWidth, scaledHeight)
+                scaledImage = this.imageScaleUtil!!.scale(image, scaledWidth, scaledHeight)!!
             }
         } else {
             scaledImage = image

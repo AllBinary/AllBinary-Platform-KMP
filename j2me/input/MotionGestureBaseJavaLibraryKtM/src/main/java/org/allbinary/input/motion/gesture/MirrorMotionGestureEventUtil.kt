@@ -40,7 +40,7 @@ open public class MirrorMotionGestureEventUtil : Object {
     private val motionEventCircularPool: MotionEventCircularPool
 
     private constructor() : super() {
-        this.motionEventCircularPool = MotionEventCircularPool.createPool(Integer.MAX_VALUE)
+        this.motionEventCircularPool = MotionEventCircularPool.createPool(Integer.MAX_VALUE)!!
     }
 
     @Throws(Exception::class)

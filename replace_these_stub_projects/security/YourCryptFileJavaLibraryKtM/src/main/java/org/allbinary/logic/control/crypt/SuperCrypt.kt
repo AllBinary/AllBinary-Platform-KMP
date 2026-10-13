@@ -34,8 +34,6 @@ var key = key
 : String?{
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -45,8 +43,6 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 : String?{
 var value = value
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -67,8 +67,6 @@ var hashMap = hashMap
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.isValid()
 }
@@ -77,8 +75,6 @@ var hashMap = hashMap
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.validationInfo()
@@ -89,8 +85,6 @@ var hashMap = hashMap
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -100,8 +94,6 @@ var hashMap = hashMap
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -138,8 +130,6 @@ styleNode!!.appendChild(ColorsView().
 
 styleNode!!.appendChild(styleDomNodeInterface!!.toXmlNode(document))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

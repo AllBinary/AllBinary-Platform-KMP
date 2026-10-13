@@ -63,7 +63,7 @@ open public class OpenGLESImage : Image, OpenGLSurfaceChangedInterface {
         // var image = image
         // var bitmapFactory = bitmapFactory
         // var textureFactory = textureFactory
-        this.openGLBitmap = bitmapFactory!!.createBitmap(image)
+        this.openGLBitmap = bitmapFactory!!.createBitmap(image)!!
         this.textureFactory = textureFactory
     }
 

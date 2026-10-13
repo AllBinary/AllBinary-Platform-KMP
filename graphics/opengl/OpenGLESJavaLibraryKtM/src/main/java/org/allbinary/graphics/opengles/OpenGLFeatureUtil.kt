@@ -40,8 +40,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OpenGLFeatureUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLFeatureUtil.instance
 }
@@ -69,8 +67,6 @@ this.anyThreed= openGLConfiguration!!.isOpenGL() && (features.isFeature(openGLFe
     open fun isAnyThreed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.anyThreed

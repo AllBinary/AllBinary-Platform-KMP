@@ -55,7 +55,7 @@ open public class GameConfiguration : Object {
         // var maxValue = maxValue
         this.setName(name)
         this.setDefaultValue(defaultValue)
-        this.value = this.getDefaultValue()
+        this.value = this.getDefaultValue()!!
         this.setMinValue(minValue)
         this.setMaxValue(maxValue)
         GameConfigurationSingleton.getInstance()!!.getHashtable()!!.put(this.getName(), this)
@@ -78,9 +78,9 @@ open public class GameConfiguration : Object {
                     StringMaker()
                         .append(this.name)!!
                         .append(" value: from: ")!!
-                        .appendint(oldValue!!.toInt())!!
+                        .appendint(oldValue!!.toInt().toInt())!!
                         .append(" to ")!!
-                        .appendint(this.value.toInt())!!
+                        .appendint(this.value.toInt().toInt())!!
                         .toString(),
                 )
             )
@@ -171,13 +171,13 @@ open public class GameConfiguration : Object {
         stringBuffer!!.append("Name: ")
         stringBuffer!!.append(this.name)
         stringBuffer!!.append(" Min: ")
-        stringBuffer!!.appendint(this.getMinValue()!!.toInt())
+        stringBuffer!!.appendint(this.getMinValue()!!.toInt().toInt())
         stringBuffer!!.append(" Max: ")
-        stringBuffer!!.appendint(this.getMaxValue()!!.toInt())
+        stringBuffer!!.appendint(this.getMaxValue()!!.toInt().toInt())
         stringBuffer!!.append(" Value: ")
-        stringBuffer!!.appendint(this.getValue()!!.toInt())
+        stringBuffer!!.appendint(this.getValue()!!.toInt().toInt())
         stringBuffer!!.append(" Default: ")
-        stringBuffer!!.appendint(this.getDefaultValue()!!.toInt())
+        stringBuffer!!.appendint(this.getDefaultValue()!!.toInt().toInt())
         stringBuffer!!.append(" Modifiable: ")
         stringBuffer!!.appendboolean(this.isModifiable())
 

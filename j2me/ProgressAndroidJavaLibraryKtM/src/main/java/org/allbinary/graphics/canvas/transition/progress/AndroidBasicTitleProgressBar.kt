@@ -118,7 +118,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
                 this.image =
                     ImageCacheFactory.getInstance()!!.getWithKey(
                         AndroidBasicTitleProgressBar.RESOURCE
-                    )
+                    )!!
             }
         } catch (e: Exception) {
             this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
@@ -160,7 +160,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
 
             if (!this.isBackground()) {
 
-                this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+                this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
             } else if (AndroidBasicTitleProgressBar.background != 0) {
 
                 var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -169,14 +169,14 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
 
                 if (displayInfo!!.isPortrait()) {
 
-                    currentImage = this.getImage(0)
+                    currentImage = this.getImage(0)!!
                 } else {
-                    currentImage = this.getImage(2)
+                    currentImage = this.getImage(2)!!
                 }
 
                 if (currentImage == null) {
 
-                    this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+                    this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
                 } else {
                     this.animation = ImageAnimation(currentImage, AnimationBehavior.getInstance())
                 }
@@ -208,7 +208,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
                 this,
                 this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT,
             )
-            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
         }
     }
 
@@ -236,7 +236,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
                 this,
                 "loadProgressImages",
             )
-            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
         } catch (e: Exception) {
             this.logUtil!!.putF(
                 this.commonStrings!!.EXCEPTION_LABEL +
@@ -244,7 +244,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
                 this,
                 "loadProgressImages",
             )
-            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
         }
     }
 
@@ -404,7 +404,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
                             lastHeight.toFloat() - 20,
                             image.getHeight().toFloat(),
                             false,
-                        )
+                        )!!
                 }
             } else {
 
@@ -421,7 +421,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
                             lastHeight.toFloat() - 28,
                             image.getHeight().toFloat(),
                             false,
-                        )
+                        )!!
                 }
             }
         }
@@ -436,7 +436,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
         this.image =
             GameFeatureImageCacheFactory.getInstance()!!.getWithKey(
                 AndroidBasicTitleProgressBar.RESOURCE
-            )
+            )!!
 
         var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
@@ -446,7 +446,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
 
             if (this.IMAGE[index] != NullImage.NULL_IMAGE) {
 
-                this.IMAGE[index] = preResourceImageUtil!!.encapsulate(this.IMAGE[index]!!)
+                this.IMAGE[index] = preResourceImageUtil!!.encapsulate(this.IMAGE[index]!!)!!
             }
         }
 
@@ -463,7 +463,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
         this.image =
             GameFeatureImageCacheFactory.getInstance()!!.getWithKey(
                 AndroidBasicTitleProgressBar.RESOURCE
-            )
+            )!!
 
         var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 

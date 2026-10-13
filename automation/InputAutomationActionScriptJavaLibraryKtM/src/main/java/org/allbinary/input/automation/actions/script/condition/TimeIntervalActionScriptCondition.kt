@@ -155,8 +155,6 @@ this.timeIntervalActionScriptConditionJPanel!!.getTimeIntervalActionJDialog()!!.
 hashMap!!.put(TimeIntervalActionScriptConditionData.TIME, Integer.toString(this.timeHelper!!.delay))
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -173,8 +171,6 @@ var document = document
 
 node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalActionScriptConditionData.NAME, this.toHashMap()))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -190,8 +186,6 @@ this.logUtil!!.putF("Time Interval: " +this.timeHelper!!.delay, this, "log")
     open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeHelper
@@ -222,15 +216,11 @@ var frame = frame
                                     {
                                     timeHelper!!.setStartTimeTNT()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.shouldProcess(frame)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

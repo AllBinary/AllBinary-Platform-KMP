@@ -72,8 +72,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InventorySearchUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InventorySearchUtil.instance
 }
@@ -153,8 +151,6 @@ column.addAllList(substoreIdColumn)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return column
 }
@@ -181,8 +177,6 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
@@ -228,8 +222,6 @@ var column = column
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -264,7 +256,7 @@ var column = column
 
     var inventoryNodes: Array<Node?> = arrayOfNulls(MAXPAGES)
 
-keyword= keyword.uppercase()
+keyword= keyword.uppercase()!!
 
     var lastPage: Int =  -1
 
@@ -316,7 +308,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
     var keywords: String = itemInterface!!.getKeywords()!!
 
-keywords= keywords.uppercase()
+keywords= keywords.uppercase()!!
 
     
                         if(keywords.indexOf(keyword) !=  -1)
@@ -350,11 +342,11 @@ numberOfResultsOnCurrentPage++
                                     {
                                     inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_ITEMS_ON_THIS_PAGE, Integer(numberOfResultsOnCurrentPage).
                             toString()))
-documents[currentPage]= viewDocumentInterface!!.getDoc()
+documents[currentPage]= viewDocumentInterface!!.getDoc()!!
 inventoryNodes[currentPage]= inventoryNode
 savedPagesInRange++
-viewDocumentInterface= TransformStoreDocumentFactory.getInstance(searchRequest)
-inventoryNode= viewDocumentInterface!!.getDoc()!!.createElement(InventoryData.INVENTORY)
+viewDocumentInterface= TransformStoreDocumentFactory.getInstance(searchRequest)!!
+inventoryNode= viewDocumentInterface!!.getDoc()!!.createElement(InventoryData.INVENTORY)!!
 viewDocumentInterface!!.getBaseNode()!!.appendChild(inventoryNode)
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.PAGE, Integer(currentPage +1).
                             toString()))
@@ -401,7 +393,7 @@ numberOfResults++
                                     {
                                     inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_ITEMS_ON_THIS_PAGE, Integer(numberOfResultsOnCurrentPage -1).
                             toString()))
-documents[lastPage +1]= viewDocumentInterface!!.getDoc()
+documents[lastPage +1]= viewDocumentInterface!!.getDoc()!!
 inventoryNodes[lastPage +1]= inventoryNode
 savedPagesInRange++
 
@@ -482,7 +474,7 @@ inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocume
     var success: String = XmlDocumentHelper.toString(tempDocument)!!
 
 productListingPages[index]= StoreTransformer(abeClientInformation, TransformInfoHttpSearch(searchRequest) as TransformInfoInterface).
-                            translate(success)
+                            translate(success)!!
 
                                     }
                                 
@@ -497,12 +489,10 @@ productListingPages[index]= StoreTransformer(abeClientInformation, TransformInfo
     var result: String = this.getNoResults(viewDocumentInterface, inventoryNode)!!
 
 productListingPages[0]= StoreTransformer(abeClientInformation, TransformInfoHttpSearch(searchRequest)).
-                            translate(result)
+                            translate(result)!!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return productListingPages
@@ -511,8 +501,6 @@ productListingPages[0]= StoreTransformer(abeClientInformation, TransformInfoHttp
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -529,8 +517,6 @@ productListingPages[0]= StoreTransformer(abeClientInformation, TransformInfoHttp
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

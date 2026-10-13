@@ -62,8 +62,6 @@ this.setAvoidVector(BasicArrayListD())
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.avoidVector
 }
@@ -117,8 +115,6 @@ var rectangle = rectangle
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isCollsionWithAvoidRectangles
 }
@@ -162,8 +158,6 @@ break;
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isCollsionWithAvoidRectangles
 }
@@ -180,8 +174,6 @@ this.avoidVector= avoidVector
     open fun getMaxNonMatchingPixelDeltas()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxNonMatchingPixelDeltas
@@ -210,8 +202,6 @@ this.logUtil!!.putF(" Frame: " +frame +" remainder: " +remainder +" this.doImage
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -219,8 +209,6 @@ this.logUtil!!.putF(" Frame: " +frame +" remainder: " +remainder +" this.doImage
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 

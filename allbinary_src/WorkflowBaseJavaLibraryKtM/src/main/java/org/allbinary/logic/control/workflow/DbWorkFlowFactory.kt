@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : DbWorkFlowFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DbWorkFlowFactory.instance
 }
@@ -80,12 +78,10 @@ private constructor ()
 
     var classes: Array<KClass<*>?> = arrayOfNulls(1)
 
-classes[0]= hashMap!!::class
+classes[0]= hashMap!!::class!!
 params[0]= hashMap as Object
 
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className, classes, params)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

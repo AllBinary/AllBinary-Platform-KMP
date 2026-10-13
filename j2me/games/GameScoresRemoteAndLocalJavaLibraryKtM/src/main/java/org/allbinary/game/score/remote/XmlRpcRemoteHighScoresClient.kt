@@ -83,7 +83,7 @@ serverUrl= serverUrl!!.substring(0, index +1) +this.page
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(TRYING)
-stringBuffer!!.appendint(this.getServer())
+stringBuffer!!.appendint(this.getServer().toInt())
 stringBuffer!!.append(SEP)
 stringBuffer!!.append(serverUrl)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.GET)
@@ -105,8 +105,6 @@ param.add(hashtable)
 this.logUtil!!.putF(RESULT +result.toString(), this, this.commonStrings!!.GET)
 isOnline= true
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
@@ -118,8 +116,6 @@ this.logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackT
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 
@@ -138,16 +134,12 @@ this.logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackT
             {
 this.logUtil!!.put(SERVER_REPORTED_ERROR, this, this.commonStrings!!.GET, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
             {
 this.logUtil!!.put(UNKNOWN_ERROR, this, this.commonStrings!!.GET, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)

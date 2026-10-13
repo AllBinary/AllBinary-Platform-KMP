@@ -39,8 +39,6 @@
         //nullable =  from not(true or (false and true)) = 
 : SystemProperties{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SystemProperties.instance
 }
@@ -63,8 +61,6 @@ private constructor ()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.OS_NAME
 }
@@ -74,8 +70,6 @@ private constructor ()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.OS_ARCH
 }
@@ -84,8 +78,6 @@ private constructor ()
     /*actual*/ open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.OS_VERSION

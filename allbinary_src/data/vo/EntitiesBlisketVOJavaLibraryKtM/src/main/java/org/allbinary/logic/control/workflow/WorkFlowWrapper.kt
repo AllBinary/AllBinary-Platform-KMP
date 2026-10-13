@@ -55,8 +55,6 @@ this.anyType= anyType
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.anyType
 }
@@ -79,8 +77,6 @@ this.anyType= anyType
 
     var result: String = method.invoke(this.anyType, 
                             null) as String
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -127,8 +123,6 @@ this.anyType= anyType
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -171,8 +165,6 @@ this.anyType= anyType
 
     var result: Integer = method.invoke(this.anyType, 
                             null) as Integer
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

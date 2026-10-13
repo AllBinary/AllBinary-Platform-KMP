@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbeLicenseInterfaceFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeLicenseInterfaceFactory.SINGLETON
 }
@@ -84,8 +82,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.get(abeClientInformation)
 
@@ -93,8 +89,6 @@ private constructor ()
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.abeLicenseInterface
 
@@ -112,11 +106,11 @@ private constructor ()
 
         try {
             this.logUtil!!.putF("Getting Keys", this, this.commonStrings!!.GET)
-this.abeLicenseInterface= AbeNoLicense.getInstance()
+this.abeLicenseInterface= AbeNoLicense.getInstance()!!
 
     var licenseClient: AbeLicenseClient = AbeLicenseClient()
 
-this.abeLicenseInterface= licenseClient!!.get(abeClientInformation)
+this.abeLicenseInterface= licenseClient!!.get(abeClientInformation)!!
 
     
                         if(this.abeLicenseInterface != 
@@ -128,8 +122,6 @@ this.abeLicenseInterface= licenseClient!!.get(abeClientInformation)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.abeLicenseInterface
@@ -174,8 +166,6 @@ this.logUtil!!.put("Licensing Failure", this, this.commonStrings!!.GET, e)
                                     
 this.time= currentTime
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -199,8 +189,6 @@ this.check= check
     open fun isCheck()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.check

@@ -134,8 +134,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AdvertisementCampaigns(vector) as AdvertisementCampaignsInterface
 }
@@ -162,8 +160,6 @@ keysAndValues!!.put(AdvertisementCampaignData.getInstance()!!.NAME, name)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AdvertisementCampaign(hashMap) as AdvertisementCampaignInterface
 
@@ -171,8 +167,6 @@ keysAndValues!!.put(AdvertisementCampaignData.getInstance()!!.NAME, name)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -206,8 +200,6 @@ stringBuffer!!.append(this.getTableName())
 stringBuffer!!.append(this.sqlStrings!!.START)
 stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(advertisementCampaignData!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(advertisementCampaignData!!.DESCRIPTION)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(advertisementCampaignData!!.CONFIG)!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)!!.append(TimeData.getInstance()!!.START)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(TimeData.getInstance()!!.END)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(entryData!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(entryData!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(entryData!!.ID)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -220,8 +212,6 @@ stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT
     var returnStr: String = super.createTable(this.createTableStatement())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return returnStr
 }
@@ -230,8 +220,6 @@ stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

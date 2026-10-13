@@ -241,8 +241,6 @@ var jdbcDriverClassPathString = jdbcDriverClassPathString
         try {
             Class.forName(jdbcDriverClassPathString)!!.newInstance()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -259,8 +257,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -459,8 +455,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 }
@@ -476,8 +470,6 @@ var jdbcDriver = jdbcDriver
 stringBuffer!!.append("The JDBC driver (")
 stringBuffer!!.append(jdbcDriver)
 stringBuffer!!.append(") you have provided is not valid.<br/>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -499,8 +491,6 @@ stringBuffer!!.append("2. The JDBC driver you specified does not exit.<br/>")
 stringBuffer!!.append("Solution: Get a JDBC driver. <br/>")
 stringBuffer!!.append("3. The JDBC driver you specified is not valid.<br/>")
 stringBuffer!!.append("Solution: Use a valid JDBC driver.<p/>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -713,8 +703,6 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

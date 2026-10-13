@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OpenGLUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLUtil.instance
 }
@@ -148,9 +146,7 @@ graphics.update()
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
 progressCanvas!!.update(graphics)
-getInstance = OpenGLImageCacheFactory.getInstance()getInstance as OpenGLImageCache
-getInstance.
-                    update(gl)
+(OpenGLImageCacheFactory.getInstance() as OpenGLImageCache).update(gl)
 this.processRunnables()
 this.set(gl)
 }
@@ -179,15 +175,11 @@ this.list.add(encapsulateImage)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return encapsulateImage
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -288,7 +280,7 @@ var gl = gl
                         for (index2 in 0 until size)
 
         {
-image= this.list.get(index2)
+image= this.list.get(index2)!!
 image = imageimage as OpenGLESImage
 image.
                     set(gl)

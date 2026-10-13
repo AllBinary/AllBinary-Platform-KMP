@@ -48,8 +48,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : CacheInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CapturedBufferedImagesCacheSingleton.cacheInterface
 }
@@ -71,7 +69,7 @@ companion object {
 
         try {
             logUtil!!.putF(commonStrings!!.START, instance, STATIC_BLOCK)
-CapturedBufferedImagesCacheSingleton.cacheInterface= CacheInterfaceFactory.getInstance((), ()) as AutomaticCacheInterface
+CapturedBufferedImagesCacheSingleton.cacheInterface= CacheInterfaceFactory.getInstance((CacheTypeFactory.getInstance()!!.SET), (CachePolicyFactory.getInstance()!!.ONE_MINUTE_FIVE_MAX)) as AutomaticCacheInterface
 logUtil!!.putF(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
             {

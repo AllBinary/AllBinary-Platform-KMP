@@ -56,7 +56,9 @@ open public class CompoundAnimationInterfaceFactory : Object, AnimationInterface
         for (index in 0 until size) {
 
             animationInterfaceArray[index] =
-                this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.getInstance(instanceId)
+                this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.getInstance(
+                    instanceId
+                )!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

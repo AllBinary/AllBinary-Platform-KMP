@@ -53,8 +53,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Dimension{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minDimension
 }
@@ -63,8 +61,6 @@ public constructor ()
     open fun getMaxDimension()
         //nullable = true from not(false or (false and true)) = true
 : Dimension{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxDimension
@@ -81,8 +77,6 @@ var rectangle = rectangle
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -90,8 +84,6 @@ var rectangle = rectangle
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -110,8 +102,6 @@ var rectangle = rectangle
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -119,8 +109,6 @@ var rectangle = rectangle
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -139,8 +127,6 @@ var rectangle = rectangle
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -148,8 +134,6 @@ var rectangle = rectangle
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -193,8 +177,6 @@ this.maxDimension= maxDimension
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxMotionRectangles
 }
@@ -211,8 +193,6 @@ this.maxMotionRectangles= maxMotionRectangles
     open fun getMinArea()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minArea

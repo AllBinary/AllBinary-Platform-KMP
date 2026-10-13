@@ -118,7 +118,7 @@ open public class PlayerGameNotificationHud : GameNotificationHud, UpdateMyFontI
 
         // For kotlin this is before the body of the constructor.
 
-        this.circularIndexUtil = CircularIndexUtil.createInstance(0)
+        this.circularIndexUtil = CircularIndexUtil.createInstance(0)!!
 
         var gameNotificationEventHandler: GameNotificationEventHandler =
             GameNotificationEventHandler.getInstance()!!
@@ -139,7 +139,7 @@ open public class PlayerGameNotificationHud : GameNotificationHud, UpdateMyFontI
 
             this.width = font.stringWidth(this.string)
             this.processor.process()
-            this.processor = Processor.getInstance()
+            this.processor = Processor.getInstance()!!
         } catch (e: Exception) {
 
             var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -158,7 +158,7 @@ open public class PlayerGameNotificationHud : GameNotificationHud, UpdateMyFontI
         : GPoint {
         var x = x
         var y = y
-        this.point = CustomGPoint.getInstance3(0, 0)
+        this.point = CustomGPoint.getInstance3(0, 0)!!
         this.point.setX(x)
         this.point.setY(y)
 

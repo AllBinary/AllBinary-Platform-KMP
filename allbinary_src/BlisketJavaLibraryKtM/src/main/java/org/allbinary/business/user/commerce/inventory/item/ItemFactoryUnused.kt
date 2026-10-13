@@ -45,8 +45,6 @@ companion object {
 : TableMappingInterface{
 var hashMap = hashMap
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Item(hashMap) as TableMappingInterface
 }
@@ -58,8 +56,6 @@ var hashMap = hashMap
         //nullable =  from not(true or (false and false)) = 
 : TableMappingInterface{
 var request = request
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Item(RequestParams(request).

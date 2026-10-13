@@ -135,7 +135,7 @@ open public class VectorExplosionGenerator : Object {
                 tempBasicArrayList =
                     pointsBasicArrayList!!.objectArray[frameIndex]!! as BasicArrayList
                 pointBasicArrayList =
-                    this.createListFromPoints(tempBasicArrayList, points, howMuch, type)
+                    this.createListFromPoints(tempBasicArrayList, points, howMuch, type)!!
                 pointsBasicArrayList!!.add(pointBasicArrayList)
                 frameIndex++
             }
@@ -188,12 +188,12 @@ open public class VectorExplosionGenerator : Object {
                 }
             }
 
-            sectionBasicArrayList = RandomTranslation.getInstance(sectionBasicArrayList, howMuch)
+            sectionBasicArrayList = RandomTranslation.getInstance(sectionBasicArrayList, howMuch)!!
 
             if (type == this.ROTATION) {
 
                 sectionBasicArrayList =
-                    this.randomRotationFactory!!.getInstanceList(sectionBasicArrayList, howMuch)
+                    this.randomRotationFactory!!.getInstanceList(sectionBasicArrayList, howMuch)!!
             }
 
             var size: Int = sectionBasicArrayList!!.size()

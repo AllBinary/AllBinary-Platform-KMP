@@ -75,8 +75,6 @@ companion object {
     var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(file))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 }
@@ -211,8 +209,6 @@ LoggingInitInfo.logConfigInfoList= logConfigInfoVector
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LoggingInitInfo.logConfigInfoList
 }
@@ -253,8 +249,6 @@ LoggingInitInfo.updateIfNeeded()
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -299,8 +293,6 @@ LoggingInitInfo.updateIfNeeded()
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return allLogTypeVector
 }
@@ -319,14 +311,10 @@ LoggingInitInfo.updateIfNeeded()
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -340,8 +328,6 @@ LoggingInitInfo.updateIfNeeded()
     open fun getNumberOfLogConfigs()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LoggingInitInfo.logConfigInfoList!!.size()
@@ -357,14 +343,10 @@ LoggingInitInfo.updateIfNeeded()
     var document: Document = LoggingInitInfo.getDoc()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XmlDocumentHelper.toString(document)
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error"

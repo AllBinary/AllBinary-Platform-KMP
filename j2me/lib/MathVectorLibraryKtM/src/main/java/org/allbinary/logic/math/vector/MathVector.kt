@@ -53,8 +53,6 @@ this.direction= direction
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.magnitudeBasicDecimal
 }
@@ -64,8 +62,6 @@ this.direction= direction
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.direction
 }
@@ -74,8 +70,6 @@ this.direction= direction
     open fun getResult()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.resultBasicDecimal

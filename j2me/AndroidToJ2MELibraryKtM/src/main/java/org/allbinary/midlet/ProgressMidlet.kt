@@ -37,7 +37,7 @@ open public class ProgressMidlet : AllBinaryMidlet {
             StringUtil.getInstance()!!.EMPTY_STRING,
         )
         this.preInit()
-        this.abeClientInformation = clientInformationFactory!!.getInstance()
+        this.abeClientInformation = clientInformationFactory!!.getInstance()!!
     }
 
     open fun preInit()

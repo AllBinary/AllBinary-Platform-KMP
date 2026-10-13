@@ -32,8 +32,6 @@ this.image= bitmap as Image
         //nullable = true from not(false or (false and true)) = true
 : Image{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.image
 }
@@ -51,8 +49,6 @@ this.image= bitmap as Image
     var mutableImage: SwtMutableImage = this.image as SwtMutableImage
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return mutableImage!!.getDepth()
 
@@ -61,8 +57,6 @@ this.image= bitmap as Image
                         else {
                             
     var immutableImage: SwtImmutableImage = this.image as SwtImmutableImage
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,8 +118,6 @@ this.image.setRGB2(pixels, offset, height, x, y, width, height)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.image.getWidth()
 }
@@ -134,8 +126,6 @@ this.image.setRGB2(pixels, offset, height, x, y, width, height)
     override fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.image.getHeight()

@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : SpriteFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SpriteFactory.instance
 }
@@ -68,8 +66,6 @@ companion object {
     //var image = image
     //var frameWidth = frameWidth
     //var frameHeight = frameHeight
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Sprite(image, frameWidth, frameHeight)

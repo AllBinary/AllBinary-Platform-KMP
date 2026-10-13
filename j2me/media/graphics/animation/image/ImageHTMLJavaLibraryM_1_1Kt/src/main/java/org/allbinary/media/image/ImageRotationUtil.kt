@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageRotationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageRotationUtil.instance
 }
@@ -86,8 +84,6 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 
 this.drawImage(originalImage, image, canvasSurface)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image2
 
@@ -95,8 +91,6 @@ this.drawImage(originalImage, image, canvasSurface)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -121,8 +115,6 @@ this.drawImage(originalImage, image, canvasSurface)
 canvasSurface!!.clear()
 canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeight() /2)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rotateImageCanvasSurface(originalImage, image, canvasSurface, totalAngle)
 
@@ -130,8 +122,6 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -154,8 +144,6 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
                                     {
                                     canvasSurface!!.rotate(Math.toRadians(totalAngle).toFloat())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
 
@@ -163,8 +151,6 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -235,8 +221,6 @@ canvasSurface!!.drawImage(originalPlayNImage,  -originalImage!!.getWidth() /2,  
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rotatedImage

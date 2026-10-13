@@ -36,7 +36,7 @@ open public class CustomMapGenerator : CustomMapGeneratorBase {
         // var raceTrackGeographicMap = raceTrackGeographicMap
         this.raceTrackGeographicMap = raceTrackGeographicMap
         this.geographicMapCellTypeFactory =
-            this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()
+            this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()!!
 
         var mapArray: Array<IntArray?> =
             raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!

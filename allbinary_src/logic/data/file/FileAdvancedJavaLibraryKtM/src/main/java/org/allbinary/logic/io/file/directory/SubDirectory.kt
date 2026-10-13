@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : SubDirectory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SubDirectory.instance
 }
@@ -79,8 +77,6 @@ stringBuffer!!.append(NEW_LINE)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -101,8 +97,6 @@ private constructor ()
 var fileFilter = fileFilter
 var file = file
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.directory.search(fileFilter, file, true)
 }
@@ -112,8 +106,6 @@ var file = file
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var file = file
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.directory.search(file, true)
@@ -126,8 +118,6 @@ var file = file
 var searchValue = searchValue
 var file = file
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.directory.search(searchValue, file, true)
 }
@@ -138,8 +128,6 @@ var file = file
 : BasicArrayList{
 var level = level
 var file = file
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.directory.search(level, file, true)

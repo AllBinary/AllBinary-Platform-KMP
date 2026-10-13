@@ -62,8 +62,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullInputRobot.NAME
 }
@@ -73,8 +71,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : HelpSet?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -83,8 +79,6 @@ public constructor ()
     open fun getMousePoint()
         //nullable = true from not(false or (false and true)) = true
 : Point{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PointFactory.getInstance(0, 0)
@@ -137,8 +131,6 @@ this.logUtil!!.putF("Buttons: " +buttons, this, "mouseRelease")
 : BufferedImage?{
 var screenRect = screenRect
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -155,8 +147,6 @@ var ms = ms
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return  -1
 }
@@ -168,8 +158,6 @@ var ms = ms
 var x = x
 var y = y
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -178,8 +166,6 @@ var y = y
     open fun isAutoWaitForIdle()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -210,8 +196,6 @@ var isOn = isOn
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "DirectXWindowsInputRobot"

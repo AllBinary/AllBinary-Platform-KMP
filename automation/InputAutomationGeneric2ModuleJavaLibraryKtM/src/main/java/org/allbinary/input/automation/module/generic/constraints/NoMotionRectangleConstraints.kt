@@ -38,7 +38,7 @@ public constructor (){
 this.setMinDimension(Dimension(0, 0))
 this.setMinArea(0)
 this.setMaxDimension(Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE))
-this.setMaxMotionRectangles(.MAX_VALUE())
+this.setMaxMotionRectangles(Integer.MAX_VALUE)
 }
 
 
@@ -48,8 +48,6 @@ this.setMaxMotionRectangles(.MAX_VALUE())
 var frame = frame
 var bufferedImage = bufferedImage
 var rectangle = rectangle
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

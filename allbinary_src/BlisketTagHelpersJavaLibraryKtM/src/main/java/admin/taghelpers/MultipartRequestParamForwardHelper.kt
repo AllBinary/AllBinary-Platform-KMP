@@ -67,7 +67,7 @@ this.pageContext= pageContext
 this.page= page
 this.command= command
 this.paramVector= paramVector
-this.requestMapInterface= InventoryItemViewParentTagHelper.getInstance()!!.getRequestMapInterface(parentHelperTag)
+this.requestMapInterface= InventoryItemViewParentTagHelper.getInstance()!!.getRequestMapInterface(parentHelperTag)!!
 }
 
 
@@ -171,8 +171,6 @@ stringBuffer!!.append(value)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -193,15 +191,11 @@ stringBuffer!!.append(value)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

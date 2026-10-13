@@ -52,8 +52,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformFactory.instance
 }
@@ -125,8 +123,6 @@ transformInfoInterface!!.setChild()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType as TransformInterface
@@ -207,8 +203,6 @@ transformInfoInterface!!.setChild()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType as TransformInterface
 } catch(e: Exception)
@@ -267,8 +261,6 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.GET_INS
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType as TransformInterface

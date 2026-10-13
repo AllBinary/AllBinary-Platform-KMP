@@ -121,7 +121,7 @@ open public class MusicManager : Object {
 
         if (nextSongSound == null) {
 
-            nextSongSound = NoSound.getInstance()
+            nextSongSound = NoSound.getInstance()!!
         }
 
         this.nextSongSound = nextSongSound
@@ -199,7 +199,7 @@ open public class MusicManager : Object {
                 this.currentSongSound = this.basicArrayListUtil!!.getRandom(this.songList) as Sound
             } else {
                 this.currentSongSound = this.nextSongSound
-                this.nextSongSound = NoSound.getInstance()
+                this.nextSongSound = NoSound.getInstance()!!
             }
 
             var duration: Long = this.currentSongSound!!.getDuration().toLong()
@@ -228,7 +228,7 @@ open public class MusicManager : Object {
 
             if (this.currentSongSound != null) {
 
-                resource = this.currentSongSound!!.getResource()
+                resource = this.currentSongSound!!.getResource()!!
             }
 
             PreLogUtil.putOE(

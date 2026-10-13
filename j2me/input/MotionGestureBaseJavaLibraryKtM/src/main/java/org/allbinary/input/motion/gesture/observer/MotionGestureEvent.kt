@@ -116,7 +116,7 @@ open public class MotionGestureEvent : AllBinaryEventObject {
         stringBuffer!!.append(MotionGestureEvent.PREVIOUS)
         stringBuffer!!.append(stringUtil!!.toString(this.previousPoint))
         stringBuffer!!.append(MotionGestureEvent.HASHCODE)
-        stringBuffer!!.appendint(TsUtil.getInstance()!!.hashCode(this))
+        stringBuffer!!.appendint(TsUtil.getInstance()!!.hashCode(this).toInt())
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return stringBuffer!!.toString()

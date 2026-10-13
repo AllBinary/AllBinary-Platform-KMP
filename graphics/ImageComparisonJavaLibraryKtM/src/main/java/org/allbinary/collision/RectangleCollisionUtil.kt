@@ -46,8 +46,6 @@ var point = point
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -55,8 +53,6 @@ var point = point
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -70,8 +66,6 @@ var point = point
 : Boolean{
 var rectangle1 = rectangle1
 var rectangle2 = rectangle2
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return RectangleCollisionUtil.isCollision(rectangle1.x, rectangle1.y, rectangle1.x +rectangle1.width, rectangle1.y +rectangle1.height, rectangle2.x, rectangle2.y, rectangle2.x +rectangle2.width, rectangle2.y +rectangle2.height)
@@ -95,8 +89,6 @@ var rect2Y2 = rect2Y2
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -104,8 +96,6 @@ var rect2Y2 = rect2Y2
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 

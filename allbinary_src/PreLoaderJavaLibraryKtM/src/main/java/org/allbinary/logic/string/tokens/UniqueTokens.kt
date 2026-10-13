@@ -111,12 +111,12 @@ var stringVector = stringVector
 
     var cleanString: String = keywordVector!!.get(forIndex) as String
 
-cleanString= cleanString!!.trim()
+cleanString= cleanString!!.trim()!!
 
     
                         if(cleanString!!.indexOf('-') !=  -1)
                         cleanString= Replace("-", commonSeps!!.SPACE).
-                            all(cleanString)
+                            all(cleanString)!!
 hashSet!!.add(cleanString)
 
     
@@ -159,8 +159,6 @@ index++
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashSet
 } catch(e: Exception)
@@ -182,14 +180,10 @@ index++
         try {
             Integer.parseInt(subCleaningString)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: NumberFormatException)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -213,13 +207,9 @@ var subCleaningString = subCleaningString
     
                         if(subCleaningString!!.compareTo(this.specialCharacters!!.get(index) as String) == 0)
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

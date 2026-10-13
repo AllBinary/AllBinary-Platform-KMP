@@ -65,8 +65,8 @@ var inputStream = inputStream
 
 
         try {
-            audioInputStream= AudioSystem.getAudioInputStream(inputStream)
-clip= this.create(audioInputStream)
+            audioInputStream= AudioSystem.getAudioInputStream(inputStream)!!
+clip= this.create(audioInputStream)!!
 
     
                         if(clip == 
@@ -131,8 +131,6 @@ this.clip.close()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
@@ -189,8 +187,6 @@ var audioInputStream = audioInputStream
 clip.addLineListener(this)
 clip.open(audioInputStream)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return clip
 }
@@ -238,8 +234,6 @@ super.stop()
 : Control{
 var controlType = controlType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullControl()
 }
@@ -248,8 +242,6 @@ var controlType = controlType
     override fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return arrayOfNulls(0)
@@ -270,8 +262,6 @@ this.setVolumeF((leftVolume.toFloat()) /100.0f)
 : Float{
 
     var masterGainFloatControl: FloatControl = clip.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -305,8 +295,6 @@ masterGainFloatControl!!.setValue(20f *Math.log10(volume).toFloat())
     override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.clip.getMicrosecondLength() /1000

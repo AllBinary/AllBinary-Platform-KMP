@@ -116,7 +116,7 @@ open public class PacePatrolAI : BasePatrolAI, TrackingEventListenerInterface {
         for (index in 0 until size) {
 
             lastTrackingEvent = this.trackingList!!.get(0) as TrackingEvent
-            lastTrackingLayerInterface = lastTrackingEvent!!.getLayerInterface()
+            lastTrackingLayerInterface = lastTrackingEvent!!.getLayerInterface()!!
 
             var x: Int = lastTrackingLayerInterface!!.getXP()
 

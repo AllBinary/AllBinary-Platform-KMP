@@ -69,7 +69,7 @@ public constructor (gl: com.jogamp.opengl.GL, gl2: com.jogamp.opengl.GL2)
     //var gl = gl
     //var gl2 = gl2
 this.gl10= gl2
-this.glu= GLU.createGLU(this.gl10)
+this.glu= GLU.createGLU(this.gl10)!!
 this.GL_LINE= com.jogamp.opengl.GL2.GL_LINE
 this.GL_QUAD_STRIP= com.jogamp.opengl.GL2.GL_QUAD_STRIP
 }
@@ -78,8 +78,6 @@ this.GL_QUAD_STRIP= com.jogamp.opengl.GL2.GL_QUAD_STRIP
     open fun getJOGLGL()
         //nullable = true from not(false or (false and true)) = true
 : com.jogamp.opengl.GL2{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.gl10
@@ -449,8 +447,6 @@ this.gl10.glGenTextures(n, textures)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.gl10.glGetError()
 }
@@ -479,8 +475,6 @@ this.gl10.glGetIntegerv(pname, params)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var name = name
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.gl10.glGetString(name)

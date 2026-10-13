@@ -95,8 +95,6 @@ this.vector.add(options[index]!!)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return licenseInitInfoUtil!!.read()
 
@@ -104,8 +102,6 @@ this.vector.add(options[index]!!)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LicenseInitInfo()
 

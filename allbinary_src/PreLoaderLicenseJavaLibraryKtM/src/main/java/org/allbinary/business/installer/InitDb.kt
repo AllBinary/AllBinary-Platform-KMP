@@ -72,8 +72,6 @@ this.anyType= anyType
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.anyType
 }
@@ -96,14 +94,10 @@ this.anyType= anyType
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -129,14 +123,10 @@ this.anyType= anyType
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -162,14 +152,10 @@ this.anyType= anyType
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -195,14 +181,10 @@ this.anyType= anyType
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -228,14 +210,10 @@ this.anyType= anyType
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -261,14 +239,10 @@ this.anyType= anyType
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

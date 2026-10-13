@@ -110,7 +110,7 @@ open public class ByteUtil : Object {
 
         if (index == 6) mask = 64
 
-        if (index == 7) mask = -127
+        if (index == 7) mask = (-127).toByte()
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.xor(array, mask)

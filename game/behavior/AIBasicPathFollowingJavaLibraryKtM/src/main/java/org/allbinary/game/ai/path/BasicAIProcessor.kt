@@ -119,7 +119,7 @@ open public class BasicAIProcessor : Object {
                 this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToCellPosition(
                     currentGeographicMapCellPosition,
                     goToGeographicMapCellPosition,
-                )
+                )!!
         }
 
         keyDirection = this.basicAI!!.getAIKeyPressedFromDirection(geographicMapDirectionData)

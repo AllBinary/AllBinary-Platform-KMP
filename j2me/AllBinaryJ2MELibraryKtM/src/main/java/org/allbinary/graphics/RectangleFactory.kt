@@ -16,12 +16,15 @@
 package org.allbinary.graphics
 
 import java.lang.Object
+import kotlin.Array
 
 open public class RectangleFactory : Object {
 
     companion object {
 
         val SINGLETON: Rectangle = Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0)
+
+        val ARRAY_OF_ARRAYS: Array<Array<Rectangle?>?> = Array(0) { arrayOfNulls<Rectangle?>(0) }
     }
 
     // Auto Generated

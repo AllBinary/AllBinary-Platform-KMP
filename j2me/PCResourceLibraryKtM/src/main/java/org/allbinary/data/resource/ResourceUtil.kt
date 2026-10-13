@@ -78,7 +78,7 @@ open public class ResourceUtil : Object {
 
         if (inputStream == null) {
 
-            inputStream = this.getResourceAsStreamAtStart(resource, 1)
+            inputStream = this.getResourceAsStreamAtStart(resource, 1)!!
 
             if (inputStream == null) {
 

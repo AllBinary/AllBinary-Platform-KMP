@@ -43,8 +43,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("java.java.home")
 }
@@ -56,8 +54,6 @@ public constructor ()
 var var = var
 
     var environmentVariables: Properties = this.get()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,7 +95,7 @@ var var = var
                         if(osName!!.compareTo(operatingSystems!!.LINUX) == 0)
                         
                                     {
-                                    process= Runtime.getRuntime()!!.exec(linuxCommand)
+                                    process= Runtime.getRuntime()!!.exec(linuxCommand)!!
 
                                     }
                                 
@@ -108,7 +104,7 @@ var var = var
                         if(osName!!.indexOf(operatingSystems!!.WINDOWS) >= 0)
                         
                                     {
-                                    process= Runtime.getRuntime()!!.exec(windowsCommand)
+                                    process= Runtime.getRuntime()!!.exec(windowsCommand)!!
 
                                     }
                                 
@@ -117,7 +113,7 @@ var var = var
                         if(osName!!.compareTo(operatingSystems!!.SOLARIS) == 0)
                         
                                     {
-                                    process= Runtime.getRuntime()!!.exec(solarisCommand)
+                                    process= Runtime.getRuntime()!!.exec(solarisCommand)!!
 
                                     }
                                 
@@ -139,7 +135,9 @@ var var = var
     var keyValuePair: String
 
 
-        while((keyValuePair= bufferedReader!!.readLine()) != 
+        while((
+                        { keyValuePair= bufferedReader!!.readLine()!!; keyValuePair }()
+                    ) != 
                                     null
                                 )
         {
@@ -156,8 +154,6 @@ environmentVariables!!.put(key, value)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return environmentVariables
 } catch(e: Exception)
@@ -172,8 +168,6 @@ environmentVariables!!.put(key, value)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -187,8 +181,6 @@ environmentVariables!!.put(key, value)
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("java.io.tmpdir")
 } catch(e: Exception)
@@ -203,8 +195,6 @@ environmentVariables!!.put(key, value)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -218,8 +208,6 @@ environmentVariables!!.put(key, value)
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("java.library.path")
 } catch(e: Exception)
@@ -234,8 +222,6 @@ environmentVariables!!.put(key, value)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -249,8 +235,6 @@ environmentVariables!!.put(key, value)
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("java.class.path")
 } catch(e: Exception)
@@ -264,8 +248,6 @@ environmentVariables!!.put(key, value)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -306,8 +288,6 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("user.home")
 } catch(e: Exception)
@@ -322,8 +302,6 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -337,8 +315,6 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("user.dir")
 } catch(e: Exception)
@@ -352,8 +328,6 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -422,7 +396,7 @@ var val = val
                         if(osName!!.indexOf(operatingSystems!!.WINDOWS) >= 0)
                         
                                     {
-                                    process= Runtime.getRuntime()!!.exec(windowsCommand)
+                                    process= Runtime.getRuntime()!!.exec(windowsCommand)!!
 
                                     }
                                 

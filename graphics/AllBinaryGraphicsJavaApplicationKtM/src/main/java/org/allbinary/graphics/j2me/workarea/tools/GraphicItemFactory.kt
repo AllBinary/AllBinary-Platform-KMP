@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : GraphicItemFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GraphicItemFactory.instance
 }
@@ -59,7 +57,7 @@ companion object {
 private constructor ()
             : super()
         {
-this.graphicItems= StdUtil.getInstance()!!.createHashMap()
+this.graphicItems= StdUtil.getInstance()!!.createHashMap()!!
 this.graphicItems!!.put(LinesGraphicItem.getStaticName(), LinesGraphicItemFactory())
 }
 
@@ -82,8 +80,6 @@ var itemName = itemName
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return graphicsItemInterfaceFactoryInterface
@@ -122,8 +118,6 @@ var graphicItemNodeList = graphicItemNodeList
 
 graphicItemHashMap!!.put(graphicItem!!.getTreeNode(), graphicItem)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -54,8 +54,6 @@ var resultHashtable = resultHashtable
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -63,8 +61,6 @@ var resultHashtable = resultHashtable
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -88,7 +84,7 @@ public constructor (hashtable: ABHashtable<Any, Any>)
             : super()
         {
 var hashtable = hashtable
-this.hashtable= StdUtil.getInstance()!!.createHashtable()
+this.hashtable= StdUtil.getInstance()!!.createHashtable()!!
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
 
@@ -139,15 +135,13 @@ this.setSpecial(stringUtil!!.getNonNull(hashtable.get(abeClientInformationData!!
 
     var licenseTypeString: String = stringUtil!!.getNonNull(hashtable.get(abeClientInformationData!!.LICENSE_TYPE) as String)!!
 
-this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeString)
+this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeString)!!
 }
 
 
     open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isValid()
@@ -159,8 +153,6 @@ this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeStri
 : String{
 var keyName = keyName
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hashtable.get(keyName as Object) as String
 }
@@ -170,8 +162,6 @@ var keyName = keyName
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.id
 }
@@ -180,8 +170,6 @@ var keyName = keyName
     open fun getServers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.servers
@@ -200,15 +188,11 @@ var keyName = keyName
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -255,8 +239,6 @@ stringBuffer!!.append(BREAK)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -274,8 +256,6 @@ this.special= special
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special
 }
@@ -284,8 +264,6 @@ this.special= special
     open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
 : LicenseType{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.licenseType

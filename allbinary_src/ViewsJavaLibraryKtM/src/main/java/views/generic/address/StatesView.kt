@@ -77,8 +77,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.S
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -92,8 +90,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.S
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

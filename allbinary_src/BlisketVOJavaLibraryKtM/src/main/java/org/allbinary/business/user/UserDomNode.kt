@@ -66,8 +66,6 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, EMPTY_STRING)
 hashMap!!.put(EntryData.getInstance()!!.ENCRYPTION, EMPTY_STRING)
 hashMap!!.put(UserData.PASSWORD, EMPTY_STRING)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueNodes(document, UserData.NAME, hashMap)
 }
@@ -79,8 +77,6 @@ hashMap!!.put(UserData.PASSWORD, EMPTY_STRING)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -91,8 +87,6 @@ hashMap!!.put(UserData.PASSWORD, EMPTY_STRING)
     open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

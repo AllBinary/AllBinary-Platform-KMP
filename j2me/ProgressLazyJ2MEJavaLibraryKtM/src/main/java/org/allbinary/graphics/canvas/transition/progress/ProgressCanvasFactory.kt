@@ -52,8 +52,6 @@ companion object {
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ProgressCanvasFactory.PROGRESS_FORM_SCREEN as ProgressCanvas
 }
@@ -62,8 +60,6 @@ companion object {
     open fun getLazyInstance()
         //nullable = true from not(false or (false and true)) = true
 : PaintableInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ProgressCanvasFactory.getInstance()

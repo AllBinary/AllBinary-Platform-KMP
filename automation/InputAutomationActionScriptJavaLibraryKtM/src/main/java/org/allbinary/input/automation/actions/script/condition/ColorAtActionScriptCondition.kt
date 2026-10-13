@@ -233,8 +233,6 @@ this.colorAtActionScriptConditionJPanel= ColorAtActionScriptConditionJPanel(this
         //nullable = true from not(false or (false and true)) = true
 : Point{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.point
 }
@@ -271,8 +269,6 @@ hashMap!!.put(ColorAtActionScriptConditionData.MIN_BLUE, Integer.toString(this.g
 hashMap!!.put(ColorAtActionScriptConditionData.MAX_BLUE, Integer.toString(this.getColorRangeInterface()!!.getMaxBlue()))
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -289,8 +285,6 @@ var document = document
 
 node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionScriptConditionData.NAME, this.toHashMap()))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -303,8 +297,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionSc
 : Boolean{
 var frame = frame
 
-    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = 
-                                    (getInstance as AutomaticCacheInterface).get((frame).toLong()) as BufferedImageFrameCacheable
+    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = (CapturedBufferedImagesCacheSingleton.getInstance() as AutomaticCacheInterface).get((frame).toLong()) as BufferedImageFrameCacheable
 
 
     var bufferedImage: BufferedImage = capturedBufferedImageCacheable!!.getBufferedImage()!!
@@ -327,15 +320,11 @@ var frame = frame
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.shouldProcess(frame)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -356,8 +345,6 @@ this.logUtil!!.putF(message, this, "log")
     open fun getColorRangeInterface()
         //nullable = true from not(false or (false and true)) = true
 : ColorRangeInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorRangeInterface

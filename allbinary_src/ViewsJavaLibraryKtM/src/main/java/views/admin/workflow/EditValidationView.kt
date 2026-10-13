@@ -54,7 +54,7 @@ var transformInfoInterface = transformInfoInterface
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = this.getTransformInfoInterface() as TransformInfoHttpInterface
 
-this.workFlowName= httpTransformInfoInterface!!.getPageContext()!!.getRequest()!!.getParameter(WorkFlowData.getInstance()!!.NAME)
+this.workFlowName= httpTransformInfoInterface!!.getPageContext()!!.getRequest()!!.getParameter(WorkFlowData.getInstance()!!.NAME)!!
 }
 
 
@@ -71,8 +71,6 @@ this.workFlowName= httpTransformInfoInterface!!.getPageContext()!!.getRequest()!
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -95,15 +93,11 @@ this.workFlowName= httpTransformInfoInterface!!.getPageContext()!!.getRequest()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -118,8 +112,6 @@ this.workFlowName= httpTransformInfoInterface!!.getPageContext()!!.getRequest()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -168,8 +160,6 @@ stringBuffer!!.append("WorkFlow does not exist<br />")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -184,8 +174,6 @@ stringBuffer!!.append("WorkFlow does not exist<br />")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -197,8 +185,6 @@ stringBuffer!!.append("WorkFlow does not exist<br />")
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -208,8 +194,6 @@ stringBuffer!!.append("WorkFlow does not exist<br />")
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

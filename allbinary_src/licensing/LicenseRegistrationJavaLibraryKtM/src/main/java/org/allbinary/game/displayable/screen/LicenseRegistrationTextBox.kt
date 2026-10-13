@@ -98,7 +98,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 super.open()
-this.paintable= NullPaintable.getInstance()
+this.paintable= NullPaintable.getInstance()!!
 this.repaint()
 }
 

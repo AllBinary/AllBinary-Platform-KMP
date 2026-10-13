@@ -41,8 +41,6 @@ companion object {
 : Any{
 var anyType = anyType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Proxy.newProxyInstance(anyType!!::class.java.classLoader, anyType!!::class.getInterfaces(), InterfaceCastProxy(anyType))
 }
@@ -77,8 +75,6 @@ var proxyArgs = proxyArgs
     
                         if(!realMethod!!.isAccessible())
                         realMethod!!.setAccessible(true)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return proxyMethod!!.invoke(this.anyType, proxyArgs)

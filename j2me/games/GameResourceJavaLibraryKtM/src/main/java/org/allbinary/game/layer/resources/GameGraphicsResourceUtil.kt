@@ -58,7 +58,7 @@ open public class GameGraphicsResourceUtil : Object {
     public constructor() : super() {
 
         try {
-            this.name = this.getString()
+            this.name = this.getString()!!
         } catch (e: Exception) {
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!

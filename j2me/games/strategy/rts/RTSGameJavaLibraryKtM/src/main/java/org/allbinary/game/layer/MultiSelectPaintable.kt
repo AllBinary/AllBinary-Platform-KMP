@@ -63,7 +63,7 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
 
         var size: Int = list.size()
 
-        this.totalCharArray = this.getPrimitiveLongUtil()!!.getCharArray(size)
+        this.totalCharArray = this.getPrimitiveLongUtil()!!.getCharArray(size)!!
 
         for (index in list.size() - 1 downTo 0) {
 
@@ -91,7 +91,7 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
             }
         }
 
-        this.rootNamesString = stringBuffer!!.toString()
+        this.rootNamesString = stringBuffer!!.toString()!!
     }
 
     open fun clear()

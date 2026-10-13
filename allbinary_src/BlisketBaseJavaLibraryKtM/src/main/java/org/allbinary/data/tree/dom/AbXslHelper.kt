@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbXslHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbXslHelper.instance
 }
@@ -66,8 +64,6 @@ companion object {
     //var xslFile = xslFile
     //var xmlFile = xmlFile
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.translate(xslFile!!.getAbsolutePath(), xmlFile!!.getAbsolutePath())
 }
@@ -80,8 +76,6 @@ companion object {
 : String{
     //var xslPath = xslPath
     //var xmlPath = xmlPath
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.translate(xslPath!!.getPath(), xmlPath!!.getPath())
@@ -99,8 +93,6 @@ companion object {
         try {
             
     var outputStream: ByteArrayOutputStream = ByteArrayOutputStream()
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

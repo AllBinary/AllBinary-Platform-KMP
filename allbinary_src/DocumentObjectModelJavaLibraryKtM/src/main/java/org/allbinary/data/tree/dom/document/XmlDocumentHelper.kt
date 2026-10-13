@@ -55,8 +55,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : XmlDocumentHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XmlDocumentHelper.instance
 }
@@ -86,8 +84,6 @@ var document = document
     var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
 
 copyTransformer!!.transform(domSource, streamResult)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return byteArrayOutputStream!!.toString()
@@ -130,7 +126,7 @@ this.init(4, true)
     var transformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
 
 transformerFactory!!.setAttribute(this.INDENT_NUMBER, indent)
-this.transformer= transformerFactory!!.newTransformer()
+this.transformer= transformerFactory!!.newTransformer()!!
 this.transformer.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance()!!.UTF_8)
 this.transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclaration) {
                             
@@ -168,8 +164,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
     var out: Writer = StringWriter()
 
 this.transformer.transform(DOMSource(document), StreamResult(out))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return out.toString()

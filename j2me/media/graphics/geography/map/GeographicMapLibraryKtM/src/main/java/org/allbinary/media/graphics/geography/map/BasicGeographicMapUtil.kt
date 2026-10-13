@@ -54,22 +54,18 @@ open public class BasicGeographicMapUtil : Object {
 
         when (direction) {
             0 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getRow()
             }
             1 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getRow()
             }
             2 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getRow() + LOCATION_CHANGE
             }
             3 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getRow() - LOCATION_CHANGE
             }
@@ -94,22 +90,18 @@ open public class BasicGeographicMapUtil : Object {
 
         when (direction) {
             0 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getColumn() - LOCATION_CHANGE
             }
             1 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getColumn() + LOCATION_CHANGE
             }
             2 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getColumn()
             }
             3 -> {
-
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return oldGeographicMapCellPosition!!.getColumn()
             }
@@ -182,7 +174,7 @@ open public class BasicGeographicMapUtil : Object {
         for (index in size + startIndex - 1 downTo startIndex) {
 
             geographicMapInterface = geographicMapInterfaceArray[index]!!
-            tiledLayerArray[count++] = geographicMapInterface!!.getAllBinaryTiledLayer()
+            tiledLayerArray[count++] = geographicMapInterface!!.getAllBinaryTiledLayer()!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

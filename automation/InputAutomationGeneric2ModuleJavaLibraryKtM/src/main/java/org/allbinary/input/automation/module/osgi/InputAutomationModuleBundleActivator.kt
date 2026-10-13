@@ -98,8 +98,6 @@ var context = context
                         
                                     throw Exception("No Service For ServiceReference")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputAutomationConfigurationModuleChangeListener
 
@@ -107,8 +105,6 @@ var context = context
                                 
                         else {
                             this.logUtil!!.putF("No ServiceReference: " +InputAutomationConfigurationModuleChangeListener::class.toString()!!, this, "addModules")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -139,7 +135,7 @@ var context = context
 
 
 
-                        for (index in 0 until this.getInputAutomationModuleInterface()!!.length)
+                        for (index in 0 until this.getInputAutomationModuleInterface()!!.size)
 
         {
 
@@ -190,7 +186,7 @@ var context = context
 
 
 
-                        for (index in 0 until this.getInputAutomationModuleInterface()!!.length)
+                        for (index in 0 until this.getInputAutomationModuleInterface()!!.size)
 
         {
 
@@ -237,8 +233,6 @@ this.removeModules(context)
         //nullable = true from not(false or (false and true)) = true
 : Array<InputAutomationModuleFactoryInterface?>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputAutomationModuleInterface
 }
@@ -255,8 +249,6 @@ this.inputAutomationModuleInterface= inputAutomationModuleInterface
     open fun getServiceFactory()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.serviceFactory

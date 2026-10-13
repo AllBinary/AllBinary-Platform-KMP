@@ -52,8 +52,6 @@ var categoryInterface = categoryInterface
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NO_TYPE
 }
@@ -62,8 +60,6 @@ var categoryInterface = categoryInterface
     open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -75,8 +71,6 @@ var categoryInterface = categoryInterface
     open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -101,8 +95,6 @@ var viewDocumentInterface = viewDocumentInterface
 document.appendChild(CategoryView(this.getCategoryInterface()).
                             toXmlNode(document))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 }
@@ -113,8 +105,6 @@ document.appendChild(CategoryView(this.getCategoryInterface()).
     open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

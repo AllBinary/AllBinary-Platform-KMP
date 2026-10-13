@@ -71,8 +71,6 @@ this.logUtil!!.putF("Updated UI", this, "updateUI")
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileAction{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileAction
 }
@@ -89,8 +87,6 @@ this.genericProfileAction= genericProfileAction
     open fun getGenericProfileActionScriptJPanel()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionScriptJPanel{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileActionScriptJPanel

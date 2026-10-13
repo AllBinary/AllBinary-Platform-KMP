@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InitInfo{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InitInfo.instance
 }
@@ -207,8 +205,6 @@ initInfoEntity!!.get()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -253,8 +249,6 @@ this.get()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 }
@@ -268,8 +262,6 @@ this.get()
 
         try {
             this.updateIfNeeded()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BooleanUtil.getInstance()!!.getFromString(this.testing)
@@ -285,8 +277,6 @@ this.get()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -298,8 +288,6 @@ this.get()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testing
@@ -318,8 +306,6 @@ this.updateIfNeeded()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHtmlPath!!.toString()
 
@@ -327,8 +313,6 @@ this.updateIfNeeded()
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -349,8 +333,6 @@ this.updateIfNeeded()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mainPath!!.toString()
 
@@ -358,8 +340,6 @@ this.updateIfNeeded()
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -397,8 +377,6 @@ this.mainPath= value
 : Boolean{
 var abPath = abPath
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -408,8 +386,6 @@ var abPath = abPath
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var abPath = abPath
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -422,8 +398,6 @@ var abPath = abPath
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var testing = testing
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BooleanUtil.getInstance()!!.isStringBoolean(testing)
@@ -439,8 +413,6 @@ var testing = testing
 hashMap!!.put(this.TESTING, this.getTesting())
 hashMap!!.put(this.MAINPATH, this.getMainPath())
 hashMap!!.put(this.TESTHTMLPATH, this.getTestHtmlPath())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap

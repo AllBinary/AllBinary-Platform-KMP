@@ -78,7 +78,7 @@ public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, text
 
                             //For kotlin this is before the body of the constructor.
                     
-this.openGLBitmap= bitmapFactory!!.createBitmap(image)
+this.openGLBitmap= bitmapFactory!!.createBitmap(image)!!
 this.textureFactory= textureFactory
 OpenGLImageCacheFactory.getInstance()!!.init(this)
 this.platformImage= OpenGLESPostLoadPlatformImage.getInstance()
@@ -89,8 +89,6 @@ this.platformImage= OpenGLESPostLoadPlatformImage.getInstance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return (this.openGLBitmap!!.getHeight() *this.openGLESImageProperties!!.scaleY2).toInt()
 }
@@ -99,8 +97,6 @@ this.platformImage= OpenGLESPostLoadPlatformImage.getInstance()
     open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return (this.openGLBitmap!!.getWidth() *this.openGLESImageProperties!!.scaleX2).toInt()
@@ -151,15 +147,11 @@ gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MIN_FILTER, GL10.GL_NEARE
 gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_S, GL10.GL_CLAMP_TO_EDGE)
 gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_T, GL10.GL_CLAMP_TO_EDGE)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -195,8 +187,6 @@ var z = z
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLESImage.TYPE
 }
@@ -209,11 +199,9 @@ var z = z
     var graphicsStrings: GraphicsStrings = GraphicsStrings.getInstance()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(this.getName())!!.append(super.toString())!!.append(graphicsStrings!!.OPACITY)!!.appendfloat(this.openGLESImageProperties!!.alphaf)!!.toString()
+                            append(this.getName())!!.append(super.toString())!!.append(graphicsStrings!!.OPACITY)!!.appendfloat(this.openGLESImageProperties!!.alphaf.toFloat())!!.toString()
 }
 
 

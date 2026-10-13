@@ -69,14 +69,10 @@ System.setProperty("jdk.xml.totalEntitySizeLimit", LIMIT)
     var document: Document = builder.newDocument()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -101,8 +97,6 @@ var inputStream = inputStream
 
 
     var document: Document = builder.parse(inputStream)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -134,8 +128,6 @@ var xmlString = xmlString
 
 
     var document: Document = builder.parse(StringBufferInputStream(xmlString))!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

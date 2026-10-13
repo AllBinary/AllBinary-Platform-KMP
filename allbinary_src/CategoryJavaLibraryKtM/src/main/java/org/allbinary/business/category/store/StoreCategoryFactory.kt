@@ -70,8 +70,6 @@ this.transformInfoInterface= transformInfoInterface
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreCategoryPropertiesFactory(this.transformInfoInterface) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -85,8 +83,6 @@ this.transformInfoInterface= transformInfoInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -108,8 +104,6 @@ var categoryPath = categoryPath
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreCategoryPropertiesFactory(this.transformInfoInterface, categoryPath) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
@@ -123,8 +117,6 @@ var categoryPath = categoryPath
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -149,8 +141,6 @@ var node = node
     var level: Int = CategoryUtil.getPathLevel(categoryPath)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
@@ -164,8 +154,6 @@ var node = node
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

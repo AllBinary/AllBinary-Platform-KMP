@@ -52,7 +52,7 @@ open public class ImageJ2MEScaleUtil : Object {
 
         for (index in images.size - 1 downTo 0) {
 
-            scaledImages[index] = this.scale(images[index]!!, width, height)
+            scaledImages[index] = this.scale(images[index]!!, width, height)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

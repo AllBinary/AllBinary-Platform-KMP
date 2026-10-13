@@ -56,8 +56,6 @@ companion object {
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicEmailQueue.basicEmailQueue
 }
@@ -80,8 +78,6 @@ var emailInterface = emailInterface
 this.offer(emailInterface as Object)
 this.post(emailInterface)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -100,8 +96,6 @@ this.remove(emailInterface as Object)
     open fun remove()
         //nullable = true from not(false or (false and true)) = true
 : EmailInterface?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -189,8 +183,6 @@ Transport.send(emailInterface!!.getMimeMessage())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -204,8 +196,6 @@ Transport.send(emailInterface!!.getMimeMessage())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

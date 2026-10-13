@@ -57,8 +57,6 @@ this.file= file
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.file.getPath() as Object
 }
@@ -77,8 +75,6 @@ filePropertyVector!!.add(this.file.getCanonicalPath())
 filePropertyVector!!.add(this.file.getName())
 filePropertyVector!!.add(this.file.getParent())
 filePropertyVector!!.add(this.file.getPath())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return filePropertyVector
@@ -115,8 +111,6 @@ filePropertyHashMap!!.put(fileData!!.CANONICAL_PATH, file.getCanonicalPath())
 filePropertyHashMap!!.put(fileData!!.NAME, file.getName())
 filePropertyHashMap!!.put(fileData!!.PARENT, file.getParent())
 filePropertyHashMap!!.put(fileData!!.PATH, file.getPath())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return filePropertyHashMap

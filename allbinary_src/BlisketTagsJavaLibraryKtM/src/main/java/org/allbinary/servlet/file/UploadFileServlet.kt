@@ -86,7 +86,7 @@ var response = response
         try {
             BlisketServletUtil.getInstance()!!.init(request)
 this.requestHashMap= MultipartRequestParams(request).
-                            toHashMap()
+                            toHashMap()!!
 
     var filePath: String = this.requestHashMap!!.get(FileUploadData.getInstance()!!.UPLOAD_TO_FILE_PATH) as String
 
@@ -99,8 +99,6 @@ this.requestHashMap= MultipartRequestParams(request).
                                     {
                                     isError= true
 response.sendError(HttpServletResponse.SC_NOT_FOUND)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -207,7 +205,7 @@ var filePath = filePath
                                  && fileItem!!.getSize() > 1)
                         
                                     {
-                                    this.fileName= HttpRequestUtil.getInstance()!!.generateFileName(fileItem!!.getName())
+                                    this.fileName= HttpRequestUtil.getInstance()!!.generateFileName(fileItem!!.getName())!!
 
     
                         if(filePath!!.endsWith("/") || filePath!!.endsWith("\\"))
@@ -250,7 +248,7 @@ file.createNewFile()
 
                                     }
                                 
-fileOutputStream= AbFileOutputStream.createFromAbFile(file)
+fileOutputStream= AbFileOutputStream.createFromAbFile(file)!!
 fileOutputStream!!.write(byteArray)
 
                                     }
@@ -299,8 +297,6 @@ this.processRequest(request, response)
     open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Upload Cloud Files"

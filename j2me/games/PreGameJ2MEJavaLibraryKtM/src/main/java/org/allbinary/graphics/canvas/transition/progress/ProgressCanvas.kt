@@ -138,7 +138,7 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
         var font: Font = graphics.getFont()!!
 
         this.gauge.setHeight(font.getHeight() + 2)
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun init(gameMidlet: AllBinaryMidlet)
@@ -182,7 +182,7 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
         this.gauge.setLabel(this.commonStrings!!.PLEASE_WAIT)
         this.setText(this.TEXT)
         this.setValue(0)
-        this.inGameProcessor = Processor.getInstance()
+        this.inGameProcessor = Processor.getInstance()!!
         this.paintable = this.GAUGE_PAINTABLE
         this.inProgress = true
     }
@@ -201,7 +201,7 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
         this.gauge.setLabel(this.backgroundLabel)
         this.setText(this.TEXT)
         this.setValue(0)
-        this.inGameProcessor = Processor.getInstance()
+        this.inGameProcessor = Processor.getInstance()!!
         this.paintable = this.GAUGE_PAINTABLE
     }
 
@@ -229,7 +229,7 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
         this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.END_METHOD_NAME)
         this.gauge.setValue(this.getMaxValue())
         this.endActual()
-        this.paintable = NullPaintable.getInstance()
+        this.paintable = NullPaintable.getInstance()!!
     }
 
     open fun endFromInitialLazyLoadingComplete()

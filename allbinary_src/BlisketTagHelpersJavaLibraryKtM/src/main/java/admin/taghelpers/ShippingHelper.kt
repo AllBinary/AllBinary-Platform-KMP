@@ -68,7 +68,7 @@ this.request= pageContext!!.getRequest() as HttpServletRequest
                                 )
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 
                                     }
                                 
@@ -80,7 +80,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.shippingType= this.request.getParameter(ShippingMethodData.NAME)
+this.shippingType= this.request.getParameter(ShippingMethodData.NAME)!!
 }
 
 
@@ -106,8 +106,6 @@ order.setShippingMethod(this.shippingType)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -124,8 +122,6 @@ order.setShippingMethod(this.shippingType)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

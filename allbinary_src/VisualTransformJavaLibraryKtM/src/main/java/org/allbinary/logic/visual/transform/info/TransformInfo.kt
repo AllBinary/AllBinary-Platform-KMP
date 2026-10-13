@@ -441,8 +441,6 @@ stringBuffer!!.append(this.getObjectFile())
 stringBuffer!!.append("->TransformInfo")
 stringBuffer!!.append("TransformInfoInterface(HashMap)")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -467,8 +465,6 @@ this.storeName= value
     open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeName
@@ -561,8 +557,6 @@ this.data= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -571,8 +565,6 @@ this.data= value
     open fun getObject()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.anyType
@@ -583,8 +575,6 @@ this.data= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.objectFileName
 }
@@ -594,8 +584,6 @@ this.data= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.template
 }
@@ -604,8 +592,6 @@ this.data= value
     open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.templateFileName
@@ -618,8 +604,6 @@ this.data= value
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFilePath(this.getTemplateFile())
 }
@@ -630,8 +614,6 @@ this.data= value
     open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFilePath(this.getObjectConfigFile())
@@ -644,8 +626,6 @@ this.data= value
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFilePath(this.getDataFile())
 }
@@ -654,8 +634,6 @@ this.data= value
     open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.objectConfigFileName
@@ -779,8 +757,6 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.data
 }
@@ -812,8 +788,6 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DomDocumentHelper.create()
 
@@ -822,8 +796,6 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
                         else {
                             
     var document: Document = DomDocumentHelper.create(localData)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -837,8 +809,6 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
     open fun getDataFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.dataFileName
@@ -874,8 +844,6 @@ hashMap!!.put(transformInfoData!!.DATA, Encoder.encode(this.data.encodeToByteArr
 
 hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -908,8 +876,6 @@ vector.add(Encoder.encode(this.data.encodeToByteArray()))
 vector.add(time)
 vector.add(time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
@@ -918,8 +884,6 @@ vector.add(time)
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getName() as Object
@@ -937,8 +901,6 @@ this.isChild= true
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isChild
 }
@@ -947,8 +909,6 @@ this.isChild= true
     open fun getObjectConfigInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoObjectConfigInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.objectConfigInterface

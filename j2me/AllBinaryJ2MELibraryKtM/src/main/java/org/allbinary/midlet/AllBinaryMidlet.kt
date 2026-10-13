@@ -88,7 +88,7 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
 
         if (newDisplay != NullCanvas.NULL_CANVAS) {
 
-            title = newDisplay!!.getTitle()
+            title = newDisplay!!.getTitle()!!
 
             if (title != null) {
 

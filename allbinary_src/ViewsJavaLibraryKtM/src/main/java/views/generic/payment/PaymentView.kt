@@ -86,8 +86,6 @@ paymentNode!!.appendChild(payment.toXmlNode(document))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentNode
 } catch(e: Exception)
@@ -124,8 +122,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
         try {
             this.addDomNodeInterfaces()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
@@ -142,8 +138,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

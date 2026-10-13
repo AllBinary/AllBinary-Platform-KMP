@@ -138,8 +138,6 @@ LoggingInitInfo.logConfigInfoList= logConfigInfoList
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LoggingInitInfo.logConfigInfoList
 }
@@ -182,8 +180,6 @@ LoggingInitInfo.updateIfNeeded()
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return allLogTypeVector
 }
@@ -202,14 +198,10 @@ LoggingInitInfo.updateIfNeeded()
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -224,8 +216,6 @@ LoggingInitInfo.updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LoggingInitInfo.logConfigInfoList!!.size()
 }
@@ -237,14 +227,10 @@ LoggingInitInfo.updateIfNeeded()
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error"

@@ -61,8 +61,6 @@ companion object {
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HelperFactory.getInstance(abeClientInformation, FACTORYNAME, CLASSNAME, hashMap, pageContext)
 }
@@ -74,8 +72,6 @@ companion object {
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HelperFactory.getInstance(abeClientInformation, FACTORYNAME, CustomLoaderHelperFactory.CLASSNAME)

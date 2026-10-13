@@ -82,7 +82,7 @@ var pageContext = pageContext
                                 )
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 
                                     }
                                 
@@ -204,9 +204,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUES
 
         {
 
-    var nextId: Int = get = vector.get(index)get as Integer
-get.
-                    toInt()
+    var nextId: Int = (vector.get(index) as Integer).toInt()
 
 
     
@@ -231,8 +229,6 @@ get.
                                     {
                                     this.emailUser(quoteRequest)
 this.emailAdmins(quoteRequest)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Thank You For Your Business.<p/>"
@@ -259,8 +255,6 @@ this.emailAdmins(quoteRequest)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Thank You For Your Business.<p>"
 }
@@ -286,8 +280,6 @@ this.emailAdmins(quoteRequest)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -304,8 +296,6 @@ this.emailAdmins(quoteRequest)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -332,8 +322,6 @@ this.emailAdmins(quoteRequest)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -350,8 +338,6 @@ this.emailAdmins(quoteRequest)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -381,8 +367,6 @@ this.emailAdmins(quoteRequest)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -399,8 +383,6 @@ this.emailAdmins(quoteRequest)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -430,8 +412,6 @@ this.emailAdmins(quoteRequest)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -448,8 +428,6 @@ this.emailAdmins(quoteRequest)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

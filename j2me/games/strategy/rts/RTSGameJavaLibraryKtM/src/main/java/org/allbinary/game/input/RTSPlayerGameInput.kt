@@ -282,10 +282,10 @@ open public class RTSPlayerGameInput : PlayerGameInput {
 
             if (layer == AllBinaryLayer.NULL_ALLBINARY_LAYER) {
 
-                layer = CollidableDestroyableDamageableLayer.getNullInstance()
+                layer = CollidableDestroyableDamageableLayer.getNullInstance()!!
             } else {
                 geographicMapCellPosition =
-                    geographicMapInterface!!.getCellPositionAtXY(layer.getXP(), layer.getYP())
+                    geographicMapInterface!!.getCellPositionAtXY(layer.getXP(), layer.getYP())!!
             }
 
             var foundRTSLayer: CollidableDestroyableDamageableLayer =
@@ -300,9 +300,9 @@ open public class RTSPlayerGameInput : PlayerGameInput {
                 StringMaker()
                     .append("Off Of Map -")!!
                     .append(commonLabels!!.WIDTH_LABEL)!!
-                    .appendint(allBinaryTiledLayer!!.getWidth())!!
+                    .appendint(allBinaryTiledLayer!!.getWidth().toInt())!!
                     .append(commonLabels!!.HEIGHT_LABEL)!!
-                    .appendint(allBinaryTiledLayer!!.getHeight())!!
+                    .appendint(allBinaryTiledLayer!!.getHeight().toInt())!!
                     .toString(),
                 this,
                 "select",

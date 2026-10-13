@@ -79,8 +79,6 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -97,8 +95,6 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -126,8 +122,6 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -144,8 +138,6 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -173,8 +165,6 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -191,8 +181,6 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -310,15 +298,11 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.EVAL_BODY_INCLUDE
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -326,8 +310,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

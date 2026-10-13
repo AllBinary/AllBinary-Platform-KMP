@@ -79,7 +79,7 @@ open public class PathFindingNode : Object {
         while (pathFindingNode != null) {
             stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
             stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-            pathFindingNode = pathFindingNode!!.getParentP()
+            pathFindingNode = pathFindingNode!!.getParentP()!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

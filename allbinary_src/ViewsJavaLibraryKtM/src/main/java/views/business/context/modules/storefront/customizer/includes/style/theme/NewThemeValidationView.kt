@@ -60,8 +60,6 @@ this.styleValidationInterface= CssStyleValidation()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -73,8 +71,6 @@ this.styleValidationInterface= CssStyleValidation()
 
         try {
             CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this.styleValidationInterface as DomNodeInterface)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -89,8 +85,6 @@ this.styleValidationInterface= CssStyleValidation()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -109,8 +103,6 @@ this.styleValidationInterface= CssStyleValidation()
 
 stringBuffer!!.append(this.styleValidationInterface!!.validationInfo())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -125,8 +117,6 @@ stringBuffer!!.append(this.styleValidationInterface!!.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -138,8 +128,6 @@ stringBuffer!!.append(this.styleValidationInterface!!.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -149,8 +137,6 @@ stringBuffer!!.append(this.styleValidationInterface!!.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -162,8 +148,6 @@ var document = document
     open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return views.ValidationOnlyTempUtil.getInstance()!!.view(this)

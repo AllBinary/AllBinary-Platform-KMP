@@ -50,8 +50,6 @@ var lineBreak = lineBreak
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ClassUtil.viewAll(anyType!!::class, lineBreak)
 
@@ -109,8 +107,6 @@ stringBuffer!!.append(lineBreak)
 stringBuffer!!.append(ConstructorUtil.viewAll(myClass::class.java, lineBreak))
 stringBuffer!!.append(lineBreak)
 stringBuffer!!.append(MethodUtil.viewAll(myClass::class.java, lineBreak))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

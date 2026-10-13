@@ -108,7 +108,7 @@ open public class ImageCache : ImageCacheBase {
                 this.volume = 0
             }
 
-            image = this.createImage(caller, width, height)
+            image = this.createImage(caller, width, height)!!
 
             var widths: IntArray = this.widths
 
@@ -158,7 +158,7 @@ open public class ImageCache : ImageCacheBase {
             }
 
             try {
-                image = this.createImageFromInputStream(key, resourceInputStream)
+                image = this.createImageFromInputStream(key, resourceInputStream)!!
             } catch (e: Exception) {
                 this.logUtil!!.put(
                     "Exception: Trying Again After GC",
@@ -178,7 +178,7 @@ open public class ImageCache : ImageCacheBase {
                 this.tsUtil!!.gc()
                 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
                 Thread.sleep(100)
-                image = this.createImageFromInputStream(key, resourceInputStream)
+                image = this.createImageFromInputStream(key, resourceInputStream)!!
             }
 
             if (J2MEUtil.isHTML()) {} else {

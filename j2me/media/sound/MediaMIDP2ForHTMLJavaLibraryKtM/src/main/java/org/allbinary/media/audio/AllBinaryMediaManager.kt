@@ -48,8 +48,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -65,8 +63,6 @@ var aMuted = aMuted
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -123,8 +119,6 @@ var resource = resource
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Manager.createPlayer(resource)
 
@@ -132,8 +126,6 @@ var resource = resource
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Manager.createPlayer(resource.substring(0, resource.length -4))
 
@@ -144,8 +136,6 @@ var resource = resource
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NoPlayer.NO_PLAYER
 

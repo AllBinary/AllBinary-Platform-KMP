@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FileUtil2{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileUtil2.instance
 }
@@ -82,8 +80,6 @@ private constructor ()
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

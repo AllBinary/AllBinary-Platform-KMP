@@ -84,7 +84,7 @@ var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
 
                                     }
                                 
-this.categoryPropertiesInterface= categoryPropertiesFactoryInterface!!.getInstance()
+this.categoryPropertiesInterface= categoryPropertiesFactoryInterface!!.getInstance()!!
 this.categoryHierarchyInterface= CategoryHierarchy(this, this) as CategoryHierarchyInterface
 this.log()
 }
@@ -94,7 +94,7 @@ public constructor (categoryPropertiesFactoryInterface: CategoryPropertiesFactor
         {
 var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
 var level = level
-this.categoryPropertiesInterface= categoryPropertiesFactoryInterface!!.getInstance()
+this.categoryPropertiesInterface= categoryPropertiesFactoryInterface!!.getInstance()!!
 this.categoryHierarchyInterface= CategoryHierarchy(this, this, level) as CategoryHierarchyInterface
 this.log()
 }
@@ -116,8 +116,6 @@ this.log()
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPropertiesInterface!!.getKey()
@@ -143,12 +141,10 @@ this.log()
                                     
     var rootCategoryPropertiesInterface: RootCategoryPropertiesInterface = categoryInterface!!.getProperties() as RootCategoryPropertiesInterface
 
-rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()
+rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()!!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rootAbPath
@@ -160,8 +156,6 @@ rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()
     open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(this.getRootFilePath()!!.toString() +this.getProperties()!!.getPath(this.getHierarchy())!!.toString(), this.getProperties()!!.getFileName())
@@ -177,8 +171,6 @@ rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()
     var categoryInterface: CategoryInterface = this.categoryHierarchyInterface!!.getRoot()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryInterface!!.getProperties()!!.getWebAppPath()
 }
@@ -189,8 +181,6 @@ rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()
     open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPropertiesInterface!!.getPath(this.categoryHierarchyInterface)
@@ -203,8 +193,6 @@ rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()
 : Boolean{
 var categoryPropertiesInterface = categoryPropertiesInterface
 this.typeVector!!.add(this.PROPERTIES)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.childCategoryVector!!.add(categoryPropertiesInterface)
@@ -234,8 +222,6 @@ childCategoryHierarchyInterface!!.setRoot(this.getHierarchy()!!.getRoot())
 categoryInterface!!.setHierarchy(childCategoryHierarchyInterface)
 this.typeVector!!.add(this.CATEGORY)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.childCategoryVector!!.add(categoryInterface)
 }
@@ -244,8 +230,6 @@ this.typeVector!!.add(this.CATEGORY)
     open fun getChildNodes()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.childCategoryVector
@@ -300,8 +284,6 @@ bool_return= true
 }
 
 this.removal(removalVector)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bool_return
@@ -414,8 +396,6 @@ break;
 
 this.removal(removalVector)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bool_return
 }
@@ -446,8 +426,6 @@ this.removal(removalVector)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -455,8 +433,6 @@ this.removal(removalVector)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -468,8 +444,6 @@ this.removal(removalVector)
     open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
 : CategoryPropertiesInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPropertiesInterface
@@ -487,8 +461,6 @@ this.categoryPropertiesInterface= categoryPropertiesInterface
     open fun getHierarchy()
         //nullable = true from not(false or (false and true)) = true
 : CategoryHierarchyInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryHierarchyInterface
@@ -515,8 +487,6 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -549,8 +519,6 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -573,8 +541,6 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -584,8 +550,6 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -599,8 +563,6 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -613,8 +575,6 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -625,8 +585,6 @@ var document = document
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -640,8 +598,6 @@ var document = document
 : HashMap<Any, Any>{
 
     var categoryHashMap: HashMap<Any, Any> = this.categoryPropertiesInterface!!.toHashMap()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -658,8 +614,6 @@ var document = document
     var categoryVector: BasicArrayList = this.categoryPropertiesInterface!!.toVector()!!
 
 categoryVector!!.add(this.childCategoryVector)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryVector

@@ -86,8 +86,6 @@ adminConfigurationInterface!!.write()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -104,8 +102,6 @@ adminConfigurationInterface!!.write()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -132,8 +128,6 @@ adminConfigurationInterface!!.write()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -150,8 +144,6 @@ adminConfigurationInterface!!.write()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -181,8 +173,6 @@ adminConfigurationInterface!!.write()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -199,8 +189,6 @@ adminConfigurationInterface!!.write()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

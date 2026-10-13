@@ -44,8 +44,8 @@ open public class EarlySoundsFactory : BaseSoundsFactory {
 
         var index: Int = 0
 
-        soundInterfaceArray[index++] = SelectSound.getInstance()
-        soundInterfaceArray[index++] = ErrorSound.getInstance()
+        soundInterfaceArray[index++] = SelectSound.getInstance()!!
+        soundInterfaceArray[index++] = ErrorSound.getInstance()!!
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return soundInterfaceArray

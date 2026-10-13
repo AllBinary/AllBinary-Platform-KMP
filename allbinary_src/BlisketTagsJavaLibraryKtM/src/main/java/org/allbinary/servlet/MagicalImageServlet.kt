@@ -73,7 +73,7 @@ open public class MagicalImageServlet : HttpServlet {
 
     var file: AbFile = AbFile.createAbFile(URLGLOBALS.getWebappPath() +requestURI)!!
 
-inputStream= CloudStreamUtil.getInstance()!!.getFileAnyWhere(file)
+inputStream= CloudStreamUtil.getInstance()!!.getFileAnyWhere(file)!!
 
     var outputStream: ByteArrayOutputStream = ByteArrayOutputStream(8000)
 
@@ -137,8 +137,6 @@ this.processRequest(request, response)
     open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Serves Up Image From Local or Cloud"

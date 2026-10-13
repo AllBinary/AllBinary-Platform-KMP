@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageCompleteUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageCompleteUtil.instance
 }
@@ -104,15 +102,11 @@ var timeDelayHelper = timeDelayHelper
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

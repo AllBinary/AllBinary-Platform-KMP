@@ -51,8 +51,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageModifierUtil()
 }
@@ -103,7 +101,7 @@ companion object {
     //var imageIndex = imageIndex
     //var alpha = alpha
 
-    var alphaF: Float = alpha
+    var alphaF: Float = alpha.toFloat()
 
 
     var alphaFloat: Float = alphaF /255
@@ -146,8 +144,7 @@ this.setAlpha2(originalImage, image, imageIndex, alpha)
     var canvasImage: ImageImpl = htmlImage!!.getImage() as ImageImpl
 
 
-    var originalPlaynImage: CoreImage = 
-                                    (originalImage as PlaynImage).getImage() as CoreImage
+    var originalPlaynImage: CoreImage = (originalImage as PlaynImage).getImage() as CoreImage
 
 
     var canvas: Canvas = this.playnUtil!!.getCanvas(canvasImage)!!
@@ -206,8 +203,6 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return imageArray
 }
@@ -220,8 +215,7 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
     //var index = index
     //var image = image
 
-    var image3: CoreImage = 
-                                    (image as PlaynImage).getImage() as CoreImage
+    var image3: CoreImage = (image as PlaynImage).getImage() as CoreImage
 
 
     

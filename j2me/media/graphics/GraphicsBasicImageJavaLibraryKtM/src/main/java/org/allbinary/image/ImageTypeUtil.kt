@@ -54,7 +54,7 @@ open public class ImageTypeUtil : Object {
         // nullable = true from not(false or (false and false)) = true
         : Boolean {
         var mediaFileType = mediaFileType
-        mediaFileType = mediaFileType!!.lowercase()
+        mediaFileType = mediaFileType!!.lowercase()!!
 
         for (index in this.list.size() - 1 downTo 0) {
 

@@ -80,8 +80,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "KeySingleFactory", STATIC_BLOCK, e)
         //nullable = true from not(false or (false and true)) = true
 : ABHashtable<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return KeySingletonFactory.keyStringHashtable
 }
@@ -92,8 +90,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "KeySingleFactory", STATIC_BLOCK, e)
 : Integer{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(Integer.valueOf(index))
 }
@@ -102,8 +98,6 @@ var index = index
     open fun getArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Integer?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return KeySingletonFactory.keyArray

@@ -92,7 +92,8 @@ open public class BasicPersitance : Object {
                 this,
                 this.commonStrings!!.delete,
             )
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
             recordStore!!.deleteRecord(deleteId)
         } catch (e: Exception) {
 

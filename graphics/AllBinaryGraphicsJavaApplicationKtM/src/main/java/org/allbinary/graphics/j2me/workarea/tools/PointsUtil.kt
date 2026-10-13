@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PointsUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PointsUtil.instance
 }
@@ -65,8 +63,6 @@ companion object {
 var pointVector = pointVector
 var angle = angle
 var fulcrumPoint = fulcrumPoint
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return VectorRotationGenerator.getInstance()!!.getListAtAngle(fulcrumPoint!!.getX(), fulcrumPoint!!.getY(), pointVector, AngleFactory.getInstance()!!.getAt(angle.toInt()))

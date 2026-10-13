@@ -62,11 +62,11 @@ this.setLibraryName(libraryName)
 
     var params: Array<Any?> = arrayOfNulls(1)
 
-params[0]= this.getLibraryName()
+params[0]= this.getLibraryName()!!
 
     var classes: Array<KClass<*>?> = arrayOfNulls(1)
 
-classes[0]= this.getLibraryName()!!.::class
+classes[0]= this.getLibraryName()!!.::class!!
 this.loader= NativeLibraryClassLoader(this::class.java.classLoader)
 
     var myClass: KClass<*> = this.loader.loadClass("dynamic.NativeLibraryHelper")!!
@@ -74,7 +74,7 @@ this.loader= NativeLibraryClassLoader(this::class.java.classLoader)
 
     var constructor: Constructor = myClass!!.getConstructor(classes)!!
 
-this.anyType= constructor.newInstance(params)
+this.anyType= constructor.newInstance(params)!!
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -105,8 +105,6 @@ System.gc()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Library: " +this.getLibraryName()
 }
@@ -115,8 +113,6 @@ System.gc()
     open fun getLibraryName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.libraryName

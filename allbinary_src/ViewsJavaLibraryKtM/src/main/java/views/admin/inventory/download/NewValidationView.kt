@@ -57,14 +57,10 @@ this.downloadableItem= DownloadableItem(this.itemInterface!!.getId())
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -77,8 +73,6 @@ this.downloadableItem= DownloadableItem(this.itemInterface!!.getId())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -89,8 +83,6 @@ this.downloadableItem= DownloadableItem(this.itemInterface!!.getId())
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -99,8 +91,6 @@ var document = document
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Creating New Downloadable Item"

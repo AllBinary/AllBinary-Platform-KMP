@@ -57,7 +57,7 @@ var pageContext = pageContext
 
     var itemView: InventoryItemView = InventoryItemViewParentTagHelper.getInstance()!!.getInventoryItemView(inventoryTag)!!
 
-this.itemInterface= itemView!!.getItemInterface()
+this.itemInterface= itemView!!.getItemInterface()!!
 }
 
 
@@ -88,8 +88,6 @@ InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(val
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -106,8 +104,6 @@ InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(val
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -149,8 +145,6 @@ stringBuffer!!.append(" from to the Inventory table")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -167,8 +161,6 @@ stringBuffer!!.append(" from to the Inventory table")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -197,8 +189,6 @@ this.insert()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -216,8 +206,6 @@ this.insert()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -228,8 +216,6 @@ this.insert()
     open fun getItemInterface()
         //nullable = true from not(false or (false and true)) = true
 : ItemInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.itemInterface

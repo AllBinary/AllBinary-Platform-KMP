@@ -51,8 +51,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbeFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeFactory.instance
 }
@@ -80,8 +78,6 @@ private constructor ()
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this::class.createInstance()
 } catch(e: LicensingException)
@@ -111,8 +107,6 @@ private constructor ()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -152,9 +146,7 @@ var params = params
 
     var myClass: KClass<*> = loader.loadClass(className)!!
 
-constructor= myClass!!.getConstructor(classes)
-
-
+constructor= myClass!!.getConstructor(classes)!!
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return constructor.newInstance(params)
@@ -165,9 +157,7 @@ constructor= myClass!!.getConstructor(classes)
                             
     var myClass: KClass<*> = parent.loadClass(className)!!
 
-constructor= myClass!!.getConstructor(classes)
-
-
+constructor= myClass!!.getConstructor(classes)!!
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return constructor.newInstance(params)
@@ -215,8 +205,6 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -250,8 +238,6 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
     var c: KClass<*> = loader.loadClass(className)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return c
 
@@ -260,8 +246,6 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
                         else {
                             
     var c: KClass<*> = parent.loadClass(className)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -296,8 +280,6 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

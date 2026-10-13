@@ -61,7 +61,7 @@ var transformInfoInterface = transformInfoInterface
                             toHashMap()!!
 
 this.userName= UserName(hashMap).
-                            get()
+                            get()!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -91,8 +91,6 @@ this.userName= UserName(hashMap).
                                     null
                                 )
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -102,8 +100,6 @@ this.userName= UserName(hashMap).
     
                         if()
                         
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -118,8 +114,6 @@ this.userName= UserName(hashMap).
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -156,8 +150,6 @@ this.userName= UserName(hashMap).
                         if()
                         
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -172,8 +164,6 @@ this.userName= UserName(hashMap).
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -185,8 +175,6 @@ this.userName= UserName(hashMap).
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -196,8 +184,6 @@ this.userName= UserName(hashMap).
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

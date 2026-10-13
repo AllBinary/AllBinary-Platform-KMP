@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoPropertiesFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoPropertiesFactory.instance
 }
@@ -136,8 +134,6 @@ var node = node
 
 
     var transformInfoProperties: TransformInfoProperties = TransformInfoProperties(name, label, description, objectFileName, objectConfigFileName, templateFileName)
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

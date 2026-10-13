@@ -66,7 +66,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.value= this.request.getParameter("VALUE")
+this.value= this.request.getParameter("VALUE")!!
 }
 
 
@@ -96,8 +96,6 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(paymen
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -114,8 +112,6 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(paymen
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -146,8 +142,6 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(this.v
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -164,8 +158,6 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(this.v
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -210,8 +202,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -228,8 +218,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -259,8 +247,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -277,8 +263,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -308,8 +292,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -326,8 +308,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -357,8 +337,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -375,8 +353,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -406,8 +382,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -425,8 +399,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -439,8 +411,6 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return commonStrings!!.NOT_IMPLEMENTED

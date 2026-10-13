@@ -104,8 +104,6 @@ var file = file
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -119,8 +117,6 @@ var file = file
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.visit(file)
 
@@ -128,8 +124,6 @@ var file = file
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -167,8 +161,6 @@ var fileNameString = fileNameString
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -195,8 +187,6 @@ var fileNameString = fileNameString
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

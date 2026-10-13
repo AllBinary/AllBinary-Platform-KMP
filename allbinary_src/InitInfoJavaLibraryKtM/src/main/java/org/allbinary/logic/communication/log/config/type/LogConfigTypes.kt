@@ -125,8 +125,6 @@ logConfigType= availableLogConfigTypes!!.get(index) as LogConfigType
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return logConfigType
 

@@ -57,11 +57,11 @@ var pageContext = pageContext
                                 )
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 this.currentLocation= Replace(CommonSeps.getInstance()!!.SPACE, "%20").
-                            all(this.storeFrontInterface!!.getCurrentHostName() +this.storeFrontInterface!!.getCurrentHostNamePath())
+                            all(this.storeFrontInterface!!.getCurrentHostName() +this.storeFrontInterface!!.getCurrentHostNamePath())!!
 this.currentHomeLocation= Replace(CommonSeps.getInstance()!!.SPACE, "%20").
-                            all(this.storeFrontInterface!!.getCurrentHomeHostName() +this.storeFrontInterface!!.getCurrentHomeHostNamePath())
+                            all(this.storeFrontInterface!!.getCurrentHomeHostName() +this.storeFrontInterface!!.getCurrentHomeHostNamePath())!!
 
                                     }
                                 
@@ -82,8 +82,6 @@ this.currentHomeLocation= stringUtil!!.EMPTY_STRING
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.currentLocation
 }
@@ -92,8 +90,6 @@ this.currentHomeLocation= stringUtil!!.EMPTY_STRING
     open fun getCurrentHomeLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.currentHomeLocation

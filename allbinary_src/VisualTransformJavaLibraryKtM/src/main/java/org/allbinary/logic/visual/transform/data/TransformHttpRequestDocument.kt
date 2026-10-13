@@ -69,7 +69,7 @@ var weblisketSession = weblisketSession
             
     var contentType: String = AcceptableResponseGenerator.getInstance()!!.get(pageContext!!.getRequest() as HttpServletRequest)!!
 
-this.document= DomDocumentHelper.create()
+this.document= DomDocumentHelper.create()!!
 
     var contentTypeNode: Node = this.document.createElement(contentType)!!
 
@@ -120,7 +120,7 @@ var searchRequest = searchRequest
             
     var contentType: String = searchRequest!!.getContentType()!!
 
-this.document= DomDocumentHelper.create()
+this.document= DomDocumentHelper.create()!!
 
     var contentTypeNode: Node = this.document.createElement(contentType)!!
 
@@ -158,8 +158,6 @@ this.document.appendChild(contentTypeNode)
         //nullable = true from not(false or (false and true)) = true
 : Node{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.baseNode
 }
@@ -168,8 +166,6 @@ this.document.appendChild(contentTypeNode)
     open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.document
@@ -203,8 +199,6 @@ stringBuffer!!.append(this.baseNode!!.getNodeName())
                             
 stringBuffer!!.append("\nDocument: ")
 stringBuffer!!.append(XmlDocumentHelper.toString(this.document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

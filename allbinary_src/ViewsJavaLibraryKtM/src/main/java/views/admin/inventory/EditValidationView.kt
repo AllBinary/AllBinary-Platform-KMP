@@ -93,8 +93,6 @@ this.id= hashMap!!.get(basicItemData!!.ID) as String
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -109,8 +107,6 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -133,8 +129,6 @@ this.downloadableItemVector= downloadItemsEntity!!.getForItem(this.itemInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -143,8 +137,6 @@ this.downloadableItemVector= downloadItemsEntity!!.getForItem(this.itemInterface
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -155,8 +147,6 @@ this.downloadableItemVector= downloadItemsEntity!!.getForItem(this.itemInterface
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -193,8 +183,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

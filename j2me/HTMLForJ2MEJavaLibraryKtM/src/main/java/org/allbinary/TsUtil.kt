@@ -48,8 +48,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TsUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TsUtil.instance
 }
@@ -66,8 +64,6 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var anyType = anyType
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType!!.hashCode()
@@ -113,8 +109,6 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return if(data.size < 1) {
                             
@@ -133,8 +127,6 @@ recordStore!!.getRecord(recordId, data, 0)
     //var a = a
     //var b = b
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return a.compareTo(b)
 }
@@ -145,8 +137,6 @@ recordStore!!.getRecord(recordId, data, 0)
 : Boolean{
     //var a = a
     //var b = b
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return a.equals(b, ignoreCase = true)
@@ -159,8 +149,6 @@ recordStore!!.getRecord(recordId, data, 0)
     //var anyType = anyType
     //var object2 = object2
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType!!.equals(object2)
 }
@@ -171,10 +159,8 @@ recordStore!!.getRecord(recordId, data, 0)
 : Int{
     //var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return value.toInt()
+                        return value.code
 }
 
 
@@ -182,8 +168,6 @@ recordStore!!.getRecord(recordId, data, 0)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var value = value
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return value
@@ -194,8 +178,6 @@ recordStore!!.getRecord(recordId, data, 0)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var string = string
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return string.encodeToByteArray()
@@ -212,8 +194,6 @@ var owner = owner
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -221,8 +201,6 @@ var owner = owner
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 

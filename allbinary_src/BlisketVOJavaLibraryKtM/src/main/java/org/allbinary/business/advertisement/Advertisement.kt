@@ -76,8 +76,6 @@ this.displayInBrowserContraintsInterface=
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.artist
 }
@@ -94,8 +92,6 @@ this.artist= artist
     open fun getArtistLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.artistLink
@@ -114,8 +110,6 @@ this.artistLink= artistLink
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.title
 }
@@ -132,8 +126,6 @@ this.title= title
     open fun getDateAdded()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.dateAdded
@@ -152,8 +144,6 @@ this.dateAdded= dateAdded
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.directory
 }
@@ -170,8 +160,6 @@ this.directory= directory
     open fun getFramedLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.framedLink
@@ -190,8 +178,6 @@ this.framedLink= framedLink
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.listPrice
 }
@@ -208,8 +194,6 @@ this.listPrice= listPrice
     open fun getOurPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ourPrice
@@ -228,8 +212,6 @@ this.ourPrice= ourPrice
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rank
 }
@@ -246,8 +228,6 @@ this.rank= rank
     open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementImageInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.image
@@ -266,8 +246,6 @@ this.image= image
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementProductInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.product
 }
@@ -285,8 +263,6 @@ this.product= product
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementThumbnailInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.thumbnail
 }
@@ -303,8 +279,6 @@ this.thumbnail= thumbnail
     open fun getDisplayInBrowserContraintsInterface()
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.displayInBrowserContraintsInterface

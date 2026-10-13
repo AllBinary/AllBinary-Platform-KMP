@@ -92,7 +92,7 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
         this.initInputProcessors()
         this.rtsPlayerLayerInterface = rtsPlayerLayerInterface
         this.list = list
-        this.selectRTSLayerVisitorInterface = selectRTSLayerVisitorFactoryInterface!!.create(this)
+        this.selectRTSLayerVisitorInterface = selectRTSLayerVisitorFactoryInterface!!.create(this)!!
 
         var smallIntegerSingletonFactory: SmallIntegerSingletonFactory =
             SmallIntegerSingletonFactory.getInstance()!!
@@ -339,7 +339,8 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
         // nullable = true from not(false or (false and false)) = true
     {
         var selectedLayer = selectedLayer
-        this.paintSelectedRTSLayersList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+        this.paintSelectedRTSLayersList =
+            BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
         if (selectedLayer == CollidableDestroyableDamageableLayer.getNullInstance()) {
 
@@ -371,7 +372,8 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
         }
 
         this.logUtil!!.putF(stringBuffer!!.toString(), this, "setSelectedRTSLayer")
-        this.paintSelectedRTSLayersList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+        this.paintSelectedRTSLayersList =
+            BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
         this.selectRTSLayerVisitorInterface!!.visit(selectedLayer)
         this.deselectAll()
 

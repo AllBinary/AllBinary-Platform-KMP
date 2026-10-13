@@ -98,7 +98,7 @@ object: Thread()
                         for (index in 0 until bufferedImageArray!!.size)
 
         {
-generatedBufferedImageArray= MirrorImageUtil.getInstance()!!.getImages(bufferedImageArray[index]!!, this@MirrorSpriteImageJPanel.verticleJCheckBox!!.isSelected(), this@MirrorSpriteImageJPanel.horizontalJCheckBox!!.isSelected())
+generatedBufferedImageArray= MirrorImageUtil.getInstance()!!.getImages(bufferedImageArray[index]!!, this@MirrorSpriteImageJPanel.verticleJCheckBox!!.isSelected(), this@MirrorSpriteImageJPanel.horizontalJCheckBox!!.isSelected())!!
 this@MirrorSpriteImageJPanel.result= BufferedImageUtil2.getInstance()!!.createSpriteImage(generatedBufferedImageArray)
 this@MirrorSpriteImageJPanel.getParent()!!.repaint()
 
@@ -277,8 +277,6 @@ var evt = evt
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageProcessorInput

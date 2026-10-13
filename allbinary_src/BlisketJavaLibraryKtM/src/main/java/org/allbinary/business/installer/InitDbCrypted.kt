@@ -111,8 +111,6 @@ this.logDbInitInfo= LogDbInitInfo()
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_USER +CUSTOMERDBUSER, this, this.METHOD_ADD_USERS)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -133,8 +131,6 @@ this.logDbInitInfo= LogDbInitInfo()
                         
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_USER +INVENTORYDBUSER, this, this.METHOD_ADD_USERS)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -157,8 +153,6 @@ this.logDbInitInfo= LogDbInitInfo()
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_USER +HISTORYDBUSER, this, this.METHOD_ADD_USERS)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -179,8 +173,6 @@ this.logDbInitInfo= LogDbInitInfo()
                         
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_USER +STATICPAGESDBUSER, this, this.METHOD_ADD_USERS)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -203,8 +195,6 @@ this.logDbInitInfo= LogDbInitInfo()
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_USER +LOGDBUSER, this, this.METHOD_ADD_USERS)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -212,15 +202,11 @@ this.logDbInitInfo= LogDbInitInfo()
                                 
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.METHOD_ADD_USERS)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_USERS, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -250,8 +236,6 @@ this.logDbInitInfo= LogDbInitInfo()
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_DATABASE +CUSTOMERDB, this, this.METHOD_ADD_DATABASES)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -266,8 +250,6 @@ this.logDbInitInfo= LogDbInitInfo()
                         
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_DATABASE +INVENTORYDB, this, this.METHOD_ADD_DATABASES)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -284,8 +266,6 @@ this.logDbInitInfo= LogDbInitInfo()
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_DATABASE +HISTORYDB, this, this.METHOD_ADD_DATABASES)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -300,8 +280,6 @@ this.logDbInitInfo= LogDbInitInfo()
                         
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_DATABASE +STATICPAGESDB, this, this.METHOD_ADD_DATABASES)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -318,8 +296,6 @@ this.logDbInitInfo= LogDbInitInfo()
                                     {
                                     this.logUtil!!.putF(this.UNABLE_TO_CREATE_DATABASE +LOGDB, this, this.METHOD_ADD_DATABASES)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -334,15 +310,11 @@ file.createNewFile()
 
 idOutData!!.writeBytes(this.sqlCommandLog!!.toString())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_DATABASES, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -379,15 +351,11 @@ stringBuffer!!.append(StaticPagesEntityFactory.getInstance()!!.getStaticPagesEnt
 stringBuffer!!.append(TransformInfoEntityBuilder.getInstance()!!.createTable())
 this.logUtil!!.putF(ADD_TABLES_RESULTS_LABEL +stringBuffer!!.toString(), this, this.METHOD_ADD_TABLES)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_TABLES, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

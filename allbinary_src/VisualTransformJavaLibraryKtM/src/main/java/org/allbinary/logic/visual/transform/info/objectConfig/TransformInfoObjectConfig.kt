@@ -209,7 +209,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "Constructor(TransformInfoI
     open fun createDocument()
         //nullable = true from not(false or (false and true)) = true
 {
-this.document= DomDocumentHelper.create()
+this.document= DomDocumentHelper.create()!!
 
     var objectConfigNode: Node = this.document.createElement(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
 
@@ -221,8 +221,6 @@ this.document.appendChild(objectConfigNode)
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ownerTransformInfoInterface
 }
@@ -233,8 +231,6 @@ this.document.appendChild(objectConfigNode)
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.document
@@ -284,16 +280,12 @@ var transformInfoInterface = transformInfoInterface
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -310,8 +302,6 @@ var transformInfoInterface = transformInfoInterface
     var componentNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return componentNode!!.getAttributes()
 }
@@ -324,8 +314,6 @@ var transformInfoInterface = transformInfoInterface
 : String{
 
     var attrNode: Attr = this.getTemplateAttributes()!!.getNamedItem(TransformInfoObjectConfigData.getInstance()!!.NAME) as Attr
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -385,15 +373,11 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getNodeVector(nodename)")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewNodeVector
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicArrayListD()
@@ -429,8 +413,6 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewVector
 }
@@ -464,8 +446,6 @@ var nodeName = nodeName
 viewVector!!.add(TransformInfoDomNode(viewNode).
                             getTransformInfoInterface())
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -606,8 +586,6 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewVector
 }
@@ -618,8 +596,6 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
     open fun getTransformDomNodes()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransformDomNodes(TransformInfosData.getInstance()!!.GROUP)
@@ -632,8 +608,6 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransforms(TransformInfosData.getInstance()!!.NAME)
 }
@@ -644,8 +618,6 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
     open fun getGroupTransforms()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransforms(TransformInfosData.getInstance()!!.GROUP)
@@ -658,8 +630,6 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransforms(TransformInfoData.getInstance()!!.PARENT)
 }
@@ -668,8 +638,6 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
     open fun getRootNode()
         //nullable = true from not(false or (false and true)) = true
 : Node{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)
@@ -690,8 +658,6 @@ this.outputTypeName= outputTypeName
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.outputTypeName
 }
@@ -704,8 +670,6 @@ this.outputTypeName= outputTypeName
 : String{
 
     var node: Node = DomSearchHelper.getNode(InputOutputTypeData.getInstance()!!.NAME, this.getRootNode()!!.getChildNodes())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -722,8 +686,6 @@ this.outputTypeName= outputTypeName
     var node: Node = DomSearchHelper.getNode(InputOutputTypeData.getInstance()!!.FILE, this.getRootNode()!!.getChildNodes())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DomNodeHelper.getTextNodeValue(node)
 }
@@ -736,8 +698,6 @@ this.outputTypeName= outputTypeName
 : String{
 
     var node: Node = DomSearchHelper.getNode(XslData.getInstance()!!.ROOT_IMPORT_URI, this.getRootNode()!!.getChildNodes())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -758,8 +718,6 @@ this.outputTypeName= outputTypeName
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XmlDocumentHelper.toString(this.document)
 
@@ -767,8 +725,6 @@ this.outputTypeName= outputTypeName
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -785,8 +741,6 @@ this.outputTypeName= outputTypeName
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -156,8 +156,6 @@ stringBuffer!!.append(this.sqlStrings!!.PRIMARY_KEY)
 stringBuffer!!.append(CategoryData.getInstance()!!.NAME)
 stringBuffer!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -166,8 +164,6 @@ stringBuffer!!.append(this.sqlStrings!!.END)
     open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
@@ -185,8 +181,6 @@ super.updateWhere(CategoryData.getInstance()!!.NAME, updatedValues!!.get(Categor
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

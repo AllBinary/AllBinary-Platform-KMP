@@ -71,9 +71,9 @@ protected constructor (originalImage: Image, image: Image, angleInfo: AngleInfo,
 this.originalImage= originalImage
 this.imageToShow= image
 this.twoImages[0]= image
-this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImage(image)
-this.canvasSurfaceArray[0]= this.getCanvasSurface(this.twoImages[0]!!)
-this.canvasSurfaceArray[1]= this.getCanvasSurface(this.twoImages[1]!!)
+this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImage(image)!!
+this.canvasSurfaceArray[0]= this.getCanvasSurface(this.twoImages[0]!!)!!
+this.canvasSurfaceArray[1]= this.getCanvasSurface(this.twoImages[1]!!)!!
 }
 
 
@@ -91,8 +91,6 @@ this.canvasSurfaceArray[1]= this.getCanvasSurface(this.twoImages[1]!!)
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
 
 canvasSurface!!.translate(this.originalImage!!.getWidth() /2, this.originalImage!!.getHeight() /2)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return canvasSurface
@@ -152,7 +150,7 @@ super.setAlpha(alpha)
                         if(changed)
                         
                                     {
-                                    this.alphaProcessor= AlphaProcessor.getInstance()
+                                    this.alphaProcessor= AlphaProcessor.getInstance()!!
 this.updateImage()
 
                                     }

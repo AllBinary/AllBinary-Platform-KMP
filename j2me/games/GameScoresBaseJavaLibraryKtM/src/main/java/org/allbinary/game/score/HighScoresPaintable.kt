@@ -54,7 +54,7 @@ open public class HighScoresPaintable : Paintable, ColorChangeListener, UpdateMy
         var font: Font = graphics.getFont()!!
 
         this.charHeight = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
@@ -64,7 +64,7 @@ open public class HighScoresPaintable : Paintable, ColorChangeListener, UpdateMy
 
         var colorChangeEvent: ColorChangeEvent = eventObject as ColorChangeEvent
 
-        this.basicColor = colorChangeEvent!!.getBasicColorP()
+        this.basicColor = colorChangeEvent!!.getBasicColorP()!!
     }
 
     override fun paint(graphics: Graphics)

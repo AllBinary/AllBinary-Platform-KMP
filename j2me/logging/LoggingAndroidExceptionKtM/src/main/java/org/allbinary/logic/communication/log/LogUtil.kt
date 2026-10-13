@@ -39,8 +39,6 @@
         //nullable =  from not(true or (false and true)) = 
 : LogUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LogUtil.instance
 }
@@ -117,7 +115,7 @@ private constructor ()
 
     var className: String = this.LABEL
 
-className= anyType!!::class.toString()!!
+className= anyType!!::class.toString()!!!!
 
     var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 

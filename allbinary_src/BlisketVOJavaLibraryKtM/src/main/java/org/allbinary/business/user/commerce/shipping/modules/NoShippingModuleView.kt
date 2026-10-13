@@ -45,8 +45,6 @@ public constructor (){
         //nullable = true from not(false or (false and true)) = true
 : Boolean?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -55,8 +53,6 @@ public constructor (){
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : org.w3c.dom.Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -68,8 +64,6 @@ public constructor (){
 : org.w3c.dom.Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -78,8 +72,6 @@ var document = document
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : org.w3c.dom.Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -98,8 +90,6 @@ var document = document
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodData.NAME, this.getName()))
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodData.DESCRIPTION, this.getDescription()))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return shippingMethodNode
 } catch(e: Exception)
@@ -114,8 +104,6 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -127,8 +115,6 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
         //nullable = true from not(false or (false and true)) = true
 : String?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -137,8 +123,6 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
     open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

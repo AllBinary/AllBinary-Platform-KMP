@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbFileSystem{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFileSystem.instance
 }
@@ -72,8 +70,6 @@ companion object {
     var file: File = File(path)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return file.isDirectory() || file.isFile()
 }
@@ -83,8 +79,6 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var path = path
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return File(path).
@@ -105,8 +99,6 @@ companion object {
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return file.list()
 
@@ -114,8 +106,6 @@ companion object {
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.getArrayInstance()
 
@@ -130,8 +120,6 @@ companion object {
     //var fileName = fileName
 
     var bytes: ByteArray = ByteArray(1000000)
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -162,8 +150,6 @@ closeable= idFile
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bytes.decodeToString()
 
@@ -179,8 +165,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "readAsString", e)
 
          }
         
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
@@ -208,15 +192,11 @@ inputStream!!.close()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CLOSE, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

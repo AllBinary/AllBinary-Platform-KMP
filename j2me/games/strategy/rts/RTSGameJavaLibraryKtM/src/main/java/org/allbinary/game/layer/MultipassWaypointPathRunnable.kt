@@ -193,7 +193,7 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
                 this.targetPathFindingLayer!!
                     .getWaypointBehavior()!!
                     .getWaypoint()!!
-                    .getPathFindingInfo(geographicMapCellPosition)
+                    .getPathFindingInfo(geographicMapCellPosition)!!
 
             var localPathFindingInfo: PathFindingInfo = this.pathFindingInfo as PathFindingInfo
 
@@ -205,7 +205,7 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
                         geographicMapCellPosition,
                         localPathFindingInfo,
                         this.multipassState,
-                    )
+                    )!!
 
             if (this.list != this.basicArrayListUtil!!.getImmutableInstance()) {
 
@@ -242,7 +242,7 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
                         geographicMapCellPosition,
                         localPathFindingInfo,
                         this.multipassState,
-                    )
+                    )!!
 
             if (this.list != this.basicArrayListUtil!!.getImmutableInstance()) {
 

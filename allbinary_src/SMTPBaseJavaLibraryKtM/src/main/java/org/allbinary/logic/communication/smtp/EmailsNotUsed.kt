@@ -113,8 +113,6 @@ var document = document
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -130,8 +128,6 @@ var document = document
                                 
 
     var error: String = "Error Processing Order.  Please contact us if error persists.<p/>"
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

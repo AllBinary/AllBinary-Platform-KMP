@@ -75,7 +75,7 @@ this.request= pageContext!!.getRequest() as HttpServletRequest
                         if(!StringValidationUtil.getInstance()!!.isEmpty(storeName))
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 
                                     }
                                 
@@ -151,8 +151,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "setPaymentGateway()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayBoolean
 } catch(e: Exception)
@@ -194,8 +192,6 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()", e)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -225,8 +221,6 @@ order.setStoreName(this.storeFrontInterface!!.getName())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -255,8 +249,6 @@ stringBuffer!!.append(" Exception Getting Id")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

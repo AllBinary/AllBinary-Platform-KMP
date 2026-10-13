@@ -78,8 +78,6 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NO_TYPE
 }
@@ -88,8 +86,6 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
     open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformDocumentInterface
@@ -108,8 +104,6 @@ this.transformDocumentInterface= transformDocumentInterface
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface
 }
@@ -126,8 +120,6 @@ this.transformInfoInterface= transformInfoInterface
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformDocumentInterface!!.getDoc()
@@ -157,8 +149,6 @@ this.transformInfoInterface= transformInfoInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransformDocumentInterface()!!.getDoc()
 }
@@ -177,8 +167,6 @@ this.transformInfoInterface= transformInfoInterface
 
     var result: String = BasicTransformer(this.abeClientInformation, this.getTransformInfoInterface()).
                             translate(success)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

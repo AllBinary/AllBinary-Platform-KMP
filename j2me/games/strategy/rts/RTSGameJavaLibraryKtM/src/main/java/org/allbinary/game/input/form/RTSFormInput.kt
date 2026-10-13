@@ -68,7 +68,7 @@ open public class RTSFormInput : Object {
         for (index in 0 until size) {
 
             this.newUnconstructedRTSLayerInterfaceArray[index] =
-                CollidableDestroyableDamageableLayer.getNullInstance()
+                CollidableDestroyableDamageableLayer.getNullInstance()!!
         }
 
         this.groupInterfaceArray = groupInterfaceArray

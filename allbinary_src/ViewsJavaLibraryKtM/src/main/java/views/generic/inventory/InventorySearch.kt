@@ -98,8 +98,6 @@ this.searchRequest= searchRequest
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -119,8 +117,6 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 
     var filePath: String = Replace(CommonSeps.getInstance()!!.SPACE, "%20").
                             all(stringBuffer!!.toString())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,8 +153,6 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
         try {
             
     var str: Array<String?> = this.search()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -198,8 +192,6 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
     var vector: BasicArrayList = inventorySearchUtil!!.getBasicItemIdColumn(this.searchRequest)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inventorySearchUtil!!.search(abeClientInformation, searchRequest, vector)
 }
@@ -213,8 +205,6 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 var product = product
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

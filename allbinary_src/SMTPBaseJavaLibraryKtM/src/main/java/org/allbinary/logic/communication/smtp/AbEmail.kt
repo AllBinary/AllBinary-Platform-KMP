@@ -69,8 +69,6 @@ var contentBase = contentBase
         //nullable = true from not(false or (false and true)) = true
 : MimeMessage{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.getMimeMessage()
 }
@@ -79,8 +77,6 @@ var contentBase = contentBase
     open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.getDebugInfo()
@@ -93,8 +89,6 @@ var contentBase = contentBase
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.log()
 }
@@ -105,8 +99,6 @@ var contentBase = contentBase
     open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.toHashMap()
@@ -120,8 +112,6 @@ var contentBase = contentBase
 : Node{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.toXmlNode(document)
 }
@@ -130,8 +120,6 @@ var document = document
     open fun getEmail()
         //nullable = true from not(false or (false and true)) = true
 : Email{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email as Email
@@ -143,8 +131,6 @@ var document = document
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.toXmlDoc()

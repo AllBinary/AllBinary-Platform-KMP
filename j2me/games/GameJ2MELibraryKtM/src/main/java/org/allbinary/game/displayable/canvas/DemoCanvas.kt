@@ -628,7 +628,7 @@ open public class DemoCanvas :
     {
         this.close()
         this.setPaused(true)
-        this.gameRunnable = NullWaitGameRunnable.getInstance()
+        this.gameRunnable = NullWaitGameRunnable.getInstance()!!
         this.gameCanvas!!.pause()
     }
 
@@ -793,8 +793,8 @@ open public class DemoCanvas :
 
         if (this.state == 0) {
 
-            this.highScoresPaintable = NullPaintable.getInstance()
-            this.paintedSpecialAnimationInterface = this.getSpecialAnimationInterface()
+            this.highScoresPaintable = NullPaintable.getInstance()!!
+            this.paintedSpecialAnimationInterface = this.getSpecialAnimationInterface()!!
 
             if (!this.demoGameRunnable!!.isRunning() && this.gameCanvas!!.isInitialized()) {
 
@@ -802,10 +802,10 @@ open public class DemoCanvas :
             }
         } else if (this.state == 1) {
 
-            this.paintedSpecialAnimationInterface = SpecialAnimation.getInstance()
+            this.paintedSpecialAnimationInterface = SpecialAnimation.getInstance()!!
         } else if (this.state == 2) {
 
-            this.highScoresPaintable = this.getRealHighScoresPaintable()
+            this.highScoresPaintable = this.getRealHighScoresPaintable()!!
         }
 
         var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
@@ -848,12 +848,12 @@ open public class DemoCanvas :
         // nullable = true from not(false or (false and true)) = true
     {
         PreLogUtil.put(this.commonStrings!!.START, this, "create")
-        this.highScoresPaintable = NullPaintable.getInstance()
+        this.highScoresPaintable = NullPaintable.getInstance()!!
 
         var randomLevel: Int = this.getNextRandom()
 
         this.gameCanvas = this.createRunnable(randomLevel) as AllBinaryGameCanvas
-        this.basicColor = this.gameCanvas!!.getLayerManager()!!.getForegroundBasicColor()
+        this.basicColor = this.gameCanvas!!.getLayerManager()!!.getForegroundBasicColor()!!
         this.getRealHighScoresPaintable()!!.setBasicColorP(this.basicColor)
         this.gameCanvas!!.setGameCanvasStartListener(this)
 
@@ -877,7 +877,7 @@ open public class DemoCanvas :
             this,
             this.commonStrings!!.START,
         )
-        this.canvasThread = this.threadFactoryUtil!!.getInstanceGameCanvasRunnable(gameCanvas)
+        this.canvasThread = this.threadFactoryUtil!!.getInstanceGameCanvasRunnable(gameCanvas)!!
         this.gameCanvas!!.setThread(this.canvasThread)
         this.threadFactoryUtil!!.start(this.canvasThread)
 
@@ -999,7 +999,7 @@ open public class DemoCanvas :
             PreLogUtil.put("Showing Game", this, METHOD_NAME)
             this.setPaintableInterface(this.gameCanvas)
         } else {
-            this.gameRunnable = NullWaitGameRunnable.getInstance()
+            this.gameRunnable = NullWaitGameRunnable.getInstance()!!
             PreLogUtil.put("Not Showing Game", this, METHOD_NAME)
             this.setPaintableInterface(this.getDefaultPaintableInterface())
         }

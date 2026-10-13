@@ -46,8 +46,6 @@ import org.allbinary.time.TimeStampUtil
         //nullable =  from not(true or (false and true)) = 
 : LogFormatUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LogFormatUtil.instance
 }
@@ -95,8 +93,6 @@ stringBuffer!!.append(this.SPECIAL_MESSAGE)
 stringBuffer!!.append(specialMessage)
 stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -114,8 +110,6 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 stringBuffer!!.append(this.SPECIAL_MESSAGE)
 stringBuffer!!.append(specialMessage)
 stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -147,8 +141,6 @@ stringBuffer!!.append(this.CLASS_NAME)
 stringBuffer!!.append(className)
 stringBuffer!!.append(this.FUNCTION_CALL)
 stringBuffer!!.append(functionName)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer
@@ -209,8 +201,6 @@ stringBuffer!!.append(this.STACK_TRACE)
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 
@@ -218,8 +208,6 @@ stringBuffer!!.append(this.STACK_TRACE)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 

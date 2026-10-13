@@ -60,7 +60,7 @@ public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
-this.map= request.getParameterMap()
+this.map= request.getParameterMap()!!
 this.logUtil!!.putF("RequestParams Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
@@ -68,7 +68,7 @@ public constructor (pageContext: PageContext)
             : super()
         {
 var pageContext = pageContext
-this.map= pageContext!!.getRequest()!!.getParameterMap()
+this.map= pageContext!!.getRequest()!!.getParameterMap()!!
 this.logUtil!!.putF("Request Params Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
@@ -84,8 +84,6 @@ this.map= map
     open fun getMap()
         //nullable = true from not(false or (false and true)) = true
 : Map{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.map
@@ -141,15 +139,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMET
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -201,8 +195,6 @@ stringBuffer!!.append(this.map.toString())
 stringBuffer!!.append("\ntoHashMap: ")
 stringBuffer!!.append(hashMap!!.toString())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "toHashMap()")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap

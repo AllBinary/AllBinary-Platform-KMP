@@ -42,8 +42,6 @@ open public class NullPriorityRunnable
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
 }
@@ -52,8 +50,6 @@ open public class NullPriorityRunnable
     override fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

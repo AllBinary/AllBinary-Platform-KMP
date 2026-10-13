@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ToolFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ToolFactory.instance
 }
@@ -97,10 +95,8 @@ StatusFactory.getInstance()!!.setStatus("Tool In Use: " +this.tool)
                                 )
                         
                                     {
-                                    this.selectedTool= GraphicItemFactory.getInstance()!!.getInstance(this.tool)
+                                    this.selectedTool= GraphicItemFactory.getInstance()!!.getInstance(this.tool)!!
 this.logUtil!!.putF("New Tool: " +this.selectedTool, this, "getSelectedToolFactory")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.selectedTool
@@ -109,8 +105,6 @@ this.logUtil!!.putF("New Tool: " +this.selectedTool, this, "getSelectedToolFacto
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 

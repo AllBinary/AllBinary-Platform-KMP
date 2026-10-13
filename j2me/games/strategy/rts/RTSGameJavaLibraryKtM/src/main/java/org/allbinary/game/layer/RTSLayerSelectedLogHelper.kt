@@ -145,7 +145,7 @@ open public class RTSLayerSelectedLogHelper : RTSLayerLogHelper {
         stringBuffer!!.append(" movementAngle: ")
         stringBuffer!!.append(movementAngle!!.name)
         stringBuffer!!.append(this.commonSeps!!.FORWARD_SLASH)
-        stringBuffer!!.appendshort(movementAngle!!.getValue())
+        stringBuffer!!.appendshort(movementAngle!!.getValue().toShort())
 
         if (angleInfo != null) {
 
@@ -316,7 +316,7 @@ open public class RTSLayerSelectedLogHelper : RTSLayerLogHelper {
                 .append(" steering - movementAngle: ")!!
                 .append(movementAngle!!.name)!!
                 .append(this.commonSeps!!.FORWARD_SLASH)!!
-                .appendshort(movementAngle!!.getValue())!!
+                .appendshort(movementAngle!!.getValue().toShort())!!
                 .toString(),
             this,
             this.TRACKTO_TURNTO,
@@ -356,7 +356,7 @@ open public class RTSLayerSelectedLogHelper : RTSLayerLogHelper {
             StringMaker()
                 .append(associatedAdvancedRTSGameLayer!!.getName())!!
                 .append(CommonSeps.getInstance()!!.SPACE)!!
-                .appendint(geographicMapCellHistory!!.getTotalVisited())!!
+                .appendint(geographicMapCellHistory!!.getTotalVisited().toInt())!!
                 .append(CommonSeps.getInstance()!!.SPACE)!!
                 .append(stringUtil!!.toString(currentGeographicMapCellPosition))!!
                 .append(" - trying to move but not on path: ")!!

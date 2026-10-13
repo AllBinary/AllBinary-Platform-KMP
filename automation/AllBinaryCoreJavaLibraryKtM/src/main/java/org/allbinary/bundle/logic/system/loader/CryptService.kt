@@ -75,8 +75,6 @@ this.logUtil!!.putF("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.comm
     var decrypted: ByteArray = this.abCryptUtil!!.decrypt(inputStream, key)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ByteArrayInputStream(decrypted)
 } catch(e: LicensingException)
@@ -87,8 +85,6 @@ this.showLicenseDialog(abeClientInformation, e)
             {
 this.showLicenseDialog(abeClientInformation, e)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

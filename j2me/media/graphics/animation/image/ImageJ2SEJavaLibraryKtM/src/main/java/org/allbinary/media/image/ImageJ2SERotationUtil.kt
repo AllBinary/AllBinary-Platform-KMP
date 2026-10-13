@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageJ2SERotationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageJ2SERotationUtil.instance
 }
@@ -68,8 +66,6 @@ private constructor ()
     //var bufferedImage = bufferedImage
     //var totalAngle = totalAngle
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getRotatedImageRadians(bufferedImage, TWO_PIE *totalAngle /360)
 }
@@ -84,8 +80,6 @@ private constructor ()
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(bufferedImage!!.getWidth(
                             null), bufferedImage!!.getHeight(
                             null))!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,8 +103,6 @@ g.drawImage(bufferedImage, 0, 0, bufferedImage!!.getWidth(
                             null)
 g.dispose()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newBufferedImage
 }
@@ -130,8 +122,6 @@ g.dispose()
 g.setBackground(this.imageJ2SEUtil!!.TRANSPARENT_COLOR)
 g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.drawRotatedImageRadians(bufferedImage, newBufferedImage, g, TWO_PIE *totalAngle /360)
 }
@@ -145,8 +135,6 @@ g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
     //var totalAngle = totalAngle
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,7 +152,7 @@ g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
     var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(numberOfFrames)
 
 
-    var arc: Double = () *totalAngle /360
+    var arc: Double = (this.TWO_PIE) *totalAngle /360
 
 
     var size: Int = bufferedImageArray!!.size
@@ -180,10 +168,8 @@ g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
 
     var radians: Double = (arc /size) *index
 
-bufferedImageArray[index]= this.getRotatedImageRadians(bufferedImage, radians)
+bufferedImageArray[index]= this.getRotatedImageRadians(bufferedImage, radians)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -272,8 +258,6 @@ columnIndex++
 }
 
 g.dispose()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage

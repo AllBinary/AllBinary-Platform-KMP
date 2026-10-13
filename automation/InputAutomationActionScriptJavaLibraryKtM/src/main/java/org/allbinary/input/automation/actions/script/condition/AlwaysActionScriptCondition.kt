@@ -140,8 +140,6 @@ this.alwaysActionScriptConditionJPanel= AlwaysActionScriptConditionJPanel(this)
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isOn
 }
@@ -171,8 +169,6 @@ this.alwaysActionScriptConditionJPanel!!.getAlwaysActionJDialog()!!.setVisible(t
 hashMap!!.put(AlwaysActionScriptConditionData.IS_ON, Boolean.toString(this.isIsOn()))
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -188,8 +184,6 @@ var document = document
     var node: Node = super.toXmlNode(document)!!
 
 node.appendChild(ModDomHelper.createNodeWithValueNodes(document, AlwaysActionScriptConditionData.NAME, this.toHashMap()))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
@@ -208,15 +202,11 @@ var frame = frame
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.shouldProcess(frame)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

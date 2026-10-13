@@ -193,8 +193,6 @@ super.setMap(request.getParameterMap())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getMap() as HashMap<Any, Any>
 
@@ -202,8 +200,6 @@ super.setMap(request.getParameterMap())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.toHashMap()
 

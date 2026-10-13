@@ -133,43 +133,43 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.entryId= this.request.getParameter(EntryData.getInstance()!!.ID)
-this.orderId= this.request.getParameter(OrderData.ID)
-this.userName= this.request.getParameter(UserData.USERNAME)
-this.storeName= this.request.getParameter(StoreFrontData.getInstance()!!.NAME)
-this.shipDate= this.request.getParameter(OrderHistoryData.SHIPPEDDATE)
-this.orderDate= this.request.getParameter(OrderHistoryData.ORDERDATE)
-this.transDate= this.request.getParameter(OrderHistoryData.TRANSDATE)
-this.cancelDate= this.request.getParameter(OrderHistoryData.CANCELDATE)
-this.status= this.request.getParameter(OrderHistoryData.STATUS)
-this.paymentMethod= this.request.getParameter(PaymentData.METHOD)
-this.name= this.request.getParameter(PaymentData.NAME)
-this.type= this.request.getParameter(PaymentData.TYPE)
-this.expiration= this.request.getParameter(PaymentData.EXPIRATION)
-this.number= this.request.getParameter(PaymentData.NUMBER)
-this.encryption= this.request.getParameter(EntryData.getInstance()!!.ENCRYPTION)
-this.billingName= this.request.getParameter(BillingAddressData.NAME)
-this.billingStreet= this.request.getParameter(BillingAddressData.STREET)
-this.billingCity= this.request.getParameter(BillingAddressData.CITY)
-this.billingState= this.request.getParameter(BillingAddressData.STATE)
-this.billingCode= this.request.getParameter(BillingAddressData.CODE)
-this.billingCountry= this.request.getParameter(BillingAddressData.COUNTRY)
-this.shippingName= this.request.getParameter(ShippingAddressData.NAME)
-this.shippingStreet= this.request.getParameter(ShippingAddressData.STREET)
-this.shippingCity= this.request.getParameter(ShippingAddressData.CITY)
-this.shippingState= this.request.getParameter(ShippingAddressData.STATE)
-this.shippingCode= this.request.getParameter(ShippingAddressData.CODE)
-this.shippingCountry= this.request.getParameter(ShippingAddressData.COUNTRY)
-this.shippingMethodName= this.request.getParameter(ShippingMethodData.NAME)
-this.subTotal= this.request.getParameter(OrderHistoryData.SUBTOTAL)
-this.shippingCost= this.request.getParameter(OrderHistoryData.SHIPPINGCOST)
-this.tax= this.request.getParameter(OrderHistoryData.TAX)
-this.total= this.request.getParameter(OrderHistoryData.TOTAL)
-this.special= this.request.getParameter(EntryData.getInstance()!!.SPECIAL)
-this.userComment= this.request.getParameter(OrderData.CUSTOMERCOMMENT)
-this.userCancelComment= this.request.getParameter(OrderData.CUSTOMERCANCELCOMMENT)
-this.storeComment= this.request.getParameter(OrderData.STORECOMMENT)
-this.storeCancelComment= this.request.getParameter(OrderData.STORECANCELCOMMENT)
+this.entryId= this.request.getParameter(EntryData.getInstance()!!.ID)!!
+this.orderId= this.request.getParameter(OrderData.ID)!!
+this.userName= this.request.getParameter(UserData.USERNAME)!!
+this.storeName= this.request.getParameter(StoreFrontData.getInstance()!!.NAME)!!
+this.shipDate= this.request.getParameter(OrderHistoryData.SHIPPEDDATE)!!
+this.orderDate= this.request.getParameter(OrderHistoryData.ORDERDATE)!!
+this.transDate= this.request.getParameter(OrderHistoryData.TRANSDATE)!!
+this.cancelDate= this.request.getParameter(OrderHistoryData.CANCELDATE)!!
+this.status= this.request.getParameter(OrderHistoryData.STATUS)!!
+this.paymentMethod= this.request.getParameter(PaymentData.METHOD)!!
+this.name= this.request.getParameter(PaymentData.NAME)!!
+this.type= this.request.getParameter(PaymentData.TYPE)!!
+this.expiration= this.request.getParameter(PaymentData.EXPIRATION)!!
+this.number= this.request.getParameter(PaymentData.NUMBER)!!
+this.encryption= this.request.getParameter(EntryData.getInstance()!!.ENCRYPTION)!!
+this.billingName= this.request.getParameter(BillingAddressData.NAME)!!
+this.billingStreet= this.request.getParameter(BillingAddressData.STREET)!!
+this.billingCity= this.request.getParameter(BillingAddressData.CITY)!!
+this.billingState= this.request.getParameter(BillingAddressData.STATE)!!
+this.billingCode= this.request.getParameter(BillingAddressData.CODE)!!
+this.billingCountry= this.request.getParameter(BillingAddressData.COUNTRY)!!
+this.shippingName= this.request.getParameter(ShippingAddressData.NAME)!!
+this.shippingStreet= this.request.getParameter(ShippingAddressData.STREET)!!
+this.shippingCity= this.request.getParameter(ShippingAddressData.CITY)!!
+this.shippingState= this.request.getParameter(ShippingAddressData.STATE)!!
+this.shippingCode= this.request.getParameter(ShippingAddressData.CODE)!!
+this.shippingCountry= this.request.getParameter(ShippingAddressData.COUNTRY)!!
+this.shippingMethodName= this.request.getParameter(ShippingMethodData.NAME)!!
+this.subTotal= this.request.getParameter(OrderHistoryData.SUBTOTAL)!!
+this.shippingCost= this.request.getParameter(OrderHistoryData.SHIPPINGCOST)!!
+this.tax= this.request.getParameter(OrderHistoryData.TAX)!!
+this.total= this.request.getParameter(OrderHistoryData.TOTAL)!!
+this.special= this.request.getParameter(EntryData.getInstance()!!.SPECIAL)!!
+this.userComment= this.request.getParameter(OrderData.CUSTOMERCOMMENT)!!
+this.userCancelComment= this.request.getParameter(OrderData.CUSTOMERCANCELCOMMENT)!!
+this.storeComment= this.request.getParameter(OrderData.STORECOMMENT)!!
+this.storeCancelComment= this.request.getParameter(OrderData.STORECANCELCOMMENT)!!
 }
 
 
@@ -234,8 +234,6 @@ OrderHistoryEntityFactory.getInstance()!!.update(whereHashMap, orderHashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -252,8 +250,6 @@ OrderHistoryEntityFactory.getInstance()!!.update(whereHashMap, orderHashMap)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

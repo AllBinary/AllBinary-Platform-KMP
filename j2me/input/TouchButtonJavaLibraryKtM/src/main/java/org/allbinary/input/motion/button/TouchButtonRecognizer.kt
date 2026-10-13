@@ -69,8 +69,8 @@ open public class TouchButtonRecognizer : Object {
                     1 downTo 0) {
 
                 nextTouchButtonInput =
-                    this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)
-                gameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()
+                    this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)!!
+                gameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
                 this.touchButtonRecognizer!!.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
                 this.touchButtonRecognizer!!
                     .upGameKeyEventHandler!!
@@ -111,11 +111,11 @@ open public class TouchButtonRecognizer : Object {
                     1 downTo 0) {
 
                 nextTouchButtonInput =
-                    this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)
+                    this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)!!
 
                 if (cancelTouchButtonInput == nextTouchButtonInput) {
 
-                    gameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()
+                    gameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
                     this.touchButtonRecognizer!!.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
                     this.touchButtonRecognizer!!
                         .upGameKeyEventHandler!!
@@ -192,8 +192,8 @@ open public class TouchButtonRecognizer : Object {
             for (index in list.size() - 1 downTo 0) {
 
                 touchButton = list.objectArray[index]!! as TouchButton
-                rectangle = touchButton!!.getRectangle()
-                point = rectangle.getPoint()
+                rectangle = touchButton!!.getRectangle()!!
+                point = rectangle.getPoint()!!
 
                 if (
                     this.rectangleCollisionUtil!!.isInside(
@@ -205,7 +205,7 @@ open public class TouchButtonRecognizer : Object {
                         y,
                     )
                 ) {
-                    touchButtonInput = touchButton!!.getTouchButtonInput()
+                    touchButtonInput = touchButton!!.getTouchButtonInput()!!
                     this.processRelease(touchButtonInput, deviceId)
 
                     // if statement needs to be on the same line and ternary does not work the same
@@ -248,8 +248,8 @@ open public class TouchButtonRecognizer : Object {
         for (index in list.size() - 1 downTo 0) {
 
             touchButton = list.objectArray[index]!! as TouchButton
-            rectangle = touchButton!!.getRectangle()
-            point = rectangle.getPoint()
+            rectangle = touchButton!!.getRectangle()!!
+            point = rectangle.getPoint()!!
 
             if (
                 this.rectangleCollisionUtil!!.isInside(
@@ -261,14 +261,14 @@ open public class TouchButtonRecognizer : Object {
                     y,
                 )
             ) {
-                touchButtonInput = touchButton!!.getTouchButtonInput()
+                touchButtonInput = touchButton!!.getTouchButtonInput()!!
 
                 if (!this.currentlyPressedTouchButtonSingleton!!.contains(touchButtonInput)) {
 
                     this.releaseHelper!!.release(touchButtonInput, deviceId)
                     this.lastPressedTouchButtonInput = touchButtonInput
                     this.currentlyPressedTouchButtonSingleton!!.add(touchButtonInput)
-                    gameKeyEvent = touchButtonInput!!.getGameKeyEvent()
+                    gameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
                     this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
                     this.downGameKeyEventHandler!!
                         .getInstanceForDevice(deviceId)!!

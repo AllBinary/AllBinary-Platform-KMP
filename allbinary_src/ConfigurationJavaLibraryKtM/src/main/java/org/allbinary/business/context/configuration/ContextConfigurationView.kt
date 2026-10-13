@@ -71,8 +71,6 @@ this.contextConfigurationInterface= contextConfigurationInterface
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.contextConfigurationInterface
 }
@@ -91,8 +89,6 @@ var document = document
     var emailServerConfigurationView: EmailServerConfigurationView = EmailServerConfigurationView(this.getContextConfigurationInterface()!!.getEmailServerConfigurationInterface())
 
 node.appendChild(emailServerConfigurationView!!.toXmlNode(document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node

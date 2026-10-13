@@ -261,7 +261,7 @@ open public class AbFile : Object, AbFileInterface {
     : Long {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return this.file.length()
+        return this.file.length().toLong()
     }
 
     @Throws(IOException::class)

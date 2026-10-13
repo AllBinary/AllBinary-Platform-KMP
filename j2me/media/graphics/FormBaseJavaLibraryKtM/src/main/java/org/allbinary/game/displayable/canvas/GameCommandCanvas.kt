@@ -134,7 +134,7 @@ open public class GameCommandCanvas :
 
         // For kotlin this is before the body of the constructor.
 
-        this.repaintBehavior = RepaintBehavior.getInstance()
+        this.repaintBehavior = RepaintBehavior.getInstance()!!
         this.foregroundBasicColor = foregroundBasicColor
         this.backgroundBasicColor = backgroundBasicColor
         this.foregroundColor = this.foregroundBasicColor!!.toInt()
@@ -166,9 +166,9 @@ open public class GameCommandCanvas :
                 StringMaker()
                     .append(this.commonStrings!!.START)!!
                     .append(this.canvasStrings!!.FD_WIDTH)!!
-                    .appendint(MyFontProcessor.defaultCharWidth(font))!!
+                    .appendint(MyFontProcessor.defaultCharWidth(font).toInt())!!
                     .append(this.canvasStrings!!.FD_HEIGHT)!!
-                    .appendint(font.getHeight())!!
+                    .appendint(font.getHeight().toInt())!!
                     .toString(),
                 this,
                 this.canvasStrings!!.UPDATE_MEASUREMENT,
@@ -188,7 +188,7 @@ open public class GameCommandCanvas :
             )
         }
 
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun onEvent(eventObject: AllBinaryEventObject)

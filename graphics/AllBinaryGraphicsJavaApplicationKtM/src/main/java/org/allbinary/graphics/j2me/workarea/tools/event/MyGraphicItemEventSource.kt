@@ -37,7 +37,7 @@ open public class MyGraphicItemEventSource
 
     private var treeNode: MutableTreeNode
 
-    private var angle: Double = 0
+    private var angle: Double = 0.0
 public constructor (command: String, treeNode: MutableTreeNode)
             : super()
         {
@@ -63,8 +63,6 @@ this.setAngle(angle)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.command
 }
@@ -74,8 +72,6 @@ this.setAngle(angle)
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.treeNode
 }
@@ -84,8 +80,6 @@ this.setAngle(angle)
     open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.angle

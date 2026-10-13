@@ -56,7 +56,7 @@ open public class Group : Object, GroupInterface {
         stringBuffer!!.append(this.name)
         stringBuffer!!.append(groupCommonFactory!!.ID_LABEL)
         stringBuffer!!.appendshort(this.teamId)
-        this.string = stringBuffer!!.toString()
+        this.string = stringBuffer!!.toString()!!
     }
 
     override fun getGroupId()

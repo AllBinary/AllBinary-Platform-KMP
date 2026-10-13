@@ -376,7 +376,9 @@ open public class WaypointRTSFormInput : RTSFormInput {
         for (index in list.size()!! - 1 downTo 0) {
 
             geographicMapCellType =
-                geographicMapInterface!!.getCellTypeAt(list.get(index) as GeographicMapCellPosition)
+                geographicMapInterface!!.getCellTypeAt(
+                    list.get(index) as GeographicMapCellPosition
+                )!!
 
             if (raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellType)) {
 
@@ -406,7 +408,7 @@ open public class WaypointRTSFormInput : RTSFormInput {
         stringBuffer!!.append(" for: $")
         stringBuffer!!.appendint(cost)
         stringBuffer!!.append(" with ")
-        stringBuffer!!.appendint(capital.getTotalMoney())
+        stringBuffer!!.appendint(capital.getTotalMoney().toInt())
         this.logUtil!!.putF(stringBuffer!!.toString(), this, "attemptBuild")
 
         if (cost <= capital.getTotalMoney()) {

@@ -80,8 +80,6 @@ AbeClassLoader.PATH= org.allbinary.globals.URLGLOBALS.getWebappPath() +"WEB-INF/
 : KClass<*>{
 var name = name
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeClassLoader.classes.get(name) as Class<*>
 }
@@ -94,8 +92,6 @@ var name = name
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
 var name = name
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.loadClass(name, false)
@@ -142,8 +138,6 @@ var resolve = resolve
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return normalClass
 
@@ -179,7 +173,7 @@ logBuffer!!.add(LogFactory.getInstanceF("NoClassDefFoundError Failed Loaded Clas
 
                                     }
                                 
-myClass= defineClass(name, classBytes, 0, classBytes!!.size)
+myClass= defineClass(name, classBytes, 0, classBytes!!.size)!!
 
     
                         if(myClass == 
@@ -205,8 +199,6 @@ AbeClassLoader.classes.put(name, myClass::class.java)
                             
 resolveClass(myClass::class.java)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return myClass
 } catch(e: Exception)
@@ -221,8 +213,6 @@ this.logUtil!!.put("Failure loading: " +name +"\nwith: " +loadedWith, this, this
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -249,8 +239,6 @@ var name = name
 in= FileInputStream(cname)
 
     var decrypted: ByteArray = this.abCryptUtil!!.decrypt(in, this.key)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -300,8 +288,6 @@ StreamUtil.getInstance()!!.close(in)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -344,8 +330,6 @@ var resolve = resolve
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return normalClass
 
@@ -406,7 +390,7 @@ loadedWith= "loadClassBytes"
 
                                     }
                                 
-myClass= defineClass(name, classBytes, 0, classBytes!!.size)
+myClass= defineClass(name, classBytes, 0, classBytes!!.size)!!
 
     
                         if(myClass == 
@@ -440,8 +424,6 @@ AbeClassLoader.classes.put(name, myClass::class.java)
                             
 resolveClass(myClass::class.java)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return myClass
 } catch(e: Exception)
@@ -455,8 +437,6 @@ resolveClass(myClass::class.java)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

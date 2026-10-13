@@ -87,7 +87,7 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
         this.logUtil!!.putF(
             StringMaker()
                 .append("RunnableCanvas delay: ")!!
-                .appendint(this.loopTimeHelper!!.delay)!!
+                .appendint(this.loopTimeHelper!!.delay.toInt())!!
                 .toString(),
             this,
             this.commonStrings!!.CONSTRUCTOR,
@@ -212,7 +212,7 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
         this.logUtil!!.putF(
             StringMaker()
                 .append("setWait - delay: ")!!
-                .appendint(this.loopTimeHelper!!.delay)!!
+                .appendint(this.loopTimeHelper!!.delay.toInt())!!
                 .toString(),
             this,
             this.commonStrings!!.CONSTRUCTOR,
@@ -230,7 +230,7 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
     open fun setCurrentThread()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.currentThread = Thread.currentThread()
+        this.currentThread = Thread.currentThread()!!
     }
 
     open fun setCurrentThreadFake()

@@ -100,8 +100,6 @@ stringBuffer!!.append(this.getTableName())
 stringBuffer!!.append(this.sqlStrings!!.START)
 stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(GroupData.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DynamicObjectData.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(entryData!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(entryData!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(entryData!!.ID)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -112,8 +110,6 @@ stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT
 : String{
 
     var returnStr: String = super.createTable(this.createTableStatement())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -132,8 +128,6 @@ super.updateWhere(EntryData.getInstance()!!.ID, updatedValues!!.get(EntryData.ge
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

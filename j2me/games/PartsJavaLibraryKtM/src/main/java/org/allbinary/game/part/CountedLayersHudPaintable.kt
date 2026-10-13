@@ -90,7 +90,7 @@ open public class CountedLayersHudPaintable : Object, PaintableInterface, Update
             CountedLayersHudPaintable.XXStringWidth = font.stringWidth(XXString)
         }
 
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun paint(graphics: Graphics)
@@ -125,14 +125,14 @@ open public class CountedLayersHudPaintable : Object, PaintableInterface, Update
             if (countedLayerInterfaceFactory!!.getTotal() > 0) {
 
                 pickedUpLayerInterfaceFactoryInterface =
-                    countedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()
-                layerInterface = pickedUpLayerInterfaceFactoryInterface!!.getIconLayer()
+                    countedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()!!
+                layerInterface = pickedUpLayerInterfaceFactoryInterface!!.getIconLayer()!!
                 y = 40 + (count * this.height)
                 layerInterface!!.setPosition(widthEdge, y, layerInterface!!.getZP())
                 layerInterface!!.paint(graphics)
                 graphics.setColor(this.countedTotalStringColor)
                 countedLayerInterfaceFactory!!.paint(graphics)
-                charArray = countedLayerInterfaceFactory!!.getTotalString()
+                charArray = countedLayerInterfaceFactory!!.getTotalString()!!
                 graphics.drawChars(
                     charArray,
                     0,

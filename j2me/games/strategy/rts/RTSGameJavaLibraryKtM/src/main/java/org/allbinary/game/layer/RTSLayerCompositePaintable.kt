@@ -47,7 +47,7 @@ open public class RTSLayerCompositePaintable : Paintable {
             this.setUpgradeCost(
                 StringMaker()
                     .append(this.UPGRADE)!!
-                    .appendint(rtsLayer!!.getUpgradeCost())!!
+                    .appendint(rtsLayer!!.getUpgradeCost().toInt())!!
                     .toString()
             )
         } else {
@@ -59,7 +59,7 @@ open public class RTSLayerCompositePaintable : Paintable {
             this.setDownGradeCost(
                 StringMaker()
                     .append(this.DOWNGRADE)!!
-                    .appendint(rtsLayer!!.getDowngradeCost())!!
+                    .appendint(rtsLayer!!.getDowngradeCost().toInt())!!
                     .toString()
             )
         } else {

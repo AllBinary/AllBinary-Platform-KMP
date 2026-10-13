@@ -97,7 +97,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 {
     //var filePathName = filePathName
     //var name = name
-this.newFile= AbFile.createAbFile(filePathName)
+this.newFile= AbFile.createAbFile(filePathName)!!
 }
 
 
@@ -133,8 +133,6 @@ idOutData!!.writeLong(this.id +1)
     var idLong: Long = this.id as Long
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return idLong!!.toString()
 } catch(e: Exception)
@@ -151,8 +149,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getNext", e)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error"

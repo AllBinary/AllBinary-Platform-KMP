@@ -97,15 +97,11 @@ var connectionInfo = connectionInfo
     var addr: InetAddress = InetAddress.getLocalHost()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return addr.getHostName()
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -142,8 +138,6 @@ this.sqlCommandLog!!.append(sqlStatement)
 this.sqlCommandLog!!.append(this.commonSeps!!.NEW_LINE)
 super.executeSQLStatement(sqlStatement)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -173,15 +167,11 @@ var password = password
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -203,15 +193,11 @@ this.sqlCommandLog!!.append(sqlStatement)
 this.sqlCommandLog!!.append(this.commonSeps!!.NEW_LINE)
 super.executeSQLStatement(sqlStatement)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

@@ -123,8 +123,6 @@ this.save(categoryInterface)
     var document: Document = DomDocumentHelper.create(cryptFileReader!!.get(fileAbPath))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 
@@ -158,8 +156,6 @@ this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDoc", e)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -181,8 +177,6 @@ var categoryInterface = categoryInterface
     var categoryNode: Node = DomSearchHelper.getNode(CategoryData.getInstance()!!.NAME, document.getChildNodes())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.addProperties(categoryInterface, categoryNode!!.getChildNodes())
 } catch(e: Exception)
@@ -196,8 +190,6 @@ var categoryInterface = categoryInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -220,8 +212,6 @@ var document = document
     var loadedCategoryInterface: CategoryInterface = this.categoryFactoryInterface!!.getRootInstanceFromNode(categoryNode)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.addProperties(loadedCategoryInterface, categoryNode!!.getChildNodes())
 } catch(e: Exception)
@@ -235,8 +225,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -256,8 +244,6 @@ var categoryInterface = categoryInterface
     var document: Document = this.getDoc(categoryInterface)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getAll(document)
 } catch(e: Exception)
@@ -271,8 +257,6 @@ var categoryInterface = categoryInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -295,8 +279,6 @@ var document = document
     var loadedCategoryInterface: CategoryInterface = this.categoryFactoryInterface!!.getRootInstanceFromNode(categoryNode)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.addProperties(loadedCategoryInterface, categoryNode!!.getChildNodes())
 } catch(e: Exception)
@@ -310,8 +292,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -365,8 +345,6 @@ parentCategoryInterface!!.addChild(categoryInterface)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return parentCategoryInterface
 } catch(e: Exception)
@@ -380,8 +358,6 @@ parentCategoryInterface!!.addChild(categoryInterface)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -435,8 +411,6 @@ loadedCategoryInterface!!.addChildProperty(categoryPropertiesInterface)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return loadedCategoryInterface
 } catch(e: Exception)
@@ -450,8 +424,6 @@ loadedCategoryInterface!!.addChildProperty(categoryPropertiesInterface)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

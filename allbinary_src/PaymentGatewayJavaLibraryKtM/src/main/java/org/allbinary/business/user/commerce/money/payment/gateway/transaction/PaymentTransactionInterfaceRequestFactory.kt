@@ -64,8 +64,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PaymentTransactionInterfaceRequestFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PaymentTransactionInterfaceRequestFactory.instance
 }
@@ -110,8 +108,6 @@ var transformInfoInterface = transformInfoInterface
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.generateFromTestData(transformInfoInterface)
 
@@ -156,8 +152,6 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
                                 
 
     var paymentTransactionInterface: PaymentTransactionInterface = PaymentTransactionInterfaceFactory.getInstance()!!.getInstance(orderReview)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -219,7 +213,7 @@ var transformInfoInterface = transformInfoInterface
                         if(StringValidationUtil.getInstance()!!.isEmpty(gatewayName))
                         
                                     {
-                                    gatewayName= httpServletRequest!!.getParameter(PaymentGatewayData.NAME.toString())
+                                    gatewayName= httpServletRequest!!.getParameter(PaymentGatewayData.NAME.toString())!!
 
                                     }
                                 
@@ -251,7 +245,7 @@ orderReview!!.setUserName("testing")
                         
                                     {
                                     orderId= OrderIdGenerator().
-                            getNext()
+                            getNext()!!
 orderReview!!.setId(orderId)
 
     var account: String = httpServletRequest!!.getParameter("account")!!
@@ -324,8 +318,6 @@ orderReview!!.setBillingAddress(streetAddress)
 orderReview!!.setPaymentInfo(payment)
 
     var paymentTransactionInterface: PaymentTransactionInterface = PaymentTransactionInterfaceFactory.getInstance()!!.getInstance(orderReview)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

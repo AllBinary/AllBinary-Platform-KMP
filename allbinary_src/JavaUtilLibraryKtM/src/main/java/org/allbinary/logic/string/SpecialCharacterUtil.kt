@@ -79,8 +79,6 @@ hashMap!!.put(AbPathData.getInstance()!!.SEPARATOR, stringUtil!!.EMPTY_STRING)
 hashMap!!.put("~", stringUtil!!.EMPTY_STRING)
 hashMap!!.put("`", stringUtil!!.EMPTY_STRING)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }

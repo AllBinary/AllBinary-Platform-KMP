@@ -50,8 +50,6 @@ var pageContext = pageContext
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AuthenticationHelper(hashMap, pageContext)
 } catch(e: Exception)
@@ -65,8 +63,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -85,8 +81,6 @@ var httpServletRequest = httpServletRequest
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AuthenticationHelper(hashMap, httpServletRequest)
 } catch(e: Exception)
@@ -100,8 +94,6 @@ var httpServletRequest = httpServletRequest
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

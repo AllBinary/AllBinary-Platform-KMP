@@ -25,8 +25,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FixedPoint{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FixedPoint.instance
 }
@@ -46,8 +44,6 @@ companion object {
 : Int{
 var val = val
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return (val *65536.0).toInt()
 }
@@ -57,8 +53,6 @@ var val = val
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var val = val
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return (val *65536.0f).toInt()
@@ -71,8 +65,6 @@ var val = val
 var a = a
 var b = b
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ((a.toLong() *b) shr 16).toInt()
 }
@@ -84,8 +76,6 @@ var b = b
 var a = a
 var b = b
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return (((a.toLong()) shl 16) /b).toInt()
 }
@@ -95,8 +85,6 @@ var b = b
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var fixed = fixed
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fixed shr 16

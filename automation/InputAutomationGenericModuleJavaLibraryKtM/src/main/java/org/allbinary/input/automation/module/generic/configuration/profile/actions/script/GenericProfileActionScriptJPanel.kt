@@ -69,8 +69,6 @@ this.logUtil!!.putF("Updated UI", this, "updateJTree")
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionScript{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileActionScript
 }
@@ -87,8 +85,6 @@ this.genericProfileActionScript= genericProfileActionScript
     open fun getActionScriptJTree()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTree{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.actionScriptJTree

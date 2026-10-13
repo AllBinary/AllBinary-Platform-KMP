@@ -50,8 +50,6 @@ var errorText = errorText
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstance()!!.TEXT, errorText))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)

@@ -56,7 +56,7 @@ var pageContext = pageContext
 
     var downloadableInventoryItemView: DownloadableInventoryItemView = inventoryItemViewParentTagHelper!!.getDownloadableInventoryItemView(inventoryTag)!!
 
-this.downloadableItem= downloadableInventoryItemView!!.getDownloadableItem()
+this.downloadableItem= downloadableInventoryItemView!!.getDownloadableItem()!!
 }
 
 
@@ -82,8 +82,6 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.in
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -100,8 +98,6 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.in
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -129,8 +125,6 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.in
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -147,8 +141,6 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.in
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -179,8 +171,6 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.up
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -197,8 +187,6 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.up
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

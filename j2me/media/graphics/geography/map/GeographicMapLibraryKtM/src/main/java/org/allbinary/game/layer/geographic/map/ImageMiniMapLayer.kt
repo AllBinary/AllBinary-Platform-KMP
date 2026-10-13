@@ -47,7 +47,7 @@ open public class ImageMiniMapLayer : MiniMapLayer {
 
         var aHeight: Int = this.allBinaryTiledLayer!!.getHeight()
 
-        this.image = PaintableToImageUtil.getImage(this.allBinaryTiledLayer, aWidth, aHeight)
+        this.image = PaintableToImageUtil.getImage(this.allBinaryTiledLayer, aWidth, aHeight)!!
     }
 
     private var anchor: Int = Anchor.TOP_LEFT

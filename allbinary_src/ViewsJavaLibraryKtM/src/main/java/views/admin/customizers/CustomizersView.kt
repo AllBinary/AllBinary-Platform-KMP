@@ -65,7 +65,7 @@ var transformInfoInterface = transformInfoInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this.getWeblisketSession()!!.getStoreName())
+this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this.getWeblisketSession()!!.getStoreName())!!
 }
 
 
@@ -126,8 +126,6 @@ node.appendChild(viewNameNode)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -141,8 +139,6 @@ node.appendChild(viewNameNode)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -166,8 +162,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

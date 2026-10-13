@@ -36,8 +36,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : MediaUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MediaUtil.instance
 }
@@ -76,8 +74,6 @@ hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -196,9 +192,9 @@ stringBuffer!!.appendint(newWidth)
 stringBuffer!!.append("\nNew")!!.append(commonLabels!!.HEIGHT_LABEL)
 stringBuffer!!.appendint(newHeight)
 stringBuffer!!.append("\nFile Length: ")
-stringBuffer!!.appendlong(originalImageFile!!.length())
+stringBuffer!!.appendlong(originalImageFile!!.length().toLong())
 stringBuffer!!.append("\nNew File Length: ")
-stringBuffer!!.appendlong(imageFile!!.length())
+stringBuffer!!.appendlong(imageFile!!.length().toLong())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "saveImageFile()")
 
                                     }

@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImagesRatioUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImagesRatioUtil.instance
 }
@@ -89,16 +87,12 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,7 +106,7 @@ private constructor ()
     //var bufferedImageArray = bufferedImageArray
     //var totalImages = totalImages
 
-    var ratio: Double = 0
+    var ratio: Double = 0.0
 
 
     var end: Int = totalImages
@@ -130,8 +124,6 @@ private constructor ()
         {
 ratio += (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[index]!!.getHeight())
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -243,8 +235,6 @@ g.drawImage(lastRowBufferedImage, 0, newHeight -index,
 g.drawImage(bufferedImage, point.x, point.y, bufferedImage!!.getWidth(), bufferedImage!!.getHeight(), 
                             null)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newBufferedImage
 }
@@ -275,10 +265,8 @@ g.drawImage(bufferedImage, point.x, point.y, bufferedImage!!.getWidth(), buffere
                         for (index in 0 until end)
 
         {
-fudgedBufferedImageArray[index]= fudge(bufferedImageArray[index]!!, ratio)
+fudgedBufferedImageArray[index]= fudge(bufferedImageArray[index]!!, ratio)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

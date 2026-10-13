@@ -111,8 +111,6 @@ this.contentType= value
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeFront
 }
@@ -121,8 +119,6 @@ this.contentType= value
     open fun getParams()
         //nullable = true from not(false or (false and true)) = true
 : SearchParams{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.searchParams
@@ -133,8 +129,6 @@ this.contentType= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.xslFile
 }
@@ -144,8 +138,6 @@ this.contentType= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.pageName
 }
@@ -154,8 +146,6 @@ this.contentType= value
     open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.contentType
@@ -168,8 +158,6 @@ this.contentType= value
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueNodes(document, SearchData.FILENAME, this.getFileBaseName())

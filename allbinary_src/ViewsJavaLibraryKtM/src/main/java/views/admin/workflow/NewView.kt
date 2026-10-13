@@ -66,8 +66,6 @@ this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeC
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -81,8 +79,6 @@ this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeC
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -101,8 +97,6 @@ this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeC
 
 stringBuffer!!.append("Please Contact Administrator")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -117,8 +111,6 @@ stringBuffer!!.append("Please Contact Administrator")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -130,8 +122,6 @@ stringBuffer!!.append("Please Contact Administrator")
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -141,8 +131,6 @@ stringBuffer!!.append("Please Contact Administrator")
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FileLockUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileLockUtil.instance
 }
@@ -108,8 +106,6 @@ fileLockVector!!.add(fileLock)
                                     {
                                     this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size(), this, "getAll")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLockVector
 
@@ -118,8 +114,6 @@ fileLockVector!!.add(fileLock)
 }
 
 this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size(), this, "getAll")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLockVector
@@ -132,8 +126,6 @@ this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size(), this, "ge
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var vector = vector
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getAll(vector, false)
@@ -155,8 +147,6 @@ var vector = vector
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicArrayListD()
 
@@ -164,8 +154,6 @@ var vector = vector
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLockVector
 
@@ -183,15 +171,11 @@ var file = file
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getLock(AbFileOutputStream.createFromAbFileAppend(file, true))
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception returns null", this, "getLock", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -216,15 +200,11 @@ var fileOutputStream = fileOutputStream
     var fileLock: FileLock = this.getLock(fileOutputStream!!.getChannel())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLock
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception returns null", this, "getLock", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -251,15 +231,11 @@ var fileChannel = fileChannel
     var fileLock: FileLock = fileChannel!!.tryLock()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLock
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception returns null", this, "getLock", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

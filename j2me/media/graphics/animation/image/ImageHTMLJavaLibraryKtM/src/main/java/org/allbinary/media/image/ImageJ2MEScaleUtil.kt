@@ -40,8 +40,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageJ2MEScaleUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageJ2MEScaleUtil.instance
 }
@@ -72,10 +70,8 @@ var height = height
                         for (index in images.size  - 1  downTo 0)
 
         {
-scaledImages[index]= this.scale(images[index]!!, width, height)
+scaledImages[index]= this.scale(images[index]!!, width, height)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,8 +87,6 @@ scaledImages[index]= this.scale(images[index]!!, width, height)
 var image = image
 var width = width
 var height = height
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image

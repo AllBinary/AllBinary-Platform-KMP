@@ -45,8 +45,6 @@ companion object {
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UrlGlobalsView() as DomNodeInterface
 } catch(e: Exception)
@@ -63,8 +61,6 @@ companion object {
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

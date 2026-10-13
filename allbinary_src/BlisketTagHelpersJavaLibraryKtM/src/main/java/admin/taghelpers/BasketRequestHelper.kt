@@ -78,7 +78,7 @@ this.request= pageContext!!.getRequest() as HttpServletRequest
                                 )
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 
                                     }
                                 
@@ -95,8 +95,8 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(basicItemData!!.ID)
-this.num= this.request.getParameter(BasketData.ITEMTOTALINBASKET)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
+this.num= this.request.getParameter(BasketData.ITEMTOTALINBASKET)!!
 }
 
 
@@ -125,8 +125,6 @@ this.num= this.request.getParameter(BasketData.ITEMTOTALINBASKET)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -146,8 +144,6 @@ basket.addItem(this.id, num)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -161,8 +157,6 @@ basket.addItem(this.id, num)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -200,8 +194,6 @@ basket.removeItem(this.id)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -215,8 +207,6 @@ basket.removeItem(this.id)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -251,8 +241,6 @@ basket.removeItem(this.id)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -266,8 +254,6 @@ basket.removeItem(this.id)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

@@ -40,8 +40,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : HttpRequestUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HttpRequestUtil.instance
 }
@@ -71,8 +69,6 @@ var requestPath = requestPath
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return beginIndex
 }
@@ -93,8 +89,6 @@ var requestPath = requestPath
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return requestPath
 
@@ -102,8 +96,6 @@ var requestPath = requestPath
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return requestPath!!.substring(beginIndex +1)
 

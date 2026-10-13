@@ -96,19 +96,19 @@ var orderHistory = orderHistory
 
                             //For kotlin this is before the body of the constructor.
                     
-this.userName= orderHistory!!.getUserName()
-this.shippingAddress= orderHistory!!.getShippingAddress()
-this.billingAddress= orderHistory!!.getBillingAddress()
-this.payment= orderHistory!!.getPaymentInfo()
-this.shipDate= orderHistory!!.getShipDate()
-this.orderDate= orderHistory!!.getOrderDate()
-this.transDate= orderHistory!!.getTransDate()
-this.cancelDate= orderHistory!!.getCancelDate()
-this.status= orderHistory!!.getStatus()
-this.subTotal= orderHistory!!.getSubTotal()
-this.shippingCost= orderHistory!!.getShippingCost()
-this.taxes= orderHistory!!.getTaxes()
-this.total= orderHistory!!.getTotal()
+this.userName= orderHistory!!.getUserName()!!
+this.shippingAddress= orderHistory!!.getShippingAddress()!!
+this.billingAddress= orderHistory!!.getBillingAddress()!!
+this.payment= orderHistory!!.getPaymentInfo()!!
+this.shipDate= orderHistory!!.getShipDate()!!
+this.orderDate= orderHistory!!.getOrderDate()!!
+this.transDate= orderHistory!!.getTransDate()!!
+this.cancelDate= orderHistory!!.getCancelDate()!!
+this.status= orderHistory!!.getStatus()!!
+this.subTotal= orderHistory!!.getSubTotal()!!
+this.shippingCost= orderHistory!!.getShippingCost()!!
+this.taxes= orderHistory!!.getTaxes()!!
+this.total= orderHistory!!.getTotal()!!
 super.setUserComments(orderHistory!!.getUserComments() as String)
 super.setUserCancelComments(orderHistory!!.getUserCancelComments() as String)
 super.setStoreComments(orderHistory!!.getStoreComments() as String)
@@ -252,8 +252,6 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
 }
@@ -262,8 +260,6 @@ this.total= value
     open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingAddress
@@ -274,8 +270,6 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.billingAddress
 }
@@ -284,8 +278,6 @@ this.total= value
     open fun getPaymentInfo()
         //nullable = true from not(false or (false and true)) = true
 : Payment{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.payment
@@ -296,8 +288,6 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shipDate
 }
@@ -306,8 +296,6 @@ this.total= value
     open fun getOrderDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.orderDate
@@ -318,8 +306,6 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transDate
 }
@@ -328,8 +314,6 @@ this.total= value
     open fun getCancelDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cancelDate
@@ -340,8 +324,6 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.status
 }
@@ -350,8 +332,6 @@ this.total= value
     open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.subTotal
@@ -362,8 +342,6 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingCost
 }
@@ -373,8 +351,6 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.taxes
 }
@@ -383,8 +359,6 @@ this.total= value
     open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.total
@@ -419,8 +393,6 @@ hashMap!!.put(OrderHistoryData.SUBTOTAL, this.subTotal!!.toString())
 hashMap!!.put(OrderHistoryData.TOTAL, this.total.toString())
 hashMap!!.put(OrderHistoryData.SHIPPINGCOST, this.shippingCost!!.toString())
 hashMap!!.put(OrderHistoryData.TAX, this.taxes.toString())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -474,11 +446,9 @@ node.appendChild(this.payment.toXmlNode(document))
 
     var value: String = hashMap!!.get(name as Object) as String
 
-value= StringUtil.getInstance()!!.getNonNull(value)
+value= StringUtil.getInstance()!!.getNonNull(value)!!
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

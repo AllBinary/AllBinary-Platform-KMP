@@ -194,8 +194,6 @@ this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -204,8 +202,6 @@ this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type
     open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.objectFile
@@ -220,15 +216,11 @@ this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 } catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

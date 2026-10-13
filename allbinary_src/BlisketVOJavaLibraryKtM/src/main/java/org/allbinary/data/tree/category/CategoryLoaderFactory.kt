@@ -46,8 +46,6 @@ var categoryFactoryInterface = categoryFactoryInterface
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CategoryLoader(categoryFactoryInterface)
 } catch(e: Exception)
@@ -64,8 +62,6 @@ var categoryFactoryInterface = categoryFactoryInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

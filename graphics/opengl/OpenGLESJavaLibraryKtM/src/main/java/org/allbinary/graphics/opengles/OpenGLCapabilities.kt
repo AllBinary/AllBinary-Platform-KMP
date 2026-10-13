@@ -57,8 +57,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OpenGLCapabilities{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLCapabilities.instance
 }
@@ -135,8 +133,6 @@ private constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.initialized
 }
@@ -169,11 +165,11 @@ var gl = gl
 
     var stringBuffer: StringMaker = StringMaker()
 
-this.glVersionString= gl.glGetString(GL10.GL_VERSION)
+this.glVersionString= gl.glGetString(GL10.GL_VERSION)!!
 
     var GL_SHADING_LANGUAGE_VERSION: Int = 0x8b8c
 
-this.glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
+this.glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)!!
 
     
                         if(this.glShaderVersionString == 
@@ -202,7 +198,7 @@ this.glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
                         if(startIndex >= 0)
                         
                                     {
-                                    this.glShaderVersionString= this.glShaderVersionString!!.substring(startIndex +1)
+                                    this.glShaderVersionString= this.glShaderVersionString!!.substring(startIndex +1)!!
 
                                     }
                                 
@@ -219,9 +215,9 @@ this.shaderVersion= this.glShaderVersionString!!.replace(CommonSeps.getInstance(
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
-this.glRenderer= gl.glGetString(GL10.GL_RENDERER)
-this.glVendor= gl.glGetString(GL10.GL_VENDOR)
-this.glExtensions= gl.glGetString(GL10.GL_EXTENSIONS)
+this.glRenderer= gl.glGetString(GL10.GL_RENDERER)!!
+this.glVendor= gl.glGetString(GL10.GL_VENDOR)!!
+this.glExtensions= gl.glGetString(GL10.GL_EXTENSIONS)!!
 
     
                         if(this.glExtensions!!.indexOf(this.GL_EXT_GPU_SHADER_100) >= 0)
@@ -455,8 +451,6 @@ var gameFeature = gameFeature
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -464,8 +458,6 @@ var gameFeature = gameFeature
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -479,8 +471,6 @@ var gameFeature = gameFeature
 : Boolean{
 this.requireInitialization()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glExtensionDrawTexture
 }
@@ -489,8 +479,6 @@ this.requireInitialization()
     open fun isGlExtensionGPUShader100()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glExtensionGPUShader100
@@ -502,8 +490,6 @@ this.requireInitialization()
 : Boolean{
 this.requireInitialization()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glExtensionGPUShader4
 }
@@ -513,8 +499,6 @@ this.requireInitialization()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.requireInitialization()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glVersion
@@ -526,8 +510,6 @@ this.requireInitialization()
 : String{
 this.requireInitialization()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glVersionString
 }
@@ -537,8 +519,6 @@ this.requireInitialization()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.requireInitialization()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glShaderVersionString
@@ -550,8 +530,6 @@ this.requireInitialization()
 : Boolean{
 this.requireInitialization()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glThreedDrawTexture
 }
@@ -562,8 +540,6 @@ this.requireInitialization()
 : String{
 this.requireInitialization()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.glRenderer
 }
@@ -573,8 +549,6 @@ this.requireInitialization()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 this.requireInitialization()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.vertexBufferObjectSupport
@@ -592,15 +566,11 @@ this.requireInitialization()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -664,8 +634,6 @@ stringBuffer!!.append(this.stringUtil!!.toString(list.objectArray[index]!!))
 
 PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

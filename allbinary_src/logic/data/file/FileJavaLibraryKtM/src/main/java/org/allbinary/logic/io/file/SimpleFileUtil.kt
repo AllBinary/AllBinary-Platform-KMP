@@ -304,7 +304,7 @@ open public class SimpleFileUtil : Object {
 
             var outputStream2: ByteArrayOutputStream = ByteArrayOutputStream(max)
 
-            byteArray = this.streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1)
+            byteArray = this.streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1)!!
             this.streamUtil!!.close(inputStream)
         } catch (e: Exception) {
             this.streamUtil!!.close(inputStream)

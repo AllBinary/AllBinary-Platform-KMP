@@ -95,7 +95,7 @@ open public class FlockingAI : BasicAI {
 
             if (farAllbinaryLayer != AllBinaryLayer.NULL_ALLBINARY_LAYER) {
 
-                ownerLayerInterface = this.getOwnerLayerInterface()
+                ownerLayerInterface = this.getOwnerLayerInterface()!!
 
                 if (farAllbinaryLayer!!.getXP() < ownerLayerInterface!!.getXP()) {
 

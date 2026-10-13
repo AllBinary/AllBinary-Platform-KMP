@@ -57,8 +57,6 @@ hashMap!!.put(EmailServerConfigurationData.SERVER, this.emailServerConfiguration
 hashMap!!.put(EmailServerConfigurationData.ACCOUNT, this.emailServerConfigurationInterface!!.getAccountName())
 hashMap!!.put(EmailServerConfigurationData.PASSWORD, this.emailServerConfigurationInterface!!.getPassword())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -69,8 +67,6 @@ hashMap!!.put(EmailServerConfigurationData.PASSWORD, this.emailServerConfigurati
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EmailServerConfigurationData.NAME
@@ -86,8 +82,6 @@ hashMap!!.put(EmailServerConfigurationData.PASSWORD, this.emailServerConfigurati
     var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(this.emailServerConfigurationInterface!!.getSmtpServer())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector

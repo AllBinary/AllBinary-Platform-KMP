@@ -85,8 +85,8 @@ open public class AnimationFactorySpriteScaleUtil : Object {
 
             if ((scaleX == 1.0f && scaleY == 1.0f) || (scaleX == 0.0f || scaleY == 0.0f)) {
 
-                scaledImage = this.openGLUtil!!.addImage(image)
-                sprite = spriteFactory!!.createSprite(scaledImage, width, height)
+                scaledImage = this.openGLUtil!!.addImage(image)!!
+                sprite = spriteFactory!!.createSprite(scaledImage, width, height)!!
             } else {
 
                 if (this.openGLESImageExclusionUtil!!.isCustomScaling(image)) {
@@ -127,17 +127,17 @@ open public class AnimationFactorySpriteScaleUtil : Object {
                         scaleY,
                         1.0f,
                         true,
-                    )
+                    )!!
                 sprite =
                     spriteFactory!!.createSprite(
                         scaledImage,
                         (width * scaleX).toInt(),
                         (height * scaleY).toInt(),
-                    )
+                    )!!
             }
         } else {
-            scaledImage = this.openGLUtil!!.addImage(image)
-            sprite = spriteFactory!!.createSprite(scaledImage, width, height)
+            scaledImage = this.openGLUtil!!.addImage(image)!!
+            sprite = spriteFactory!!.createSprite(scaledImage, width, height)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

@@ -72,7 +72,7 @@ this.getAddressForm()
     open fun getAddressForm()
         //nullable = true from not(false or (false and true)) = true
 {
-this.userName= this.request.getParameter(UserData.USERNAME)
+this.userName= this.request.getParameter(UserData.USERNAME)!!
 
     
                         if(this.userName == 
@@ -80,7 +80,7 @@ this.userName= this.request.getParameter(UserData.USERNAME)
                                 )
                         
                                     {
-                                    this.userName= this.request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)
+                                    this.userName= this.request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
 
                                     }
                                 
@@ -107,8 +107,6 @@ this.streetAddress= StreetAddress(this.request)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -125,8 +123,6 @@ this.streetAddress= StreetAddress(this.request)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -154,8 +150,6 @@ this.streetAddress= StreetAddress(this.request)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -172,8 +166,6 @@ this.streetAddress= StreetAddress(this.request)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -206,8 +198,6 @@ this.streetAddress= StreetAddress(this.request)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -224,8 +214,6 @@ this.streetAddress= StreetAddress(this.request)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -255,8 +243,6 @@ this.streetAddress= StreetAddress(this.request)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -273,8 +259,6 @@ this.streetAddress= StreetAddress(this.request)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -302,8 +286,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -320,8 +302,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -349,8 +329,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -367,8 +345,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -401,15 +377,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "No Shipping Address"
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
@@ -427,8 +399,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -456,8 +426,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -474,8 +442,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -503,8 +469,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -521,8 +485,6 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

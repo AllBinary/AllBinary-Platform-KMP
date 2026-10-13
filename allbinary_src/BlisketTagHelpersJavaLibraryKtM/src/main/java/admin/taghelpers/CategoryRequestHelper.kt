@@ -179,7 +179,7 @@ this.setCategoryLoader(requestNode)
 
 this.categoryInterface= StoreCategoryFactory(this.transformInfoInterface).
                             getRootInstanceFromNode(categoryNode) as CategoryInterface
-this.categoryInterface= this.categoryLoaderInterface!!.get(this.categoryInterface)
+this.categoryInterface= this.categoryLoaderInterface!!.get(this.categoryInterface)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
@@ -295,7 +295,7 @@ this.transformInfoInterface= TransformInfoBasic(storeFrontInterface, this.hashMa
 
     var storeCategoryFactory: StoreCategoryFactory = StoreCategoryFactory(this.transformInfoInterface)
 
-this.categoryLoaderInterface= CategoryLoaderFactory.getInstance(storeCategoryFactory)
+this.categoryLoaderInterface= CategoryLoaderFactory.getInstance(storeCategoryFactory)!!
 
                                     }
                                 
@@ -341,8 +341,6 @@ this.categoryLoaderInterface!!.insert(this.categoryInterface, this.childCategory
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -359,8 +357,6 @@ this.categoryLoaderInterface!!.insert(this.categoryInterface, this.childCategory
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -397,8 +393,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -418,8 +412,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 } catch(e2: Exception)
@@ -436,8 +428,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -470,8 +460,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return xmlString
 } catch(e: Exception)
@@ -488,8 +476,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -516,8 +502,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -534,8 +518,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -562,8 +544,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -580,8 +560,6 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

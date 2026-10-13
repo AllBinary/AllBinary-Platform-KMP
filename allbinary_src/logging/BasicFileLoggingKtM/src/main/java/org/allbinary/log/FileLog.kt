@@ -99,15 +99,11 @@ FileLog.fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
     var canWrite: Boolean = FileLog.logFile!!.canWrite()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return canWrite
 } catch(e: Exception)
             {
 System.out.println("Error Creating Log: " +e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -144,7 +140,9 @@ FileLog.logFileBak= File(logPath, stringMaker!!.append(backupFileName)!!.append(
     var tmpIn: BufferedReader = BufferedReader(FileReader(logFile))
 
 
-        while((line= tmpIn!!.readLine()) != 
+        while((
+                        { line= tmpIn!!.readLine()!!; line }()
+                    ) != 
                                     null
                                 )
         {
@@ -157,15 +155,11 @@ tmpOut!!.close()
 tmpIn!!.close()
 FileLog.logFile!!.delete()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 System.out.println("Error Creating Backup: " +e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -181,8 +175,6 @@ System.out.println("Error Creating Backup: " +e)
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileLog.put(specialMessage, anyType, functionName, 
@@ -212,8 +204,6 @@ var exception = exception
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ""
 
@@ -223,7 +213,7 @@ var exception = exception
                                     }
                                 
 
-    var length: Long = FileLog.logFile!!.length()
+    var length: Long = FileLog.logFile!!.length().toLong()
 
 
     
@@ -236,8 +226,6 @@ var exception = exception
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ""
 
@@ -275,14 +263,10 @@ FileLog.fileOut!!.write(message, 0, message.length)
 FileLog.fileOut!!.newLine()
 FileLog.fileOut!!.flush()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return .toCharArray()
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return .toCharArray()
@@ -298,8 +282,6 @@ FileLog.fileOut!!.flush()
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileLog.put(specialMessage, className, functionName, 
@@ -329,8 +311,6 @@ var functionName = functionName
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ""
 
@@ -340,7 +320,7 @@ var functionName = functionName
                                     }
                                 
 
-    var length: Long = FileLog.logFile!!.length()
+    var length: Long = FileLog.logFile!!.length().toLong()
 
 
     
@@ -353,8 +333,6 @@ var functionName = functionName
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ""
 
@@ -382,14 +360,10 @@ FileLog.fileOut!!.write(message, 0, message.length)
 FileLog.fileOut!!.newLine()
 FileLog.fileOut!!.flush()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return .toCharArray()
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return .toCharArray()
@@ -401,8 +375,6 @@ FileLog.fileOut!!.flush()
     open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileLog.logPath +FileLog.fileName

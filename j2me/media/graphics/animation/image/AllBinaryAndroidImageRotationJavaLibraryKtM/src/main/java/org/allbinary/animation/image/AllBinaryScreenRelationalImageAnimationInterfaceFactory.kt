@@ -56,7 +56,7 @@ open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory :
                 scale,
                 scale,
                 false,
-            )
+            )!!
     }
 
     @Throws(Exception::class)

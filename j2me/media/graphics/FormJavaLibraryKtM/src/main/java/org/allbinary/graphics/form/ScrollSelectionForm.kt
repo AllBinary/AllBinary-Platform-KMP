@@ -417,7 +417,7 @@ open public class ScrollSelectionForm : PaintableForm {
         this.buttonBasicColor = foregroundBasicColor
         this.border = border
         this.halfBorder = (border shr 1)
-        this.paintable = formPaintableFactory!!.getInstanceItemPaintable(this)
+        this.paintable = formPaintableFactory!!.getInstanceItemPaintable(this)!!
     }
 
     @Throws(Exception::class)
@@ -669,7 +669,7 @@ open public class ScrollSelectionForm : PaintableForm {
 
         for (index in start until size) {
 
-            item = this.get(index)
+            item = this.get(index)!!
             width = item.getMinimumWidth()
             height = item.getMinimumHeight()
             diffX = this.formTypeItemIndexDx!!.getDx(index, item, dx, dy)

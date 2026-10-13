@@ -78,8 +78,6 @@ var stream = stream
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
 }
@@ -88,8 +86,6 @@ var stream = stream
     override fun getMicrosecondLength()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
@@ -153,8 +149,6 @@ var count = count
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -163,8 +157,6 @@ var count = count
     override fun isActive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -175,8 +167,6 @@ var count = count
         //nullable = true from not(false or (false and true)) = true
 : AudioFormat{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullAudioFormat.NULL_AUDIO_FORMAT
 }
@@ -185,8 +175,6 @@ var count = count
     override fun getBufferSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
@@ -197,8 +185,6 @@ var count = count
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
 }
@@ -207,8 +193,6 @@ var count = count
     override fun getFramePosition()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
@@ -219,8 +203,6 @@ var count = count
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0L
 }
@@ -229,8 +211,6 @@ var count = count
     override fun getMicrosecondPosition()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0L
@@ -241,8 +221,6 @@ var count = count
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0.0f
 }
@@ -251,8 +229,6 @@ var count = count
     override fun getLineInfo()
         //nullable = true from not(false or (false and true)) = true
 : Info{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Info(this::class, NullAudioFormat.NULL_AUDIO_FORMAT)
@@ -277,8 +253,6 @@ var count = count
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -287,8 +261,6 @@ var count = count
     override fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return arrayOfNulls(0)
@@ -300,8 +272,6 @@ var count = count
 : Boolean{
 var control = control
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -311,8 +281,6 @@ var control = control
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var control = control
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullClip.NULL_CONTROL

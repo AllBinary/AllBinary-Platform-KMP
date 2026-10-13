@@ -46,8 +46,6 @@ var searchRequest = searchRequest
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return views.admin.inventory.listings.ProductListing(searchRequest) as ProductListingInterface
 } catch(e: Exception)
@@ -64,8 +62,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "ProductListingFactory", commonStrings!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

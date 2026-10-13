@@ -58,8 +58,6 @@ this.emailInfo= emailInfo
         //nullable = true from not(false or (false and true)) = true
 : EmailInfo{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.emailInfo
 }
@@ -68,8 +66,6 @@ this.emailInfo= emailInfo
     open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.attempts
@@ -96,8 +92,6 @@ stringBuffer!!.append(this.userEmailEventNameData!!.toString())
 stringBuffer!!.append(this.getEmailInfo()!!.toString())
 stringBuffer!!.append("\nNumber of Attempts: ")
 stringBuffer!!.appendint(this.getAttempts())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

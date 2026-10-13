@@ -283,6 +283,6 @@ open public class VectorAnimation : IndexedAnimation, VectorAnimationInterface {
     {
         var currentPoints = currentPoints
         this.currentPoints = currentPoints
-        this.circularIndexUtil = CircularIndexUtil.createInstance(currentPoints!!.size)
+        this.circularIndexUtil = CircularIndexUtil.createInstance(currentPoints!!.size)!!
     }
 }

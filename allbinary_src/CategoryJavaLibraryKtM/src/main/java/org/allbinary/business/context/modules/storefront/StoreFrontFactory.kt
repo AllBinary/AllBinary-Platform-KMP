@@ -50,8 +50,6 @@ companion object {
     var storeFronts: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return storeFronts!!.getStoreFrontInterface(storeName)
 } catch(e: Exception)
@@ -68,8 +66,6 @@ companion object {
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

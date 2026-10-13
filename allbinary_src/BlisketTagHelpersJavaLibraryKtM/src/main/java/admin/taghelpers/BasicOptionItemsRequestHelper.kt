@@ -78,10 +78,10 @@ this.getFormData()
 {
 this.optionItem= BasicArrayListD()
 this.optionValue= BasicArrayListD()
-this.id= this.request.getParameter(basicItemData!!.ID)
-this.optionOneTitle= this.request.getParameter(BasicOptionItemData.OPTION_ONE_TITLE)
-this.defaultOptionItem= this.request.getParameter(BasicOptionItemData.DEFAULT_OPTION_ITEM)
-this.defaultOptionValue= this.request.getParameter(BasicOptionItemData.DEFAULT_OPTION_VALUE)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
+this.optionOneTitle= this.request.getParameter(BasicOptionItemData.OPTION_ONE_TITLE)!!
+this.defaultOptionItem= this.request.getParameter(BasicOptionItemData.DEFAULT_OPTION_ITEM)!!
+this.defaultOptionValue= this.request.getParameter(BasicOptionItemData.DEFAULT_OPTION_VALUE)!!
 this.optionItem!!.add(this.request.getParameter(BasicOptionItemData.OPTION_ONE_ONE_ITEM))
 this.optionValue!!.add(this.request.getParameter(BasicOptionItemData.OPTION_ONE_ONE_VALUE))
 this.optionItem!!.add(this.request.getParameter(BasicOptionItemData.OPTION_ONE_TWO_ITEM))
@@ -100,8 +100,8 @@ this.optionItem!!.add(this.request.getParameter(BasicOptionItemData.OPTION_ONE_E
 this.optionValue!!.add(this.request.getParameter(BasicOptionItemData.OPTION_ONE_EIGHT_VALUE))
 this.optionItem!!.add(this.request.getParameter(BasicOptionItemData.OPTION_ONE_NINE_ITEM))
 this.optionValue!!.add(this.request.getParameter(BasicOptionItemData.OPTION_ONE_NINE_VALUE))
-this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)!!
+this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)!!
 }
 
 
@@ -139,8 +139,6 @@ values.put(BasicOptionItemData.OPTION_ONE_NINE_VALUE, this.optionValue!!.get(8))
                                 
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -194,8 +192,6 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -212,8 +208,6 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -241,8 +235,6 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -259,8 +251,6 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -292,8 +282,6 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -310,8 +298,6 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

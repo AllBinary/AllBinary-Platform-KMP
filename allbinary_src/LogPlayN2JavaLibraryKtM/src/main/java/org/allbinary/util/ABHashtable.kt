@@ -49,8 +49,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.size()
 }
@@ -60,8 +58,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.isEmpty()
 }
@@ -70,8 +66,6 @@ public constructor ()
     override fun elements()
         //nullable = true from not(false or (false and true)) = true
 : Enumeration<V>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.elements()
@@ -83,8 +77,6 @@ public constructor ()
 : Boolean{
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.contains(value)
 }
@@ -94,8 +86,6 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.containsValue(value)
@@ -107,8 +97,6 @@ var value = value
 : Boolean{
 var key = key
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.containsKey(key)
 }
@@ -118,8 +106,6 @@ var key = key
         //nullable = true from not(false or (false and false)) = true
 : V{
 var key = key
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.get(key)
@@ -137,8 +123,6 @@ super.clear()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.clone()
 }
@@ -147,8 +131,6 @@ super.clear()
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.toString()
@@ -160,8 +142,6 @@ super.clear()
 : Boolean{
 var obj = obj
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.equals(obj)
 }
@@ -170,8 +150,6 @@ var obj = obj
     override fun hashCode()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.hashCode()

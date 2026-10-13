@@ -71,8 +71,6 @@ var document = document
     var advertisementAreaInterface: AdvertisementAreaInterface = advertisementAreasEntityInterface!!.get(this.getTransformInfoInterface()!!.getStoreName(), this.advertisementAreaName)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
@@ -110,8 +108,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

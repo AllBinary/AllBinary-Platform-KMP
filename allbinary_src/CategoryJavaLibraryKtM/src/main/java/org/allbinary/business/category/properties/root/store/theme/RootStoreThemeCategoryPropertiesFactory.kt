@@ -82,8 +82,6 @@ this.categoryPropertiesInterface= RootStoreThemeCategoryProperties(transformInfo
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPropertiesInterface as CategoryPropertiesInterface
 } catch(e: Exception)
@@ -100,8 +98,6 @@ this.categoryPropertiesInterface= RootStoreThemeCategoryProperties(transformInfo
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

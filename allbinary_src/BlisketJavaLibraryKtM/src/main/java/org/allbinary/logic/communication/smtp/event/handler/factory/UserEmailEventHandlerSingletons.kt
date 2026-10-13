@@ -51,8 +51,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : UserEmailEventHandlerSingletons{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserEmailEventHandlerSingletons.instance
 }
@@ -126,8 +124,6 @@ newUserEmailEventHandler!!.addListener(vector)
 newUserEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 this.userEmailEventHandlerHashMap!!.put(userEmailEventNameData, newUserEmailEventHandler)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newUserEmailEventHandler
 
@@ -143,8 +139,6 @@ this.userEmailEventHandlerHashMap!!.put(userEmailEventNameData, newUserEmailEven
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return userEmailEventHandler

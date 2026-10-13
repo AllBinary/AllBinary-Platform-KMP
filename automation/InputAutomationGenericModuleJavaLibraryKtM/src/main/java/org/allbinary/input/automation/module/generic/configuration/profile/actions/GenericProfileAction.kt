@@ -65,7 +65,7 @@ var node = node
                                 )
                         
                                     {
-                                    this.name= DomNodeHelper.getTextNodeValue(actionNameNode)
+                                    this.name= DomNodeHelper.getTextNodeValue(actionNameNode)!!
 
                                     }
                                 
@@ -93,8 +93,6 @@ this.setGenericProfileActionScript(GenericProfileActionScript(this.genericProfil
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -117,8 +115,6 @@ this.name= name
 hashMap!!.put(GenericProfileActionData.NAME, this.name)
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -135,8 +131,6 @@ var document = document
 
 node.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -145,8 +139,6 @@ node.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
     open fun getGenericProfileActionScript()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionScript{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileActionScript

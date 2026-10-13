@@ -45,8 +45,6 @@ var source = source
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getSource()
 }
@@ -55,8 +53,6 @@ var source = source
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.toString()
@@ -68,8 +64,6 @@ var source = source
 : String{
 
     var myEventSource: MyGraphicItemEventSource = this.getSource() as MyGraphicItemEventSource
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,8 +78,6 @@ var source = source
     var myEventSource: MyGraphicItemEventSource = this.getSource() as MyGraphicItemEventSource
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return myEventSource!!.getTreeNode()
 }
@@ -96,8 +88,6 @@ var source = source
 : Double{
 
     var myEventSource: MyGraphicItemEventSource = this.getSource() as MyGraphicItemEventSource
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

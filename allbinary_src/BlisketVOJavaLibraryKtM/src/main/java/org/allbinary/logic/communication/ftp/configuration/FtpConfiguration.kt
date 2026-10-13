@@ -61,8 +61,6 @@ this.ftpPassword= hashMap!!.get(FtpConfigurationData.PASSWORD) as String
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpServer
 }
@@ -71,8 +69,6 @@ this.ftpPassword= hashMap!!.get(FtpConfigurationData.PASSWORD) as String
     open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpPath
@@ -83,8 +79,6 @@ this.ftpPassword= hashMap!!.get(FtpConfigurationData.PASSWORD) as String
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpUserName
 }
@@ -93,8 +87,6 @@ this.ftpPassword= hashMap!!.get(FtpConfigurationData.PASSWORD) as String
     open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpPassword

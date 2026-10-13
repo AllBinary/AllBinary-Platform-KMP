@@ -130,12 +130,12 @@ var hashMap = hashMap
 
 this.storeName= hashMap!!.get(StoreFrontData.getInstance()!!.NAME.toString()) as String
 this.name= hashMap!!.get(PaymentGatewayData.NAME.toString()) as String
-this.enable= stringUtil!!.getNonNull(hashMap!!.get(EntryData.getInstance()!!.ENABLE.toString()) as String)
-this.paymentMethod= stringUtil!!.getNonNull(hashMap!!.get(PaymentData.METHOD.toString()) as String)
-this.mode= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.MODE.toString()) as String)
-this.testProtocol= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTPROTOCOL.toString()) as String)
-this.testServer= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTSERVER.toString()) as String)
-this.testPort= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTPORT.toString()) as String)
+this.enable= stringUtil!!.getNonNull(hashMap!!.get(EntryData.getInstance()!!.ENABLE.toString()) as String)!!
+this.paymentMethod= stringUtil!!.getNonNull(hashMap!!.get(PaymentData.METHOD.toString()) as String)!!
+this.mode= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.MODE.toString()) as String)!!
+this.testProtocol= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTPROTOCOL.toString()) as String)!!
+this.testServer= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTSERVER.toString()) as String)!!
+this.testPort= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTPORT.toString()) as String)!!
 this.testPath= hashMap!!.get(PaymentGatewayData.TESTPATH.toString()) as String
 
     
@@ -325,8 +325,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeName
 }
@@ -335,8 +333,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -347,8 +343,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.enable
 }
@@ -357,8 +351,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentMethod
@@ -369,8 +361,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mode
 }
@@ -379,8 +369,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getTestProtocol()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testProtocol
@@ -391,8 +379,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testServer
 }
@@ -401,8 +387,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getTestPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testPort
@@ -413,8 +397,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testPath
 }
@@ -423,8 +405,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getServerProtocol()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.serverProtocol
@@ -435,8 +415,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.server
 }
@@ -445,8 +423,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getServerPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.serverPort
@@ -457,8 +433,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.serverPath
 }
@@ -467,8 +441,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
@@ -479,8 +451,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.password
 }
@@ -489,8 +459,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getProxyProtocol()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.proxyProtocol
@@ -501,8 +469,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.proxyServer
 }
@@ -511,8 +477,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getProxyPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.proxyPath
@@ -523,8 +487,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.proxyPort
 }
@@ -533,8 +495,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getProxyUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.proxyUserName
@@ -545,8 +505,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.proxyPassword
 }
@@ -555,8 +513,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getTimeout()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeout
@@ -567,8 +523,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.proxyTimeout
 }
@@ -577,8 +531,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getSpecial1()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special1
@@ -589,8 +541,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special2
 }
@@ -599,8 +549,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getSpecial3()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special3
@@ -611,8 +559,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special4
 }
@@ -621,8 +567,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getSpecial5()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special5
@@ -633,8 +577,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special6
 }
@@ -643,8 +585,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getSpecial7()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special7
@@ -655,8 +595,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special8
 }
@@ -665,8 +603,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getSpecial9()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special9
@@ -677,8 +613,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.lastModified
 }
@@ -687,8 +621,6 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
     open fun getTimeEntered()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeEntered
@@ -973,8 +905,6 @@ this.timeEntered= value
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.toHashMap(true)
 }
@@ -1063,8 +993,6 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), this.special
                             
 paymentGatewayHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED.toString(), this.lastModified)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayHashMap
 }
@@ -1073,8 +1001,6 @@ paymentGatewayHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED.toString(), t
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.toVector(true)
@@ -1162,8 +1088,6 @@ updateVector!!.add(this.special9)
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return updateVector
 }
@@ -1174,8 +1098,6 @@ updateVector!!.add(this.special9)
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PaymentGatewayPrimaryKey(this.getStoreName(), this.getName()) as Object

@@ -200,7 +200,7 @@ open public class PickupBehavior : Object, PickupBehaviorInterface {
                 collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!!
                     as CountedLayerInterfaceFactoryPart
             countedPickedUpLayerInterfaceFactory =
-                nextCountedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()
+                nextCountedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()!!
 
             for (index2 in pickedUpLayerTypeArray!!.size - 1 downTo 0) {
 

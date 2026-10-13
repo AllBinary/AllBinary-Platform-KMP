@@ -49,8 +49,6 @@ this.imageColorResults= ImageColorResults()
         //nullable = true from not(false or (false and true)) = true
 : ImageColorRangeResults{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageColorRangeResults
 }
@@ -68,8 +66,6 @@ this.imageColorRangeResults= imageColorRangeResults
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.averageAmbientLevel
 }
@@ -86,8 +82,6 @@ this.averageAmbientLevel= averageAmbientLevel
     open fun getImageColorResults()
         //nullable = true from not(false or (false and true)) = true
 : ImageColorResults{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageColorResults

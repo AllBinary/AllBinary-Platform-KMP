@@ -95,13 +95,13 @@ open public class GameInputMappingCanvas : GameCommandCanvas, InputMappingInterf
         this.abeClientInformation = abeClientInformation
         this.helpPaintable = helpPaintable as InputMappingHelpPaintable
         this.inputMapping =
-            PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()
+            PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
         this.paintable = ProcessPaintable()
         this.colorFillPaintable =
             ColorFillPaintableFactory.getInstance()!!.getInstance(
                 allBinaryGameLayerManager!!.getBackgroundBasicColor(),
                 false,
-            )
+            )!!
     }
 
     override fun close()

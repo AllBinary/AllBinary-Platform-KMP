@@ -52,8 +52,6 @@ this.setHelpSet(helpSet)
         //nullable = true from not(false or (false and true)) = true
 : HelpSet{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.helpSet
 }

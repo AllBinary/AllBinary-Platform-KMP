@@ -230,7 +230,7 @@ open public class MultipleScrollSelectionHorizontalForm :
         var font: Font = graphics.getFont()!!
 
         this.fontHeight = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     @Throws(Exception::class)
@@ -311,7 +311,7 @@ open public class MultipleScrollSelectionHorizontalForm :
 
             for (index in start until size) {
 
-                item = this.get(index)
+                item = this.get(index)!!
 
                 if (dx >= this.rectangle.getMaxX()) {
 
@@ -321,7 +321,7 @@ open public class MultipleScrollSelectionHorizontalForm :
                         PreLogUtil.put(
                             StringMaker()
                                 .append("painting beyond maxx: ")!!
-                                .appendint(this.rectangle.getMaxX())!!
+                                .appendint(this.rectangle.getMaxX().toInt())!!
                                 .toString(),
                             this,
                             this.canvasStrings!!.PAINT,

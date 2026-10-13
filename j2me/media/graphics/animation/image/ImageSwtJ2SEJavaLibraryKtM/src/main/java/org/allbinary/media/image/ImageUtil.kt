@@ -54,8 +54,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageUtil.instance
 }
@@ -95,8 +93,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
     var display: Display = BareMain.shell.getDisplay()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.eclipse.swt.graphics.Image(display, width, height)
 }
@@ -131,17 +127,15 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 
         {
 bufferedImage= bufferedImageArray[index]!!
-imageData= bufferedImage!!.getImageData()
+imageData= bufferedImage!!.getImageData()!!
 
     var newWidth: Int = (imageData!!.width *percent /100).toInt()
 
 
     var newHeight: Int = (imageData!!.height *percent /100).toInt()
 
-scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWidth, newHeight, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWidth, newHeight, scale)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -178,17 +172,15 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWid
 
         {
 bufferedImage= bufferedImageArray[index]!!
-imageData= bufferedImage!!.getImageData()
+imageData= bufferedImage!!.getImageData()!!
 
     var newWidth: Int = (imageData!!.width *percent).toInt()
 
 
     var newHeight: Int = (imageData!!.height *percent).toInt()
 
-scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWidth, newHeight, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWidth, newHeight, scale)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -219,10 +211,8 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWid
                         for (index in 0 until size)
 
         {
-scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImageArray[index]!!, width, height, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImageArray[index]!!, width, height, scale)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -239,8 +229,6 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImageArray[in
     //var newWidth = newWidth
 var newHeight = newHeight
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createBufferedImage5(bufferedImage, newWidth, newHeight, true)
 }
@@ -255,8 +243,6 @@ var newHeight = newHeight
     //var newWidth = newWidth
 var newHeight = newHeight
     //var scale = scale
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createBufferedImage6(bufferedImage, newWidth, newHeight, scale, false)
@@ -283,10 +269,10 @@ var newHeight = newHeight
     var height: Float = imageData!!.height
 
 
-    var d_newWidth: Float = newWidth
+    var d_newWidth: Float = newWidth.toFloat()
 
 
-    var d_newHeight: Float = newHeight
+    var d_newHeight: Float = newHeight.toFloat()
 
 
     var widthRatio: Float = d_newWidth /width
@@ -313,10 +299,10 @@ ratioY= heightRatio
 this.logUtil!!.putF(StringMaker().
                             appendfloat(width)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(height)!!.append(this.commonSeps!!.COLON)!!.appendint(newWidth)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendint(newHeight)!!.append(this.commonSeps!!.COLON)!!.appendfloat(widthRatio)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(heightRatio)!!.toString(), this, this.CREATE_BUFFERED_IMAGE)
 
-    var dx: Float = 0
+    var dx: Float = 0f
 
 
-    var dy: Float = 0
+    var dy: Float = 0f
 
 
     
@@ -346,8 +332,6 @@ gc.setAntialias(SWT.ON)
 gc.setInterpolation(SWT.HIGH)
 gc.drawImage(bufferedImage, 0, 0, bufferedImage!!.getBounds()!!.width, bufferedImage!!.getBounds()!!.height, 0, 0, newWidth, newHeight)
 gc.dispose()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newBufferedImage
@@ -388,8 +372,6 @@ gc.drawImage(image, 0, 0, image.getBounds()!!.width, image.getBounds()!!.height,
                                 }
                             )
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return imageCanvas
 }
@@ -410,13 +392,11 @@ var bufferedImage = bufferedImage
 
 stringBuffer!!.append(" org.eclipse.swt.graphics.Image: ")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.appendint(imageData!!.width)
+stringBuffer!!.appendint(imageData!!.width.toInt())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.appendint(imageData!!.height)
+stringBuffer!!.appendint(imageData!!.height.toInt())
 stringBuffer!!.append(" Type: ")
-stringBuffer!!.appendint(imageData!!.type)
-
-
+stringBuffer!!.appendint(imageData!!.type.toInt())
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

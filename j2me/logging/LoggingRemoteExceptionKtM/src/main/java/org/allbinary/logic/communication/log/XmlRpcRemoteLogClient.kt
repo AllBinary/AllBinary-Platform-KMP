@@ -89,8 +89,6 @@ param.add(hashtable)
 
 System.out.println(CommonLabels.getInstance()!!.RESULT_ +CommonSeps.getInstance()!!.NEW_LINE +result.toString())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
@@ -102,8 +100,6 @@ System.out.println("IOException Trying Other Servers")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 
@@ -121,15 +117,11 @@ System.out.println("IOException Trying Other Servers")
  catch(e: XmlRpcException)
             {
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)

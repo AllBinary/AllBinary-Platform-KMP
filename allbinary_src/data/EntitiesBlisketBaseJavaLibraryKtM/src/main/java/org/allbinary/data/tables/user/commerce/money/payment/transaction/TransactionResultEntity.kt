@@ -160,7 +160,7 @@ var orderNumber = orderNumber
     var updateKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 updateKeyAndValue!!.put(OrderData.ID, orderNumber)
-resultHashMap= super.getRow(updateKeyAndValue)
+resultHashMap= super.getRow(updateKeyAndValue)!!
 
     
                         if(resultHashMap != 
@@ -181,8 +181,6 @@ resultHashMap= super.getRow(updateKeyAndValue)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return transactionResult as TransactionResultInterface
 
@@ -190,8 +188,6 @@ resultHashMap= super.getRow(updateKeyAndValue)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -208,8 +204,6 @@ resultHashMap= super.getRow(updateKeyAndValue)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -238,8 +232,6 @@ stringBuffer!!.append(paymentTransactionKeysFactory!!.SCORE.toString())!!.append
 stringBuffer!!.append(paymentTransactionKeysFactory!!.REASON1.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.REASON2.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.REASON3.toString())
 stringBuffer!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.EXCEPTION1.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.EXCEPTION2.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.EXCEPTION3.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.EXCEPTION4.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.EXCEPTION5.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.EXCEPTION6.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentTransactionKeysFactory!!.EXCEPTION7.toString())!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(OrderData.ID)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -249,8 +241,6 @@ stringBuffer!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentT
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -259,8 +249,6 @@ stringBuffer!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentT
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

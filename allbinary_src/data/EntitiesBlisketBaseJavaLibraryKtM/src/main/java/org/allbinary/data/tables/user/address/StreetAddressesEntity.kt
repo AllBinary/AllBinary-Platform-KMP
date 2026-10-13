@@ -217,8 +217,6 @@ this.setDefault(address.getId())
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getLargestIntegerInColumnWhere(StreetAddressData.ID, UserData.USERNAME, userName)
 }
@@ -269,8 +267,6 @@ keyAndValue!!.put(UserData.USERNAME, this.userName)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streetAddressVector
 } catch(e: Exception)
@@ -284,8 +280,6 @@ keyAndValue!!.put(UserData.USERNAME, this.userName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -316,8 +310,6 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StreetAddress(addressHashMap)
 
@@ -325,8 +317,6 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -343,8 +333,6 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -366,7 +354,7 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
 
 updateKeyAndValue!!.put(StreetAddressData.DEFAULT, StreetAddressData.DEFAULT)
 updateKeyAndValue!!.put(UserData.USERNAME, this.userName)
-addressHashMap= super.getRow(updateKeyAndValue)
+addressHashMap= super.getRow(updateKeyAndValue)!!
 
     
                         if(addressHashMap != 
@@ -387,8 +375,6 @@ addressHashMap= super.getRow(updateKeyAndValue)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streetAddress
 
@@ -404,8 +390,6 @@ addressHashMap= super.getRow(updateKeyAndValue)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -423,8 +407,6 @@ addressHashMap= super.getRow(updateKeyAndValue)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -494,8 +476,6 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
 }
@@ -509,8 +489,6 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(this.getTableName())!!.append(this.sqlStrings!!.START)!!.append(StreetAddressData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_AUTO_INCREMENT_NOT_NULL)!!.append(UserData.USERNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StreetAddressData.DEFAULT)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StreetAddressData.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StreetAddressData.STREET)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.CITY)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.STATE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.CODE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.COUNTRY)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(StreetAddressData.ID)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -520,8 +498,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(this.getTableName
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -530,8 +506,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(this.getTableName
     open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

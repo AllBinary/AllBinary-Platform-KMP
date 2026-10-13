@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbPathUtilOld{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPathUtilOld.instance
 }
@@ -75,8 +73,6 @@ private constructor ()
 : String{
 var abFilePath = abFilePath
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getExtension(abFilePath!!.toString())
 }
@@ -88,8 +84,6 @@ var abFilePath = abFilePath
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abPath = abPath
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getExtension(abPath!!.toString())
@@ -130,8 +124,6 @@ var filePath = filePath
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return extension
 }
@@ -144,8 +136,6 @@ var filePath = filePath
 : String{
 var abFilePath = abFilePath
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getWithoutExtension(abFilePath!!.toString())
 }
@@ -157,8 +147,6 @@ var abFilePath = abFilePath
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abPath = abPath
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getWithoutExtension(abPath!!.toString())
@@ -199,8 +187,6 @@ var filePath = filePath
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return pathWithoutExtension
 }
@@ -221,8 +207,6 @@ var path = path
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -231,8 +215,6 @@ var path = path
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -249,8 +231,6 @@ var path = path
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -258,8 +238,6 @@ var path = path
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -278,8 +256,6 @@ var path = path
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -291,8 +267,6 @@ var path = path
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -300,8 +274,6 @@ var path = path
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -324,8 +296,6 @@ var path = path
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return path
 }
@@ -345,8 +315,6 @@ var path = path
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return path
 }
@@ -362,8 +330,6 @@ var path = path
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.abPathData!!.SEPARATOR
 
@@ -374,12 +340,10 @@ var path = path
                         if(path.indexOf("\\") >= 0)
                         
                                     {
-                                    path= path.replace('\\', this.abPathData!!.SEPARATORCHAR)
+                                    path= path.replace('\\', this.abPathData!!.SEPARATORCHAR)!!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return path
@@ -407,8 +371,6 @@ var categoryPath = categoryPath
     
                         if(endIndex < 0)
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryPath
 
@@ -420,8 +382,6 @@ var categoryPath = categoryPath
     var categoryName: String = categoryPath!!.substring(0, endIndex)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getNameFromPath(categoryName)
 
@@ -430,8 +390,6 @@ var categoryPath = categoryPath
                         else {
                             
     var categoryName: String = categoryPath!!.substring(endIndex +1)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -467,8 +425,6 @@ var categoryPath = categoryPath
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath.createAbPath()
 
@@ -480,8 +436,6 @@ var categoryPath = categoryPath
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.removeNameFromPath(categoryPath!!.substring(0, endIndex -1))
 
@@ -490,8 +444,6 @@ var categoryPath = categoryPath
                         else {
                             
     var categoryName: String = categoryPath!!.substring(0, endIndex)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

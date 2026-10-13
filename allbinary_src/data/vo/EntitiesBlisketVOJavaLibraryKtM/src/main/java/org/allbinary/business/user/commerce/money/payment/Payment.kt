@@ -126,20 +126,20 @@ public constructor (request: ServletRequest)
             : super()
         {
 var request = request
-this.name= request.getParameter(PaymentData.NAME)
-this.type= request.getParameter(PaymentData.TYPE)
-this.expiration= request.getParameter(PaymentData.EXPIRATION)
-this.number= request.getParameter(PaymentData.NUMBER)
-this.tenderType= request.getParameter(PaymentData.TENDERTYPE)
-this.transactionType= request.getParameter(PaymentData.TRANSACTIONTYPE)
-this.aba= request.getParameter(PaymentData.ABA)
-this.account= request.getParameter(PaymentData.ACCOUNT)
-this.accountType= request.getParameter(PaymentData.ACCOUNTTYPE)
-this.authorizationCode= request.getParameter(PaymentData.AUTHORIZATIONCODE)
-this.checkNumber= request.getParameter(PaymentData.CHECKNUMBER)
-this.checkType= request.getParameter(PaymentData.CHECKTYPE)
-this.driversLicense= request.getParameter(PaymentData.DRIVERSLICENSE)
-this.magneticInkCheckReader= request.getParameter(PaymentData.MAGNETICINKCHECKREADER)
+this.name= request.getParameter(PaymentData.NAME)!!
+this.type= request.getParameter(PaymentData.TYPE)!!
+this.expiration= request.getParameter(PaymentData.EXPIRATION)!!
+this.number= request.getParameter(PaymentData.NUMBER)!!
+this.tenderType= request.getParameter(PaymentData.TENDERTYPE)!!
+this.transactionType= request.getParameter(PaymentData.TRANSACTIONTYPE)!!
+this.aba= request.getParameter(PaymentData.ABA)!!
+this.account= request.getParameter(PaymentData.ACCOUNT)!!
+this.accountType= request.getParameter(PaymentData.ACCOUNTTYPE)!!
+this.authorizationCode= request.getParameter(PaymentData.AUTHORIZATIONCODE)!!
+this.checkNumber= request.getParameter(PaymentData.CHECKNUMBER)!!
+this.checkType= request.getParameter(PaymentData.CHECKTYPE)!!
+this.driversLicense= request.getParameter(PaymentData.DRIVERSLICENSE)!!
+this.magneticInkCheckReader= request.getParameter(PaymentData.MAGNETICINKCHECKREADER)!!
 }
 
 public constructor ()
@@ -165,8 +165,6 @@ public constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return aFalse
 
@@ -180,8 +178,6 @@ public constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return aFalse
 
@@ -195,8 +191,6 @@ public constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return aFalse
 
@@ -210,8 +204,6 @@ public constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return aFalse
 
@@ -223,15 +215,11 @@ public constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return aFalse
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -346,8 +334,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.id
 }
@@ -356,8 +342,6 @@ this.number= value
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -368,8 +352,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.type
 }
@@ -378,8 +360,6 @@ this.number= value
     open fun getExpiration()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.expiration
@@ -390,8 +370,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.encryption
 }
@@ -400,8 +378,6 @@ this.number= value
     open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.number
@@ -412,8 +388,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tenderType
 }
@@ -422,8 +396,6 @@ this.number= value
     open fun getTransactionType()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transactionType
@@ -434,8 +406,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.aba
 }
@@ -444,8 +414,6 @@ this.number= value
     open fun getAccount()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.account
@@ -456,8 +424,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.accountType
 }
@@ -466,8 +432,6 @@ this.number= value
     open fun getAuthorizationCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.authorizationCode
@@ -478,8 +442,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.checkNumber
 }
@@ -488,8 +450,6 @@ this.number= value
     open fun getCheckType()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.checkType
@@ -500,8 +460,6 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.driversLicense
 }
@@ -510,8 +468,6 @@ this.number= value
     open fun getMagneticInkCheckReader()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.magneticInkCheckReader
@@ -527,8 +483,6 @@ this.number= value
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.number.substring(this.number.length -4)
 
@@ -536,8 +490,6 @@ this.number= value
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Invalid #"
 
@@ -549,8 +501,6 @@ this.number= value
     open fun isDefault()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isDefault
@@ -591,8 +541,6 @@ hashMap!!.put(PaymentData.MAGNETICINKCHECKREADER, this.magneticInkCheckReader)
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -611,8 +559,6 @@ var document = document
     var node: Node = ModDomHelper.createNameValueNodes(document, PaymentData.PAYMENT, hashMap)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -621,8 +567,6 @@ var document = document
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -633,8 +577,6 @@ var document = document
         //nullable = true from not(false or (false and true)) = true
 : String?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -643,8 +585,6 @@ var document = document
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -656,8 +596,6 @@ var document = document
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -666,8 +604,6 @@ var document = document
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -45,8 +45,6 @@ open public class OpenGLESGL10ImageFactory : OpenGLImageFactory {
     //var bitmapFactory = bitmapFactory
     //var textureFactory = textureFactory
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLESGL10Image(image, bitmapFactory, textureFactory)
 }

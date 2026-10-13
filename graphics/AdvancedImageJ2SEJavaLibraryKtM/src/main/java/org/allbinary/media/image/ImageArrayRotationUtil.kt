@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageArrayRotationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageArrayRotationUtil.instance
 }
@@ -81,7 +79,7 @@ companion object {
                         if(input == this.commonStrings!!.UP)
                         
                                     {
-                                    totalAngle= Integer(Integer.valueOf( -90))
+                                    totalAngle= Integer(Integer.valueOf( -90))!!
 
                                     }
                                 
@@ -90,12 +88,12 @@ companion object {
                         if(input == this.commonStrings!!.DOWN)
                         
                                     {
-                                    totalAngle= Integer(Integer.valueOf(90))
+                                    totalAngle= Integer(Integer.valueOf(90))!!
 
                                     }
                                 
                         else {
-                            totalAngle= Integer(Integer.valueOf(input))
+                            totalAngle= Integer(Integer.valueOf(input))!!
 
                         }
                             
@@ -113,7 +111,7 @@ companion object {
 
         {
 this.logUtil!!.putF(this.TOTAL_ANGLE +totalAngle, this, this.commonStrings!!.RUN)
-generatedBufferedImage= ImageJ2SERotationUtil.getInstance()!!.getRotatedImage(bufferedImageArray[index]!!, totalAngle!!.toInt())
+generatedBufferedImage= ImageJ2SERotationUtil.getInstance()!!.getRotatedImage(bufferedImageArray[index]!!, totalAngle!!.toInt())!!
 visitor.visit(generatedBufferedImage, input, index)
 }
 

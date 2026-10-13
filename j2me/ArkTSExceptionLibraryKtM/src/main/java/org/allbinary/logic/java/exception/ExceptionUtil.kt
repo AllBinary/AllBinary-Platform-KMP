@@ -39,8 +39,6 @@
         //nullable =  from not(true or (false and true)) = 
 : ExceptionUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ExceptionUtil.instance
 }
@@ -93,8 +91,6 @@ var e = e
                                     
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NONE

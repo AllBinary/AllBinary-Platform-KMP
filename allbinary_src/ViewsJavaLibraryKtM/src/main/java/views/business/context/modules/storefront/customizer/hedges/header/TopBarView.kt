@@ -68,8 +68,6 @@ var document = document
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.heading.toXmlNode(document)
 } catch(e: Exception)
@@ -100,8 +98,6 @@ var document = document
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

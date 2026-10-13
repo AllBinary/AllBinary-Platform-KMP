@@ -110,10 +110,10 @@ colorBufferList!!.set(index, this.basicColor)
     var col: Int= 0
 
 
-    var w: Float = width /segsW
+    var w: Float = (width /segsW).toFloat()
 
 
-    var h: Float = height /segsH
+    var h: Float = (height /segsH).toFloat()
 
 
     var width5: Float = width /2f

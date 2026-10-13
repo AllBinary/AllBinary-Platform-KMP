@@ -93,9 +93,9 @@ open public class GameConfigurationUtil : Object {
         stringBuffer!!.append(this.GAUGE_UPDATE)
         stringBuffer!!.append(gameConfiguration!!.getName())
         stringBuffer!!.append(this.FROM)
-        stringBuffer!!.appendint(gameConfiguration!!.getValue()!!.toInt())
+        stringBuffer!!.appendint(gameConfiguration!!.getValue()!!.toInt().toInt())
         stringBuffer!!.append(this.TO)
-        stringBuffer!!.appendint(value.toInt())
+        stringBuffer!!.appendint(value.toInt().toInt())
         this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.UPDATE)
         gameConfiguration!!.setValue(value)
     }
@@ -117,7 +117,7 @@ open public class GameConfigurationUtil : Object {
         stringBuffer!!.append("Gauge Default: ")
         stringBuffer!!.append(gameConfiguration!!.getName())
         stringBuffer!!.append(this.TO)
-        stringBuffer!!.appendint(gameConfiguration!!.getDefaultValue()!!.toInt())
+        stringBuffer!!.appendint(gameConfiguration!!.getDefaultValue()!!.toInt().toInt())
         this.logUtil!!.putF(stringBuffer!!.toString(), this, "setDefault")
         gauge.setValue(
             gameConfiguration!!.getDefaultValue()!!.toInt() -

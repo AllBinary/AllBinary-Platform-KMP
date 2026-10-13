@@ -140,8 +140,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTR
 var anyType = anyType
 ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullUtil.getInstance()!!.NULL_OBJECT
 }
@@ -173,8 +171,6 @@ var anyType = anyType
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.get(anyType)
 
@@ -196,8 +192,6 @@ var anyType = anyType
         //nullable = true from not(false or (false and true)) = true
 : AbeClientInformationInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.clientInfo
 }
@@ -206,8 +200,6 @@ var anyType = anyType
     open fun getClient()
         //nullable = true from not(false or (false and true)) = true
 : XmlRpcHandler{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.client
@@ -226,8 +218,6 @@ this.client= client
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.server
 }
@@ -244,8 +234,6 @@ this.server= server
     open fun getStart()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.start
@@ -264,8 +252,6 @@ this.start= start
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxServers
 }
@@ -283,8 +269,6 @@ this.maxServers= maxServers
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isDone
 }
@@ -301,8 +285,6 @@ this.isDone= isDone
     open fun getRemoteMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.remoteMethod

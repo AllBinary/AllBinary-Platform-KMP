@@ -179,8 +179,6 @@ this.itemTypesJList!!.setModel(defaultListModel)
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.capturedImageActionJDialog
 }
@@ -248,8 +246,6 @@ this.itemTypesJList!!.setModel(object: javax.swing.AbstractListModel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return strings.size
 }
@@ -258,8 +254,6 @@ this.itemTypesJList!!.setModel(object: javax.swing.AbstractListModel()
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var i = i
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return strings[i]!!

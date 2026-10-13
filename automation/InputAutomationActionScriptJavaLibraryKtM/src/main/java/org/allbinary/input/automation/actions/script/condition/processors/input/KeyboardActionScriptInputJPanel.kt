@@ -148,15 +148,11 @@ this.keyActionScriptInputInterface!!.log()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return KeySingletonFactory.getHashtable()!!.get(selectedItem as Object) as Integer
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -188,8 +184,6 @@ this.keyActionScriptInputInterface!!.log()
     open fun getKeyActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyActionJDialog

@@ -164,8 +164,6 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
         //nullable = true from not(false or (false and true)) = true
 : ImageActionScriptOutputJPanel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.actionScriptOutputJPanel
 }
@@ -180,8 +178,6 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 hashMap!!.put(ImageActionScriptOutputData.DISPLAY, Boolean.toString(this.isDisplay()))
 hashMap!!.put(ImageActionScriptOutputData.SAVE, Boolean.toString(this.isSaved()))
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -202,8 +198,6 @@ var document = document
 
 newNode!!.appendChild(this.getImageTypes()!!.toXmlNode(document))
 node.appendChild(newNode)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
@@ -231,8 +225,6 @@ this.actionScriptOutputJPanel!!.getCapturedImageActionJDialog()!!.setVisible(tru
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.saved
 }
@@ -249,8 +241,6 @@ this.saved= saved
     open fun isDisplay()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.display
@@ -278,8 +268,6 @@ stringBuffer!!.appendboolean(this.isDisplay())
 stringBuffer!!.append(" ")
 stringBuffer!!.append(this.getImageTypes()!!.toString())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -295,8 +283,6 @@ this.logUtil!!.putF(this.future_toString(), this, "log")
     open fun getImageTypes()
         //nullable = true from not(false or (false and true)) = true
 : ImageTypes{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageTypes

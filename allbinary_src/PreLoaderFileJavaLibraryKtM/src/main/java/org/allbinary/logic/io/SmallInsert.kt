@@ -51,7 +51,7 @@ public constructor (fileName: String)
         {
 var fileName = fileName
 this.fileName= fileName
-this.string= AbFileSystem.getInstance()!!.readAsString(fileName)
+this.string= AbFileSystem.getInstance()!!.readAsString(fileName)!!
 }
 
 
@@ -69,8 +69,6 @@ var text = text
 
 idOutData!!.writeBytes(text +this.string)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -84,8 +82,6 @@ idOutData!!.writeBytes(text +this.string)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -111,8 +107,6 @@ var after = after
                                     {
                                     System.out.println("No such start: " +after +" in: " +this.string)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -135,8 +129,6 @@ idOutData!!.writeBytes(start +text +end)
 idOutData!!.close()
 idFile!!.close()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -150,8 +142,6 @@ idFile!!.close()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -174,8 +164,6 @@ var text = text
 
 idOutData!!.writeBytes(this.string +text)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -189,8 +177,6 @@ idOutData!!.writeBytes(this.string +text)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

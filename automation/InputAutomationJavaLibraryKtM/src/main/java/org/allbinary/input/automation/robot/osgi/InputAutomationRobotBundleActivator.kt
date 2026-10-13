@@ -106,8 +106,6 @@ var context = context
                         
                                     throw Exception("No Service For ServiceReference")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputAutomationRobotChangeListener
 
@@ -115,8 +113,6 @@ var context = context
                                 
                         else {
                             this.logUtil!!.putF("No ServiceReference: " +InputAutomationRobotChangeListener::class.toString()!!, this, "getInputAutomationRobotChangeListener")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -147,7 +143,7 @@ var context = context
 
 
 
-                        for (index in 0 until this.getInputRobotInterface()!!.length)
+                        for (index in 0 until this.getInputRobotInterface()!!.size)
 
         {
 
@@ -188,7 +184,7 @@ var context = context
 
 
 
-                        for (index in 0 until this.getInputRobotInterface()!!.length)
+                        for (index in 0 until this.getInputRobotInterface()!!.size)
 
         {
 
@@ -235,8 +231,6 @@ this.removeRobots(context)
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.serviceFactory
 }
@@ -253,8 +247,6 @@ this.serviceFactory= serviceObject
     open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputRobotInterface?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputRobotInterface

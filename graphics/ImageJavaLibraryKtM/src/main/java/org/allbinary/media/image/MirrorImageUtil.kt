@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : MirrorImageUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MirrorImageUtil.instance
 }
@@ -91,7 +89,7 @@ tx.translate(0,  -bufferedImage!!.getHeight(
     var op: AffineTransformOp = AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
 
 bufferedImage= op.filter(bufferedImage, 
-                            null)
+                            null)!!
 
                                     }
                                 
@@ -109,7 +107,7 @@ tx.translate( -bufferedImage!!.getWidth(
     var op: AffineTransformOp = AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
 
 bufferedImage= op.filter(bufferedImage, 
-                            null)
+                            null)!!
 
                                     }
                                 
@@ -118,8 +116,6 @@ g.drawImage(bufferedImage, 0, 0, bufferedImage!!.getWidth(
                             null), 
                             null)
 g.dispose()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newBufferedImage
@@ -175,7 +171,7 @@ this.logUtil!!.putF("numberOfFramesPerOrientation: " +numberOfFramesPerOrientati
 
     var x: Int = index *cellWidth
 
-bufferedImageArray[index]= bufferedImage!!.getSubimage(x, y, cellWidth, cellHeight)
+bufferedImageArray[index]= bufferedImage!!.getSubimage(x, y, cellWidth, cellHeight)!!
 }
 
 
@@ -185,10 +181,8 @@ bufferedImageArray[index]= bufferedImage!!.getSubimage(x, y, cellWidth, cellHeig
                         for (index in 0 until numberOfFramesPerOrientation)
 
         {
-bufferedImageArray[index +numberOfFramesPerOrientation]= this.getImage(bufferedImageArray[index]!!, verticle, horizontal)
+bufferedImageArray[index +numberOfFramesPerOrientation]= this.getImage(bufferedImageArray[index]!!, verticle, horizontal)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

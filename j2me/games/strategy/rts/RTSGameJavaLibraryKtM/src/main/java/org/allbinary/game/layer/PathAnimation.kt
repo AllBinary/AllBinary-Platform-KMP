@@ -139,9 +139,9 @@ open public class PathAnimation : Animation {
                         }
 
                         geographicMapCellPosition = list.get(index) as GeographicMapCellPosition
-                        point = geographicMapCellPosition!!.getMidPoint()
+                        point = geographicMapCellPosition!!.getMidPoint()!!
                         geographicMapCellPosition = list.get(index + 1) as GeographicMapCellPosition
-                        nextPoint = geographicMapCellPosition!!.getMidPoint()
+                        nextPoint = geographicMapCellPosition!!.getMidPoint()!!
                         this.linePathAnimation!!.paint(graphics, point, nextPoint, tiledLayer)
                     }
                 }

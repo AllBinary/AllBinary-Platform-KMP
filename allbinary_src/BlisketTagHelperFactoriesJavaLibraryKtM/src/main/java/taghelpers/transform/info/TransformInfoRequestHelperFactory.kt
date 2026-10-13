@@ -50,8 +50,6 @@ var pageContext = pageContext
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoRequestHelper(hashMap, pageContext)
 } catch(e: Exception)
@@ -65,8 +63,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

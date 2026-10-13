@@ -82,7 +82,7 @@ open public class VectorToImageArrayRotationAnimationFactory : BaseImageAnimatio
                 this.getImage(),
                 this.getAngleIncrement(),
                 angleFactory!!.TOTAL_ANGLE.toInt(),
-            )
+            )!!
     }
 
     @Throws(Exception::class)

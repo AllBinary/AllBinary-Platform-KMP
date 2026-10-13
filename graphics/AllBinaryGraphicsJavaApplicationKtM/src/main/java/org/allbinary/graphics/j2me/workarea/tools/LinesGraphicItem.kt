@@ -77,8 +77,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LinesGraphicItem.NAME
 }
@@ -102,7 +100,7 @@ companion object {
 
     private var active: Boolean = false
 
-    private var theta: Double = 0
+    private var theta: Double = 0.0
 
     private var color: Color = Color(BasicColorFactory.getInstance()!!.WHITE.toInt())
 
@@ -190,7 +188,7 @@ this.treeNode= DefaultMutableTreeNode(PointsDomUtil.getInstance()!!.LINES +Lines
 LinesGraphicItem.item++
 this.points.init()
 this.pointTreeNodeVector= BasicArrayListD()
-this.fulcrumPoint= PointFactory.getInstance()!!.createXY(0, 0)
+this.fulcrumPoint= PointFactory.getInstance()!!.createXY(0, 0)!!
 }
 
 
@@ -259,8 +257,6 @@ this.setRotate(this.theta +Math.toRadians(angle))
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.treeNode as MutableTreeNode
 }
@@ -269,8 +265,6 @@ this.setRotate(this.theta +Math.toRadians(angle))
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LinesGraphicItem.NAME
@@ -359,8 +353,6 @@ this.pointTreeNodeVector!!.remove(index)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return point
 }
@@ -369,8 +361,6 @@ this.pointTreeNodeVector!!.remove(index)
     open fun isActive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.active
@@ -439,8 +429,6 @@ this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.si
 linesGraphicItem!!.duplicatePoints(this.points.getPoints())
 linesGraphicItem!!.deactivate()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return linesGraphicItem
 }
@@ -449,8 +437,6 @@ linesGraphicItem!!.deactivate()
     open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Math.toDegrees(this.theta)
@@ -551,8 +537,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 : Node{
 var canvasDom = canvasDom
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PointsDomUtil.getInstance()!!.toDom(canvasDom, this.points.getPoints())
 }
@@ -562,8 +546,6 @@ var canvasDom = canvasDom
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.points.isValid()
 }
@@ -572,8 +554,6 @@ var canvasDom = canvasDom
     open fun getPointsInterface()
         //nullable = true from not(false or (false and true)) = true
 : Points{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.points
@@ -591,8 +571,6 @@ this.points= points
     open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Color{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.color

@@ -139,8 +139,6 @@ stringBuffer!!.append(tableData)
 PreLogUtil.put(stringBuffer!!.toString(), INIT_SQL, "createTable()")
 this.executeSQLStatement(tableData)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -154,8 +152,6 @@ this.executeSQLStatement(tableData)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -174,8 +170,6 @@ this.executeSQLStatement(tableData)
         try {
             this.executeSQLStatement(sqlStatement)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -189,8 +183,6 @@ this.executeSQLStatement(tableData)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -275,7 +267,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= stdUtil!!.createHashMap()
+result= stdUtil!!.createHashMap()!!
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()
 
@@ -305,8 +297,6 @@ result.put(columnName, field)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 }
@@ -321,8 +311,6 @@ result.put(columnName, field)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
@@ -336,8 +324,6 @@ result.put(columnName, field)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -520,8 +506,6 @@ var value = value
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.stringUtil!!.EMPTY_STRING
 
@@ -529,8 +513,6 @@ var value = value
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return value
 
@@ -566,8 +548,6 @@ stmt.execute(statement)
     var rset: ResultSet = stmt.getResultSet()!!
 
 stmt.close()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rset
@@ -619,12 +599,12 @@ stmt.close()
                         if(this.useridAndPassword == true)
                         
                                     {
-                                    this.conn= DriverManager.getConnection(this.databaseConnectionInfoInterface!!.getUrl(), this.userid, this.password)
+                                    this.conn= DriverManager.getConnection(this.databaseConnectionInfoInterface!!.getUrl(), this.userid, this.password)!!
 
                                     }
                                 
                         else {
-                            this.conn= DriverManager.getConnection(this.databaseConnectionInfoInterface!!.getUrl())
+                            this.conn= DriverManager.getConnection(this.databaseConnectionInfoInterface!!.getUrl())!!
 
                         }
                             
@@ -709,8 +689,6 @@ this.createConnection()
     open fun getDatabaseConnectionInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : DatabaseConnectionInfoInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.databaseConnectionInfoInterface

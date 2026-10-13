@@ -48,8 +48,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TagWorkFlowFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagWorkFlowFactory.instance
 }
@@ -83,12 +81,10 @@ private constructor ()
 
     var classes: Array<KClass<*>?> = arrayOfNulls(2)
 
-classes[0]= propertiesHashMap!!::class
-classes[1]= AbeFactory.getInstance()!!.::class
+classes[0]= propertiesHashMap!!::class!!
+classes[1]= AbeFactory.getInstance()!!.::class!!
 params[0]= propertiesHashMap as Object
 params[1]= pageContext as Object
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeFactory.getInstance()!!.getInstance(abeClientInformation, workFlowClassName, classes, params) as WorkFlowInterface

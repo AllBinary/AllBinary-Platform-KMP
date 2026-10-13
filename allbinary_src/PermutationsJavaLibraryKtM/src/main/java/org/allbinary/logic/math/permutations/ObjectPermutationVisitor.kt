@@ -55,7 +55,7 @@ open public class ObjectPermutationVisitor : Visitor {
 
         for (i in 0 until size) {
 
-            stringBuilder!!.appendint(tsUtil!!.hashCode(data[i]!!))
+            stringBuilder!!.appendint(tsUtil!!.hashCode(data[i]!!).toInt())
             stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
         }
 

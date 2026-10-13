@@ -77,8 +77,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationJFrame{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InputAutomationJFrame.INPUTAUTOMATION_JFRAME
 }
@@ -180,8 +178,8 @@ this.initComponents()
     var url: URL = this::class.getResource("/help/Help.hs")!!
 
 this.logUtil!!.putF("URL: " +url, this, this.commonStrings!!.CONSTRUCTOR)
-this.helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
-url= this::class.getResource("/resources/allbinaryicon8bit.jpg")
+this.helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)!!
+url= this::class.getResource("/resources/allbinaryicon8bit.jpg")!!
 
     var imageIcon: ImageIcon = ImageIcon(url)
 
@@ -631,7 +629,7 @@ var evt = evt
                                 )
                         
                                     {
-                                    this.inputAutomationModuleInterface= this.inputAutomationModuleFactory!!.getInstance(gameAutomationRobotModuleNameString)
+                                    this.inputAutomationModuleInterface= this.inputAutomationModuleFactory!!.getInstance(gameAutomationRobotModuleNameString)!!
 this.getAutomationModuleConfigurationJPanel()!!.removeAll()
 
     var layout: javax.swing.GroupLayout = this.getAutomationModuleConfigurationJPanel()!!.getLayout() as javax.swing.GroupLayout
@@ -695,7 +693,7 @@ var evt = evt
                                 )
                         
                                     {
-                                    this.runnableInterface= this.inputAutomationModuleInterface!!.getInstance()
+                                    this.runnableInterface= this.inputAutomationModuleInterface!!.getInstance()!!
 
     
                         if(this.runnableInterface != 
@@ -737,8 +735,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "startJMenuItemActionPe
     open fun getAutomationModuleConfigurationJPanel()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JPanel{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.automationModuleConfigurationJPanel

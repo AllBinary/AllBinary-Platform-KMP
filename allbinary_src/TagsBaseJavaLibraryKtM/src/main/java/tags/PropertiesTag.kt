@@ -46,15 +46,13 @@ public constructor (){
 
                                     }
                                 
-this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
+this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 }
 
 
     open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.propertiesHashMap
@@ -73,9 +71,7 @@ this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 
                                     }
                                 
-this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
-
-
+this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_PAGE

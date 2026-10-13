@@ -71,11 +71,11 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(basicItemData!!.ID)
-this.className= this.request.getParameter(DynamicObjectData.NAME)
-this.packageName= this.request.getParameter(CustomItemData.PACKAGE)
-this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
+this.className= this.request.getParameter(DynamicObjectData.NAME)!!
+this.packageName= this.request.getParameter(CustomItemData.PACKAGE)!!
+this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)!!
+this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)!!
 }
 
 
@@ -97,8 +97,6 @@ values.put(CustomItemData.PACKAGE, this.packageName)
                                 
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -140,8 +138,6 @@ CustomItemsEntityFactory.getInstance()!!.getCustomItemsEntityInstance()!!.insert
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -158,8 +154,6 @@ CustomItemsEntityFactory.getInstance()!!.getCustomItemsEntityInstance()!!.insert
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -187,8 +181,6 @@ CustomItemsEntityFactory.getInstance()!!.getCustomItemsEntityInstance()!!.insert
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -205,8 +197,6 @@ CustomItemsEntityFactory.getInstance()!!.getCustomItemsEntityInstance()!!.insert
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -238,8 +228,6 @@ CustomItemsEntityFactory.getInstance()!!.getCustomItemsEntityInstance()!!.update
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -256,8 +244,6 @@ CustomItemsEntityFactory.getInstance()!!.getCustomItemsEntityInstance()!!.update
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

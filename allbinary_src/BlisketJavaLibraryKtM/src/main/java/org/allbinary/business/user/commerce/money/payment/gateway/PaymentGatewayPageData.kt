@@ -78,47 +78,47 @@ var paymentMethod = paymentMethod
 stringBuffer!!.append(location)
 stringBuffer!!.append("MakePayment")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-MAKEPAYMENT= stringBuffer!!.toString()
+MAKEPAYMENT= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("Checkout")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-CHECKOUT= stringBuffer!!.toString()
+CHECKOUT= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("Shipping")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-SHIPPING= stringBuffer!!.toString()
+SHIPPING= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("ShippingAddress")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-SHIPPINGADDRESS= stringBuffer!!.toString()
+SHIPPINGADDRESS= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("ShippingAddressAction")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-SHIPPINGADDRESSACTION= stringBuffer!!.toString()
+SHIPPINGADDRESSACTION= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("BillingAddress")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-BILLINGADDRESS= stringBuffer!!.toString()
+BILLINGADDRESS= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("Payment")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-PAYMENT= stringBuffer!!.toString()
+PAYMENT= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("Authorize")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-AUTHORIZE= stringBuffer!!.toString()
+AUTHORIZE= stringBuffer!!.toString()!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(paymentMethodString)
 stringBuffer!!.append("PaymentFinish")
 stringBuffer!!.append(PaymentGatewayPageData.EXTENSION)
-FINISH= stringBuffer!!.toString()
+FINISH= stringBuffer!!.toString()!!
 }
 
 

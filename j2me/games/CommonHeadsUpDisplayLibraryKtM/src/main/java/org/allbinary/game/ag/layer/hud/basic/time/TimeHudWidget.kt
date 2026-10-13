@@ -100,7 +100,7 @@ open public class TimeHudWidget : BasicHud {
     open fun set()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.string = this.timer.getTimeChars()
+        this.string = this.timer.getTimeChars()!!
         this.totalDigits = this.timer.getCurrentTotalDigits()
     }
 

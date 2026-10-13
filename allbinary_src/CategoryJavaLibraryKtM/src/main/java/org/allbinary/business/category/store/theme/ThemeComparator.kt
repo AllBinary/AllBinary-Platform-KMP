@@ -51,8 +51,6 @@ var object2 = object2
     var string2: String = object2 as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return string.compareTo(string2)
 }

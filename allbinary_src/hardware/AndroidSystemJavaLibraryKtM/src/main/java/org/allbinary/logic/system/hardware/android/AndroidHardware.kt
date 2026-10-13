@@ -66,7 +66,7 @@ open public class AndroidHardware : Object, HardwareInterface {
         var lineNumberReader: Closeable = NullCloseable.NULL_CLOSEABLE
 
         try {
-            lineNumberReader = this.get(filePath)
+            lineNumberReader = this.get(filePath)!!
         } catch (e: Exception) {
             this.logUtil!!.put(
                 "Hardware Data: " + this.toString(),
@@ -103,7 +103,7 @@ open public class AndroidHardware : Object, HardwareInterface {
         var nextLine: String = lineNumberReader!!.readLine()!!
 
         while (nextLine != null) {
-            nextLine = lineNumberReader!!.readLine()
+            nextLine = lineNumberReader!!.readLine()!!
             this.componentInterfaceVector!!.add(UnknownHardware(nextLine))
         }
 

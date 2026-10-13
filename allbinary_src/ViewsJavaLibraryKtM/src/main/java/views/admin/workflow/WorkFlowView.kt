@@ -59,8 +59,6 @@ var document = document
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
@@ -74,8 +72,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -99,8 +95,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

@@ -44,8 +44,6 @@ open public class ABHashMap<K, V> : HashMap<K, V> {
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.size()
 }
@@ -54,8 +52,6 @@ open public class ABHashMap<K, V> : HashMap<K, V> {
     override fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.isEmpty()
@@ -67,8 +63,6 @@ open public class ABHashMap<K, V> : HashMap<K, V> {
 : V{
 var key = key
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.get(key)
 }
@@ -78,8 +72,6 @@ var key = key
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var key = key
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.containsKey(key)
@@ -91,8 +83,6 @@ var key = key
 : V{
 var key = key
 var value = value
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.put(key, value)
@@ -112,8 +102,6 @@ super.putAll(map)
 : V{
 var key = key
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.remove(key)
 }
@@ -131,8 +119,6 @@ super.clear()
 : Boolean{
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.containsValue(value)
 }
@@ -142,8 +128,6 @@ var value = value
         //nullable = true from not(false or (false and true)) = true
 : Set<K>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.keySet()
 }
@@ -152,8 +136,6 @@ var value = value
     override fun entrySet()
         //nullable = true from not(false or (false and true)) = true
 : Set<Map.Entry<K, V>>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.entrySet()
@@ -166,8 +148,6 @@ var value = value
 var key = key
 var defaultValue = defaultValue
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getOrDefault(key, defaultValue)
 }
@@ -179,8 +159,6 @@ var defaultValue = defaultValue
 var key = key
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.putIfAbsent(key, value)
 }
@@ -189,8 +167,6 @@ var value = value
     public override fun clone()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.clone()

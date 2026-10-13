@@ -42,7 +42,7 @@ open public class GameConfigurationSingleton : Object {
 
     private constructor() : super() {
         this.list = BasicArrayListD()
-        this.hashtable = StdUtil.getInstance()!!.createHashtable()
+        this.hashtable = StdUtil.getInstance()!!.createHashtable()!!
     }
 
     open fun getInstanceByName(

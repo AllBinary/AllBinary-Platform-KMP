@@ -34,7 +34,7 @@ open public class PointHelper
         
 companion object {
             
-    private val two: Double = 2
+    private val two: Double = 2.0
 
     open fun getCenterPoint(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
@@ -45,8 +45,6 @@ var rectangle = rectangle
 
 
     var y: Double = rectangle.getY() +rectangle.getHeight() /PointHelper.two
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

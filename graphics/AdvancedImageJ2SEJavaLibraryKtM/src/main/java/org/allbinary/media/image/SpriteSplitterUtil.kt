@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : SpriteSplitterUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SpriteSplitterUtil.instance
 }
@@ -172,7 +170,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                     }
                                 
 nameEnding= StringMaker().
-                            appendint(index2)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
+                            appendint(index2)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()!!
 visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
@@ -208,7 +206,7 @@ y= cellHeight *index2
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
-                            appendint(index2)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(this._ROW)!!.toString()
+                            appendint(index2)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(this._ROW)!!.toString()!!
 }
 
 
@@ -289,7 +287,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                     }
                                 
 nameEnding= StringMaker().
-                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
+                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()!!
 visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
@@ -325,7 +323,7 @@ y= cellHeight *index2
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
-                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(this._ROW)!!.toString()
+                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(this._ROW)!!.toString()!!
 }
 
 

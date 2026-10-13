@@ -171,8 +171,6 @@ returnVector!!.add(DownloadableItem(hashMap))
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return returnVector
 }
@@ -220,8 +218,6 @@ returnVector!!.add(DownloadableItem(hashMap))
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return returnVector
 }
@@ -236,8 +232,6 @@ returnVector!!.add(DownloadableItem(hashMap))
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(DownloadItemData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(basicItemData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.ENABLE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.SPECIAL_NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.VERSION)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.CHANGES)!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)!!.append(DownloadItemData.SYSTEM)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.PLATFORM)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.LICENSE_FILE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(DownloadItemData.FILE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.SIZE)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(DownloadItemData.VALID_TIME)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(DownloadItemData.RETRIES)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(DownloadItemData.ID)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -247,8 +241,6 @@ stringBuffer!!.append(DownloadItemData.FILE)!!.append(this.sqlTypeStrings!!.MAX_
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -257,8 +249,6 @@ stringBuffer!!.append(DownloadItemData.FILE)!!.append(this.sqlTypeStrings!!.MAX_
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

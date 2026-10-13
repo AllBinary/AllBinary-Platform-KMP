@@ -65,14 +65,12 @@ companion object {
 
     var abeFactory: AbeFactory = AbeFactory.getInstance()!!
 
-classes[0]= hashMap!!::class
-classes[1]= abeFactory!!::class
+classes[0]= hashMap!!::class!!
+classes[1]= abeFactory!!::class!!
 params[0]= hashMap as Object
 params[1]= httpServletRequest as Object
 
     var anyType: Any = abeFactory!!.getInstance(abeClientInformation, className, classes, params)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -111,8 +109,6 @@ params[1]= httpServletRequest as Object
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -144,14 +140,12 @@ params[1]= httpServletRequest as Object
 
     var abeFactory: AbeFactory = AbeFactory.getInstance()!!
 
-classes[0]= hashMap!!::class
-classes[1]= abeFactory!!::class
+classes[0]= hashMap!!::class!!
+classes[1]= abeFactory!!::class!!
 params[0]= hashMap as Object
 params[1]= pageContext as Object
 
     var anyType: Any = abeFactory!!.getInstance(abeClientInformation, className, classes, params)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -189,8 +183,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -224,16 +216,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
 
     var abeFactory: AbeFactory = AbeFactory.getInstance()!!
 
-classes[0]= hashMap!!::class
-classes[1]= specialhashMap!!::class
-classes[2]= abeFactory!!::class
+classes[0]= hashMap!!::class!!
+classes[1]= specialhashMap!!::class!!
+classes[2]= abeFactory!!::class!!
 params[0]= hashMap as Object
 params[1]= specialhashMap as Object
 params[2]= pageContext as Object
 
     var anyType: Any = abeFactory!!.getInstance(abeClientInformation, className, classes, params)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -272,8 +262,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -296,8 +284,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
         try {
             
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -335,8 +321,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

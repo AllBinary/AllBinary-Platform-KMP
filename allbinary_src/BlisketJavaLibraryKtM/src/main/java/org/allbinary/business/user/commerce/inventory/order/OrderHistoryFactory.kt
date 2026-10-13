@@ -49,8 +49,6 @@ var id = id
     var orderHistoryEntityInterface: OrderHistoryEntity = org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return orderHistoryEntityInterface!!.getOrder(id) as OrderHistory
 } catch(e: Exception)
@@ -67,8 +65,6 @@ var id = id
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

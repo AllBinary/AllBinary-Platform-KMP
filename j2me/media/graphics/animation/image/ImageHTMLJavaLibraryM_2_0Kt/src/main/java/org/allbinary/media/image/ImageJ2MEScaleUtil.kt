@@ -49,8 +49,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageJ2MEScaleUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageJ2MEScaleUtil.instance
 }
@@ -83,10 +81,8 @@ var height = height
                         for (index in images.size  - 1  downTo 0)
 
         {
-scaledImages[index]= this.scale(images[index]!!, width, height)
+scaledImages[index]= this.scale(images[index]!!, width, height)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,14 +133,11 @@ originalPlayNImage= originalHTMLImage!!.getImage() as CoreImage
     var scaledPlayNImage: ImageImpl = htmlImage!!.getImage() as ImageImpl
 
 
-    var canvas: Canvas = 
-                                    (graphics as HtmlGraphics).get(scaledPlayNImage as HtmlImage)!!
+    var canvas: Canvas = (PlayN.getInstance()!!.graphics() as HtmlGraphics).get(scaledPlayNImage as HtmlImage)!!
 
 originalPlayNImage = originalPlayNImageoriginalPlayNImage as ImageImpl
 originalPlayNImage.
                     draw(canvas.gc(), 0, 0, scaledImage!!.getWidth(), scaledImage!!.getHeight(), 0, 0, image.getWidth(), image.getHeight())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return scaledImage

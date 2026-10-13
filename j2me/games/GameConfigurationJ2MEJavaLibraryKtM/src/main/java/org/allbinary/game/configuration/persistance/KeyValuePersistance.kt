@@ -63,7 +63,8 @@ open public class KeyValuePersistance : BasicPersitance {
         var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
         try {
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
 
             var recordEnum: RecordEnumeration =
                 recordStore!!.enumerateRecords(
@@ -102,7 +103,7 @@ open public class KeyValuePersistance : BasicPersitance {
                     this,
                     this.persistanceStrings!!.LOAD_ALL,
                 )
-                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
+                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)!!
 
                 if (recordAsBytes != null) {
 
@@ -112,9 +113,9 @@ open public class KeyValuePersistance : BasicPersitance {
 
                     for (index in 0 until size) {
 
-                        name = inputStream!!.readUTF()
+                        name = inputStream!!.readUTF()!!
                         inputStream!!.readUTF()
-                        value = inputStream!!.readUTF()
+                        value = inputStream!!.readUTF()!!
                         hashtable.put(name, value)
                     }
 
@@ -160,7 +161,8 @@ open public class KeyValuePersistance : BasicPersitance {
                 this,
                 this.commonStrings!!.SAVE,
             )
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
 
             var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
 

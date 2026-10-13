@@ -88,7 +88,7 @@ var node = node
             
     var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, node.getChildNodes())!!
 
-this.value= DomNodeHelper.getTextNodeValue(valueNode)
+this.value= DomNodeHelper.getTextNodeValue(valueNode)!!
 
     var titleValueNode: Node = DomSearchHelper.getNodeNoThrow(this.TITLE, node.getChildNodes())!!
 
@@ -99,7 +99,7 @@ this.value= DomNodeHelper.getTextNodeValue(valueNode)
                                 )
                         
                                     {
-                                    this.title= DomNodeHelper.getTextNodeValue(titleValueNode)
+                                    this.title= DomNodeHelper.getTextNodeValue(titleValueNode)!!
 
                                     }
                                 
@@ -121,7 +121,7 @@ this.title= stringUtil!!.EMPTY_STRING
                                 )
                         
                                     {
-                                    this.description= DomNodeHelper.getTextNodeValue(descriptionValueNode)
+                                    this.description= DomNodeHelper.getTextNodeValue(descriptionValueNode)!!
 
                                     }
                                 
@@ -152,11 +152,11 @@ this.title= stringUtil!!.EMPTY_STRING
 
                                     }
                                 
-this.cssElementVector= CssElementsValidationFactory.getInstance(cssElementStyleNodeVector)
+this.cssElementVector= CssElementsValidationFactory.getInstance(cssElementStyleNodeVector)!!
 
     var nodeList: NodeList = node.getChildNodes()!!
 
-this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
+this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)!!
 } catch(e: Exception)
             {
 
@@ -182,8 +182,6 @@ this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.value
 }
@@ -198,8 +196,6 @@ this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
 hashMap!!.put(DomData.VALUE, this.value)
 hashMap!!.put(this.TITLE, this.title)
 hashMap!!.put(this.DESCRIPTION, this.description)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -258,8 +254,6 @@ node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 
 node.appendChild(cssElementDomNodeInterface!!.toXmlNode(document))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

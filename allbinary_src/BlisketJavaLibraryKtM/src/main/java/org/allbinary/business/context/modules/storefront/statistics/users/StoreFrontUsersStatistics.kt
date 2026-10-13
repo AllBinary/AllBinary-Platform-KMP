@@ -51,7 +51,7 @@ public constructor (storeFrontInterface: StoreFrontInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
-this.totalUsersByRoleHashMap= StdUtil.getInstance()!!.createHashMap()
+this.totalUsersByRoleHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
 
@@ -103,8 +103,6 @@ var userRole = userRole
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return numberOfUsersForRoleLong!!.toLong() +1 as Long
 }
@@ -113,8 +111,6 @@ var userRole = userRole
     open fun getNumberOfUsers()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.totalNumberOfUsers
@@ -127,8 +123,6 @@ var userRole = userRole
 var role = role
 
     var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(role as Object) as Long
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -171,8 +165,6 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -182,8 +174,6 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -192,8 +182,6 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

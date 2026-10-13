@@ -63,11 +63,11 @@ open public class ResourceUtil : Object {
 
         if (inputStream == null) {
 
-            inputStream = this.getResourceAsStreamAtStart(resource, 2)
+            inputStream = this.getResourceAsStreamAtStart(resource, 2)!!
 
             if (inputStream == null) {
 
-                inputStream = this.getResourceAsStreamAtStart(resource, 1)
+                inputStream = this.getResourceAsStreamAtStart(resource, 1)!!
 
                 if (inputStream == null) {
 
@@ -77,12 +77,12 @@ open public class ResourceUtil : Object {
 
                     var resourcePath: String = resource.substring(index + 1)!!
 
-                    inputStream = resource.javaClass.getResourceAsStream(resourcePath)
+                    inputStream = resource.javaClass.getResourceAsStream(resourcePath)!!
 
                     if (inputStream == null) {
 
-                        resourcePath = resource.substring(index)
-                        inputStream = resource.javaClass.getResourceAsStream(resourcePath)
+                        resourcePath = resource.substring(index)!!
+                        inputStream = resource.javaClass.getResourceAsStream(resourcePath)!!
 
                         if (inputStream == null) {
 
@@ -92,8 +92,8 @@ open public class ResourceUtil : Object {
                                 stringMaker!!
                                     .append(RES)!!
                                     .append(resource.substring(index))!!
-                                    .toString()
-                            inputStream = resource.javaClass.getResourceAsStream(resourcePath)
+                                    .toString()!!
+                            inputStream = resource.javaClass.getResourceAsStream(resourcePath)!!
 
                             if (inputStream == null) {
 
@@ -103,8 +103,8 @@ open public class ResourceUtil : Object {
                                         .append("/")!!
                                         .append(RES)!!
                                         .append(resource.substring(index))!!
-                                        .toString()
-                                inputStream = resource.javaClass.getResourceAsStream(resourcePath)
+                                        .toString()!!
+                                inputStream = resource.javaClass.getResourceAsStream(resourcePath)!!
 
                                 var COLON: String = CommonSeps.getInstance()!!.COLON
 
@@ -116,9 +116,9 @@ open public class ResourceUtil : Object {
                                             .append(RES)!!
                                             .append(COLON)!!
                                             .append(resource.substring(index))!!
-                                            .toString()
+                                            .toString()!!
                                     inputStream =
-                                        resource.javaClass.getResourceAsStream(resourcePath)
+                                        resource.javaClass.getResourceAsStream(resourcePath)!!
 
                                     if (inputStream == null) {
 
@@ -128,9 +128,9 @@ open public class ResourceUtil : Object {
                                                 .append(RES)!!
                                                 .append(COLON)!!
                                                 .append(resource.substring(index + 1))!!
-                                                .toString()
+                                                .toString()!!
                                         inputStream =
-                                            resource.javaClass.getResourceAsStream(resourcePath)
+                                            resource.javaClass.getResourceAsStream(resourcePath)!!
 
                                         if (inputStream == null) {
 
@@ -142,9 +142,11 @@ open public class ResourceUtil : Object {
                                                     .append(RESOURCE_STRING)!!
                                                     .append(COLON)!!
                                                     .append(resource.substring(index))!!
-                                                    .toString()
+                                                    .toString()!!
                                             inputStream =
-                                                resource.javaClass.getResourceAsStream(resourcePath)
+                                                resource.javaClass.getResourceAsStream(
+                                                    resourcePath
+                                                )!!
 
                                             if (inputStream == null) {
 
@@ -154,11 +156,11 @@ open public class ResourceUtil : Object {
                                                         .append(RESOURCE_STRING)!!
                                                         .append(COLON)!!
                                                         .append(resource.substring(index + 1))!!
-                                                        .toString()
+                                                        .toString()!!
                                                 inputStream =
                                                     resource.javaClass.getResourceAsStream(
                                                         resourcePath
-                                                    )
+                                                    )!!
 
                                                 if (inputStream == null) {
 

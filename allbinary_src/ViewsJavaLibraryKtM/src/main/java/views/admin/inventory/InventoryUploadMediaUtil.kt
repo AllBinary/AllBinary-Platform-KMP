@@ -303,8 +303,6 @@ this.logUtil!!.putF(commonStrings!!.END, this, "saveFiles()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.itemInterface
 }
@@ -335,13 +333,13 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(fileName)
 stringBuffer!!.append(this.MEDIUM)
 stringBuffer!!.append(END)
-newImageFileName= stringBuffer!!.toString()
+newImageFileName= stringBuffer!!.toString()!!
 this.itemInterface!!.setMediumImage(newImageFileName)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(fileName)
 stringBuffer!!.append(this.LARGE)
 stringBuffer!!.append(END)
-newImageFileName= stringBuffer!!.toString()
+newImageFileName= stringBuffer!!.toString()!!
 this.itemInterface!!.setLargeImage(newImageFileName)
 }
 

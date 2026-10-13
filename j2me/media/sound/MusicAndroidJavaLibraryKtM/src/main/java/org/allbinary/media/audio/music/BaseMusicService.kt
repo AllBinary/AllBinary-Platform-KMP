@@ -95,7 +95,7 @@ open public class BaseMusicService : Service {
     open fun start()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.player = MediaPlayer.create(this, this.songId)
+        this.player = MediaPlayer.create(this, this.songId)!!
         this.player.setVolume(
             (this.leftVolume.toFloat()) / 100.0f,
             (this.rightVolume.toFloat()) / 100.0f,

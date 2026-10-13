@@ -43,7 +43,7 @@ open public class HighScore : Object {
         this.name = name
         this.gameInfo = gameInfo
         this.score = score
-        this.scoreString = (this.score).toString()
+        this.scoreString = (this.score).toString()!!
     }
 
     open fun getId()

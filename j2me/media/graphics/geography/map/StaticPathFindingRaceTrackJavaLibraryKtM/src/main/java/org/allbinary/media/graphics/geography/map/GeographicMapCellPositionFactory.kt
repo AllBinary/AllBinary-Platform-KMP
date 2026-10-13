@@ -43,8 +43,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : ABHashtable<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GeographicMapCellPositionFactory.hashtable
 }
@@ -82,11 +80,9 @@ companion object {
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt().toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 geographicMapCellPositionFactoryCanBeNull= BasicGeographicMapCellPositionFactory(geographicMapInterface)
 GeographicMapCellPositionFactory.hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactoryCanBeNull)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return geographicMapCellPositionFactoryCanBeNull as BasicGeographicMapCellPositionFactory
@@ -95,9 +91,7 @@ GeographicMapCellPositionFactory.hashtable.put(allBinaryTiledLayer!!.getDataId()
                                 
                         else {
                             this.logUtil!!.putF(StringMaker().
-                            append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
-
-
+                            append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt().toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return geographicMapCellPositionFactoryCanBeNull as BasicGeographicMapCellPositionFactory

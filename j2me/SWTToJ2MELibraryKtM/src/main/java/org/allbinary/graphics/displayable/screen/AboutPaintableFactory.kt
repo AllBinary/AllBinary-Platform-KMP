@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AboutPaintableFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AboutPaintableFactory.instance
 }
@@ -60,7 +58,7 @@ companion object {
 
     var DEVELOPERS: Array<String?> = arrayOf("Developed By:","Travis Berthelot")
 
-this.paintableArray= AboutPaintable.getInstance(INFO, DEVELOPERS)!!.getPaintableArrayInstance()
+this.paintableArray= AboutPaintable.getInstance(INFO, DEVELOPERS)!!.getPaintableArrayInstance()!!
 }
 
 

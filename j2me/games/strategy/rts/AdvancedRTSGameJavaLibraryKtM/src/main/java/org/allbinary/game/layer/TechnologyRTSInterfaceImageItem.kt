@@ -103,7 +103,7 @@ open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem, UpdateMyF
         this.adjustedCostX = 2 + (this.DOLLAR.length * (fontHeight - 1))
         this.adjustedLevelY = -this.yOffset + imageHeight - fontHeight
         this.adjustedLevelX = 2 + (this.LEVEL.length * (fontHeight - 1))
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun getRtsInterface()
@@ -118,9 +118,9 @@ open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem, UpdateMyF
         // nullable = true from not(false or (false and true)) = true
     {
         this.costString =
-            this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getUpgradeCost())
+            this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getUpgradeCost())!!
         this.levelString =
-            this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getLevel())
+            this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getLevel())!!
     }
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)

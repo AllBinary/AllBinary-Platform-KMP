@@ -60,8 +60,6 @@ this.advertisementsVector!!.add(advertisementInterface)
 : AdvertisementInterface{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.advertisementsVector!!.get(index) as AdvertisementInterface
 }
@@ -70,8 +68,6 @@ var index = index
     open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.advertisementsVector!!.size()
@@ -82,8 +78,6 @@ var index = index
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -93,8 +87,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementsInterface?{
 var advertisementSearchInterface = advertisementSearchInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

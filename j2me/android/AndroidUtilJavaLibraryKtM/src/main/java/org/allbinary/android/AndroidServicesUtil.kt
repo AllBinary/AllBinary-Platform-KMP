@@ -76,9 +76,9 @@ open public class AndroidServicesUtil : Object {
 
         for (index in 0 until size) {
 
-            runningServiceInfo = runningServicesList!!.get(index)
+            runningServiceInfo = runningServicesList!!.get(index)!!
             serviceComponent = runningServiceInfo!!.service
-            serviceName = serviceComponent!!.toString()
+            serviceName = serviceComponent!!.toString()!!
 
             if (serviceName!!.indexOf(name) >= 0) {
 

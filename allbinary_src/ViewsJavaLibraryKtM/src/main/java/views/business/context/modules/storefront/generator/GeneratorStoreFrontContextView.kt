@@ -72,8 +72,6 @@ var group = group
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 
@@ -81,8 +79,6 @@ var group = group
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -99,8 +95,6 @@ var group = group
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.view(TransformInfosData.getInstance()!!.ALL)
 } catch(e: Exception)

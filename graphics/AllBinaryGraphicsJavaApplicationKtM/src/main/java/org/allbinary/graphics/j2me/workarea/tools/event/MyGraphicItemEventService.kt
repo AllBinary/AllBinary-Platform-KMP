@@ -90,9 +90,7 @@ var evt = evt
                         if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.SELECT) == 0)
                         
                                     {
-                                     = listeners[i +1]!! as MyGraphicItemEventListener
-.
-                    highlight(evt)
+                                    (listeners[i +1]!! as MyGraphicItemEventListener).highlight(evt)
 
                                     }
                                 
@@ -101,9 +99,7 @@ var evt = evt
                         if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.DESELECT) == 0)
                         
                                     {
-                                     = listeners[i +1]!! as MyGraphicItemEventListener
-.
-                    deselect(evt)
+                                    (listeners[i +1]!! as MyGraphicItemEventListener).deselect(evt)
 
                                     }
                                 
@@ -112,9 +108,7 @@ var evt = evt
                         if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.DELETE) == 0)
                         
                                     {
-                                     = listeners[i +1]!! as MyGraphicItemEventListener
-.
-                    delete(evt)
+                                    (listeners[i +1]!! as MyGraphicItemEventListener).delete(evt)
 
                                     }
                                 
@@ -123,9 +117,7 @@ var evt = evt
                         if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.DUPLICATE) == 0)
                         
                                     {
-                                     = listeners[i +1]!! as MyGraphicItemEventListener
-.
-                    duplicate(evt)
+                                    (listeners[i +1]!! as MyGraphicItemEventListener).duplicate(evt)
 
                                     }
                                 
@@ -134,9 +126,7 @@ var evt = evt
                         if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.ROTATE) == 0)
                         
                                     {
-                                     = listeners[i +1]!! as MyGraphicItemEventListener
-.
-                    rotate(evt)
+                                    (listeners[i +1]!! as MyGraphicItemEventListener).rotate(evt)
 
                                     }
                                 

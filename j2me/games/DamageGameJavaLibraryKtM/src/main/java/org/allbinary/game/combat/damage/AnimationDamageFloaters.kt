@@ -60,7 +60,7 @@ open public class AnimationDamageFloaters : DamageFloaters {
 
         this.layerInterface = layerInterface
         this.circularIndexUtil =
-            CircularIndexUtil.createInstance(this.animationInterfaceArray!!.size)
+            CircularIndexUtil.createInstance(this.animationInterfaceArray!!.size)!!
         this.dx = dx
         this.dy = dy
     }

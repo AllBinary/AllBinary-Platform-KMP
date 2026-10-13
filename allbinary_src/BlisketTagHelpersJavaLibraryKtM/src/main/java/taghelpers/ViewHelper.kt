@@ -56,7 +56,7 @@ public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)
         {
 var hashMap = hashMap
 var pageContext = pageContext
-this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)
+this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)!!
 }
 
 
@@ -65,8 +65,6 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
     open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NO_TYPE
@@ -81,8 +79,6 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentInterface!!.view()
 } catch(e: Exception)
@@ -166,8 +162,6 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
         //nullable = true from not(false or (false and true)) = true
 : TransformInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentInterface
 }
@@ -179,8 +173,6 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.componentInterface!!.getTransformInfoInterface()
 }
@@ -189,8 +181,6 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
     open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -201,8 +191,6 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
         //nullable = true from not(false or (false and false)) = true
 {
 var viewDocumentInterface = viewDocumentInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 

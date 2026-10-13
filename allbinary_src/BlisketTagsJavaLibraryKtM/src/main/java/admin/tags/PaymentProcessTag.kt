@@ -65,8 +65,6 @@ public constructor (){
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -122,8 +120,6 @@ public constructor (){
     
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.SKIP_BODY
                              else 
@@ -144,8 +140,6 @@ public constructor (){
 } catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

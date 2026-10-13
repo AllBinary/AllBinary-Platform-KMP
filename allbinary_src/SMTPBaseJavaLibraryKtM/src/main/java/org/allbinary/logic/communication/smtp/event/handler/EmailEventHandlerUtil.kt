@@ -52,8 +52,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : EmailEventHandlerUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EmailEventHandlerUtil.instance
 }
@@ -83,8 +81,6 @@ companion object {
     var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(userEmailEventListenerInterface)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
@@ -145,8 +141,6 @@ userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
 userEmailEventHandler!!.addListener(vector)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

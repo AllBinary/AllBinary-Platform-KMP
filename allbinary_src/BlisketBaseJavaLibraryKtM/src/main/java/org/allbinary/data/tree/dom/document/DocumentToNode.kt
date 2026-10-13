@@ -53,12 +53,10 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : String{
 var documentString = documentString
-documentString= DocumentToNode.remove(documentString, DocumentToNode.XMLJSPROOTSTART, DocumentToNode.XMLEND)
-documentString= DocumentToNode.remove(documentString, DocumentToNode.XMLJSPROOTENDSTART, DocumentToNode.XMLEND)
+documentString= DocumentToNode.remove(documentString, DocumentToNode.XMLJSPROOTSTART, DocumentToNode.XMLEND)!!
+documentString= DocumentToNode.remove(documentString, DocumentToNode.XMLJSPROOTENDSTART, DocumentToNode.XMLEND)!!
 
     var replaceXmlRoot: Replace = Replace(XMLROOT, StringUtil.getInstance()!!.EMPTY_STRING)
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,8 +68,6 @@ documentString= DocumentToNode.remove(documentString, DocumentToNode.XMLJSPROOTE
         //nullable = true from not(false or (false and false)) = true
 : String{
 var documentString = documentString
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DocumentToNode.remove(documentString, XMLROOTSTART, XMLROOTEND)
@@ -88,7 +84,9 @@ var end = end
     var startIndex: Int= 0
 
 
-        while((startIndex= documentString!!.indexOf(start)) !=  -1)
+        while((
+                        { startIndex= documentString!!.indexOf(start); startIndex }()
+                    ) !=  -1)
         {
 
     
@@ -110,8 +108,6 @@ var end = end
     var resultString: String = documentString!!.substring(endIndex +1)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return startString +resultString
 
@@ -121,8 +117,6 @@ var end = end
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

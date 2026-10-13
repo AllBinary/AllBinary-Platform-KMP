@@ -78,7 +78,7 @@ open public class SmallBasicColorCacheFactory : Object {
                 colorAsInt and ALPHA_MASK,
                 colorAsInt and 0x00FFFFFF,
                 StringUtil.getInstance()!!.EMPTY_STRING,
-            )
+            )!!
         this.add(basicColor)
 
         // if statement needs to be on the same line and ternary does not work the same way.

@@ -80,8 +80,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicStoreFront(storeHashMap) as BasicStoreFrontInterface
 }

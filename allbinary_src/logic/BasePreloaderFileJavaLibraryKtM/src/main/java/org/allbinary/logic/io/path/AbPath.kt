@@ -72,10 +72,10 @@ open public class AbPath : Object {
 
         if (!stringValidationUtil!!.isEmpty(aPath)) {
 
-            this.schema = this.getSchema(aPath)
+            this.schema = this.getSchema(aPath)!!
             this.nameP = name
             this.path =
-                this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPathFromPath(aPath)))
+                this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPathFromPath(aPath)))!!
         } else {
             this.init()
 
@@ -139,7 +139,7 @@ open public class AbPath : Object {
 
         if (!this.hasSchema()) {
 
-            tempPath = this.abPathUtil!!.adjustStart(tempPath)
+            tempPath = this.abPathUtil!!.adjustStart(tempPath)!!
         } else {
 
             var beginIndex: Int = tempPath!!.indexOf(this.commonSeps!!.COLON)
@@ -161,7 +161,7 @@ open public class AbPath : Object {
                     }
                 }
 
-                tempPath = tempPath!!.substring(beginIndex, tempPath!!.length)
+                tempPath = tempPath!!.substring(beginIndex, tempPath!!.length)!!
             }
         }
 

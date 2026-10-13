@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageCompleteUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageCompleteUtil.instance
 }
@@ -93,8 +91,6 @@ var name = name
                                     {
                                     this.handleTimeout(name)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -122,8 +118,6 @@ var name = name
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(this.COMPLETE +image.getName(), this, commonStrings!!.SUCCESS)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

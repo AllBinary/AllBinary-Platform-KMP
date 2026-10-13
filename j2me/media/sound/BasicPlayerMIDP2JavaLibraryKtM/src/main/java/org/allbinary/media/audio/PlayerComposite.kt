@@ -97,8 +97,6 @@ this.player.deallocate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.getContentType()
 }
@@ -107,8 +105,6 @@ this.player.deallocate()
     open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.getDuration()
@@ -119,8 +115,6 @@ this.player.deallocate()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.getMediaTime()
 }
@@ -130,11 +124,8 @@ this.player.deallocate()
         //nullable = true from not(false or (false and true)) = true
 : TimeBase{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-                                    (player as TimeBaseInterface).getTimeBase()
+                        return (this.player as TimeBaseInterface).getTimeBase()
 }
 
 
@@ -145,9 +136,7 @@ this.player.deallocate()
         //nullable = true from not(false or (false and false)) = true
 {
 var timeBase = timeBase
-player = this.playerplayer as TimeBaseInterface
-player.
-                    setTimeBase(timeBase)
+(this.player as TimeBaseInterface).setTimeBase(timeBase)
 }
 
 
@@ -183,8 +172,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "realize", e)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.getState()
 }
@@ -205,18 +192,14 @@ var now = now
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.setMediaTime(now)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
+                        return ( -1).toLong()
 }
 
 }
@@ -265,8 +248,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "stop", e)
 : Control{
 var controlType = controlType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.getControl(controlType)
 }
@@ -297,8 +278,6 @@ controllable2.setVolume(leftVolume, rightVolume)
     open fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
 : Player{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player

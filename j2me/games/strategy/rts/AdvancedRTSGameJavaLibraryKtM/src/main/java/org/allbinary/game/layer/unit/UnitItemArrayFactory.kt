@@ -68,7 +68,7 @@ open public class UnitItemArrayFactory : Object, ItemArraySingletonFactoryInterf
 
         if (index >= 0) {
 
-            name = name.substring(index)
+            name = name.substring(index)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

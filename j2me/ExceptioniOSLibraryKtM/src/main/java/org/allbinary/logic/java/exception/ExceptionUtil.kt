@@ -40,8 +40,6 @@ import java.io.ByteArrayOutputStream
         //nullable =  from not(true or (false and true)) = 
 : ExceptionUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ExceptionUtil.instance
 }
@@ -77,15 +75,11 @@ e.printStackTrace()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return output.toCharArray().concatToString()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NONE

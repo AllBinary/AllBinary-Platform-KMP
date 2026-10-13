@@ -45,8 +45,6 @@ var anyType = anyType
 var functionName = functionName
 var exception = exception
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Log(specialMessage, anyType, functionName, exception)
 }
@@ -58,8 +56,6 @@ var exception = exception
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LogFactory.LOG

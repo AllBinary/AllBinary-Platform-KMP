@@ -117,8 +117,6 @@ this.name= name
 
 this.idGeneratorEntity!!.update(this.name, newValue)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return idLong!!.toString()
 } catch(e: Exception)
@@ -135,8 +133,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getNext", e)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error"

@@ -86,8 +86,6 @@ index++
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -254,8 +252,6 @@ this.keyboardActionScriptInputJPanel= KeyboardActionScriptInputJPanel(this)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.delayBetweenKeys
 }
@@ -272,8 +268,6 @@ this.delayBetweenKeys= delayBetweenKeys
     open fun isPress()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.press
@@ -292,8 +286,6 @@ this.press= press
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.release
 }
@@ -311,8 +303,6 @@ this.release= release
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isRelease() && this.isPress()
 }
@@ -329,8 +319,6 @@ this.setRelease(true)
     open fun getKeyArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Integer?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keyArray
@@ -361,8 +349,6 @@ this.keyboardActionScriptInputJPanel!!.getKeyActionJDialog()!!.setVisible(true)
     open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getText(this.getKeyArray())
@@ -445,8 +431,6 @@ index++
     var integerArray: Array<Integer?> = vector.toArrayType(arrayOfNulls(vector.size())) as Array<Integer?>
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return integerArray
 }
@@ -462,7 +446,7 @@ index++
 
 
 
-                        for (index in 0 until this.getKeyArray()!!.length)
+                        for (index in 0 until this.getKeyArray()!!.size)
 
         {
 hashMap!!.put(KeyboardActionScriptInputData.KEY +index, Integer.toString(this.getKeyArray()[index]!!))
@@ -472,8 +456,6 @@ hashMap!!.put(KeyboardActionScriptInputData.DELAY_BETWEEN_KEYS, Integer.toString
 hashMap!!.put(KeyboardActionScriptInputData.PRESS, Boolean.toString(this.isPress()))
 hashMap!!.put(KeyboardActionScriptInputData.RELEASE, Boolean.toString(this.isRelease()))
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -490,8 +472,6 @@ var document = document
     var node: Node = super.toXmlNode(document)!!
 
 node.appendChild(ModDomHelper.createNodeWithValueNodes(document, KeyboardActionScriptInputData.NAME, this.toHashMap()))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
@@ -530,8 +510,6 @@ stringBuffer!!.append(" isRelease: ")
 stringBuffer!!.appendboolean(this.isRelease())
 stringBuffer!!.append(" Between Key Delay: ")
 stringBuffer!!.appendint(this.getDelayBetweenKeys())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

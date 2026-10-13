@@ -50,8 +50,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : WeblisketFinder{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return WeblisketFinder.instance
 }
@@ -96,8 +94,6 @@ var path = path
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, "findAll")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.subDirectory!!.search(WeblisketFinder.KEY, AbFile.createAbFile(path))
 } catch(e: Exception)
@@ -112,8 +108,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "findAll", e)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -140,15 +134,11 @@ var file = file
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return filePath!!.substring(0, end)
@@ -163,8 +153,6 @@ var file = file
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

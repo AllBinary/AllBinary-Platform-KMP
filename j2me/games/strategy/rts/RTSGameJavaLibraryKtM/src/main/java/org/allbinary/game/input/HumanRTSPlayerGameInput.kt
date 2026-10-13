@@ -288,9 +288,9 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput, BaseMotionGestur
             stringBuffer!!.append(rtsLayer!!.getName())
             stringBuffer!!.append(this.SPACE)
             stringBuffer!!.append(this.AT)
-            stringBuffer!!.appendint((viewPosition!!.getX() + rtsLayer!!.getHalfWidth()))
+            stringBuffer!!.appendint((viewPosition!!.getX() + rtsLayer!!.getHalfWidth()).toInt())
             stringBuffer!!.append(this.SPACE)
-            stringBuffer!!.appendint((viewPosition!!.getY() + rtsLayer!!.getHalfHeight()))
+            stringBuffer!!.appendint((viewPosition!!.getY() + rtsLayer!!.getHalfHeight()).toInt())
             this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD)
 
             if (

@@ -128,7 +128,7 @@ open public class ImageArrayAnimation : IndexedAnimation {
         var imageArray = imageArray
         this.imageArray = imageArray
         this.totalFrames = imageArray!!.size
-        this.circularIndexUtil = CircularIndexUtil.createInstance(this.totalFrames)
+        this.circularIndexUtil = CircularIndexUtil.createInstance(this.totalFrames)!!
     }
 
     private var anchor: Int = Anchor.TOP_LEFT

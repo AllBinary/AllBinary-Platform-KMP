@@ -55,8 +55,6 @@ this.setPixelDeltaVector(BasicArrayListD())
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rectangle
 }
@@ -73,8 +71,6 @@ this.rectangle= rectangle
     open fun getPixelDeltaVector()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.pixelDeltaVector
@@ -96,8 +92,6 @@ this.pixelDeltaVector= pixelDeltaVector
     var motionRectangle: MotionRectangle = MotionRectangle(this.getRectangle()!!.clone() as Rectangle)
 
 motionRectangle!!.setPixelDeltaVector(this.getPixelDeltaVector()!!.clone() as BasicArrayList)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return motionRectangle

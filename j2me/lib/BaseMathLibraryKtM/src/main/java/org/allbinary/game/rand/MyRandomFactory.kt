@@ -55,7 +55,7 @@ open public class MyRandomFactory : Object {
             for (index in 0 until size2) {
 
                 stringBuilder!!
-                    .appendint(randomFactory!!.getAbsoluteNextInt(3))!!
+                    .appendint(randomFactory!!.getAbsoluteNextInt(3).toInt())!!
                     .append(commonSeps!!.COMMA)
             }
 

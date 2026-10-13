@@ -51,7 +51,7 @@ open public class AngleFactory : Object {
                 stringMaker!!
                     .appendint(index)!!
                     .append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!
-                    .appendshort(angleFactory!!.getClosestDirection(index)!!.getValue())!!
+                    .appendshort(angleFactory!!.getClosestDirection(index)!!.getValue().toShort())!!
                     .append(CommonSeps.getInstance()!!.NEW_LINE)
             }
 
@@ -67,7 +67,7 @@ open public class AngleFactory : Object {
 
     private val angleArray: Array<Angle?> = arrayOfNulls(this.TOTAL_ANGLE.toInt())
 
-    private val NEGATIVE_ONE: Short = -1
+    private val NEGATIVE_ONE: Short = (-1).toShort()
 
     val NOT_ANGLE: NamedAngle = NamedAngle(this.NEGATIVE_ONE, CommonStrings.getInstance()!!.EMPTY)
 

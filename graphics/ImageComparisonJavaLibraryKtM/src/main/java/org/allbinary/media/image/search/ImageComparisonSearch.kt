@@ -62,7 +62,7 @@ open public class ImageComparisonSearch
 
     private var bufferedImages: Array<BufferedImage?>
 
-    private var matchingPercent: Float =  -1
+    private var matchingPercent: Float = ( -1).toFloat()
 public constructor (bufferedImage: BufferedImage, bufferedImage2: BufferedImage, tolerance: Int)
             : super()
         {
@@ -143,15 +143,13 @@ this.logUtil!!.putF("2: " +imageUtil!!.toString(bufferedImage2), this, this.comm
 : Float{
 
     
-                        if(this.matchingPercent ==  -1)
+                        if(this.matchingPercent == ( -1).toFloat())
                         
                                     {
                                     this.matchingPercent= this.pixelsThatMatch.toFloat() /(this.imageWidth *this.imageHeight)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.matchingPercent
@@ -170,8 +168,6 @@ this.nonMatchingPixelVector!!.add(pixel)
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.nonMatchingPixelVector
 }
@@ -181,8 +177,6 @@ this.nonMatchingPixelVector!!.add(pixel)
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "ImageComparisonInfo: " +" Number Of Matching Pixels: " +this.pixelsThatMatch +"\nNumber Of Non-Matching Pixels: " +this.getNonMatchingPixelVector()!!.size() +"\nNumber Of Pixels Ignored: " +this.pixelsIgnored +"\nMatching Percentage: " +this.getMatchingPercent()
 }
@@ -191,8 +185,6 @@ this.nonMatchingPixelVector!!.add(pixel)
     open fun getBufferedImages()
         //nullable = true from not(false or (false and true)) = true
 : Array<BufferedImage?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.bufferedImages
@@ -210,8 +202,6 @@ this.bufferedImages= bufferedImages
     open fun getTolerance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tolerance

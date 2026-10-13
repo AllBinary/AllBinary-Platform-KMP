@@ -41,8 +41,6 @@ import java.util.Date
         //nullable =  from not(true or (false and true)) = 
 : TimeStampUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TimeStampUtil.instance
 }
@@ -63,8 +61,6 @@ import java.util.Date
 
 
     var date: Date = calendar.getTime()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

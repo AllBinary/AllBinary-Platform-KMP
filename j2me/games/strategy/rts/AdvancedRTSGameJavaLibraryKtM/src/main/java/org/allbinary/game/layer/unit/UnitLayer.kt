@@ -316,7 +316,7 @@ open public class UnitLayer :
             this.damageFloaters = PtsDamageFloaters(this)
             this.damageFloatersPaintableInterface = this.damageFloaters
         } else {
-            this.damageFloatersPaintableInterface = NullPaintable.getInstance()
+            this.damageFloatersPaintableInterface = NullPaintable.getInstance()!!
             this.damageFloaters = DamageFloaters()
         }
 
@@ -333,7 +333,7 @@ open public class UnitLayer :
                     -1,
                 )
         } else {
-            this.healthBar = NullPaintable.getInstance()
+            this.healthBar = NullPaintable.getInstance()!!
         }
 
         this.decalAnimation =
@@ -517,7 +517,7 @@ open public class UnitLayer :
     override fun deselect()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.pathAnimation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+        this.pathAnimation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
         super.deselect()
     }
 
@@ -531,7 +531,7 @@ open public class UnitLayer :
 
             if (this.debug) {
 
-                this.rtsLogHelper = RTSLayerSelectedLogHelper.getInstance()
+                this.rtsLogHelper = RTSLayerSelectedLogHelper.getInstance()!!
             }
 
             this.rtsLayer2LogHelper = RTSLayer2SelectedLogHelper.getInstance()
@@ -539,7 +539,7 @@ open public class UnitLayer :
 
             if (this.debug) {
 
-                this.rtsLogHelper = RTSLayerLogHelper.getInstance()
+                this.rtsLogHelper = RTSLayerLogHelper.getInstance()!!
             }
 
             this.rtsLayer2LogHelper = RTSLayer2LogHelper.getInstance()

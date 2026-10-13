@@ -46,7 +46,7 @@ open public class DemoCanvasProgressUtil : Object {
             var paintableArray: Array<PaintableInterface?> = arrayOfNulls(2)
 
             paintableArray[0] = progressCanvas
-            paintableArray[1] = demoCanvas!!.getDefaultPaintableInterface()
+            paintableArray[1] = demoCanvas!!.getDefaultPaintableInterface()!!
             demoCanvas!!.setDefaultPaintableInterface(PaintableComposite(paintableArray))
             demoCanvas!!.setPaintableInterface(demoCanvas!!.getDefaultPaintableInterface())
         }

@@ -114,8 +114,6 @@ var userEmailEventNameString = userEmailEventNameString
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return userEmailEventNameData
 
@@ -153,8 +151,6 @@ UserEmailEventNameData.nextId++
 : Boolean{
 var userEmailEventNameString = userEmailEventNameString
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserEmailEventNameData.userNameEvenNameHashMap!!.containsKey(userEmailEventNameString)
 }
@@ -163,8 +159,6 @@ var userEmailEventNameString = userEmailEventNameString
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.eventHandlerName

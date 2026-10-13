@@ -64,7 +64,7 @@ open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
         this.displayInfo!!.update(this, this.canvasStrings!!.CONSTRUCTOR)
         this.name = name
         this.childNameList = childNameList
-        this.commandStack = StdUtil.getInstance()!!.createStack()
+        this.commandStack = StdUtil.getInstance()!!.createStack()!!
     }
 
     override fun setFullScreenMode(mode: Boolean)

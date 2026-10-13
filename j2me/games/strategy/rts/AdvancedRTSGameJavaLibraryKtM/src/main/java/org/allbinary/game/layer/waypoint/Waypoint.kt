@@ -84,7 +84,7 @@ open public class Waypoint : WaypointBase, BuildingEventListenerInterface {
             throw RuntimeException()
         }
 
-        this.endList = this.ownerLayer!!.getEndGeographicMapCellPositionList()
+        this.endList = this.ownerLayer!!.getEndGeographicMapCellPositionList()!!
         this.paths =
             Array(tiledLayer!!.getColumns()) {
                 arrayOfNulls<BasicArrayList?>(tiledLayer!!.getRows())
@@ -138,7 +138,7 @@ open public class Waypoint : WaypointBase, BuildingEventListenerInterface {
 
         if (pathsList == this.basicArrayListUtil!!.getImmutableInstance()) {
 
-            pathsList = this.createPaths(geographicMapCellPosition)
+            pathsList = this.createPaths(geographicMapCellPosition)!!
             this.paths[geographicMapCellPosition!!.getColumn()]!![
                 geographicMapCellPosition!!.getRow()] = pathsList
         }

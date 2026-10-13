@@ -59,7 +59,7 @@ this.image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
                         for (numOfHealth in 0 until max)
 
         {
-this.image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
+this.image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)!!
 }
 
 

@@ -162,7 +162,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
         for (index in 0 until size) {
 
             list = this.keyMappingArray[index]!!
-            keyMappings = this.get(list)
+            keyMappings = this.get(list)!!
             stringMaker!!.delete(0, stringMaker!!.length())
             actionString =
                 stringMaker!!
@@ -170,7 +170,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
                     .append(commonSeps!!.COLON)!!
                     .append(commonSeps!!.SPACE)!!
                     .append(commonSeps!!.SPACE)!!
-                    .toString()
+                    .toString()!!
             updateMyFontProperties!!.actionStringArray[index] = actionString
             stringMaker!!.delete(0, stringMaker!!.length())
             updateMyFontProperties!!.keymappingBeginWidthArray[index] =
@@ -267,8 +267,8 @@ open public class InputMappingHelpPaintable : HelpPaintable {
         for (index in 0 until size) {
 
             gameInputMapping = this.gameInputMappingArray[index]!!
-            gameKey = gameInputMapping!!.getGameKey()
-            list = gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
+            gameKey = gameInputMapping!!.getGameKey()!!
+            list = gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)!!
 
             var size2: Int = list.size()
 
@@ -311,7 +311,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
                 actionBasicColor[index] = this.basicColor
             }
 
-            keyInfo[index] = gameInputMapping!!.getName()
+            keyInfo[index] = gameInputMapping!!.getName()!!
             keyMappingArray[index] = list
         }
 

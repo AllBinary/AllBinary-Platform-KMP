@@ -60,12 +60,12 @@ open public class HorizontaRotationManeuverAI : BasicAI, ArtificialIntelligenceT
             this.getOwnerLayerInterface() as RotationAnimationInterfaceCompositeInterface
 
         this.rotationAnimationInterface =
-            rotationAnimationInterfaceCompositeInterface!!.getRotationAnimationInterface()
+            rotationAnimationInterfaceCompositeInterface!!.getRotationAnimationInterface()!!
 
         var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface =
             this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
-        this.baseVelocityInterface = velocityInterfaceCompositeInterface!!.getVelocityProperties()
+        this.baseVelocityInterface = velocityInterfaceCompositeInterface!!.getVelocityProperties()!!
         this.velocityInterface = this.baseVelocityInterface as VelocityInterface
 
         var rotationAnimationInterface: RotationAnimationInterface =

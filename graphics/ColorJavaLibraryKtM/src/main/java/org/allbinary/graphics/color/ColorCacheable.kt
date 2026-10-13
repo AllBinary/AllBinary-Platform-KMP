@@ -55,8 +55,6 @@ key.
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.key
 }
@@ -65,8 +63,6 @@ key.
     open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Color{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.color

@@ -256,16 +256,12 @@ var orderId = orderId
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -281,8 +277,6 @@ var orderId = orderId
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -352,8 +346,6 @@ basketReview!!.addItem(item)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return basketReview
 
@@ -361,8 +353,6 @@ basketReview!!.addItem(item)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -379,8 +369,6 @@ basketReview!!.addItem(item)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -491,8 +479,6 @@ stringBuffer!!.append("PRIMARY KEY(")
 stringBuffer!!.append(entryData!!.ID)
 stringBuffer!!.append(") )")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -502,8 +488,6 @@ stringBuffer!!.append(") )")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -512,8 +496,6 @@ stringBuffer!!.append(") )")
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

@@ -58,8 +58,6 @@ hashMap!!.put(FtpConfigurationData.USERNAME, this.ftpConfigurationInterface!!.ge
 hashMap!!.put(FtpConfigurationData.PASSWORD, this.ftpConfigurationInterface!!.getPassword())
 hashMap!!.put(FtpConfigurationData.PATH, this.ftpConfigurationInterface!!.getPath())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -70,8 +68,6 @@ hashMap!!.put(FtpConfigurationData.PATH, this.ftpConfigurationInterface!!.getPat
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FtpConfigurationData.NAME
@@ -90,8 +86,6 @@ vector.add(this.ftpConfigurationInterface!!.getServer())
 vector.add(this.ftpConfigurationInterface!!.getUserName())
 vector.add(this.ftpConfigurationInterface!!.getPassword())
 vector.add(this.ftpConfigurationInterface!!.getPath())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector

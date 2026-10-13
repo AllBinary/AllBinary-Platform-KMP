@@ -68,8 +68,6 @@ this.dataFilePath= dataFilePath
     var result: String = XslHelper.getInstance()!!.translate(StreamSource(inputStream), StreamSource(StringBufferInputStream(XmlDocumentHelper.toString(document))))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 }

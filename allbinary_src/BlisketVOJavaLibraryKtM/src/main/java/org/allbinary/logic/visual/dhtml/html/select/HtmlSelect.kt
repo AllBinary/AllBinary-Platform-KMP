@@ -126,8 +126,6 @@ this.selected= selected
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isMultipleSelect
 }
@@ -182,8 +180,6 @@ result += this.ENDOPTION
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -252,8 +248,6 @@ result += this.END
 result += this.getOptions()
 result += this.ENDSELECT
 result += this.after
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result

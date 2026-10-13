@@ -106,8 +106,6 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -121,8 +119,6 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -142,8 +138,6 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
 stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -188,8 +182,6 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -204,8 +196,6 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -217,8 +207,6 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -228,8 +216,6 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -241,8 +227,6 @@ var document = document
     open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return views.ValidationOnlyTempUtil.getInstance()!!.view(this)

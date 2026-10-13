@@ -48,7 +48,7 @@ open public class WorkFlowRequestHelper : ModifyTable {
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
-this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)
+this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)!!
 }
 
 
@@ -75,8 +75,6 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
@@ -115,8 +113,6 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -144,8 +140,6 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -162,8 +156,6 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -190,8 +182,6 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -208,8 +198,6 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

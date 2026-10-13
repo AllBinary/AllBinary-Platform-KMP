@@ -45,7 +45,7 @@ open public class SecretComposite : BaseSecretComposite {
         // nullable = true from not(false or (false and false)) = true
         : ByteArray {
         var array = array
-        array = this.mutilate(array)
+        array = this.mutilate(array)!!
         this.cipher.init(Cipher.ENCRYPT_MODE, this.secretKey)
 
         // if statement needs to be on the same line and ternary does not work the same way.
@@ -78,7 +78,7 @@ open public class SecretComposite : BaseSecretComposite {
 
             if (value < 8 && value > 0) {
 
-                array = this.byteUtil!!.xorByte(array, value.toInt())
+                array = this.byteUtil!!.xorByte(array, value.toInt())!!
             }
         }
 

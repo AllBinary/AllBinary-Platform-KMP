@@ -98,11 +98,11 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.authenticated= this.weblisketSession!!.getAuthentication()
-this.sessionUserName= this.weblisketSession!!.getUserName()
-this.role= this.weblisketSession!!.getRole()
-this.attemptsInteger= this.weblisketSession!!.getAttempts()
-this.timeout= this.weblisketSession!!.getTimeout()
+this.authenticated= this.weblisketSession!!.getAuthentication()!!
+this.sessionUserName= this.weblisketSession!!.getUserName()!!
+this.role= this.weblisketSession!!.getRole()!!
+this.attemptsInteger= this.weblisketSession!!.getAttempts()!!
+this.timeout= this.weblisketSession!!.getTimeout()!!
 }
 
 
@@ -114,8 +114,6 @@ this.timeout= this.weblisketSession!!.getTimeout()
 
         try {
             this.weblisketSession!!.clear()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(TagSupport.EVAL_BODY_INCLUDE)
@@ -130,8 +128,6 @@ this.timeout= this.weblisketSession!!.getTimeout()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -186,8 +182,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -209,8 +203,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isRarelyUsedSession()
@@ -277,8 +269,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -293,8 +283,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Trying New login<p/>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -312,8 +300,6 @@ stringBuffer!!.append("Trying New login<p/>")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -334,8 +320,6 @@ stringBuffer!!.append("Trying New login<p/>")
 stringBuffer!!.append("Sorry your username and password is invalid on this page. ")
 stringBuffer!!.append("Trying New login<p/>")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -352,8 +336,6 @@ stringBuffer!!.append("Trying New login<p/>")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -373,8 +355,6 @@ stringBuffer!!.append("Trying New login<p/>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -382,8 +362,6 @@ stringBuffer!!.append("Trying New login<p/>")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -459,8 +437,6 @@ var roles = roles
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -469,8 +445,6 @@ var roles = roles
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -482,8 +456,6 @@ var roles = roles
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -507,8 +479,6 @@ var roles = roles
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 } catch(e: Exception)
@@ -522,8 +492,6 @@ var roles = roles
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -585,7 +553,7 @@ var password = password
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
 
-login= userEntityInterface!!.login(userName, password)
+login= userEntityInterface!!.login(userName, password)!!
 
     
                         if(login.compareTo(GLOBALS2.LOGINSUCCESS) == 0)
@@ -601,8 +569,6 @@ login= userEntityInterface!!.login(userName, password)
                                     {
                                     this.weblisketSession!!.setAttempts(Integer(0))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -613,16 +579,12 @@ login= userEntityInterface!!.login(userName, password)
                                 
 this.nextAttempt()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
 this.nextAttempt()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -637,8 +599,6 @@ this.nextAttempt()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -659,8 +619,6 @@ this.nextAttempt()
                                     {
                                     this.invalidateSession()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -670,8 +628,6 @@ this.nextAttempt()
 
                             {
                             this.weblisketSession!!.setTimeout(BooleanFactory.getInstance()!!.TRUE_STRING)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -689,8 +645,6 @@ this.nextAttempt()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -732,13 +686,13 @@ stringBuffer!!.append(" Role: ")
 stringBuffer!!.append(this.role.toString())
 stringBuffer!!.append("<br/>\n")
 stringBuffer!!.append("Time Left: ")
-stringBuffer!!.appendlong((this.role.getSessionTimeout() -(calendar.getTimeInMillis() -timeCreated)))
+stringBuffer!!.appendlong((this.role.getSessionTimeout() -(calendar.getTimeInMillis() -timeCreated)).toLong())
 stringBuffer!!.append("<br/>\n")
 stringBuffer!!.append("Inactivity Time Allowed: ")
-stringBuffer!!.appendlong(this.role.getSessionTimeout())
+stringBuffer!!.appendlong(this.role.getSessionTimeout().toLong())
 stringBuffer!!.append("<br/>\n")
 stringBuffer!!.append("Inactivity Time Allowed: ")
-stringBuffer!!.appendlong(this.role.getSessionInactivityTimeout())
+stringBuffer!!.appendlong(this.role.getSessionInactivityTimeout().toLong())
 stringBuffer!!.append("<br/>\n")
 
                                     }
@@ -749,14 +703,10 @@ stringBuffer!!.append("<br/>\n")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error"
@@ -768,8 +718,6 @@ stringBuffer!!.append("<br/>\n")
     open fun getRole()
         //nullable = true from not(false or (false and true)) = true
 : UserRole{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.role

@@ -141,8 +141,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreFront(storeHashMap)
 
@@ -150,8 +148,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreFront()
 
@@ -165,8 +161,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 : BasicArrayList{
 
     var storeFrontNames: BasicArrayList = super.getColumn(StoreFrontData.getInstance()!!.NAME)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -252,8 +246,6 @@ stringBuffer!!.append(this.sqlStrings!!.PRIMARY_KEY)
 stringBuffer!!.append(storeFrontData!!.NAME)
 stringBuffer!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -263,8 +255,6 @@ stringBuffer!!.append(this.sqlStrings!!.END)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -273,8 +263,6 @@ stringBuffer!!.append(this.sqlStrings!!.END)
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

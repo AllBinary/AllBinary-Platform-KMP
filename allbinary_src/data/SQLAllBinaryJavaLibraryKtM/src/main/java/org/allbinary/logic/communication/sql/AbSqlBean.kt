@@ -85,7 +85,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-field= rset.getString(requestedField)
+field= rset.getString(requestedField)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -101,13 +101,9 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_FIELD)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return field
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,8 +119,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_FIELD)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.FAILED_SQL_STATEMENT +sqlStatement
@@ -200,7 +194,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-field= rset.getString(requestedField)
+field= rset.getString(requestedField)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -216,13 +210,9 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_FIELD)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return field
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -241,8 +231,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_FIELD)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.FAILED_SQL_STATEMENT +sqlStatement
@@ -319,16 +307,14 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
                         for (i in 0 until size2)
 
         {
-columnName= keyArray2[i]!!.toString()
-field= rset.getObject(columnName)!!.toString()
+columnName= keyArray2[i]!!.toString()!!
+field= rset.getObject(columnName)!!.toString()!!
 
     
                         if(field.compareTo(columnsAndValues!!.get(columnName) as String) != 0)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.globals.GLOBALS2.NOTASUBSET
 
@@ -344,8 +330,6 @@ field= rset.getObject(columnName)!!.toString()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.globals.GLOBALS2.NOTASUBSET
 
@@ -353,8 +337,6 @@ field= rset.getObject(columnName)!!.toString()
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.globals.GLOBALS2.ISASUBSET
 
@@ -374,8 +356,6 @@ field= rset.getObject(columnName)!!.toString()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.FAILED_SQL_STATEMENT +sqlStatement

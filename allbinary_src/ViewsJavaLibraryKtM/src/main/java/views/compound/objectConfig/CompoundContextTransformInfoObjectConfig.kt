@@ -157,7 +157,7 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
 
     var replacementViewString: String = componentInterface!!.view()!!
 
-replacementViewString= DocumentToNode.convertDocumentToNodeString(replacementViewString)
+replacementViewString= DocumentToNode.convertDocumentToNodeString(replacementViewString)!!
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(startXMLHeader)
 stringBuffer!!.append(replacementViewString)
@@ -182,7 +182,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "get()")
 
     var replace: Replace = Replace(templateKey, templateValue)
 
-rootView= replace.all(rootView)
+rootView= replace.all(rootView)!!
 }
 
 
@@ -194,8 +194,6 @@ rootView= replace.all(rootView)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rootView
@@ -223,8 +221,6 @@ rootView= replace.all(rootView)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bais

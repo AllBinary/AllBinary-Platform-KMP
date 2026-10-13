@@ -72,8 +72,8 @@ open public class Sounds : Object {
 
             if (soundInterfaceCanBeNull != null) {
 
-                indexInteger = smallIntegerSingletonFactory!!.getAt(i)
-                indexString = indexInteger!!.toString()
+                indexInteger = smallIntegerSingletonFactory!!.getAt(i)!!
+                indexString = indexInteger!!.toString()!!
                 stringBuffer!!.delete(0, stringBuffer!!.length())
                 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
                 stringBuffer!!.append(indexString)
@@ -112,7 +112,7 @@ open public class Sounds : Object {
 
             if (soundInterfaceArray[index] != null) {
 
-                player = soundInterfaceArray[index]!!.getPlayerP()
+                player = soundInterfaceArray[index]!!.getPlayerP()!!
 
                 if (player != null) {
 
@@ -140,7 +140,7 @@ open public class Sounds : Object {
 
             if (soundInterfaceArray[index] != null) {
 
-                player = soundInterfaceArray[index]!!.getPlayerP()
+                player = soundInterfaceArray[index]!!.getPlayerP()!!
 
                 if (player != null) {
 

@@ -65,7 +65,7 @@ this.imageProcessorInput= imageProcessorInput
 
     var numberStringArray: Array<String?> = arrayOfNulls(101)
 
-numberStringArray[0]= Integer.toString( -1)
+numberStringArray[0]= Integer.toString( -1)!!
 
 
 
@@ -73,7 +73,7 @@ numberStringArray[0]= Integer.toString( -1)
                         for (index in 1 until 100)
 
         {
-numberStringArray[index]= index.toString()
+numberStringArray[index]= index.toString()!!
 }
 
 this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel(numberStringArray))
@@ -138,7 +138,7 @@ object: Thread()
                         if(percentAsFloat!!.toInt() !=  -1)
                         
                                     {
-                                    generatedBufferedImageArray= imageUtil!!.createBufferedImage2(imageProcessorInput!!.getBufferedImageArray(), percentAsFloat, true)
+                                    generatedBufferedImageArray= imageUtil!!.createBufferedImage2(imageProcessorInput!!.getBufferedImageArray(), percentAsFloat, true)!!
 
                                     }
                                 
@@ -147,7 +147,7 @@ object: Thread()
                         if(percent.toInt() !=  -1)
                         
                                     {
-                                    generatedBufferedImageArray= imageUtil!!.createBufferedImageForResize(imageProcessorInput!!.getBufferedImageArray(), percent, true)
+                                    generatedBufferedImageArray= imageUtil!!.createBufferedImageForResize(imageProcessorInput!!.getBufferedImageArray(), percent, true)!!
 
                                     }
                                 
@@ -158,7 +158,7 @@ object: Thread()
 
     var height: Integer = Integer(Integer.valueOf(this@ResizeImageJPanel.jTextField2!!.getText() as String))!!
 
-generatedBufferedImageArray= imageUtil!!.createBufferedImage3(imageProcessorInput!!.getBufferedImageArray(), width, height, true)
+generatedBufferedImageArray= imageUtil!!.createBufferedImage3(imageProcessorInput!!.getBufferedImageArray(), width, height, true)!!
 
                         }
                             
@@ -226,7 +226,8 @@ object: Thread()
     var imageProcessorInput: ImageProcessorInput = this@ResizeImageJPanel.getImageProcessorInput()!!
 
 
-    var size: Int = imageProcessorInput!!.getBufferedImageArray()!!.length
+    var size: Int = imageProcessorInput!!.getBufferedImageArray()!!.size
+                
 
 
     var bufferedImageArray: Array<BufferedImage?> = imageProcessorInput!!.getBufferedImageArray()!!
@@ -278,7 +279,8 @@ object: Thread()
     var imageProcessorInput: ImageProcessorInput = this@ResizeImageJPanel.getImageProcessorInput()!!
 
 
-    var size: Int = imageProcessorInput!!.getBufferedImageArray()!!.length
+    var size: Int = imageProcessorInput!!.getBufferedImageArray()!!.size
+                
 
 
     var bufferedImageArray: Array<BufferedImage?> = imageProcessorInput!!.getBufferedImageArray()!!
@@ -330,7 +332,8 @@ object: Thread()
     var imageProcessorInput: ImageProcessorInput = this@ResizeImageJPanel.getImageProcessorInput()!!
 
 
-    var size: Int = imageProcessorInput!!.getBufferedImageArray()!!.length
+    var size: Int = imageProcessorInput!!.getBufferedImageArray()!!.size
+                
 
 
     var bufferedImageArray: Array<BufferedImage?> = imageProcessorInput!!.getBufferedImageArray()!!
@@ -367,8 +370,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageProcessorInput

@@ -101,8 +101,6 @@ PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success +"<br/>"
 } catch(e: Exception)
@@ -119,8 +117,6 @@ PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error +"<br>" +"Exception: " +e +"<br>"
@@ -169,8 +165,6 @@ PaymentGatewayEntityFactory.getInstance()!!.update(paymentGatewayInterface)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success +"<br/>"
 } catch(e: Exception)
@@ -187,8 +181,6 @@ PaymentGatewayEntityFactory.getInstance()!!.update(paymentGatewayInterface)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error +"<br/>" +"Exception: " +e +"<br/>"
@@ -234,8 +226,6 @@ stringBuffer!!.append(gatewayName)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success +"<br/>"
 } catch(e: Exception)
@@ -252,8 +242,6 @@ stringBuffer!!.append(gatewayName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error +"<br/>" +"Exception: " +e +"<br>"
@@ -280,8 +268,6 @@ stringBuffer!!.append(gatewayName)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -298,8 +284,6 @@ stringBuffer!!.append(gatewayName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -326,8 +310,6 @@ stringBuffer!!.append(gatewayName)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -344,8 +326,6 @@ stringBuffer!!.append(gatewayName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -375,8 +355,6 @@ stringBuffer!!.append(gatewayName)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -393,8 +371,6 @@ stringBuffer!!.append(gatewayName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -424,8 +400,6 @@ stringBuffer!!.append(gatewayName)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -442,8 +416,6 @@ stringBuffer!!.append(gatewayName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageRotationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageRotationUtil.instance
 }
@@ -162,8 +160,6 @@ originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
 
 
     var bufferedImage: BufferedImage = this.imageJ2SERotationUtil!!.createRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -48,7 +48,7 @@ open public class GeographicMapCellPositionTracking : Object {
 
         if (geographicMapCellPosition != this.previousGeographicMapCellPosition) {
 
-            this.currentCellType = geographicMap!!.getCellTypeAt(geographicMapCellPosition)
+            this.currentCellType = geographicMap!!.getCellTypeAt(geographicMapCellPosition)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.
@@ -80,7 +80,7 @@ open public class GeographicMapCellPositionTracking : Object {
                 geographicMapInterface!!.getCellPositionAtXY(
                     layer.getXP() + layer.getHalfWidth(),
                     layer.getYP() + layer.getHalfHeight(),
-                )
+                )!!
 
             if (this.newGeographicMapCellPosition != this.currentGeographicMapCellPosition) {
 

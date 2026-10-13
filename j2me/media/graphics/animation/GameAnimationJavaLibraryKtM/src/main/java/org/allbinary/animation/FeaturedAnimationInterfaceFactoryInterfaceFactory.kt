@@ -160,7 +160,7 @@ open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedRe
 
                 resourceTypeAvailableList!!.add(featureInterface)
                 animationInterfaceFactoryInterface =
-                    featureInterface!!.getBasicAnimationInterfaceFactoryInstance(resource)
+                    featureInterface!!.getBasicAnimationInterfaceFactoryInstance(resource)!!
 
                 if (
                     animationInterfaceFactoryInterface !=

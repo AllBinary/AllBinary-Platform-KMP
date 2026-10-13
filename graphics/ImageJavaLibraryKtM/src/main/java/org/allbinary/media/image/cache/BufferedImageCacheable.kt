@@ -52,8 +52,6 @@ this.setBufferedImage(BufferedImage(key.getWidth(), key.getHeight(), key.getType
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.key
 }
@@ -62,8 +60,6 @@ this.setBufferedImage(BufferedImage(key.getWidth(), key.getHeight(), key.getType
     open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
 : BufferedImage{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.bufferedImage
@@ -87,8 +83,6 @@ this.bufferedImage= bufferedImage
 stringBuffer!!.append(this::class.toString()!!)
 stringBuffer!!.append(" ")
 stringBuffer!!.append(this.getKey()!!.toString())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

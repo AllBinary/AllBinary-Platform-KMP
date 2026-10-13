@@ -56,8 +56,6 @@ this.userEmailEventConfigurationInterface= userEmailEventConfigurationInterface
 hashMap!!.put(UserEmailEventConfigurationData.NAME, this.userEmailEventConfigurationInterface!!.getName())
 hashMap!!.put(UserEmailEventConfigurationData.LISTENER_CLASSPATH, this.userEmailEventConfigurationInterface!!.getEventListenerClassPath())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -68,8 +66,6 @@ hashMap!!.put(UserEmailEventConfigurationData.LISTENER_CLASSPATH, this.userEmail
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserEmailEventConfigurationData.NAME
@@ -86,8 +82,6 @@ hashMap!!.put(UserEmailEventConfigurationData.LISTENER_CLASSPATH, this.userEmail
 
 vector.add(this.userEmailEventConfigurationInterface!!.getName())
 vector.add(this.userEmailEventConfigurationInterface!!.getEventListenerClassPath())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector

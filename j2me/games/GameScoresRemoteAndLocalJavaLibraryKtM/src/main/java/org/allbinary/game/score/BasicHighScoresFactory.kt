@@ -52,15 +52,11 @@ companion object {
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -122,7 +118,7 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
 
         try {
             logUtil!!.putF(this@BasicHighScoresFactory.commonStrings!!.START, this, FETCH)
-highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))
+highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))!!
 
     var gameType: GameType = gameInfo!!.getGameType()!!
 
@@ -150,7 +146,7 @@ highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, game
 
                                     }
                                 
-highScoresArray[1]= RemoteHighScores.getInstancePreload(abeClientInformation, softwareInformation, gameInfo2, WORLD_TOP_SCORES, SCORES, BooleanFactory.getInstance()!!.FALSE, preload)
+highScoresArray[1]= RemoteHighScores.getInstancePreload(abeClientInformation, softwareInformation, gameInfo2, WORLD_TOP_SCORES, SCORES, BooleanFactory.getInstance()!!.FALSE, preload)!!
 logUtil!!.putF(this@BasicHighScoresFactory.commonStrings!!.END, this, FETCH)
 LastFetchHighScoresFactory.getInstance()!!.highScoresArray= highScoresArray
 highScoresResultsListener!!.setHighScoresArray(highScoresArray)
@@ -169,8 +165,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
     open fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresHelperBaseInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HighScoresHelper2()

@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbKeys{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbKeys.instance
 }
@@ -76,15 +74,11 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Temp For Input Library"
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeLicenseInterfaceFactory.getInstance()!!.getLicenseInstance(abeClientInformation)!!.getKey(keyName)

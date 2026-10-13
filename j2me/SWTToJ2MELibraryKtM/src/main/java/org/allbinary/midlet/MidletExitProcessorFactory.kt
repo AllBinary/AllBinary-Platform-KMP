@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : MidletExitProcessorFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MidletExitProcessorFactory.instance
 }
@@ -67,8 +65,6 @@ var midlet = midlet
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Processor.getInstance()
 
@@ -76,8 +72,6 @@ var midlet = midlet
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MidletExitProcessor(midlet)
 

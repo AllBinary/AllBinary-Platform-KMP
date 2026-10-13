@@ -120,7 +120,7 @@ open public class CollidableDestroyableDamageableLayer :
         this.initWidth = layerInfo!!.getWidth()
         this.initHeight = layerInfo!!.getHeight()
         this.groupInterface = groupInterface
-        this.pickupBehavior = PickupBehavior.getNullInstance()
+        this.pickupBehavior = PickupBehavior.getNullInstance()!!
     }
 
     @Throws(Exception::class)

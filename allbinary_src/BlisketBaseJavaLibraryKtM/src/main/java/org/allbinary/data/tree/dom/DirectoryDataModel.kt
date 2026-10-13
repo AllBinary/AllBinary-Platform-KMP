@@ -51,7 +51,7 @@ public constructor (file: AbFile)
             : super()
         {
     //var file = file
-this.fileBasicArrayList= Directory.getInstance()!!.search(file)
+this.fileBasicArrayList= Directory.getInstance()!!.search(file)!!
 this.transformDocumentInterface= TransformDocumentFactory.getInstance() as TransformDocumentInterface
 }
 
@@ -61,8 +61,6 @@ this.transformDocumentInterface= TransformDocumentFactory.getInstance() as Trans
     open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NO_TYPE
@@ -74,8 +72,6 @@ this.transformDocumentInterface= TransformDocumentFactory.getInstance() as Trans
     open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -93,8 +89,6 @@ this.transformDocumentInterface= transformDocumentInterface
     open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformDocumentInterface
@@ -128,11 +122,9 @@ this.transformDocumentInterface= transformDocumentInterface
         {
 nextFile= this.fileBasicArrayList!!.get(index) as AbFile
 fileNode= FileDomDataModel(nextFile).
-                            toXmlNode(document)
+                            toXmlNode(document)!!
 dirNode!!.appendChild(fileNode)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -145,8 +137,6 @@ dirNode!!.appendChild(fileNode)
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransformDocumentInterface()!!.getDoc()
@@ -162,8 +152,6 @@ dirNode!!.appendChild(fileNode)
     var node: Node = this.toXmlNode(this.getTransformDocumentInterface()!!.getDoc())!!
 
 this.getTransformDocumentInterface()!!.getBaseNode()!!.appendChild(node)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XmlDocumentHelper.toString(this.getTransformDocumentInterface()!!.getDoc())

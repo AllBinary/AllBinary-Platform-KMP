@@ -70,7 +70,7 @@ open public class ClientInformation : Object, AbeClientInformationInterface {
                 .append(shortName)!!
                 .append(CommonSeps.getInstance()!!.UNDERSCORE)!!
                 .append(version)!!
-                .toString()
+                .toString()!!
         this.init()
     }
 

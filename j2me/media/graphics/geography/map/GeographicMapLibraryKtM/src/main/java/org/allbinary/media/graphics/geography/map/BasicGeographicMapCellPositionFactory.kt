@@ -42,8 +42,8 @@ open public class BasicGeographicMapCellPositionFactory : Object {
         // var geographicMapInterface = geographicMapInterface
         this.geographicMapInterface = geographicMapInterface
         this.geographicMapCellPositionFactoryInterface =
-            this.geographicMapInterface!!.getGeographicMapCellPositionFactoryInterface()
-        this.tiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()
+            this.geographicMapInterface!!.getGeographicMapCellPositionFactoryInterface()!!
+        this.tiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
         this.columns = this.tiledLayer!!.getColumns()
         this.rows = this.tiledLayer!!.getRows()
         this.geographicMapCellPositionArray =
@@ -100,7 +100,7 @@ open public class BasicGeographicMapCellPositionFactory : Object {
 
                 for (row in 0 until rows) {
 
-                    cellPosition = this.getAt(column, row)
+                    cellPosition = this.getAt(column, row)!!
                     geographicMapCelPositionFactoryInitVisitorInterface!!.visit(
                         tiledLayer,
                         cellPosition,

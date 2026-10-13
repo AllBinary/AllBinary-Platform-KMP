@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageCreationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageCreationUtil.instance
 }
@@ -66,8 +64,6 @@ companion object {
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(this::class.toString()!!, width, height)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
 }
@@ -84,8 +80,6 @@ companion object {
     //var maxScaleY = maxScaleY
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(this::class.toString()!!, (width *maxScaleX).toInt() +1, (height *maxScaleY).toInt() +1)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

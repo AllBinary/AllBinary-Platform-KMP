@@ -111,7 +111,7 @@ open public class User
 public constructor ()
             : super()
         {
-this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance()
+this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance()!!
 this.password= Password(StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
@@ -121,7 +121,7 @@ public constructor (request: HttpServletRequest)
     //var request = request
 this.getFormData(RequestParams(request).
                             toHashMap())
-this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(this.getRole())
+this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(this.getRole())!!
 }
 
 public constructor (userHashMap: HashMap<Any, Any>)
@@ -129,7 +129,7 @@ public constructor (userHashMap: HashMap<Any, Any>)
         {
     //var userHashMap = userHashMap
 this.getFormData(userHashMap)
-this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(this.getRole())
+this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(this.getRole())!!
 }
 
 
@@ -140,7 +140,7 @@ this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(t
 {
     //var userHashMap = userHashMap
 this.userName= UserName(userHashMap).
-                            get()
+                            get()!!
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -155,8 +155,8 @@ this.userName= UserName(userHashMap).
                         if(stringValidationUtil!!.isEmpty(this.userName) && stringValidationUtil!!.isEmpty(passwordString))
                         
                                     {
-                                    this.userName= stringUtil!!.getNonNull(userHashMap!!.get(WeblisketSessionData.REMOVABLEUSERNAME) as String)
-passwordString= stringUtil!!.getNonNull(userHashMap!!.get(WeblisketSessionData.REMOVABLEPASSWORD) as String)
+                                    this.userName= stringUtil!!.getNonNull(userHashMap!!.get(WeblisketSessionData.REMOVABLEUSERNAME) as String)!!
+passwordString= stringUtil!!.getNonNull(userHashMap!!.get(WeblisketSessionData.REMOVABLEPASSWORD) as String)!!
 
                                     }
                                 
@@ -167,27 +167,27 @@ passwordString= stringUtil!!.getNonNull(userHashMap!!.get(WeblisketSessionData.R
     var secret: String = stringUtil!!.getNonNull(userHashMap!!.get(UserData.SECRET) as String)!!
 
 this.password= Password(passwordString)
-this.prefixName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.PREFIXNAME) as String)
-this.firstName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.FIRSTNAME) as String)
-this.lastName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.LASTNAME) as String)
-this.middleName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.MIDDLENAME) as String)
-this.suffixName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.SUFFIXNAME) as String)
-this.company= stringUtil!!.getNonNull(userHashMap!!.get(UserData.COMPANY) as String)
-this.positionAtCompany= stringUtil!!.getNonNull(userHashMap!!.get(UserData.POSITIONATCOMPANY) as String)
-this.mainEmail= stringUtil!!.getNonNull(userHashMap!!.get(UserData.MAINEMAIL) as String)
-this.secondaryEmail= stringUtil!!.getNonNull(userHashMap!!.get(UserData.SECONDARYEMAIL) as String)
-this.homePhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.HOMEPHONE) as String)
-this.cellPhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.CELLPHONE) as String)
-this.workPhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.WORKPHONE) as String)
-this.otherContact= stringUtil!!.getNonNull(userHashMap!!.get(UserData.OTHERCONTACT) as String)
-this.electronicDevice= stringUtil!!.getNonNull(userHashMap!!.get(UserData.ELECTRONICDEVICE) as String)
-this.fax= stringUtil!!.getNonNull(userHashMap!!.get(UserData.FAX) as String)
-this.role= UserRoleB.getRole(userHashMap!!.get(UserRoleData.NAME.toString()) as String)
-this.permissions= stringUtil!!.getNonNull(userHashMap!!.get(UserData.PERMISSIONS) as String)
+this.prefixName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.PREFIXNAME) as String)!!
+this.firstName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.FIRSTNAME) as String)!!
+this.lastName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.LASTNAME) as String)!!
+this.middleName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.MIDDLENAME) as String)!!
+this.suffixName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.SUFFIXNAME) as String)!!
+this.company= stringUtil!!.getNonNull(userHashMap!!.get(UserData.COMPANY) as String)!!
+this.positionAtCompany= stringUtil!!.getNonNull(userHashMap!!.get(UserData.POSITIONATCOMPANY) as String)!!
+this.mainEmail= stringUtil!!.getNonNull(userHashMap!!.get(UserData.MAINEMAIL) as String)!!
+this.secondaryEmail= stringUtil!!.getNonNull(userHashMap!!.get(UserData.SECONDARYEMAIL) as String)!!
+this.homePhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.HOMEPHONE) as String)!!
+this.cellPhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.CELLPHONE) as String)!!
+this.workPhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.WORKPHONE) as String)!!
+this.otherContact= stringUtil!!.getNonNull(userHashMap!!.get(UserData.OTHERCONTACT) as String)!!
+this.electronicDevice= stringUtil!!.getNonNull(userHashMap!!.get(UserData.ELECTRONICDEVICE) as String)!!
+this.fax= stringUtil!!.getNonNull(userHashMap!!.get(UserData.FAX) as String)!!
+this.role= UserRoleB.getRole(userHashMap!!.get(UserRoleData.NAME.toString()) as String)!!
+this.permissions= stringUtil!!.getNonNull(userHashMap!!.get(UserData.PERMISSIONS) as String)!!
 
     
                         if(!stringValidationUtil!!.isEmpty(this.permissions) && this.permissions.compareTo(StoreFrontData.getInstance()!!.NAME) == 0)
-                        this.permissions= stringUtil!!.getNonNull(userHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String)
+                        this.permissions= stringUtil!!.getNonNull(userHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String)!!
                              else 
     
                         if(this.permissions == 
@@ -199,7 +199,7 @@ this.permissions= stringUtil!!.getNonNull(userHashMap!!.get(UserData.PERMISSIONS
 
                                     }
                                 
-this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!.ENABLE) as String)
+this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!.ENABLE) as String)!!
 }
 
 
@@ -260,8 +260,6 @@ this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -278,8 +276,6 @@ this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -329,8 +325,6 @@ stringBuffer!!.append(this.password.getValidationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -344,8 +338,6 @@ stringBuffer!!.append(this.password.getValidationInfo())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
@@ -548,8 +540,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
 }
@@ -558,8 +548,6 @@ this.enable= enable
     open fun getPrefixName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.prefixName
@@ -570,8 +558,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.firstName
 }
@@ -580,8 +566,6 @@ this.enable= enable
     open fun getLastName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.lastName
@@ -592,8 +576,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.middleName
 }
@@ -602,8 +584,6 @@ this.enable= enable
     open fun getSuffixName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.suffixName
@@ -614,8 +594,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.company
 }
@@ -624,8 +602,6 @@ this.enable= enable
     open fun getPositionAtCompany()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.positionAtCompany
@@ -636,8 +612,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mainEmail
 }
@@ -646,8 +620,6 @@ this.enable= enable
     open fun getSecondaryEmail()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.secondaryEmail
@@ -658,8 +630,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.homePhone
 }
@@ -668,8 +638,6 @@ this.enable= enable
     open fun getCellPhone()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cellPhone
@@ -680,8 +648,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.workPhone
 }
@@ -690,8 +656,6 @@ this.enable= enable
     open fun getOtherContact()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.otherContact
@@ -702,8 +666,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.electronicDevice
 }
@@ -712,8 +674,6 @@ this.enable= enable
     open fun getFax()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fax
@@ -724,8 +684,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : UserRole{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.role
 }
@@ -734,8 +692,6 @@ this.enable= enable
     open fun getPermissions()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.permissions
@@ -746,8 +702,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.encryption
 }
@@ -757,8 +711,6 @@ this.enable= enable
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.secret
 }
@@ -767,8 +719,6 @@ this.enable= enable
     open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.password.get()
@@ -817,8 +767,6 @@ values.add(this.enable)
 
 values.add(time)
 values.add(time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -877,8 +825,6 @@ values.put(EntryData.getInstance()!!.ENABLE, this.enable)
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
 }
@@ -887,8 +833,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun toPasswordHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.password.toHashMap(this.secret)
@@ -916,8 +860,6 @@ var weblisketSession = weblisketSession
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -929,8 +871,6 @@ var weblisketSession = weblisketSession
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName as Object
 }
@@ -939,8 +879,6 @@ var weblisketSession = weblisketSession
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -952,8 +890,6 @@ var weblisketSession = weblisketSession
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -962,8 +898,6 @@ var document = document
     open fun getUserConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserConfigurationInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userConfigurationInterface

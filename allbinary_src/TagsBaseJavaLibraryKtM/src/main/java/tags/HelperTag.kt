@@ -73,7 +73,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
 
                                     }
                                 
-this.anyType= this.tagHelperFactoryInterface!!.getInstance(this.getPropertiesHashMap(), this.pageContext)
+this.anyType= this.tagHelperFactoryInterface!!.getInstance(this.getPropertiesHashMap(), this.pageContext)!!
 
                                     }
                                 
@@ -83,8 +83,6 @@ this.anyType= this.tagHelperFactoryInterface!!.getInstance(this.getPropertiesHas
     open fun getHelper()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.anyType
@@ -106,8 +104,6 @@ this.anyType= this.tagHelperFactoryInterface!!.getInstance(this.getPropertiesHas
 this.anyType= 
                                         null
                                     
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doEndTag()

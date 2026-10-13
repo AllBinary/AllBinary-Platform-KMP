@@ -71,8 +71,7 @@ var frame = frame
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
-    var motionRectanglesResultsFrameCacheable: MotionRectanglesResultsFrameCacheable = 
-                                    (getInstance as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
+    var motionRectanglesResultsFrameCacheable: MotionRectanglesResultsFrameCacheable = (AllMotionRectanglesResultsCacheSingleton.getInstance() as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
 
 
     
@@ -85,13 +84,11 @@ var frame = frame
     var motionRectangles: MotionRectangles = motionRectanglesResultsFrameCacheable!!.getMotionRectangles()!!
 
 this.save(motionRectangles, frame)
-motionRectanglesResultsFrameCacheable= 
-                                    (getInstance as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
-motionRectangles= motionRectanglesResultsFrameCacheable!!.getMotionRectangles()
+motionRectanglesResultsFrameCacheable= (ConsolidatedMotionRectanglesResultsCacheSingleton.getInstance() as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
+motionRectangles= motionRectanglesResultsFrameCacheable!!.getMotionRectangles()!!
 this.save(motionRectangles, frame)
-motionRectanglesResultsFrameCacheable= 
-                                    (getInstance as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
-motionRectangles= motionRectanglesResultsFrameCacheable!!.getMotionRectangles()
+motionRectanglesResultsFrameCacheable= (ConstrainedMotionRectanglesResultsCacheSingleton.getInstance() as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
+motionRectangles= motionRectanglesResultsFrameCacheable!!.getMotionRectangles()!!
 this.save(motionRectangles, frame)
 
                                     }
@@ -187,7 +184,7 @@ bufferedImageGraphicsArray= arrayOfNulls(this.NUMBER_OF_IMAGES)
                         for (index in 0 until this.NUMBER_OF_IMAGES)
 
         {
-bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedImage()!!.getGraphics()
+bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedImage()!!.getGraphics()!!
 }
 
 

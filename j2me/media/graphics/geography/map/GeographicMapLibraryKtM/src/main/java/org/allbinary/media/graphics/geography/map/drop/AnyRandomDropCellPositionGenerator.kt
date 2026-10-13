@@ -66,7 +66,7 @@ open public class AnyRandomDropCellPositionGenerator : BaseDropCellPositionGener
             randomColumn = randomFactory!!.getAbsoluteNextInt(tiledLayer!!.getColumns())
             randomRow = randomFactory!!.getAbsoluteNextInt(tiledLayer!!.getRows())
             geographicMapCellPosition =
-                basicGeographicMapCellPositionFactory!!.getAt(randomColumn, randomRow)
+                basicGeographicMapCellPositionFactory!!.getAt(randomColumn, randomRow)!!
 
             if (this.isDropAllowedAt(geographicMapCellPosition)) {
 

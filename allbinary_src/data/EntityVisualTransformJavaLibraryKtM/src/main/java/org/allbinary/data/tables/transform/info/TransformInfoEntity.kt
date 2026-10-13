@@ -203,8 +203,6 @@ hashMap!!.put(transformInfoData!!.DATA, Encoder.decode.toCharArray())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoFactoryInterface!!.getInstance(hashMap, propertiesHashMap, pageContext)
 
@@ -212,8 +210,6 @@ hashMap!!.put(transformInfoData!!.DATA, Encoder.decode.toCharArray())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -252,8 +248,6 @@ objectConfigVector!!.add(this.transformInfoObjectConfigAndManipulatorFactoryInte
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return objectConfigVector
 }
@@ -286,8 +280,6 @@ var storeName = storeName
 
 viewNameVector!!.add(viewNameString)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -334,8 +326,6 @@ stringBuffer!!.append(this.sqlStrings!!.PRIMARY_KEY)
 stringBuffer!!.append(transformInfoData!!.NAME)
 stringBuffer!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -344,8 +334,6 @@ stringBuffer!!.append(this.sqlStrings!!.END)
     open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
@@ -363,8 +351,6 @@ super.updateWhere(TransformInfoData.getInstance()!!.NAME, updatedValues!!.get(Tr
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

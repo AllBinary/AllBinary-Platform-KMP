@@ -56,8 +56,6 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
         //nullable = true from not(false or (false and true)) = true
 : Email{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.getEmail() as Email
 }
@@ -67,8 +65,6 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
         //nullable = true from not(false or (false and true)) = true
 : MimeMessage{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.getMimeMessage()
 }
@@ -77,8 +73,6 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
     open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.getDebugInfo()
@@ -91,8 +85,6 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.log()
 }
@@ -103,8 +95,6 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
     open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.toHashMap()
@@ -118,8 +108,6 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
 : Node{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.toXmlNode(document)
 }
@@ -130,8 +118,6 @@ var document = document
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.email.toXmlDoc()

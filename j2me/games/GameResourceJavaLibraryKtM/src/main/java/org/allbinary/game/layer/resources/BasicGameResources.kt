@@ -80,13 +80,13 @@ open public class BasicGameResources : Object {
         BasicGameResources.stringBuffer!!.append(ROOT)
         BasicGameResources.stringBuffer!!.append(string)
         BasicGameResources.stringBuffer!!.append(sizeString)
-        this.RESOURCE = BasicGameResources.stringBuffer!!.toString()
+        this.RESOURCE = BasicGameResources.stringBuffer!!.toString()!!
         BasicGameResources.stringBuffer!!.delete(0, BasicGameResources.stringBuffer!!.length())
         BasicGameResources.stringBuffer!!.append(ROOT)
         BasicGameResources.stringBuffer!!.append(DESTROY)
         BasicGameResources.stringBuffer!!.append(string)
         BasicGameResources.stringBuffer!!.append(sizeString)
-        this.RESOURCE_DESTROY = BasicGameResources.stringBuffer!!.toString()
+        this.RESOURCE_DESTROY = BasicGameResources.stringBuffer!!.toString()!!
     }
 
     @Throws(Exception::class)

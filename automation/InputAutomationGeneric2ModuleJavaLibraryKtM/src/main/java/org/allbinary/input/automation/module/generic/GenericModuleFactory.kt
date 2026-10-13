@@ -59,13 +59,10 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : RunnableInterface{
 
-    var genericProfile: GenericProfile = 
-                                    (getConfigurationJPanel as GenericModuleConfigurationJPanel).getSelectedGenericProfile()!!
+    var genericProfile: GenericProfile = (this.getConfigurationJPanel() as GenericModuleConfigurationJPanel).getSelectedGenericProfile()!!
 
 
     var inputAutomationActionInterface: InputAutomationActionInterface = GenericInputAutomationAction() as InputAutomationActionInterface
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

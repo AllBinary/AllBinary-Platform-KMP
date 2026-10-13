@@ -65,8 +65,6 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -90,8 +88,6 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -119,8 +115,6 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -144,8 +138,6 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -173,8 +165,6 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -198,8 +188,6 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -252,8 +240,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -274,8 +260,6 @@ this.install()
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -288,15 +272,11 @@ this.install()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -304,8 +284,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

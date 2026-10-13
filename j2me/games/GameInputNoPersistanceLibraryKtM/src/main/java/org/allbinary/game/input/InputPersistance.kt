@@ -80,7 +80,7 @@ open public class InputPersistance : BasicPersitance {
                 this,
                 this.persistanceStrings!!.LOAD_ALL,
             )
-            hashtable = StdUtil.getInstance()!!.createHashtable()
+            hashtable = StdUtil.getInstance()!!.createHashtable()!!
             this.valueList!!.add(hashtable)
             this.idList!!.add(smallIntegerSingletonFactory!!.getAt(id))
         }

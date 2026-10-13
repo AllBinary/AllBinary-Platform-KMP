@@ -107,11 +107,11 @@ open public class AllBinaryMediaManager : Object {
 
                     if (soundInterfaceArray[i] != null) {
 
-                        player = soundInterfaceArray[i]!!.getPlayerP()
+                        player = soundInterfaceArray[i]!!.getPlayerP()!!
 
                         if (player != null) {
 
-                            player2 = (player as PlayerComposite).getPlayerP()
+                            player2 = (player as PlayerComposite).getPlayerP()!!
 
                             if (player2 is AndroidMediaPlayerWrapper) {
 

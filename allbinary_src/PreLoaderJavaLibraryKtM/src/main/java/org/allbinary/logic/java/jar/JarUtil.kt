@@ -101,7 +101,9 @@ this.jarURL= jarURL
     var i: Int = 0
 
 
-        while((i= jis.read(cache, offset, cache.size -offset)) !=  -1)
+        while((
+                        { i= jis.read(cache, offset, cache.size -offset); i }()
+                    ) !=  -1)
         {
 offset += i
 

@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PlatformRecordIdUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PlatformRecordIdUtil.instance
 }
@@ -63,8 +61,6 @@ companion object {
 : String{
     //var abeClientInformation = abeClientInformation
     //var baseRecordId = baseRecordId
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().

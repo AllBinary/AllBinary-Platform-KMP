@@ -94,8 +94,6 @@ this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterfac
         //nullable = true from not(false or (false and true)) = true
 : UserEmailEventsConfigurationInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userEmailEventsConfigurationInterface
 }
@@ -153,8 +151,6 @@ var document = document
 
 node.appendChild(userEmailEventConfigurationView!!.toXmlNode(document))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

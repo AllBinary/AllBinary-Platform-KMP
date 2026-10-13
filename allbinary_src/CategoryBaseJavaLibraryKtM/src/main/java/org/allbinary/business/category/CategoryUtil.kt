@@ -51,8 +51,6 @@ var categoryPath = categoryPath
     var count: Int = StringUtils.countMatches(categoryPath!!.toString(), AbPathData.getInstance()!!.SEPARATOR)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return count
 }
@@ -77,8 +75,6 @@ var node = node
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return attrNode!!.getValue()
 
@@ -96,8 +92,6 @@ var node = node
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DomNodeHelper.getTextNodeValue(labelNode)
 
@@ -106,8 +100,6 @@ var node = node
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING

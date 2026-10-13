@@ -130,7 +130,8 @@ open public class HighScoreNamePersistanceSingleton : Object {
                 this,
                 this.commonStrings!!.delete,
             )
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
             recordStore!!.deleteRecord(deleteId)
         } catch (e: Exception) {
 
@@ -171,7 +172,7 @@ open public class HighScoreNamePersistanceSingleton : Object {
                 var LOADING_ID: String = "Loading id: "
 
                 recordStore =
-                    RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+                    RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
 
                 var recordEnum: RecordEnumeration =
                     recordStore!!.enumerateRecords(
@@ -198,12 +199,12 @@ open public class HighScoreNamePersistanceSingleton : Object {
                         this,
                         this.commonStrings!!.LOAD,
                     )
-                    recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
+                    recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)!!
                     byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
                     inputStream = DataInputStream(byteArrayInputStream)
 
                     while (inputStream!!.available() > 0) {
-                        this.name = inputStream!!.readUTF()
+                        this.name = inputStream!!.readUTF()!!
                     }
 
                     this.nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getAt(id))
@@ -261,7 +262,8 @@ open public class HighScoreNamePersistanceSingleton : Object {
                 this,
                 this.commonStrings!!.SAVE,
             )
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
 
             var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
 

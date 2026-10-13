@@ -64,8 +64,6 @@ this.body= GenericBodyValidation(document)
     var isValid: Boolean = this.body.isValid()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -79,8 +77,6 @@ this.body= GenericBodyValidation(document)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -99,8 +95,6 @@ this.body= GenericBodyValidation(document)
 
 stringBuffer!!.append(this.body.validationInfo())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -115,8 +109,6 @@ stringBuffer!!.append(this.body.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -128,8 +120,6 @@ stringBuffer!!.append(this.body.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -139,8 +129,6 @@ stringBuffer!!.append(this.body.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

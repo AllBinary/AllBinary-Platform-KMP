@@ -43,7 +43,7 @@ open public class AdvancedRTSLayerFormFactory : RTSLayerFormFactory {
 
             var items: Array<ABCustomItem?> = itemArrayFactoryInterface!!.getItems()!!
 
-            scrollSelectionForm = RTSScrollSelectionFormFactory.getInstance(label, items)
+            scrollSelectionForm = RTSScrollSelectionFormFactory.getInstance(label, items)!!
         } catch (e: Exception) {
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!

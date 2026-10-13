@@ -44,8 +44,6 @@ open public class InputAutomationModuleFactoryInterface
         //nullable = true from not(false or (false and true)) = true
 : String?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -55,8 +53,6 @@ open public class InputAutomationModuleFactoryInterface
         //nullable = true from not(false or (false and true)) = true
 : JPanel?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -65,8 +61,6 @@ open public class InputAutomationModuleFactoryInterface
     open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
 : HelpSet?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -78,8 +72,6 @@ open public class InputAutomationModuleFactoryInterface
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RunnableInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -319,8 +319,6 @@ this.blankGenericProfileActionJPanel!!.repaint()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionJPanel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileActionJPanel
 }
@@ -337,8 +335,6 @@ this.genericProfileActionJPanel= genericProfileActionJPanel
     open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActions{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileActions

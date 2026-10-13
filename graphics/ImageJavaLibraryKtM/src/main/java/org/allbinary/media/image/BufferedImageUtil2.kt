@@ -27,8 +27,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : BufferedImageUtil2{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BufferedImageUtil2.instance
 }
@@ -117,8 +115,6 @@ columnIndex++
 }
 
 g.dispose()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage

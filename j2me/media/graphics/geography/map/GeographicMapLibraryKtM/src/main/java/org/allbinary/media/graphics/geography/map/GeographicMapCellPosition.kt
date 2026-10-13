@@ -48,8 +48,8 @@ open public class GeographicMapCellPosition : CellPosition {
 
         var pointFactory: PointFactory = PointFactory.getInstance()!!
 
-        this.point = pointFactory!!.createXY(x, y)
-        this.midPoint = pointFactory!!.createXY(x + (width shr 1), y + (height shr 1))
+        this.point = pointFactory!!.createXY(x, y)!!
+        this.midPoint = pointFactory!!.createXY(x + (width shr 1), y + (height shr 1))!!
     }
 
     open fun getPoint()

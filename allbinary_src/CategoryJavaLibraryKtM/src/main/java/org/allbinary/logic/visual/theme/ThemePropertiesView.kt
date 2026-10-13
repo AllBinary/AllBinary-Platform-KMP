@@ -56,8 +56,6 @@ var document = document
     var node: Node = ModDomHelper.createNameValueNodes(document, ThemeData.getInstance()!!.NAME, this.themeInterface!!.toHashMap())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }

@@ -52,8 +52,6 @@ var node = node
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mountable
 }
@@ -70,8 +68,6 @@ this.mountable= mountable
     open fun isFrameable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frameable
@@ -90,8 +86,6 @@ this.frameable= frameable
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.quickFrameable
 }
@@ -108,8 +102,6 @@ this.quickFrameable= quickFrameable
     open fun getMountedLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mountedLink

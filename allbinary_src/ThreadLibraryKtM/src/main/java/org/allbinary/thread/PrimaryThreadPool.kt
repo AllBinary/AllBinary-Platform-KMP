@@ -55,7 +55,7 @@ open public class PrimaryThreadPool : ThreadPool {
         this.logUtil!!.putF(
             StringMaker()
                 .append(StringUtil.getInstance()!!.toString(task))!!
-                .appendlong(System.currentTimeMillis())!!
+                .appendlong(System.currentTimeMillis().toLong())!!
                 .toString(),
             this,
             this.threadPoolStrings!!.ADD_TASK,

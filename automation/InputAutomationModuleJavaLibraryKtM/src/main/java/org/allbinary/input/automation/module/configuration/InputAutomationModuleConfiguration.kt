@@ -176,8 +176,6 @@ var document = document
 
 node.appendChild(classNameNode)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -186,8 +184,6 @@ node.appendChild(classNameNode)
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -207,8 +203,6 @@ this.name= name
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.className
 }
@@ -226,8 +220,6 @@ this.className= className
     open fun getInputAutomationModuleInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputAutomationModuleFactoryInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputAutomationModuleInterface

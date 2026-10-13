@@ -78,15 +78,13 @@ stringBuffer!!.append(this.getUserNameKey())
 stringBuffer!!.append(this.getUserName())
 stringBuffer!!.append(this.getPasswordKey())
 stringBuffer!!.append(this.getPassword())
-this.url= stringBuffer!!.toString()
+this.url= stringBuffer!!.toString()!!
 }
 
 
     open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.url
@@ -97,8 +95,6 @@ this.url= stringBuffer!!.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.jdbcDriver
 }
@@ -107,8 +103,6 @@ this.url= stringBuffer!!.toString()
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -119,8 +113,6 @@ this.url= stringBuffer!!.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
 }
@@ -129,8 +121,6 @@ this.url= stringBuffer!!.toString()
     open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.password
@@ -159,15 +149,13 @@ stringBuffer!!.append(this.getPort())
                                     }
                                 
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-this.host= stringBuffer!!.toString()
+this.host= stringBuffer!!.toString()!!
 }
 
 
     open fun getHost()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.host
@@ -178,8 +166,6 @@ this.host= stringBuffer!!.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.schema
 }
@@ -189,8 +175,6 @@ this.host= stringBuffer!!.toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.server
 }
@@ -199,8 +183,6 @@ this.host= stringBuffer!!.toString()
     open fun getPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.port
@@ -273,8 +255,6 @@ this.updateUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.USER_NAME_KEY
 }
@@ -283,8 +263,6 @@ this.updateUrl()
     open fun getPasswordKey()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.PASSWORD_KEY

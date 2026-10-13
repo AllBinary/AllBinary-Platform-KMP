@@ -23,7 +23,7 @@ import org.allbinary.time.GameTickTimeDelayHelperFactory
 
 open public class Timer : Object {
 
-    private var startTime: Long = -1
+    private var startTime: Long = (-1).toLong()
 
     private var hundredthTime: Long = 0
 
@@ -44,7 +44,7 @@ open public class Timer : Object {
 
     public constructor(maxTime: Int) : super() {
         var maxTime = maxTime
-        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(maxTime)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(maxTime)!!
         this.maxTime = maxTime.toLong()
     }
 
@@ -87,7 +87,8 @@ open public class Timer : Object {
             }
         } else if (lastLowerTime != this.hundredthTime) {
 
-            this.hundrethsString = this.primitiveLongUtil!!.getCharArray(this.hundredthTime.toInt())
+            this.hundrethsString =
+                this.primitiveLongUtil!!.getCharArray(this.hundredthTime.toInt())!!
             this.totalDigits = this.primitiveLongUtil!!.getCurrentTotalDigits()
         }
     }

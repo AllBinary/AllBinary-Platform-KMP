@@ -56,7 +56,7 @@ public constructor ()
                             //For kotlin this is before the body of the constructor.
                     
 this.tableData= StringMaker().
-                            append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(VALUE)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(NAME)!!.append(this.sqlStrings!!.END)!!.toString()
+                            append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(VALUE)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(NAME)!!.append(this.sqlStrings!!.END)!!.toString()!!
 super.setTableName(this.tableName)
 }
 
@@ -76,8 +76,7 @@ keysAndValues!!.put(this.NAME, name)
 
 
     
-                        if(
-                                    (get as String).compareTo(name) != 0)
+                        if((hashMap!!.get(this.NAME) as String).compareTo(name) != 0)
                         
                                     {
                                     
@@ -89,8 +88,6 @@ keysAndValues!!.put(this.NAME, name)
                                 
 
     var value: String = hashMap!!.get(this.VALUE) as String
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,8 +157,6 @@ super.updateWhere(this.NAME, hashMap!!.get(this.NAME) as String, hashMap)
     var returnStr: String = super.createTable(tableData)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return returnStr
 }
@@ -170,8 +165,6 @@ super.updateWhere(this.NAME, hashMap!!.get(this.NAME) as String, hashMap)
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

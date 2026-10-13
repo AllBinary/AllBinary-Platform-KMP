@@ -127,15 +127,11 @@ URLGLOBALS.init(urlGlobals)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -143,8 +139,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

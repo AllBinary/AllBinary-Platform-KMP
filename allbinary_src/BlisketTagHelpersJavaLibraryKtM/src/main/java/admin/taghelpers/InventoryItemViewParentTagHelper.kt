@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InventoryItemViewParentTagHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InventoryItemViewParentTagHelper.instance
 }
@@ -98,8 +96,6 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewObject as InventoryItemView
@@ -156,8 +152,6 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewObject as DownloadableInventoryItemView
 
@@ -212,8 +206,6 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewObject as RequestMapInterface

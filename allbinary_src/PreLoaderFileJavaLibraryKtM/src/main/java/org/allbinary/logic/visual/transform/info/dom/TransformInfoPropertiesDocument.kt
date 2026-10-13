@@ -58,7 +58,7 @@ public constructor (filePath: String)
 
     var xmlFile: AbFile = AbFile.createAbFile(filePath)!!
 
-this.document= DomDocumentFileHelper.createDocument(xmlFile)
+this.document= DomDocumentFileHelper.createDocument(xmlFile)!!
 }
 
 
@@ -105,11 +105,9 @@ this.document= DomDocumentFileHelper.createDocument(xmlFile)
 
         {
 node= transformInfoNodeVector!!.get(index) as Node
-transformInfoProperties= TransformInfoPropertiesFactory.getInstance()!!.getInstance(node)
+transformInfoProperties= TransformInfoPropertiesFactory.getInstance()!!.getInstance(node)!!
 transformInfoPropertiesHashMap!!.put(transformInfoProperties!!.getName(), transformInfoProperties)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -128,8 +126,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toTransformInfoPropertiesHa
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

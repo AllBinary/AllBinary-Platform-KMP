@@ -80,7 +80,7 @@ var transformInfoInterface = transformInfoInterface
     var storeThemeCategoryInterface: StoreThemeCategoryInterface = categoryLoaderInterface!!.getAll(rootStoreThemeCategoryInterface as CategoryInterface) as StoreThemeCategoryInterface
 
 this.validationInterface= StoreThemeCategoryPathValidationView(storeThemeCategoryInterface as StoreThemeCategoryInterface)
-isValid= this.validationInterface!!.isValid()
+isValid= this.validationInterface!!.isValid()!!
 
     var domNodeInterface: DomNodeInterface = this.validationInterface as DomNodeInterface
 
@@ -102,8 +102,6 @@ document.appendChild(domNodeInterface!!.toXmlNode(document))
                                 
 this.getTransformInfoInterface()!!.setData(documentString)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -117,8 +115,6 @@ this.getTransformInfoInterface()!!.setData(documentString)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -137,8 +133,6 @@ this.getTransformInfoInterface()!!.setData(documentString)
 
 stringBuffer!!.append(this.validationInterface!!.validationInfo())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -153,8 +147,6 @@ stringBuffer!!.append(this.validationInterface!!.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -166,8 +158,6 @@ stringBuffer!!.append(this.validationInterface!!.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -177,8 +167,6 @@ stringBuffer!!.append(this.validationInterface!!.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

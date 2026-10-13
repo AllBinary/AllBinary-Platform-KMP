@@ -72,8 +72,6 @@ var pageContext = pageContext
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoHttpStore(storeFrontInterface, propertiesHashMap, pageContext) as TransformInfoInterface
 
@@ -92,8 +90,6 @@ var pageContext = pageContext
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoHttpContext(propertiesHashMap, pageContext) as TransformInfoInterface
 

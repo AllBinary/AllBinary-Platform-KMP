@@ -66,7 +66,7 @@ var transformInfoInterface = transformInfoInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-this.storeFrontInterface= StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName())
+this.storeFrontInterface= StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName())!!
 this.shippingMethods= ShippingMethods(this.abeClientInformation, this.storeFrontInterface)
 }
 
@@ -147,8 +147,6 @@ shippingMethodsNode!!.appendChild(shippingMethodNode)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return shippingMethodsNode
 } catch(e: Exception)
@@ -185,8 +183,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
         try {
             this.addDomNodeInterfaces()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
@@ -203,8 +199,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

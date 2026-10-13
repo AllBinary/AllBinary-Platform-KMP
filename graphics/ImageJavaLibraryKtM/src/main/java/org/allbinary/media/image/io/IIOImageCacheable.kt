@@ -52,8 +52,6 @@ this.key= key
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.key
 }
@@ -72,8 +70,6 @@ this.setIioImage(IIOImage(bufferedImage,
     open fun getIioImage()
         //nullable = true from not(false or (false and true)) = true
 : IIOImage{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.iioImage
@@ -96,8 +92,6 @@ this.iioImage= iioImage
 
 stringBuffer!!.append(this::class.toString()!!)
 stringBuffer!!.append(" Reusable IIOImage")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

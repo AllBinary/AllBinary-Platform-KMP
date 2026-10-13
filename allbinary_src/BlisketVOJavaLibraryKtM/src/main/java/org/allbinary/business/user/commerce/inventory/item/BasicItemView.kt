@@ -115,7 +115,7 @@ hashMap!!.put(this.basicItemData!!.IMAGE, EMPTY_STRING)
 
     var value: String = hashMap!!.get(name as Object) as String
 
-value= stringUtil!!.getNonNull(value)
+value= stringUtil!!.getNonNull(value)!!
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
@@ -143,8 +143,6 @@ node.appendChild(customNode)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -154,8 +152,6 @@ node.appendChild(customNode)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -164,8 +160,6 @@ node.appendChild(customNode)
     open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -85,7 +85,7 @@ open public class GameInputMappingInstructionsCanvas : GameCommandCanvas {
             ColorFillPaintableFactory.getInstance()!!.getInstance(
                 allBinaryGameLayerManager!!.getBackgroundBasicColor(),
                 false,
-            )
+            )!!
     }
 
     override fun initCommands(cmdListener: CommandListener)

@@ -58,7 +58,7 @@ open public class PtsDamageFloaters : DamageFloaters {
 
     public constructor(layerInterface: AllBinaryLayer) {
         var layerInterface = layerInterface
-        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(100000)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(100000)!!
         this.layerInterface = layerInterface
 
         var CHAR_ARRAY: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
@@ -78,7 +78,7 @@ open public class PtsDamageFloaters : DamageFloaters {
 
         this.lastDamage[index] = damage
         this.lastDamageString[index] =
-            this.primitiveLongUtil!!.getCharArray(this.lastDamage[index]!!)
+            this.primitiveLongUtil!!.getCharArray(this.lastDamage[index]!!)!!
         this.lastDamageStringSizeArray[index] = this.primitiveLongUtil!!.getCurrentTotalDigits()
         this.circularIndexUtil!!.next()
     }

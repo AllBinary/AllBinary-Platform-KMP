@@ -86,19 +86,19 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(basicItemData!!.ID)
-this.itemOne= this.request.getParameter(BasicGroupItemData.ITEM_ONE)
-this.itemTwo= this.request.getParameter(BasicGroupItemData.ITEM_TWO)
-this.itemThree= this.request.getParameter(BasicGroupItemData.ITEM_THREE)
-this.itemFour= this.request.getParameter(BasicGroupItemData.ITEM_FOUR)
-this.itemFive= this.request.getParameter(BasicGroupItemData.ITEM_FIVE)
-this.itemSix= this.request.getParameter(BasicGroupItemData.ITEM_SIX)
-this.itemSeven= this.request.getParameter(BasicGroupItemData.ITEM_SEVEN)
-this.itemEight= this.request.getParameter(BasicGroupItemData.ITEM_EIGHT)
-this.itemNine= this.request.getParameter(BasicGroupItemData.ITEM_NINE)
-this.itemTen= this.request.getParameter(BasicGroupItemData.ITEM_TEN)
-this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
+this.itemOne= this.request.getParameter(BasicGroupItemData.ITEM_ONE)!!
+this.itemTwo= this.request.getParameter(BasicGroupItemData.ITEM_TWO)!!
+this.itemThree= this.request.getParameter(BasicGroupItemData.ITEM_THREE)!!
+this.itemFour= this.request.getParameter(BasicGroupItemData.ITEM_FOUR)!!
+this.itemFive= this.request.getParameter(BasicGroupItemData.ITEM_FIVE)!!
+this.itemSix= this.request.getParameter(BasicGroupItemData.ITEM_SIX)!!
+this.itemSeven= this.request.getParameter(BasicGroupItemData.ITEM_SEVEN)!!
+this.itemEight= this.request.getParameter(BasicGroupItemData.ITEM_EIGHT)!!
+this.itemNine= this.request.getParameter(BasicGroupItemData.ITEM_NINE)!!
+this.itemTen= this.request.getParameter(BasicGroupItemData.ITEM_TEN)!!
+this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)!!
+this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)!!
 }
 
 
@@ -128,8 +128,6 @@ values.put(BasicGroupItemData.ITEM_TEN, this.itemTen)
                                 
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -179,8 +177,6 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -197,8 +193,6 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -226,8 +220,6 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -244,8 +236,6 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -277,8 +267,6 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -295,8 +283,6 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

@@ -69,8 +69,6 @@ this.setObjectFile("views.admin.payment.gateways.SelectNewValidationView")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -83,8 +81,6 @@ this.setObjectFile("views.admin.payment.gateways.SelectNewValidationView")
 } catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

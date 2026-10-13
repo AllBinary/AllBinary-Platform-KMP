@@ -50,7 +50,7 @@ var transformInfoInterface = transformInfoInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-this.userName= this.getWeblisketSession()!!.getUserName()
+this.userName= this.getWeblisketSession()!!.getUserName()!!
 }
 
 
@@ -73,8 +73,6 @@ this.userName= this.getWeblisketSession()!!.getUserName()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -87,8 +85,6 @@ this.userName= this.getWeblisketSession()!!.getUserName()
     
                         if()
                         
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.user.isValid()
@@ -103,8 +99,6 @@ this.userName= this.getWeblisketSession()!!.getUserName()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -145,8 +139,6 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.userName)
                                     {
                                     stringBuffer!!.append("User does not exist.<br />")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 
@@ -157,8 +149,6 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.userName)
                                 
                         else {
                             stringBuffer!!.append("User Name is not valid.<br />")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -185,8 +175,6 @@ stringBuffer!!.append(this.user.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -201,8 +189,6 @@ stringBuffer!!.append(this.user.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -214,8 +200,6 @@ stringBuffer!!.append(this.user.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -225,8 +209,6 @@ stringBuffer!!.append(this.user.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

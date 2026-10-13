@@ -121,8 +121,6 @@ this.smtpServer= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.smtpServer
 }
@@ -131,8 +129,6 @@ this.smtpServer= value
     open fun getAccountName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.accountName
@@ -150,8 +146,6 @@ this.accountName= accountName
     open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.password
@@ -184,8 +178,6 @@ this.password= password
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Email Server Configuration:\n" +"Smtp Server: \n" +this.getSmtpServer() +"\nAccount Name: " +this.getAccountName() +"\nPassword: " +this.getPassword()

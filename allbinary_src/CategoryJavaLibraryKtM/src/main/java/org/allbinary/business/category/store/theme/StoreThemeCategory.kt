@@ -115,8 +115,6 @@ this.addThemes(node)
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface
 }
@@ -170,8 +168,6 @@ this.themeVector!!.add(themeValidation)
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.themeVector
 }
@@ -188,15 +184,11 @@ this.themeVector!!.add(themeValidation)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -213,8 +205,6 @@ this.themeVector!!.add(themeValidation)
 
 categoryHashMap!!.put(ThemesData.getInstance()!!.NAME, this.themeVector)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryHashMap
 }
@@ -227,8 +217,6 @@ categoryHashMap!!.put(ThemesData.getInstance()!!.NAME, this.themeVector)
 : BasicArrayList{
 
     var categoryVector: BasicArrayList = super.toVector()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

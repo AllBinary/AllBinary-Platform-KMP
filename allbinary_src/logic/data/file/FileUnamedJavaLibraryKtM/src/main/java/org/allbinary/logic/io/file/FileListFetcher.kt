@@ -48,8 +48,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FileListFetcher{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileListFetcher.instance
 }
@@ -74,8 +72,6 @@ var path = path
     var files: BasicArrayList = this.subDirectory!!.search(AbFile.createAbFile(path))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
@@ -83,8 +79,6 @@ var path = path
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,8 +117,6 @@ includeExtensionBasicArrayList!!.add(includeExtensions[index]!!)
     var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
@@ -132,8 +124,6 @@ includeExtensionBasicArrayList!!.add(includeExtensions[index]!!)
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -159,8 +149,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
     var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
@@ -168,8 +156,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -196,8 +182,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
     var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
@@ -205,8 +189,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -245,8 +227,6 @@ includeExtensionBasicArrayList!!.add(includeExtensions[index]!!)
     var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
@@ -254,8 +234,6 @@ includeExtensionBasicArrayList!!.add(includeExtensions[index]!!)
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -281,8 +259,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
     var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
@@ -290,8 +266,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -312,8 +286,6 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
     var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
@@ -321,8 +293,6 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

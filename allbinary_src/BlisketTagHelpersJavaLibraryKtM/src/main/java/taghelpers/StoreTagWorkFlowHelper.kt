@@ -57,7 +57,7 @@ var pageContext = pageContext
 
                                     }
                                 
-this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)
+this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)!!
 }
 
 
@@ -77,8 +77,6 @@ this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeWorkFlowInterface!!.process()

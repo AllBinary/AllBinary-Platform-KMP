@@ -50,8 +50,6 @@ this.name= cardType
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }

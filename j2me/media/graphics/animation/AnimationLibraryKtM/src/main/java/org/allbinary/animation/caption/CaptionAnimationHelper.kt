@@ -73,7 +73,7 @@ open public class CaptionAnimationHelper : CaptionAnimationHelperBase {
 
         if (this.timeHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime)) {
 
-            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
         }
     }
 

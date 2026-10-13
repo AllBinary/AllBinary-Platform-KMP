@@ -83,7 +83,7 @@ open public class ResourceUtil : Object {
 
         if (inputStream == null) {
 
-            inputStream = this.getResourceAsStreamAtStart(resource, 1)
+            inputStream = this.getResourceAsStreamAtStart(resource, 1)!!
 
             if (inputStream == null) {
 
@@ -123,7 +123,7 @@ open public class ResourceUtil : Object {
 
         var classLoader: ClassLoader = ResourceUtil.classLoader as ClassLoader
 
-        inputStream = classLoader!!.getResourceAsStream(resourcePath)
+        inputStream = classLoader!!.getResourceAsStream(resourcePath)!!
 
         if (inputStream != null) {
 
@@ -132,7 +132,7 @@ open public class ResourceUtil : Object {
         }
 
         inputStream =
-            Thread.currentThread()!!.getContextClassLoader()!!.getResourceAsStream(resourcePath)
+            Thread.currentThread()!!.getContextClassLoader()!!.getResourceAsStream(resourcePath)!!
 
         if (inputStream != null) {
 

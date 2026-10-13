@@ -54,12 +54,12 @@ this.cssStyleElementVector= BasicArrayListD()
 
 public constructor (document: Document){
 var document = document
-this.cssStyleElementVector= StylesValidationFactory.getInstance()!!.getInstance(document)
+this.cssStyleElementVector= StylesValidationFactory.getInstance()!!.getInstance(document)!!
 }
 
 public constructor (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
-this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
+this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)!!
 }
 
 
@@ -114,8 +114,6 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -129,8 +127,6 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -148,8 +144,6 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
     var stringBuffer: StringMaker = StringMaker()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -164,8 +158,6 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -177,8 +169,6 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -188,8 +178,6 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -224,8 +212,6 @@ node.appendChild(styleNode)
 
 styleNode!!.appendChild(styleDomNodeInterface!!.toXmlNode(document))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

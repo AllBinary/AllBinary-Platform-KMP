@@ -177,7 +177,7 @@ this.logUtil!!.putF("Processing Action: " +actionNameString, this, this.PROCESS_
 CaptureWorkerUtil.processProfileActionConditions(vector, getFrame())
 }
 
-this.lastFrame= this.getFrame()
+this.lastFrame= this.getFrame()!!
 
                                     }
                                 
@@ -207,8 +207,6 @@ this.processDataWorkerResults()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfile{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfile
 }
@@ -225,8 +223,6 @@ this.genericProfile= genericProfile
     open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frame

@@ -503,8 +503,6 @@ this.logUtil!!.putF(this.commonStrings!!.END, this, "updateProfileOptions")
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JPanel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.blankGenericProfileActionsJPanel
 }
@@ -522,8 +520,6 @@ this.blankGenericProfileActionsJPanel= blankGenericProfileActionsJPanel
         //nullable = true from not(false or (false and true)) = true
 : GenericProfiles{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfiles
 }
@@ -540,8 +536,6 @@ this.genericProfiles= genericProfiles
     open fun getSelectedGenericProfile()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfile{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.selectedGenericProfile

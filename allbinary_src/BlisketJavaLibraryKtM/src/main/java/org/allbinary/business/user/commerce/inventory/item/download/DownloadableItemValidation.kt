@@ -59,8 +59,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -74,8 +72,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -89,8 +85,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -104,8 +98,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -119,8 +111,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -134,8 +124,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -149,8 +137,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -164,8 +150,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -181,8 +165,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -199,8 +181,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -216,8 +196,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -234,8 +212,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -251,8 +227,6 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -261,8 +235,6 @@ this.downloadableItem= downloadableItem
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -277,8 +249,6 @@ this.downloadableItem= downloadableItem
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -303,7 +273,7 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     stringBuffer!!.append("Id is invalid. Must be number < ")
-stringBuffer!!.appendint(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM.toInt())
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
@@ -327,7 +297,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         
                                     {
                                     stringBuffer!!.append("System value is invalid. Must be < ")
-stringBuffer!!.appendint(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING.toInt())
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -340,7 +310,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Platform value is invalid. Must be < ")
-stringBuffer!!.appendint(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING.toInt())
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -353,7 +323,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Special Name value is invalid. Must be < ")
-stringBuffer!!.appendint(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING.toInt())
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -366,7 +336,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Version value is invalid. Must be < ")
-stringBuffer!!.appendint(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING.toInt())
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -379,7 +349,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Changes value is invalid. Must be < ")
-stringBuffer!!.appendint(AbSqlData.MAXBLOB)
+stringBuffer!!.appendint(AbSqlData.MAXBLOB.toInt())
 stringBuffer!!.append(" and >= 0 characters long.<br/>")
 
                                     }
@@ -405,7 +375,7 @@ stringBuffer!!.append(" and >= 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("File Size is invalid. Must be number < ")
-stringBuffer!!.appendint(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM.toInt())
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
@@ -434,7 +404,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Valid Time is invalid. Must be number < ")
-stringBuffer!!.appendint(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM.toInt())
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
@@ -463,7 +433,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Retries is invalid. Must be number < ")
-stringBuffer!!.appendint(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM.toInt())
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
@@ -471,8 +441,6 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -488,8 +456,6 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -501,8 +467,6 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -512,8 +476,6 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

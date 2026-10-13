@@ -46,11 +46,9 @@ companion object {
 var point = point
 var colorDelta = colorDelta
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            appendint(TsUtil.getInstance()!!.hashCode(point))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
+                            appendint(TsUtil.getInstance()!!.hashCode(point).toInt())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
 }
 
 
@@ -68,15 +66,13 @@ var point = point
 var colorDelta = colorDelta
 this.setPoint(point)
 this.setColorDelta(colorDelta)
-this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())
+this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())!!
 }
 
 
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.key
@@ -86,8 +82,6 @@ this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())
     open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.point
@@ -106,8 +100,6 @@ this.point= point
         //nullable = true from not(false or (false and true)) = true
 : ColorDelta{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorDelta
 }
@@ -124,8 +116,6 @@ this.colorDelta= colorDelta
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().

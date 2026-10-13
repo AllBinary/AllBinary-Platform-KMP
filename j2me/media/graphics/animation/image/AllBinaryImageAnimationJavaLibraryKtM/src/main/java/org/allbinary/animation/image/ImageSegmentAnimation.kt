@@ -49,7 +49,7 @@ open public class ImageSegmentAnimation : ImageAnimation {
         this.startY = 0
         this.drawWidth = this.getImage()!!.getWidth()
         this.drawHeight = this.getImage()!!.getHeight()
-        this.circularIndexUtil = CircularIndexUtil.createInstance(this.drawHeight)
+        this.circularIndexUtil = CircularIndexUtil.createInstance(this.drawHeight)!!
         this.sequenceArray = sequenceArray
     }
 

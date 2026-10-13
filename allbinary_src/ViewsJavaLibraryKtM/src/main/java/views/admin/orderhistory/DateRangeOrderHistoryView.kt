@@ -120,21 +120,21 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.dateType= this.request.getParameter(OrderHistoryData.DATETYPE)
-this.preprocessing= this.request.getParameter(OrderHistoryData.PREPROCESSINGNAME)
-this.shipped= this.request.getParameter(OrderHistoryData.SHIPPEDNAME)
-this.partiallyShipped= this.request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
-this.processing= this.request.getParameter(OrderHistoryData.PROCESSINGNAME)
-this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)
-this.fromYear= this.request.getParameter(OrderHistoryData.FROMYEAR)
-this.fromMonth= this.request.getParameter(OrderHistoryData.FROMMONTH)
-this.fromDay= this.request.getParameter(OrderHistoryData.FROMDAY)
-this.fromHour= this.request.getParameter(OrderHistoryData.FROMHOUR)
-this.toYear= this.request.getParameter(OrderHistoryData.TOYEAR)
-this.toMonth= this.request.getParameter(OrderHistoryData.TOMONTH)
-this.toDay= this.request.getParameter(OrderHistoryData.TODAY)
-this.toHour= this.request.getParameter(OrderHistoryData.TOHOUR)
-this.command= this.request.getParameter(GLOBALS2.ADMINCOMMAND)
+this.dateType= this.request.getParameter(OrderHistoryData.DATETYPE)!!
+this.preprocessing= this.request.getParameter(OrderHistoryData.PREPROCESSINGNAME)!!
+this.shipped= this.request.getParameter(OrderHistoryData.SHIPPEDNAME)!!
+this.partiallyShipped= this.request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)!!
+this.processing= this.request.getParameter(OrderHistoryData.PROCESSINGNAME)!!
+this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)!!
+this.fromYear= this.request.getParameter(OrderHistoryData.FROMYEAR)!!
+this.fromMonth= this.request.getParameter(OrderHistoryData.FROMMONTH)!!
+this.fromDay= this.request.getParameter(OrderHistoryData.FROMDAY)!!
+this.fromHour= this.request.getParameter(OrderHistoryData.FROMHOUR)!!
+this.toYear= this.request.getParameter(OrderHistoryData.TOYEAR)!!
+this.toMonth= this.request.getParameter(OrderHistoryData.TOMONTH)!!
+this.toDay= this.request.getParameter(OrderHistoryData.TODAY)!!
+this.toHour= this.request.getParameter(OrderHistoryData.TOHOUR)!!
+this.command= this.request.getParameter(GLOBALS2.ADMINCOMMAND)!!
 }
 
 
@@ -153,8 +153,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
@@ -401,8 +399,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PA
 node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
 node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -416,8 +412,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -475,7 +469,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
     var oneHour: Long = 60.toLong() *60 *1000
 
 rangeDate= oneHour as Long.
-                            toString()
+                            toString()!!
 
                                     }
                                 
@@ -488,7 +482,7 @@ rangeDate= oneHour as Long.
     var oneDay: Long = 24.toLong() *60 *60 *1000
 
 rangeDate= oneDay as Long.
-                            toString()
+                            toString()!!
 
                                     }
                                 
@@ -501,7 +495,7 @@ rangeDate= oneDay as Long.
     var oneWeek: Long = 7.toLong() *24 *60 *60 *1000
 
 rangeDate= oneWeek as Long.
-                            toString()
+                            toString()!!
 
                                     }
                                 
@@ -514,7 +508,7 @@ rangeDate= oneWeek as Long.
     var thirtyDays: Long = 30.toLong() *24 *60 *60 *1000
 
 rangeDate= thirtyDays as Long.
-                            toString()
+                            toString()!!
 
                                     }
                                 
@@ -524,7 +518,7 @@ rangeDate= thirtyDays as Long.
                         
                                     {
                                     rangeDate= currentTime as Long.
-                            toString()
+                            toString()!!
 
                                     }
                                 
@@ -533,7 +527,7 @@ rangeDate= thirtyDays as Long.
                             toLong()
 
 this.fromDate= currentTime -rangeDateLong as Long.
-                            toString()
+                            toString()!!
 
     var time: String = currentTime as Long.
                             toString().toCharArray().concatToString()
@@ -553,10 +547,10 @@ this.toDate= time
 
 TimeUtil.getInstance()!!.setCalendar(calendar, this.fromYear, this.fromMonth, this.fromDay, this.fromHour)
 this.fromDate= calendar.getTimeInMillis() as Long.
-                            toString()
+                            toString()!!
 TimeUtil.getInstance()!!.setCalendar(calendar, this.toYear, this.toMonth, this.toDay, this.toHour)
 this.toDate= calendar.getTimeInMillis() as Long.
-                            toString()
+                            toString()!!
 
                                     }
                                 
@@ -599,8 +593,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -615,8 +607,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -628,8 +618,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -639,8 +627,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -687,8 +673,6 @@ var document = document
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result.toString()
 } catch(e: Exception)
@@ -702,8 +686,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"

@@ -58,8 +58,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PathFindingInfoFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PathFindingInfoFactory.instance
 }
@@ -112,8 +110,6 @@ RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
 this.init(geographicMapInterface, pathFindingInfo, mapArray)
 this.basicGeographicMapPathFinder!!.init(geographicMapInterface, this.basicGeographicMapGraph, this.pathFinderGraphVisitorFactoryInterface!!.getInstance(geographicMapInterface))
 pathFindingInfo!!.setPathFinder(this.basicGeographicMapPathFinder)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return pathFindingInfo
@@ -192,7 +188,7 @@ column= basicGeographicMapUtil!!.getBorderingColumn(index, cellPosition)
                         if(row < allBinaryTiledLayer!!.getRows() && column < allBinaryTiledLayer!!.getColumns() && row >= 0 && column >= 0)
                         
                                     {
-                                    goingToGeographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(column, row)
+                                    goingToGeographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(column, row)!!
 costFromStart= raceTrackGeographicMapCellType!!.getTravelCost()
 costToEnd= costFromStart
 pathFindingNodeCostInfoFactoryInterface!!.create(geographicMapInterface, goingToGeographicMapCellPosition, cellPosition, costFromStart, costToEnd)

@@ -92,7 +92,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     
     var transformInfoHttpStoreInterface: TransformInfoHttpStoreInterface = transformInfoInterface as TransformInfoHttpStoreInterface
 
-fileName= transformInfoInterface!!.getName()!!.substring(transformInfoHttpStoreInterface!!.getStoreName()!!.length() +1)
+fileName= transformInfoInterface!!.getName()!!.substring(transformInfoHttpStoreInterface!!.getStoreName()!!.length() +1)!!
 
     var outputMappingHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
@@ -102,7 +102,7 @@ outputMappingHashMap!!.put(CommonSeps.getInstance()!!.SPACE, StringUtil.getInsta
 
     var replace: Replace = Replace(outputMappingHashMap)
 
-fileName= replace.all(fileName)
+fileName= replace.all(fileName)!!
 
                                     }
                                 
@@ -149,7 +149,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(this.output)
 abPath= AbPath(abPath!!.toString(), stringBuffer!!.toString())
 this.fileAbPath= abPath
-this.file= AbFile.createAbFileFromAbPath(this.fileAbPath)
+this.file= AbFile.createAbFileFromAbPath(this.fileAbPath)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -215,8 +215,6 @@ FileUtil.getInstance()!!.write(inputStream, this.file)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING

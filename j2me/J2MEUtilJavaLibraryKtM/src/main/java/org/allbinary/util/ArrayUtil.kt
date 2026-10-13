@@ -266,7 +266,7 @@ open public class ArrayUtil : Object {
 
             for (index2 in 0 until endIndex2) {
 
-                stringBuffer!!.appendint(twoDimensionalIntArray[index]!![index2]!!)
+                stringBuffer!!.appendint(twoDimensionalIntArray[index]!![index2]!!.toInt())
                 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
             }
 

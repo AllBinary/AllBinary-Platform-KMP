@@ -49,7 +49,7 @@ public constructor (fileName: String)
         {
 var fileName = fileName
 this.fileName= fileName
-this.string= AbFileSystem.getInstance()!!.readAsString(fileName)
+this.string= AbFileSystem.getInstance()!!.readAsString(fileName)!!
 }
 
 
@@ -82,15 +82,11 @@ endIndex= this.string.indexOf(end)
 
 idOutData!!.writeBytes(text)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -105,8 +101,6 @@ idOutData!!.writeBytes(text)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -148,15 +142,11 @@ endIndex= this.string.indexOf(end)
 
 idOutData!!.writeBytes(newStart +newText +text)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -171,8 +161,6 @@ idOutData!!.writeBytes(newStart +newText +text)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

@@ -102,7 +102,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(basicItemData!!.ID)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
 }
 
 
@@ -127,8 +127,6 @@ this.id= this.request.getParameter(basicItemData!!.ID)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -145,8 +143,6 @@ this.id= this.request.getParameter(basicItemData!!.ID)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error +"<br>" +"Exception: " +e +"<br>"
@@ -174,8 +170,6 @@ this.id= this.request.getParameter(basicItemData!!.ID)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Please enter a keyword in the search field above the Search button."
 
@@ -197,8 +191,6 @@ this.id= this.request.getParameter(basicItemData!!.ID)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -215,8 +207,6 @@ this.id= this.request.getParameter(basicItemData!!.ID)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error +"<br>" +"Exception: " +e +"<br>"

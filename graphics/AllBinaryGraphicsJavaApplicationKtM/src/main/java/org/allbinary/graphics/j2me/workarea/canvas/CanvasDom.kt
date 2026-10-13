@@ -96,7 +96,7 @@ this.dimension= IntegerDimension(0, 0)
                         if(name.compareTo(CanvasDom.FRAME) == 0)
                         
                                     {
-                                    this.graphicItemHashMap= StdUtil.getInstance()!!.createHashMap()
+                                    this.graphicItemHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     var angleNode: Node = DomHelper.getInstance()!!.searchNodeList(this.ROTATE, canvasNode!!.getChildNodes())!!
 
@@ -193,7 +193,7 @@ this.grid.isGridPossible= .
                                 )
                         
                                     {
-                                    this.graphicItemHashMap= GraphicItemFactory.getInstance()!!.getInstance(graphicItemNodeList)
+                                    this.graphicItemHashMap= GraphicItemFactory.getInstance()!!.getInstance(graphicItemNodeList)!!
 
                                     }
                                 
@@ -215,8 +215,8 @@ public constructor (canvasJPanel: CanvasJPanel)
         {
 var canvasJPanel = canvasJPanel
 this.angle= canvasJPanel!!.getAngle()
-this.graphicItemHashMap= canvasJPanel!!.getGraphicItemHashMap()
-this.dimension= canvasJPanel!!.getCanvasDimension()
+this.graphicItemHashMap= canvasJPanel!!.getGraphicItemHashMap()!!
+this.dimension= canvasJPanel!!.getCanvasDimension()!!
 this.grid= Grid(canvasJPanel!!.getGrid())
 this.angle= canvasJPanel!!.getAngle()
 }
@@ -226,8 +226,6 @@ this.angle= canvasJPanel!!.getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.angle
 }
@@ -236,8 +234,6 @@ this.angle= canvasJPanel!!.getAngle()
     open fun getGraphicItemHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.graphicItemHashMap
@@ -301,8 +297,6 @@ xNode!!.appendChild(xTextNode)
 yNode!!.appendChild(yTextNode)
 pointNode!!.appendChild(xNode)
 pointNode!!.appendChild(yNode)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return pointNode
@@ -433,8 +427,6 @@ frameNode!!.appendChild(realSizeNode)
 
 frameNode!!.appendChild(graphicItemNode)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return frameNode
 }
@@ -443,8 +435,6 @@ frameNode!!.appendChild(graphicItemNode)
     open fun getDimension()
         //nullable = true from not(false or (false and true)) = true
 : IntegerDimension{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.dimension
@@ -462,8 +452,6 @@ this.dimension= dimension
     open fun getGrid()
         //nullable = true from not(false or (false and true)) = true
 : Grid{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.grid

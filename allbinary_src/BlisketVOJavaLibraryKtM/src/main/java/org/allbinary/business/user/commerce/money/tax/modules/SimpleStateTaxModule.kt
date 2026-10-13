@@ -91,7 +91,7 @@ this.storeFrontInterface= storeFrontInterface
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(fileAbPath)!!
 
-this.document= DomDocumentHelper.create(data)
+this.document= DomDocumentHelper.create(data)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
@@ -107,7 +107,7 @@ this.document= DomDocumentHelper.create(data)
 
     var country: String = this.streetAddress!!.getCountry()!!
 
-state= state.uppercase()
+state= state.uppercase()!!
 
     var nodeList: NodeList = this.document.getElementsByTagName(TaxData.NAME)!!
 
@@ -158,8 +158,6 @@ state= state.uppercase()
                             toFloat() *.01)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return taxRateFloat
 
@@ -169,8 +167,6 @@ state= state.uppercase()
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -194,7 +190,7 @@ this.storeFrontInterface= storeFrontInterface
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(fileAbPath)!!
 
-this.document= DomDocumentHelper.create(data)
+this.document= DomDocumentHelper.create(data)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
@@ -242,7 +238,7 @@ stringBuffer!!.append(streetAddressNode!!.getNodeName())
 stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(streetAddressNode!!.getNodeValue())
 stringBuffer!!.append(" Number Of Children: ")
-stringBuffer!!.appendint(streetAddressNode!!.getChildNodes()!!.getLength())
+stringBuffer!!.appendint(streetAddressNode!!.getChildNodes()!!.getLength().toInt())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
@@ -259,8 +255,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -282,8 +276,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -293,8 +285,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -310,8 +300,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

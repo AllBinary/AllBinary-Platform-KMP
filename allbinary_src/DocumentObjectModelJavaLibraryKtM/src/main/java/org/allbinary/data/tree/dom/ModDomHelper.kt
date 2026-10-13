@@ -61,8 +61,6 @@ var text = text
 
 newValueNode!!.appendChild(newValueTextNode)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newValueNode
 }
@@ -75,8 +73,6 @@ newValueNode!!.appendChild(newValueTextNode)
 : Node{
 var document = document
 var text = text
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createTextNode(document, DomData.VALUE, text)
@@ -91,8 +87,6 @@ var text = text
 var document = document
 var text = text
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createTextNode(document, DomData.NAME, text)
 }
@@ -105,8 +99,6 @@ var text = text
 : Node{
 var document = document
 var index = index
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createTextNode(document, DomData.INDEX, Integer(index).
@@ -129,8 +121,6 @@ var valueText = valueText
 newNode!!.appendChild(ModDomHelper.createNameNode(document, nameText))
 newNode!!.appendChild(ModDomHelper.createValueNode(document, valueText))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newNode
 }
@@ -146,8 +136,6 @@ var elementNameAndNameText = elementNameAndNameText
 var valueText = valueText
 
     var newNode: Node = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, elementNameAndNameText, valueText)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -169,8 +157,6 @@ var valueText = valueText
 
 newNode!!.appendChild(ModDomHelper.createIndexNode(document, index))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newNode
 }
@@ -186,8 +172,6 @@ var rootNode = rootNode
 var hashMap = hashMap
 
     var node: Node = document.createElement(rootNode)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -278,8 +262,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -315,8 +297,6 @@ var valueVector = valueVector
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, value))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -356,8 +336,6 @@ node.appendChild(ModDomHelper.createNameValueIndexNodes(document, duplicateNodeN
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -373,8 +351,6 @@ var rootNode = rootNode
 var hashMap = hashMap
 
     var node: Node = document.createElement(rootNode)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -421,8 +397,6 @@ var hashMap = hashMap
 
 node.appendChild(ModDomHelper.createTextNode(document, name, value))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

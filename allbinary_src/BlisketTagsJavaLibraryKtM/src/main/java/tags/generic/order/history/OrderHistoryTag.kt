@@ -76,8 +76,6 @@ this.status= value
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -101,8 +99,6 @@ this.status= value
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -154,8 +150,6 @@ pageContext!!.getOut()!!.print(this.setOrderStatus())
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -169,16 +163,12 @@ pageContext!!.getOut()!!.print(this.setOrderStatus())
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 }
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

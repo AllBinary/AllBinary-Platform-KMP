@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformTemplateFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformTemplateFactory.instance
 }
@@ -79,8 +77,6 @@ var pageContext = pageContext
 
 
     var transformInfoInterface: TransformInfoInterface = transformInfoEntity!!.get(templateName, propertiesHashMap, pageContext)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -49,8 +49,6 @@ super.ensureCapacity(minCapacity)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.capacity()
 }
@@ -60,8 +58,6 @@ super.ensureCapacity(minCapacity)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.size()
 }
@@ -70,8 +66,6 @@ super.ensureCapacity(minCapacity)
     override fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.isEmpty()
@@ -83,8 +77,6 @@ super.ensureCapacity(minCapacity)
 : Boolean{
 var obj = obj
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.contains(obj)
 }
@@ -94,8 +86,6 @@ var obj = obj
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var obj = obj
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.indexOf(obj)
@@ -107,8 +97,6 @@ var obj = obj
 : Int{
 var obj = obj
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.lastIndexOf(obj)
 }
@@ -119,8 +107,6 @@ var obj = obj
 : E{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.elementAt(index)
 }
@@ -130,8 +116,6 @@ var index = index
         //nullable = true from not(false or (false and true)) = true
 : E{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.firstElement()
 }
@@ -140,8 +124,6 @@ var index = index
     override fun lastElement()
         //nullable = true from not(false or (false and true)) = true
 : E{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.lastElement()
@@ -187,8 +169,6 @@ super.insertElementAt(obj, index)
 : Boolean{
 var obj = obj
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.removeElement(obj)
 }
@@ -205,8 +185,6 @@ super.removeAllElements()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.clone()
 }
@@ -215,8 +193,6 @@ super.removeAllElements()
     override fun toArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Any?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.toArray()
@@ -229,8 +205,6 @@ super.removeAllElements()
 var index = index
 var element = element
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.set(index, element)
 }
@@ -241,8 +215,6 @@ var element = element
 : Boolean{
 var element = element
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.add(element)
 }
@@ -252,8 +224,6 @@ var element = element
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var obj = obj
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.remove(obj)
@@ -274,8 +244,6 @@ super.add(index, element)
 : E{
 var index = index
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.remove(index)
 }
@@ -293,8 +261,6 @@ super.clear()
 : Boolean{
 var obj = obj
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.equals(obj)
 }
@@ -304,8 +270,6 @@ var obj = obj
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.hashCode()
 }
@@ -314,8 +278,6 @@ var obj = obj
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.toString()

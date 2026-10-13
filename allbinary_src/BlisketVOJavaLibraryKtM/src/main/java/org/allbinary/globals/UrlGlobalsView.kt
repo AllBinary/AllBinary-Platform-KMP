@@ -58,8 +58,6 @@ hashMap!!.put(UrlGlobalsData.WEBAPPPATH, org.allbinary.globals.URLGLOBALS.getWeb
     var node: Node = ModDomHelper.createNameValueNodes(document, UrlGlobalsData.NAME, hashMap)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }

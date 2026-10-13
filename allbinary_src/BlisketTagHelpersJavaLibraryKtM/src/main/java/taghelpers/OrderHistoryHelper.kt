@@ -85,7 +85,7 @@ this.newStatus= propertiesHashMap!!.get(OrderHistoryData.STATUS) as String
                                 )
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 
                                     }
                                 
@@ -96,8 +96,8 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(OrderData.ID)
-this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
+this.id= this.request.getParameter(OrderData.ID)!!
+this.groupId= this.request.getParameter(ShippingMethodData.GROUP)!!
 
     
                         if(this.newStatus == 
@@ -105,7 +105,7 @@ this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
                                 )
                         
                                     {
-                                    this.newStatus= this.request.getParameter(OrderHistoryData.STATUS)
+                                    this.newStatus= this.request.getParameter(OrderHistoryData.STATUS)!!
 
                                     }
                                 
@@ -132,8 +132,6 @@ this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Order " +this.id +" Already Cancelled<br/>"
 
@@ -145,8 +143,6 @@ this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Order " +this.id +" Already Shipped. You can't cancel a shipped order.<br/>"
 
@@ -158,8 +154,6 @@ this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Order " +this.id +" has been cancelled.<br/>"
 
@@ -171,8 +165,6 @@ this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Order " +this.id +" Partially Shipped. You can cancel unshipped items, but not the whole order.<br/>"
 
@@ -188,8 +180,6 @@ this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
 
 orderHistoryEntityInterface!!.setStatus(this.id, this.newStatus)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Order " +this.id +" has been cancelled.<br/>"
 
@@ -204,8 +194,6 @@ orderHistoryEntityInterface!!.setStatus(this.id, this.newStatus)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Setting Order Status"
@@ -223,8 +211,6 @@ orderHistoryEntityInterface!!.setStatus(this.id, this.newStatus)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error +"<br/>" +"Exception: " +e +"<br/>"

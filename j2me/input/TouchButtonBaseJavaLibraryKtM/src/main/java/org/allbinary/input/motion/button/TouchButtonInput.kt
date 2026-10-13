@@ -56,7 +56,7 @@ open public class TouchButtonInput : Input, GameKeyEventSourceInterface {
 
             var gameKey: GameKey = inputToGameKeyMapping!!.getInstance(this.getId())!!
 
-            this.gameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)
+            this.gameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
         } catch (e: Exception) {
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!

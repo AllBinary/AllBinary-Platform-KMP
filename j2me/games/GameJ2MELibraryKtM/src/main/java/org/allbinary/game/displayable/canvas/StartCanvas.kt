@@ -686,15 +686,15 @@ open public class StartCanvas :
 
         if (this.state == 0) {
 
-            this.highScoresPaintable = NullPaintable.getInstance()
-            this.paintedSpecialAnimationInterface = this.getSpecialAnimationInterface()
+            this.highScoresPaintable = NullPaintable.getInstance()!!
+            this.paintedSpecialAnimationInterface = this.getSpecialAnimationInterface()!!
             this.getSpecialAnimationInterface()!!.reset()
         } else if (this.state == 1) {
 
-            this.paintedSpecialAnimationInterface = SpecialAnimation.getInstance()
+            this.paintedSpecialAnimationInterface = SpecialAnimation.getInstance()!!
         } else if (this.state == 2) {
 
-            this.highScoresPaintable = this.getRealHighScoresPaintable()
+            this.highScoresPaintable = this.getRealHighScoresPaintable()!!
         }
 
         var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
@@ -736,7 +736,7 @@ open public class StartCanvas :
     open fun createCanvas()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.highScoresPaintable = NullPaintable.getInstance()
+        this.highScoresPaintable = NullPaintable.getInstance()!!
 
         var randomLevel: Int = this.getNextRandom()
     }

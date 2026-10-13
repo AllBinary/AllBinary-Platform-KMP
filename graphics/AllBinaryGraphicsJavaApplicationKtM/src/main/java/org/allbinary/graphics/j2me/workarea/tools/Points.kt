@@ -54,8 +54,6 @@ this.pointVector!!.clear()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.pointVector
 }
@@ -78,8 +76,6 @@ this.pointVector!!.addAll2(vector)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -87,8 +83,6 @@ this.pointVector!!.addAll2(vector)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -100,8 +94,6 @@ this.pointVector!!.addAll2(vector)
     open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.pointVector!!.size()

@@ -23,7 +23,7 @@ import org.allbinary.string.CommonLabels
 
 open public class TimeDelayHelper : Object {
 
-    private var startTime: Long = -1
+    private var startTime: Long = (-1).toLong()
 
     private var elapsedTimeAtPause: Long = Long.MIN_VALUE
 

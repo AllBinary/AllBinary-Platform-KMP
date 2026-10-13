@@ -143,8 +143,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.globals.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
 }
@@ -163,17 +161,15 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHostName()
+                                    location= this.getTestHostName()!!
 
                                     }
                                 
                         else {
-                            location= this.getHostName()
+                            location= this.getHostName()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -193,17 +189,15 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHostNamePath()
+                                    location= this.getTestHostNamePath()!!
 
                                     }
                                 
                         else {
-                            location= this.getHostNamePath()
+                            location= this.getHostNamePath()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -223,17 +217,15 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHomeHostName()
+                                    location= this.getTestHomeHostName()!!
 
                                     }
                                 
                         else {
-                            location= this.getHomeHostName()
+                            location= this.getHomeHostName()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -253,17 +245,15 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHomeHostNamePath()
+                                    location= this.getTestHomeHostNamePath()!!
 
                                     }
                                 
                         else {
-                            location= this.getHomeHostNamePath()
+                            location= this.getHomeHostNamePath()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -274,8 +264,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -284,8 +272,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
@@ -296,8 +282,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basketName
 }
@@ -306,8 +290,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.homeHostName
@@ -318,8 +300,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.homeHostNamePath
 }
@@ -328,8 +308,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hostName
@@ -340,8 +318,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hostNamePath
 }
@@ -350,8 +326,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getTestHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHomeHostName
@@ -362,8 +336,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHomeHostNamePath
 }
@@ -372,8 +344,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getTestHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHostName
@@ -384,8 +354,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHostNamePath
 }
@@ -394,8 +362,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getStaticPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.staticPath
@@ -406,8 +372,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPath
 }
@@ -416,8 +380,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getInventoryControl()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inventoryControl
@@ -438,8 +400,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     var subStoreVector: BasicArrayList = tokenizer.getTokensFromString(this.subStores, BasicArrayListD())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subStoreVector
 } catch(e: Exception)
@@ -457,8 +417,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tagLocation
 }
@@ -467,8 +425,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getPackageLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.packageLocation
@@ -479,8 +435,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftp
 }
@@ -489,8 +443,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getFtpUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpUserName
@@ -501,8 +453,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpPassword
 }
@@ -511,8 +461,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getTestFtp()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtp
@@ -523,8 +471,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtpUserName
 }
@@ -533,8 +479,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getTestFtpPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtpPassword
@@ -545,8 +489,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpPath
 }
@@ -555,8 +497,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getTestFtpPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtpPath
@@ -567,8 +507,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeCreated
 }
@@ -577,8 +515,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.lastModified

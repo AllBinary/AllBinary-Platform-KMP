@@ -35,7 +35,7 @@ open public class SoftwareInformation : Object {
         this.name = name
         this.version = version
         this.shortName =
-            StringMaker().append(shortName)!!.append(KotlinUtil.getShortName())!!.toString()
+            StringMaker().append(shortName)!!.append(KotlinUtil.getShortName())!!.toString()!!
     }
 
     open fun getName()

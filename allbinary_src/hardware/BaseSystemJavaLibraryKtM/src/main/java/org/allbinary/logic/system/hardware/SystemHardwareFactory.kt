@@ -78,7 +78,7 @@ open public class SystemHardwareFactory : Object {
             if (this.hardwareInterface == NoHardware.getInstance()) {
 
                 this.hardwareInterface =
-                    HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)
+                    HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)!!
             }
 
             this.logUtil!!.putF("Found Hardware", this, this.commonStrings!!.CONSTRUCTOR)

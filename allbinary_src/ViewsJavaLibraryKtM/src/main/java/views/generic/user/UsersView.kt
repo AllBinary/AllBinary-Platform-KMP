@@ -101,8 +101,6 @@ usersNode!!.appendChild(node)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return usersNode
 } catch(e: Exception)
@@ -116,8 +114,6 @@ usersNode!!.appendChild(node)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -141,8 +137,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

@@ -174,7 +174,7 @@ public constructor ()
     var EMPTY: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 this.itemId= ProductIdGenerator().
-                            getNext()
+                            getNext()!!
 this.number= CommonPhoneStrings.getInstance()!!.ZERO
 this.inBaskets= EMPTY
 this.weight= EMPTY
@@ -462,8 +462,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.itemId
 }
@@ -472,8 +470,6 @@ this.enabled= value
     open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.number
@@ -484,8 +480,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inBaskets
 }
@@ -494,8 +488,6 @@ this.enabled= value
     open fun getWeight()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.weight
@@ -506,8 +498,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.newOrUsed
 }
@@ -516,8 +506,6 @@ this.enabled= value
     open fun getSummary()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.summary
@@ -528,8 +516,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.distributor
 }
@@ -538,8 +524,6 @@ this.enabled= value
     open fun getIdUsedByDistributor()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.idUsedByDistributor
@@ -550,8 +534,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.producedBy
 }
@@ -560,8 +542,6 @@ this.enabled= value
     open fun getProductionDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.productionDate
@@ -572,8 +552,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.startProductionDate
 }
@@ -582,8 +560,6 @@ this.enabled= value
     open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.description
@@ -594,8 +570,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.keywords
 }
@@ -604,8 +578,6 @@ this.enabled= value
     open fun getCategory()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.category
@@ -616,8 +588,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.type
 }
@@ -626,8 +596,6 @@ this.enabled= value
     open fun getSmallImage()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.smallImage
@@ -638,8 +606,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mediumImage
 }
@@ -648,8 +614,6 @@ this.enabled= value
     open fun getLargeImage()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.largeImage
@@ -660,8 +624,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeEntered
 }
@@ -670,8 +632,6 @@ this.enabled= value
     open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.lastModified
@@ -682,8 +642,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.price
 }
@@ -692,8 +650,6 @@ this.enabled= value
     open fun getComment()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.comment
@@ -704,8 +660,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.customs
 }
@@ -714,8 +668,6 @@ this.enabled= value
     open fun getDownloads()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.downloads
@@ -726,8 +678,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.groups
 }
@@ -736,8 +686,6 @@ this.enabled= value
     open fun getOptions()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.options
@@ -748,8 +696,6 @@ this.enabled= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.permissions
 }
@@ -758,8 +704,6 @@ this.enabled= value
     open fun getSpecials()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.specials
@@ -778,8 +722,6 @@ this.downloadable= downloadable
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.downloadable
 }
@@ -788,8 +730,6 @@ this.downloadable= downloadable
     open fun getEnabled()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.enabled
@@ -804,8 +744,6 @@ this.downloadable= downloadable
 
 itemTotal!!.multiply(Integer(this.number).
                             toInt())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return itemTotal
@@ -862,8 +800,6 @@ hashMap!!.put(basicItemData!!.GROUPS, this.groups)
 hashMap!!.put(basicItemData!!.OPTIONS, this.options)
 hashMap!!.put(basicItemData!!.PERMISSIONS, this.permissions)
 hashMap!!.put(basicItemData!!.SPECIALS, this.specials)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -922,8 +858,6 @@ values.add(this.options)
 values.add(this.permissions)
 values.add(this.specials)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
 }
@@ -934,8 +868,6 @@ values.add(this.specials)
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getId() as Object

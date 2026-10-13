@@ -35,8 +35,6 @@ cal.set(Calendar.MINUTE, 0)
 cal.set(Calendar.SECOND, 0)
 cal.set(Calendar.MILLISECOND, 0)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return cal.getTimeInMillis()
 }
@@ -60,8 +58,6 @@ this.hour= hour
     override fun getHourOfDay()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hour

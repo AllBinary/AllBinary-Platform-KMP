@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PartnerIdentifierFileUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PartnerIdentifierFileUtil.instance
 }
@@ -73,8 +71,6 @@ companion object {
     var partnerString: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return partnerString
 } catch(e: Exception)
@@ -83,8 +79,6 @@ companion object {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.NULL_STRING

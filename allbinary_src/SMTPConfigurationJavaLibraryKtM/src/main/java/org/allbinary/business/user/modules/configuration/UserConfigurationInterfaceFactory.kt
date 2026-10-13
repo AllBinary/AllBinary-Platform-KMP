@@ -55,8 +55,6 @@ var document = document
     var configurationNode: Node = DomSearchHelper.getNode(UserConfigurationData.NAME, document.getChildNodes())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserConfigurationView(configurationNode).
                             getUserConfigurationInterface() as UserConfigurationInterface
@@ -80,8 +78,6 @@ var userRole = userRole
     var document: Document = DomDocumentHelper.create(documentString)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserConfigurationInterfaceFactory.getInstance(document)
 }
@@ -92,8 +88,6 @@ var userRole = userRole
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UserConfigurationInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserConfiguration()

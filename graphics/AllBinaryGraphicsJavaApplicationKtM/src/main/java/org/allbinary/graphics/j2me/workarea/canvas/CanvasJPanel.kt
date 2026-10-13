@@ -94,7 +94,7 @@ companion object {
 
     private var canvasDimension: IntegerDimension
 
-    private var angle: Double = 0
+    private var angle: Double = 0.0
 
     private var canvasTreeNode: DefaultMutableTreeNode
 
@@ -143,7 +143,7 @@ this.initComponents()
 this.initMyComponents()
 this.setSize(dimension)
 this.setCanvasSize(canvasDom!!.getDimension()!!.getWidth(), canvasDom!!.getDimension()!!.getHeight())
-this.graphicItemHashMap= canvasDom!!.getGraphicItemHashMap()
+this.graphicItemHashMap= canvasDom!!.getGraphicItemHashMap()!!
 
     var graphicItemArray: Array<Any?> = this.graphicItemHashMap!!.keys.toTypedArray()!!
 
@@ -195,7 +195,7 @@ this.frameLabel= CanvasTreeLabel("FrameLabel" +Integer(CanvasJPanel.frame).
 this.canvasTreeNode= DefaultMutableTreeNode(this.frameLabel)
 CanvasJPanel.frame++
 this.workAreaJTreeJPanel!!.add(this.getTreeNode())
-this.graphicItemHashMap= StdUtil.getInstance()!!.createHashMap()
+this.graphicItemHashMap= StdUtil.getInstance()!!.createHashMap()!!
 this.grid.grid= PointFactory.getInstance()!!.createXY(0, 0)
 this.setCanvasDimension(IntegerDimension(0, 0))
 this.selectedTool= 
@@ -211,8 +211,6 @@ MyGraphicItemEventService.addListener(this)
     open fun getTreeNode()
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.canvasTreeNode
@@ -350,8 +348,6 @@ this.grid.isChanged= true
     open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.angle
@@ -560,7 +556,7 @@ this.repaint()
 
         try {
             StatusFactory.getInstance()!!.setStatus("Tool Selected")
-this.selectedTool= ToolFactory.getInstance()!!.getSelectedToolFactory()!!.getInstance(this)
+this.selectedTool= ToolFactory.getInstance()!!.getSelectedToolFactory()!!.getInstance(this)!!
 
     var newNode: MutableTreeNode = this.selectedTool!!.getTreeNode()!!
 
@@ -637,8 +633,6 @@ this.duplicateGraphicItem(graphicItem)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.graphicItemHashMap
 }
@@ -656,8 +650,6 @@ this.duplicateGraphicItem(graphicItem)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 1
 
@@ -665,8 +657,6 @@ this.duplicateGraphicItem(graphicItem)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return x
 
@@ -687,8 +677,6 @@ this.duplicateGraphicItem(graphicItem)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 1
 
@@ -696,8 +684,6 @@ this.duplicateGraphicItem(graphicItem)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return y
 
@@ -709,8 +695,6 @@ this.duplicateGraphicItem(graphicItem)
     open fun getSelectedTool()
         //nullable = true from not(false or (false and true)) = true
 : GraphicItemInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.selectedTool
@@ -853,8 +837,6 @@ super.repaint()
     open fun toDom()
         //nullable = true from not(false or (false and true)) = true
 : Node{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CanvasDom(this).
@@ -1039,12 +1021,10 @@ this.repaint()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(PositionStrings.getInstance()!!.X_LABEL)
-stringBuffer!!.appendint(mouseEvent!!.getX() /this.getXPixelsPerWorkAreaPixel())
+stringBuffer!!.appendint((mouseEvent!!.getX() /this.getXPixelsPerWorkAreaPixel()).toInt())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(PositionStrings.getInstance()!!.Y_LABEL)
-stringBuffer!!.appendint(mouseEvent!!.getY() /this.getYPixelsPerWorkAreaPixel())
-
-
+stringBuffer!!.appendint((mouseEvent!!.getY() /this.getYPixelsPerWorkAreaPixel()).toInt())
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -1243,8 +1223,6 @@ this.workAreaJTreeJPanel!!.updateTree()
 this.workAreaJTreeJPanel!!.expand()
 this.workAreaJTreeJPanel!!.repaint()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newCanvasJPanel
 }
@@ -1307,8 +1285,6 @@ var event = event
         //nullable = true from not(false or (false and true)) = true
 : IntegerDimension{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.canvasDimension
 }
@@ -1325,8 +1301,6 @@ this.canvasDimension= canvasDimension
     open fun getGrid()
         //nullable = true from not(false or (false and true)) = true
 : Grid{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.grid

@@ -132,8 +132,6 @@ hashMap!!.put(VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newObjectConfigDocument
 }

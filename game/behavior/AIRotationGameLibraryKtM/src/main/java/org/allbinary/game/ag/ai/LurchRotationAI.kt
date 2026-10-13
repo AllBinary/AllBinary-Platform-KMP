@@ -41,7 +41,7 @@ open public class LurchRotationAI : LurchAI {
             this.getOwnerLayerInterface() as RotationAnimationInterfaceCompositeInterface
 
         this.rotationAnimationInterface =
-            rotationAnimationInterfaceCompositeInterface!!.getRotationAnimationInterface()
+            rotationAnimationInterfaceCompositeInterface!!.getRotationAnimationInterface()!!
         this.update()
     }
 

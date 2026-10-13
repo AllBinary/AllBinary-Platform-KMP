@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ValidationOnlyTempUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ValidationOnlyTempUtil.instance
 }
@@ -79,8 +77,6 @@ var validationComponentInterface = validationComponentInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING

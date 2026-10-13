@@ -226,8 +226,6 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -241,8 +239,6 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -327,8 +323,6 @@ stringBuffer!!.append("PageValidation Info:" +pageValidation!!.validationInfo())
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -343,8 +337,6 @@ stringBuffer!!.append("PageValidation Info:" +pageValidation!!.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "An auto generated page name was invalid."
 }
@@ -356,8 +348,6 @@ stringBuffer!!.append("PageValidation Info:" +pageValidation!!.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -367,8 +357,6 @@ stringBuffer!!.append("PageValidation Info:" +pageValidation!!.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

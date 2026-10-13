@@ -75,8 +75,6 @@ this.twoDimensionConstraintsInterface= twoDimensionConstraintsInterface
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.displayInBrowserContraintsInterface
 }
@@ -85,8 +83,6 @@ this.twoDimensionConstraintsInterface= twoDimensionConstraintsInterface
     open fun getTwoDimensionContraints()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.twoDimensionConstraintsInterface

@@ -91,7 +91,7 @@ open public class PlayerQueue : Object {
 
             if (sound != null) {
 
-                resource = sound.getResource()
+                resource = sound.getResource()!!
             }
 
             PreLogUtil.put(

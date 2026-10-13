@@ -67,12 +67,12 @@ var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
-this.httpUserAgent= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.HTTP_USER_AGENT) as String)
-this.remoteAddress= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_ADDRESS) as String)
-this.remoteHost= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_HOST) as String)
-this.remoteHostByAddr= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_HOST_BY_ADDRESS) as String)
-this.remotePort= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_PORT) as String)
-this.requestedFilePath= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REQUEST_FILE_PATH) as String)
+this.httpUserAgent= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.HTTP_USER_AGENT) as String)!!
+this.remoteAddress= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_ADDRESS) as String)!!
+this.remoteHost= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_HOST) as String)!!
+this.remoteHostByAddr= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_HOST_BY_ADDRESS) as String)!!
+this.remotePort= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REMOTE_PORT) as String)!!
+this.requestedFilePath= stringUtil!!.getNonNull(hashMap!!.get(this.abeHttpRequestInfoData!!.REQUEST_FILE_PATH) as String)!!
 }
 
 public constructor (httpServletRequest: HttpServletRequest)
@@ -102,10 +102,10 @@ this.httpUserAgent= stringUtil!!.EMPTY_STRING
 }
 
 this.remoteHostByAddr= stringUtil!!.EMPTY_STRING
-this.remoteAddress= httpServletRequest!!.getRemoteAddr()
-this.remoteHost= httpServletRequest!!.getRemoteHost()
-this.requestedFilePath= httpServletRequest!!.getServletPath()
-this.remotePort= Integer.toString(httpServletRequest!!.getRemotePort())
+this.remoteAddress= httpServletRequest!!.getRemoteAddr()!!
+this.remoteHost= httpServletRequest!!.getRemoteHost()!!
+this.requestedFilePath= httpServletRequest!!.getServletPath()!!
+this.remotePort= Integer.toString(httpServletRequest!!.getRemotePort())!!
 }
 
 
@@ -121,8 +121,6 @@ hashMap!!.put(abeHttpRequestInfoData!!.REMOTE_HOST, this.remoteHost)
 hashMap!!.put(abeHttpRequestInfoData!!.REMOTE_HOST_BY_ADDRESS, this.remoteHostByAddr)
 hashMap!!.put(abeHttpRequestInfoData!!.REMOTE_PORT, this.remotePort)
 hashMap!!.put(abeHttpRequestInfoData!!.REQUEST_FILE_PATH, this.requestedFilePath)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -142,8 +140,6 @@ vector.add(this.remoteHostByAddr)
 vector.add(this.remotePort)
 vector.add(this.requestedFilePath)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
@@ -152,8 +148,6 @@ vector.add(this.requestedFilePath)
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().

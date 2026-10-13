@@ -55,8 +55,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -72,8 +70,6 @@ companion object {
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -127,8 +123,6 @@ TsUtil.getInstance()!!.gc()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AllBinaryMediaManager.createPlayerFromInputStream(ByteArrayInputStream(NullUtil.getInstance()!!.NULL_BYTE_ARRAY), AudioContentTypeDataFactory.getInstance()!!.MIME_AUDIO_TONE.getName())
 
@@ -148,8 +142,6 @@ TsUtil.getInstance()!!.gc()
     var bufferedInputStream: BufferedInputStream = BufferedInputStream(inputStream)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PCClipWavPlayer(bufferedInputStream)
 } catch(e: Exception)
@@ -162,8 +154,6 @@ TsUtil.getInstance()!!.gc()
 
 logUtil!!.put(commonString!!.EXCEPTION, AllBinaryMediaManager.THIS, CREATE_PLAYER, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NoPlayer.NO_PLAYER
 }
@@ -173,8 +163,6 @@ logUtil!!.put(commonString!!.EXCEPTION, AllBinaryMediaManager.THIS, CREATE_PLAYE
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NoPlayer.NO_PLAYER
 
@@ -216,8 +204,6 @@ logUtil!!.put(commonString!!.EXCEPTION, AllBinaryMediaManager.THIS, CREATE_PLAYE
     open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

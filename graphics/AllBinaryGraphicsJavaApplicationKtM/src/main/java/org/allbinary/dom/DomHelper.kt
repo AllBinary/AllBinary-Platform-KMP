@@ -53,8 +53,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : DomHelper{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DomHelper.instance
 }
@@ -84,14 +82,10 @@ private constructor ()
     var document: Document = builder.newDocument()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -116,8 +110,6 @@ var xmlFile = xmlFile
 
 
     var document: Document = builder.parse(xmlFile)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,8 +149,6 @@ var document = document
     var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
 
 copyTransformer!!.transform(domSource, streamResult)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return byteArrayOutputStream!!.toString()
@@ -233,8 +223,6 @@ var nodeList = nodeList
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node.getChildNodes()
 
@@ -287,8 +275,6 @@ var nodeList = nodeList
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return list
 }
@@ -328,8 +314,6 @@ var nodeList = nodeList
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return list
 }
@@ -362,8 +346,6 @@ this.logUtil!!.putF("NodeName: " +node.getNodeName(), this, "searchNodeList")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 
@@ -405,8 +387,6 @@ this.logUtil!!.putF("NodeName: " +node.getNodeName(), this, "searchNodeList")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 

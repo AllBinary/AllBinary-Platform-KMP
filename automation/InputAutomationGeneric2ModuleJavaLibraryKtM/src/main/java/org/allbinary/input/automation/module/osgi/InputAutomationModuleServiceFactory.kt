@@ -58,8 +58,6 @@ var bundle = bundle
 var registration = registration
 this.logUtil!!.putF(this.commonStrings!!.START, this, "getService")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InputAutomationModuleService(this.getInputAutomationModuleInterfaceArray())
 }
@@ -77,8 +75,6 @@ var service = service
     open fun getInputAutomationModuleInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputAutomationModuleFactoryInterface?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputAutomationModuleInterfaceArray

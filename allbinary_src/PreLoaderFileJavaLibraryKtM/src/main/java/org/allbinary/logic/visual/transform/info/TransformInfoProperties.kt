@@ -105,8 +105,6 @@ this.objectConfigFileName= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -115,8 +113,6 @@ this.objectConfigFileName= value
     open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.label
@@ -127,8 +123,6 @@ this.objectConfigFileName= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.description
 }
@@ -137,8 +131,6 @@ this.objectConfigFileName= value
     open fun getViewFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.objectFileName
@@ -149,8 +141,6 @@ this.objectConfigFileName= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.templateFileName
 }
@@ -159,8 +149,6 @@ this.objectConfigFileName= value
     open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.objectConfigFileName

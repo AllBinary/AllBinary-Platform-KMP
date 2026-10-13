@@ -107,7 +107,7 @@ open public class BasicHud : Object, UpdateMyFontInterface {
                     this.displayInfo!!.getLastHeight(),
                     this.updateMaxWidth,
                     this.updateMaxHeight,
-                )
+                )!!
             this.x = this.hudGraphicsPosition!!.getPoint()!!.getX()
             this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
         } catch (e: Exception) {
@@ -122,7 +122,7 @@ open public class BasicHud : Object, UpdateMyFontInterface {
             )
         }
 
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun getLocation()

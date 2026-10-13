@@ -58,7 +58,7 @@ public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
-this.columnsAndSearchValues= StdUtil.getInstance()!!.createHashMap()
+this.columnsAndSearchValues= StdUtil.getInstance()!!.createHashMap()!!
 this.setLength(request.getParameter(SearchData.LENGTH))
 this.setOrder(request.getParameter(SearchData.ORDER))
 
@@ -83,8 +83,8 @@ this.setSortBy(request.getParameter(SearchData.SORTBY))
         {
 this.add(columnName, columnValue)
 index++
-columnName= request.getParameter(SearchData.COLUMNNAME +"[" +index +"]")
-columnValue= request.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")
+columnName= request.getParameter(SearchData.COLUMNNAME +"[" +index +"]")!!
+columnValue= request.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")!!
 }
 
 }
@@ -143,8 +143,6 @@ this.endPage= value
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.columnsAndSearchValues
 }
@@ -153,8 +151,6 @@ this.endPage= value
     open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.order
@@ -165,8 +161,6 @@ this.endPage= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.sortBy
 }
@@ -175,8 +169,6 @@ this.endPage= value
     open fun getLength()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.listLength
@@ -194,8 +186,6 @@ this.endPage= value
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(this.listLength)
 
@@ -212,8 +202,6 @@ this.endPage= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.startPage
 }
@@ -222,8 +210,6 @@ this.endPage= value
     open fun getEndPage()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.endPage
@@ -241,8 +227,6 @@ this.endPage= value
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(this.startPage)
 
@@ -266,8 +250,6 @@ this.endPage= value
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(this.endPage)
 
@@ -293,8 +275,6 @@ paramsNode!!.appendChild(this.getFieldsNode(document))
 paramsNode!!.appendChild(this.getOrderNode(document))
 paramsNode!!.appendChild(this.getSortByNode(document))
 paramsNode!!.appendChild(this.getLengthNode(document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paramsNode
@@ -338,8 +318,6 @@ fieldsNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fieldsNode
 }
@@ -351,8 +329,6 @@ fieldsNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueNodes(document, SearchData.ORDER, ToDomHelper.convertNull(this.getOrder()))
@@ -366,8 +342,6 @@ var document = document
 : Node{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueNodes(document, SearchData.SORTBY, ToDomHelper.convertNull(this.getSortBy()))
 }
@@ -379,8 +353,6 @@ var document = document
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueNodes(document, SearchData.LENGTH, ToDomHelper.convertNull(this.getLength()))

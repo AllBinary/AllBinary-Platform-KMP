@@ -59,8 +59,6 @@ var document = document
     var node: Node = document.createElement(GenericProfileActionScriptInputData.NAME)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }

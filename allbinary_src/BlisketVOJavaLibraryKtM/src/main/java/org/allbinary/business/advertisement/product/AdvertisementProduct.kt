@@ -51,8 +51,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.type
 }
@@ -61,8 +59,6 @@ public constructor ()
     open fun getLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.link
@@ -73,8 +69,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.number
 }
@@ -83,8 +77,6 @@ public constructor ()
     open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.constraint

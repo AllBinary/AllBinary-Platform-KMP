@@ -106,8 +106,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.uriResolverStrings!!.R
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(fileAbPath))
@@ -135,14 +133,10 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.uriResolverStrings!!.R
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +"{Store Name if Any}/{import url}"
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "StoreUriResolver - Does not work without webapp path should be changed"

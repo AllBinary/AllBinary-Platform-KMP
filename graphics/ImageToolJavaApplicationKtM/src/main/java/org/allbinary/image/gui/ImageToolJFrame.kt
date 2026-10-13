@@ -420,8 +420,6 @@ Arrays.sort(files, object: Comparator<File>()
     var fileNameIndexValue2: Int = extractIndexNumberIfAnyFromFileName(file2.getName())
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileNameIndexValue1 -fileNameIndexValue2
 }
@@ -452,8 +450,6 @@ i= 0
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return i
 }
@@ -470,7 +466,7 @@ i= 0
                         for (index in 0 until files.size)
 
         {
-bufferedImageArray[index]= ImageIO.read(files[index]!!)
+bufferedImageArray[index]= ImageIO.read(files[index]!!)!!
 
     
                         if(bufferedImageArray[index] == 
@@ -726,8 +722,6 @@ colorRangeInterface!!.setMinBlue(Integer(this.getMinBlueJTextField()!!.getText()
 colorRangeInterface!!.setMaxBlue(Integer(this.getMaxBlueJTextField()!!.getText()).
                             toInt())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return colorRangeInterface
 }
@@ -736,8 +730,6 @@ colorRangeInterface!!.setMaxBlue(Integer(this.getMaxBlueJTextField()!!.getText()
     open fun getMaxBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxBlueJTextField
@@ -756,8 +748,6 @@ this.maxBlueJTextField= this.maxBlueJTextField
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxGreenJTextField
 }
@@ -774,8 +764,6 @@ this.maxGreenJTextField= this.maxGreenJTextField
     open fun getMaxRedJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxRedJTextField
@@ -794,8 +782,6 @@ this.maxRedJTextField= this.maxRedJTextField
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minBlueJTextField
 }
@@ -813,8 +799,6 @@ this.minBlueJTextField= this.minBlueJTextField
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minGreenJTextField
 }
@@ -831,8 +815,6 @@ this.minGreenJTextField= this.minGreenJTextField
     open fun getMinRedJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minRedJTextField

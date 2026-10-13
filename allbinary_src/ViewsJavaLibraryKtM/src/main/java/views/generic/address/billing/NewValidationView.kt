@@ -51,8 +51,6 @@ var transformInfoInterface = transformInfoInterface
 : Boolean{
 this.streetAddress= StreetAddress()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -61,8 +59,6 @@ this.streetAddress= StreetAddress()
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Please contact the administrator."
@@ -73,8 +69,6 @@ this.streetAddress= StreetAddress()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -84,8 +78,6 @@ this.streetAddress= StreetAddress()
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

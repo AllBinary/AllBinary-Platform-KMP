@@ -70,7 +70,7 @@ stringBuffer!!.append("generic")
 stringBuffer!!.append(sep)
 stringBuffer!!.append("shipping")
 stringBuffer!!.append(sep)
-SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()
+SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()!!
 }
 
     private val SHIPPINGMETHODSFILENAME: String = "shippingMethods.xml"
@@ -105,7 +105,7 @@ stringBuffer!!.append(ShippingMethodsFactory.SHIPPINGMETHODSFILEPATHSTRING)
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(abPath)!!
 
-this.document= DomDocumentHelper.create(data)
+this.document= DomDocumentHelper.create(data)!!
 this.shippingVector= BasicArrayListD()
 
     var nodeList: NodeList = this.document.getElementsByTagName(ShippingMethodsData.NAME)!!
@@ -170,8 +170,6 @@ this.shippingVector!!.add(NoShippingModuleView())
         //nullable =  from not(true or (false and true)) = 
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingVector
 }
@@ -180,8 +178,6 @@ this.shippingVector!!.add(NoShippingModuleView())
     open fun getDefaultInstance()
         //nullable = true from not(false or (false and true)) = true
 : ShippingInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.defaultShippingMethodInterface

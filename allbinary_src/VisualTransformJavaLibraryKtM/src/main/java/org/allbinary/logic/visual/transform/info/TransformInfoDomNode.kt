@@ -89,7 +89,7 @@ var node = node
 stringBuffer!!.append("Constructing Complete TransformInfo Node For: ")
 stringBuffer!!.append(name)
 stringBuffer!!.append(" with ")
-stringBuffer!!.appendint(nodeList!!.getLength())
+stringBuffer!!.appendint(nodeList!!.getLength().toInt())
 stringBuffer!!.append(" children")
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 
@@ -135,7 +135,7 @@ this.transformInfoInterface= TransformInfo(name, objectFileName, objectConfigFil
 stringBuffer!!.append("Constructing Partial TransformInfo Node For: ")
 stringBuffer!!.append(name)
 stringBuffer!!.append(" with ")
-stringBuffer!!.appendint(nodeList!!.getLength())
+stringBuffer!!.appendint(nodeList!!.getLength().toInt())
 stringBuffer!!.append(" children")
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 
@@ -155,12 +155,12 @@ this.transformInfoInterface= TransformInfo(name) as TransformInfoInterface
                                 )
                         
                                     {
-                                    this.mappedName= templateAttrNode!!.getValue()
+                                    this.mappedName= templateAttrNode!!.getValue()!!
 
                                     }
                                 
                         else {
-                            this.mappedName= this.getTransformInfoInterface()!!.getName()
+                            this.mappedName= this.getTransformInfoInterface()!!.getName()!!
 
                         }
                             
@@ -171,7 +171,7 @@ public constructor (transformInfoInterface: TransformInfoInterface)
         {
 var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
-this.mappedName= transformInfoInterface!!.getName()
+this.mappedName= transformInfoInterface!!.getName()!!
 }
 
 public constructor (transformInfoInterface: TransformInfoInterface, mappedName: String)
@@ -197,8 +197,6 @@ this.mappedName= mappedName
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface
 }
@@ -207,8 +205,6 @@ this.mappedName= mappedName
     open fun getMappedName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mappedName
@@ -236,8 +232,6 @@ stringBuffer!!.append("\"/>")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return key

@@ -169,7 +169,7 @@ open public class PersistentInputMapping : Object {
         for (index in 0 until size) {
 
             hashtable = list.objectArray[index]!! as ABHashtable<Any, Any>
-            enumeration = hashtable.keys()
+            enumeration = hashtable.keys()!!
 
             while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
                 mappedToInput = this.enumerationUtil!!.nextElement(enumeration)!! as Input

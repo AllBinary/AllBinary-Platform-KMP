@@ -66,8 +66,6 @@ this.titleBody= TitleBodyValidation(requestHashMap)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -100,8 +98,6 @@ this.titleBody= TitleBodyValidation(requestHashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -115,8 +111,6 @@ this.titleBody= TitleBodyValidation(requestHashMap)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -135,8 +129,6 @@ this.titleBody= TitleBodyValidation(requestHashMap)
 
 stringBuffer!!.append(this.titleBody!!.validationInfo())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -151,8 +143,6 @@ stringBuffer!!.append(this.titleBody!!.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -164,8 +154,6 @@ stringBuffer!!.append(this.titleBody!!.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -175,8 +163,6 @@ stringBuffer!!.append(this.titleBody!!.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -191,8 +177,6 @@ var document = document
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreCustomizerComponentUtil.getInstance()!!.generate(this.abeClientInformation, this.getTransformInfoInterface())
 } catch(e: Exception)

@@ -48,8 +48,6 @@ this.setColorRangeInterface(ColorRange() as ColorRangeInterface)
         //nullable = true from not(false or (false and true)) = true
 : ColorRangeInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorRangeInterface
 }
@@ -66,8 +64,6 @@ this.colorRangeInterface= colorRangeInterface
     open fun getMatchingPixelsChecked()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.matchingPixelsChecked
@@ -93,8 +89,6 @@ this.matchingPixelsChecked++
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.totalPixelsChecked
 }
@@ -118,8 +112,6 @@ this.totalPixelsChecked= totalPixelsChecked
     open fun getPercent()
         //nullable = true from not(false or (false and true)) = true
 : Float{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return (this.getMatchingPixelsChecked().toFloat() /this.getTotalPixelsChecked())

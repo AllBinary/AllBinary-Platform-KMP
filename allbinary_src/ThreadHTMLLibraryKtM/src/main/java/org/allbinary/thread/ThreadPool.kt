@@ -97,8 +97,6 @@ public constructor (poolName: String, numThreads: Int, priority: Int)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -274,15 +272,11 @@ this.taskQueue!!.addAt(index, task)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NULL_RUNNABLE
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.taskQueue!!.removeAt(0) as Runnable
@@ -333,8 +327,6 @@ this.currentPriorityRunnable= this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -346,8 +338,6 @@ this.currentPriorityRunnable= this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -359,15 +349,11 @@ this.currentPriorityRunnable= this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

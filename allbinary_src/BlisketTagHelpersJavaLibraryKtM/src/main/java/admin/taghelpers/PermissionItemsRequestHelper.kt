@@ -84,18 +84,18 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(basicItemData!!.ID)
-this.number= this.request.getParameter(basicItemData!!.NUMBER)
-this.enabled= this.request.getParameter(EntryData.getInstance()!!.ENABLE)
-this.who= this.request.getParameter(PermissionItemData.WHO)
-this.what= this.request.getParameter(PermissionItemData.WHAT)
-this.type= this.request.getParameter(PermissionItemData.TYPE)
-this.remoteAddr= this.request.getParameter(PermissionItemData.REMOTE_ADDR)
-this.startTime= this.request.getParameter(PermissionItemData.START_TIME)
-this.endTime= this.request.getParameter(PermissionItemData.END_TIME)
-this.price= this.request.getParameter(basicItemData!!.PRICE)
-this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
+this.number= this.request.getParameter(basicItemData!!.NUMBER)!!
+this.enabled= this.request.getParameter(EntryData.getInstance()!!.ENABLE)!!
+this.who= this.request.getParameter(PermissionItemData.WHO)!!
+this.what= this.request.getParameter(PermissionItemData.WHAT)!!
+this.type= this.request.getParameter(PermissionItemData.TYPE)!!
+this.remoteAddr= this.request.getParameter(PermissionItemData.REMOTE_ADDR)!!
+this.startTime= this.request.getParameter(PermissionItemData.START_TIME)!!
+this.endTime= this.request.getParameter(PermissionItemData.END_TIME)!!
+this.price= this.request.getParameter(basicItemData!!.PRICE)!!
+this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)!!
+this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)!!
 }
 
 
@@ -124,8 +124,6 @@ values.put(basicItemData!!.PRICE, this.price)
                                 
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -174,8 +172,6 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -192,8 +188,6 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -221,8 +215,6 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -239,8 +231,6 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -272,8 +262,6 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -290,8 +278,6 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

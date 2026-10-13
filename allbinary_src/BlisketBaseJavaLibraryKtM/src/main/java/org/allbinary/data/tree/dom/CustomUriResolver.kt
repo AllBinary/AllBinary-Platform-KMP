@@ -102,8 +102,6 @@ stringBuffer!!.append(this.basicURIResolver!!.getExtension())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(fileAbPath))
@@ -128,8 +126,6 @@ stringBuffer!!.append(this.basicURIResolver!!.getExtension())
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.path

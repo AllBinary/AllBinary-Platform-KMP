@@ -56,8 +56,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TrueTypeFontUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TrueTypeFontUtil.instance
 }
@@ -101,8 +99,7 @@ this.logUtil!!.putF(path, this, commonStrings!!.CONSTRUCTOR)
     var fos: FileOutputStream = FileOutputStream(path)
 
 
-    var bitmap: Bitmap = 
-                                    (getImage as AndroidImageInterface).getBitmap()!!
+    var bitmap: Bitmap = (this.fontImage!!.openGLBitmap!!.getImage() as AndroidImageInterface).getBitmap()!!
 
 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
 } catch(e: Exception)
@@ -274,8 +271,6 @@ canvas.save()
 
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fontImage
 
@@ -283,8 +278,6 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fontImage
 
@@ -470,8 +463,6 @@ paint.getTextBounds(this.characterArray, 0, 1, bounds)
 }
 
 this._characterWidth[0]= (fontSize shr 1) -2
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this._characterWidth

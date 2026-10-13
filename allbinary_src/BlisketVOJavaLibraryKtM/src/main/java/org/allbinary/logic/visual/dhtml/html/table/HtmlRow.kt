@@ -70,8 +70,6 @@ this.numberOfColumns++
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.numberOfColumns
 }
@@ -142,8 +140,6 @@ result += " "
 
 result += this.ENDTAG
 result += this.after
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result

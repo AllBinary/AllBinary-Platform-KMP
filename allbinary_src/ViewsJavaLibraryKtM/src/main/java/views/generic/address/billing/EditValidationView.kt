@@ -48,7 +48,7 @@ var transformInfoInterface = transformInfoInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-this.value= this.getPageContext()!!.getRequest()!!.getParameter(StreetAddressData.ID)
+this.value= this.getPageContext()!!.getRequest()!!.getParameter(StreetAddressData.ID)!!
 }
 
 
@@ -63,8 +63,6 @@ this.value= this.getPageContext()!!.getRequest()!!.getParameter(StreetAddressDat
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -82,15 +80,11 @@ this.streetAddress= billingAddressesEntity!!.get(Integer(this.value))
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.streetAddress!!.isValid()
@@ -101,8 +95,6 @@ this.streetAddress= billingAddressesEntity!!.get(Integer(this.value))
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.streetAddress!!.validationInfo()
 }
@@ -111,8 +103,6 @@ this.streetAddress= billingAddressesEntity!!.get(Integer(this.value))
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -123,8 +113,6 @@ this.streetAddress= billingAddressesEntity!!.get(Integer(this.value))
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

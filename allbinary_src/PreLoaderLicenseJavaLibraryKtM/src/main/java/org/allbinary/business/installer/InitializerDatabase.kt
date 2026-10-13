@@ -172,8 +172,6 @@ var jdbcDriverClassPathString = jdbcDriverClassPathString
         try {
             Class.forName(jdbcDriverClassPathString)!!.newInstance()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -190,8 +188,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -237,8 +233,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 }
@@ -254,8 +248,6 @@ var jdbcDriver = jdbcDriver
 stringBuffer!!.append("The JDBC driver (")
 stringBuffer!!.append(jdbcDriver)
 stringBuffer!!.append(") you have provided is not valid.<br/>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -315,8 +307,6 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -329,15 +319,11 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
         try {
             this.initDb!!.addUsers()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -353,15 +339,11 @@ this.logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
         try {
             this.initDb!!.addDatabases()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -377,15 +359,11 @@ this.logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
         try {
             this.initDb!!.addTables()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -397,8 +375,6 @@ this.logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
     open fun getAdminDbUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.adminDbUserName
@@ -417,8 +393,6 @@ this.adminDbUserName= adminDbUserName
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.adminDbPassword
 }
@@ -435,8 +409,6 @@ this.adminDbPassword= adminDbPassword
     open fun getAdminJdbcDriver()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.adminJdbcDriver
@@ -455,8 +427,6 @@ this.adminJdbcDriver= adminJdbcDriver
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.adminSchema
 }
@@ -474,8 +444,6 @@ this.adminSchema= adminSchema
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.adminServer
 }
@@ -492,8 +460,6 @@ this.adminServer= adminServer
     open fun getAdminPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.adminPort

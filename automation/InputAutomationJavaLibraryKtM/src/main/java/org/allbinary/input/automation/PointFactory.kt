@@ -52,12 +52,11 @@ var y = y
                                 )
                         
                                     {
-                                    point= PointFactory.pointArray[x]!![y]= Point(x, y)
+                                    PointFactory.pointArray[x]!![y]= Point(x, y)
+point= PointFactory.pointArray[x]!![y]
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return point

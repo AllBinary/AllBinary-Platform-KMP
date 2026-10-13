@@ -147,8 +147,6 @@ this.special= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.group
 }
@@ -157,8 +155,6 @@ this.special= value
     open fun getTax()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tax
@@ -169,8 +165,6 @@ this.special= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingType
 }
@@ -179,8 +173,6 @@ this.special= value
     open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingCost
@@ -191,8 +183,6 @@ this.special= value
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingAddress
 }
@@ -201,8 +191,6 @@ this.special= value
     open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special
@@ -221,8 +209,6 @@ hashMap!!.put(ShippingMethodData.NAME, this.shippingType)
 hashMap!!.put(ShippingMethodData.COST, this.shippingCost)
 hashMap!!.put(OrderHistoryData.SHIPPEDDATE, this.shippedDate)
 hashMap!!.put(EntryData.getInstance()!!.SPECIAL, this.special)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap

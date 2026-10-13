@@ -173,7 +173,7 @@ open public class BaseImageAnimationFactory : Object, AnimationInterfaceFactoryI
 
         stringBuffer!!.append(super.toString())
         stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-        stringBuffer!!.appendint(this.image.getHeight())
+        stringBuffer!!.appendint(this.image.getHeight().toInt())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
 

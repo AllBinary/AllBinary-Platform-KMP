@@ -53,8 +53,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageUtil.instance
 }
@@ -85,8 +83,6 @@ private constructor ()
     var gd: GraphicsDevice = ge.getDefaultScreenDevice()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return gd.getDefaultConfiguration()
 }
@@ -99,8 +95,6 @@ private constructor ()
     //var height = height
 
     var graphicsConfiguration: GraphicsConfiguration = this.getDefaultConfiguration()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -140,10 +134,8 @@ bufferedImage= bufferedImageArray[index]!!
 
     var newHeight: Int = (bufferedImage!!.getHeight() *percent /100).toInt()
 
-scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidth, newHeight, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidth, newHeight, scale)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -183,10 +175,8 @@ bufferedImage= bufferedImageArray[index]!!
 
     var newHeight: Int = (bufferedImage!!.getHeight() *percent).toInt()
 
-scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidth, newHeight, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidth, newHeight, scale)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -217,10 +207,8 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
                         for (index in 0 until size)
 
         {
-scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -237,8 +225,6 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[ind
     //var newWidth = newWidth
 var newHeight = newHeight
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createBufferedImage(bufferedImage, newWidth, newHeight, true)
 }
@@ -253,8 +239,6 @@ var newHeight = newHeight
     //var newWidth = newWidth
 var newHeight = newHeight
     //var scale = scale
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createBufferedImageAllowTranslate(bufferedImage, newWidth, newHeight, scale, false)
@@ -278,10 +262,10 @@ var newHeight = newHeight
     var height: Double = bufferedImage!!.getHeight()
 
 
-    var d_newWidth: Double = newWidth
+    var d_newWidth: Double = newWidth.toDouble()
 
 
-    var d_newHeight: Double = newHeight
+    var d_newHeight: Double = newHeight.toDouble()
 
 
     var widthRatio: Double = d_newWidth /width
@@ -331,8 +315,6 @@ affineTransform!!.translate(dx, dy)
 
 graphics.drawRenderedImage(bufferedImage, affineTransform)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newBufferedImage
 }
@@ -353,10 +335,10 @@ var newHeight = newHeight
     var height: Double = bufferedImage!!.getHeight()
 
 
-    var d_newWidth: Double = newWidth
+    var d_newWidth: Double = newWidth.toDouble()
 
 
-    var d_newHeight: Double = newHeight
+    var d_newHeight: Double = newHeight.toDouble()
 
 
     var widthRatio: Double = d_newWidth /width
@@ -391,8 +373,6 @@ var newHeight = newHeight
 graphics.drawImage(bufferedImage, dx4, dy4, 
                             null)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newBufferedImage
 }
@@ -410,8 +390,6 @@ var toolkitImage = toolkitImage
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -428,8 +406,6 @@ var toolkitImage = toolkitImage
 g2d.drawImage(toolkitImage, 0, 0, 
                             null)
 g2d.dispose()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage
@@ -464,8 +440,6 @@ bufferedImage= j2seImage!!.getImage() as BufferedImage
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImage
 }
@@ -483,13 +457,11 @@ var bufferedImage = bufferedImage
 
 stringBuffer!!.append(" BufferedImage -")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.appendint(bufferedImage!!.getWidth())
+stringBuffer!!.appendint(bufferedImage!!.getWidth().toInt())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.appendint(bufferedImage!!.getHeight())
+stringBuffer!!.appendint(bufferedImage!!.getHeight().toInt())
 stringBuffer!!.append(" Type: ")
-stringBuffer!!.appendint(bufferedImage!!.getType())
-
-
+stringBuffer!!.appendint(bufferedImage!!.getType().toInt())
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

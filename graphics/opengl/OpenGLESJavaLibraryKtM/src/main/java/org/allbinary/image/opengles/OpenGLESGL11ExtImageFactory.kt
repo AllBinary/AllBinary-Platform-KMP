@@ -45,8 +45,6 @@ open public class OpenGLESGL11ExtImageFactory : OpenGLImageFactory {
     //var bitmapFactory = bitmapFactory
     //var textureFactory = textureFactory
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLESGL11ExtImage(image, bitmapFactory, textureFactory)
 }

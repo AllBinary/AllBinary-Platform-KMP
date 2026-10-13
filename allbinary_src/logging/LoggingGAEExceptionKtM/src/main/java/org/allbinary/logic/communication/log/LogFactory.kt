@@ -42,8 +42,6 @@ open public class LogFactory
     //var functionName = functionName
     //var exception = exception
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Log(specialMessage, anyType, functionName, exception)
 }
@@ -55,8 +53,6 @@ open public class LogFactory
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Log(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)

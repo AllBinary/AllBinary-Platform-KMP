@@ -54,8 +54,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : SVGAsJSONSimpleLoader{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SVGAsJSONSimpleLoader.instance
 }
@@ -98,7 +96,7 @@ companion object {
                         for (index2 in 0 until size2)
 
         {
-stringBuilder!!.appendint(points[index]!![index2]!!)
+stringBuilder!!.appendint(points[index]!![index2]!!.toInt())
 stringBuilder!!.append(CommonSeps.getInstance()!!.COMMA)
 }
 
@@ -167,8 +165,6 @@ System.out.println(stringBuilder!!.toString())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EMPTY_POINTS
 
@@ -237,8 +233,6 @@ System.out.println(stringBuilder!!.toString())
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -454,8 +448,6 @@ pointVector!!.add(intArrayOf(SHAPE_SEPARATOR[0],SHAPE_SEPARATOR[1]))
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.toInt(value, key)
 }
@@ -478,8 +470,6 @@ pointVector!!.add(intArrayOf(SHAPE_SEPARATOR[0],SHAPE_SEPARATOR[1]))
     var value: Any = anyType!!.get(key)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.toInt(value, key)
 
@@ -489,8 +479,6 @@ pointVector!!.add(intArrayOf(SHAPE_SEPARATOR[0],SHAPE_SEPARATOR[1]))
             {
 e.printStackTrace()
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -509,8 +497,6 @@ e.printStackTrace()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Math.round(value = valuevalue as Number
 value.
@@ -524,8 +510,6 @@ value.
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Math.round((value as String).toDouble()).toInt()
 
@@ -549,8 +533,6 @@ value.
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return value as JSONObject
 
@@ -573,8 +555,6 @@ value.
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EMPTY_POINTS
 
@@ -597,8 +577,6 @@ value.
 
 points[index]= point
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

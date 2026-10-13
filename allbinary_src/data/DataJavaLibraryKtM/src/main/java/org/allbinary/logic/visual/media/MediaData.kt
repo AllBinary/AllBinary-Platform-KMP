@@ -54,8 +54,6 @@ var a_Name = a_Name
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return mediaData
 
@@ -76,8 +74,6 @@ var a_Name = a_Name
         //nullable = true from not(false or (false and true)) = true
 : MediaData{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MediaDataFactory.getInstance()!!.JPG
 }
@@ -86,8 +82,6 @@ var a_Name = a_Name
     open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MediaData.hashMap
@@ -116,8 +110,6 @@ MediaData.hashMap!!.put(a_Name, this)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -127,8 +119,6 @@ MediaData.hashMap!!.put(a_Name, this)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.type
 }
@@ -137,8 +127,6 @@ MediaData.hashMap!!.put(a_Name, this)
     open fun getExtension()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.extension
@@ -155,15 +143,11 @@ var mediaData = mediaData
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -173,8 +157,6 @@ var mediaData = mediaData
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getName()

@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : HttpFileUploadUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HttpFileUploadUtil.instance
 }
@@ -117,7 +115,7 @@ stringBuffer!!.append("Name:")
 stringBuffer!!.append(fileItem!!.getName())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Size:")
-stringBuffer!!.appendlong(fileItem!!.getSize())
+stringBuffer!!.appendlong(fileItem!!.getSize().toLong())
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -158,8 +156,6 @@ var anyType = anyType
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -176,8 +172,6 @@ var anyType = anyType
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

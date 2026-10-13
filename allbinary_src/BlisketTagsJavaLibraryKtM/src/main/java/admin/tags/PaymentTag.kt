@@ -82,8 +82,6 @@ this.storeName= value
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
@@ -108,8 +106,6 @@ this.storeName= value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -129,7 +125,7 @@ this.storeName= value
                         if(this.isEnabled())
                         
                                     {
-                                    this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
+                                    this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     
@@ -156,8 +152,6 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.EVAL_BODY_INCLUDE
 
@@ -165,8 +159,6 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -179,15 +171,11 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -195,8 +183,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

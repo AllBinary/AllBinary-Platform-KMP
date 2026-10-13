@@ -90,8 +90,6 @@ this.logic= logic
                             null) as Boolean
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -131,8 +129,6 @@ this.logic= logic
 
     var result: String = method.invoke(this.getHelper(), 
                             null) as String
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -214,8 +210,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -223,8 +217,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -258,8 +250,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -267,8 +257,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -281,16 +269,12 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 }
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -312,8 +296,6 @@ AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
                                     }
                                 
 this.logic= true
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doEndTag()

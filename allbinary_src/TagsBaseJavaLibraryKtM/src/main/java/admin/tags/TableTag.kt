@@ -94,8 +94,6 @@ this.enabled= enabled
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -104,8 +102,6 @@ this.enabled= enabled
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -124,8 +120,6 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
         //nullable = true from not(false or (false and true)) = true
 : TagHelperFactoryInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tagHelperFactoryInterface
 }
@@ -142,8 +136,6 @@ this.tagRequestHelperFactoryInterface= tagHelperFactoryInterface
     open fun getTagRequestHelperFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : TagHelperFactoryInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tagRequestHelperFactoryInterface
@@ -162,8 +154,6 @@ this.current= current
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.current
 }
@@ -180,8 +170,6 @@ this.total= total
     open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.total
@@ -210,8 +198,6 @@ this.total= total
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -228,8 +214,6 @@ this.total= total
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -260,8 +244,6 @@ this.total= total
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -278,8 +260,6 @@ this.total= total
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -310,8 +290,6 @@ this.total= total
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -328,8 +306,6 @@ this.total= total
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -360,8 +336,6 @@ this.total= total
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -378,8 +352,6 @@ this.total= total
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -407,8 +379,6 @@ this.total= total
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -425,8 +395,6 @@ this.total= total
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -454,8 +422,6 @@ this.total= total
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -472,8 +438,6 @@ this.total= total
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -501,8 +465,6 @@ this.total= total
                             null) as String
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -519,8 +481,6 @@ this.total= total
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -613,7 +573,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.tagStrings!!.DO_START_
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0 || this.getCommand()!!.compareTo(SqlStrings.getInstance()!!.INSERT_INTO) == 0 || this.getCommand()!!.compareTo(commonStrings!!.DELETE) == 0 || this.getCommand()!!.compareTo(commonStrings!!.UPDATE) == 0 || this.getCommand()!!.compareTo(SqlStrings.getInstance()!!.UPDATE) == 0)
                         
                                     {
-                                    this.requestObject= this.getTagRequestHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)
+                                    this.requestObject= this.getTagRequestHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
 
                                     }
                                 
@@ -662,8 +622,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.tagStrings!!.DO_START_
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -689,8 +647,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -714,8 +670,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -738,8 +692,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -813,15 +765,11 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -829,8 +777,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

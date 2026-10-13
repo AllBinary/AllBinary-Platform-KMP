@@ -58,8 +58,6 @@ this.categoryInterface= categoryInterface
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryInterface
 }
@@ -121,7 +119,7 @@ var document = document
                                     
     var categoryInterface: CategoryInterface = anyType as CategoryInterface
 
-categoryPropertiesInterface= categoryInterface!!.getProperties()
+categoryPropertiesInterface= categoryInterface!!.getProperties()!!
 
                                     }
                                 
@@ -142,8 +140,6 @@ categoryPropertiesInterface= categoryInterface!!.getProperties()
 
 node.appendChild(childCategoryNode)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

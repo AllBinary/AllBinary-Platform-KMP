@@ -225,8 +225,6 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSessionInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.abContext!!.getWeblisketSession()
 }
@@ -236,8 +234,6 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.abContext!!.getPageContext()
 }
@@ -246,8 +242,6 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
     open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.abContext!!.getPropertiesHashMap()
@@ -260,8 +254,6 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH, this.getTemplateFile())
 }
@@ -273,8 +265,6 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH, this.getObjectConfigFile())
 }
@@ -285,8 +275,6 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
     open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH, this.getDataFile())

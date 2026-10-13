@@ -70,7 +70,7 @@ open public class OwnershipPaintable : Paintable, UpdateMyFontInterface {
 
         this.COPYRIGHT_Y = 2 * font.getHeight()
         this.beginWidth = (font.stringWidth(this.COPYRIGHT) shr 1)
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun setBasicColorP(basicColor: BasicColor)

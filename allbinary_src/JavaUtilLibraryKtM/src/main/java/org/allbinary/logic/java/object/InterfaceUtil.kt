@@ -62,8 +62,6 @@ stringBuffer!!.append(lineBreak)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -96,8 +94,6 @@ stringBuffer!!.append(lineBreak)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return interfaces[index]!!
 
@@ -108,8 +104,6 @@ stringBuffer!!.append(lineBreak)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -135,13 +129,9 @@ var anyType = anyType
     
                         if(clazz.toString()!!.compareTo(classes[index]!!.getName()) == 0)
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -170,16 +160,12 @@ var anyType = anyType
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -212,8 +198,6 @@ stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -71,8 +71,6 @@ this.request= httpTransformInfoInterface!!.getPageContext()!!.getRequest() as Ht
         //nullable = true from not(false or (false and true)) = true
 : HttpServletRequest{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.request
 }
@@ -106,8 +104,6 @@ billingAddressesNode!!.appendChild(streetAddress!!.toXmlNode(document))
 billingAddressesNode!!.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.NUMBEROFADDRESSES, Integer(streetAddresses!!.size()).
                             toString()))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return billingAddressesNode
 } catch(e: Exception)
@@ -121,8 +117,6 @@ billingAddressesNode!!.appendChild(ModDomHelper.createNameValueNodes(document, S
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -146,8 +140,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

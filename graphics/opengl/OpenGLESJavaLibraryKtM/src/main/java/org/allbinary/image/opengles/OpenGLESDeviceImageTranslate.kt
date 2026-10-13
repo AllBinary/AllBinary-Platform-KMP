@@ -36,13 +36,13 @@ open public class OpenGLESDeviceImageTranslate : OpenGLESImageTranslate {
             {
             }            
         
-    var translateX: Float = 0
+    var translateX: Float = 0f
 
-    var translateY: Float = 0
+    var translateY: Float = 0f
 
-    var translateX2: Float = 0
+    var translateX2: Float = 0f
 
-    var translateY2: Float = 0
+    var translateY2: Float = 0f
 
     override fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
         //nullable = true from not(false or (false and false)) = true

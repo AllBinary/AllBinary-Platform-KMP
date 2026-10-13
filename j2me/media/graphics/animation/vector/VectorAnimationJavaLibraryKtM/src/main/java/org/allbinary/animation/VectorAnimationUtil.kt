@@ -57,7 +57,7 @@ open public class VectorAnimationUtil : Object {
         for (index in 0 until size) {
 
             nextBasicArrayList = vector.objectArray[index]!! as BasicArrayList
-            framePoints = this.toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
+            framePoints = this.toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
 
             for (pointIndex in 0 until framePoints!!.size) {
 
@@ -88,7 +88,7 @@ open public class VectorAnimationUtil : Object {
         for (index in 0 until size) {
 
             nextBasicArrayList = vector.objectArray[index]!! as BasicArrayList
-            framePoints = this.toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
+            framePoints = this.toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
             points[index] = Array(framePoints!!.size) { IntArray(2) }
 
             for (pointIndex in 0 until framePoints!!.size) {

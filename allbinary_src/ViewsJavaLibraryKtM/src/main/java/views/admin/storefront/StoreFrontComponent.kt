@@ -70,8 +70,6 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)

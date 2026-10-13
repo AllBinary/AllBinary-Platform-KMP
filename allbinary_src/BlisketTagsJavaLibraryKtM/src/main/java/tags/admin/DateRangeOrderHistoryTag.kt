@@ -97,8 +97,6 @@ this.setObjectFile("views.admin.orderhistory.DateRangeOrderHistoryView")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 
@@ -111,8 +109,6 @@ this.setObjectFile("views.admin.orderhistory.DateRangeOrderHistoryView")
 } catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

@@ -103,8 +103,6 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DownloadableInventoryItemView.TYPE_ID
 }
@@ -150,8 +148,6 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
@@ -256,8 +252,6 @@ stringBuffer!!.appendchar(filePathData!!.SEPARATORCHAR)
 stringBuffer!!.append(this.downloadableItem!!.getId())
 stringBuffer!!.appendchar(filePathData!!.SEPARATORCHAR)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -275,8 +269,6 @@ this.requestHashMap= requestHashMap
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.requestHashMap
 }
@@ -285,8 +277,6 @@ this.requestHashMap= requestHashMap
     open fun getDownloadableItem()
         //nullable = true from not(false or (false and true)) = true
 : DownloadableItem{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.downloadableItem

@@ -70,9 +70,9 @@ open public class MiniMapLayer : AllBinaryLayer, GeographicMapCellPositionEventL
 
         // For kotlin this is before the body of the constructor.
 
-        this.allBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()
+        this.allBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
         this.geographicMapCellPositionFactory =
-            geographicMapInterface!!.getGeographicMapCellPositionFactory()
+            geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
         this.animationInterface =
             CircleFilledAnimation(
                 this.allBinaryTiledLayer!!.getCellWidth(),

@@ -76,27 +76,27 @@ var node = node
 
     var nameNode: Node = DomSearchHelper.getNode(StreetAddressData.NAME, node.getChildNodes())!!
 
-this.name= DomNodeHelper.getTextNodeValue(nameNode)
+this.name= DomNodeHelper.getTextNodeValue(nameNode)!!
 
     var streetNode: Node = DomSearchHelper.getNode(StreetAddressData.STREET, node.getChildNodes())!!
 
-this.street= DomNodeHelper.getTextNodeValue(streetNode)
+this.street= DomNodeHelper.getTextNodeValue(streetNode)!!
 
     var cityNode: Node = DomSearchHelper.getNode(StreetAddressData.CITY, node.getChildNodes())!!
 
-this.city= DomNodeHelper.getTextNodeValue(cityNode)
+this.city= DomNodeHelper.getTextNodeValue(cityNode)!!
 
     var stateNode: Node = DomSearchHelper.getNode(StreetAddressData.STATE, node.getChildNodes())!!
 
-this.state= DomNodeHelper.getTextNodeValue(stateNode)
+this.state= DomNodeHelper.getTextNodeValue(stateNode)!!
 
     var codeNode: Node = DomSearchHelper.getNode(StreetAddressData.CODE, node.getChildNodes())!!
 
-this.code= DomNodeHelper.getTextNodeValue(codeNode)
+this.code= DomNodeHelper.getTextNodeValue(codeNode)!!
 
     var countryNode: Node = DomSearchHelper.getNode(StreetAddressData.COUNTRY, node.getChildNodes())!!
 
-this.country= DomNodeHelper.getTextNodeValue(countryNode)
+this.country= DomNodeHelper.getTextNodeValue(countryNode)!!
 this.log()
 }
 
@@ -104,13 +104,13 @@ public constructor (streetAddress: StreetAddress)
             : super()
         {
     //var streetAddress = streetAddress
-this.id= streetAddress!!.getId()
-this.name= streetAddress!!.getName()
-this.street= streetAddress!!.getStreet()
-this.city= streetAddress!!.getCity()
-this.state= streetAddress!!.getState()
-this.code= streetAddress!!.getCode()
-this.country= streetAddress!!.getCountry()
+this.id= streetAddress!!.getId()!!
+this.name= streetAddress!!.getName()!!
+this.street= streetAddress!!.getStreet()!!
+this.city= streetAddress!!.getCity()!!
+this.state= streetAddress!!.getState()!!
+this.code= streetAddress!!.getCode()!!
+this.country= streetAddress!!.getCountry()!!
 this.isDefault= streetAddress!!.isDefault()
 this.log()
 }
@@ -256,8 +256,6 @@ this.country= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -266,8 +264,6 @@ this.country= value
     open fun getStreet()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.street
@@ -278,8 +274,6 @@ this.country= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.city
 }
@@ -288,8 +282,6 @@ this.country= value
     open fun getState()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.state
@@ -300,8 +292,6 @@ this.country= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.code
 }
@@ -310,8 +300,6 @@ this.country= value
     open fun getCountry()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.country
@@ -322,8 +310,6 @@ this.country= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.id
 }
@@ -332,8 +318,6 @@ this.country= value
     open fun isDefault()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isDefault
@@ -364,15 +348,11 @@ this.country= value
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -403,15 +383,11 @@ this.country= value
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -489,8 +465,6 @@ stringBuffer!!.append("<br></br>")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -499,8 +473,6 @@ stringBuffer!!.append("<br></br>")
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -518,8 +490,6 @@ var document = document
 
 node.appendChild(this.toXmlNode(document))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -536,8 +506,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toValidationInfoNode", e)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -559,8 +527,6 @@ hashMap!!.put(StreetAddressData.CITY, this.city)
 hashMap!!.put(StreetAddressData.STATE, this.state)
 hashMap!!.put(StreetAddressData.CODE, this.code)
 hashMap!!.put(StreetAddressData.COUNTRY, this.country)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -607,8 +573,6 @@ var document = document
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

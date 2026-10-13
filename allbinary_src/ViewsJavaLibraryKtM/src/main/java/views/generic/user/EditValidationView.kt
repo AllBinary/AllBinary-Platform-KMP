@@ -71,8 +71,6 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -96,8 +94,6 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -118,15 +114,11 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -141,8 +133,6 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -216,8 +206,6 @@ stringBuffer!!.append(this.user.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -232,8 +220,6 @@ stringBuffer!!.append(this.user.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -245,8 +231,6 @@ stringBuffer!!.append(this.user.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -256,8 +240,6 @@ stringBuffer!!.append(this.user.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

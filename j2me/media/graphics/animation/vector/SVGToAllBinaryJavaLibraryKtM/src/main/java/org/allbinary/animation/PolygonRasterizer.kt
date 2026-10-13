@@ -25,8 +25,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : PolygonRasterizer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PolygonRasterizer.instance
 }
@@ -63,8 +61,6 @@ pixelBuffer[i]= 0xFFFFFFFF
 
 PolygonRasterizer.getInstance()!!.fillPolygon(pathX, pathY, pointCount, pixelBuffer, width, height, 0xFFFF00FF)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return pixelBuffer
 }
@@ -84,8 +80,6 @@ PolygonRasterizer.getInstance()!!.fillPolygon(pathX, pathY, pointCount, pixelBuf
     
                         if(numPoints < 3)
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 

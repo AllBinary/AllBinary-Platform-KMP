@@ -48,8 +48,6 @@ var node = node
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.heightSizeConstraintInterface
 }
@@ -58,8 +56,6 @@ var node = node
     open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.widthSizeConstraintInterface

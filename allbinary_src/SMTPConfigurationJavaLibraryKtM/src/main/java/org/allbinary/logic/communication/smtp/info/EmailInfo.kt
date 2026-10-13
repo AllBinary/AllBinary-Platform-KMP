@@ -102,8 +102,6 @@ this.contentBase= contentBase
         //nullable = true from not(false or (false and true)) = true
 : BasicEmailInfo{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basicEmailInfo
 }
@@ -112,8 +110,6 @@ this.contentBase= contentBase
     open fun getHtmlAttachment()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.htmlAttachment
@@ -124,8 +120,6 @@ this.contentBase= contentBase
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.contentBase
 }
@@ -134,8 +128,6 @@ this.contentBase= contentBase
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Email Info: \n " +this.getBasicEmailInfo()!!.toString()

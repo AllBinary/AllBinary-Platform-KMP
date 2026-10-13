@@ -152,8 +152,6 @@ this.remove(profileActionScriptNodeInterface)
 
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -162,8 +160,6 @@ this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
     open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.profileActionConditionInterfaceVector
@@ -205,8 +201,6 @@ var document = document
 
 node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

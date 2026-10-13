@@ -62,8 +62,6 @@ this.streetAddressList= billingAddressesEntity!!.get()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -99,15 +97,11 @@ this.streetAddressList= billingAddressesEntity!!.get()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -118,8 +112,6 @@ this.streetAddressList= billingAddressesEntity!!.get()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "No Shipping Addresses to display.<br />"
 }
@@ -128,8 +120,6 @@ this.streetAddressList= billingAddressesEntity!!.get()
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -140,8 +130,6 @@ this.streetAddressList= billingAddressesEntity!!.get()
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

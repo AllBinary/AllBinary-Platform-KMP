@@ -43,8 +43,6 @@ import org.allbinary.util.ABVector
         //nullable =  from not(true or (false and true)) = 
 : StdUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StdUtil.instance
 }
@@ -67,8 +65,6 @@ import org.allbinary.util.ABVector
         //nullable = true from not(false or (false and true)) = true
 : ABStack<Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ABStack<Any>()
 }
@@ -77,8 +73,6 @@ import org.allbinary.util.ABVector
     open fun createVector()
         //nullable = true from not(false or (false and true)) = true
 : ABVector<Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ABVector<Any>()
@@ -89,8 +83,6 @@ import org.allbinary.util.ABVector
         //nullable = true from not(false or (false and true)) = true
 : ABHashtable<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ABHashtable<Any, Any>()
 }
@@ -99,8 +91,6 @@ import org.allbinary.util.ABVector
     open fun createHashMap()
         //nullable = true from not(false or (false and true)) = true
 : ABHashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ABHashMap<Any, Any>()

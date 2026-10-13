@@ -76,7 +76,7 @@ var id = id
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 this.id= ProductIdGenerator().
-                            getNext()
+                            getNext()!!
 this.basicItemId= id
 this.enabled= EntryData.getInstance()!!.YES
 this.system= "Java"
@@ -86,8 +86,8 @@ this.version= EMPTY_STRING
 this.changes= EMPTY_STRING
 this.licenseFile= EMPTY_STRING
 this.file= EMPTY_STRING
-this.size= (0).toLong()
-this.validTime= (0).toLong()
+this.size= (0).toLong()!!
+this.validTime= (0).toLong()!!
 this.retries= EMPTY_STRING
 }
 
@@ -113,7 +113,7 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                         if(!StringValidationUtil.getInstance()!!.isEmpty(value))
                         
                                     {
-                                    this.size= (value).toLong()
+                                    this.size= (value).toLong()!!
 
                                     }
                                 
@@ -130,7 +130,7 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                         if(!StringValidationUtil.getInstance()!!.isEmpty(validTime))
                         
                                     {
-                                    this.validTime= (validTime).toLong()
+                                    this.validTime= (validTime).toLong()!!
 
                                     }
                                 
@@ -193,8 +193,6 @@ values.add(this.getRetries())
 values.add(time)
 values.add(time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
 }
@@ -229,8 +227,6 @@ values.put(DownloadItemData.RETRIES, this.getRetries())
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
 }
@@ -239,8 +235,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.id
@@ -251,8 +245,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.system
 }
@@ -261,8 +253,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun getPlatform()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.platform
@@ -273,8 +263,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.specialName
 }
@@ -283,8 +271,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.version
@@ -295,8 +281,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.changes
 }
@@ -305,8 +289,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun getLicenseFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.licenseFile
@@ -317,8 +299,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.file
 }
@@ -327,8 +307,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.size
@@ -339,8 +317,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.validTime
 }
@@ -349,8 +325,6 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun getRetries()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.retries

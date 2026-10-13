@@ -69,8 +69,6 @@ this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as 
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -79,8 +77,6 @@ this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as 
     open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeName
@@ -91,8 +87,6 @@ this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as 
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.description
 }
@@ -102,8 +96,6 @@ this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as 
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementAreaConstraintsInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.advertisementAreaConstraintsInterface
 }
@@ -112,8 +104,6 @@ this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as 
     open fun getCampaign()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.campaign

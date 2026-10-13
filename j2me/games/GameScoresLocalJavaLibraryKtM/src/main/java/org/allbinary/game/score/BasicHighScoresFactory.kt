@@ -84,7 +84,7 @@ open public class BasicHighScoresFactory : HighScoresBase {
                     this.PERSONAL_HIGH_SCORES,
                     this.SCORES,
                     ScoreComparator(true),
-                )
+                )!!
             highScoresResultsListener!!.setHighScoresArray(this.highScoresArray)
         } catch (e: Exception) {
             this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.FETCH, e)

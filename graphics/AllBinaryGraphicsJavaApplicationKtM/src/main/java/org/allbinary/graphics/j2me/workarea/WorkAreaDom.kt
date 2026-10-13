@@ -80,7 +80,7 @@ var document = document
 
     var nameTextNode: Node = nameNode!!.getFirstChild()!!
 
-this.name= nameTextNode!!.getNodeValue()
+this.name= nameTextNode!!.getNodeValue()!!
 
                                     }
                                 
@@ -92,7 +92,7 @@ this.name= nameTextNode!!.getNodeValue()
 
                         }
                             
-this.canvasNodeList= DomHelper.getInstance()!!.getChildrenWithoutTextNodes(WorkAreaDom.FRAMES, workAreaNodeList!!.item(0)!!.getChildNodes())
+this.canvasNodeList= DomHelper.getInstance()!!.getChildrenWithoutTextNodes(WorkAreaDom.FRAMES, workAreaNodeList!!.item(0)!!.getChildNodes())!!
 
                                     }
                                 
@@ -111,8 +111,6 @@ this.canvasNodeList= DomHelper.getInstance()!!.getChildrenWithoutTextNodes(WorkA
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -121,8 +119,6 @@ this.canvasNodeList= DomHelper.getInstance()!!.getChildrenWithoutTextNodes(WorkA
     open fun getCanvasNodes()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.canvasNodeList

@@ -73,8 +73,6 @@ UserRoleFactory.getInstance()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return userRole
 
@@ -96,8 +94,6 @@ UserRoleFactory.getInstance()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 UserRoleFactory.getInstance()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserRoleB.roleVector

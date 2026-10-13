@@ -55,8 +55,6 @@ this.files= files
         //nullable = true from not(false or (false and true)) = true
 : Array<BufferedImage?>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.bufferedImageArray
 }
@@ -65,8 +63,6 @@ this.files= files
     open fun getFiles()
         //nullable = true from not(false or (false and true)) = true
 : Array<File?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.files

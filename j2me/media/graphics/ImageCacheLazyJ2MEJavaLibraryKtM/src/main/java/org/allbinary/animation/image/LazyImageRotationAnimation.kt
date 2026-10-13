@@ -117,8 +117,6 @@ this.index= index
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.index
 }
@@ -208,8 +206,6 @@ this.animation.setScale(scaleX, scaleY)
     override fun getAnimationBehavior()
         //nullable = true from not(false or (false and true)) = true
 : AnimationBehavior{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getAnimationBehavior()
@@ -331,8 +327,6 @@ this.animation.changeBasicColor(basicColor)
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getBasicColorP()
 }
@@ -341,8 +335,6 @@ this.animation.changeBasicColor(basicColor)
     override fun getChangeBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getChangeBasicColor()
@@ -353,8 +345,6 @@ this.animation.changeBasicColor(basicColor)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getChangeColor()
 }
@@ -363,8 +353,6 @@ this.animation.changeBasicColor(basicColor)
     override fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getColor()
@@ -375,8 +363,6 @@ this.animation.changeBasicColor(basicColor)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getDx()
 }
@@ -386,8 +372,6 @@ this.animation.changeBasicColor(basicColor)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getDy()
 }
@@ -396,8 +380,6 @@ this.animation.changeBasicColor(basicColor)
     override fun isThreed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.isThreed()
@@ -432,8 +414,6 @@ this.animation.setFrame(index)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getFrame()
 }
@@ -445,8 +425,6 @@ this.animation.setFrame(index)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getAnimationSize()
 }
@@ -455,8 +433,6 @@ this.animation.setFrame(index)
     override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getSize()
@@ -473,8 +449,6 @@ this.animation.previousFrame()
     override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.isLastFrame()
@@ -493,8 +467,6 @@ this.animation.setSequence(sequence)
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getSequence()
 }
@@ -503,8 +475,6 @@ this.animation.setSequence(sequence)
     override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.animation.getWidth()
@@ -556,11 +526,9 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PR
     var image: Image = this.animationInterfaceFactoryInterface!!.getImage()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(super.toString())!!.append(commonSeps!!.SPACE)!!.append(image.getName())!!.append(commonSeps!!.SPACE)!!.appendint(image.getWidth())!!.append(commonSeps!!.SPACE)!!.appendint(image.getHeight())!!.toString()
+                            append(super.toString())!!.append(commonSeps!!.SPACE)!!.append(image.getName())!!.append(commonSeps!!.SPACE)!!.appendint(image.getWidth().toInt())!!.append(commonSeps!!.SPACE)!!.appendint(image.getHeight().toInt())!!.toString()
 }
 
 

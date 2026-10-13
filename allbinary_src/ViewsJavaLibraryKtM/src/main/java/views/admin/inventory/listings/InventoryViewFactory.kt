@@ -50,8 +50,6 @@ var searchRequest = searchRequest
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InventorySearch(searchRequest)
 } catch(e: Exception)
@@ -68,8 +66,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "InventoryViewFactory", "getInstance(Se
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

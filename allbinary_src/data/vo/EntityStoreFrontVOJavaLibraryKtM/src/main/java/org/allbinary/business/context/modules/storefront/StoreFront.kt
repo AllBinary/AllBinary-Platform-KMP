@@ -207,8 +207,6 @@ var columnName = columnName
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -216,8 +214,6 @@ var columnName = columnName
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -234,8 +230,6 @@ var columnName = columnName
 var key = key
 var hashMap = hashMap
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(this.create(this.EMPTY_STRING, key, hashMap), StringUtil.getInstance()!!.EMPTY_STRING)
 }
@@ -250,8 +244,6 @@ var append = append
 var key = key
 var hashMap = hashMap
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(this.create(append, key, hashMap), StringUtil.getInstance()!!.EMPTY_STRING)
 }
@@ -262,8 +254,6 @@ var hashMap = hashMap
 : String{
 var key = key
 var hashMap = hashMap
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.create(this.EMPTY_STRING, key, hashMap)
@@ -285,8 +275,6 @@ var hashMap = hashMap
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.EMPTY_STRING
 
@@ -299,8 +287,6 @@ var hashMap = hashMap
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap!!.get(path as Object) as String +append
 
@@ -308,8 +294,6 @@ var hashMap = hashMap
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return path
 
@@ -333,26 +317,26 @@ var storeHashMap = storeHashMap
 this.name= storeHashMap!!.get(storeFrontData!!.NAME) as String
 this.basketName= storeHashMap!!.get(storeFrontData!!.NAME) as String
 this.homeHostName= storeHashMap!!.get(storeFrontData!!.HOMEHOSTNAME) as String
-this.homeHostNamePath= this.createPath(storeFrontData!!.HOMEHOSTNAMEPATH, storeHashMap)
+this.homeHostNamePath= this.createPath(storeFrontData!!.HOMEHOSTNAMEPATH, storeHashMap)!!
 this.hostName= storeHashMap!!.get(storeFrontData!!.HOSTNAME) as String
-this.hostNamePath= this.createPath(storeFrontData!!.HOSTNAMEPATH, storeHashMap)
+this.hostNamePath= this.createPath(storeFrontData!!.HOSTNAMEPATH, storeHashMap)!!
 this.testHomeHostName= storeHashMap!!.get(storeFrontData!!.TESTHOMEHOSTNAME) as String
-this.testHomeHostNamePath= this.createPath(storeFrontData!!.TESTHOMEHOSTNAMEPATH, storeHashMap)
+this.testHomeHostNamePath= this.createPath(storeFrontData!!.TESTHOMEHOSTNAMEPATH, storeHashMap)!!
 this.testHostName= storeHashMap!!.get(storeFrontData!!.TESTHOSTNAME) as String
-this.testHostNamePath= this.createPath(storeFrontData!!.TESTHOSTNAMEPATH, storeHashMap)
-this.imagePath= this.createPath(StoreFront.RESOURCES, storeFrontData!!.IMAGEPATH, storeHashMap)
-this.staticPath= this.createPath(" Products" +AbPathData.getInstance()!!.SEPARATOR, storeFrontData!!.STATICPATH, storeHashMap)
-this.categoryPath= this.createPath(StoreFront.RESOURCES, storeFrontData!!.CATEGORYPATH, storeHashMap)
+this.testHostNamePath= this.createPath(storeFrontData!!.TESTHOSTNAMEPATH, storeHashMap)!!
+this.imagePath= this.createPath(StoreFront.RESOURCES, storeFrontData!!.IMAGEPATH, storeHashMap)!!
+this.staticPath= this.createPath(" Products" +AbPathData.getInstance()!!.SEPARATOR, storeFrontData!!.STATICPATH, storeHashMap)!!
+this.categoryPath= this.createPath(StoreFront.RESOURCES, storeFrontData!!.CATEGORYPATH, storeHashMap)!!
 this.inventoryControl= storeHashMap!!.get(storeFrontData!!.INVENTORYCONTROL) as String
 this.subStores= storeHashMap!!.get(storeFrontData!!.SUBSTORES) as String
 this.tagLocation= storeHashMap!!.get(storeFrontData!!.TAGLOCATION) as String
 this.packageLocation= storeHashMap!!.get(storeFrontData!!.PACKAGELOCATION) as String
 this.ftp= storeHashMap!!.get(storeFrontData!!.FTP) as String
-this.ftpPath= this.createPath(storeFrontData!!.FTPPATH, storeHashMap)
+this.ftpPath= this.createPath(storeFrontData!!.FTPPATH, storeHashMap)!!
 this.ftpUserName= storeHashMap!!.get(storeFrontData!!.FTPUSERNAME) as String
 this.ftpPassword= storeHashMap!!.get(storeFrontData!!.FTPPASSWORD) as String
 this.testFtp= storeHashMap!!.get(storeFrontData!!.TESTFTP) as String
-this.testFtpPath= this.createPath(storeFrontData!!.TESTFTPPATH, storeHashMap)
+this.testFtpPath= this.createPath(storeFrontData!!.TESTFTPPATH, storeHashMap)!!
 this.testFtpUserName= storeHashMap!!.get(storeFrontData!!.TESTFTPUSERNAME) as String
 this.testFtpPassword= storeHashMap!!.get(storeFrontData!!.TESTFTPPASSWORD) as String
 this.timeCreated= storeHashMap!!.get(EntryData.getInstance()!!.TIMECREATED) as String
@@ -369,8 +353,6 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -417,15 +399,13 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 hashMap!!.put(arrayOf(CommonSeps.getInstance()!!.SPACE), this.ONE_EMPTY_STRING_ARRAY)
 this.name= Replace(hashMap).
-                            all(this.name)
+                            all(this.name)!!
 
                                     }
                                 
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -438,7 +418,7 @@ this.name= Replace(hashMap).
 
     var valid: Boolean = Boolean.true
 
-valid= this.isNameValid()
+valid= this.isNameValid()!!
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -664,8 +644,6 @@ valid= this.isNameValid()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -673,8 +651,6 @@ valid= this.isNameValid()
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -701,15 +677,11 @@ stringBuffer!!.append("Name is invalid. Must be < ")
 stringBuffer!!.appendint(this.MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.EMPTY_STRING
@@ -955,8 +927,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -971,8 +941,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -983,8 +951,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.globals.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
@@ -1002,17 +968,15 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHostName()
+                                    location= this.getTestHostName()!!
 
                                     }
                                 
                         else {
-                            location= this.getHostName()
+                            location= this.getHostName()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -1030,17 +994,15 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHostNamePath()
+                                    location= this.getTestHostNamePath()!!
 
                                     }
                                 
                         else {
-                            location= this.getHostNamePath()
+                            location= this.getHostNamePath()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -1058,17 +1020,15 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHomeHostName()
+                                    location= this.getTestHomeHostName()!!
 
                                     }
                                 
                         else {
-                            location= this.getHomeHostName()
+                            location= this.getHomeHostName()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -1086,17 +1046,15 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
-                                    location= this.getTestHomeHostNamePath()
+                                    location= this.getTestHomeHostNamePath()!!
 
                                     }
                                 
                         else {
-                            location= this.getHomeHostNamePath()
+                            location= this.getHomeHostNamePath()!!
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return location
@@ -1107,8 +1065,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -1117,8 +1073,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getBasketName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basketName
@@ -1129,8 +1083,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.homeHostName
 }
@@ -1139,8 +1091,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.homeHostNamePath!!.toString()
@@ -1151,8 +1101,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hostName
 }
@@ -1161,8 +1109,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hostNamePath!!.toString()
@@ -1173,8 +1119,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHomeHostName
 }
@@ -1183,8 +1127,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getTestHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHomeHostNamePath!!.toString()
@@ -1195,8 +1137,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHostName
 }
@@ -1205,8 +1145,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getTestHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testHostNamePath!!.toString()
@@ -1217,8 +1155,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.staticPath!!.toString()
 }
@@ -1228,8 +1164,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPath!!.toString()
 }
@@ -1238,8 +1172,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getInventoryControl()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inventoryControl
@@ -1260,8 +1192,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     var subStoreVector: BasicArrayList = tokenizer.getTokensFromString(this.subStores, BasicArrayListD())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subStoreVector
 } catch(e: Exception)
@@ -1279,8 +1209,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tagLocation
 }
@@ -1289,8 +1217,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getPackageLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.packageLocation
@@ -1301,8 +1227,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftp
 }
@@ -1311,8 +1235,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getFtpUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpUserName
@@ -1323,8 +1245,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpPassword
 }
@@ -1333,8 +1253,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getTestFtp()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtp
@@ -1345,8 +1263,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtpUserName
 }
@@ -1355,8 +1271,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getTestFtpPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtpPassword
@@ -1367,8 +1281,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpPath!!.toString()
 }
@@ -1377,8 +1289,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getTestFtpPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.testFtpPath!!.toString()
@@ -1389,8 +1299,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeCreated
 }
@@ -1399,8 +1307,6 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.lastModified
@@ -1663,8 +1569,6 @@ this.testFtpPath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -1676,8 +1580,6 @@ this.testFtpPath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -1689,15 +1591,11 @@ this.testFtpPath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -1975,8 +1873,6 @@ dataVector!!.add(this.testFtpPassword)
 dataVector!!.add(time)
 dataVector!!.add(time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return dataVector
 }
@@ -2031,8 +1927,6 @@ dataHashMap!!.put(storeFrontData!!.TESTFTPPASSWORD, this.testFtpPassword)
 
 dataHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return dataHashMap
 }
@@ -2042,8 +1936,6 @@ dataHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getName() as Object
 }
@@ -2052,8 +1944,6 @@ dataHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
     open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.contextConfigurationInterface

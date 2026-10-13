@@ -70,8 +70,8 @@ this.orderHistory= orderHistory
 
     var storeName: String = orderHistory!!.getStoreName()!!
 
-this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
-this.user= UserEntityFactory.getInstance()!!.getUser(orderHistory!!.getUserName())
+this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
+this.user= UserEntityFactory.getInstance()!!.getUser(orderHistory!!.getUserName())!!
 }
 
 

@@ -31,8 +31,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : JTreeInterfaceFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return JTreeInterfaceFactory.instance
 }
@@ -58,8 +56,6 @@ this.jTreeInterface= jTreeInterface
     open fun getJTreeInterface()
         //nullable = true from not(false or (false and true)) = true
 : JTreeInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.jTreeInterface

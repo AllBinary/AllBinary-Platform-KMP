@@ -109,7 +109,7 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
         this.highScoresPaintable = paintable
         this.highScoresFactoryInterface = highScoresFactoryInterface
         this.highScoresCanvasInputProcessor =
-            highScoresCanvasInputProcessorFactoryInterface!!.getInstance(this)
+            highScoresCanvasInputProcessorFactoryInterface!!.getInstance(this)!!
         this.gameInfo = gameInfo
         this.waitPaintable!!.setBasicColorP(allBinaryGameLayerManager!!.getForegroundBasicColor())
         this.getHighScoresPaintable()!!.setBasicColorP(
@@ -119,7 +119,7 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
             ColorFillPaintableFactory.getInstance()!!.getInstance(
                 allBinaryGameLayerManager!!.getBackgroundBasicColor(),
                 false,
-            )
+            )!!
 
         if (
             this.highScoresHelper!!.getHighScoresArray() ==

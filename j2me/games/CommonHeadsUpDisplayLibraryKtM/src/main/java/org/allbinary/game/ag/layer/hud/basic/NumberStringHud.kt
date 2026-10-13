@@ -61,9 +61,9 @@ open public class NumberStringHud : BasicHud, PaintableInterface {
         // For kotlin this is before the body of the constructor.
 
         this.prependString = prependString
-        this.PREPEND_STRING = prependString!!.toCharArray()
+        this.PREPEND_STRING = prependString!!.toCharArray()!!
         this.valueString = PrimitiveLongSingleton.getInstance()!!.NUMBER_CHAR_ARRAYS[0]!!
-        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(max + 1)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(max + 1)!!
         this.max = max
         this.value = 0
 
@@ -110,7 +110,7 @@ open public class NumberStringHud : BasicHud, PaintableInterface {
             this.value = 0
         }
 
-        this.valueString = this.primitiveLongUtil!!.getCharArray(this.value)
+        this.valueString = this.primitiveLongUtil!!.getCharArray(this.value)!!
         this.valueTotalDigits = this.primitiveLongUtil!!.getCurrentTotalDigits()
     }
 

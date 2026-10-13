@@ -45,7 +45,7 @@ open public class CustomTextAnimation : TextAnimation, TextInterface {
         // For kotlin this is before the body of the constructor.
 
         this.fontSize = fontSize
-        this.font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
+        this.font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)!!
     }
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
@@ -76,7 +76,7 @@ open public class CustomTextAnimation : TextAnimation, TextInterface {
 
         this.hasChanged = true
         this.font =
-            Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (this.fontSize * scaleX).toInt())
+            Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (this.fontSize * scaleX).toInt())!!
     }
 
     override fun setText(text: String)

@@ -55,7 +55,7 @@ open public class AdvancedRTSGameLayerPositionFinder : Object, LayerPositionFind
             layerInterface =
                 WaypointCellPositionHistory.getInstance()!!.getLayerInterface(
                     geographicMapCellPosition
-                )
+                )!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

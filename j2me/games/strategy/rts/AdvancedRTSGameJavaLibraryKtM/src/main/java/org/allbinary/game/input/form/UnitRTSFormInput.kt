@@ -208,7 +208,7 @@ open public class UnitRTSFormInput : RTSFormInput {
         stringBuffer!!.append(" for: $")
         stringBuffer!!.appendint(cost)
         stringBuffer!!.append(" with ")
-        stringBuffer!!.appendint(capital.getTotalMoney())
+        stringBuffer!!.appendint(capital.getTotalMoney().toInt())
         this.logUtil!!.putF(stringBuffer!!.toString(), this, "attemptBuild")
 
         if (cost <= capital.getTotalMoney()) {

@@ -67,8 +67,6 @@ var transformInfoInterface = transformInfoInterface
     var allGatewaysLessExisting: BasicArrayList = BasicPaymentTypeUtil.getInstance()!!.difference(existingGateways)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PaymentGatewaysView(this.getTransformInfoInterface(), allGatewaysLessExisting).
                             view()

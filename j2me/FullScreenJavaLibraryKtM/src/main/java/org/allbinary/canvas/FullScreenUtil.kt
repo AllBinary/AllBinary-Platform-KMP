@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FullScreenUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FullScreenUtil.instance
 }
@@ -124,15 +122,11 @@ var isFullScreen = isFullScreen
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -143,8 +137,6 @@ var isFullScreen = isFullScreen
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var fullScreenInterface = fullScreenInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isScreenChange(fullScreenInterface!!.isFullScreenMode())

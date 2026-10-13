@@ -68,8 +68,6 @@ this.pageContext= pageContext
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSessionInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return WeblisketSession(this.propertiesHashMap, pageContext)
 }
@@ -79,8 +77,6 @@ this.pageContext= pageContext
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.pageContext
 }
@@ -89,8 +85,6 @@ this.pageContext= pageContext
     open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.propertiesHashMap

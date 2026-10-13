@@ -120,8 +120,6 @@ var values = values
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getUsersWithRole(UserRoleFactory.getInstance()!!.ADMINISTRATOR)
 }
@@ -166,8 +164,6 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return usersVector
 }
@@ -178,8 +174,6 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
     open fun getCustomers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getUsersWithRole(UserRoleFactory.getInstance()!!.CUSTOMER)
@@ -222,8 +216,6 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
                                 )
                         usersVector!!.add(User(userHashMap))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -269,8 +261,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return usersVector
 }
@@ -297,8 +287,6 @@ row.put(UserData.USERNAME, userName)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CreateUserFactory.getInstance(userHashMap)
 
@@ -306,8 +294,6 @@ row.put(UserData.USERNAME, userName)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -384,8 +370,6 @@ var password = password
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GLOBALS2.LOGINFAILED
 
@@ -415,8 +399,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "login")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GLOBALS2.LOGINSUCCESS
 
@@ -445,8 +427,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "login")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GLOBALS2.LOGINFAILED
 
@@ -463,8 +443,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "login")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error"
@@ -486,8 +464,6 @@ super.updateWhere(UserData.USERNAME, userName, updatedValues)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()
 }
@@ -504,8 +480,6 @@ super.updateWhere(UserData.USERNAME, userName, updatedValues)
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(UserData.USERNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(UserData.PREFIXNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.FIRSTNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.LASTNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.MIDDLENAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.SUFFIXNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.COMPANY)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.POSITIONATCOMPANY)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.MAINEMAIL)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(UserData.SECONDARYEMAIL)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.HOMEPHONE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.CELLPHONE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.WORKPHONE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.OTHERCONTACT)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.ELECTRONICDEVICE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.FAX)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserRoleData.NAME.toString())!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(UserData.CONFIGURATION)!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)!!.append(UserData.PERMISSIONS)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(entryData!!.ENCRYPTION)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(UserData.SECRET)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(UserData.PASSWORD)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(entryData!!.ENABLE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(entryData!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(entryData!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(UserData.USERNAME)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -514,8 +488,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
     open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())

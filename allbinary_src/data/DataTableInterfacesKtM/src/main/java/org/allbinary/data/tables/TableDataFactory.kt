@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TableDataFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TableDataFactory.instance
 }

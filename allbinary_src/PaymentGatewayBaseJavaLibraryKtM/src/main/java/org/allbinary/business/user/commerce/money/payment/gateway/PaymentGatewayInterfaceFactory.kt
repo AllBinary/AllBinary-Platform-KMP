@@ -69,8 +69,6 @@ var httpServletRequest = httpServletRequest
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getInstance(RequestParams(httpServletRequest).
                             toHashMap())
@@ -105,8 +103,6 @@ var paymentType = paymentType
 
 hashMap!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getInstance(hashMap)
 }
@@ -140,8 +136,6 @@ var hashMap = hashMap
                                 
 
     var paymentGatewayInterfaceFactoryInterface: PaymentGatewayInterfaceFactoryInterface = paymentType!!.getPaymentGatewayInterfaceFactoryInterface()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

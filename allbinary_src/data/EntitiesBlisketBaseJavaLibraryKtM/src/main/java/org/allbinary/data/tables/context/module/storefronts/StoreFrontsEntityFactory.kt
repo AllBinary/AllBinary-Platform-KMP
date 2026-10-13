@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : StoreFrontsEntityFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreFrontsEntityFactory.instance
 }
@@ -63,8 +61,6 @@ private constructor ()
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntity()
 } catch(e: Exception)
@@ -81,8 +77,6 @@ private constructor ()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -175,8 +175,6 @@ index++
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -200,8 +198,6 @@ this.logUtil!!.putF("CssPropertyValues HashMap: " +hashMap!!.toString(), this, "
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueIndexNodes(document, CssPropertyData.getInstance()!!.VALUES, CssPropertyValueData.getInstance()!!.NAME, this.propertyValueVector)

@@ -60,8 +60,6 @@ var transformInfoInterface = transformInfoInterface
 
 httpTransformInfoInterface!!.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.PARTIAL, CommonSeps.getInstance()!!.SPACE +TransformInfosData.getInstance()!!.PREVIEW)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.view(TransformInfosData.getInstance()!!.PREVIEW)
 } catch(e: Exception)

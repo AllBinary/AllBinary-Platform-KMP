@@ -79,7 +79,7 @@ open public class CommandForm : Form, MyCommandInterface, MenuListener {
 
         // For kotlin this is before the body of the constructor.
 
-        this.commandStack = StdUtil.getInstance()!!.createStack()
+        this.commandStack = StdUtil.getInstance()!!.createStack()!!
 
         try {
             this.repaintProcessor!!.process()

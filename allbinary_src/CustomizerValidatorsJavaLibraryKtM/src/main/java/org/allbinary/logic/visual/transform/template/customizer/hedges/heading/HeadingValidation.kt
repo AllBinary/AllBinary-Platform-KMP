@@ -151,8 +151,6 @@ this.logo= LogoValidation(hashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -166,8 +164,6 @@ this.logo= LogoValidation(hashMap)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -230,8 +226,6 @@ this.logo= LogoValidation(hashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -246,8 +240,6 @@ this.logo= LogoValidation(hashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -259,8 +251,6 @@ this.logo= LogoValidation(hashMap)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -270,8 +260,6 @@ this.logo= LogoValidation(hashMap)
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -289,8 +277,6 @@ var document = document
 
 node.appendChild(this.logo.toXmlNode(document))
 node.appendChild(this.title.toXmlNode(document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node

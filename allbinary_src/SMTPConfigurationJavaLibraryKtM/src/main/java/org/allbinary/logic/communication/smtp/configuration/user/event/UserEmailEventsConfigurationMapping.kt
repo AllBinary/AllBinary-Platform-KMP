@@ -54,8 +54,6 @@ this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterfac
     var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -66,8 +64,6 @@ this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterfac
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserEmailEventsConfigurationData.NAME
@@ -81,8 +77,6 @@ this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterfac
 : BasicArrayList{
 
     var vector: BasicArrayList = BasicArrayListD()
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

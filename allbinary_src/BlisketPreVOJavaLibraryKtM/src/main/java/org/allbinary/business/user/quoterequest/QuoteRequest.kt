@@ -73,7 +73,7 @@ var request = request
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
 this.id= QuoteRequestIdGenerator().
-                            getNext()
+                            getNext()!!
 this.setUserName(userName)
 this.setProjectInfo(request.getParameter(quoteRequestData!!.PROJECT_INFO) as String)
 this.setUserComments(request.getParameter(quoteRequestData!!.CUSTOMER_COMMENTS) as String)
@@ -192,8 +192,6 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -207,8 +205,6 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -292,8 +288,6 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -307,8 +301,6 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
@@ -341,8 +333,6 @@ values.add(this.comments)
 values.add(time)
 values.add(time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
 }
@@ -372,8 +362,6 @@ values.put(quoteRequestData!!.COMMENTS, this.comments)
                                 
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -441,8 +429,6 @@ this.comments= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userName
 }
@@ -451,8 +437,6 @@ this.comments= value
     open fun getProjectInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.projectInfo
@@ -463,8 +447,6 @@ this.comments= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userComments
 }
@@ -473,8 +455,6 @@ this.comments= value
     open fun getBudget()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.budget
@@ -485,8 +465,6 @@ this.comments= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeFrame
 }
@@ -495,8 +473,6 @@ this.comments= value
     open fun getComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.comments

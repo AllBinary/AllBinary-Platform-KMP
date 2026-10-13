@@ -121,8 +121,6 @@ basicArrayList!!.add(this.getNode(treePathArray[index]!!))
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return basicArrayList
 }
@@ -153,8 +151,6 @@ var treePath = treePath
     var node: DefaultMutableTreeNode = obj[obj.size -1]!! as DefaultMutableTreeNode
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 
@@ -163,8 +159,6 @@ var treePath = treePath
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -359,8 +353,6 @@ var angle = angle
     open fun getRootTreeNode()
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rootTreeNode

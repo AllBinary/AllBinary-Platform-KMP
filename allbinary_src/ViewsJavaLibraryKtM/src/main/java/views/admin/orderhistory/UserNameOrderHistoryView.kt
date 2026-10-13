@@ -76,12 +76,12 @@ var transformInfoInterface = transformInfoInterface
                             //For kotlin this is before the body of the constructor.
                     
 this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
-this.userName= this.request.getParameter(UserData.USERNAME)
-this.preprocessing= this.request.getParameter(OrderHistoryData.PREPROCESSINGNAME)
-this.shipped= this.request.getParameter(OrderHistoryData.SHIPPEDNAME)
-this.partiallyShipped= this.request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
-this.processing= this.request.getParameter(OrderHistoryData.PROCESSINGNAME)
-this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)
+this.userName= this.request.getParameter(UserData.USERNAME)!!
+this.preprocessing= this.request.getParameter(OrderHistoryData.PREPROCESSINGNAME)!!
+this.shipped= this.request.getParameter(OrderHistoryData.SHIPPEDNAME)!!
+this.partiallyShipped= this.request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)!!
+this.processing= this.request.getParameter(OrderHistoryData.PROCESSINGNAME)!!
+this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)!!
 }
 
 
@@ -100,8 +100,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
@@ -178,8 +176,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PA
 node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
 node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -193,8 +189,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -221,15 +215,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -240,8 +230,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -251,8 +239,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -268,8 +254,6 @@ var document = document
                                     null
                                 )
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "No User Name Specified<br />"
 
@@ -278,15 +262,11 @@ var document = document
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Invalid User Name<br />"
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Unknown Error<br />"

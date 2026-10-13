@@ -203,8 +203,6 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
 this.setObjectFile("views.generic.inventory.AutoSearchValidationInventoryView")
 this.search()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -219,8 +217,6 @@ this.search()
 this.setObjectFile("views.generic.inventory.AutoValidationInventoryView")
 this.viewSummary()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -233,8 +229,6 @@ this.viewSummary()
                                     {
                                     this.setName("Basic Inventory View")
 this.setObjectFile("views.generic.inventory.AutoValidationInventoryView")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
@@ -260,16 +254,12 @@ this.setObjectFile("views.generic.inventory.AutoValidationInventoryView")
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 }
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

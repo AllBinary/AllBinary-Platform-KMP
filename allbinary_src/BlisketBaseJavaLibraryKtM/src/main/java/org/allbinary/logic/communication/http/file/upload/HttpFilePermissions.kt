@@ -51,7 +51,7 @@ public constructor (fullPath: AbPath)
             : super()
         {
 var fullPath = fullPath
-this.file= AbFile.createAbFileFromAbPath(AbPath(fullPath!!.toFileSystemString(), FileUploadData.getInstance()!!.FILE))
+this.file= AbFile.createAbFileFromAbPath(AbPath(fullPath!!.toFileSystemString(), FileUploadData.getInstance()!!.FILE))!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -86,8 +86,6 @@ this.file= AbFile.createAbFileFromAbPath(AbPath(fullPath!!.toFileSystemString(),
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.file.isFile()
 }
@@ -96,8 +94,6 @@ this.file= AbFile.createAbFileFromAbPath(AbPath(fullPath!!.toFileSystemString(),
     open fun getUserRoles()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userRoles

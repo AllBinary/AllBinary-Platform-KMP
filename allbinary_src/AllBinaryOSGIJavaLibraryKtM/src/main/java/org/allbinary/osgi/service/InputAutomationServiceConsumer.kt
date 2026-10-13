@@ -110,8 +110,6 @@ osgiServiceInterface= vector.get(index) as OSGIServiceInterface
         //nullable = true from not(false or (false and true)) = true
 : Array<ServiceReference?>?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getBundleContext()!!.getServiceReferences(this.getRegistryName(), 
                             null)
@@ -121,8 +119,6 @@ osgiServiceInterface= vector.get(index) as OSGIServiceInterface
     open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true
 : BundleContext{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.bundleContext
@@ -141,8 +137,6 @@ this.bundleContext= aBundleContext
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.registryName
 }
@@ -159,8 +153,6 @@ this.registryName= registryName
     open fun getOsgiServiceVisitorInterface()
         //nullable = true from not(false or (false and true)) = true
 : OSGIServiceVisitorInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.osgiServiceVisitorInterface

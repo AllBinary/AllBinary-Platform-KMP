@@ -69,7 +69,7 @@ open public class ImageComparisonResult
 
     private var tolerance: Int= 0
 
-    private var matchingPercent: Float =  -1
+    private var matchingPercent: Float = ( -1).toFloat()
 public constructor (name: String, bufferedImage: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
             : super()
         {
@@ -162,15 +162,13 @@ this.logUtil!!.putF("2: " +imageUtil!!.toString(bufferedImage2), this, this.comm
 : Float{
 
     
-                        if(this.matchingPercent ==  -1)
+                        if(this.matchingPercent == ( -1).toFloat())
                         
                                     {
                                     this.matchingPercent= this.pixelsThatMatch.toFloat() /(this.imageWidth *this.imageHeight)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.matchingPercent
@@ -189,8 +187,6 @@ this.nonMatchingPixelVector!!.add(pixel)
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.nonMatchingPixelVector
 }
@@ -199,8 +195,6 @@ this.nonMatchingPixelVector!!.add(pixel)
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
@@ -212,8 +206,6 @@ this.nonMatchingPixelVector!!.add(pixel)
         //nullable = true from not(false or (false and true)) = true
 : Array<BufferedImage?>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.bufferedImages
 }
@@ -222,8 +214,6 @@ this.nonMatchingPixelVector!!.add(pixel)
     open fun getTolerance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tolerance
@@ -242,8 +232,6 @@ this.tolerance= tolerance
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frameOne
 }
@@ -252,8 +240,6 @@ this.tolerance= tolerance
     open fun getFrameTwo()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frameTwo

@@ -41,7 +41,7 @@ open public class UpDownVectorAI : BasicAI {
         var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface =
             this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
-        this.velocityInterface = velocityInterfaceCompositeInterface!!.getVelocityProperties()
+        this.velocityInterface = velocityInterfaceCompositeInterface!!.getVelocityProperties()!!
         this.velocityInterface!!.getVelocityYBasicDecimalP()!!.setint(0)
     }
 

@@ -61,8 +61,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TaxFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TaxFactory.instance
 }
@@ -149,8 +147,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
     var className: String = DomNodeHelper.getTextNodeValue(classNameNode)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeFactory.getInstance()!!.getInstance(abeClientInformation, className) as TaxModuleInterface
 
@@ -186,8 +182,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         }
                             
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

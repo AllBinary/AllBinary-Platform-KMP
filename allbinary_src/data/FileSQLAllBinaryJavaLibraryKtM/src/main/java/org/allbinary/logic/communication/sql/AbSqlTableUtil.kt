@@ -58,8 +58,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbSqlTableUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbSqlTableUtil.instance
 }
@@ -165,8 +163,6 @@ backupFile!!.createNewFile()
     var outputStream: OutputStream = AbFileOutputStream(backupFile)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return outputStream
 } catch(e: Exception)
@@ -180,8 +176,6 @@ backupFile!!.createNewFile()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -241,8 +235,6 @@ Directory.create(backupAbPath)
 backupFileBak!!.createNewFile()
 FileUtil.getInstance()!!.copy(path, backupAbPath)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -256,8 +248,6 @@ FileUtil.getInstance()!!.copy(path, backupAbPath)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -315,8 +305,6 @@ lastIndex= index +1
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -416,8 +404,6 @@ outputStream!!.write(sqlStatementLine!!.encodeToByteArray())
 
 StreamUtil.getInstance()!!.close(outputStream)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.TABLE_LABEL +tableName +this.BACKUP_SUCCESS
 } catch(e: Exception)
@@ -431,8 +417,6 @@ StreamUtil.getInstance()!!.close(outputStream)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.TABLE_LABEL +tableName +" Backup Failed"
@@ -533,7 +517,9 @@ bufferedLineReader!!.readUpToLines(start)
     var line: String = this.stringUtil!!.EMPTY_STRING
 
 
-        while(bufferedLineReader!!.getCurrent() < end && (line= bufferedLineReader!!.readLine()) != 
+        while(bufferedLineReader!!.getCurrent() < end && (
+                        { line= bufferedLineReader!!.readLine()!!; line }()
+                    ) != 
                                     null
                                 )
         {
@@ -552,8 +538,6 @@ stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(this.TABLE_LABEL)
 stringBuffer!!.append(tableName)
 stringBuffer!!.append(this.PORTION_RESTORED)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -574,8 +558,6 @@ stringBuffer!!.append(this.PORTION_RESTORED)
 stringBuffer!!.append(this.TABLE_LABEL)
 stringBuffer!!.append(tableName)
 stringBuffer!!.append(" Restoration Failed")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

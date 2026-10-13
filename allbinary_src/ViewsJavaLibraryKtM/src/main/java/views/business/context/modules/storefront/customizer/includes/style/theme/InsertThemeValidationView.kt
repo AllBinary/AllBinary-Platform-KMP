@@ -64,7 +64,7 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 this.requestHashMap= NameSpaceRequestParams(this.getPageContext()).
-                            toHashMap()
+                            toHashMap()!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -82,8 +82,6 @@ this.requestHashMap= NameSpaceRequestParams(this.getPageContext()).
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -120,7 +118,7 @@ this.requestHashMap= NameSpaceRequestParams(this.getPageContext()).
                                     }
                                 
 this.validationInterface= themeValidation!!.getCssStyleValidation()
-isValid= this.validationInterface!!.isValid()
+isValid= this.validationInterface!!.isValid()!!
 
     
                         if(isValid == true)
@@ -130,8 +128,6 @@ isValid= this.validationInterface!!.isValid()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
@@ -146,8 +142,6 @@ isValid= this.validationInterface!!.isValid()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -165,8 +159,6 @@ isValid= this.validationInterface!!.isValid()
     var stringBuffer: StringMaker = StringMaker()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -181,8 +173,6 @@ isValid= this.validationInterface!!.isValid()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -194,8 +184,6 @@ isValid= this.validationInterface!!.isValid()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -205,8 +193,6 @@ isValid= this.validationInterface!!.isValid()
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -221,8 +207,6 @@ var document = document
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreCustomizerComponentUtil.getInstance()!!.generate(this.abeClientInformation, this.getTransformInfoInterface())
 } catch(e: Exception)

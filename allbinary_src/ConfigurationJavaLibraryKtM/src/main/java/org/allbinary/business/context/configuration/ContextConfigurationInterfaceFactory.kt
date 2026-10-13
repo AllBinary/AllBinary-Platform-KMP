@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ContextConfigurationInterfaceFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ContextConfigurationInterfaceFactory.instance
 }
@@ -70,8 +68,6 @@ companion object {
 
 
     var contextConfigurationNode: Node = DomSearchHelper.getNode(contextConfigurationData!!.NAME, document.getChildNodes())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,8 +94,6 @@ companion object {
 
 
     var document: Document = DomDocumentHelper.create(documentString)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

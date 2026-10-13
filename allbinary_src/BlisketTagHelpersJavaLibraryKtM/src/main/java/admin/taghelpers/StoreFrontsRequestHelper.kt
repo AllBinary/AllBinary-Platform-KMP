@@ -83,7 +83,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.storeName= this.weblisketSession!!.getStoreName()
+this.storeName= this.weblisketSession!!.getStoreName()!!
 this.modifyingStoreFrontInterface= StoreFront(this.request) as StoreFrontInterface
 }
 
@@ -110,8 +110,6 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -128,8 +126,6 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -201,9 +197,9 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STORECREATE
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Intall StoreFront Successfully: ")
-stringBuffer!!.appendint(this.portion.getCurrent()!!.toInt())
+stringBuffer!!.appendint(this.portion.getCurrent()!!.toInt().toInt())
 stringBuffer!!.append(" of ")
-stringBuffer!!.appendint(this.portion.getTotal()!!.toInt())
+stringBuffer!!.appendint(this.portion.getTotal()!!.toInt().toInt())
 
     var success: String = stringBuffer!!.toString()!!
 
@@ -217,8 +213,6 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
@@ -236,8 +230,6 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -269,8 +261,6 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -287,8 +277,6 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -316,8 +304,6 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.delete
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -334,8 +320,6 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.delete
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

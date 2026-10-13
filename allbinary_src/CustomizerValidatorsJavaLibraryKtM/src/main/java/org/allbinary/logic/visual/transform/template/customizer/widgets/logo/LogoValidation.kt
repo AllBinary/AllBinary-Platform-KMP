@@ -70,7 +70,7 @@ public constructor (node: Node){
 var node = node
 this.isFile= false
 this.logoAbPath= AbPath(DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEPATH, node.getChildNodes())!!.getNodeValue(), StringUtil.getInstance()!!.EMPTY_STRING)
-this.logoFile= DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEFILENAME, node.getChildNodes())!!.getNodeValue()
+this.logoFile= DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEFILENAME, node.getChildNodes())!!.getNodeValue()!!
 }
 
 public constructor (hashMap: HashMap<Any, Any>){
@@ -95,7 +95,7 @@ this.logoAbPath= AbPath(hashMap!!.get(LogoData.getInstance()!!.IMAGEPATH) as Str
                                 )
                         
                                     {
-                                    this.logoFile= HttpRequestUtil.getInstance()!!.generateFileName(this.logoFileItem!!.getName())
+                                    this.logoFile= HttpRequestUtil.getInstance()!!.generateFileName(this.logoFileItem!!.getName())!!
 
                                     }
                                 
@@ -153,8 +153,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -175,8 +173,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -195,8 +191,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -217,8 +211,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -237,8 +229,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -252,8 +242,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -272,8 +260,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
 stringBuffer!!.append("Logo is not valid.")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -288,8 +274,6 @@ stringBuffer!!.append("Logo is not valid.")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -301,8 +285,6 @@ stringBuffer!!.append("Logo is not valid.")
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -312,8 +294,6 @@ stringBuffer!!.append("Logo is not valid.")
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -350,8 +330,6 @@ hashMap!!.put(LogoData.getInstance()!!.IMAGEFILENAME, this.logoFile)
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -365,8 +343,6 @@ hashMap!!.put(LogoData.getInstance()!!.IMAGEFILENAME, this.logoFile)
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

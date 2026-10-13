@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : CloudStreamUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CloudStreamUtil.instance
 }
@@ -87,8 +85,6 @@ var file = file
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputStream
@@ -148,8 +144,6 @@ available= inputStream!!.available()
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputStream
 }
@@ -184,8 +178,6 @@ var file = file
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputStream

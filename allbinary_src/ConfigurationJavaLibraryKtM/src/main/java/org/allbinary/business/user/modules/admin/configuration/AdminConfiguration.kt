@@ -54,7 +54,7 @@ public constructor ()
             : super()
         {
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-this.contextConfigurationInterface= ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(AdminConfigurationData.CONTEXTNAME)
+this.contextConfigurationInterface= ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(AdminConfigurationData.CONTEXTNAME)!!
 }
 
 public constructor (request: HttpServletRequest)
@@ -105,8 +105,6 @@ cryptFileWriter!!.write(ContextConfigurationPathUtil.getAbPath(AdminConfiguratio
     open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.contextConfigurationInterface

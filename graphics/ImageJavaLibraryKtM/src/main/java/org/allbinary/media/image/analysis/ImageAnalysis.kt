@@ -48,8 +48,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageAnalysis{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageAnalysis.instance
 }
@@ -115,8 +113,6 @@ blueTotal += color.getBlue()
 colorAverage!!.setAvgRed(redTotal.toFloat() /totalPixels)
 colorAverage!!.setAvgGreen(greenTotal.toFloat() /totalPixels)
 colorAverage!!.setAvgBlue(blueTotal.toFloat() /totalPixels)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return imageAnalysisResults
@@ -239,10 +235,8 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.START +colorRangeInterface!!.to
                         for (index in 0 until bufferedImageArray!!.size)
 
         {
-imageAnalysisResultsArray[index]= ImageAnalysis.process(bufferedImageArray[index]!!, colorRangeInterface)
+imageAnalysisResultsArray[index]= ImageAnalysis.process(bufferedImageArray[index]!!, colorRangeInterface)!!
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

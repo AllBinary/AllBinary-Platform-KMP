@@ -134,8 +134,6 @@ this.conn=
                                     
 this.sqlConnectionPool!!.add(this.getDatabaseConnectionInfoInterface()!!.getUrl(), tempConnection)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rset
 } catch(e: SQLException)
@@ -179,8 +177,6 @@ this.conn=
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return databaseName +this.sqlStrings!!.CREATE_RETURN
 } catch(e: Exception)
@@ -195,8 +191,6 @@ this.conn=
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.DATABASE_CREATION_FAILED_LABEL +databaseName
 }
@@ -209,7 +203,7 @@ this.conn=
 {
 
         try {
-            this.conn= this.sqlConnectionPool!!.get(this.getDatabaseConnectionInfoInterface()!!.getUrl())
+            this.conn= this.sqlConnectionPool!!.get(this.getDatabaseConnectionInfoInterface()!!.getUrl())!!
 } catch(se: SQLException)
             {
 
@@ -305,8 +299,6 @@ this.createConnection()
     open fun getDatabaseConnectionInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : DatabaseConnectionInfoInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.databaseConnectionInfoInterface

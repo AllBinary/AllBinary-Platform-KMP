@@ -149,8 +149,6 @@ node.appendChild(propertyNode)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -206,8 +204,6 @@ var packagePropertiesHashMap = packagePropertiesHashMap
 
 nextNode!!.appendChild(indexNode)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return nextNode
 }
@@ -254,8 +250,6 @@ document.appendChild(node)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 
@@ -271,8 +265,6 @@ document.appendChild(node)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rootNode
@@ -389,8 +381,6 @@ node.appendChild(newPropertyNode)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -443,8 +433,6 @@ var node = node
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -455,15 +443,11 @@ var node = node
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -505,16 +489,12 @@ var elementNodeVector = elementNodeVector
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return index
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -644,7 +624,7 @@ node= nextNode
 
     var nodeNameDuplicateNode: Node = elementNodeVector!!.get(isElementValueTextNodeUniqueIndex) as Node
 
-node= this.addNewProperties(document, nodeNameDuplicateNode, nextPackagePropertiesHashMap)
+node= this.addNewProperties(document, nodeNameDuplicateNode, nextPackagePropertiesHashMap)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -658,8 +638,6 @@ node= this.addNewProperties(document, nodeNameDuplicateNode, nextPackageProperti
                         }
                             
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -716,16 +694,12 @@ var document = document
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.addChildren(document, rootNode as Node, nameSpaceRequestParam)
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -815,7 +789,7 @@ hashMap!!.put(key.toCharArray().concatToString(), value.toCharArray().concatToSt
                                     }
                                 
                         else {
-                            document= this.addNameSpace(key.toCharArray().concatToString(), value.toCharArray().concatToString(), document)
+                            document= this.addNameSpace(key.toCharArray().concatToString(), value.toCharArray().concatToString(), document)!!
 
                         }
                             
@@ -849,7 +823,7 @@ hashMap!!.put(key.toCharArray().concatToString(), .toCharArray())
                                     }
                                 
                         else {
-                            document= this.addNameSpace(key.toCharArray().concatToString(), .toCharArray(), document)
+                            document= this.addNameSpace(key.toCharArray().concatToString(), .toCharArray(), document)!!
 
                         }
                             
@@ -868,8 +842,6 @@ hashMap!!.put(key.toCharArray().concatToString(), .toCharArray())
                                     }
                                 
 hashMap!!.put(NameSpaceRequestParamData.DOCUMENT, document)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap

@@ -41,8 +41,6 @@ companion object {
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ApplicationConfiguration.instance as ApplicationConfiguration
 }
@@ -158,8 +156,6 @@ this.fullscreen= fullscreen
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fullscreen
 }
@@ -176,8 +172,6 @@ this.showTitleBar= showTitleBar
     open fun isShowTitleBar()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.showTitleBar
@@ -196,8 +190,6 @@ this.progressBarView= progressBarView
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.progressBarView
 }
@@ -215,8 +207,6 @@ stringBuffer!!.append(" isProgressBarView: ")
 stringBuffer!!.appendboolean(this.isProgressBarView())
 stringBuffer!!.append(" isShowTitleBar: ")
 stringBuffer!!.appendboolean(this.isShowTitleBar())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

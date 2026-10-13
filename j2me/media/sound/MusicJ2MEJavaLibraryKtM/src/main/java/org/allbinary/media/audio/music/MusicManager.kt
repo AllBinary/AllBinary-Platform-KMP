@@ -172,8 +172,6 @@ this.reset= true
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -185,8 +183,6 @@ this.reset= true
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -205,7 +201,7 @@ this.noDuration= false
 
     var nextSongSound: Sound = this.nextSongSound
 
-this.nextSongSound= NoSound.getInstance()
+this.nextSongSound= NoSound.getInstance()!!
 
     
                         if(nextSongSound == NoSound.getInstance())
@@ -317,7 +313,7 @@ this.currentSongSound!!.getPlayerP()!!.start()
                         if(this.currentSongSound != NoSound.getInstance())
                         
                                     {
-                                    resource= this.currentSongSound!!.getResource()
+                                    resource= this.currentSongSound!!.getResource()!!
 
                                     }
                                 
@@ -382,7 +378,7 @@ PreLogUtil.put(StringMaker().
                         if(currentSongSound != NoSound.getInstance())
                         
                                     {
-                                    resource= currentSongSound!!.getResource()
+                                    resource= currentSongSound!!.getResource()!!
 
                                     }
                                 

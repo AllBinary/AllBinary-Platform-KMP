@@ -102,7 +102,7 @@ open public class PathUtil : Object {
 
         if (indexOfFileExtensionDelmiter >= 0) {
 
-            pathWithoutExtension = filePath!!.substring(0, indexOfFileExtensionDelmiter)
+            pathWithoutExtension = filePath!!.substring(0, indexOfFileExtensionDelmiter)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.
@@ -222,7 +222,7 @@ open public class PathUtil : Object {
 
         if (path.indexOf("\\") >= 0) {
 
-            path = path.replace('\\', this.abPathData!!.SEPARATORCHAR)
+            path = path.replace('\\', this.abPathData!!.SEPARATORCHAR)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

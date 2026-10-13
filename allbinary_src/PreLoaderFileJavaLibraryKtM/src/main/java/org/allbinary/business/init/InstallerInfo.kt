@@ -254,8 +254,6 @@ this.read()
 : String{
 this.updateIfNeeded()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InstallerInfo.userName
 }
@@ -267,8 +265,6 @@ this.updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InstallerInfo.password
@@ -293,15 +289,11 @@ this.updateIfNeeded()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

@@ -212,7 +212,7 @@ var paymentType = paymentType
 
 whereKeyAndValue!!.put(StoreFrontData.getInstance()!!.NAME.toString(), storeName)
 whereKeyAndValue!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())
-paymentGatewayHashMap= super.getRow(whereKeyAndValue)
+paymentGatewayHashMap= super.getRow(whereKeyAndValue)!!
 
     
                         if(paymentGatewayHashMap != 
@@ -281,8 +281,6 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayInterface
 
@@ -290,8 +288,6 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PaymentGatewayInterfaceFactory().
                             getInstance(paymentType)
@@ -310,8 +306,6 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -328,7 +322,7 @@ var storeName = storeName
             
     var paymentGatewayNameVector: BasicArrayList = BasicArrayListD()
 
-paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(), StoreFrontData.getInstance()!!.NAME.toString(), storeName)
+paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(), StoreFrontData.getInstance()!!.NAME.toString(), storeName)!!
 
     
                         if(paymentGatewayNameVector != 
@@ -368,8 +362,6 @@ paymentGatewayVector!!.add(paymentType)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayVector
 
@@ -377,8 +369,6 @@ paymentGatewayVector!!.add(paymentType)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicArrayListD()
 
@@ -395,8 +385,6 @@ paymentGatewayVector!!.add(paymentType)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -526,8 +514,6 @@ stringBuffer!!.append(this.sqlStrings!!.PRIMARY_KEY)
 stringBuffer!!.append(PaymentGatewayData.ID.toString())
 stringBuffer!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -537,8 +523,6 @@ stringBuffer!!.append(this.sqlStrings!!.END)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -547,8 +531,6 @@ stringBuffer!!.append(this.sqlStrings!!.END)
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

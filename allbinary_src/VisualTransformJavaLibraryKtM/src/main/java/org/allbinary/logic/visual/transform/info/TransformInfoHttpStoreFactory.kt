@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoHttpStoreFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoHttpStoreFactory.instance
 }
@@ -64,8 +62,6 @@ companion object {
 var databaseHashMap = databaseHashMap
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoHttpStore(databaseHashMap, propertiesHashMap, pageContext)

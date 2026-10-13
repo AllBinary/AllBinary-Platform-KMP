@@ -53,7 +53,7 @@ public constructor (gl: GL, gl2: com.jogamp.opengl.GL2)
 
                             //For kotlin this is before the body of the constructor.
                     
-this.gl11= getJOGLGL()
+this.gl11= getJOGLGL()!!
 }
 
 
@@ -347,8 +347,6 @@ this.gl11.glGetTexParameteriv(target, pname, params)
 : Boolean{
 var buffer = buffer
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.gl11.glIsBuffer(buffer)
 }
@@ -359,8 +357,6 @@ var buffer = buffer
 : Boolean{
 var cap = cap
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.gl11.glIsEnabled(cap)
 }
@@ -370,8 +366,6 @@ var cap = cap
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var texture = texture
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.gl11.glIsTexture(texture)

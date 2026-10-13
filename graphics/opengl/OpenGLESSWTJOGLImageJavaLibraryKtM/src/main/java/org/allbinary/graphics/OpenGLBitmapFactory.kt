@@ -29,8 +29,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OpenGLBitmapFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLBitmapFactory.instance
 }
@@ -75,8 +73,6 @@ var width = width
 var height = height
 var config = config
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLBitmap(Image.createImage(width, height))
 }
@@ -89,8 +85,6 @@ var config = config
 : OpenGLBitmap{
 var inputStream = inputStream
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLBitmap(ImageFactory.getInstance()!!.createImageFromInputStream(inputStream))
 }
@@ -100,8 +94,6 @@ var inputStream = inputStream
         //nullable = true from not(false or (false and false)) = true
 : PlatformBitmapBase{
     //var image = image
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLBitmap(image)

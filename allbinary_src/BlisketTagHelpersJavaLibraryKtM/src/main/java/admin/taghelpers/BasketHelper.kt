@@ -64,7 +64,7 @@ this.pageContext= pageContext
                                 )
                         
                                     {
-                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+                                    this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 
                                     }
                                 
@@ -86,8 +86,6 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -95,8 +93,6 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -113,8 +109,6 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

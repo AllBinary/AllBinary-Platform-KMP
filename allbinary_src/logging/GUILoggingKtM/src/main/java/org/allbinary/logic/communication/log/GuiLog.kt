@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : GuiLog{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GuiLog.instance
 }
@@ -119,8 +117,6 @@ var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.put(specialMessage, anyType, functionName, 
                             null)
@@ -143,15 +139,11 @@ var exception = exception
 this.showDialog(data)
 System.out.println(data)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
             {
 PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, "put", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Logging Error"
@@ -167,8 +159,6 @@ PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, "put", e)
 var specialMessage = specialMessage
 var className = className
 var functionName = functionName
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.put(specialMessage, className, functionName, 
@@ -192,15 +182,11 @@ var exception = exception
 this.showDialog(data)
 System.out.println(data)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
             {
 PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, "put", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Logging Error"

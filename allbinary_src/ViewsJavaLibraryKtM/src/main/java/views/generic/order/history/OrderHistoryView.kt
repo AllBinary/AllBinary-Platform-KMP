@@ -68,11 +68,11 @@ var transformInfoInterface = transformInfoInterface
                             //For kotlin this is before the body of the constructor.
                     
 this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
-this.preprocessing= this.request.getParameter(OrderHistoryData.PREPROCESSINGNAME)
-this.shipped= this.request.getParameter(OrderHistoryData.SHIPPEDNAME)
-this.partiallyShipped= this.request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
-this.processing= this.request.getParameter(OrderHistoryData.PROCESSINGNAME)
-this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)
+this.preprocessing= this.request.getParameter(OrderHistoryData.PREPROCESSINGNAME)!!
+this.shipped= this.request.getParameter(OrderHistoryData.SHIPPEDNAME)!!
+this.partiallyShipped= this.request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)!!
+this.processing= this.request.getParameter(OrderHistoryData.PROCESSINGNAME)!!
+this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)!!
 }
 
 
@@ -131,8 +131,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PA
 node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
 node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -170,8 +168,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

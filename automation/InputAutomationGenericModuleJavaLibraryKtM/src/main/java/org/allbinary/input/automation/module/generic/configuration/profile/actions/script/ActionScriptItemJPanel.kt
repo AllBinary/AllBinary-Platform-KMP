@@ -38,8 +38,6 @@ this.initComponents()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JPanel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.newActionScriptInputJPanel
 }
@@ -56,8 +54,6 @@ this.newActionScriptInputJPanel= newActionScriptInputJPanel
     open fun getRemoveJPanel()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JPanel{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.removeJPanel
@@ -76,8 +72,6 @@ this.removeJPanel= removeJPanel
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JPanel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.scriptItemJPanel
 }
@@ -95,8 +89,6 @@ this.scriptItemJPanel= scriptItemJPanel
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JPanel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.newActionScriptConditionJPanel
 }
@@ -113,8 +105,6 @@ this.newActionScriptConditionJPanel= newActionScriptConditionJPanel
     open fun getChildActionScriptConditionJPanel()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JPanel{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.childActionScriptConditionJPanel

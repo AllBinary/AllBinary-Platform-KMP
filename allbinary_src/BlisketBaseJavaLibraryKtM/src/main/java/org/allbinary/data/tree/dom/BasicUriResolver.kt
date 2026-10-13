@@ -62,8 +62,6 @@ this.extension= extension
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.extension
 }
@@ -109,8 +107,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.uriResolverStrings!!.R
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(abPath))
@@ -144,14 +140,10 @@ stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(this.uriResolverStrings!!.IMPORT_URL)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
             {
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "BasicUriResolver - Does not work without webapp path should be changed"

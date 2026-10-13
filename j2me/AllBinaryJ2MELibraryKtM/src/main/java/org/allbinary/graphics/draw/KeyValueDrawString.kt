@@ -49,7 +49,7 @@ open public class KeyValueDrawString : Object, UpdateMyFontInterface {
         var labelWidth: Int = graphics.getFont()!!.stringWidth(this.LABEL) - this.LABEL.length
 
         this.valueX = labelWidth + this.labelX
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun paint(graphics: Graphics, y: Int)

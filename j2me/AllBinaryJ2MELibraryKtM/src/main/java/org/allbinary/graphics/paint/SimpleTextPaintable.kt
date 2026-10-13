@@ -58,7 +58,7 @@ open public class SimpleTextPaintable : Paintable, UpdateMyFontInterface {
 
         this.topScoresWidth = (font.stringWidth(this.text) shr 1)
         this.fontHeight = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun paint(graphics: Graphics)

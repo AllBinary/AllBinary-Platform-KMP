@@ -51,7 +51,7 @@ open public class AboutPaintableFactory : Object {
         var DEVELOPERS: Array<String?> = arrayOf("Developed By:", "Travis Berthelot")
 
         this.paintableArray =
-            AboutPaintable.getInstance(INFO, DEVELOPERS)!!.getPaintableArrayInstance()
+            AboutPaintable.getInstance(INFO, DEVELOPERS)!!.getPaintableArrayInstance()!!
     }
 
     var paintableArray: Array<Paintable?> = arrayOf(NullPaintable.getInstance())

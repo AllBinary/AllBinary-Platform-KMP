@@ -218,9 +218,9 @@ open public class ImageScaleUtil : Object {
 
         if (cached) {
 
-            image = imageCache!!.get(this::class.toString()!!, width, height)
+            image = imageCache!!.get(this::class.toString()!!, width, height)!!
         } else {
-            image = imageCache!!.get(this.commonStrings!!.CREATE_IMAGE, width, height)
+            image = imageCache!!.get(this.commonStrings!!.CREATE_IMAGE, width, height)!!
         }
 
         if (image.isMutable()) {

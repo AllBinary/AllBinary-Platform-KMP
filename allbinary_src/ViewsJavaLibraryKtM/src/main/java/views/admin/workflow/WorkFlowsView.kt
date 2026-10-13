@@ -54,7 +54,7 @@ var transformInfoInterface = transformInfoInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-this.workFlowsVector= WorkFlowEntityFactory.getInstance()!!.create2()!!.get(this.getWeblisketSession()!!.getStoreName())
+this.workFlowsVector= WorkFlowEntityFactory.getInstance()!!.create2()!!.get(this.getWeblisketSession()!!.getStoreName())!!
 }
 
 
@@ -73,8 +73,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
@@ -123,8 +121,6 @@ var document = document
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -138,8 +134,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

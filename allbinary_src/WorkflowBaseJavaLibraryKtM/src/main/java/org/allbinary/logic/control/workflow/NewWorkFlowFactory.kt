@@ -48,8 +48,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : NewWorkFlowFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NewWorkFlowFactory.instance
 }
@@ -83,14 +81,12 @@ private constructor ()
 
     var classes: Array<KClass<*>?> = arrayOfNulls(2)
 
-classes[0]= hashMap!!::class
-classes[1]= AbeFactory.getInstance()!!.::class
+classes[0]= hashMap!!::class!!
+classes[1]= AbeFactory.getInstance()!!.::class!!
 params[0]= hashMap as Object
 params[1]= pageContext as Object
 
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className, classes, params)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,8 +156,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className, 
                             null, 
                             null)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

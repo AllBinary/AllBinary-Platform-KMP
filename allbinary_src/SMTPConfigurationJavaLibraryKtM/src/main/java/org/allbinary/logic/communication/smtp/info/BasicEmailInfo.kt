@@ -70,8 +70,6 @@ this.textBody= textBody
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.subject
 }
@@ -81,8 +79,6 @@ this.textBody= textBody
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.textBody
 }
@@ -91,8 +87,6 @@ this.textBody= textBody
     open fun getEmailServerConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : EmailServerConfigurationInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.emailServerConfigurationInterface
@@ -119,8 +113,6 @@ stringBuffer!!.append("Subject: \n")
 stringBuffer!!.append(this.getSubject())
 stringBuffer!!.append("\nText Body: \n")
 stringBuffer!!.append(this.getTextBody())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

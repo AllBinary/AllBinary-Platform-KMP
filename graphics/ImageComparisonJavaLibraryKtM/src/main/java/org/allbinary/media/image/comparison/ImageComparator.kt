@@ -140,8 +140,6 @@ this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
     //var frameTwo = frameTwo
     //var tolerance = tolerance
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.compare(bufferedImage1, bufferedImage2, frameOne, frameTwo, tolerance, StringUtil.getInstance()!!.EMPTY_STRING)
 }
@@ -206,8 +204,6 @@ this.process(imageComparisonInfo, PointFactory.getInstance()!!.createXY(indexX, 
 }
 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

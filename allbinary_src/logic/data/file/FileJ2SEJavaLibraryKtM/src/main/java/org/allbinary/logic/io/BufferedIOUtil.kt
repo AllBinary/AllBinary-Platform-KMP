@@ -43,7 +43,7 @@ open public class BufferedIOUtil : Object {
             var tmpIn: BufferedReader = BufferedReader(FileReader(AbFileNativeUtil.get(backupFile)))
 
             while (true) {
-                line = tmpIn!!.readLine()
+                line = tmpIn!!.readLine()!!
 
                 if (line == null) {
 

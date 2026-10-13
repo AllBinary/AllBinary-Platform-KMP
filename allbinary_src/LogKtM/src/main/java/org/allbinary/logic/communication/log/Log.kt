@@ -89,7 +89,7 @@ open public class Log : Object {
 
         if (clazz.toString()!! != null) {
 
-            className = clazz.toString()!!
+            className = clazz.toString()!! !!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

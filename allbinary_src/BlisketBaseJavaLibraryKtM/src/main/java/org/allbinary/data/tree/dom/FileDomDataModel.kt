@@ -60,8 +60,6 @@ var document = document
     var hashMap: HashMap<Any, Any> = tableMappingInterface!!.toHashMap()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNodeWithValueNodes(document, "file", hashMap)
 }

@@ -48,8 +48,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : SqlConnectionPool{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SqlConnectionPool.instance
 }
@@ -104,7 +102,7 @@ var url = url
                                 )
                         
                                     {
-                                    this.connectionHashMap= this.stdUtil!!.createHashMap()
+                                    this.connectionHashMap= this.stdUtil!!.createHashMap()!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGPOOL))
@@ -114,8 +112,6 @@ var url = url
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DriverManager.getConnection(url)
@@ -151,8 +147,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DriverManager.getConnection(url)
 
@@ -173,8 +167,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DriverManager.getConnection(url)
@@ -221,8 +213,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return sqlConnection as Connection
 
@@ -252,8 +242,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DriverManager.getConnection(url)
 }
@@ -282,7 +270,7 @@ var sqlConnection = sqlConnection
                                 )
                         
                                     {
-                                    this.connectionHashMap= this.stdUtil!!.createHashMap()
+                                    this.connectionHashMap= this.stdUtil!!.createHashMap()!!
 connectionVector= BasicArrayListD()
 connectionVector!!.add(sqlConnection)
 

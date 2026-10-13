@@ -77,7 +77,7 @@ open public class HighScoreUtil : Object, HighScoresResultsListener {
         // var highScore = highScore
         this.highScoresFactoryInterface = highScoresFactoryInterface
         this.highScoresHelper = highScoresHelper
-        this.highScoresArray = this.highScoresHelper!!.getHighScoresArray()
+        this.highScoresArray = this.highScoresHelper!!.getHighScoresArray()!!
         this.highScore = highScore
         this.abeClientInformation = abeClientInformation
         this.gameInfo = gameInfo
@@ -139,7 +139,7 @@ open public class HighScoreUtil : Object, HighScoresResultsListener {
 
             highScores = this.highScoresArray[index]!!
             highScores!!.addHighScore(this.highScore)
-            highScoresAsString = highScores!!.toString()
+            highScoresAsString = highScores!!.toString()!!
             this.logUtil!!.putF(
                 StringMaker()
                     .append("Added/Adding Score: ")!!

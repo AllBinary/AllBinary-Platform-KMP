@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ShaderManager{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ShaderManager.instance
 }
@@ -78,8 +76,6 @@ this.GL_FRAGMENT_SHADER= GL_FRAGMENT_SHADER
     //var shaderAsStringArray = shaderAsStringArray
     //var shaderType = shaderType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return  -1
 }
@@ -92,8 +88,6 @@ this.GL_FRAGMENT_SHADER= GL_FRAGMENT_SHADER
     //var resource = resource
     //var stringList = stringList
     //var shaderType = shaderType
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return  -1

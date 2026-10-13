@@ -40,8 +40,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : LockedUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LockedUtil.instance
 }
@@ -58,8 +56,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -69,8 +65,6 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var lockableFeatrue = lockableFeatrue
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

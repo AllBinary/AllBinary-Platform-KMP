@@ -105,8 +105,6 @@ whereHashMap!!.put(basicItemData!!.KEYWORDS, keywords)
     var file: String = super.java.getField(whereHashMap, SearchData.PAGE)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return file
 }
@@ -125,8 +123,6 @@ super.deleteWhere(basicItemData!!.KEYWORDS, keywords)
 : String{
 
     var returnStr: String = super.dropTable()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -150,8 +146,6 @@ super.updateWhere(basicItemData!!.KEYWORDS, updatedValues!!.get(basicItemData!!.
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(TABLENAME)!!.append(this.sqlStrings!!.START)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.SIXTY_CHAR_COLUMN_NOT_NULL)!!.append(basicItemData!!.KEYWORDS)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(SearchData.PAGE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.append(basicItemData!!.KEYWORDS)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -160,8 +154,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(TABLENAME)!!.appe
     open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())

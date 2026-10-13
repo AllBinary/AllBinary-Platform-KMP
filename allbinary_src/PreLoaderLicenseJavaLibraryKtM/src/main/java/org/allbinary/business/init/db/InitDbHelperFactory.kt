@@ -59,8 +59,6 @@ params[0]= databaseConnectionInfoInterface as Object
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, CLASSNAME, classes, params)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType
 }
@@ -76,8 +74,6 @@ params[0]= databaseConnectionInfoInterface as Object
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, CLASSNAME, 
                             null, 
                             null)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

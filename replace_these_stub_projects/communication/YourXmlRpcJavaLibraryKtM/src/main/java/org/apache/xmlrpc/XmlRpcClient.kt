@@ -39,8 +39,6 @@ this.url= URL(url)
         //nullable = true from not(false or (false and true)) = true
 : URL{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.url
 }
@@ -62,8 +60,6 @@ var password = password
 var method = method
 var params = params
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullUtil.getInstance()!!.NULL_OBJECT
 }
@@ -77,8 +73,6 @@ var params = params
 var method = method
 var params = params
 var cryptInterface = cryptInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullUtil.getInstance()!!.NULL_OBJECT

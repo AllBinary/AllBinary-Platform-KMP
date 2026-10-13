@@ -91,8 +91,6 @@ var document = document
     var node: Node = ModDomHelper.createNameValueNodes(document, FtpConfigurationData.NAME, hashMap)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -101,8 +99,6 @@ var document = document
     open fun getFtpConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : FtpConfigurationInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ftpConfigurationInterface

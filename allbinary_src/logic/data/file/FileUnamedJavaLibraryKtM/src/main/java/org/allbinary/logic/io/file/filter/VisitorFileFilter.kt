@@ -55,11 +55,7 @@ var file = file
     var abFile: AbFile = FileWrapperUtil.wrapFile(file)!!
 
 
-    var isFileAcceptable: Boolean = visit = this.booleanVisitorInterface!!.visit(abFile)visit as Boolean
-visit.
-                    
-
-
+    var isFileAcceptable: Boolean = (this.booleanVisitorInterface!!.visit(abFile) as Boolean).
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,11 +68,7 @@ visit.
 : Boolean{
 var file = file
 
-    var isFileAcceptable: Boolean = visit = this.booleanVisitorInterface!!.visit(file)visit as Boolean
-visit.
-                    
-
-
+    var isFileAcceptable: Boolean = (this.booleanVisitorInterface!!.visit(file) as Boolean).
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

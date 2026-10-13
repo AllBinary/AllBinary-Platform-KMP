@@ -55,8 +55,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -73,8 +71,6 @@ this.items.add(item)
     open fun getItems()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.items
@@ -156,7 +152,7 @@ var num = num
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var weightFloat: Float = 0
+    var weightFloat: Float = 0f
 
 
     var itemArray: Array<Any?> = this.items.toArray()!!
@@ -180,8 +176,6 @@ weightFloat += Float(item.getWeight()).
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Float(weightFloat).
                             toString()
@@ -191,8 +185,6 @@ weightFloat += Float(item.getWeight()).
     open fun getNumberOfItems()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(this.items.size())
@@ -224,8 +216,6 @@ weightFloat += Float(item.getWeight()).
 
 idSet!!.add(item.getId())
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -260,16 +250,12 @@ var id = id
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(item.getNumber())
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -306,8 +292,6 @@ var document = document
 node.appendChild(ItemView(item, BasicArrayListD()).
                             toXmlNode(document))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

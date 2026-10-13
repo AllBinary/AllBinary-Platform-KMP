@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : BasicStoreFrontFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicStoreFrontFactory.instance
 }
@@ -69,8 +67,6 @@ var storeName = storeName
     var storeFronts: BasicStoreFrontsEntity = BasicStoreFrontsEntity()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return storeFronts!!.getStoreFrontInterface(storeName)
 } catch(e: Exception)
@@ -87,8 +83,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

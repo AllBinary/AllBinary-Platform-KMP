@@ -47,12 +47,8 @@ public constructor ()
 : Boolean{
 var arg0 = arg0
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return visit = this.visit(arg0 as Object)visit as Boolean
-visit.
-                    
+                        return (this.visit(arg0 as Object) as Boolean).
 }
 
 
@@ -70,7 +66,9 @@ var anyType = anyType
     var aFile: File = file.getParentFile()!!
 
 
-        while((aFile= aFile!!.getParentFile()) != 
+        while((
+                        { aFile= aFile!!.getParentFile()!!; aFile }()
+                    ) != 
                                     null
                                 )
         {
@@ -83,15 +81,11 @@ index++
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

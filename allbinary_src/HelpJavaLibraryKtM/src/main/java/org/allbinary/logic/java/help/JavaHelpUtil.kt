@@ -50,8 +50,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : JavaHelpUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return JavaHelpUtil.instance
 }
@@ -106,15 +104,11 @@ var filePath = filePath
     var helpSetURL: URL = helpSetURI!!.toURL()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getHelpSet(helpSetURL)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -130,16 +124,12 @@ var url = url
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HelpSet(
                             null, url)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

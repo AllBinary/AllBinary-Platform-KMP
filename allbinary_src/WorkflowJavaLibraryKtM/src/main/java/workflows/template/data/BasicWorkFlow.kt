@@ -83,8 +83,6 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(th
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getPropertiesHashMap()!!.get(WorkFlowData.getInstance()!!.NAME) as String
 }
@@ -94,8 +92,6 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(th
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.propertiesHashMap
 }
@@ -104,8 +100,6 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(th
     open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.pageContext
@@ -133,8 +127,6 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(th
                                     {
                                     this.pageContext!!.getOut()!!.print(this.validationDomNodeInterface!!.view())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(Integer.valueOf(TagSupport.EVAL_BODY_INCLUDE))
 
@@ -142,8 +134,6 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(th
                                 
                         else {
                             this.pageContext!!.getOut()!!.print(this.validationDomNodeInterface!!.validationInfo())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(Integer.valueOf(TagSupport.SKIP_BODY))

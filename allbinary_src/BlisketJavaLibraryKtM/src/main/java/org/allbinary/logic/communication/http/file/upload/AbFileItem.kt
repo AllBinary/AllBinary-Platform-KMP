@@ -84,8 +84,6 @@ this.byteArray= byteArray
         //nullable = true from not(false or (false and true)) = true
 : String?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -94,8 +92,6 @@ this.byteArray= byteArray
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -106,8 +102,6 @@ this.byteArray= byteArray
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -117,18 +111,14 @@ this.byteArray= byteArray
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.byteArray!!.size
+                        return this.byteArray!!.size.toLong()
 }
 
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
 : ByteArray{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.byteArray
@@ -142,8 +132,6 @@ this.byteArray= byteArray
 : String{
 var encoding = encoding
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.byteArray.decodeToString()
 }
@@ -155,8 +143,6 @@ var encoding = encoding
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileItemUtil.getInstance()!!.getString(this.byteArray)
 } catch(e: Exception)
@@ -170,8 +156,6 @@ var encoding = encoding
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
@@ -217,8 +201,6 @@ ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, "delete()")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fieldName
 }
@@ -241,8 +223,6 @@ this.fieldName= name
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -250,8 +230,6 @@ this.fieldName= name
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 

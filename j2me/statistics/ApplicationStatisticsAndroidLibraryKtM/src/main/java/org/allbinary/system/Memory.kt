@@ -37,13 +37,13 @@ import org.allbinary.logic.string.StringMaker
             stringBuffer!!.append("APK Memory: Available: ")
             stringBuffer!!.appendlong(maxUtilizedMemoryAvailable)
             stringBuffer!!.append("/")
-            stringBuffer!!.appendlong(Runtime.getRuntime()!!.maxMemory())
+            stringBuffer!!.appendlong(Runtime.getRuntime()!!.maxMemory().toLong())
             stringBuffer!!.append(" Used: ")
             stringBuffer!!.appendlong(memoryUsed)
             stringBuffer!!.append(" Free: ")
             stringBuffer!!.appendlong(maxUtilizedMemoryAvailable - memoryUsed)
             stringBuffer!!.append("/")
-            stringBuffer!!.appendlong(Runtime.getRuntime()!!.maxMemory() - memoryUsed)
+            stringBuffer!!.appendlong((Runtime.getRuntime()!!.maxMemory() - memoryUsed).toLong())
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return stringBuffer!!.toString()

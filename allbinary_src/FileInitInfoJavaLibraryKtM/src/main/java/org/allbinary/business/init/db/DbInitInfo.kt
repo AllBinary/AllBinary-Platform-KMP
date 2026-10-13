@@ -104,8 +104,6 @@ this.initFileName= initFileName
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return url
 }
@@ -348,8 +346,6 @@ this.updateIfNeeded()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getName()
 }
@@ -369,8 +365,6 @@ this.updateIfNeeded()
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getUserName()
 }
@@ -380,8 +374,6 @@ this.updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getPassword()
@@ -393,8 +385,6 @@ this.updateIfNeeded()
 : String{
 this.updateIfNeeded()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getSchema()
 }
@@ -405,8 +395,6 @@ this.updateIfNeeded()
 : String{
 this.updateIfNeeded()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getServer()
 }
@@ -416,8 +404,6 @@ this.updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getPort()

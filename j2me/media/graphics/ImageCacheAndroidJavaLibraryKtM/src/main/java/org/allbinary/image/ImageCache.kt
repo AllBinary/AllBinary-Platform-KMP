@@ -111,7 +111,7 @@ open public class ImageCache : ImageCacheBase {
                 this.volume = 0
             }
 
-            image = this.createImage(caller, width, height)
+            image = this.createImage(caller, width, height)!!
 
             if (foundIndex == -1) {
 
@@ -148,7 +148,7 @@ open public class ImageCache : ImageCacheBase {
 
             try {
                 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
-                image = this.createImageFromInputStream(key, inputStream)
+                image = this.createImageFromInputStream(key, inputStream)!!
             } catch (e: Exception) {
                 this.logUtil!!.put(
                     "Exception: Trying Again After GC",
@@ -168,7 +168,7 @@ open public class ImageCache : ImageCacheBase {
                 this.tsUtil!!.gc()
                 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
                 Thread.sleep(100)
-                image = this.createImageFromInputStream(key, inputStream)
+                image = this.createImageFromInputStream(key, inputStream)!!
             }
 
             inputStream!!.close()

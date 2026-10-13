@@ -162,17 +162,20 @@ open public class WeaponProperties : SimpleWeaponProperties {
         stringArray[index++] =
             stringBuffer!!
                 .append(WeaponProperties.DAMAGE)!!
-                .appendint(this.getDamage())!!
-                .toString()
+                .appendint(this.getDamage().toInt())!!
+                .toString()!!
         stringBuffer!!.delete(0, stringBuffer!!.length())
         stringArray[index++] =
-            stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())!!.toString()
+            stringBuffer!!
+                .append(WeaponProperties.RANGE)!!
+                .appendint(this.getRange().toInt())!!
+                .toString()!!
         stringBuffer!!.delete(0, stringBuffer!!.length())
         stringArray[index++] =
             stringBuffer!!
                 .append(WeaponProperties.RELOAD)!!
                 .appendlong(this.getReloadTime())!!
-                .toString()
+                .toString()!!
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return stringArray
@@ -184,9 +187,9 @@ open public class WeaponProperties : SimpleWeaponProperties {
 
         var stringBuffer: StringMaker = StringMaker()
 
-        stringBuffer!!.append(WeaponProperties.DAMAGE)!!.appendint(this.getDamage())
+        stringBuffer!!.append(WeaponProperties.DAMAGE)!!.appendint(this.getDamage().toInt())
         stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-        stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())
+        stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange().toInt())
         stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
         stringBuffer!!.append(WeaponProperties.RELOAD)!!.appendlong(this.getReloadTime())
 

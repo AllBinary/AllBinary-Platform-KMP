@@ -74,7 +74,7 @@ open public class PressStartMenuPaintable : Paintable, UpdateMyFontInterface {
 
         this.beginWidth = (graphics.getFont()!!.stringWidth(this.startString) shr 1)
         this.line = (4 * MyFontProcessor.defaultCharWidth(font)) + (font.getHeight() shr 1)
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun paint(graphics: Graphics)

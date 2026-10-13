@@ -28,7 +28,7 @@ open public class BasicColorArrayIndexer : Object {
     public constructor(basicColorArray: Array<BasicColor?>) : super() {
         var basicColorArray = basicColorArray
         this.basicColorArray = basicColorArray
-        this.circularIndexUtil = CircularIndexUtil.createInstance(this.basicColorArray!!.size)
+        this.circularIndexUtil = CircularIndexUtil.createInstance(this.basicColorArray!!.size)!!
     }
 
     open fun next()

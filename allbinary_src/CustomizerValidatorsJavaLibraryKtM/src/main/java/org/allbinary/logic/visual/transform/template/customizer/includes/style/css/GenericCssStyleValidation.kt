@@ -96,8 +96,6 @@ var hashMap = hashMap
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -111,8 +109,6 @@ var hashMap = hashMap
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -130,8 +126,6 @@ var hashMap = hashMap
     var stringBuffer: StringMaker = StringMaker()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -146,8 +140,6 @@ var hashMap = hashMap
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -159,8 +151,6 @@ var hashMap = hashMap
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -170,8 +160,6 @@ var hashMap = hashMap
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -186,8 +174,6 @@ var document = document
 var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, BodyData.getInstance()!!.NAME, StringUtil.getInstance()!!.EMPTY_STRING)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

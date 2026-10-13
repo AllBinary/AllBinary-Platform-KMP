@@ -40,8 +40,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : LicenseTypeFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LicenseTypeFactory.instance
 }
@@ -70,8 +68,6 @@ var name = name
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.DEMO
 
@@ -83,15 +79,11 @@ var name = name
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.NORMAL
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.UNKNOWN

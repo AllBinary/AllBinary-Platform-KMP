@@ -60,8 +60,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : FileUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileUtil.instance
 }
@@ -94,13 +92,11 @@ companion object {
                         if(lastIndex >= newDirectory!!.length)
                         
                                     {
-                                    newDirectory= newDirectory!!.substring(0, newDirectory!!.length -1)
+                                    newDirectory= newDirectory!!.substring(0, newDirectory!!.length -1)!!
 lastIndex= newDirectory!!.lastIndexOf(separatorChar)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newDirectory!!.substring(lastIndex, newDirectory!!.length)
@@ -238,8 +234,6 @@ this.directory.create(fixedPath)
     var outPath: AbPath = AbPath(string, file.getName())
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return outPath
 }
@@ -283,8 +277,6 @@ var overwriteAll = overwriteAll
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -375,8 +367,6 @@ var overwriteAll = overwriteAll
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -485,7 +475,7 @@ toFile!!.createNewFile()
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Newer by: ")
-stringBuffer!!.appendlong(fromFile!!.lastModified() -toFile!!.lastModified())
+stringBuffer!!.appendlong((fromFile!!.lastModified() -toFile!!.lastModified()).toLong())
 stringBuffer!!.append("ms ")
 stringBuffer!!.append("Copying File: ")
 stringBuffer!!.append(toFile!!.getPath())
@@ -527,8 +517,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyFile")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -542,8 +530,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyFile")
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -581,7 +567,7 @@ var overwriteAll = overwriteAll
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Copying ")
-stringBuffer!!.appendlong(fromFile!!.length())
+stringBuffer!!.appendlong(fromFile!!.length().toLong())
 stringBuffer!!.append(" bytes from File: ")
 stringBuffer!!.append(fromFile!!.getPath())
 stringBuffer!!.append(" to: ")
@@ -596,8 +582,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyFile")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -1118,8 +1102,6 @@ this.copyDirectory(fromLocationFile, toLocationFile)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -1175,16 +1157,12 @@ skipFile= skipFiles[index]!!
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1238,8 +1216,6 @@ dataOutputStream!!.flush()
     //var file = file
     //var max = max
     //var byteArray1 = byteArray1
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileUtil2.getInstance()!!.loadFileAsList(file, max, byteArray1)

@@ -47,8 +47,6 @@ public constructor ()
 : Boolean{
 var componentInterface = componentInterface
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -57,8 +55,6 @@ var componentInterface = componentInterface
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING

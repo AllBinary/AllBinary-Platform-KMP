@@ -54,8 +54,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : InventorySearchProductUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InventorySearchProductUtil.instance
 }
@@ -110,8 +108,6 @@ viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface,
                             translate(success)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return outputStr
 
@@ -119,8 +115,6 @@ viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface,
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ITEM_NOT_FOUND
 

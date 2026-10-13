@@ -51,8 +51,6 @@ this.total= hashMap!!.get("total") as Integer
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.current
 }
@@ -61,8 +59,6 @@ this.total= hashMap!!.get("total") as Integer
     open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.total

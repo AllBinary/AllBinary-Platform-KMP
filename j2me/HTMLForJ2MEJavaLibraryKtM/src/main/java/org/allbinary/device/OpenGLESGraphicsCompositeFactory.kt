@@ -39,8 +39,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESGraphicsCompositeFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLESGraphicsCompositeFactory.instance
 }
@@ -66,8 +64,6 @@ this.openGLESGraphicsFactory= openGLESGraphicsFactory
     open fun get()
         //nullable = true from not(false or (false and true)) = true
 : OpenGLESGraphicsFactory{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.openGLESGraphicsFactory

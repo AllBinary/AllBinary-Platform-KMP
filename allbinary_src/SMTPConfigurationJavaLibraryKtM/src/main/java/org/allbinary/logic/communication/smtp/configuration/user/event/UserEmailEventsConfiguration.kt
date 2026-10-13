@@ -63,7 +63,7 @@ this.init()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.emailEventHashMap= StdUtil.getInstance()!!.createHashMap()
+this.emailEventHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -79,8 +79,6 @@ this.emailEventHashMap= StdUtil.getInstance()!!.createHashMap()
     open fun getEventConfigurationHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.emailEventHashMap
@@ -114,8 +112,6 @@ this.emailEventHashMap!!.put(userEmailEventConfigurationInterface!!.getName(), u
     //var userInterface = userInterface
 
     var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface = this.emailEventHashMap!!.get(userEmailEventNameData!!.toString()) as UserEmailEventConfigurationInterface
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

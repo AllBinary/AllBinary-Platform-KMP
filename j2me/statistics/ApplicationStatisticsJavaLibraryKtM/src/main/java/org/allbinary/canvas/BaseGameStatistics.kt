@@ -211,11 +211,11 @@ open public class BaseGameStatistics : Object {
 
         if (totalTime > 0) {
 
-            this.STRING_ARRAY[1] = (totalTime).toString()
-            this.STRING_ARRAY[3] = (this.totalFrames).toString()
-            this.STRING_ARRAY[5] = (this.totalFrames / totalTime).toString()
-            this.STRING_ARRAY[7] = (this.totalRefreshes).toString()
-            this.STRING_ARRAY[9] = (this.totalRefreshes / totalTime).toString()
+            this.STRING_ARRAY[1] = (totalTime).toString()!!
+            this.STRING_ARRAY[3] = (this.totalFrames).toString()!!
+            this.STRING_ARRAY[5] = (this.totalFrames / totalTime).toString()!!
+            this.STRING_ARRAY[7] = (this.totalRefreshes).toString()!!
+            this.STRING_ARRAY[9] = (this.totalRefreshes / totalTime).toString()!!
         } else {
 
             var string: String = this.EMPTY_STRING

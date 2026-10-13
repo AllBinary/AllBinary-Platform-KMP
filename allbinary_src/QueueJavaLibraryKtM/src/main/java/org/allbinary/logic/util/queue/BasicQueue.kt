@@ -50,8 +50,6 @@ protected constructor ()
 var anyType = anyType
 this.queueVector!!.add(anyType)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -74,8 +72,6 @@ this.queueVector!!.remove(anyType)
     var anyType: Any = this.queueVector!!.get(this.queueVector!!.size() -1)!!
 
 this.queueVector!!.remove(anyType)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType

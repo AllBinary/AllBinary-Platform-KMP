@@ -183,8 +183,6 @@ this.point= point
         //nullable = true from not(false or (false and true)) = true
 : Point{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.point
 }
@@ -193,8 +191,6 @@ this.point= point
     open fun getButtonClicks()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.buttons
@@ -225,8 +221,6 @@ this.mouseActionScriptInputJPanel!!.getMouseActionJDialog()!!.setVisible(true)
 hashMap!!.put(MouseActionScriptInputData.BUTTONS, Integer.toString(this.getButtonClicks()))
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -251,8 +245,6 @@ node.appendChild(mouseNode)
 hashMap!!.put(MouseActionScriptInputData.MOVE_X, Integer.toString(this.getPoint()!!.x))
 hashMap!!.put(MouseActionScriptInputData.MOVE_Y, Integer.toString(this.getPoint()!!.y))
 mouseNode!!.appendChild(ModDomHelper.createNodeWithValueNodes(document, MouseActionScriptInputData.MOVE, hashMap))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node

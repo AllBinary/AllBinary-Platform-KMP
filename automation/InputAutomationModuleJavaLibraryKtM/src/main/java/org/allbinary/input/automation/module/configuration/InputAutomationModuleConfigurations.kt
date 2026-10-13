@@ -145,7 +145,7 @@ this.setHashMap(HashMap<Any, Any>())
                         for (index in 0 until size)
 
         {
-inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get(index)
+inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get(index)!!
 this.add(inputAutomationModuleConfiguration)
 }
 
@@ -177,8 +177,6 @@ this.getHashMap()!!.remove(inputAutomationModuleConfiguration!!.getClassName())
     open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hashMap

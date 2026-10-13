@@ -43,8 +43,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageUnifierUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageUnifierUtil.instance
 }
@@ -69,8 +67,6 @@ private constructor ()
 
 
     var gd: GraphicsDevice = ge.getDefaultScreenDevice()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -131,8 +127,6 @@ columnIndex= 0
 }
 
 g.dispose()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newBufferedImage

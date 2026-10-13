@@ -193,18 +193,18 @@ open public class BuildingLayer :
 
         this.setCollidableInferface(CollidableRTSBehavior(true))
         this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, SelectSound.getInstance()))
-        this.damageFloaters = buildingPropertiesFactory!!.getDamageFloaters(this)
+        this.damageFloaters = buildingPropertiesFactory!!.getDamageFloaters(this)!!
         this.damageFloatersPaintableInterface =
             buildingPropertiesFactory!!.damageFloatersPaintableInterface
-        this.healthBar = buildingPropertiesFactory!!.getHealthBar(this)
-        this.pathsHashtable = buildingPropertiesFactory!!.getHashtable()
+        this.healthBar = buildingPropertiesFactory!!.getHealthBar(this)!!
+        this.pathsHashtable = buildingPropertiesFactory!!.getHashtable()!!
         this.setMaxLevel(30)
         this.setProductivity(1)
         this.setEfficiency(this.calculateEfficiency())
         this.efficiencyPerLevel = buildingPropertiesFactory!!.getEfficiencyPerLevel(this)
         this.efficiency = this.efficiencyPerLevel
         this.generateMoveOutOfBuildAreaPaths()
-        this.trackingEvent = buildingPropertiesFactory!!.getTrackingEvent(this)
+        this.trackingEvent = buildingPropertiesFactory!!.getTrackingEvent(this)!!
     }
 
     var local: Boolean = false

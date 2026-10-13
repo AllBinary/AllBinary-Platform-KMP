@@ -69,8 +69,6 @@ var servletContext = servletContext
     var requestName: String = requestCommand!!.substring(index, requestCommand!!.length)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return WorkFlowEntityFactory.getInstance()!!.create2()!!.get(requestName, storeName)
 }
@@ -91,8 +89,6 @@ var pageContext = pageContext
 
 
     var storeName: String = weblisketSession!!.getStoreName()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

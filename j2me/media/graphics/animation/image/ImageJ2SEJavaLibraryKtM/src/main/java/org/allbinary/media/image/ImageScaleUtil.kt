@@ -44,8 +44,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageScaleUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageScaleUtil.instance
 }
@@ -76,8 +74,6 @@ private constructor ()
     //var scaleNominatorY = scaleNominatorY
     //var scaleDenominatorY = scaleDenominatorY
     //var cached = cached
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
@@ -117,18 +113,16 @@ private constructor ()
                         if(cached)
                         
                                     {
-                                    image= imageCache!!.get(this::class.toString()!!, (width *scaleX).toInt(), (height *scaleY).toInt())
+                                    image= imageCache!!.get(this::class.toString()!!, (width *scaleX).toInt(), (height *scaleY).toInt())!!
 
                                     }
                                 
                         else {
-                            image= imageCache!!.get("createImage", (width *scaleX).toInt(), (height *scaleY).toInt())
+                            image= imageCache!!.get("createImage", (width *scaleX).toInt(), (height *scaleY).toInt())!!
 
                         }
                             
 this.scale(originalImage, image, scaleX, scaleY, true)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -153,7 +147,7 @@ this.scale(originalImage, image, scaleX, scaleY, true)
                         if(maxScaleX *originalImage!!.getWidth() > originalImageArray[0]!!.getWidth() || maxScaleY *originalImage!!.getHeight() > originalImageArray[0]!!.getHeight())
                         
                                     {
-                                    originalImageArray[0]= this.imageCreationUtil!!.createImage(originalImage!!.getWidth(), originalImage!!.getHeight(), maxScaleX, maxScaleY)
+                                    originalImageArray[0]= this.imageCreationUtil!!.createImage(originalImage!!.getWidth(), originalImage!!.getHeight(), maxScaleX, maxScaleY)!!
 
                                     }
                                 

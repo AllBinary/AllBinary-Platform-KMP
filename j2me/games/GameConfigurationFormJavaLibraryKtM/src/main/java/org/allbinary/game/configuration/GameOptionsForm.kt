@@ -208,7 +208,7 @@ open public class GameOptionsForm : CommandForm {
 
         for (index in 0 until size) {
 
-            item = this.get(index)
+            item = this.get(index)!!
 
             if (item is GameConfigurationGauge) {
 

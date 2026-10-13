@@ -78,8 +78,6 @@ this.heading= HeadingValidation(multipartRequestHashMap)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -112,8 +110,6 @@ this.heading= HeadingValidation(multipartRequestHashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -127,8 +123,6 @@ this.heading= HeadingValidation(multipartRequestHashMap)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -147,8 +141,6 @@ this.heading= HeadingValidation(multipartRequestHashMap)
 
 stringBuffer!!.append(this.heading.validationInfo())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -163,8 +155,6 @@ stringBuffer!!.append(this.heading.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -176,8 +166,6 @@ stringBuffer!!.append(this.heading.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -187,8 +175,6 @@ stringBuffer!!.append(this.heading.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

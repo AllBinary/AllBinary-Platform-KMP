@@ -98,7 +98,7 @@ open public class ArcedMultiBeamWeaponPart : BasicWeaponPart {
                     otherAngle.toInt(),
                     weaponProperties,
                     scoreableInterface,
-                )
+                )!!
             allbinaryLayerManager!!.append(weaponLayer)
             next += increment
         }

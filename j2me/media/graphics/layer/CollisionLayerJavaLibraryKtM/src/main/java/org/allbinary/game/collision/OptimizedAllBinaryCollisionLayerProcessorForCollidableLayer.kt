@@ -61,7 +61,8 @@ open public class OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer : 
 
                 collidableInterfaceCompositeInterface2 =
                     layerManager!!.getLayerAt(index) as CollidableCompositeLayer
-                collidableBase2 = collidableInterfaceCompositeInterface2!!.getCollidableInferface()
+                collidableBase2 =
+                    collidableInterfaceCompositeInterface2!!.getCollidableInferface()!!
 
                 if (
                     collidableBase2!!.isCollidable(collidableInterfaceCompositeInterface) &&

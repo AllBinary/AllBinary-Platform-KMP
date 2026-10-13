@@ -109,15 +109,11 @@ this.paymentMethod= paymentMethod
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -127,8 +123,6 @@ this.paymentMethod= paymentMethod
     open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -149,15 +143,11 @@ this.paymentMethod= paymentMethod
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Please enter a valid order Id < " +OrderHistoryData.MAXIDLEN +" digits in length.<br>"
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EMPTY_STRING
@@ -240,8 +230,6 @@ this.storeCancelComment= value
         //nullable = true from not(false or (false and true)) = true
 : BasketInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basket
 }
@@ -250,8 +238,6 @@ this.storeCancelComment= value
     open fun getShippingMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.shippingType
@@ -262,8 +248,6 @@ this.storeCancelComment= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentMethod
 }
@@ -272,8 +256,6 @@ this.storeCancelComment= value
     open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.special
@@ -284,8 +266,6 @@ this.storeCancelComment= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.id
 }
@@ -294,8 +274,6 @@ this.storeCancelComment= value
     open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeName
@@ -306,8 +284,6 @@ this.storeCancelComment= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userComment
 }
@@ -316,8 +292,6 @@ this.storeCancelComment= value
     open fun getUserCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userCancelComment
@@ -328,8 +302,6 @@ this.storeCancelComment= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeComment
 }
@@ -338,8 +310,6 @@ this.storeCancelComment= value
     open fun getStoreCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeCancelComment
@@ -351,8 +321,6 @@ this.storeCancelComment= value
 : String{
 var paymentMethod = paymentMethod
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Create your own Order.reviewOrder"
 }
@@ -362,8 +330,6 @@ var paymentMethod = paymentMethod
         //nullable = true from not(false or (false and false)) = true
 : String{
 var paymentMethod = paymentMethod
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Create your own Order.viewOrder"
@@ -376,8 +342,6 @@ var paymentMethod = paymentMethod
 var userName = userName
 var paymentMethod = paymentMethod
 var storeFrontInterface = storeFrontInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Create your own Order.emailOrder"
@@ -399,8 +363,6 @@ hashMap!!.put(OrderData.CUSTOMERCOMMENT, this.userComment)
 hashMap!!.put(OrderData.CUSTOMERCANCELCOMMENT, this.userCancelComment)
 hashMap!!.put(OrderData.STORECOMMENT, this.storeComment)
 hashMap!!.put(OrderData.STORECANCELCOMMENT, this.storeCancelComment)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -442,11 +404,9 @@ var document = document
 
     var value: String = hashMap!!.get(name as Object) as String
 
-value= StringUtil.getInstance()!!.getNonNull(value)
+value= StringUtil.getInstance()!!.getNonNull(value)!!
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

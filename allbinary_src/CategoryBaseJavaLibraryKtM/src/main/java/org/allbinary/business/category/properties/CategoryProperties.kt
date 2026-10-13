@@ -69,7 +69,7 @@ public constructor (node: Node)
             : super()
         {
 var node = node
-this.category= CategoryUtil.getNameFromNode(node)
+this.category= CategoryUtil.getNameFromNode(node)!!
 }
 
 public constructor (categoryPropertiesHashMap: HashMap<Any, Any>)
@@ -84,8 +84,6 @@ this.category= .toCharArray()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -94,8 +92,6 @@ this.category= .toCharArray()
     open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -106,8 +102,6 @@ this.category= .toCharArray()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getValue() as Object
 }
@@ -116,8 +110,6 @@ this.category= .toCharArray()
     open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.category
@@ -192,7 +184,7 @@ list.addAt(0, pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(nextPar
 
                                     }
                                 
-nextParentCategoryInterface= nextParentCategoryInterface!!.getHierarchy()!!.getParent()
+nextParentCategoryInterface= nextParentCategoryInterface!!.getHierarchy()!!.getParent()!!
 depthIndex++
 
     
@@ -237,8 +229,6 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(pathStringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 }
@@ -247,8 +237,6 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)
     open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getValue() +AbPathData.getInstance()!!.EXTENSION_SEP +CategoryData.getInstance()!!.UNCRYPTED_EXTENSION
@@ -291,8 +279,6 @@ this.category= value
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return returnBoolean
 }
@@ -305,8 +291,6 @@ this.category= value
     var categoryHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryHashMap
@@ -321,8 +305,6 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
 categoryVector!!.add(this.category)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryVector
 }
@@ -333,8 +315,6 @@ categoryVector!!.add(this.category)
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -348,8 +328,6 @@ categoryVector!!.add(this.category)
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -360,8 +338,6 @@ var document = document
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

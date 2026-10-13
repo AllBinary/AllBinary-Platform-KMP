@@ -100,8 +100,6 @@ var categoryName = categoryName
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(categoryName) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -115,8 +113,6 @@ var categoryName = categoryName
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -146,8 +142,6 @@ var categoryName = categoryName
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(categoryName) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -161,8 +155,6 @@ var categoryName = categoryName
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -190,8 +182,6 @@ var node = node
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(node) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -205,8 +195,6 @@ var node = node
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -236,8 +224,6 @@ var node = node
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(node) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -251,8 +237,6 @@ var node = node
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -282,8 +266,6 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = CategoryPropertiesFactory(categoryPropertiesHashMap) as CategoryPropertiesFactoryInterface
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
@@ -297,8 +279,6 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

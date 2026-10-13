@@ -46,8 +46,6 @@ companion object {
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AdvertisementAreasEntity() as AdvertisementAreasEntityInterface
 } catch(e: Exception)
@@ -64,8 +62,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "AdvertisementAreasEntityFactory", comm
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

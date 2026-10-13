@@ -43,8 +43,6 @@ companion object {
 var pageContext = pageContext
 var weblisketSession = weblisketSession
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformHttpRequestDocument(pageContext, weblisketSession) as TransformDocumentInterface
 }

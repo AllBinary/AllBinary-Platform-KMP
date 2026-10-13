@@ -91,8 +91,6 @@ var response = response
                                     {
                                     response.sendError(HttpServletResponse.SC_NOT_FOUND)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -109,7 +107,7 @@ var response = response
                         if(beginIndex >= 0)
                         
                                     {
-                                    filePath= requestPath!!.substring(beginIndex +this.DOWNLOAD.length)
+                                    filePath= requestPath!!.substring(beginIndex +this.DOWNLOAD.length)!!
 
                                     }
                                 
@@ -127,8 +125,6 @@ var response = response
                         
                                     {
                                     response.sendError(HttpServletResponse.SC_NOT_FOUND)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
@@ -152,7 +148,7 @@ var response = response
                         if(AuthenticationHelperUtil.getInstance()!!.isAuthorized(authenticationHelper, filePath))
                         
                                     {
-                                    inputStream= CloudStreamUtil.getInstance()!!.getFile(file)
+                                    inputStream= CloudStreamUtil.getInstance()!!.getFile(file)!!
 
     var contentType: String = getServletContext()!!.getMimeType(file.getName())!!
 
@@ -252,8 +248,6 @@ this.processRequest(request, response)
     open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Serves Up Cloud Files"

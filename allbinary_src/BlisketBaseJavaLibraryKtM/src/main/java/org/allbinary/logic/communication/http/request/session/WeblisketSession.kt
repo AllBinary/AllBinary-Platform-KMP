@@ -75,7 +75,7 @@ var httpServletRequest = httpServletRequest
 
     var request: HttpServletRequest = httpServletRequest
 
-this.session= request.getSession(true)
+this.session= request.getSession(true)!!
 
     
                         if(this.getStoreName() == 
@@ -93,8 +93,6 @@ this.session= request.getSession(true)
     open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getId()
@@ -168,8 +166,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(org.allbinary.globals.GLOBALS2.WEBAPPPATH) as String
 }
@@ -178,8 +174,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
     open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(UserData.USERNAME) as String
@@ -190,8 +184,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(UserData.PASSWORD) as String
 }
@@ -200,8 +192,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
     open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(PaymentGatewayData.NAME.toString()) as String
@@ -212,8 +202,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(WeblisketSessionData.AUTHENTICATED) as String
 }
@@ -222,8 +210,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
     open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(WeblisketSessionData.ATTEMPTS) as Integer
@@ -234,8 +220,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(WeblisketSessionData.TIMEOUT) as String
 }
@@ -244,8 +228,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
     open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getAttribute(StoreFrontData.getInstance()!!.NAME) as String
@@ -268,8 +250,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserRoleB.getRole(userRole!!.getBasicUserRole()!!.getRole())
 
@@ -277,8 +257,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -319,8 +297,6 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
                                 
 this.session.setAttribute(basketName, orderInterface)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return orderInterface
 
@@ -359,8 +335,6 @@ this.session.removeAttribute(UserData.USERNAME)
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getCreationTime()
 }
@@ -369,8 +343,6 @@ this.session.removeAttribute(UserData.USERNAME)
     open fun getLastAccessedTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.session.getLastAccessedTime()

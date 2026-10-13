@@ -172,7 +172,7 @@ tempBufferedImageArray[index]= bufferedImage
                         if(averageRatioString!!.length > 4)
                         
                                     {
-                                    averageRatioString= averageRatioString!!.substring(0, 4)
+                                    averageRatioString= averageRatioString!!.substring(0, 4)!!
 
                                     }
                                 
@@ -253,7 +253,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateImageWithFudgedI
         //nullable = true from not(false or (false and false)) = true
 {
     //var tempBufferedImageArray = tempBufferedImageArray
-this.result= ImageUnifierUtil.getInstance()!!.getImage(tempBufferedImageArray, this.imageUnifierProperties)
+this.result= ImageUnifierUtil.getInstance()!!.getImage(tempBufferedImageArray, this.imageUnifierProperties)!!
 
     var image: Icon = ImageIcon(this.result)
 
@@ -292,7 +292,7 @@ this.imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
                         if(cellRatioString!!.length > 4)
                         
                                     {
-                                    cellRatioString= cellRatioString!!.substring(0, 4)
+                                    cellRatioString= cellRatioString!!.substring(0, 4)!!
 
                                     }
                                 
@@ -608,7 +608,7 @@ var evt = evt
     var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.appendint(this.imageUnifierProperties!!.getColumns())!!.append("_By_")!!.appendint(this.imageUnifierProperties!!.getRows())!!.append("_Unified")!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.appendint(this.imageUnifierProperties!!.getColumns().toInt())!!.append("_By_")!!.appendint(this.imageUnifierProperties!!.getRows().toInt())!!.append("_Unified")!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()!!
 this.logUtil!!.putF("New File Path: " +filePath, this, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var outputFile: File = File(filePath)
@@ -762,8 +762,6 @@ this.updateImage()
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageProcessorInput

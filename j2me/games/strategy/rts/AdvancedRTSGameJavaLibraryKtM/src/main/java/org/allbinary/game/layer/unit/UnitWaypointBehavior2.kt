@@ -623,7 +623,7 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
         // nullable = true from not(false or (false and true)) = true
     {
         this.targetWithoutCachedPathLayerInterface =
-            CollidableDestroyableDamageableLayer.getNullInstance()
+            CollidableDestroyableDamageableLayer.getNullInstance()!!
 
         for (index in this.getPossibleTargetList()!!.size() - 1 downTo 0) {
 
@@ -747,11 +747,11 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
             this.nextUnvisitedPathGeographicMapCellPosition
         )
         this.nextUnvisitedPathGeographicMapCellPosition =
-            this.currentGeographicMapCellHistoryP!!.getFirstUnvisited()
+            this.currentGeographicMapCellHistoryP!!.getFirstUnvisited()!!
         this.afterNextUnvisitedPathGeographicMapCellPosition =
             this.currentGeographicMapCellHistoryP!!.getAfterIfNotLast(
                 this.nextUnvisitedPathGeographicMapCellPosition
-            )
+            )!!
 
         if (
             this.getCurrentPathGeographicMapCellPosition() !=
@@ -918,7 +918,7 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
             stringBuffer!!.append(" with ")
             stringBuffer!!.append(UnitWaypointBehavior2.TARGET_DISTANCE)
             stringBuffer!!.append(this.commonSeps!!.SPACE)
-            stringBuffer!!.appendint(this.getCurrentTargetDistance())
+            stringBuffer!!.appendint(this.getCurrentTargetDistance().toInt())
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

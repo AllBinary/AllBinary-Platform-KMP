@@ -136,11 +136,11 @@ this.request.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.authenticated= this.weblisketSession!!.getAuthentication()
-this.sessionUserName= this.weblisketSession!!.getUserName()
-this.role= this.weblisketSession!!.getRole()
-this.attemptsInteger= this.weblisketSession!!.getAttempts()
-this.timeout= this.weblisketSession!!.getTimeout()
+this.authenticated= this.weblisketSession!!.getAuthentication()!!
+this.sessionUserName= this.weblisketSession!!.getUserName()!!
+this.role= this.weblisketSession!!.getRole()!!
+this.attemptsInteger= this.weblisketSession!!.getAttempts()!!
+this.timeout= this.weblisketSession!!.getTimeout()!!
 }
 
 
@@ -191,8 +191,6 @@ this.timeout= this.weblisketSession!!.getTimeout()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -211,15 +209,11 @@ installerInfo!!.write()
 this.weblisketSession!!.setUserName(userName)
 this.weblisketSession!!.setPassword(newPassword)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -242,8 +236,6 @@ this.weblisketSession!!.setPassword(newPassword)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -257,8 +249,6 @@ this.weblisketSession!!.setPassword(newPassword)
 
         try {
             this.weblisketSession!!.clear()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(TagSupport.EVAL_BODY_INCLUDE).
@@ -274,8 +264,6 @@ this.weblisketSession!!.setPassword(newPassword)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
@@ -334,8 +322,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.true.
 
@@ -358,8 +344,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isRarelyUsedSession()
 } catch(e: Exception)
@@ -373,8 +357,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -443,8 +425,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
                         }
                             
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -459,8 +439,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
         try {
             this.makeSessionValid(BasicUserRoleFactory.getInstance()!!.INSTALLER, userName)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.true.
 } catch(e: Exception)
@@ -474,8 +452,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -496,8 +472,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
 stringBuffer!!.append("Trying New login<p>")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -514,8 +488,6 @@ stringBuffer!!.append("Trying New login<p>")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -538,8 +510,6 @@ stringBuffer!!.append("Trying New login<p>")
 stringBuffer!!.append("Sorry your username and password is invalid on this page.")
 stringBuffer!!.append("Trying New login<p>")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -556,8 +526,6 @@ stringBuffer!!.append("Trying New login<p>")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -599,8 +567,6 @@ stringBuffer!!.append("Trying New login<p>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.true.
 
@@ -609,15 +575,11 @@ stringBuffer!!.append("Trying New login<p>")
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.false.
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.false.
@@ -632,8 +594,6 @@ stringBuffer!!.append("Trying New login<p>")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -694,8 +654,6 @@ stringBuffer!!.append("Trying New login<p>")
                                     {
                                     this.weblisketSession!!.setAttempts(Integer(0))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.true.
 
@@ -703,16 +661,12 @@ stringBuffer!!.append("Trying New login<p>")
                                 
 this.nextAttempt()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.false.
 
                                     }
                                 
 this.nextAttempt()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.false.
@@ -727,8 +681,6 @@ this.nextAttempt()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -751,8 +703,6 @@ this.nextAttempt()
                                     {
                                     this.invalidateSession()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.true.
 
@@ -762,8 +712,6 @@ this.nextAttempt()
 
                             {
                             this.weblisketSession!!.setTimeout(BooleanFactory.getInstance()!!.TRUE_STRING)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.false.
@@ -781,8 +729,6 @@ this.nextAttempt()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -841,8 +787,6 @@ this.getFormData()
                                     {
                                     pageContext!!.getOut()!!.print("Password Change Attempt Failed.<p>")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -850,8 +794,6 @@ this.getFormData()
                                 
                         else {
                             pageContext!!.getOut()!!.print("Password Changed Successfully.<p>")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -875,8 +817,6 @@ this.getFormData()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.invalidateSession()
@@ -910,8 +850,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -919,8 +857,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -945,8 +881,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -954,8 +888,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -993,8 +925,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -1002,8 +932,6 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -1051,8 +979,6 @@ pageContext!!.getOut()!!.print(validRole())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -1060,8 +986,6 @@ pageContext!!.getOut()!!.print(validRole())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -1087,8 +1011,6 @@ pageContext!!.getOut()!!.print(invalidRole())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 
@@ -1096,8 +1018,6 @@ pageContext!!.getOut()!!.print(invalidRole())
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 
@@ -1159,8 +1079,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.tagStrings!!.DO_START_
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 
@@ -1168,8 +1086,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.tagStrings!!.DO_START_
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.EVAL_BODY_INCLUDE
 
@@ -1182,15 +1098,11 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.tagStrings!!.DO_START_
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -1198,8 +1110,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

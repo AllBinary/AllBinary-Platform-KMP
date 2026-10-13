@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageScaleUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageScaleUtil.instance
 }
@@ -84,8 +82,6 @@ private constructor ()
     //var scaleDenominatorY = scaleDenominatorY
     //var cached = cached
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
 }
@@ -111,8 +107,6 @@ private constructor ()
                                     {
                                     this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImage
 
@@ -132,8 +126,6 @@ private constructor ()
 
 
     var scaledImage: Image = this.imageCopyUtil!!.createImageWH(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

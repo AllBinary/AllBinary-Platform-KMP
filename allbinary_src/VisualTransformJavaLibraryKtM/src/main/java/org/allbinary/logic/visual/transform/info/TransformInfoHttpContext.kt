@@ -105,8 +105,6 @@ stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.INSTALLPATH)
 stringBuffer!!.append(this.getStoreName())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -117,8 +115,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
     open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(this.getPath(), this.getTemplateFile())
@@ -131,8 +127,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(this.getPath(), this.getObjectConfigFile())
 }
@@ -143,8 +137,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
     open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(this.getPath(), this.getDataFile())

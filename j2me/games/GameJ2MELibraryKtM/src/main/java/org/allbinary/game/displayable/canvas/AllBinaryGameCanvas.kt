@@ -343,7 +343,7 @@ open public class AllBinaryGameCanvas :
 
         // For kotlin this is before the body of the constructor.
 
-        this.highScoresHelper = highScoresFactoryInterface!!.createHighScoresHelper()
+        this.highScoresHelper = highScoresFactoryInterface!!.createHighScoresHelper()!!
         this.gameInitializationInterfaceFactoryInterface =
             gameInitializationInterfaceFactoryInterface
         this.init(gameLayerManager, buffered)
@@ -353,11 +353,11 @@ open public class AllBinaryGameCanvas :
             this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.BOT ||
                 this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.NONE
         ) {
-            this.gameBehavior = DemoGameBehavior.getInstance()
-            this.menuBehavior = BaseMenuBehavior.getInstance()
+            this.gameBehavior = DemoGameBehavior.getInstance()!!
+            this.menuBehavior = BaseMenuBehavior.getInstance()!!
         } else {
-            this.gameBehavior = BaseGameBehavior.getInstance()
-            this.menuBehavior = this.getInGameMenuBehavior()
+            this.gameBehavior = BaseGameBehavior.getInstance()!!
+            this.menuBehavior = this.getInGameMenuBehavior()!!
         }
 
         this.initPopupMenu()
@@ -379,9 +379,9 @@ open public class AllBinaryGameCanvas :
                 StringMaker()
                     .append(this.commonStrings!!.START)!!
                     .append(this.canvasStrings!!.FD_WIDTH)!!
-                    .appendint(MyFontProcessor.defaultCharWidth(font))!!
+                    .appendint(MyFontProcessor.defaultCharWidth(font).toInt())!!
                     .append(this.canvasStrings!!.FD_HEIGHT)!!
-                    .appendint(font.getHeight())!!
+                    .appendint(font.getHeight().toInt())!!
                     .toString(),
                 this,
                 this.canvasStrings!!.UPDATE_MEASUREMENT,
@@ -404,7 +404,7 @@ open public class AllBinaryGameCanvas :
                 popupMenuInputProcessor!!.init(popupMenuRectangle)
             }
 
-            this.myFontProcessor = MyFontProcessor.getInstance()
+            this.myFontProcessor = MyFontProcessor.getInstance()!!
         } catch (e: Exception) {
             this.logUtil!!.put(
                 this.commonStrings!!.EXCEPTION,
@@ -825,13 +825,13 @@ open public class AllBinaryGameCanvas :
             this.gameKeyEventHandler!!.addListener(this.cheatProcessor)
         } else {
             this.isCheating = false
-            this.cheatProcessor = NoPlayerGameInput.getInstance()
+            this.cheatProcessor = NoPlayerGameInput.getInstance()!!
         }
 
         this.realEndGameProcessor = EndGameProcessor(this)
         this.setEndGameProcessor(Processor.getInstance())
         this.realStartIntermissionProcessor = StartIntermissionProcessor(this)
-        this.startIntermissionProcessor = Processor.getInstance()
+        this.startIntermissionProcessor = Processor.getInstance()!!
         this.setEndGameStatePaintable(EndGamePaintable(this))
         this.setEndGamePaintable(NullPaintable.getInstance())
         this.setIntermissionPaintable(NullPaintable.getInstance())
@@ -847,7 +847,7 @@ open public class AllBinaryGameCanvas :
 
             this.startIntermissionProcessor = this.realStartIntermissionProcessor
         } else {
-            this.startIntermissionProcessor = Processor.getInstance()
+            this.startIntermissionProcessor = Processor.getInstance()!!
         }
 
         if (enable) {

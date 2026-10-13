@@ -149,7 +149,7 @@ open public class PlayerComposite : Object, Controllable, Player {
             this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return -1
+            return (-1).toLong()
         }
     }
 

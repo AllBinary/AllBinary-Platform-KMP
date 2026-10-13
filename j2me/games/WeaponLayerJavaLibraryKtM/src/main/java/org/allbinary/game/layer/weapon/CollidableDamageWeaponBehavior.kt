@@ -39,7 +39,7 @@ open public class CollidableDamageWeaponBehavior : CollidableDestroyableDamageab
 
         this.setCollided(false)
         this.setCollidable(true)
-        this.collisionHelper = CollidableHelperFactory.getInstance()
+        this.collisionHelper = CollidableHelperFactory.getInstance()!!
     }
 
     open fun init(sourceLayerInterface: AllBinaryLayer)

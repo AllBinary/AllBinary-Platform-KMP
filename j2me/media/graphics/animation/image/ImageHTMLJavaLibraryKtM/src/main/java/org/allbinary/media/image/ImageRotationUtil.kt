@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageRotationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageRotationUtil.instance
 }
@@ -112,8 +110,6 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
 canvasSurface!!.translate(originalPlayNImage!!.width() /2, originalPlayNImage!!.height() /2)
 canvasSurface!!.rotate(Math.toRadians(rotationInDegrees).toFloat())
 canvasSurface!!.drawImage(originalPlayNImage,  -originalPlayNImage!!.width() /2,  -originalPlayNImage!!.height() /2)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image

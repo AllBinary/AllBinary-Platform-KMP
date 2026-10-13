@@ -77,7 +77,7 @@ public constructor (transformInfoInterface: TransformInfoInterface)
         {
     //var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
-this.abPath= AbPath.createAbPath()
+this.abPath= AbPath.createAbPath()!!
 this.category= CategoryData.getInstance()!!.ROOTCATEGORY
 this.isRealRoot= true
 this.initPath()
@@ -91,7 +91,7 @@ public constructor (transformInfoInterface: TransformInfoInterface, categoryAbPa
     //var categoryAbPath = categoryAbPath
 this.transformInfoInterface= transformInfoInterface
 this.abPath= categoryAbPath
-this.category= this.pathData!!.getNameFromPath(categoryAbPath!!.toString())
+this.category= this.pathData!!.getNameFromPath(categoryAbPath!!.toString())!!
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.category))
@@ -116,7 +116,7 @@ this.transformInfoInterface= transformInfoInterface
     var categoryPath: String = CategoryUtil.getNameFromNode(node)!!
 
 this.abPath= AbPath(categoryPath, StringUtil.getInstance()!!.EMPTY_STRING)
-this.category= this.pathData!!.getNameFromPath(categoryPath)
+this.category= this.pathData!!.getNameFromPath(categoryPath)!!
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.category))
@@ -141,7 +141,7 @@ this.transformInfoInterface= transformInfoInterface
     var categoryPath: String = .toCharArray()
 
 this.abPath= AbPath(categoryPath, StringUtil.getInstance()!!.EMPTY_STRING)
-this.category= this.pathData!!.getNameFromPath(categoryPath)
+this.category= this.pathData!!.getNameFromPath(categoryPath)!!
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.category))
@@ -183,8 +183,6 @@ this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +postPath, StringUtil.getIn
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isRealRoot
 }
@@ -194,8 +192,6 @@ this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +postPath, StringUtil.getIn
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -204,8 +200,6 @@ this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +postPath, StringUtil.getIn
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getValue() as Object
@@ -232,8 +226,6 @@ this.fileAbPath= value
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fileAbPath
 }
@@ -242,8 +234,6 @@ this.fileAbPath= value
     open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.category
@@ -256,8 +246,6 @@ this.fileAbPath= value
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.webAppAbPath
 }
@@ -268,8 +256,6 @@ this.fileAbPath= value
 : AbPath{
     //var categoryHierarchyInterface = categoryHierarchyInterface
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.abPath
 }
@@ -278,8 +264,6 @@ this.fileAbPath= value
     open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getValue() +AbPathData.getInstance()!!.EXTENSION_SEP +CategoryData.getInstance()!!.UNCRYPTED_EXTENSION
@@ -298,8 +282,6 @@ this.category= value
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -312,8 +294,6 @@ this.category= value
     var categoryHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.getValue())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryHashMap
@@ -328,8 +308,6 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.getValue())
 
 categoryVector!!.add(this.getValue())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryVector
 }
@@ -340,8 +318,6 @@ categoryVector!!.add(this.getValue())
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -355,8 +331,6 @@ categoryVector!!.add(this.getValue())
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -367,8 +341,6 @@ var document = document
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

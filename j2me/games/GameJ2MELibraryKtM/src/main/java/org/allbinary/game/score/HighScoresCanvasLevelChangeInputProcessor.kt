@@ -57,7 +57,7 @@ open public class HighScoresCanvasLevelChangeInputProcessor :
         var font: Font = graphics.getFont()!!
 
         this.fontHeight = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun open()

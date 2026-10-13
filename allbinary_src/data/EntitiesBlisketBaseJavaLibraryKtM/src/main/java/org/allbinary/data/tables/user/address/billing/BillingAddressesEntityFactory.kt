@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : BillingAddressesEntityFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BillingAddressesEntityFactory.instance
 }
@@ -65,8 +63,6 @@ var userName = userName
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BillingAddressesEntity(userName)
 } catch(e: Exception)
@@ -83,8 +79,6 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

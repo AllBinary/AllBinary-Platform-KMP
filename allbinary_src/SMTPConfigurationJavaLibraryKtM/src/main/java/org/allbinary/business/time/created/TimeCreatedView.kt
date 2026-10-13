@@ -62,8 +62,6 @@ this.setTimeCreated(TimeCreated(DomNodeHelper.getTextNodeValue(node)))
 : Node{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createTextNode(document, EntryData.getInstance()!!.TIMECREATED, this.getTimeCreated()!!.toString())
 }
@@ -72,8 +70,6 @@ var document = document
     open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
 : TimeCreated{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeCreated

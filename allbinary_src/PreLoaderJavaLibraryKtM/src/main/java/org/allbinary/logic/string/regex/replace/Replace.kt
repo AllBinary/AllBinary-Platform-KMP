@@ -67,12 +67,12 @@ URLGLOBALS.init(appUrlGlobals)
     var replace: Replace = Replace("gun", "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz")
 
 System.out.println("Old String: " +testString)
-testString= replace.all(testString)
+testString= replace.all(testString)!!
 System.out.println("New String: " +testString)
 
     var replaceCat: Replace = Replace("abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz", stringUtil!!.EMPTY_STRING)
 
-testString= replaceCat!!.all(testString)
+testString= replaceCat!!.all(testString)!!
 System.out.println("New String: " +testString)
 } catch(e: Exception)
             {
@@ -99,7 +99,7 @@ public constructor (key: String, value: String)
         {
     //var key = key
     //var value = value
-this.hashMap= StdUtil.getInstance()!!.createHashMap()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()!!
 this.hashMap!!.put(arrayOf(key), arrayOf(value))
 }
 
@@ -108,7 +108,7 @@ public constructor (keys: Array<String?>, values: Array<String?>)
         {
     //var keys = keys
     //var values = values
-this.hashMap= StdUtil.getInstance()!!.createHashMap()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()!!
 this.hashMap!!.put(keys, values)
 }
 
@@ -124,8 +124,6 @@ this.hashMap= hashMap
         //nullable = true from not(false or (false and false)) = true
 : String{
 var replace = replace
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.upTo(replace, Integer.MIN_VALUE)
@@ -211,7 +209,7 @@ newStringBuffer!!.append(replace.substring(0, begin))
 newStringBuffer!!.append(values[0]!!)
 index= newStringBuffer!!.length()
 newStringBuffer!!.append(replace.substring(end, replace.length))
-replace= newStringBuffer!!.toString()
+replace= newStringBuffer!!.toString()!!
 
     
                         if(keys.size > 1)
@@ -232,7 +230,7 @@ newStringBuffer!!.append(replace.substring(0, begin2))
 newStringBuffer!!.append(values[1]!!)
 index= newStringBuffer!!.length()
 newStringBuffer!!.append(replace.substring(end2, replace.length))
-replace= newStringBuffer!!.toString()
+replace= newStringBuffer!!.toString()!!
 
                                     }
                                 
@@ -282,8 +280,6 @@ totalNumberOfReplaces++
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return replace
@@ -349,7 +345,7 @@ newStringBuffer!!.delete(0, newStringBuffer!!.length())
                                     newStringBuffer!!.append(replace.substring(0, begin))
 index= newStringBuffer!!.length()
 newStringBuffer!!.append(replace.substring(end, replace.length))
-replace= newStringBuffer!!.toString()
+replace= newStringBuffer!!.toString()!!
 totalNumberOfReplaces++
 
                                     }
@@ -377,8 +373,6 @@ totalNumberOfReplaces++
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return replace

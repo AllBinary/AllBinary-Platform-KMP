@@ -89,8 +89,6 @@ this.totalInventorySaleValueMoney!!.add(itemPriceMoney!!.toString())
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.totalNumberOfItems as Long
 }
@@ -99,8 +97,6 @@ this.totalInventorySaleValueMoney!!.add(itemPriceMoney!!.toString())
     open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.totalInventorySaleValueMoney
@@ -116,8 +112,6 @@ this.totalInventorySaleValueMoney!!.add(itemPriceMoney!!.toString())
 hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.NUMBEROFITEMS, this.getNumber()!!.toString())
 hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this.getTotal()!!.toString())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -127,8 +121,6 @@ hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -137,8 +129,6 @@ hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

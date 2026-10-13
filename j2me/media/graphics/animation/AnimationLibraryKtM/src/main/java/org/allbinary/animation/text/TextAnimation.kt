@@ -80,8 +80,8 @@ open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
             }
 
         this.textChangeListener!!.onMeasure()
-        this.textChangeListener = TextChangeListener.getInstance()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.textChangeListener = TextChangeListener.getInstance()!!
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     @Throws(Exception::class)

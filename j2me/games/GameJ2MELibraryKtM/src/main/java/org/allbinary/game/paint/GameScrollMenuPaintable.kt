@@ -81,7 +81,7 @@ open public class GameScrollMenuPaintable : BasicGameDemoPaintable, ColorChangeL
         for (index in scrollSelectionForm!!.size() - 1 downTo 0) {
 
             item = scrollSelectionForm!!.get(index) as ABTextItem
-            stringComponent = item.getLabelStringComponent()
+            stringComponent = item.getLabelStringComponent()!!
 
             if (stringComponent != null) {
 

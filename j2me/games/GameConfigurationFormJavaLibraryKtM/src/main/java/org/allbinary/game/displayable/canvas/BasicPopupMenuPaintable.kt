@@ -79,7 +79,7 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
 
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
 
-            this.animationInterface = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+            this.animationInterface = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
         } else {
             this.animationInterface =
                 RectangleFilledAnimation(
@@ -141,7 +141,7 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
                 } else {
                     0
                 })
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     @Throws(Exception::class)

@@ -91,7 +91,7 @@ open public class ImageAnimationFactory : BaseImageAnimationFactory {
 
         var openGLUtil: OpenGLUtil = OpenGLUtil.getInstance()!!
 
-        scaledImage = openGLUtil!!.addImage(scaledImage)
+        scaledImage = openGLUtil!!.addImage(scaledImage)!!
 
         if (
             this.animationFactoryInitializationVisitor!!.dx != 0 ||

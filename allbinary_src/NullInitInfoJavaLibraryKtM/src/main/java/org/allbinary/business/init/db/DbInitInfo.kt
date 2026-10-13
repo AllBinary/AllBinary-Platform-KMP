@@ -50,8 +50,6 @@ var read = read
 
 PreLogUtil.put("Url: " +url, this, "getUrl")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return url
 }

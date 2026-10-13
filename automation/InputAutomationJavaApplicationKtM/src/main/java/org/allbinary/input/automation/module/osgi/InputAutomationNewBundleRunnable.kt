@@ -104,8 +104,6 @@ var thread = thread
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.running
 }
@@ -142,7 +140,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "updateModules")
                         for (index in 0 until size)
 
         {
-bundle= this.install(list.get(index) as URL)
+bundle= this.install(list.get(index) as URL)!!
 
     
                         if(bundle != 
@@ -229,8 +227,6 @@ file= jarFileBasicArrayList!!.get(index) as File
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -248,7 +244,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "getJarModuleFileBasicArra
                         if(baseJarPath!!.startsWith(InputAutomationNewBundleRunnable.FILE))
                         
                                     {
-                                    baseJarPath= baseJarPath!!.substring(InputAutomationNewBundleRunnable.FILE.length)
+                                    baseJarPath= baseJarPath!!.substring(InputAutomationNewBundleRunnable.FILE.length)!!
 
                                     }
                                 
@@ -263,8 +259,6 @@ this.logUtil!!.putF("Path: " +path, this, "getJarModuleFileBasicArrayList")
     var file: File = File(path)
 
 this.logUtil!!.putF("File: " +file.getAbsolutePath() +" isDirectory: " +file.isDirectory(), this, "getJarModuleFileBasicArrayList")
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SubDirectory.getInstance()!!.search(jarFileFilter, FileWrapperUtil.wrapFile(file))
@@ -311,8 +305,6 @@ vector.add(bundle.getSymbolicName())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
@@ -348,16 +340,12 @@ nextSymbolicName= list.get(index) as String
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -410,8 +398,6 @@ this.logUtil!!.putF("All: " +hashMap, this, "findNewModules")
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
@@ -426,8 +412,6 @@ var url = url
 this.logUtil!!.putF(CommonLabels.getInstance()!!.START +url, this, "install")
 
     var bundleContext: BundleContext = InputAutomationBundleActivator.getBundleContext()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

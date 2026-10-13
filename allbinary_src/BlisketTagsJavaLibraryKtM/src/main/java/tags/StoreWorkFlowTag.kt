@@ -100,8 +100,6 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.v
                             null) as Integer
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result.toInt()
 } catch(e: Exception)
@@ -142,15 +140,11 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.v
                                 
 this.setHelper()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.process()
 } catch(e: LicensingException)
             {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
@@ -158,8 +152,6 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
  catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

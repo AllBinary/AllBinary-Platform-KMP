@@ -52,7 +52,7 @@ open public class BasicPaintablesCanvas : GameCommandCanvas {
             ColorFillPaintableFactory.getInstance()!!.getInstance(
                 allBinaryGameLayerManager!!.getBackgroundBasicColor(),
                 false,
-            )
+            )!!
     }
 
     override fun paint(graphics: Graphics)

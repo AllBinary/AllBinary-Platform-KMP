@@ -57,8 +57,6 @@ this.setVector(BasicArrayListD())
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rectangleVector
 }
@@ -76,8 +74,6 @@ this.rectangleVector= rectangleVector
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -86,8 +82,6 @@ this.rectangleVector= rectangleVector
     open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
 : ImageComparisonResult{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageComparisonResult

@@ -128,7 +128,8 @@ open public class UpgradableRTSLayerHudPaintable : SelectionHudPaintable {
             this.percentCompleteX = 16
         }
 
-        this.percentCompleteArray = this.getPrimitiveLongUtil()!!.getCharArray(this.percentComplete)
+        this.percentCompleteArray =
+            this.getPrimitiveLongUtil()!!.getCharArray(this.percentComplete)!!
         this.currentTotalDigits = this.getPrimitiveLongUtil()!!.getCurrentTotalDigits()
     }
 

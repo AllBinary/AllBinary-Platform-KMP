@@ -100,8 +100,6 @@ hexColorStringBuffer!!.append(blueIndex, HEXRADIX.toString())
     var colorNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, hexColorStringBuffer!!.toString())!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return colorNode
 }
@@ -281,8 +279,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

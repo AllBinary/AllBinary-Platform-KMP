@@ -66,8 +66,6 @@ this.timeLastModified= TimeLastModified(hashMap!!.get(EntryData.getInstance()!!.
         //nullable = true from not(false or (false and true)) = true
 : UserEmailConfigurationInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.userEmailConfigurationInterface
 }
@@ -85,8 +83,6 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
         //nullable = true from not(false or (false and true)) = true
 : TimeCreated{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeCreated
 }
@@ -95,8 +91,6 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
     open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
 : TimeLastModified{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeLastModified

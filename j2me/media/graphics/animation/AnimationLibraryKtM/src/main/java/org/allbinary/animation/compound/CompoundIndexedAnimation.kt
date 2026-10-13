@@ -41,7 +41,7 @@ open public class CompoundIndexedAnimation : IndexedAnimation, CompoundAnimation
 
         this.animationInterfaceArray = animationInterfaceArray
         this.circularIndexUtil =
-            CircularIndexUtil.createInstance(this.animationInterfaceArray!!.size)
+            CircularIndexUtil.createInstance(this.animationInterfaceArray!!.size)!!
     }
 
     override fun setFrame(index: Int)

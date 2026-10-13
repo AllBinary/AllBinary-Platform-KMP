@@ -82,10 +82,14 @@ open public class RaceTrackAdjacentDropCellPositionGenerator : RaceTrackDropCell
         var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory =
             this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!
 
-        this.surroundingCellPositions[0] = geographicMapCellPositionFactory!!.getAt(column, row - 1)
-        this.surroundingCellPositions[1] = geographicMapCellPositionFactory!!.getAt(column, row + 1)
-        this.surroundingCellPositions[2] = geographicMapCellPositionFactory!!.getAt(column - 1, row)
-        this.surroundingCellPositions[3] = geographicMapCellPositionFactory!!.getAt(column + 1, row)
+        this.surroundingCellPositions[0] =
+            geographicMapCellPositionFactory!!.getAt(column, row - 1)!!
+        this.surroundingCellPositions[1] =
+            geographicMapCellPositionFactory!!.getAt(column, row + 1)!!
+        this.surroundingCellPositions[2] =
+            geographicMapCellPositionFactory!!.getAt(column - 1, row)!!
+        this.surroundingCellPositions[3] =
+            geographicMapCellPositionFactory!!.getAt(column + 1, row)!!
 
         var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap =
             this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
@@ -216,7 +220,7 @@ open public class RaceTrackAdjacentDropCellPositionGenerator : RaceTrackDropCell
                 geographicMapCellType =
                     this.raceTrackGeographicMap!!.getCellTypeAt(
                         list.get(index2) as GeographicMapCellPosition
-                    )
+                    )!!
 
                 if (this.raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellType)) {
 

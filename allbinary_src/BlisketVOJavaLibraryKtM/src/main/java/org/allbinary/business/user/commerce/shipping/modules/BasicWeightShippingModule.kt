@@ -62,8 +62,6 @@ money.add(basket.getTotalWeight())
 money.multiply(1)
 money.add("3.50")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return money
 }
@@ -73,8 +71,6 @@ money.add("3.50")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.description
 }
@@ -83,8 +79,6 @@ money.add("3.50")
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name

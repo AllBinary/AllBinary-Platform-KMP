@@ -93,7 +93,7 @@ open public class OperatingSystemFactory : Object {
                     }
 
                     this.genericOperatingSystem =
-                        LinuxOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                        LinuxOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
                 } else if (osName!!.indexOf(operatingSystems!!.WINDOWS) >= 0) {
 
                     if (
@@ -109,7 +109,7 @@ open public class OperatingSystemFactory : Object {
                     }
 
                     this.genericOperatingSystem =
-                        WindowsOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                        WindowsOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
                 } else if (osName!!.indexOf(operatingSystems!!.SOLARIS) >= 0) {
 
                     if (
@@ -125,7 +125,7 @@ open public class OperatingSystemFactory : Object {
                     }
 
                     this.genericOperatingSystem =
-                        SolarisOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                        SolarisOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
                 } else {
 
                     throw Exception(

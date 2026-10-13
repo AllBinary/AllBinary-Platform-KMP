@@ -139,8 +139,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "generate()")
     var replaceHashMap: HashMap<Any, Any> = this.createReplaceHashMap(transformInfoHttpStoreInterface, objectConfigDocumentString)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.generate(objectConfigDocumentString, replaceHashMap)
 }
@@ -167,8 +165,6 @@ hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +StoreFrontData.getInstance
     var pageName: String = TransformTemplateCustomizerUtil.getInstance()!!.getPageNameHack(this.getTransformInfoInterface()!!.getName(), storeName)!!
 
 hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -229,8 +225,6 @@ hashMap!!.put(templateNameKey, selectedTemplate)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -258,8 +252,6 @@ var hashMap = hashMap
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newObjectConfigDocument

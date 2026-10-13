@@ -46,8 +46,6 @@ companion object {
 var rgb1 = rgb1
 var rgb2 = rgb2
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
                             append(rgb1.toString())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(rgb2.toString())!!.toString()
@@ -68,15 +66,13 @@ var rgb1 = rgb1
 var rgb2 = rgb2
 this.setRgb1(rgb1)
 this.setRgb2(rgb2)
-this.key= ColorDelta.getKey(rgb1, rgb2)
+this.key= ColorDelta.getKey(rgb1, rgb2)!!
 }
 
 
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.key
@@ -86,8 +82,6 @@ this.key= ColorDelta.getKey(rgb1, rgb2)
     open fun getRgb1()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rgb1
@@ -106,8 +100,6 @@ this.rgb1= rgb1
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rgb2
 }
@@ -124,8 +116,6 @@ this.rgb2= rgb2
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().

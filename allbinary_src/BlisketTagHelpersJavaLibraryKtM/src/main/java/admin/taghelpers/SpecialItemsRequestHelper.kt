@@ -76,14 +76,14 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(basicItemData!!.ID)
-this.number= this.request.getParameter(basicItemData!!.NUMBER)
-this.enabled= this.request.getParameter(EntryData.getInstance()!!.ENABLE)
-this.startTime= this.request.getParameter(SpecialItemData.START_TIME)
-this.endTime= this.request.getParameter(SpecialItemData.END_TIME)
-this.price= this.request.getParameter(basicItemData!!.PRICE)
-this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+this.id= this.request.getParameter(basicItemData!!.ID)!!
+this.number= this.request.getParameter(basicItemData!!.NUMBER)!!
+this.enabled= this.request.getParameter(EntryData.getInstance()!!.ENABLE)!!
+this.startTime= this.request.getParameter(SpecialItemData.START_TIME)!!
+this.endTime= this.request.getParameter(SpecialItemData.END_TIME)!!
+this.price= this.request.getParameter(basicItemData!!.PRICE)!!
+this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)!!
+this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)!!
 }
 
 
@@ -108,8 +108,6 @@ values.put(basicItemData!!.PRICE, this.price)
                                 
 
 values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
@@ -154,8 +152,6 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.inse
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -172,8 +168,6 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.inse
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -201,8 +195,6 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.inse
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -219,8 +211,6 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.inse
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -252,8 +242,6 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.upda
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -270,8 +258,6 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.upda
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

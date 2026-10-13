@@ -59,8 +59,6 @@ var node = node
     var name: String = DomNodeHelper.getTextNodeValue(node)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GenericProfileDataWorkerType.hashMap!!.get(name as Object) as GenericProfileDataWorkerType
 }
@@ -81,8 +79,6 @@ GenericProfileDataWorkerType.hashMap!!.put(this.getName(), this)
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -107,8 +103,6 @@ var document = document
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileDataWorkerData.NAME, this.name)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -117,8 +111,6 @@ var document = document
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "GenericProfileDataWorkerType: " +this.getName()

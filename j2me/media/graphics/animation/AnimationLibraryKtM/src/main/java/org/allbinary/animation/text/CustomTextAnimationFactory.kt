@@ -86,7 +86,7 @@ open public class CustomTextAnimationFactory : Object, AnimationInterfaceFactory
         this.scaleProperties!!.scaleHeight = fontSize.toInt() - (fontSize / 4)
         this.initScaleHeight = this.scaleProperties!!.scaleHeight
         this.animationBehaviorFactory = animationBehaviorFactory
-        this.font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight)
+        this.font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight)!!
     }
 
     @Throws(Exception::class)

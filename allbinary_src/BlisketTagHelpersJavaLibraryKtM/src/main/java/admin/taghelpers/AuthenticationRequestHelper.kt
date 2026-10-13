@@ -95,8 +95,6 @@ this.request= httpServletRequest
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.weblisketSession!!.getId()!!.substring(startIndex -8)
 
@@ -172,8 +170,6 @@ this.request= httpServletRequest
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -202,8 +198,6 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
@@ -217,8 +211,6 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -271,8 +263,6 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -292,8 +282,6 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -334,8 +322,6 @@ UserEntityFactory.getInstance()!!.update(userName, newPasswordHashMap)
 NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                             process()
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -351,8 +337,6 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 } catch(e: Exception)
@@ -366,8 +350,6 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -407,8 +389,6 @@ var roles = roles
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -440,8 +420,6 @@ var roles = roles
 this.request.removeAttribute(WeblisketSessionData.REMOVABLEUSERNAME)
 this.request.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -466,8 +444,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRoleValid()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 } catch(e: Exception)
@@ -481,8 +457,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRoleValid()")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

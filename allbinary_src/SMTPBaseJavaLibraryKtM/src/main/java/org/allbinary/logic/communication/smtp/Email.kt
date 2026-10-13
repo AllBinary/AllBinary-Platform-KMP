@@ -286,8 +286,6 @@ this.msg.setContent(mimeMultipart)
         //nullable = true from not(false or (false and true)) = true
 : MimeMessage{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.msg
 }
@@ -302,8 +300,6 @@ this.msg.setContent(mimeMultipart)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "More Logging Before This To Standard Out: " +this.bs.toString().toCharArray().concatToString()
                                 
@@ -312,8 +308,6 @@ this.msg.setContent(mimeMultipart)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Debugging Is Off"
 
@@ -327,8 +321,6 @@ this.msg.setContent(mimeMultipart)
     open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "\nHashMap: " +this.toHashMap()!!.toString()
@@ -369,7 +361,7 @@ hashMap!!.put(EmailData.FROM, addresses[index]!!.toString())
 
                                     }
                                 
-addresses= this.msg.getRecipients(Message.RecipientType.TO)
+addresses= this.msg.getRecipients(Message.RecipientType.TO)!!
 
     
                         if(addresses != 
@@ -390,7 +382,7 @@ hashMap!!.put(EmailData.TO, addresses[index]!!.toString())
 
                                     }
                                 
-addresses= this.msg.getRecipients(Message.RecipientType.CC)
+addresses= this.msg.getRecipients(Message.RecipientType.CC)!!
 
     
                         if(addresses != 
@@ -411,7 +403,7 @@ hashMap!!.put(EmailData.CC, addresses[index]!!.toString())
 
                                     }
                                 
-addresses= this.msg.getRecipients(Message.RecipientType.BCC)
+addresses= this.msg.getRecipients(Message.RecipientType.BCC)!!
 
     
                         if(addresses != 
@@ -460,8 +452,6 @@ hashMap!!.put(EmailData.CONTENT, content)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 } catch(e: Exception)
@@ -492,8 +482,6 @@ hashMap!!.put(EmailData.CONTENT, content)
 var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, EmailData.NAME, this.toHashMap())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

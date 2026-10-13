@@ -70,8 +70,6 @@ this.setTableName(this.tableName)
 : String{
 var userName = userName
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.getLargestIntegerInColumnWhere(PaymentData.ID, UserData.USERNAME, userName)
 }
@@ -181,8 +179,6 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentVector
 } catch(e: Exception)
@@ -196,8 +192,6 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -220,7 +214,7 @@ var userName = userName
 
 updateKeyAndValue!!.put(EntryData.getInstance()!!.DEFAULT, EntryData.getInstance()!!.DEFAULT)
 updateKeyAndValue!!.put(UserData.USERNAME, userName)
-paymentHashMap= super.getRow(updateKeyAndValue)
+paymentHashMap= super.getRow(updateKeyAndValue)!!
 
     
                         if(paymentHashMap != 
@@ -241,8 +235,6 @@ paymentHashMap= super.getRow(updateKeyAndValue)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return payment as PaymentInterface
 
@@ -250,8 +242,6 @@ paymentHashMap= super.getRow(updateKeyAndValue)
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -268,8 +258,6 @@ paymentHashMap= super.getRow(updateKeyAndValue)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -387,8 +375,6 @@ super.insert(vector)
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(PaymentData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_AUTO_INCREMENT_NOT_NULL)!!.append(UserData.USERNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(entryData!!.DEFAULT)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(PaymentData.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(PaymentData.TYPE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(PaymentData.EXPIRATION)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(PaymentData.NUMBER)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(entryData!!.ENCRYPTION)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(entryData!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(PaymentData.ID)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -398,8 +384,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
 }
@@ -408,8 +392,6 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
     open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

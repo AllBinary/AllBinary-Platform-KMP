@@ -50,7 +50,7 @@ open public class AllBinaryVisualDebugVibration : AllBinaryVibrationME, UpdateMy
         var font: Font = graphics.getFont()!!
 
         this.width = font.stringWidth(this.VIBRATING)
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun vibrate(duration: Int, type: Int, volume: Int)

@@ -39,8 +39,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : HtmlMetaAttributesData{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HtmlMetaAttributesData.instance
 }

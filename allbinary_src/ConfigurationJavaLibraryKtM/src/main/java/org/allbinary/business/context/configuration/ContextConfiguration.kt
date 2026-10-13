@@ -63,8 +63,6 @@ this.setEmailServerConfigurationInterface(EmailServerConfiguration(hashMap) as E
         //nullable = true from not(false or (false and true)) = true
 : EmailServerConfigurationInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.emailServerConfigurationInterface
 }

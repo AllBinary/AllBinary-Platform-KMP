@@ -59,7 +59,7 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable, Upda
         var font: Font = graphics.getFont()!!
 
         this.defaultStringWidth = MyFontProcessor.defaultStringWidth(font, 2)
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun init()
@@ -69,7 +69,7 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable, Upda
     override fun update()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.baseRefreshHelperCharArray = GameStatisticsFactory.getInstance()!!.to2DCharArray()
+        this.baseRefreshHelperCharArray = GameStatisticsFactory.getInstance()!!.to2DCharArray()!!
     }
 
     private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()

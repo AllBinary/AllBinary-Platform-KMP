@@ -35,7 +35,7 @@ open public class BasicCrypt : Object, CryptInterface {
         var key: ByteArray = NullUtil.getInstance()!!.NULL_BYTE_ARRAY
 
         try {
-            key = TsUtil.getInstance()!!.getByteArray(keyAsString)
+            key = TsUtil.getInstance()!!.getByteArray(keyAsString)!!
         } catch (e: Exception) {
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -96,7 +96,7 @@ open public class BasicCrypt : Object, CryptInterface {
         for (index in 0 until this.key.size) {
 
             value = this.key[index]!!
-            array = this.byteUtil!!.xor(array, value)
+            array = this.byteUtil!!.xor(array, value)!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

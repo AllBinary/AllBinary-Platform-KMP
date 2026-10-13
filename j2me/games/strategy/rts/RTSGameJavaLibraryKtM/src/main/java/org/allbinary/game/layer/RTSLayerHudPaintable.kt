@@ -79,7 +79,7 @@ open public class RTSLayerHudPaintable : SelectionHudPaintable, UpdateMyFontInte
         var partInterface: BasicWeaponPart =
             this.getRtsLayer()!!.getPartInterfaceArray()[0]!! as BasicWeaponPart
 
-        this.weaponProperties = partInterface!!.getWeaponProperties()!!.toStringArray()
+        this.weaponProperties = partInterface!!.getWeaponProperties()!!.toStringArray()!!
         this.myFontProcessor = this.updateMyFontProcessor
     }
 

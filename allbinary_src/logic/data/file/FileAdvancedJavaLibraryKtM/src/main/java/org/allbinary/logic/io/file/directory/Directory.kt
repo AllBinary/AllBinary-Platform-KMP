@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : Directory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Directory.instance
 }
@@ -65,8 +63,6 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var directoryAbPath = directoryAbPath
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.create(directoryAbPath!!.toFileSystemString())
@@ -104,8 +100,6 @@ this.remove(existingDirectoryAbPath!!.toFileSystemString())
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -115,15 +109,11 @@ this.remove(existingDirectoryAbPath!!.toFileSystemString())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 PreLogUtil.putOE("Error Creating Directories: " +directory, this, "create", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -148,7 +138,7 @@ PreLogUtil.putOE("Error Creating Directories: " +directory, this, "create", e)
                                     {
                                     
     
-                        if(existingDirectoryFile!!.list()!!.length > 0)
+                        if(existingDirectoryFile!!.list()!!.size > 0)
                         
                                     {
                                     
@@ -187,8 +177,6 @@ PreLogUtil.putOE("Error Creating Directories: " +directory, this, "create", e)
     //var fileFilter = fileFilter
     //var file = file
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.search(fileFilter, file, false)
 }
@@ -222,8 +210,6 @@ PreLogUtil.putOE("Error Creating Directories: " +directory, this, "create", e)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -240,8 +226,6 @@ PreLogUtil.putOE("Error Creating Directories: " +directory, this, "create", e)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -264,7 +248,7 @@ fileList!!.add(files[index]!!)
                         if(isRecursiveSearch)
                         
                                     {
-                                    recursiveFileList= this.search(fileFilter, files[index]!!, isRecursiveSearch)
+                                    recursiveFileList= this.search(fileFilter, files[index]!!, isRecursiveSearch)!!
 fileList!!.addAllList(recursiveFileList)
 
                                     }
@@ -275,8 +259,6 @@ fileList!!.addAllList(recursiveFileList)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 }
@@ -286,8 +268,6 @@ fileList!!.addAllList(recursiveFileList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var file = file
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.search(file, false)
@@ -321,8 +301,6 @@ fileList!!.addAllList(recursiveFileList)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -339,8 +317,6 @@ fileList!!.addAllList(recursiveFileList)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -359,7 +335,7 @@ fileList!!.add(files[index]!!)
                         if(isRecursiveSearch)
                         
                                     {
-                                    recursiveFileList= this.search(files[index]!!, isRecursiveSearch)
+                                    recursiveFileList= this.search(files[index]!!, isRecursiveSearch)!!
 fileList!!.addAllList(recursiveFileList)
 
                                     }
@@ -369,8 +345,6 @@ fileList!!.addAllList(recursiveFileList)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
@@ -382,8 +356,6 @@ fileList!!.addAllList(recursiveFileList)
 : BasicArrayList{
     //var searchValue = searchValue
     //var file = file
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.search(searchValue, file, false)
@@ -418,8 +390,6 @@ fileList!!.addAllList(recursiveFileList)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -436,8 +406,6 @@ fileList!!.addAllList(recursiveFileList)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -464,7 +432,7 @@ fileList!!.addAllList(recursiveFileList)
                         if(isRecursiveSearch)
                         
                                     {
-                                    recursiveFileList= this.search(searchValue, files[index]!!, isRecursiveSearch)
+                                    recursiveFileList= this.search(searchValue, files[index]!!, isRecursiveSearch)!!
 fileList!!.addAllList(recursiveFileList)
 
                                     }
@@ -474,8 +442,6 @@ fileList!!.addAllList(recursiveFileList)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
@@ -487,8 +453,6 @@ fileList!!.addAllList(recursiveFileList)
 : BasicArrayList{
     //var level = level
     //var file = file
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.search(level, file, false)
@@ -523,8 +487,6 @@ fileList!!.addAllList(recursiveFileList)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -541,8 +503,6 @@ fileList!!.addAllList(recursiveFileList)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
@@ -562,22 +522,18 @@ fileList!!.add(files[index]!!)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList
 
                                     }
                                 
-recursiveFileList= this.search(level -1, files[index]!!, isRecursiveSearch)
+recursiveFileList= this.search(level -1, files[index]!!, isRecursiveSearch)!!
 fileList!!.addAllList(recursiveFileList)
 }
 
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileList

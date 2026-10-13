@@ -67,7 +67,7 @@ public constructor ()
             : super()
         {
 this.workFlowName= StringUtil.getInstance()!!.EMPTY_STRING
-this.workFlowDoc= DomDocumentHelper.create()
+this.workFlowDoc= DomDocumentHelper.create()!!
 
     var workFlowNode: Node = this.workFlowDoc!!.createElement(WorkFlowData.getInstance()!!.WORKFLOW)!!
 
@@ -82,13 +82,13 @@ var pageContext = pageContext
 
     var weblisketSession: WeblisketSession = WeblisketSession(hashMap, pageContext)
 
-this.storeName= weblisketSession!!.getStoreName()
+this.storeName= weblisketSession!!.getStoreName()!!
 
     var requestHashMap: HashMap<Any, Any> = RequestParams(pageContext).
                             toHashMap()!!
 
 this.workFlowName= requestHashMap!!.get(WorkFlowData.getInstance()!!.NAME) as String
-this.workFlowDoc= DomDocumentHelper.create(requestHashMap!!.get(WorkFlowData.getInstance()!!.DATA) as String)
+this.workFlowDoc= DomDocumentHelper.create(requestHashMap!!.get(WorkFlowData.getInstance()!!.DATA) as String)!!
 }
 
 public constructor (hashMap: HashMap<Any, Any>)
@@ -97,15 +97,13 @@ public constructor (hashMap: HashMap<Any, Any>)
 var hashMap = hashMap
 this.workFlowName= hashMap!!.get(WorkFlowData.getInstance()!!.NAME) as String
 this.storeName= hashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String
-this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstance()!!.DATA) as String)
+this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstance()!!.DATA) as String)!!
 }
 
 
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.workFlowName
@@ -116,8 +114,6 @@ this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstanc
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeName
 }
@@ -126,8 +122,6 @@ this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstanc
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getName() as Object
@@ -156,8 +150,6 @@ values.add(XmlDocumentHelper.toString(this.workFlowDoc))
 values.add(time)
 values.add(time)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values
 }
@@ -183,8 +175,6 @@ hashMap!!.put(WorkFlowData.getInstance()!!.DATA, XmlDocumentHelper.toString(this
                                 
 
 hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -230,8 +220,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -246,8 +234,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -261,8 +247,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.workFlowDoc
 } catch(e: Exception)
@@ -276,8 +260,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -306,8 +288,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return returnBoolean
 } catch(e: Exception)
@@ -321,8 +301,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -346,8 +324,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                                 )
                         stringBuffer!!.append("No WorkFlow name specified.")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -362,8 +338,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
 }
@@ -375,8 +349,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -386,8 +358,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

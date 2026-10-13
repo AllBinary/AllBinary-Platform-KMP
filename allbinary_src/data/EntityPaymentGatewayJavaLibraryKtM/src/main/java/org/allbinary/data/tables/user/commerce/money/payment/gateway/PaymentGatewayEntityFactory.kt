@@ -46,8 +46,6 @@ companion object {
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.money.payment.gateway.PaymentGatewayEntity()
 } catch(e: Exception)

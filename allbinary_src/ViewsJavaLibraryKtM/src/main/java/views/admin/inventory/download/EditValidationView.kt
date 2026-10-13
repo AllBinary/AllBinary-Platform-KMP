@@ -105,8 +105,6 @@ this.downloadItemId= hashMap!!.get(DownloadItemData.ID) as String
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -121,8 +119,6 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -149,8 +145,6 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -162,15 +156,11 @@ this.downloadableItem= vector.get(0) as DownloadableItem
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -181,8 +171,6 @@ this.downloadableItem= vector.get(0) as DownloadableItem
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -192,8 +180,6 @@ this.downloadableItem= vector.get(0) as DownloadableItem
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -258,8 +244,6 @@ var document = document
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

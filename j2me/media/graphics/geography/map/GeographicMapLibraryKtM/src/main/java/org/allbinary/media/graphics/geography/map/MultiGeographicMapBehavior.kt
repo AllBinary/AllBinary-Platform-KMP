@@ -41,7 +41,8 @@ open public class MultiGeographicMapBehavior : Object {
 
         for (index in size - 1 downTo 0) {
 
-            cellType = geographicMapInterfaceArray[index]!!.getCellTypeAt(geographicMapCellPosition)
+            cellType =
+                geographicMapInterfaceArray[index]!!.getCellTypeAt(geographicMapCellPosition)!!
             geographicMapCellTypeArray[index] = cellType
         }
 

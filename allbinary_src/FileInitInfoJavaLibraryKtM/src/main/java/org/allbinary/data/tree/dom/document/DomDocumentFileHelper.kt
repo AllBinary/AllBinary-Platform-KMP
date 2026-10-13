@@ -52,8 +52,6 @@ var xmlFile = xmlFile
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DomDocumentHelper.create(AbFileInputStream(xmlFile))
 } catch(e: Exception)
@@ -100,7 +98,7 @@ var document = document
                                     }
                                 
 file.createNewFile()
-dataOutputStream= DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(file)
+dataOutputStream= DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(file)!!
 
     var streamResult: StreamResult = StreamResult(dataOutputStream)
 

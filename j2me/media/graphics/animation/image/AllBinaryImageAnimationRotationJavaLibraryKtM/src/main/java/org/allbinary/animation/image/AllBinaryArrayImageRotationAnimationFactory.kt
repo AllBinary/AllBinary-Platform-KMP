@@ -166,7 +166,7 @@ open public class AllBinaryArrayImageRotationAnimationFactory : BaseImageAnimati
                     image.getHeight(),
                     this.scaleProperties!!.scaleWidth,
                     this.scaleProperties!!.scaleHeight,
-                )
+                )!!
         }
 
         if (

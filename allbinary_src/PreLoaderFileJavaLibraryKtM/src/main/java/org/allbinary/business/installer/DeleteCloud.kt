@@ -140,15 +140,11 @@ this.logUtil!!.putF("Deleted Files From Cloud", this, "initialize()")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
             {
 this.logUtil!!.put("Unable to copy installer files into cloud", this, "initialize()", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

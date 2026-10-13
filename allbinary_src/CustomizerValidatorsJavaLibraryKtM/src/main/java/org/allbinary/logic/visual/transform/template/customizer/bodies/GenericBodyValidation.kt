@@ -71,7 +71,7 @@ var document = document
 
     var aBodyValueNode: Node = DomSearchHelper.getNode(DomData.VALUE, aBodyNode!!.getChildNodes())!!
 
-this.body= DomNodeHelper.getTextNodeValue(aBodyValueNode)
+this.body= DomNodeHelper.getTextNodeValue(aBodyValueNode)!!
 }
 
 }
@@ -128,8 +128,6 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -143,8 +141,6 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -165,14 +161,12 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
 
                             {
                             stringBuffer!!.append("Error: Data submitted is < ")
-stringBuffer!!.appendint(BodyData.getInstance()!!.MIN)
+stringBuffer!!.appendint(BodyData.getInstance()!!.MIN.toInt())
 stringBuffer!!.append(" or > ")
-stringBuffer!!.appendint(AbSqlData.MAXBLOB)
+stringBuffer!!.appendint(AbSqlData.MAXBLOB.toInt())
 
                             }
                     
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
@@ -188,8 +182,6 @@ stringBuffer!!.appendint(AbSqlData.MAXBLOB)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -201,8 +193,6 @@ stringBuffer!!.appendint(AbSqlData.MAXBLOB)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -212,8 +202,6 @@ stringBuffer!!.appendint(AbSqlData.MAXBLOB)
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -228,8 +216,6 @@ var document = document
 var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, BodyData.getInstance()!!.NAME, this.body)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

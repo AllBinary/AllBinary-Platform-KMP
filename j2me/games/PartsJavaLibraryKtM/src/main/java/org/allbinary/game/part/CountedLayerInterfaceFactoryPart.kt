@@ -64,7 +64,7 @@ open public class CountedLayerInterfaceFactoryPart : Object, PartInterface, Upda
     ) : super() {
         // var total = total
         // var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
-        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(1000)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(1000)!!
         this.init(total, countedPickedUpLayerInterfaceFactory)
     }
 
@@ -79,7 +79,7 @@ open public class CountedLayerInterfaceFactoryPart : Object, PartInterface, Upda
             font.charsWidth(this.totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +
                 (font.getSize() shr 1)
         )
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     open fun init(
@@ -138,7 +138,7 @@ open public class CountedLayerInterfaceFactoryPart : Object, PartInterface, Upda
     {
         // var total = total
         this.total = total
-        this.totalString = this.primitiveLongUtil!!.getCharArray(total)
+        this.totalString = this.primitiveLongUtil!!.getCharArray(total)!!
         this.myFontProcessor = this.updateMyFontProcessor
     }
 

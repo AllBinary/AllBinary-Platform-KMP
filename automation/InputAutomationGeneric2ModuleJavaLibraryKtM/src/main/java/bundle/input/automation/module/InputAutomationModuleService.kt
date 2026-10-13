@@ -47,8 +47,6 @@ this.setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray)
         //nullable = true from not(false or (false and true)) = true
 : Array<InputAutomationModuleFactoryInterface?>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputAutomationModuleInterfaceArray
 }

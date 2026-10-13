@@ -43,7 +43,7 @@ open public class FilePathUtil : Object {
                 return filePathData!!.PATH_START
             }
 
-            path = path.replace(abPathData!!.SEPARATORCHAR, filePathData!!.SEPARATORCHAR)
+            path = path.replace(abPathData!!.SEPARATORCHAR, filePathData!!.SEPARATORCHAR)!!
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return path

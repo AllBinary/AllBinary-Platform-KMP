@@ -91,7 +91,7 @@ open public class StartIntermissionPaintable : InitUpdatePaintable, UpdateMyFont
         var font: Font = graphics.getFont()!!
 
         this.fontHeightP = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun paint(graphics: Graphics)
@@ -141,7 +141,8 @@ open public class StartIntermissionPaintable : InitUpdatePaintable, UpdateMyFont
 
         var level: Int = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()
 
-        this.stringArray[0] = StringMaker().append(this.BEGIN_LEVEL)!!.appendint(level)!!.toString()
+        this.stringArray[0] =
+            StringMaker().append(this.BEGIN_LEVEL)!!.appendint(level)!!.toString()!!
 
         for (index in this.stringArray!!.size - 1 downTo 1) {
 

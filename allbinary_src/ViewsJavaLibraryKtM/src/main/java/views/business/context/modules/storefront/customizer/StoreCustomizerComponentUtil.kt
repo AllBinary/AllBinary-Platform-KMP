@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : StoreCustomizerComponentUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreCustomizerComponentUtil.instance
 }
@@ -112,8 +110,6 @@ var transformInfoInterface = transformInfoInterface
                                 
 this.generate(abeClientInformation, transformInfoInterface, allViewsToBeModified)
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

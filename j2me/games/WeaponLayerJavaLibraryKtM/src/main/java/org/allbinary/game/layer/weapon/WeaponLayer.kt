@@ -286,7 +286,7 @@ open public class WeaponLayer : MultiPlayerGameLayer, TickableInterface {
 
         if (this.isDestroyed()) {
 
-            this.scoreableInterface = NoScoreable.getInstance()
+            this.scoreableInterface = NoScoreable.getInstance()!!
             DestroyedLayerProcessor.getInstance()!!.add(this)
         }
     }

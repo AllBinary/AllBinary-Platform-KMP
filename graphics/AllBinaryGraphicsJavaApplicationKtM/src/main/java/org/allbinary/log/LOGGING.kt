@@ -43,8 +43,6 @@ companion object {
 : Boolean{
 var logType = logType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LOGGING.logging.contains(logType!!.toString())
 }
@@ -103,8 +101,6 @@ LOGGING.logging.add(value)
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name

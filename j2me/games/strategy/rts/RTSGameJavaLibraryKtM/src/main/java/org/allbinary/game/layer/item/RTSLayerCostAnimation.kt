@@ -75,7 +75,7 @@ open public class RTSLayerCostAnimation :
 
         this.fontHeight = font.getHeight()
         this.adjustedCostX = font.stringWidth(this.DOLLAR)
-        this.myFontProcessor = MyFontProcessor.getInstance()
+        this.myFontProcessor = MyFontProcessor.getInstance()!!
     }
 
     override fun onEvent(event: AllBinaryEventObject)
@@ -106,7 +106,7 @@ open public class RTSLayerCostAnimation :
     {
         this.len = 0
         this.costString =
-            this.primitiveLongUtil!!.getCharArray(this.layerInterfaceFactoryInterface!!.getCost())
+            this.primitiveLongUtil!!.getCharArray(this.layerInterfaceFactoryInterface!!.getCost())!!
         this.len = this.primitiveLongUtil!!.getCurrentTotalDigits()
     }
 

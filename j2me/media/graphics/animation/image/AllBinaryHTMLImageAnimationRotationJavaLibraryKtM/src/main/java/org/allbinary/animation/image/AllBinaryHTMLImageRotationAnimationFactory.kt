@@ -56,8 +56,6 @@ companion object {
 
 htmlImageRotationAnimationFactory!!.init(dx, dy)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return htmlImageRotationAnimationFactory
 }
@@ -113,8 +111,6 @@ this.animationFactoryInitializationVisitor!!.originalDy= dy
                                     {
                                     this.animationFactoryImageScaleUtil!!.processAdjust(this)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AllBinaryAdjustedHTMLImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.getAngleIncrement()), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationFactoryInitializationVisitor!!.dx, this.animationFactoryInitializationVisitor!!.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
 
@@ -122,8 +118,6 @@ this.animationFactoryInitializationVisitor!!.originalDy= dy
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AllBinaryHTMLImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.angleIncrement), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationBehaviorFactory!!.getOrCreateInstance())
 
@@ -135,8 +129,6 @@ this.animationFactoryInitializationVisitor!!.originalDy= dy
     open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
 : Short{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.angleIncrement

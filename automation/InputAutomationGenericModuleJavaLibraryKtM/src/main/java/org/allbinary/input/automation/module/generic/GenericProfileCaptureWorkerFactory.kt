@@ -68,8 +68,6 @@ var genericProfile = genericProfile
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ScreenCaptureImagesWorker()
 
@@ -81,8 +79,6 @@ var genericProfile = genericProfile
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SavedCaptureImagesWorker(genericProfileDataWorkerType as SavedCaptureGenericProfileDataWorkerType)
 

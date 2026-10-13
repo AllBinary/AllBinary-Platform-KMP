@@ -65,8 +65,6 @@ this.transformInfoInterface= transformInfoInterface as TransformInfoHttpInterfac
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface
 }
@@ -75,8 +73,6 @@ this.transformInfoInterface= transformInfoInterface as TransformInfoHttpInterfac
     open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSession{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return WeblisketSession(this.getPropertiesHashMap(), this.getPageContext())
@@ -87,8 +83,6 @@ this.transformInfoInterface= transformInfoInterface as TransformInfoHttpInterfac
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface!!.getPageContext()
 }
@@ -97,8 +91,6 @@ this.transformInfoInterface= transformInfoInterface as TransformInfoHttpInterfac
     open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface!!.getPropertiesHashMap()

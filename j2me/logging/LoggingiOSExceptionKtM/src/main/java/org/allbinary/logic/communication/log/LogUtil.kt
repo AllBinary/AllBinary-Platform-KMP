@@ -42,8 +42,6 @@ import org.allbinary.string.CommonStrings
         //nullable =  from not(true or (false and true)) = 
 : LogUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LogUtil.instance
 }
@@ -70,8 +68,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -88,8 +84,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 

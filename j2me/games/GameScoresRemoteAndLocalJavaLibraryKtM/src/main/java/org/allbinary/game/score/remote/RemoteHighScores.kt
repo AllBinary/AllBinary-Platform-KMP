@@ -59,8 +59,6 @@ companion object {
     //var columnTwoHeading = columnTwoHeading
     //var isAscending = isAscending
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return RemoteHighScores.getInstancePreload(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending, true)
 }
@@ -98,8 +96,6 @@ RemoteHighScores.hashTable!!.put(gameInfo, highScores)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return highScores
 } catch(e: Exception)
@@ -108,8 +104,6 @@ RemoteHighScores.hashTable!!.put(gameInfo, highScores)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.getInstance(), commonStrings!!.GET_INSTANCE, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return RemoteErrorHighScoresSingletonFactory.getInstance()
@@ -255,8 +249,6 @@ this.ascending= ascending
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.ascending
 }
@@ -265,8 +257,6 @@ this.ascending= ascending
     open fun getSoftwareInformation()
         //nullable = true from not(false or (false and true)) = true
 : SoftwareInformation{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.softwareInformation

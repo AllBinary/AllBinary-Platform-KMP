@@ -93,8 +93,6 @@ var document = document
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueNodes(document, PageData.getInstance()!!.NAME, pageName)
 }
@@ -114,8 +112,6 @@ var document = document
 
     var result: String = StoreTransformer(this.abeClientInformation, this.getTransformInfoInterface()).
                             translate(success)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -44,7 +44,7 @@ open public class ProgressMidlet : AllBinaryMidlet {
 public constructor (clientInformationFactory: ClientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
 this.preInit()
-this.abeClientInformation= clientInformationFactory!!.getInstance()
+this.abeClientInformation= clientInformationFactory!!.getInstance()!!
 }
 
 

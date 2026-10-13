@@ -93,12 +93,10 @@ var y = y
 var aFloat = aFloat
 
     
-                        if(this.getRatios()[this.getRatios()!!.length -1]!!.toDouble() > aFloat)
+                        if(this.getRatios()[this.getRatios()!!.size -1]!!.toDouble() > aFloat)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -106,8 +104,6 @@ var aFloat = aFloat
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -119,8 +115,6 @@ var aFloat = aFloat
     open fun isCloseDeath()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.closeDeath
@@ -138,8 +132,6 @@ this.closeDeath= closeDeath
     open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.damaged
@@ -171,8 +163,6 @@ stringBuffer!!.appendboolean(this.isDamaged())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(this.IS_CLOSE_DEATH_LABEL)
 stringBuffer!!.appendboolean(this.isCloseDeath())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

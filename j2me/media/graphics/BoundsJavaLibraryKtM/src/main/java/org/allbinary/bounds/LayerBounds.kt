@@ -60,6 +60,6 @@ open public class LayerBounds : Object, BoundsChangeEventListener {
         // nullable = true from not(false or (false and false)) = true
     {
         var boundsChangeEvent = boundsChangeEvent
-        this.rectangle = boundsChangeEvent!!.getRectangle()
+        this.rectangle = boundsChangeEvent!!.getRectangle()!!
     }
 }

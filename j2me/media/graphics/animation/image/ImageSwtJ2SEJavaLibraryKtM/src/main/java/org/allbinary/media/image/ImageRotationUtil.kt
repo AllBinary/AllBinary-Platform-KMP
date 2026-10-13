@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageRotationUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageRotationUtil.instance
 }
@@ -89,8 +87,6 @@ private constructor ()
 
 openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
@@ -126,7 +122,7 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
     var swtImage: SwtMutableImage = image as SwtMutableImage
 
 copySwtImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
-gc= swtImage!!.getGc()
+gc= swtImage!!.getGc()!!
 this.imageSwtRotationUtil!!.rotateImage(originalSwtImage, copySwtImage, gc, totalAngle)
 
                                     }
@@ -146,8 +142,6 @@ this.imageSwtRotationUtil!!.rotateImage(originalSwtImage, copySwtImage, gc, tota
 : Image{
 var originalImage = originalImage
 var rotationInDegrees = rotationInDegrees
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return originalImage

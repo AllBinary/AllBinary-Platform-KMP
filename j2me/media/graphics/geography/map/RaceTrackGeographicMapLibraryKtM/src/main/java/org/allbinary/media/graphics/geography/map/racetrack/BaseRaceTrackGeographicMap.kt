@@ -78,9 +78,9 @@ open public class BaseRaceTrackGeographicMap : BasicGeographicMap, RaceTrackGeog
             var error: String =
                 StringMaker()
                     .append("RaceTrackMap has incorrect Mini Map columns: ")!!
-                    .appendint(miniTiledLayer!!.getColumns())!!
+                    .appendint(miniTiledLayer!!.getColumns().toInt())!!
                     .append(" != ")!!
-                    .appendint(this.getGeographicMapCellPositionFactory()!!.getColumns())!!
+                    .appendint(this.getGeographicMapCellPositionFactory()!!.getColumns().toInt())!!
                     .toString()!!
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!

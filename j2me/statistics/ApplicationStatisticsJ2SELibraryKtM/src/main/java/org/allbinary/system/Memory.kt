@@ -31,11 +31,11 @@ import org.allbinary.logic.string.StringMaker
             var stringBuffer: StringMaker = StringMaker()
 
             stringBuffer!!.append("Memory: Free: ")
-            stringBuffer!!.appendlong(Runtime.getRuntime()!!.freeMemory())
+            stringBuffer!!.appendlong(Runtime.getRuntime()!!.freeMemory().toLong())
             stringBuffer!!.append(" Max: ")
-            stringBuffer!!.appendlong(Runtime.getRuntime()!!.maxMemory())
+            stringBuffer!!.appendlong(Runtime.getRuntime()!!.maxMemory().toLong())
             stringBuffer!!.append(" Total: ")
-            stringBuffer!!.appendlong(Runtime.getRuntime()!!.totalMemory())
+            stringBuffer!!.appendlong(Runtime.getRuntime()!!.totalMemory().toLong())
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return stringBuffer!!.toString()

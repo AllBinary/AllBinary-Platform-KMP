@@ -61,7 +61,7 @@ public constructor (inputAutomationModuleConfigurations: InputAutomationModuleCo
     //var helpSetListenerInterface = helpSetListenerInterface
 this.helpSetListenerInterface= helpSetListenerInterface
 this.defaultListModelHelper= DefaultListModelHelper()
-this.hashMap= StdUtil.getInstance()!!.createHashMap()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     var collection: Collection = inputAutomationModuleConfigurations!!.getHashMap()!!.values()!!
 
@@ -114,8 +114,6 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
         //nullable = true from not(false or (false and true)) = true
 : ListModel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.defaultListModelHelper!!.getListModel() as ListModel
 }
@@ -143,8 +141,6 @@ this.logUtil!!.putF("Getting Module: " +moduleName, this, commonStrings!!.GET_IN
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputAutomationModuleFactoryInterface

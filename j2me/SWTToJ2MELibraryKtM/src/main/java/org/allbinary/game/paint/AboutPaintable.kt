@@ -47,8 +47,6 @@ companion object {
 var info = info
 var developers = developers
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AboutPaintable(info, developers)
 }
@@ -124,15 +122,13 @@ this.infoBeginWidth[index]= (font.stringWidth(this.info[index]!!) shr 1)
 this.developersBeginWidth[index]= (font.stringWidth(this.developers[index]!!) shr 1)
 }
 
-this.myFontProcessor= MyFontProcessor.getInstance()
+this.myFontProcessor= MyFontProcessor.getInstance()!!
 }
 
 
     open fun getPaintableArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : Array<Paintable?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paintableArray

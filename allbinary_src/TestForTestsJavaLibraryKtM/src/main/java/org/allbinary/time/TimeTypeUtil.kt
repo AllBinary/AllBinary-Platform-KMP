@@ -27,8 +27,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TimeTypeUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TimeTypeUtil.instance
 }
@@ -52,8 +50,6 @@ companion object {
     var hoursOfDay: Int = this.getHourOfDay()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hoursOfDay < 6 || hoursOfDay > 18
 }
@@ -66,8 +62,6 @@ companion object {
     var calendar: Calendar = Calendar.getInstance()!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return calendar.get(Calendar.HOUR_OF_DAY)
 }
@@ -76,8 +70,6 @@ companion object {
     open fun getNightOrDay()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return if(this.isNight()) {
@@ -100,8 +92,6 @@ var timeInMillis = timeInMillis
 
 calendar.setTimeInMillis(timeInMillis)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return calendar.get(Calendar.HOUR_OF_DAY)
 }
@@ -115,8 +105,6 @@ var timeInMillis = timeInMillis
     var hoursOfDay: Int = this.getHourOfDay(timeInMillis)
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hoursOfDay < 6 || hoursOfDay > 18
 }
@@ -126,8 +114,6 @@ var timeInMillis = timeInMillis
         //nullable = true from not(false or (false and false)) = true
 : String{
 var timeInMillis = timeInMillis
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return if(this.isNight(timeInMillis)) {

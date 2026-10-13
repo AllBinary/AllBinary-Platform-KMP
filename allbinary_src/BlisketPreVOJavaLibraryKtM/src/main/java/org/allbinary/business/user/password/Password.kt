@@ -69,8 +69,6 @@ this.password= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.password
 }
@@ -115,8 +113,6 @@ valid= false
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -130,8 +126,6 @@ valid= false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -149,8 +143,6 @@ valid= false
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Please enter a Password with more than 6 characters.<br />"
 
@@ -158,8 +150,6 @@ valid= false
                                 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -171,7 +161,7 @@ valid= false
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var secret = secret
-this.password= StringUtil.getInstance()!!.getNonNull(this.password)
+this.password= StringUtil.getInstance()!!.getNonNull(this.password)!!
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)
@@ -185,8 +175,6 @@ vector.add(secret)
 vector.add(SuperCrypt(random).
                             encrypt(this.password))
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
@@ -196,7 +184,7 @@ vector.add(SuperCrypt(random).
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
 var secret = secret
-this.password= StringUtil.getInstance()!!.getNonNull(this.password)
+this.password= StringUtil.getInstance()!!.getNonNull(this.password)!!
 
     var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
@@ -209,8 +197,6 @@ values.put(EntryData.getInstance()!!.ENCRYPTION, Integer(random).
 values.put(UserData.SECRET, secret)
 values.put(UserData.PASSWORD, SuperCrypt(random).
                             encrypt(this.password))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return values

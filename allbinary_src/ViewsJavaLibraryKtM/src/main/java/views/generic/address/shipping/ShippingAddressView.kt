@@ -66,8 +66,6 @@ this.request= httpTransformInfoInterface!!.getPageContext()!!.getRequest() as Ht
         //nullable = true from not(false or (false and true)) = true
 : HttpServletRequest{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.request
 }
@@ -85,8 +83,6 @@ var document = document
     var formNode: Node = document.createElement(StreetAddressData.FORM)!!
 
 formNode!!.appendChild(this.streetAddress!!.toXmlNode(document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return formNode
@@ -126,8 +122,6 @@ this.addDomNodeInterface(StatesView() as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

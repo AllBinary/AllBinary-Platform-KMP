@@ -57,7 +57,7 @@ var key = key
 
         try {
             this.algorithm= algorithm
-this.key= key.encodeToByteArray()
+this.key= key.encodeToByteArray()!!
 this.init()
 } catch(e: Exception)
             {
@@ -85,8 +85,8 @@ Security.addProvider(sunJce)
 
     var keyFactory: SecretKeyFactory = SecretKeyFactory.getInstance(this.algorithm)!!
 
-this.secretKey= keyFactory!!.generateSecret(keySpec)
-this.cipher= Cipher.getInstance(this.algorithm)
+this.secretKey= keyFactory!!.generateSecret(keySpec)!!
+this.cipher= Cipher.getInstance(this.algorithm)!!
 } catch(e: Exception)
             {
 
@@ -136,15 +136,11 @@ result[index +ivArray!!.size]= encrypted[index]!!
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
 PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -191,15 +187,11 @@ result[index -ivArray!!.size]= array[index]!!
     var decrypted: ByteArray = this.cipher.doFinal(result)!!
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
             {
 PreLogUtil.putOE("decrypt Failed", this, "decrypt", e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -61,8 +61,6 @@ companion object {
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UploadMediaSingleton.uploadMedia
 }
@@ -80,8 +78,8 @@ companion object {
 private constructor ()
             : super()
         {
-this.readerFileTypesHashMap= StdUtil.getInstance()!!.createHashMap()
-this.writerFileTypesHashMap= StdUtil.getInstance()!!.createHashMap()
+this.readerFileTypesHashMap= StdUtil.getInstance()!!.createHashMap()!!
+this.writerFileTypesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
     var hashMap: HashMap<Any, Any> = MediaData.toHashMap()!!
 
@@ -167,8 +165,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTR
 : Boolean{
 var mediaFileType = mediaFileType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.readerFileTypesHashMap!!.containsKey(mediaFileType)
 }
@@ -179,8 +175,6 @@ var mediaFileType = mediaFileType
 : Boolean{
 var mediaFileType = mediaFileType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.readerFileTypesHashMap!!.containsKey(mediaFileType)
 }
@@ -190,8 +184,6 @@ var mediaFileType = mediaFileType
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isReaderSupported(mediaFileType) && this.isWriterSupported(mediaFileType)
@@ -204,8 +196,6 @@ var mediaFileType = mediaFileType
 var mediaFileType = mediaFileType
 var aMediaType = aMediaType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isReaderMedia(mediaFileType, aMediaType) && this.isWriterMedia(mediaFileType, aMediaType)
 }
@@ -217,8 +207,6 @@ var aMediaType = aMediaType
 var mediaFileType = mediaFileType
 var aMediaType = aMediaType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isMedia(mediaFileType, aMediaType, this.readerFileTypesHashMap)
 }
@@ -229,8 +217,6 @@ var aMediaType = aMediaType
 : Boolean{
 var mediaFileType = mediaFileType
 var aMediaType = aMediaType
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isMedia(mediaFileType, aMediaType, this.writerFileTypesHashMap)
@@ -257,8 +243,6 @@ var hashMap = hashMap
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -266,8 +250,6 @@ var hashMap = hashMap
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -278,8 +260,6 @@ var hashMap = hashMap
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 

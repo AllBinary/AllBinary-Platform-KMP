@@ -80,14 +80,14 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
                     geographicMapCellPositionFactory!!.getAt(
                         geographicMapCellPosition!!.getColumn() - 1,
                         geographicMapCellPosition!!.getRow(),
-                    )
+                    )!!
             } else if (direction == DirectionFactory.getInstance()!!.RIGHT) {
 
                 nextTerrainGeographicMapCellPosition =
                     geographicMapCellPositionFactory!!.getAt(
                         geographicMapCellPosition!!.getColumn() + 1,
                         geographicMapCellPosition!!.getRow(),
-                    )
+                    )!!
             }
 
             this.geographicMapBehavior!!.getCellTypeAt(

@@ -84,8 +84,6 @@ propertiesHashMap!!.put("Body", this.body)
 method.invoke(anyType, 
                             null)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Email Sent"
 } catch(e: Exception)
@@ -103,8 +101,6 @@ method.invoke(anyType,
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -121,15 +117,11 @@ method.invoke(anyType,
         try {
             this.pageContext!!.getOut()!!.print(this.send())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: Exception)
             {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY

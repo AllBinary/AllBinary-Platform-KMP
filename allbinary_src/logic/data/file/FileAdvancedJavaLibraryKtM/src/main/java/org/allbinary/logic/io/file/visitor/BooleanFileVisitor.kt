@@ -55,8 +55,6 @@ PreLogUtil.put("Filter BasicArrayList: " +this.getFilterStringBasicArrayList()!!
 : Any{
 var anyType = anyType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.visit(anyType as AbFile) as Object
 }
@@ -89,16 +87,12 @@ nextFileFilterString= list.get(index) as String
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,8 +103,6 @@ nextFileFilterString= list.get(index) as String
     open fun getFilterStringBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.filterStringBasicArrayList
@@ -130,8 +122,6 @@ this.filterStringBasicArrayList= filterStringBasicArrayList
 : Boolean{
 var file = file
 var fileNameString = fileNameString
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

@@ -44,7 +44,7 @@ open public class TouchButtonsMappingPaintable : Paintable {
     {
 
         try {
-            this.paintableTable = this.createPaintableTable()
+            this.paintableTable = this.createPaintableTable()!!
         } catch (e: Exception) {
 
             var commonStrings: CommonStrings = CommonStrings.getInstance()!!

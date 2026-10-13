@@ -51,8 +51,6 @@ this.setHeight(height)
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.width
 }
@@ -69,8 +67,6 @@ this.width= width
     open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.height

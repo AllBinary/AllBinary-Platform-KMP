@@ -53,7 +53,7 @@ open public class MetasValidation : Validation
     private var metaValidationVector: BasicArrayList
 public constructor (storeName: String){
 var storeName = storeName
-this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
+this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)!!
 this.metaValidationVector= BasicArrayListD()
 
     var contentValue: String = this.storeFrontInterface!!.getName() +" E-Commerce Site"
@@ -90,8 +90,6 @@ var document = document
     var valid: Boolean = Boolean.true
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
@@ -105,8 +103,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -124,8 +120,6 @@ var document = document
     var stringBuffer: StringMaker = StringMaker()
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -140,8 +134,6 @@ var document = document
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -153,8 +145,6 @@ var document = document
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -164,8 +154,6 @@ var document = document
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -200,8 +188,6 @@ var document = document
 
 node.appendChild(metaValidation!!.toXmlNode(document))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

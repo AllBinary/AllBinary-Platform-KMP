@@ -73,7 +73,7 @@ var clientInfo = clientInfo
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(TRYING)
-stringBuffer!!.appendint(this.getServer())
+stringBuffer!!.appendint(this.getServer().toInt())
 stringBuffer!!.append(SEP)
 stringBuffer!!.append(server)
 this.logUtil!!.putF(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(), this, this.commonStrings!!.GET)
@@ -106,8 +106,6 @@ this.logUtil!!.putF(RESULT +result.toString(), this, this.commonStrings!!.GET)
                                     {
                                     this.logUtil!!.putF(INVALID, this, this.commonStrings!!.GET)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 
@@ -118,8 +116,6 @@ this.logUtil!!.putF(RESULT +result.toString(), this, this.commonStrings!!.GET)
 
 this.logUtil!!.putF(this.commonStrings!!.END +stringBuffer!!.toString(), this, this.commonStrings!!.GET)
 isOnline= true
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abeLicenseInterface
@@ -133,8 +129,6 @@ this.logUtil!!.putF(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStack
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 
@@ -154,16 +148,12 @@ this.logUtil!!.putF(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStack
             {
 this.logUtil!!.put(SERVER_REPORTED_ERROR, this, this.commonStrings!!.GET, e)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
             {
 this.logUtil!!.put(UNKNOWN_ERROR, this, this.commonStrings!!.GET, e)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)

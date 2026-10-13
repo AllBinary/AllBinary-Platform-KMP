@@ -64,8 +64,6 @@ this.transformInfoInterface= transformInfoInterface
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface
 }
@@ -91,8 +89,6 @@ this.uriResolver= uriResolver
         //nullable = true from not(false or (false and true)) = true
 : InputStream{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputStream
 }
@@ -102,8 +98,6 @@ this.uriResolver= uriResolver
         //nullable = true from not(false or (false and true)) = true
 : URIResolver{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.uriResolver
 }
@@ -112,8 +106,6 @@ this.uriResolver= uriResolver
     open fun getStreamSource()
         //nullable = true from not(false or (false and true)) = true
 : StreamSource{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StreamSource(this.getInputStream())
@@ -165,8 +157,6 @@ var xmlDocumentStr = xmlDocumentStr
                                 
 
     var transformInfoObjectConfigGeneratorInterface: TransformInfoObjectConfigGenerator = TransformInfoObjectConfigGeneratorFactory.getInstance()!!.getInstance(this.getTransformInfoInterface())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

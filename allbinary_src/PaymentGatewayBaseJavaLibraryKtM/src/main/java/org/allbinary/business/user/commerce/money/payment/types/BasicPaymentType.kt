@@ -84,7 +84,7 @@ hashMap!!.put("-", UNDERSCORE)
 
     var replace: Replace = Replace(hashMap)
 
-this.name= replace.all(paymentMethod)
+this.name= replace.all(paymentMethod)!!
 this.value= paymentMethod
 BasicPaymentTypeUtil.getInstance()!!.add(this)
 }
@@ -94,8 +94,6 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
 }
@@ -104,8 +102,6 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
     open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.value
@@ -132,8 +128,6 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentGatewayInterfaceFactoryInterface
 }
@@ -159,8 +153,6 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.paymentGatewayDomNodeFactoryInterface
 }
@@ -169,8 +161,6 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getName()
@@ -186,8 +176,6 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
 vector.add(this.name)
 vector.add(this.value)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
@@ -202,8 +190,6 @@ vector.add(this.value)
 hashMap!!.put(PaymentGatewayData.NAME.toString(), this.name)
 hashMap!!.put(PaymentGatewayData.VALUE.toString(), this.value)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -212,8 +198,6 @@ hashMap!!.put(PaymentGatewayData.VALUE.toString(), this.value)
     override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name

@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : GLUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GLUtil.instance
 }
@@ -79,8 +77,6 @@ buffer.put(p_b)
 buffer.put(p_c)
 this.position(buffer, 0)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return buffer
 }
@@ -105,8 +101,6 @@ buffer.put(p_b)
 buffer.put(p_c)
 buffer.put(p_d)
 this.position(buffer, 0)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return buffer
@@ -140,8 +134,6 @@ buffer.put(v)
 
 this.position(buffer, 0)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return buffer
 }
@@ -152,8 +144,6 @@ this.position(buffer, 0)
 : Buffer{
     //var buffer = buffer
     //var newPosition = newPosition
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return buffer.position(newPosition)

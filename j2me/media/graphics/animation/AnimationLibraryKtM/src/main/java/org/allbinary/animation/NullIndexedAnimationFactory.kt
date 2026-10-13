@@ -25,7 +25,7 @@ open public class NullIndexedAnimationFactory :
 
     companion object {
 
-        val NULL_INDEXED_ANIMATION_ARRAY: Array<IndexedAnimationInterface?> = arrayOfNulls(0)
+        val NULL_INDEXED_ANIMATION_ARRAY: Array<IndexedAnimation?> = arrayOfNulls(0)
 
         private var NULL_INDEXED_ANIMATION_FACTORY: NullIndexedAnimationFactory =
             NullIndexedAnimationFactory()

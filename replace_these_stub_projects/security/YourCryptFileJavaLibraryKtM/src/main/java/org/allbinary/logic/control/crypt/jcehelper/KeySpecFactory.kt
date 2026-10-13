@@ -44,8 +44,6 @@ companion object {
 var algorithm = algorithm
 var keyData = keyData
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }

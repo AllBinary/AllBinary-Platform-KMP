@@ -80,8 +80,6 @@ var y = y
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return index -min_x.toInt()
 
@@ -90,10 +88,8 @@ var y = y
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
+                        return 0.0
 }
 
 

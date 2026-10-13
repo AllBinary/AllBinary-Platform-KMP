@@ -71,7 +71,7 @@ var node = node
 
     var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, titleTextNode!!.getChildNodes())!!
 
-this.title= DomNodeHelper.getTextNodeValue(valueNode)
+this.title= DomNodeHelper.getTextNodeValue(valueNode)!!
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.title))
@@ -113,8 +113,6 @@ this.getFormData(hashMap)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.title
 }
@@ -145,8 +143,6 @@ this.title= hashMap!!.get(TitleData.getInstance()!!.TEXT) as String
 
 hashMap!!.put(TitleData.getInstance()!!.TEXT, this.getTitle())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -170,8 +166,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModDomHelper.createNameValueNodes(document, TitleData.getInstance()!!.NAME, hashMap)

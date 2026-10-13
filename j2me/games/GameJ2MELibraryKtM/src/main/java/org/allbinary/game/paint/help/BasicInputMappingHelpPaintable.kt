@@ -73,15 +73,15 @@ open public class BasicInputMappingHelpPaintable : HelpPaintable {
         for (index in 0 until size) {
 
             gameInputMapping = this.gameInputMappingArray[index]!!
-            gameKey = gameInputMapping!!.getGameKey()
-            list = gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
+            gameKey = gameInputMapping!!.getGameKey()!!
+            list = gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)!!
             stringMaker!!.delete(0, stringMaker!!.length())
             keyInfo[index] =
                 stringMaker!!
                     .append(gameInputMapping!!.getName())!!
                     .append(EQUAL)!!
                     .append(this.get(list))!!
-                    .toString()
+                    .toString()!!
         }
 
         super.setInputInfoP(keyInfo)

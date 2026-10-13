@@ -90,7 +90,7 @@ open public class LayerPlacer : Object {
             x = point.getX() + relativePoint!!.getX()
             y = point.getY() + relativePoint!!.getY()
             z = point.getZ() + relativePoint!!.getZ()
-            layerInterface = layerInterfaceFactory!!.getNexInstance(layerHashtable, x, y, z)
+            layerInterface = layerInterfaceFactory!!.getNexInstance(layerHashtable, x, y, z)!!
             this.layerInterfaceVisitor!!.visit(layerInterface)
         }
     }

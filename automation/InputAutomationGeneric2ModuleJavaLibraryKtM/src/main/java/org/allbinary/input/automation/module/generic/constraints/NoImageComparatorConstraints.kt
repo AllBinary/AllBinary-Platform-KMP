@@ -42,7 +42,7 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setMaxNonMatchingPixelDeltas(.MAX_VALUE())
+this.setMaxNonMatchingPixelDeltas(Integer.MAX_VALUE)
 }
 
 
@@ -53,8 +53,6 @@ var frame = frame
 var point = point
 var color = color
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
@@ -64,8 +62,6 @@ var color = color
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var bufferedImage = bufferedImage
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true

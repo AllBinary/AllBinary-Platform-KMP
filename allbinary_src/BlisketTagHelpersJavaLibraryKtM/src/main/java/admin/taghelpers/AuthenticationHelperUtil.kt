@@ -50,8 +50,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AuthenticationHelperUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AuthenticationHelperUtil.instance
 }
@@ -115,8 +113,6 @@ var filePath = filePath
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -132,8 +128,6 @@ var filePath = filePath
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false

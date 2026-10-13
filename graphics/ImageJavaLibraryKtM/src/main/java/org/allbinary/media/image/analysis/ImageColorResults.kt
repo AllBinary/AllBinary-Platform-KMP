@@ -53,8 +53,6 @@ this.setColorAverage(ColorAverage())
         //nullable = true from not(false or (false and true)) = true
 : ColorRange{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorRange
 }
@@ -71,8 +69,6 @@ this.colorRange= colorRange
     open fun getColorAverage()
         //nullable = true from not(false or (false and true)) = true
 : ColorAverage{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorAverage

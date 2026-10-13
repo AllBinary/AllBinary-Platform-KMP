@@ -49,8 +49,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : AbFileUploadFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFileUploadFactory.instance
 }
@@ -96,8 +94,6 @@ items.add(fileItem)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return items
 } catch(e: Exception)
@@ -133,8 +129,6 @@ var httpServletRequest = httpServletRequest
         try {
             
     var abFileUpload: AbFileUpload = AbFileUpload(AbFileItemFactory())
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

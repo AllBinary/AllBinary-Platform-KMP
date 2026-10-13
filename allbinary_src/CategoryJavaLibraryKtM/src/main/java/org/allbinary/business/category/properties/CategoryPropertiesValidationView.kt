@@ -54,8 +54,6 @@ var categoryPropertiesInterface = categoryPropertiesInterface
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPropertiesInterface!!.isValid()
 }
@@ -73,8 +71,6 @@ var categoryPropertiesInterface = categoryPropertiesInterface
 
 stringBuffer!!.append(this.categoryPropertiesInterface!!.validationInfo())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -89,8 +85,6 @@ stringBuffer!!.append(this.categoryPropertiesInterface!!.validationInfo())
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Data"
 }
@@ -104,8 +98,6 @@ stringBuffer!!.append(this.categoryPropertiesInterface!!.validationInfo())
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -117,8 +109,6 @@ stringBuffer!!.append(this.categoryPropertiesInterface!!.validationInfo())
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

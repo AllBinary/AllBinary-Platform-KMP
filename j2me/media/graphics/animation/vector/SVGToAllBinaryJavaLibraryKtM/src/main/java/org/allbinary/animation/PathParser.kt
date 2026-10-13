@@ -97,8 +97,6 @@ tokens.add(c.concatToString()
 
 tokens.toArrayType(res)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return res
 }
@@ -341,8 +339,6 @@ count[0]++
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return count[0]!!
 }
@@ -354,8 +350,6 @@ count[0]++
 var tok = tok
 
     var c: Char = tok[0]
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

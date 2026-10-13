@@ -62,8 +62,6 @@ this.setZoom(grid.getZoom())
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isGridOn
 }
@@ -72,8 +70,6 @@ this.setZoom(grid.getZoom())
     open fun isGridPossible()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isGridPossible
@@ -84,8 +80,6 @@ this.setZoom(grid.getZoom())
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.grid
 }
@@ -94,8 +88,6 @@ this.setZoom(grid.getZoom())
     open fun getZoom()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.zoom

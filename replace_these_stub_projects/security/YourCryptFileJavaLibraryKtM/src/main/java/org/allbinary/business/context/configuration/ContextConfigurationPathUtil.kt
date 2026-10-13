@@ -28,8 +28,6 @@ companion object {
 : AbFile?{
 var contextName = contextName
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -42,8 +40,6 @@ var contextName = contextName
 : AbPath?{
 var contextName = contextName
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -55,8 +51,6 @@ var contextName = contextName
         //nullable = true from not(false or (false and true)) = true
 : String?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -66,8 +60,6 @@ var contextName = contextName
         //nullable = true from not(false or (false and false)) = true
 : String?{
 var contextName = contextName
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

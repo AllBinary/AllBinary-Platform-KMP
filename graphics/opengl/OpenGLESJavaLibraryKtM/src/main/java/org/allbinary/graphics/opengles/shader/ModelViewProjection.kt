@@ -39,8 +39,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ModelViewProjection{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ModelViewProjection.instance
 }
@@ -56,8 +54,6 @@ companion object {
     open fun get()
         //nullable = true from not(false or (false and true)) = true
 : FloatArray?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

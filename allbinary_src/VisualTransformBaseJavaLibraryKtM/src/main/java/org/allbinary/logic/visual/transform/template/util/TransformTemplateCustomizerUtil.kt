@@ -50,8 +50,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformTemplateCustomizerUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformTemplateCustomizerUtil.instance
 }
@@ -137,8 +135,6 @@ hashMap!!.put(arrayOf(this.GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rootViewName

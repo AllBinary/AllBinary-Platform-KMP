@@ -110,7 +110,7 @@ open public class BasicArrayListUtil : Object {
         for (index in 0 until size) {
 
             secondSwapIndex = lastMinusOneIndex - index
-            temp = list.removeAt(index)
+            temp = list.removeAt(index)!!
             list.addAt(index, list.removeAt(secondSwapIndex))
             list.addAt(secondSwapIndex + 1, temp)
         }

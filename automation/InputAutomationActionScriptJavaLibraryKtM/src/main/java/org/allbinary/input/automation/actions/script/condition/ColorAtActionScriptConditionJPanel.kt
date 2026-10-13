@@ -114,8 +114,6 @@ this.colorAtActionScriptConditionInterface!!.log()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorAtXJTextField
 }
@@ -132,8 +130,6 @@ this.colorAtXJTextField= colorAtXJTextField
     open fun getColorAtYJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorAtYJTextField
@@ -152,8 +148,6 @@ this.colorAtYJTextField= colorAtYJTextField
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxBlueJTextField
 }
@@ -170,8 +164,6 @@ this.maxBlueJTextField= maxBlueJTextField
     open fun getMaxGreenJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxGreenJTextField
@@ -190,8 +182,6 @@ this.maxGreenJTextField= maxGreenJTextField
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxRedJTextField
 }
@@ -208,8 +198,6 @@ this.maxRedJTextField= maxRedJTextField
     open fun getMinBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minBlueJTextField
@@ -228,8 +216,6 @@ this.minBlueJTextField= minBlueJTextField
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minGreenJTextField
 }
@@ -246,8 +232,6 @@ this.minGreenJTextField= minGreenJTextField
     open fun getMinRedJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minRedJTextField
@@ -266,8 +250,6 @@ this.minRedJTextField= minRedJTextField
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JLabel{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.yJLabel
 }
@@ -284,8 +266,6 @@ this.yJLabel= yJLabel
     open fun getColorAtActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.colorAtActionJDialog

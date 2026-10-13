@@ -55,7 +55,7 @@ public constructor (nameSpace: String, value: String)
 var nameSpace = nameSpace
 var value = value
 this.nameSpaceVector= BasicArrayListD()
-this.nameSpacePropertiesHashMap= StdUtil.getInstance()!!.createHashMap()
+this.nameSpacePropertiesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 this.value= value
 
     var beginIndex: Int = nameSpace!!.indexOf(NameSpaceRequestParamData.NAME)
@@ -193,8 +193,6 @@ packageIndex++
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.nameSpaceVector
 }
@@ -214,7 +212,7 @@ var packageIndex = packageIndex
                                 )
                         
                                     {
-                                    packagePropertiesHashMap= StdUtil.getInstance()!!.createHashMap()
+                                    packagePropertiesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 
                                     }
                                 
@@ -227,8 +225,6 @@ var packageIndex = packageIndex
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return packagePropertiesHashMap
@@ -247,8 +243,6 @@ var packageIndex = packageIndex
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.value
@@ -330,8 +324,6 @@ packagePropertiesHashMap!!.put(propertyName, propertyValue)
 }
 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

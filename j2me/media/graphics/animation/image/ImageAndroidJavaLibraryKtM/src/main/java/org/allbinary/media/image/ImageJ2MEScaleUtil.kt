@@ -62,7 +62,7 @@ open public class ImageJ2MEScaleUtil : Object {
                     height.toFloat(),
                     image.getHeight().toFloat(),
                     false,
-                )
+                )!!
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.

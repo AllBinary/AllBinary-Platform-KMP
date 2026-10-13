@@ -39,8 +39,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : RendererStateFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return RendererStateFactory.instance
 }
@@ -69,8 +67,6 @@ this.loaded= loaded
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.loaded
 }
@@ -87,8 +83,6 @@ this.surfaceChanged= initialized
     open fun isSurfaceChanged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.surfaceChanged

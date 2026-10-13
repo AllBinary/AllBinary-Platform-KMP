@@ -127,8 +127,6 @@ this.setTime(0)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.time
 }
@@ -152,8 +150,6 @@ hashMap!!.put(GenericProfileActionScriptInputData.TYPE, this.getInputRobotInterf
 hashMap!!.put(GenericProfileActionScriptInputData.DELAY, Integer.toString(this.getTime()))
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -167,8 +163,6 @@ this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 var document = document
 
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, GenericProfileActionScriptInputData.NAME, this.BasicProfileActionScriptInput_toHashMap())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -187,8 +181,6 @@ this.inputRobotInterface= inputRobotInterface
     open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputRobotInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.inputRobotInterface
@@ -220,9 +212,7 @@ stringBuffer!!.append(" Input Type: ")
                         }
                             
 stringBuffer!!.append(" Time: ")
-stringBuffer!!.appendlong(this.getTime())
-
-
+stringBuffer!!.appendlong(this.getTime().toLong())
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

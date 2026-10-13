@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : XmlOptionItemsEntityFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XmlOptionItemsEntityFactory.instance
 }
@@ -63,8 +61,6 @@ private constructor ()
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.inventory.item.options.XmlOptionItemsEntity()
 } catch(e: Exception)
@@ -81,8 +77,6 @@ private constructor ()
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -80,7 +80,7 @@ this.getFormData()
                                 )
                         
                                     {
-                                    id= this.getWeblisketSession()!!.getOrder()!!.getId()
+                                    id= this.getWeblisketSession()!!.getOrder()!!.getId()!!
 
                                     }
                                 
@@ -104,8 +104,6 @@ var document = document
 orderHistoryNode!!.appendChild(this.basketReview!!.toXmlNode(document))
 node.appendChild(orderHistoryNode)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
@@ -119,8 +117,6 @@ node.appendChild(orderHistoryNode)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -144,8 +140,6 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
         try {
             this.addDomNodeInterfaces()
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()

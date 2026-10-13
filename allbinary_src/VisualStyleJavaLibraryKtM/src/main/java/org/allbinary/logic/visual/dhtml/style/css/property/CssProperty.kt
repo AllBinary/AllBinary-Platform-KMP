@@ -63,7 +63,7 @@ var node = node
 
     var propertyNode: Node = DomSearchHelper.getNode(DomData.VALUE, node.getChildNodes())!!
 
-this.propertyName= DomNodeHelper.getTextNodeValue(propertyNode)
+this.propertyName= DomNodeHelper.getTextNodeValue(propertyNode)!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
@@ -84,8 +84,6 @@ this.cssPropertyValues= CssPropertyValues(propertyValuesNode)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.propertyName
 }
@@ -98,8 +96,6 @@ this.cssPropertyValues= CssPropertyValues(propertyValuesNode)
     var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(CssPropertyData.getInstance()!!.NAME, this.propertyName)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
@@ -128,8 +124,6 @@ var document = document
     var node: Node = ModDomHelper.createNameValueNodes(document, CssPropertyData.getInstance()!!.NAME, this.propertyName)!!
 
 node.appendChild(this.cssPropertyValues!!.toXmlNode(document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node

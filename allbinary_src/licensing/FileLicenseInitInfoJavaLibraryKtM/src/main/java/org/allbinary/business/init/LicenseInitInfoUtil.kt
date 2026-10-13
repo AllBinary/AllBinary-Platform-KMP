@@ -107,7 +107,7 @@ open public class LicenseInitInfoUtil : Object {
             for (index in 0 until numberOfLicenseServers) {
 
                 licenseServerCrypted =
-                    tsUtil!!.getByteArray(WeakCrypt(3).encrypt(initData!!.getServer(index)))
+                    tsUtil!!.getByteArray(WeakCrypt(3).encrypt(initData!!.getServer(index)))!!
                 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
             }
         } catch (e: Exception) {
@@ -178,7 +178,7 @@ open public class LicenseInitInfoUtil : Object {
 
                 for (index in 0 until numberOfLicenseServers) {
 
-                    decodedByteArray = DatabaseEncoder.decode(iData!!.readUTF())
+                    decodedByteArray = DatabaseEncoder.decode(iData!!.readUTF())!!
                     licenseServerDecoded = decodedByteArray.decodeToString()
                     initInfo!!.setServer(
                         WeakCrypt(3).decrypt(licenseServerDecoded),

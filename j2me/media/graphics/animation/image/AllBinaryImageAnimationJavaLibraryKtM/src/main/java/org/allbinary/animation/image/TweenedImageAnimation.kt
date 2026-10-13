@@ -55,7 +55,7 @@ open public class TweenedImageAnimation : IndexedAnimation {
         this.dx = dx
         this.dy = dy
         this.totalFrames = totalFrames
-        this.circularIndexUtil = CircularIndexUtil.createInstance(this.totalFrames)
+        this.circularIndexUtil = CircularIndexUtil.createInstance(this.totalFrames)!!
     }
 
     @Throws(Exception::class)

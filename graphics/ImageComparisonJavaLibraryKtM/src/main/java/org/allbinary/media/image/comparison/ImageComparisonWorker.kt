@@ -68,8 +68,6 @@ this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.running
 }
@@ -165,7 +163,7 @@ this.bufferedImageVector!!.remove(0)
 this.index2++
 
     var message: String = StringMaker().
-                            append("Frame: ")!!.appendint(this.index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.appendlong(timeHelper!!.getElapsedTNT())!!.toString()!!
+                            append("Frame: ")!!.appendint(this.index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.appendlong(timeHelper!!.getElapsedTNT().toLong())!!.toString()!!
 
 this.logUtil!!.putF(message, this, this.commonStrings!!.RUN)
 this.setRunning(false)

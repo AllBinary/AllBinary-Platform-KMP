@@ -39,8 +39,6 @@ companion object {
 : Throwable{
 var message = message
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Throwable(message)
 }

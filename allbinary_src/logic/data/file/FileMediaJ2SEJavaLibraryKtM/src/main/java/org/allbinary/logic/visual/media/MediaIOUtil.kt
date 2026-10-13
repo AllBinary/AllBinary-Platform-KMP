@@ -26,8 +26,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : MediaIOUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MediaIOUtil.instance
 }
@@ -44,8 +42,6 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageIO.getReaderFormatNames()
 }
@@ -54,8 +50,6 @@ companion object {
     open fun getWriterFormatNames()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageIO.getWriterFormatNames()

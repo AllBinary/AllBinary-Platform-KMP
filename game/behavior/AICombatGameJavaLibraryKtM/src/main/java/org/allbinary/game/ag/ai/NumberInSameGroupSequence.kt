@@ -60,16 +60,16 @@ open public class NumberInSameGroupSequence : Object {
         var smallIntegerSingletonFactory: SmallIntegerSingletonFactory =
             SmallIntegerSingletonFactory.getInstance()!!
 
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_ZERO = smallIntegerSingletonFactory!!.getAt(100)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_ONE = smallIntegerSingletonFactory!!.getAt(101)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_TWO = smallIntegerSingletonFactory!!.getAt(102)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_THREE = smallIntegerSingletonFactory!!.getAt(103)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_FOUR = smallIntegerSingletonFactory!!.getAt(104)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_FIVE = smallIntegerSingletonFactory!!.getAt(105)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_SIX = smallIntegerSingletonFactory!!.getAt(106)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_SEVEN = smallIntegerSingletonFactory!!.getAt(107)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_EIGHT = smallIntegerSingletonFactory!!.getAt(108)
-        this.NUMBER_ON_SAME_TEAM_SEQUENCE_NINE = smallIntegerSingletonFactory!!.getAt(109)
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_ZERO = smallIntegerSingletonFactory!!.getAt(100)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_ONE = smallIntegerSingletonFactory!!.getAt(101)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_TWO = smallIntegerSingletonFactory!!.getAt(102)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_THREE = smallIntegerSingletonFactory!!.getAt(103)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_FOUR = smallIntegerSingletonFactory!!.getAt(104)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_FIVE = smallIntegerSingletonFactory!!.getAt(105)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_SIX = smallIntegerSingletonFactory!!.getAt(106)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_SEVEN = smallIntegerSingletonFactory!!.getAt(107)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_EIGHT = smallIntegerSingletonFactory!!.getAt(108)!!
+        this.NUMBER_ON_SAME_TEAM_SEQUENCE_NINE = smallIntegerSingletonFactory!!.getAt(109)!!
         this.NUMBER_ON_SAME_TEAM_SEQUENCE =
             arrayOf(
                 this.NUMBER_ON_SAME_TEAM_SEQUENCE_ZERO,

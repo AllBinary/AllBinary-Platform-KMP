@@ -40,8 +40,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageTypeUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageTypeUtil.SINGLETON
 }
@@ -69,7 +67,7 @@ this.list.add(PNG)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
-mediaFileType= mediaFileType!!.lowercase()
+mediaFileType= mediaFileType!!.lowercase()!!
 
 
 
@@ -86,16 +84,12 @@ mediaFileType= mediaFileType!!.lowercase()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
                                     }
                                 
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

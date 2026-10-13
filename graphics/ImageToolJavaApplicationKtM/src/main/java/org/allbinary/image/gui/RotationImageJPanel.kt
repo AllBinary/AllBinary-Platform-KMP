@@ -229,8 +229,6 @@ var evt = evt
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageProcessorInput
 }
@@ -269,7 +267,7 @@ this.getParent()!!.repaint()
     var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()!!
 file= File(filePath)
 
                                     }

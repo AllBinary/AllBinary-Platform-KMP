@@ -52,7 +52,7 @@ public constructor ()
         {
 
         try {
-            this.document= DomDocumentHelper.create()
+            this.document= DomDocumentHelper.create()!!
 
     var allbinaryNode: Node = this.document.createElement("allbinary")!!
 
@@ -91,8 +91,6 @@ this.document.appendChild(this.baseNode)
         //nullable = true from not(false or (false and true)) = true
 : Node{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.baseNode
 }
@@ -101,8 +99,6 @@ this.document.appendChild(this.baseNode)
     open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.document
@@ -136,8 +132,6 @@ stringBuffer!!.append(this.baseNode!!.getNodeName())
                             
 stringBuffer!!.append("\nDocument: ")
 stringBuffer!!.append(XmlDocumentHelper.toString(this.document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

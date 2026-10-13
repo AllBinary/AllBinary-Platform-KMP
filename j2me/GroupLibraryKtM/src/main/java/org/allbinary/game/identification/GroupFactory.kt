@@ -102,7 +102,7 @@ open public class GroupFactory : Object {
                 name = nameArray[size]!!
             } else {
                 stringMaker!!.delete(0, stringMaker!!.length())
-                name = stringMaker!!.append(TEAM)!!.appendint(size)!!.toString()
+                name = stringMaker!!.append(TEAM)!!.appendint(size)!!.toString()!!
             }
 
             this.list.add(Group(name, (size + 3).toShort()))

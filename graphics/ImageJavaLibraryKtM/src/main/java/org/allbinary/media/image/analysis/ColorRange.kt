@@ -63,8 +63,6 @@ this.maxBlue= 0
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minRed
 }
@@ -81,8 +79,6 @@ this.minRed= minRed
     open fun getMaxRed()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxRed
@@ -101,8 +97,6 @@ this.maxRed= maxRed
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minGreen
 }
@@ -119,8 +113,6 @@ this.minGreen= minGreen
     open fun getMaxGreen()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxGreen
@@ -139,8 +131,6 @@ this.maxGreen= maxGreen
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.minBlue
 }
@@ -157,8 +147,6 @@ this.minBlue= minBlue
     open fun getMaxBlue()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.maxBlue
@@ -183,8 +171,6 @@ var color = color
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 
@@ -192,8 +178,6 @@ var color = color
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -225,8 +209,6 @@ stringBuffer!!.appendint(this.getMinGreen())
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 stringBuffer!!.append("getMaxBlue(): ")
 stringBuffer!!.appendint(this.getMaxBlue())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

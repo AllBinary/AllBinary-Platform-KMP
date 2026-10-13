@@ -67,8 +67,6 @@ this.setState(Player.UNREALIZED)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
@@ -79,8 +77,6 @@ this.setState(Player.UNREALIZED)
 : Control{
 var controlType = controlType
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullControl()
 }
@@ -89,8 +85,6 @@ var controlType = controlType
     open fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return arrayOfNulls(0)
@@ -132,8 +126,6 @@ this.listenersList!!.remove(playerListener)
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.stateP
 }
@@ -152,8 +144,6 @@ this.stateP= state
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
 }
@@ -163,8 +153,6 @@ this.stateP= state
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
 }
@@ -173,8 +161,6 @@ this.stateP= state
     open fun getTimeBase()
         //nullable = true from not(false or (false and true)) = true
 : TimeBase{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timeBase
@@ -225,8 +211,6 @@ this.loopCountP= count
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.loopCountP
 }
@@ -239,8 +223,6 @@ this.loopCountP= count
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var now = now
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0

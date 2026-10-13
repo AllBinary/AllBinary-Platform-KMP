@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageCopyUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageCopyUtil.instance
 }
@@ -73,8 +71,6 @@ private constructor ()
 : Image{
     //var originalImage = originalImage
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImage(originalImage)
 }
@@ -95,8 +91,6 @@ private constructor ()
                         
                                     {
                                     image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
@@ -172,8 +166,6 @@ private constructor ()
     var graphics: Graphics = image.getGraphics()!!
 
 graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, this.anchor)
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image

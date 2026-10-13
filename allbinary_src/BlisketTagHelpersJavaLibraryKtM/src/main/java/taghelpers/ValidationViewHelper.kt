@@ -77,8 +77,6 @@ this.viewInterface= this.getViewObject() as ValidationComponentInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.viewInterface!!.isValid()
 } catch(e: Exception)
@@ -93,8 +91,6 @@ this.viewInterface= this.getViewObject() as ValidationComponentInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -108,8 +104,6 @@ this.viewInterface= this.getViewObject() as ValidationComponentInterface
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.viewInterface!!.validationInfo()
 } catch(e: Exception)
@@ -124,8 +118,6 @@ this.viewInterface= this.getViewObject() as ValidationComponentInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Unknown Validation Error"
 }
@@ -139,8 +131,6 @@ this.viewInterface= this.getViewObject() as ValidationComponentInterface
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.viewInterface!!.toValidationInfoDoc()
 } catch(e: Exception)
@@ -154,8 +144,6 @@ this.viewInterface= this.getViewObject() as ValidationComponentInterface
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -171,8 +159,6 @@ var document = document
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.viewInterface!!.toValidationInfoNode(document)
 } catch(e: Exception)
@@ -186,8 +172,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -59,8 +59,6 @@ this.cssProperty= CssProperty(node)
         //nullable = true from not(false or (false and true)) = true
 : CssProperty{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cssProperty
 }
@@ -72,8 +70,6 @@ this.cssProperty= CssProperty(node)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.cssProperty!!.toXmlNode(document)

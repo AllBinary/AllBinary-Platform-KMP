@@ -134,8 +134,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
@@ -164,8 +162,6 @@ keysAndValues!!.put(AdvertisementAreaData.getInstance()!!.NAME, advertisementAre
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AdvertisementArea(hashMap) as AdvertisementAreaInterface
 
@@ -173,8 +169,6 @@ keysAndValues!!.put(AdvertisementAreaData.getInstance()!!.NAME, advertisementAre
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 
@@ -197,8 +191,6 @@ stringBuffer!!.append(this.getTableName())
 stringBuffer!!.append(this.sqlStrings!!.START)
 stringBuffer!!.append(advertisementAreaData!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(advertisementAreaData!!.DESCRIPTION)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(advertisementAreaData!!.CONSTRAINTS)!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)!!.append(AdvertisementCampaignData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(advertisementAreaData!!.NAME)!!.append(this.sqlStrings!!.END)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -209,8 +201,6 @@ stringBuffer!!.append(advertisementAreaData!!.NAME)!!.append(this.sqlTypeStrings
 : String{
 
     var returnStr: String = super.createTable(this.createTableStatement())!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -229,8 +219,6 @@ super.updateWhere(AdvertisementAreaData.getInstance()!!.NAME, updatedValues!!.ge
     open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()

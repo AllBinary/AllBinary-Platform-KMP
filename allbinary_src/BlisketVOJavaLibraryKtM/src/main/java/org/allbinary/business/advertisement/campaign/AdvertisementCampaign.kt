@@ -50,8 +50,6 @@ this.hashMap= hashMap
         //nullable = true from not(false or (false and true)) = true
 : Any?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -60,8 +58,6 @@ this.hashMap= hashMap
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as String
@@ -88,8 +84,6 @@ this.hashMap!!.put(AdvertisementCampaignData.getInstance()!!.NAME, name)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementsInterface?{
 var advertisementSearchInterface = advertisementSearchInterface
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

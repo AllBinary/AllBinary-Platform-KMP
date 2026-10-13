@@ -64,8 +64,6 @@ imageTypes!!.getVector()!!.add(imageType)
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return imageTypes
 }
@@ -125,8 +123,6 @@ this.getVector()!!.add(InputImageType.getInstance(nextImageTypeString))
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.vector
 }
@@ -156,8 +152,6 @@ var document = document
 
 newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOutputData.TYPE, imageType!!.getName()))
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -191,8 +185,6 @@ stringBuffer!!.append(imageType!!.getName())
                         if(index < size -1)
                         stringBuffer!!.append(", ")
 }
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

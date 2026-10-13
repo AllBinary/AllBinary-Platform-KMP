@@ -47,8 +47,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : ImageScaleUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageScaleUtil.instance
 }
@@ -73,8 +71,6 @@ companion object {
     //var scaleNominatorY = scaleNominatorY
     //var scaleDenominatorY = scaleDenominatorY
     //var cached = cached
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
@@ -101,8 +97,6 @@ companion object {
     var scaleY: Float = scaleNominatorY /scaleDenominatorY
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImage(imageCache, originalImage, scaleX, scaleY, cached)
 }
@@ -118,8 +112,6 @@ var originalImage = originalImage
 var scaleX = scaleX
 var scaleY = scaleY
 var cached = cached
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.createImageInternal(originalImage, scaleX, scaleY)
@@ -177,8 +169,6 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
 
 canvasSurface!!.drawImage(originalPlayNImage, 0, 0, image.getWidth(), image.getHeight(), 0, 0, originalPlayNImage!!.width(), originalPlayNImage!!.height())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image

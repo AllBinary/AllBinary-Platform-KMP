@@ -100,8 +100,6 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -143,8 +141,6 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -165,8 +161,6 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -198,8 +192,6 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -229,8 +221,6 @@ HttpFileUploadUtil.log(fileItem)
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -343,8 +333,7 @@ hashMap!!.put(basicItemData!!.ID, this.itemInterface!!.getId())
                                 )
                         
                                     {
-                                    hashMap!!.put(DownloadItemData.LICENSE_FILE, 
-                                    (licenseObject as FileItem).getName())
+                                    hashMap!!.put(DownloadItemData.LICENSE_FILE, (licenseObject as FileItem).getName())
 
                                     }
                                 
@@ -363,8 +352,7 @@ hashMap!!.put(basicItemData!!.ID, this.itemInterface!!.getId())
                                 )
                         
                                     {
-                                    hashMap!!.put(DownloadItemData.FILE, 
-                                    (fileObject as FileItem).getName())
+                                    hashMap!!.put(DownloadItemData.FILE, (fileObject as FileItem).getName())
 
                                     }
                                 
@@ -392,15 +380,11 @@ this.downloadableItem= DownloadableItem(hashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -416,8 +400,6 @@ this.downloadableItem= DownloadableItem(hashMap)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
@@ -429,8 +411,6 @@ this.downloadableItem= DownloadableItem(hashMap)
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -440,8 +420,6 @@ this.downloadableItem= DownloadableItem(hashMap)
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -465,8 +443,6 @@ var document = document
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -491,8 +467,6 @@ var document = document
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ITEM_NOT_FOUND
@@ -656,8 +630,6 @@ stringBuffer!!.append("<br/>")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -671,8 +643,6 @@ stringBuffer!!.append("<br/>")
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Getting Validation Info"
@@ -721,8 +691,6 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -747,13 +715,11 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 stringBuffer!!.append("File Size To Large: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
-stringBuffer!!.appendint(fileData!!.MAXDOWNLOADABLEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MAXDOWNLOADABLEFILESIZE.toInt())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -775,21 +741,17 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 stringBuffer!!.append("File Size To Small: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
-stringBuffer!!.appendint(fileData!!.MINDOWNLOADABLEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MINDOWNLOADABLEFILESIZE.toInt())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
                         }
                             
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -821,9 +783,9 @@ var size = size
                         
                                     {
                                     stringBuffer!!.append("File Name must be more than ")
-stringBuffer!!.appendint(fileData!!.MINLEN)
+stringBuffer!!.appendint(fileData!!.MINLEN.toInt())
 stringBuffer!!.append(" and less than ")
-stringBuffer!!.appendint(fileData!!.MAXLEN)
+stringBuffer!!.appendint(fileData!!.MAXLEN.toInt())
 stringBuffer!!.append(" characters in length: ")
 stringBuffer!!.append(fileName)
 stringBuffer!!.append("<br/>")
@@ -839,9 +801,9 @@ stringBuffer!!.append("<br/>")
                                 
                         else {
                             stringBuffer!!.append("File Is Not The Right Size. ")
-stringBuffer!!.appendint(fileData!!.MINDOWNLOADABLEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MINDOWNLOADABLEFILESIZE.toInt())
 stringBuffer!!.append("< >")
-stringBuffer!!.appendint(fileData!!.MAXDOWNLOADABLEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MAXDOWNLOADABLEFILESIZE.toInt())
 stringBuffer!!.append("<br/>")
 
                         }

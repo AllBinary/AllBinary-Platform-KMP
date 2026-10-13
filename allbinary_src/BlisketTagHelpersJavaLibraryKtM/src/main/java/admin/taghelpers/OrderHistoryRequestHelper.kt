@@ -66,9 +66,9 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(OrderData.ID)
-this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
-this.status= this.request.getParameter(OrderHistoryData.STATUS)
+this.id= this.request.getParameter(OrderData.ID)!!
+this.groupId= this.request.getParameter(ShippingMethodData.GROUP)!!
+this.status= this.request.getParameter(OrderHistoryData.STATUS)!!
 }
 
 
@@ -113,8 +113,6 @@ OrderHistoryEntityFactory.getInstance()!!.setStatus(this.id, this.status)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -131,8 +129,6 @@ OrderHistoryEntityFactory.getInstance()!!.setStatus(this.id, this.status)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -172,8 +168,6 @@ OrderStatusEmail(this.abeClientInformation, orderHistory).
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -190,8 +184,6 @@ OrderStatusEmail(this.abeClientInformation, orderHistory).
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

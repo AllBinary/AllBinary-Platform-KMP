@@ -39,7 +39,7 @@ open public class BasicWeaponPartCircularPool : Object {
         // nullable = true from not(false or (false and false)) = true
     {
         // var basicWeaponPartFactoryInterface = basicWeaponPartFactoryInterface
-        this.basicWeaponPart = basicWeaponPartFactoryInterface!!.getInstance()
+        this.basicWeaponPart = basicWeaponPartFactoryInterface!!.getInstance()!!
     }
 
     @Throws(Exception::class)

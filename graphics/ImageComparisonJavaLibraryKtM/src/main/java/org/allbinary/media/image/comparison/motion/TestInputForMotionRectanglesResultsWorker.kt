@@ -69,8 +69,6 @@ this.motionRectanglesVector= BasicArrayListD()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.motionRectanglesVector
 }
@@ -97,8 +95,6 @@ this.onMotionRectanglesImageComparisonResultsEvent(allBinaryEventObject as Motio
     open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.running

@@ -51,8 +51,6 @@ var pageContext = pageContext
                         if(InitInfoEntity().
                             dropTable())
                         
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Table Dropped Successfully"
                              else 
@@ -74,8 +72,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 }
@@ -89,8 +85,6 @@ var pageContext = pageContext
 
         try {
             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InitInfoEntity().
                             createTable()
@@ -108,8 +102,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -136,8 +128,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
@@ -154,8 +144,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -185,8 +173,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -203,8 +189,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
@@ -234,8 +218,6 @@ var pageContext = pageContext
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
@@ -252,8 +234,6 @@ var pageContext = pageContext
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error

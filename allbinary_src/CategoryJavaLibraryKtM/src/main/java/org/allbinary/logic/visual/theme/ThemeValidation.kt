@@ -98,8 +98,8 @@ this.transformInfoInterface= transformInfoInterface
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
 
-this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemePath)
-this.themeName= pathData!!.getNameFromPath(categoryThemePath)
+this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemePath)!!
+this.themeName= pathData!!.getNameFromPath(categoryThemePath)!!
 this.styleValidationInterface= cssStyleValidation
 this.init()
 }
@@ -119,8 +119,8 @@ this.transformInfoInterface= transformInfoInterface
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
 
-this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemeAbPath!!.toString())
-this.themeName= pathData!!.getNameFromPath(categoryThemeAbPath!!.toString())
+this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemeAbPath!!.toString())!!
+this.themeName= pathData!!.getNameFromPath(categoryThemeAbPath!!.toString())!!
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -147,23 +147,23 @@ public constructor (storeThemeCategoryInterface: StoreThemeCategoryInterface, no
         {
 var storeThemeCategoryInterface = storeThemeCategoryInterface
 var node = node
-this.transformInfoInterface= storeThemeCategoryInterface!!.getTransformInfoInterface()
-this.categoryAbPath= storeThemeCategoryInterface!!.getPath()
+this.transformInfoInterface= storeThemeCategoryInterface!!.getTransformInfoInterface()!!
+this.categoryAbPath= storeThemeCategoryInterface!!.getPath()!!
 
     var themeNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.NAME, node.getChildNodes())!!
 
 
     var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, themeNameNode!!.getChildNodes())!!
 
-this.themeName= DomNodeHelper.getTextNodeValue(valueNode)
+this.themeName= DomNodeHelper.getTextNodeValue(valueNode)!!
 
     var previewImageNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.PREVIEW_IMAGE_NAME, node.getChildNodes())!!
 
 
     var previewImageNameValueNode: Node = DomSearchHelper.getNode(DomData.VALUE, previewImageNameNode!!.getChildNodes())!!
 
-this.themePreviewImageName= DomNodeHelper.getTextNodeValue(previewImageNameValueNode)
-this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
+this.themePreviewImageName= DomNodeHelper.getTextNodeValue(previewImageNameValueNode)!!
+this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()!!
 this.init(storeThemeCategoryInterface)
 }
 
@@ -193,7 +193,7 @@ this.init(rootStoreThemeCategoryInterface)
 {
 var storeThemeCategoryInterface = storeThemeCategoryInterface
 this.fileAbPath= AbPath(storeThemeCategoryInterface!!.getRootFilePath()!!.toString() +this.categoryAbPath!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
-this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
+this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()!!
 }
 
 
@@ -202,8 +202,6 @@ this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
     open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.transformInfoInterface
@@ -214,8 +212,6 @@ this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.themeName
 }
@@ -224,8 +220,6 @@ this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
     open fun getPreviewImageName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.themePreviewImageName
@@ -236,8 +230,6 @@ this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.webAppAbPath!!.toString() +this.categoryAbPath!!.toString()
 }
@@ -246,8 +238,6 @@ this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
     open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryAbPath!!.toString()
@@ -279,8 +269,6 @@ this.styleValidationInterface= CssStyleValidation(document)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.styleValidationInterface as CssStyleValidation
@@ -341,8 +329,6 @@ this.styleValidationInterface= CssStyleValidation(document)
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
@@ -356,8 +342,6 @@ this.styleValidationInterface= CssStyleValidation(document)
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
@@ -376,8 +360,6 @@ this.styleValidationInterface= CssStyleValidation(document)
 
 stringBuffer!!.append("Theme Validation Error")
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
@@ -392,8 +374,6 @@ stringBuffer!!.append("Theme Validation Error")
                                     }
                                 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Validating Form"
 }
@@ -405,8 +385,6 @@ stringBuffer!!.append("Theme Validation Error")
         //nullable = true from not(false or (false and true)) = true
 : Document?{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -417,8 +395,6 @@ stringBuffer!!.append("Theme Validation Error")
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -427,8 +403,6 @@ var document = document
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getName() as Object
@@ -445,8 +419,6 @@ vector.add(this.getName())
 vector.add(this.getPath())
 vector.add(this.getPreviewImageName())
 vector.add(this.getPreviewImagePath())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
@@ -467,8 +439,6 @@ hashMap!!.put(themeData!!.PATH, this.getPath())
 hashMap!!.put(themeData!!.PREVIEW_IMAGE_NAME, this.getPreviewImageName())
 hashMap!!.put(themeData!!.PREVIEW_IMAGE_PATH, this.getPreviewImagePath())
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
@@ -487,8 +457,6 @@ var document = document
     var domNodeInterface: DomNodeInterface = this.getCssStyleValidation() as DomNodeInterface
 
 node.appendChild(domNodeInterface!!.toXmlNode(document))
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node

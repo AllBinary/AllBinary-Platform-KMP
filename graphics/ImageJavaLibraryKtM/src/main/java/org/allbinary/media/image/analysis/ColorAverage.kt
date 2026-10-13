@@ -64,8 +64,6 @@ stringBuffer!!.append("getAvgGreen(): ")
 stringBuffer!!.appendfloat(this.getAvgGreen())
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
@@ -74,8 +72,6 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
     open fun getAvgRed()
         //nullable = true from not(false or (false and true)) = true
 : Float{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.avgRed
@@ -94,8 +90,6 @@ this.avgRed= avgRed
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.avgGreen
 }
@@ -112,8 +106,6 @@ this.avgGreen= avgGreen
     open fun getAvgBlue()
         //nullable = true from not(false or (false and true)) = true
 : Float{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.avgBlue

@@ -52,8 +52,6 @@ this.frame= frame
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frame
 }
@@ -62,8 +60,6 @@ this.frame= frame
     open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.frame
@@ -81,8 +77,6 @@ this.frame= frame
     open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
 : ImageComparisonResult{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.imageComparisonResult
@@ -106,8 +100,6 @@ this.imageComparisonResult= imageComparisonResult
 stringBuffer!!.append(this::class.toString()!!)
 stringBuffer!!.append(" Frame: ")
 stringBuffer!!.appendlong(this.getFrame())
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

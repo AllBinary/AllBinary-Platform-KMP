@@ -56,8 +56,6 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getValue() as Object
 }
@@ -66,8 +64,6 @@ public constructor ()
     open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.category
@@ -167,8 +163,6 @@ var categoryHierarchyInterface = categoryHierarchyInterface
 : AbPath{
 var categoryHierarchyInterface = categoryHierarchyInterface
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath.createAbPath()
 }
@@ -178,8 +172,6 @@ var categoryHierarchyInterface = categoryHierarchyInterface
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.fileName
 }
@@ -188,8 +180,6 @@ var categoryHierarchyInterface = categoryHierarchyInterface
     open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -204,8 +194,6 @@ var categoryHierarchyInterface = categoryHierarchyInterface
 
 categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryHashMap
 }
@@ -219,8 +207,6 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
 categoryVector!!.add(this.category)
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return categoryVector
 }
@@ -231,8 +217,6 @@ categoryVector!!.add(this.category)
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
@@ -246,8 +230,6 @@ categoryVector!!.add(this.category)
 : Node?{
 var document = document
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
@@ -258,8 +240,6 @@ var document = document
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String?{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

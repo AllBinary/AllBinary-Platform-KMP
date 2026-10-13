@@ -57,7 +57,7 @@ open public class SecondaryThreadPool : ThreadPool {
         this.logUtil!!.putF(
             StringMaker()
                 .append(StringUtil.getInstance()!!.toString(task))!!
-                .appendlong(System.currentTimeMillis())!!
+                .appendlong(System.currentTimeMillis().toLong())!!
                 .toString(),
             this,
             this.threadPoolStrings!!.ADD_TASK,
@@ -73,7 +73,7 @@ open public class SecondaryThreadPool : ThreadPool {
             StringMaker()
                 .append(this.threadPoolStrings!!.START_TASK)!!
                 .append(StringUtil.getInstance()!!.toString(task))!!
-                .appendlong(System.currentTimeMillis())!!
+                .appendlong(System.currentTimeMillis().toLong())!!
                 .toString(),
             this,
             this.commonStrings!!.RUN,
@@ -88,7 +88,7 @@ open public class SecondaryThreadPool : ThreadPool {
             StringMaker()
                 .append(this.threadPoolStrings!!.COMPLETE_TASK)!!
                 .append(StringUtil.getInstance()!!.toString(task))!!
-                .appendlong(System.currentTimeMillis())!!
+                .appendlong(System.currentTimeMillis().toLong())!!
                 .toString(),
             this,
             this.commonStrings!!.RUN,

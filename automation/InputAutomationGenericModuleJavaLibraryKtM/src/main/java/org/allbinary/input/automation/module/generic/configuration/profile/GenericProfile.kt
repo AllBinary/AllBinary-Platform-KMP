@@ -99,8 +99,6 @@ this.vector= BasicArrayListD()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.vector
 }
@@ -151,8 +149,6 @@ node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
 }
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
@@ -161,8 +157,6 @@ node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.name
@@ -180,8 +174,6 @@ this.name= name
     open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActions{
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.genericProfileActions

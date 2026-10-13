@@ -70,7 +70,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
         this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
         this.logUtil!!.putF(
             this.stringBuilder!!
-                .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                 .append(this.APPEND_)!!
                 .append(layerInterface!!.getName())!!
                 .toString(),
@@ -87,7 +87,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
         this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
         this.logUtil!!.putF(
             this.stringBuilder!!
-                .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                 .append(this.APPEND_)!!
                 .append(layerInterface!!.getName())!!
                 .append(this._AT_)!!
@@ -108,7 +108,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
             this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
             this.logUtil!!.putF(
                 this.stringBuilder!!
-                    .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                    .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                     .append(this.ATTEMPT_REMOVE_)!!
                     .append(StringUtil.getInstance()!!.toString(layerInterface))!!
                     .toString(),
@@ -119,7 +119,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
             this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
             this.logUtil!!.putF(
                 this.stringBuilder!!
-                    .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                    .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                     .append(this.ATTEMPT_REMOVE_)!!
                     .append(layerInterface!!.getName())!!
                     .toString(),
@@ -145,7 +145,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
             this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
             this.logUtil!!.putF(
                 this.stringBuilder!!
-                    .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                    .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                     .append(this.REMOVE_)!!
                     .append(StringUtil.getInstance()!!.toString(layerInterface))!!
                     .toString(),
@@ -159,7 +159,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
                 this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
                 this.logUtil!!.putF(
                     this.stringBuilder!!
-                        .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                        .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                         .append(this.REMOVE_)!!
                         .append(layerInterface!!.getName())!!
                         .toString(),
@@ -171,7 +171,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
             this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
             this.logUtil!!.putF(
                 this.stringBuilder!!
-                    .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                    .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                     .append(this.DID_NOT_REMOVE)!!
                     .append(layerInterface!!.getName())!!
                     .toString(),
@@ -214,7 +214,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
         this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
         this.logUtil!!.putF(
             this.stringBuilder!!
-                .appendint(TsUtil.getInstance()!!.hashCode(this))!!
+                .appendint(TsUtil.getInstance()!!.hashCode(this).toInt())!!
                 .append(this.CLEAR)!!
                 .toString(),
             this,

@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : J2SEMath{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return J2SEMath.instance
 }
@@ -60,8 +58,6 @@ companion object {
 : Int{
 var value = value
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Math.round(value)
 }
@@ -71,8 +67,6 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 : Float{
 var value = value
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return if((value < 0)) {
@@ -90,8 +84,6 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 : Double{
 var value = value
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return if((value < 0)) {

@@ -42,8 +42,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESImageExclusionUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return OpenGLESImageExclusionUtil.instance
 }
@@ -76,8 +74,6 @@ private constructor ()
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -118,8 +114,6 @@ name= this.list.get(index) as String
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 
@@ -127,8 +121,6 @@ name= this.list.get(index) as String
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 

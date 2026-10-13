@@ -46,8 +46,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoObjectFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoObjectFactory.instance
 }
@@ -135,8 +133,6 @@ stringBuffer!!.append(transformInfoInterface!!.getObjectFile())
 
                                     }
                                 
-
-
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType

@@ -43,8 +43,6 @@ companion object {
 : ValidationInterface{
 var node = node
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FontFamilyValidation(node) as ValidationInterface
 }

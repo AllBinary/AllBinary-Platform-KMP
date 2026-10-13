@@ -126,7 +126,7 @@ open public class HighScoreTextBox : CustomTextBox {
         // nullable = true from not(false or (false and true)) = true
     {
         this.virtualKeyboardEventHandler!!.open()
-        this.paintable = NullPaintable.getInstance()
+        this.paintable = NullPaintable.getInstance()!!
         super.open()
     }
 
@@ -145,7 +145,7 @@ open public class HighScoreTextBox : CustomTextBox {
             this.highScoreUtil!!.saveHighScore()
         } else {}
 
-        this.paintable = NullPaintable.getInstance()
+        this.paintable = NullPaintable.getInstance()!!
         this.repaintBehavior!!.onChangeRepaint(this)
     }
 

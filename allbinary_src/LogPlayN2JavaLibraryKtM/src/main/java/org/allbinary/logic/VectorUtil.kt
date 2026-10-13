@@ -41,8 +41,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : VectorUtil{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return VectorUtil.instance
 }
@@ -63,8 +61,6 @@ companion object {
     var vector: Vector<Any> = anyType as Vector<Any>
 
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector.size
 }
@@ -77,8 +73,6 @@ companion object {
     //var index = index
 
     var vector: Vector<Any> = anyType as Vector<Any>
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -45,8 +45,6 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoObjectConfigAndManipulatorFactory{
 
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoObjectConfigAndManipulatorFactory.instance
 }
@@ -72,8 +70,6 @@ private constructor (){
             
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(objectConfigFileAbPath)!!
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -118,8 +114,6 @@ var transformInfoInterface = transformInfoInterface
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GenericStoreTransformInfoObjectConfig(abeClientInformation, transformInfoInterface) as TransformInfoObjectConfigInterface
 
@@ -127,8 +121,6 @@ var transformInfoInterface = transformInfoInterface
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoObjectConfig(transformInfoInterface) as TransformInfoObjectConfigInterface
 
@@ -189,8 +181,6 @@ var transformInfoInterface = transformInfoInterface
                         
                                     {
                                     
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GenericStoreTransformInfoObjectConfig(abeClientInformation, transformInfoInterface, document) as TransformInfoObjectConfigInterface
 
@@ -198,8 +188,6 @@ var transformInfoInterface = transformInfoInterface
                                 
                         else {
                             
-
-
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoObjectConfig(transformInfoInterface, document) as TransformInfoObjectConfigInterface
 
