@@ -25,7 +25,6 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.logic.ABSystemWrapper
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class TitleAnimation : SpecialAnimation {
@@ -61,8 +60,6 @@ open public class TitleAnimation : SpecialAnimation {
             )
         }
     }
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 
