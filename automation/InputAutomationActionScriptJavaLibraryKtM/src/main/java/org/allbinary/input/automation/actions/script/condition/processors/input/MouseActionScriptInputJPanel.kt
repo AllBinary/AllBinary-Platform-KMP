@@ -273,6 +273,7 @@ this.okJButton!!.setText("OK")
 this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -292,6 +293,7 @@ this.button2JCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,
 this.button2JCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.button2JCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -319,6 +321,7 @@ setMinimumSize(java.awt.Dimension(100, 0))
 this.mouseActionJButton!!.setText("Edit")
 this.mouseActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

@@ -108,6 +108,7 @@ numberStringArray[index]= index.toString()!!
 object: Thread()
                                 {
                                 
+                                
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -234,6 +235,7 @@ this.aboveJButton= javax.swing.JButton()
 this.aboveJButton!!.setText("Process")
 this.aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

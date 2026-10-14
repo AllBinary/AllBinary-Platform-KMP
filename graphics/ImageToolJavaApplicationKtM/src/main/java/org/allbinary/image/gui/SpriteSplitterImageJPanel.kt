@@ -81,6 +81,7 @@ this.imageProcessorInput= imageProcessorInput
 object: Thread()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -135,6 +136,7 @@ this.widthReductionTextField= javax.swing.JTextField()
 this.jLabel5= javax.swing.JLabel()
 this.jPanel1= object: javax.swing.JPanel()
                                 {
+                                
                                 
     open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
@@ -209,6 +211,7 @@ this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
 this.writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -221,6 +224,7 @@ writeOverOriginalJCheckBoxActionPerformed(evt)
 this.widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -245,6 +249,7 @@ this.generateJButton!!.setText("Generate")
 this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -258,6 +263,7 @@ this.jLabel1!!.setText("Row Total:")
 this.totalFramesJComboBox!!.setSelectedIndex(1)
 this.totalFramesJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -273,6 +279,7 @@ this.totalAnimationsJComboBox!!.setSelectedIndex(3)
 this.totalAnimationsJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -285,6 +292,7 @@ totalAnimationsJComboBoxActionPerformed(evt)
 this.jLabel3!!.setText("Type:")
 this.spriteTypeJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -305,6 +313,7 @@ this.jLabel7!!.setText("More Width:")
 this.increaseWidthTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.increaseWidthTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

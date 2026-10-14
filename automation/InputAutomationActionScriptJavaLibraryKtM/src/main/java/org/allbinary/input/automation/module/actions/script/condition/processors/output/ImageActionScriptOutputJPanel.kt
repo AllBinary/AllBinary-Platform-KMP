@@ -210,6 +210,7 @@ this.okJButton!!.setText("OK")
 this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -228,6 +229,7 @@ this.displayJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.displayJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -239,6 +241,7 @@ displayJCheckBoxActionPerformed(evt)
                             )
 this.itemTypesJList!!.setModel(object: javax.swing.AbstractListModel()
                                 {
+                                
                                 
     var strings: Array<String?> = arrayOf("Item 1","Item 2","Item 3","Item 4","Item 5")
 
@@ -272,6 +275,7 @@ setMinimumSize(java.awt.Dimension(100, 0))
 this.capturedImageActionJButton!!.setText("Edit")
 this.capturedImageActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

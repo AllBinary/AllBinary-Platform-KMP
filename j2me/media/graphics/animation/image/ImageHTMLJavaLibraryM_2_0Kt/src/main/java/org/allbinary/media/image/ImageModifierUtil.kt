@@ -238,6 +238,7 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
     var callback: Callback = object: Callback()
                                 {
                                 
+                                
     override fun onSuccess(resource: Any)
         //nullable = true from not(false or (false and false)) = true
 {

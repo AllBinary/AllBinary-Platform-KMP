@@ -103,6 +103,7 @@ WebappClassLoaderInfo.setLoader(appUrlGlobals!!::class.java.classLoader)
 java.awt.EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -276,6 +277,7 @@ setResizable(false)
 addWindowFocusListener(object: java.awt.event.WindowFocusListener()
                                 {
                                 
+                                
     open override fun windowGainedFocus(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -294,6 +296,7 @@ formWindowLostFocus(evt)
                             )
 addFocusListener(object: java.awt.event.FocusAdapter()
                                 {
+                                
                                 
     open override fun focusGained(evt: java.awt.event.FocusEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -315,6 +318,7 @@ this.gameRobotJTabbedPane!!.setMinimumSize(java.awt.Dimension(320, 200))
 this.inputAutomationModuleJList!!.setMinimumSize(java.awt.Dimension(200, 0))
 this.inputAutomationModuleJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
+                                
                                 
     open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -346,6 +350,7 @@ this.startJMenuItem!!.setText(this.commonStrings!!.START)
 this.startJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -359,6 +364,7 @@ this.processingJMenu!!.add(this.startJMenuItem)
 this.stopJMenuItem!!.setText("Stop")
 this.stopJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -375,6 +381,7 @@ this.optionsJMenu!!.setText("Options")
 this.optionsJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -389,6 +396,7 @@ this.stopOnFocusJCheckBoxMenuItem!!.setEnabled(false)
 this.stopOnFocusJCheckBoxMenuItem!!.setLabel("Stop Module On Focus")
 this.stopOnFocusJCheckBoxMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -406,6 +414,7 @@ this.helpJMenuItem!!.setText("Help")
 this.helpJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -419,6 +428,7 @@ this.toolsJMenu!!.add(this.helpJMenuItem)
 this.updatesJMenuItem!!.setText("Updates")
 this.updatesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -434,6 +444,7 @@ this.subscriptionJMenuItem!!.setText("Subscription")
 this.subscriptionJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -448,6 +459,7 @@ this.modulesJMenuItem!!.setText("Module Manager")
 this.modulesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -461,6 +473,7 @@ this.toolsJMenu!!.add(this.modulesJMenuItem)
 this.aboutJMenuItem!!.setText("About")
 this.aboutJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

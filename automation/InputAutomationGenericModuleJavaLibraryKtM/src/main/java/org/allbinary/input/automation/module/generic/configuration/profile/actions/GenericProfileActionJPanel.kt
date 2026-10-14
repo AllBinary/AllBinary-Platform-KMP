@@ -126,6 +126,7 @@ this.newColorAtJButton!!.setText("Color Range At")
 this.newColorAtJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -139,6 +140,7 @@ this.newTimeIntervalJButton!!.setText("Time Interval")
 this.newTimeIntervalJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -151,6 +153,7 @@ newTimeIntervalJButtonActionPerformed(evt)
 this.newAlwaysJButton!!.setText("Always On/Off")
 this.newAlwaysJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

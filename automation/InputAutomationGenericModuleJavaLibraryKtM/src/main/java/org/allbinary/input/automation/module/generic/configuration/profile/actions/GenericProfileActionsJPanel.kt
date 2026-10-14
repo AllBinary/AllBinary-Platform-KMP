@@ -66,6 +66,7 @@ this.okNewProfileActionJButton!!.setText("Ok")
 this.okNewProfileActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -85,6 +86,7 @@ this.genericProfileActionsJPanel!!.setPreferredSize(java.awt.Dimension(10000, 10
 this.genericProfileActionsJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
+                                
     open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -99,6 +101,7 @@ this.newActionJButton!!.setText("New")
 this.newActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -112,6 +115,7 @@ this.deleteActionJButton!!.setText("Delete")
 this.deleteActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -124,6 +128,7 @@ deleteActionJButtonActionPerformed(evt)
 this.saveJButton!!.setText("Save")
 this.saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

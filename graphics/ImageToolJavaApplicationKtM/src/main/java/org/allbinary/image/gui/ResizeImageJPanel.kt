@@ -105,6 +105,7 @@ this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel(numberStringArray))
 object: Thread()
                                 {
                                 
+                                
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -214,6 +215,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 object: Thread()
                                 {
                                 
+                                
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -267,6 +269,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 object: Thread()
                                 {
                                 
+                                
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -319,6 +322,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 {
 object: Thread()
                                 {
+                                
                                 
     override fun run()
         //nullable = true from not(false or (false and true)) = true
@@ -404,6 +408,7 @@ this.aboveJButton!!.setText("Process")
 this.aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -418,6 +423,7 @@ this.jLabel3!!.setText("Height:")
 this.updateJButton!!.setText("Update")
 this.updateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -434,6 +440,7 @@ this.adjustFor16AboveJButton!!.setText("Adjust for 16 Above")
 this.adjustFor16AboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -446,6 +453,7 @@ adjustFor16AboveJButtonActionPerformed(evt)
 this.adjustFor16BelowJButton!!.setText("Adjust for 16 Below")
 this.adjustFor16BelowJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

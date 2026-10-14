@@ -41,6 +41,7 @@ var args = args
 java.awt.EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -98,6 +99,7 @@ this.jFileChooser1= javax.swing.JFileChooser()
 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
 this.jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

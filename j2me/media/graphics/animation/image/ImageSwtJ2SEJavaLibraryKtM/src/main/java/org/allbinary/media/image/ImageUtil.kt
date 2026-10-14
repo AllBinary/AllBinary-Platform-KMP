@@ -353,6 +353,7 @@ gc.dispose()
 imageCanvas!!.addPaintListener(object: PaintListener()
                                 {
                                 
+                                
     open override fun paintControl(event: PaintEvent)
         //nullable = true from not(false or (false and false)) = true
 {

@@ -61,6 +61,7 @@ lineJButton!!.setText(LinesGraphicItem.getStaticName())
 lineJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mouseClicked(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -75,6 +76,7 @@ this.rectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.rectJButton!!.setText("Rect")
 this.rectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mouseClicked(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -91,6 +93,7 @@ this.arcJButton!!.setText("Arc")
 this.arcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -105,6 +108,7 @@ this.stringJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.stringJButton!!.setText("String")
 this.stringJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -121,6 +125,7 @@ this.charJButton!!.setText("Char")
 this.charJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -135,6 +140,7 @@ this.roundRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.roundRectJButton!!.setText("Round Rect")
 this.roundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -151,6 +157,7 @@ this.imageJButton!!.setText("Image")
 this.imageJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -165,6 +172,7 @@ this.fillArcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.fillArcJButton!!.setText("Fill Arc")
 this.fillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -181,6 +189,7 @@ this.fillRectJButton!!.setText("Fill Rect")
 this.fillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -195,6 +204,7 @@ this.fillRoundRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.fillRoundRectJButton!!.setText("Fill Rnd Rect")
 this.fillRoundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -211,6 +221,7 @@ this.dottedLineJButton!!.setText("Dot Line")
 this.dottedLineJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -225,6 +236,7 @@ this.dottedRectButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedRectButton!!.setText("Dot Rect")
 this.dottedRectButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -241,6 +253,7 @@ this.dottedArcJButton!!.setText("Dot Arc")
 this.dottedArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -255,6 +268,7 @@ this.dottedFillRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedFillRectJButton!!.setText("Dot Fill Rect")
 this.dottedFillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -271,6 +285,7 @@ this.dottedFillArcJButton!!.setText("Dot Fill Arc")
 this.dottedFillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -285,6 +300,7 @@ this.dottedFillRountRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedFillRountRectJButton!!.setText("Dot Fill Rnd Rect")
 this.dottedFillRountRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true

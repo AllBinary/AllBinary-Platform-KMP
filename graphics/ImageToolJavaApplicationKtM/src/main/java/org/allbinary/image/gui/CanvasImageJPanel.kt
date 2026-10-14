@@ -82,6 +82,7 @@ this.imageProcessorInput= imageProcessorInput
 object: Thread()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -142,6 +143,7 @@ this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
 this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
+                                
     open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -180,6 +182,7 @@ this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
 this.writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -199,6 +202,7 @@ this.generateJButton!!.setText("Generate")
 this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -214,6 +218,7 @@ this.widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -228,6 +233,7 @@ this.heightReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.widthReductionTextField1!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.widthReductionTextField1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

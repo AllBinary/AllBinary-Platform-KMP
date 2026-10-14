@@ -48,6 +48,7 @@ var args = args
 java.awt.EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -56,6 +57,7 @@ java.awt.EventQueue.invokeLater(object: ARunnable()
 
 dialog.addWindowListener(object: java.awt.event.WindowAdapter()
                                 {
+                                
                                 
     open override fun windowClosing(e: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -109,6 +111,7 @@ this.jLabel2!!.setText("Total Angular Rotation:")
 this.jButton1!!.setText("OK")
 this.jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

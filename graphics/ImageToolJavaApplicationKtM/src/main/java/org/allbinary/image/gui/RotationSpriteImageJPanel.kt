@@ -77,6 +77,7 @@ this.imageProcessorInput= imageProcessorInput
 object: Thread()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -156,6 +157,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
+                                
     open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -199,6 +201,7 @@ this.generateJButton!!.setText("Generate")
 this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -211,6 +214,7 @@ generateJButtonActionPerformed(evt)
 this.totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("360","90")))
 this.totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

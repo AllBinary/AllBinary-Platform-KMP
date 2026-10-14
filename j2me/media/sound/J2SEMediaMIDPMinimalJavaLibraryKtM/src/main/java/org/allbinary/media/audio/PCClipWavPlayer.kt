@@ -98,6 +98,7 @@ this.clip= clip
 MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
                                 
+                                
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -144,6 +145,7 @@ this.clip.close()
 {
 MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
+                                
                                 
     override fun run()
         //nullable = true from not(false or (false and true)) = true
@@ -200,6 +202,7 @@ clip.open(audioInputStream)
 {
 MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
+                                
                                 
     override fun run()
         //nullable = true from not(false or (false and true)) = true

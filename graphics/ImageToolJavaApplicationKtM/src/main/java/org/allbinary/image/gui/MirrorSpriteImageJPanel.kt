@@ -74,6 +74,7 @@ this.imageProcessorInput= imageProcessorInput
 object: Thread()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -147,6 +148,7 @@ jLayeredPane1= javax.swing.JLayeredPane()
 this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
+                                
     open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -189,6 +191,7 @@ this.imageHeightIsFrameSizeJCheckBox!!.setEnabled(false)
 this.imageHeightIsFrameSizeJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -207,6 +210,7 @@ this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
 this.generateJButton!!.setText("Generate")
 this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

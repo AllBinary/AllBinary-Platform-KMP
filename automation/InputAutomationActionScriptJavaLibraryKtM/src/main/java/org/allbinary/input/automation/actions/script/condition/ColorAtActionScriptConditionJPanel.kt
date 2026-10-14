@@ -320,6 +320,7 @@ this.okJButton!!.setText("OK")
 this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -339,6 +340,7 @@ setPreferredSize(java.awt.Dimension(100, 0))
 this.colorAtActionJButton!!.setText("Edit")
 this.colorAtActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

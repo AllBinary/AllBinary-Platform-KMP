@@ -86,6 +86,7 @@ this.okNewProfileJButton!!.setText("Ok")
 this.okNewProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -112,6 +113,7 @@ this.genericProfilesJPanel!!.setPreferredSize(java.awt.Dimension(0, 0))
 this.genericProfilesJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
+                                
     open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -127,6 +129,7 @@ this.newProfileJButton!!.setToolTipText("Creates a new profile")
 this.newProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -140,6 +143,7 @@ this.deleteProfileJButton!!.setText("Delete")
 this.deleteProfileJButton!!.setToolTipText("Deletes the selected profile")
 this.deleteProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -157,6 +161,7 @@ this.screenCaptureJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmpty
 this.screenCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.screenCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -176,6 +181,7 @@ this.savedCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.savedCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -192,6 +198,7 @@ this.captureMotionAnalysisJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.captureMotionAnalysisJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -207,6 +214,7 @@ this.captureComparisonJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmpt
 this.captureComparisonJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.captureComparisonJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

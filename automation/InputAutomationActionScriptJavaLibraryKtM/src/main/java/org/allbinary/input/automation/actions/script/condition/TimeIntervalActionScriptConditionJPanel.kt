@@ -114,6 +114,7 @@ this.okJButton!!.setText("OK")
 this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -134,6 +135,7 @@ setMinimumSize(java.awt.Dimension(100, 0))
 this.timeIntervalActionJButton!!.setText("Edit")
 this.timeIntervalActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

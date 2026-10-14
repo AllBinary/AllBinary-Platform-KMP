@@ -123,6 +123,7 @@ this.okJButton!!.setText("OK")
 this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -146,6 +147,7 @@ this.fileJMenu!!.setText("File")
 this.fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -158,6 +160,7 @@ fileJMenuActionPerformed(evt)
 this.openImageJMenuItem!!.setText("Open")
 this.openImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -174,6 +177,7 @@ this.processingJMenu!!.setText("Processing")
 this.processingJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -186,6 +190,7 @@ processingJMenuActionPerformed(evt)
 this.analyzeJMenuItem!!.setText("Image Analyze")
 this.analyzeJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -201,6 +206,7 @@ this.generateMirrorSpriteMenuItem!!.setText("Mirror Sprite Generator")
 this.generateMirrorSpriteMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -214,6 +220,7 @@ this.processingJMenu!!.add(this.generateMirrorSpriteMenuItem)
 this.generateRotationSpriteJMenuItem!!.setText("Rotation Sprite Generator")
 this.generateRotationSpriteJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -229,6 +236,7 @@ this.generateSpriteSplitterMenuItem!!.setText("Sprite Splitter Generator")
 this.generateSpriteSplitterMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -242,6 +250,7 @@ this.processingJMenu!!.add(this.generateSpriteSplitterMenuItem)
 this.generateRotationMenuItem!!.setText("Rotate Image Generator")
 this.generateRotationMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -257,6 +266,7 @@ this.createStripImageJMenuItem!!.setText("Multi Image Unifier")
 this.createStripImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -270,6 +280,7 @@ this.processingJMenu!!.add(this.createStripImageJMenuItem)
 this.mirrorJMenuItem!!.setText("Mirror Image(s)")
 this.mirrorJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -285,6 +296,7 @@ this.scaleImagesJMenuItem!!.setText("Scale Image(s)")
 this.scaleImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -299,6 +311,7 @@ this.canvasImagesJMenuItem!!.setText("Canvas Image(s)")
 this.canvasImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -312,6 +325,7 @@ this.processingJMenu!!.add(this.canvasImagesJMenuItem)
 this.createIconImagesJMenuItem!!.setText("Create Icon Image(s)")
 this.createIconImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -407,6 +421,7 @@ var files = files
             this.logUtil!!.putF("Reading " +files.size +" files.", this, "onFiles")
 Arrays.sort(files, object: Comparator<File>()
                                 {
+                                
                                 
     override fun compare(file1: File, file2: File)
         //nullable = true from not(false or (false and false)) = true

@@ -230,6 +230,7 @@ this.addKeyJLabel!!.setText("Add Key:")
 this.keyNameJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -252,6 +253,7 @@ this.pressJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.pressJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -266,6 +268,7 @@ this.releaseJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder
 this.releaseJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.releaseJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -283,6 +286,7 @@ this.normalJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.normalJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -299,6 +303,7 @@ this.simultaneousJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.simultaneousJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -314,6 +319,7 @@ this.sequenceJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.sequenceJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -328,6 +334,7 @@ this.okJButton!!.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER)
 this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -340,6 +347,7 @@ okJButtonActionPerformed(evt)
 this.jPanel1!!.add(this.okJButton)
 this.keyIntegerJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -360,6 +368,7 @@ setMinimumSize(java.awt.Dimension(100, 0))
 this.keyActionJButton!!.setText("Edit")
 this.keyActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

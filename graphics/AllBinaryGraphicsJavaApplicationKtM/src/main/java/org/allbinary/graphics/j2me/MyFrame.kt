@@ -184,6 +184,7 @@ this.jMenu1= javax.swing.JMenu()
 addWindowListener(object: java.awt.event.WindowAdapter()
                                 {
                                 
+                                
     open override fun windowClosing(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -196,6 +197,7 @@ exitForm(evt)
 this.jButton2!!.setText("New")
 this.jButton2!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -211,6 +213,7 @@ this.saveJButton!!.setText("Save")
 this.saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -225,6 +228,7 @@ this.jButton1!!.setText("Export")
 this.jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -238,6 +242,7 @@ this.jToolBar1!!.add(this.jButton1)
 this.openJButton!!.setText("Open")
 this.openJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -263,6 +268,7 @@ this.playJButton!!.setText("Play")
 this.playJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -276,6 +282,7 @@ this.jToolBar1!!.add(this.playJButton)
 this.stopJjButton!!.setText("Stop")
 this.stopJjButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -293,6 +300,7 @@ this.mainJPanel!!.setLayout(java.awt.GridLayout(1, 0))
 this.jTabbedPane!!.setMinimumSize(java.awt.Dimension(550, 400))
 this.jTabbedPane!!.addChangeListener(object: javax.swing.event.ChangeListener()
                                 {
+                                
                                 
     open override fun stateChanged(evt: javax.swing.event.ChangeEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -314,6 +322,7 @@ this.fileJMenu!!.setText("File")
 this.fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -326,6 +335,7 @@ fileJMenuActionPerformed(evt)
 this.newJMenuItem!!.setText("New")
 this.newJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -341,6 +351,7 @@ this.openJMenuItem!!.setText("Open")
 this.openJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -354,6 +365,7 @@ this.fileJMenu!!.add(this.openJMenuItem)
 this.saveJMenuItem!!.setText("Save")
 this.saveJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -371,6 +383,7 @@ this.exportJMenuItem1!!.setText("Export")
 this.exportJMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -384,6 +397,7 @@ this.fileJMenu!!.add(this.exportJMenuItem1)
 this.exitJMenuItem!!.setText("Exit")
 this.exitJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -401,6 +415,7 @@ this.zoomInJMenuItem!!.setText("Zoom In")
 this.zoomInJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -414,6 +429,7 @@ this.viewJMenu!!.add(this.zoomInJMenuItem)
 this.zoomOutJMenuItem!!.setText("Zoom Out")
 this.zoomOutJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -431,6 +447,7 @@ this.explodeAllJMenuItem!!.setText("Explode All")
 this.explodeAllJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -445,6 +462,7 @@ this.menuJMenuBar!!.add(this.objectJMenu)
 this.frameJMenu!!.setText("Frame")
 this.frameJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -473,6 +491,7 @@ this.centerJMenuItem!!.setText("Center")
 this.centerJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -488,6 +507,7 @@ this.generateJMenu!!.add(this.autoDamageJMenuItem)
 this.autoExplodeJMenuItem!!.setText("Explode")
 this.autoExplodeJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -505,6 +525,7 @@ this.jMenuItem1!!.setText("Mirror")
 this.jMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -518,6 +539,7 @@ this.generateJMenu!!.add(this.jMenuItem1)
 this.autoRotateGenerationJMenuItem!!.setText("Rotate")
 this.autoRotateGenerationJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true

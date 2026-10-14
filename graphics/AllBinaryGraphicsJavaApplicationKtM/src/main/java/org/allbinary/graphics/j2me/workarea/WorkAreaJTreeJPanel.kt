@@ -79,6 +79,7 @@ this.workAreaJTree= JTree(this.rootTreeNode)
 this.workAreaJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -387,6 +388,7 @@ this.workAreaPropertiesJPanel= javax.swing.JPanel()
 itemJPopupMenu!!.addPopupMenuListener(object: javax.swing.event.PopupMenuListener()
                                 {
                                 
+                                
     open override fun popupMenuCanceled(evt: javax.swing.event.PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -413,6 +415,7 @@ this.deleteJMenuItem!!.setText("Delete")
 this.deleteJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -426,6 +429,7 @@ this.itemJPopupMenu!!.add(this.deleteJMenuItem)
 this.copyJMenuItem!!.setText("Copy")
 this.copyJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -441,6 +445,7 @@ this.rotateJMenuItem!!.setText("Rotate 45*")
 this.rotateJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
+                                
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -454,6 +459,7 @@ this.itemJPopupMenu!!.add(this.rotateJMenuItem)
 setLayout(java.awt.GridLayout(1, 1))
 this.workAreaPropertiesJPanel!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
+                                
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true

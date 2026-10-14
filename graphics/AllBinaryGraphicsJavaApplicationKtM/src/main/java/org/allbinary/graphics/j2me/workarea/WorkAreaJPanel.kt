@@ -615,6 +615,7 @@ setLayout(java.awt.GridLayout(1, 1))
 this.innerJPanel!!.addKeyListener(object: java.awt.event.KeyAdapter()
                                 {
                                 
+                                
     open override fun keyTyped(evt: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {

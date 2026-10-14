@@ -92,6 +92,7 @@ this.dimension= dimension
 submitButton!!.addActionListener(object: ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -175,6 +176,7 @@ this.dispose()
 {
 addWindowListener(object: java.awt.event.WindowAdapter()
                                 {
+                                
                                 
     open override fun windowClosing(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true

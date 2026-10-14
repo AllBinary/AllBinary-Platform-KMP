@@ -73,6 +73,7 @@ this.imageProcessorInput= imageProcessorInput
 object: Thread()
                                 {
                                 
+                                
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -151,6 +152,7 @@ this.buttonGroup= javax.swing.ButtonGroup()
 this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
+                                
     open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -196,6 +198,7 @@ this.generateJButton!!.setText("Generate")
 this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
+                                
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -208,6 +211,7 @@ generateJButtonActionPerformed(evt)
 this.renameJRadioButton!!.setText("Save As filename_mirror")
 this.renameJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
+                                
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true

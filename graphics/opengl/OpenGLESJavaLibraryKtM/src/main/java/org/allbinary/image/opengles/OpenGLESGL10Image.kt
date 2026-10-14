@@ -46,6 +46,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
     private val realOpenGLESImageDraw: OpenGLESImageDraw = object: OpenGLESImageDraw()
                                 {
                                 
+                                
     private val glUtil: GLUtil = GLUtil.getInstance()!!
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!

@@ -40,6 +40,7 @@ companion object {
                             null, NullOpenGLProcessorFactory.getInstance())
                                 {
                                 
+                                
     override fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
