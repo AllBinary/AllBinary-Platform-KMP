@@ -25,14 +25,11 @@ import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.graphics.font.UpdateMyFontInterface
 import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.threed.SWTJOGLProcessor
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
 

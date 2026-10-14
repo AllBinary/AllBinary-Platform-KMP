@@ -15,10 +15,13 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.animation
 
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.string.CommonStrings
 
 open public class IndexedAnimation : Animation, IndexedAnimationInterface {
+
+    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

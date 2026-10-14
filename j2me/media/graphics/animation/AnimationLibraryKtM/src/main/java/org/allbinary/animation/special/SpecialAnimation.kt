@@ -18,8 +18,6 @@ package org.allbinary.animation.special
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.animation.IndexedAnimationBehavior
-import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
 
 open public class SpecialAnimation : IndexedAnimation, SpecialAnimationInterface {
 
@@ -36,10 +34,6 @@ open public class SpecialAnimation : IndexedAnimation, SpecialAnimationInterface
             return SpecialAnimation.NULL_SPECIAL_ANIMATION
         }
     }
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
-    val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     public constructor(animationBehavior: AnimationBehavior) : super(animationBehavior) {
 

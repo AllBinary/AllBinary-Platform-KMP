@@ -19,7 +19,6 @@ import javax.microedition.lcdui.Graphics
 import kotlin.Array
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.logic.NullUtil
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.util.CircularIndexUtil
 
@@ -53,8 +52,6 @@ open public class VectorAnimation : IndexedAnimation, VectorAnimationInterface {
             return VectorAnimation(currentPoints, basicColor, animationBehavior)
         }
     }
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var currentPoints: Array<Array<IntArray?>?> =
         NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
