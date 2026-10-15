@@ -40,7 +40,7 @@ open public class PickupBehavior : Object, PickupBehaviorInterface {
             if (PickupBehavior.NULL_PICKUP_BEHAVIOR == NullUtil.getInstance()!!.NULL_OBJECT) {
 
                 PickupBehavior.NULL_PICKUP_BEHAVIOR =
-                    PickupBehavior(CollidableCompositeLayer.getNullInstance(), 0)
+                    PickupBehavior(CollidableDestroyableDamageableLayer.getNullInstance(), 0)
             }
 
             // if statement needs to be on the same line and ternary does not work the same way.
