@@ -50,7 +50,8 @@ open public class CollidableDestroyableDamageableLayer :
 
     companion object {
 
-        var NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: Any = NullUtil.getInstance()!!.NULL_OBJECT
+        private var NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: Any =
+            NullUtil.getInstance()!!.NULL_OBJECT
 
         open fun getNullInstance()
         // nullable = true from not(false or (false and true)) = true
