@@ -1,107 +1,96 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-                    
-        
-import org.allbinary.string.CommonStrings
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.ABHashtable
 
 open public class GeographicMapCellPositionFactory : GeographicMapCellPositionBaseFactory {
-        
-companion object {
-            
-    private val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
-    open fun getHashtable()
-        //nullable = true from not(false or (false and true)) = true
-: ABHashtable<Any, Any>{
+    companion object {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapCellPositionFactory.hashtable
-}
+        private val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
+        open fun getHashtable()
+        // nullable = true from not(false or (false and true)) = true
+        : ABHashtable<Any, Any> {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GeographicMapCellPositionFactory.hashtable
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-                @Throws(Exception::class)
-            
-    override fun getInstance(geographicMapInterface: BasicGeographicMap)
-        //nullable =  from not(true or (false and false)) = 
-: BasicGeographicMapCellPositionFactory{
-    //var geographicMapInterface = geographicMapInterface
+    @Throws(Exception::class)
+    override fun getInstance(
+        geographicMapInterface: BasicGeographicMap
+    )
+        // nullable =  from not(true or (false and false)) =
+        : BasicGeographicMapCellPositionFactory {
+        // var geographicMapInterface = geographicMapInterface
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+        var allBinaryTiledLayer: AllBinaryTiledLayer =
+            geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
-    var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+        var geographicMapCellPositionFactoryCanBeNull: Any? =
+            GeographicMapCellPositionFactory.hashtable.get(allBinaryTiledLayer!!.getDataId())
 
+        if (geographicMapCellPositionFactoryCanBeNull == null) {
 
-    var geographicMapCellPositionFactoryCanBeNull: Any? = GeographicMapCellPositionFactory.hashtable.get(allBinaryTiledLayer!!.getDataId())
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!
+                    .appendint(allBinaryTiledLayer!!.getDataId()!!.toInt().toInt())!!
+                    .toString(),
+                this,
+                commonStrings!!.GET_INSTANCE,
+            )
+            geographicMapCellPositionFactoryCanBeNull =
+                BasicGeographicMapCellPositionFactory(geographicMapInterface)
+            GeographicMapCellPositionFactory.hashtable.put(
+                allBinaryTiledLayer!!.getDataId(),
+                geographicMapCellPositionFactoryCanBeNull,
+            )
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return geographicMapCellPositionFactoryCanBeNull
+                as BasicGeographicMapCellPositionFactory
+        } else {
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!
+                    .appendint(allBinaryTiledLayer!!.getDataId()!!.toInt().toInt())!!
+                    .toString(),
+                this,
+                commonStrings!!.GET_INSTANCE,
+            )
 
-    
-                        if(geographicMapCellPositionFactoryCanBeNull == 
-                                    null
-                                )
-                        
-                                    {
-                                    this.logUtil!!.putF(StringMaker().
-                            append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt().toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
-geographicMapCellPositionFactoryCanBeNull= BasicGeographicMapCellPositionFactory(geographicMapInterface)
-GeographicMapCellPositionFactory.hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactoryCanBeNull)
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactoryCanBeNull as BasicGeographicMapCellPositionFactory
-
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF(StringMaker().
-                            append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt().toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactoryCanBeNull as BasicGeographicMapCellPositionFactory
-
-                        }
-                            
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return geographicMapCellPositionFactoryCanBeNull
+                as BasicGeographicMapCellPositionFactory
+        }
+    }
 }
-
-
-}
-                
-            
-

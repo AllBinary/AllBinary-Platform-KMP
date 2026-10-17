@@ -1,83 +1,72 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.media.graphics.geography.map.racetrack
+/* Generated Code Do Not Modify */
+package org.allbinary.game.media.graphics.geography.map.racetrack
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-                    
-        
-import org.allbinary.string.CommonStrings
+import kotlin.Array
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.racetrack.BasePathFindingInfoFactory
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackRoadsGeographicMapCellHistoryFactory
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactoryBase
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayListS
 
 open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
-        
-companion object {
-            
-    private val instance: PathFindingInfoFactory = PathFindingInfoFactory()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PathFindingInfoFactory{
+    companion object {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PathFindingInfoFactory.instance
-}
+        private val instance: PathFindingInfoFactory = PathFindingInfoFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PathFindingInfoFactory {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PathFindingInfoFactory.instance
         }
-            private constructor (){
+    }
+
+    private constructor() {}
+
+    @Throws(Exception::class)
+    override fun getInstancePathFindingInfo(
+        geographicMapInterface: BasicGeographicMap,
+        graphArray: Array<IntArray?>,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : PathFindingInfo {
+        // var geographicMapInterface = geographicMapInterface
+        // var graphArray = graphArray
+
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+        PreLogUtil.put(commonStrings!!.START, this, commonStrings!!.GET_INSTANCE)
+
+        var pathFindingInfo: PathFindingInfo =
+            PathFindingInfo(
+                PathFindingNodeCostInfoFactoryBase(),
+                BasicArrayListS(1),
+                BasicArrayListS(1),
+            )
+
+        RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
+        this.init(geographicMapInterface, pathFindingInfo, graphArray)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return pathFindingInfo
+    }
 }
-
-
-                @Throws(Exception::class)
-            
-    override fun getInstancePathFindingInfo(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
-        //nullable = true from not(false or (false and false)) = true
-: PathFindingInfo{
-    //var geographicMapInterface = geographicMapInterface
-    //var graphArray = graphArray
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-PreLogUtil.put(commonStrings!!.START, this, commonStrings!!.GET_INSTANCE)
-
-    var pathFindingInfo: PathFindingInfo = PathFindingInfo(PathFindingNodeCostInfoFactoryBase(), BasicArrayListS(1), BasicArrayListS(1))
-
-RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
-this.init(geographicMapInterface, pathFindingInfo, graphArray)
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return pathFindingInfo
-}
-
-
-}
-                
-            
-
