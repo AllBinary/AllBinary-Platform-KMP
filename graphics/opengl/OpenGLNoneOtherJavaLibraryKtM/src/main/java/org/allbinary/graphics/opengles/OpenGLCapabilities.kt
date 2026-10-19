@@ -33,6 +33,8 @@ open public class OpenGLCapabilities : Object {
         }
     }
 
+    val CUSTOM_GL_SURFACE_VIEW: Boolean = true
+
     val VERSION_1_0: String = "1.0"
 
     val VERSION_1_1: String = "1.1"
@@ -56,6 +58,14 @@ open public class OpenGLCapabilities : Object {
     var maxTextureSize: Int = 64
 
     private constructor() : super() {}
+
+    open fun isInitialized()
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
     open fun initCapabilities(gl: Any)
         // nullable = true from not(false or (false and false)) = true

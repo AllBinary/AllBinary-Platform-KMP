@@ -3,12 +3,15 @@ package org.allbinary.graphics.opengles
 
 import java.lang.Object
 import javax.microedition.khronos.opengles.GL10
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
 open public class OpenGLProcessor : Object {
 
     // Auto Generated
     public constructor() : super() {}
+
+    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
