@@ -16,18 +16,21 @@
 package org.allbinary.graphics.opengles.shader
 
 import java.lang.Object
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListUtil
 
 open public class Shader : Object {
 
     // Auto Generated
     public constructor() : super() {}
 
-    var shaderName: String
+    var shaderName: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    var shaderStringList: BasicArrayList
+    var shaderStringList: BasicArrayList =
+        BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
-    var shaderAsString: String
+    var shaderAsString: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     var shaderHandle: Int = 0
 }

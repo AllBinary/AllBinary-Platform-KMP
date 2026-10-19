@@ -39,7 +39,8 @@ open public class ShaderComposite : Object {
 
     val vertexOpenGLProcessor: OpenGLProcessor
 
-    var useProgramShaderOpenGLProcessor: OpenGLProcessor = null
+    var useProgramShaderOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
     var shaderMatrixOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
 

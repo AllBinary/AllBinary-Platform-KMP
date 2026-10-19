@@ -58,14 +58,14 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
     open fun initVertices()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.textureVertexFloatBuffer!!.put(0)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(0)
-        this.textureVertexFloatBuffer!!.put(0)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(0)
+        this.textureVertexFloatBuffer!!.put(0f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(0f)
+        this.textureVertexFloatBuffer!!.put(0f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(0f)
         this.textureVertexFloatBuffer!!.rewind()
     }
 
@@ -84,7 +84,32 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
         }
     }
 
-    val regionRectangleFloatArray: FloatArray = floatArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    val regionRectangleFloatArray: FloatArray =
+        floatArrayOf(
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+
+            // Otherwise - values - DoubleLiteralExpr
+        )
 
     var regionRectangleVertexFloatBuffer: FloatBuffer =
         ByteBuffer.allocateDirect(4 * 4 * 3)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
@@ -94,7 +119,7 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
     private var regionTextureVertexFloatBuffer: FloatBuffer =
         ByteBuffer.allocateDirect(4 * 4 * 2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
 
-    open fun drawRegion(
+    override fun drawRegion(
         gl: GL10,
         viewHeight: Int,
         x_src: Float,
@@ -146,7 +171,7 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
         gl.glDisable(GL10.GL_TEXTURE_2D)
     }
 
-    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    override fun draw(gl: GL10, x: Int, y: Int, z: Int)
         // nullable = true from not(false or (false and false)) = true
     {
         // var gl = gl
@@ -154,9 +179,10 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
         // var y = y
         // var z = z
         this.regionRectangleFloatArray[0] = x.toFloat()
-        this.regionRectangleFloatArray[7] = DisplayInfoSingleton.getInstance()!!.getLastHeight() - y
+        this.regionRectangleFloatArray[7] =
+            (DisplayInfoSingleton.getInstance()!!.getLastHeight() - y).toFloat()
         this.regionRectangleFloatArray[1] = this.regionRectangleFloatArray[7] - this.getHeight()
-        this.regionRectangleFloatArray[3] = x + this.getWidth()
+        this.regionRectangleFloatArray[3] = (x + this.getWidth()).toFloat()
         this.regionRectangleFloatArray[4] = this.regionRectangleFloatArray[1]!!
         this.regionRectangleFloatArray[6] = x.toFloat()
         this.regionRectangleFloatArray[9] = this.regionRectangleFloatArray[3]!!

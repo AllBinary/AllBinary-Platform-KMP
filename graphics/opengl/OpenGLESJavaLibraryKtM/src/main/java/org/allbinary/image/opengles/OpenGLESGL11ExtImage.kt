@@ -47,7 +47,7 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
 
         // For kotlin this is before the body of the constructor.
 
-        this.onDisplayChangeEvent(null)
+        this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance()!!.displayChangeEvent)
         this.rectangle = intArrayOf(0, this.getHeight(), this.getWidth(), -this.getHeight())
     }
 
@@ -68,7 +68,7 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
         // nullable = true from not(false or (false and false)) = true
     {
         // var gl = gl
-        this.onDisplayChangeEvent(null)
+        this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance()!!.displayChangeEvent)
 
         var gl11: GL11 = gl as GL11
 
@@ -86,7 +86,7 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
         }
     }
 
-    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    override fun draw(gl: GL10, x: Int, y: Int, z: Int)
         // nullable = true from not(false or (false and false)) = true
     {
         // var gl = gl
@@ -95,8 +95,16 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
         // var z = z
         gl.glEnable(GL10.GL_TEXTURE_2D)
         gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
-        gl = glgl as GL11Ext
-        gl.glDrawTexfOES(x, this.a - y, z, this.getWidth(), this.getHeight())
+
+        var gl11Ext: GL11Ext = gl as GL11Ext
+
+        gl11Ext!!.glDrawTexfOES(
+            x.toFloat(),
+            (this.a - y).toFloat(),
+            z.toFloat(),
+            this.getWidth().toFloat(),
+            this.getHeight().toFloat(),
+        )
         gl.glDisable(GL10.GL_TEXTURE_2D)
     }
 }

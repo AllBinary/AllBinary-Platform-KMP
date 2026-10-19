@@ -117,7 +117,7 @@ open public class GLUtil : Object {
         var v: Float = 0.0f
 
         while (byteBuffer!!.hasRemaining()) {
-            unsigned = byteBuffer!!.get() and 0xFF
+            unsigned = (byteBuffer!!.get().toInt()) and 0xFF
             v = (unsigned.toFloat()) / 255f
             buffer.put(v)
         }
@@ -149,7 +149,7 @@ open public class GLUtil : Object {
         // var pivotU = pivotU
         // var pivotV = pivotV
 
-        var angleRad: Double = Math.toRadians(angleDegrees)
+        var angleRad: Double = Math.toRadians(angleDegrees.toDouble())
 
         var cosA: Double = Math.cos(angleRad)
 

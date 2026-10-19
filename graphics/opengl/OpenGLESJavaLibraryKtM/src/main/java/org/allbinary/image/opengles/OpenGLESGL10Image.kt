@@ -50,7 +50,31 @@ open public class OpenGLESGL10Image : OpenGLESImage {
                     .asFloatBuffer()!!
 
             private val regionRectangleFloatArray: FloatArray =
-                floatArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+                floatArrayOf(
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+
+                    // Otherwise - values - DoubleLiteralExpr
+                )
 
             val regionRectangleVertexFloatBuffer: FloatBuffer =
                 ByteBuffer.allocateDirect(4 * 4 * 3)!!.order(ByteOrder.nativeOrder())!!
@@ -86,7 +110,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
 
                 var imageHeight: Int = this@OpenGLESGL10Image.getHeight()
 
-                this.regionRectangleFloatArray[7] = viewHeight
+                this.regionRectangleFloatArray[7] = viewHeight.toFloat()
                 this.regionRectangleFloatArray[1] = this.regionRectangleFloatArray[7] - height
                 this.regionRectangleFloatArray[3] = width
                 this.regionRectangleFloatArray[4] = this.regionRectangleFloatArray[1]!!
@@ -115,7 +139,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
 
                 this.glUtil!!.rotateUVs(
                     this.regionTextureRectangleFloatArray,
-                    -this.openGLESImageProperties!!.angle,
+                    -this.openGLESImageProperties!!.angle.toFloat(),
                     u_center,
                     v_center,
                 )
@@ -126,8 +150,8 @@ open public class OpenGLESGL10Image : OpenGLESImage {
                 this@OpenGLESGL10Image.openGLESImageTranslate!!.translate(
                     gl,
                     this@OpenGLESGL10Image,
-                    x,
-                    -y,
+                    x.toFloat(),
+                    -y.toFloat(),
                 )
                 imageProcessor!!.scale(
                     gl,
@@ -162,7 +186,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
                 gl.glPopMatrix()
             }
 
-            open override fun draw(gl: GL10, x: Int, y: Int, z: Int)
+            override fun draw(gl: GL10, x: Int, y: Int, z: Int)
                 // nullable = true from not(false or (false and false)) = true
             {
                 // var gl = gl
@@ -174,26 +198,27 @@ open public class OpenGLESGL10Image : OpenGLESImage {
 
                 var height: Int = this@OpenGLESGL10Image.getHeight()
 
-                this.regionRectangleFloatArray[7] = this.displayInfoSingleton!!.getLastHeight()
+                this.regionRectangleFloatArray[7] =
+                    this.displayInfoSingleton!!.getLastHeight().toFloat()
                 this.regionRectangleFloatArray[1] = this.regionRectangleFloatArray[7] - height
-                this.regionRectangleFloatArray[3] = width
+                this.regionRectangleFloatArray[3] = width.toFloat()
                 this.regionRectangleFloatArray[4] = this.regionRectangleFloatArray[1]!!
                 this.regionRectangleFloatArray[9] = this.regionRectangleFloatArray[3]!!
                 this.regionRectangleFloatArray[10] = this.regionRectangleFloatArray[7]!!
-                this.regionTextureRectangleFloatArray[0] = 0
-                this.regionTextureRectangleFloatArray[1] = 1
-                this.regionTextureRectangleFloatArray[2] = 1
-                this.regionTextureRectangleFloatArray[3] = 1
-                this.regionTextureRectangleFloatArray[4] = 0
-                this.regionTextureRectangleFloatArray[5] = 0
-                this.regionTextureRectangleFloatArray[6] = 1
-                this.regionTextureRectangleFloatArray[7] = 0
+                this.regionTextureRectangleFloatArray[0] = 0f
+                this.regionTextureRectangleFloatArray[1] = 1f
+                this.regionTextureRectangleFloatArray[2] = 1f
+                this.regionTextureRectangleFloatArray[3] = 1f
+                this.regionTextureRectangleFloatArray[4] = 0f
+                this.regionTextureRectangleFloatArray[5] = 0f
+                this.regionTextureRectangleFloatArray[6] = 1f
+                this.regionTextureRectangleFloatArray[7] = 0f
                 gl.glPushMatrix()
                 this@OpenGLESGL10Image.openGLESImageTranslate!!.translate(
                     gl,
                     this@OpenGLESGL10Image,
-                    x,
-                    -y,
+                    x.toFloat(),
+                    -y.toFloat(),
                 )
 
                 var imageProcessor: OpenGLESImageProcessor = this@OpenGLESGL10Image.imageProcessor
@@ -223,7 +248,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
                 gl.glEnableClientState(GL10.GL_TEXTURE_COORD_ARRAY)
                 this.glUtil!!.rotateUVs(
                     this.regionTextureRectangleFloatArray,
-                    -this.openGLESImageProperties!!.angle,
+                    -this.openGLESImageProperties!!.angle.toFloat(),
                     0.5f,
                     0.5f,
                 )
@@ -258,18 +283,18 @@ open public class OpenGLESGL10Image : OpenGLESImage {
     open fun initVertices()
         // nullable = true from not(false or (false and true)) = true
     {
-        this.textureVertexFloatBuffer!!.put(0)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(0)
-        this.textureVertexFloatBuffer!!.put(0)
-        this.textureVertexFloatBuffer!!.put(1)
-        this.textureVertexFloatBuffer!!.put(0)
+        this.textureVertexFloatBuffer!!.put(0f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(0f)
+        this.textureVertexFloatBuffer!!.put(0f)
+        this.textureVertexFloatBuffer!!.put(1f)
+        this.textureVertexFloatBuffer!!.put(0f)
         this.textureVertexFloatBuffer!!.rewind()
     }
 
-    open fun set(gl: GL)
+    override fun set(gl: GL)
         // nullable = true from not(false or (false and false)) = true
     {
         // var gl = gl
@@ -285,7 +310,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
         }
     }
 
-    open fun drawRegion(
+    override fun drawRegion(
         gl: GL10,
         viewHeight: Int,
         x_src: Float,
@@ -310,7 +335,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
         this.openGLESImageDraw!!.drawRegion(gl, viewHeight, x_src, y_src, width, height, x, y, z)
     }
 
-    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    override fun draw(gl: GL10, x: Int, y: Int, z: Int)
         // nullable = true from not(false or (false and false)) = true
     {
         // var gl = gl

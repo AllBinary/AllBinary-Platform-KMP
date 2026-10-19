@@ -224,12 +224,11 @@ open public class OpenGLUtil : Object {
 
         var size: Int = this.list.size()
 
-        var image: Any
+        var image: OpenGLESImage
 
         for (index2 in 0 until size) {
 
-            image = this.list.get(index2)!!
-            image = imageimage as OpenGLESImage
+            image = this.list.get(index2) as OpenGLESImage
             image.set(gl)
         }
     }

@@ -33,8 +33,8 @@ open public class NullShaderComposite : ShaderComposite {
                     CompositeShaderUpdater.getInstance(),
                     ShaderInitializer.getInstance(),
                     ModelViewProjection.getInstance(),
-                    null,
-                    null,
+                    NullOpenGLProcessorFactory.getInstance(),
+                    NullOpenGLProcessorFactory.getInstance(),
                     NullOpenGLProcessorFactory.getInstance(),
                 ) {
 
