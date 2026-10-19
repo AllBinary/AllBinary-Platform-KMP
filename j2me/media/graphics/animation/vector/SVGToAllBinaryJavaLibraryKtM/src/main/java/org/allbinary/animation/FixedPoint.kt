@@ -39,23 +39,23 @@ companion object {
         
     val ONE: Int = 1 shl 16
 
-    open fun toFixed(`val`: Double)
+    open fun toFixed(val: Double)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var `val` = `val`
+var val = val
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (`val` *65536.0).toInt()
+                        return (val *65536.0).toInt()
 }
 
 
-    open fun toFixed(`val`: Float)
+    open fun toFixed(val: Float)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var `val` = `val`
+var val = val
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (`val` *65536.0f).toInt()
+                        return (val *65536.0f).toInt()
 }
 
 
