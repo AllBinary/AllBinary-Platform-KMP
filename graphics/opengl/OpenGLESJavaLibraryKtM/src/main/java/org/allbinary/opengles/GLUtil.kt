@@ -59,6 +59,8 @@ companion object {
         
     private val BYTES_PER_FLOAT: Int = 4
 
+    val NULL_FLOAT_BUFFER: FloatBuffer = ByteBuffer.allocateDirect(0)!!.asFloatBuffer()!!
+
     open fun makeFloatBuffer3(p_a: Float, p_b: Float, p_c: Float)
         //nullable = true from not(false or (false and false)) = true
 : FloatBuffer{

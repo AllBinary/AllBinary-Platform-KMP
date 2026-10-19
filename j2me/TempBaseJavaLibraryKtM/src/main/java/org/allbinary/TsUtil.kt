@@ -59,4 +59,17 @@ open public class TsUtil : Object {
 
         anyType!!.wait(timeoutMillis)
     }
+
+    open fun compareTo(
+        a: String,
+        b: String,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var a = a
+        // var b = b
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return a.compareTo(b)
+    }
 }

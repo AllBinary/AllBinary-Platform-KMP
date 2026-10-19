@@ -101,7 +101,7 @@ private constructor ()
                                 
 
     
-                        if(!initInfoEntity!!.is())
+                        if(!initInfoEntity!!.`is`())
                         
                                     {
                                     

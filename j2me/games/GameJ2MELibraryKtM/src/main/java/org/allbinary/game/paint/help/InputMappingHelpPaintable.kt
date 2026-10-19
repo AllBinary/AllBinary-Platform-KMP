@@ -27,6 +27,7 @@ import org.allbinary.game.input.mapping.GameInputMapping
 import org.allbinary.game.input.mapping.PersistentInputMapping
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
+import org.allbinary.graphics.color.BasicColorUtil
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -65,7 +66,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
 
     private var keyMappingArray: Array<BasicArrayList?> = arrayOfNulls(0)
 
-    private var actionBasicColor: Array<BasicColor?> = arrayOfNulls(0)
+    private var actionBasicColor: Array<BasicColor?> = BasicColorUtil.getInstance()!!.ZERO_ARRAY
 
     private var inputBasicColorArray: Array<Array<BasicColor?>?> =
         Array(0) { arrayOfNulls<BasicColor?>(0) }

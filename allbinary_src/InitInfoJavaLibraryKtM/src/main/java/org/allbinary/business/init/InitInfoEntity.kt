@@ -149,7 +149,7 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
 }
 
 
-    open fun is()
+    open fun `is`()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

@@ -226,7 +226,7 @@ this.logUtil!!.put("Failure loading: " +name +"\nwith: " +loadedWith, this, this
 : ByteArray?{
 var name = name
 
-    var in: FileInputStream = 
+    var `in`: FileInputStream = 
                 null
             
 
@@ -236,9 +236,9 @@ var name = name
 
         try {
             cname= AbeClassLoader.PATH +name.replace('.', AbPathData.getInstance()!!.SEPARATORCHAR) +this.ENCRYPTED_EXTENSION
-in= FileInputStream(cname)
+`in`= FileInputStream(cname)
 
-    var decrypted: ByteArray = this.abCryptUtil!!.decrypt(in, this.key)!!
+    var decrypted: ByteArray = this.abCryptUtil!!.decrypt(`in`, this.key)!!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -254,7 +254,7 @@ in= FileInputStream(cname)
 
                                     }
                                 
-StreamUtil.getInstance()!!.close(in)
+StreamUtil.getInstance()!!.close(`in`)
 }
  catch(e: Exception)
             {

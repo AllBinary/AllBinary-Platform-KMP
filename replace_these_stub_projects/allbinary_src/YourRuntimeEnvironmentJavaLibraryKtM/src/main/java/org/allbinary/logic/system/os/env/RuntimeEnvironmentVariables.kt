@@ -48,16 +48,16 @@ public constructor ()
 }
 
 
-    open fun getVariable(var: String)
+    open fun getVariable(`var`: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var var = var
+var `var` = `var`
 
     var environmentVariables: Properties = this.get()!!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return environmentVariables!!.getProperty(var)
+                        return environmentVariables!!.getProperty(`var`)
 }
 
 
@@ -357,11 +357,11 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 }
 
 
-    open fun setVariable(var: String, val: String)
+    open fun setVariable(`var`: String, `val`: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var var = var
-var val = val
+var `var` = `var`
+var `val` = `val`
 
         try {
             
@@ -377,7 +377,7 @@ var val = val
     var osName: String = operatingSystemInterface!!.getName()!!
 
 
-    var windowsCommand: String = "cmd.exe /c set" +var +"=" +val
+    var windowsCommand: String = "cmd.exe /c set" +`var` +"=" +`val`
 
 
     
