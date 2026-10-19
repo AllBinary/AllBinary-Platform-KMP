@@ -64,6 +64,26 @@ companion object {
             {
             }            
         
+    open fun longBitsToDouble(bits: Long)
+        //nullable = true from not(false or (false and false)) = true
+: Double{
+    //var bits = bits
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return java.lang.Double.longBitsToDouble(bits)
+}
+
+
+    open fun intBitsToFloat(bits: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Float{
+    //var bits = bits
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return java.lang.Float.intBitsToFloat(bits)
+}
+
+
     open fun hashCode(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
