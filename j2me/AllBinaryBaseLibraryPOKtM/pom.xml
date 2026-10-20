@@ -67,6 +67,7 @@
         
         <module>../../allbinary_src/ThreadLibraryKtM</module>
 <!--        <module>../../allbinary_src/ThreadHTMLLibraryKtM</module>-->
+        <module>../../replace_these_stub_projects/allbinary_src/NoneOnlyJavaLibraryKtM</module>
         <module>../../allbinary_src/ThreadJ2MELibraryKtM</module>
         <module>../time/TimeJavaLibraryKtM</module>
 
