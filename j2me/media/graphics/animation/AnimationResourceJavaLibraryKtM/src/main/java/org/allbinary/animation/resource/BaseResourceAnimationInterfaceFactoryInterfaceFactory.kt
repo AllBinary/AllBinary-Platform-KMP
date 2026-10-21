@@ -176,9 +176,20 @@ open public class BaseResourceAnimationInterfaceFactoryInterfaceFactory :
         : Array<Array<Rectangle?>?> {
         // var resource = resource
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.rectangleArrayOfArraysHashtable!!.get(resource as Object)
-            as Array<Array<Rectangle?>?>
+        var valueCanBeNull: Any? = this.rectangleArrayOfArraysHashtable!!.get(resource as Object)
+
+        if (valueCanBeNull != null) {
+
+            var rectangleArrayOfArrays: Array<Array<Rectangle?>?> =
+                valueCanBeNull as Array<Array<Rectangle?>?>
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return rectangleArrayOfArrays
+        } else {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RectangleFactory.ARRAY_OF_ARRAYS
+        }
     }
 
     @Throws(Exception::class)
