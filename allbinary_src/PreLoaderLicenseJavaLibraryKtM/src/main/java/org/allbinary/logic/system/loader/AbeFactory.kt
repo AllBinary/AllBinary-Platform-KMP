@@ -28,8 +28,6 @@
         import kotlin.reflect.KClass
                     
         
-        import kotlin.reflect.full.createInstance
-        
 import java.lang.reflect.Constructor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.anyType.ConstructorUtil
@@ -79,7 +77,7 @@ private constructor ()
         try {
             
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this::class.createInstance()
+                        return this::class.java.getDeclaredConstructor().newInstance()
 } catch(e: LicensingException)
             {
 
