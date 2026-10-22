@@ -143,6 +143,134 @@ open public class CommonDataFileStrings : Object {
 
     val _ZIG: String = ".zig"
 
+    val PM: String = "pm"
+
+    val _PM: String = ".pm"
+
+    val KTS: String = "kts"
+
+    val _KTS: String = ".kts"
+
+    val CBL: String = "cbl"
+
+    val _CBL: String = ".cbl"
+
+    val COB: String = "cob"
+
+    val _COB: String = ".cob"
+
+    val F90: String = "f90"
+
+    val _F90: String = ".f90"
+
+    val F: String = "f"
+
+    val _F: String = ".f"
+
+    val DART: String = "dart"
+
+    val _DART: String = ".dart"
+
+    val EX: String = "ex"
+
+    val _EX: String = ".ex"
+
+    val EXS: String = "exs"
+
+    val _EXS: String = ".exs"
+
+    val KOTLIN: String = "kotlin"
+
+    val TYPESCRIPT: String = "typescript"
+
+    val JAVASCRIPT: String = "javascript"
+
+    val C_PLUS_PLUS: String = "c++"
+
+    val PYTHON: String = "python"
+
+    val C_SHARP: String = "c#"
+
+    val RUST_NAME: String = "rust"
+
+    val RUBY: String = "ruby"
+
+    val PERL: String = "perl"
+
+    val OBJECT_PASCAL: String = "objectpascal"
+
+    val OCAML: String = "ocaml"
+
+    val HASKELL: String = "haskell"
+
+    val HAXE: String = "haxe"
+
+    val ERLANG: String = "erlang"
+
+    val COBOL: String = "cobol"
+
+    val FORTRAN: String = "fortran"
+
+    val ELIXIR: String = "elixir"
+
+    val CPLUSPLUS: String = "cplusplus"
+
+    val GOLANG: String = "golang"
+
+    val CSHARP_ALIAS: String = "csharp"
+
+    val C23: String = "c23"
+
+    val PASCAL: String = "pascal"
+
+    val OBJECT_PASCAL_ALIAS: String = "object pascal"
+
+    val KT_SHORT_NAME: String = "Kt"
+
+    val TS_SHORT_NAME: String = "Ts"
+
+    val JS_SHORT_NAME: String = "Js"
+
+    val CPP_SHORT_NAME: String = "Cpp"
+
+    val PY_SHORT_NAME: String = "Py"
+
+    val GO_SHORT_NAME: String = "Go"
+
+    val CS_SHORT_NAME: String = "Cs"
+
+    val ADA_SHORT_NAME: String = "Ada"
+
+    val RUST_SHORT_NAME: String = "Rust"
+
+    val LUA_SHORT_NAME: String = "Lua"
+
+    val C_SHORT_NAME: String = "C"
+
+    val ZIG_SHORT_NAME: String = "Zig"
+
+    val RB_SHORT_NAME: String = "Rb"
+
+    val PL_SHORT_NAME: String = "Pl"
+
+    val PAS_SHORT_NAME: String = "Pas"
+
+    val ML_SHORT_NAME: String = "Ml"
+
+    val HS_SHORT_NAME: String = "Hs"
+
+    val HX_SHORT_NAME: String = "Hx"
+
+    val ERL_SHORT_NAME: String = "Erl"
+
+    val CBL_SHORT_NAME: String = "Cbl"
+
+    val F90_SHORT_NAME: String = "F90"
+
+    val DART_SHORT_NAME: String = "Dart"
+
+    val EX_SHORT_NAME: String = "Ex"
+
     val UNCRYPTED_EXTENSION: String = this.XML
 
     val ENCRYPTED_EXTENSION: String = "abd"

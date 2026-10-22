@@ -17,52 +17,8 @@ package org.allbinary.business.user.role
 
 import java.io.Serializable
 import java.lang.Object
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 
 open public class BasicUserRole : Object, Serializable {
-
-    companion object {
-
-        private val roleVector: BasicArrayList = BasicArrayListD()
-
-        @Throws(Exception::class)
-        @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
-        // instead.
-        open fun getRole(
-            role: String
-        )
-            // nullable = true from not(false or (false and false)) = true
-            : BasicUserRole {
-            var role = role
-
-            var roleVector: BasicArrayList = BasicUserRole.getAll()!!
-
-            var size: Int = roleVector!!.size()
-
-            for (index in 0 until size) {
-
-                var userRole: BasicUserRole = roleVector!!.get(index) as BasicUserRole
-
-                if (role.compareTo(userRole!!.toString()) == 0) {
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return userRole
-                }
-            }
-
-            throw Exception("Unable to get role - Unknown Role")
-        }
-
-        open fun getAll()
-        // nullable = true from not(false or (false and true)) = true
-        : BasicArrayList {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return BasicUserRole.roleVector
-        }
-    }
 
     private val m_int_RoleId: Int
 
@@ -106,7 +62,7 @@ open public class BasicUserRole : Object, Serializable {
         this.displayValue = aDisplayValue
         this.sessionTimeout = aSessionTimeout
         this.sessionInactivityTimeout = aSessionInactivityTimeout
-        BasicUserRole.roleVector!!.add(this)
+        BasicUserRoles.getInstance()!!.roleVector!!.add(this)
     }
 
     open fun getRoleId()
