@@ -136,7 +136,7 @@ this.listOfList[foundIndex]!!.add(image)
                         
                                     {
                                     
-    var inputStream: InputStream = 
+    var inputStream: InputStream? = 
                 null
             
 

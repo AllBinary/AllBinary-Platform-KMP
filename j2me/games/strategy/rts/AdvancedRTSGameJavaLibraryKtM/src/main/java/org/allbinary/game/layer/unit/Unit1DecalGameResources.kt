@@ -20,19 +20,25 @@ import org.allbinary.AndroidUtil
 import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
 import org.allbinary.game.layer.resources.BasicGameResources
 import org.allbinary.game.layer.resources.GameGraphicsResourceUtil
+import org.allbinary.logic.NullUtil
 
 open public class Unit1DecalGameResources : BasicGameResources {
 
     companion object {
 
-        private val instance: Unit1DecalGameResources = Unit1DecalGameResources()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
         open fun getInstance()
         // nullable =  from not(true or (false and true)) =
         : BasicGameResources {
 
+            if (Unit1DecalGameResources.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
+
+                Unit1DecalGameResources.instance = Unit1DecalGameResources()
+            }
+
             // if statement needs to be on the same line and ternary does not work the same way.
-            return Unit1DecalGameResources.instance
+            return Unit1DecalGameResources.instance as Unit1DecalGameResources
         }
     }
 

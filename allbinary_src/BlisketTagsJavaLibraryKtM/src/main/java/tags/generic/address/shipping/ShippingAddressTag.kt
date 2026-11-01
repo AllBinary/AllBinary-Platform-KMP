@@ -35,7 +35,7 @@ import tags.StoreValidationTransformTag
 open public class ShippingAddressTag : StoreValidationTransformTag {
         
 
-    private var value: String
+    private lateinit var value: String
 public constructor (){
 }
 

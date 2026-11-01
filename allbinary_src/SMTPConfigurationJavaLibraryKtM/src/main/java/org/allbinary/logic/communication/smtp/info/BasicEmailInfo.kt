@@ -43,7 +43,7 @@ open public class BasicEmailInfo
 
     private var textBody: String
 
-    var emailServerConfigurationInterface: EmailServerConfigurationInterface
+    lateinit var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor (subject: String, textBody: String)
             : super()
         {

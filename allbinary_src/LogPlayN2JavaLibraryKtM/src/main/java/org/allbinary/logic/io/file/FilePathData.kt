@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
                     
         
+import jsinterop.annotations.JsType
 
 open public class FilePathData
             : Object

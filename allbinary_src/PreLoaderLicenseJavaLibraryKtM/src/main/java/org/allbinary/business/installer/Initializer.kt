@@ -59,75 +59,75 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var userJdbcDriver: String
+    private lateinit var userJdbcDriver: String
 
-    private var userName: String
+    private lateinit var userName: String
 
-    private var userUserName: String
+    private lateinit var userUserName: String
 
-    private var userPassword: String
+    private lateinit var userPassword: String
 
-    private var userSchema: String
+    private lateinit var userSchema: String
 
-    private var userServer: String
+    private lateinit var userServer: String
 
-    private var userPort: String
+    private lateinit var userPort: String
 
-    private var historyJdbcDriver: String
+    private lateinit var historyJdbcDriver: String
 
-    private var historyName: String
+    private lateinit var historyName: String
 
-    private var historyUserName: String
+    private lateinit var historyUserName: String
 
-    private var historyPassword: String
+    private lateinit var historyPassword: String
 
-    private var historySchema: String
+    private lateinit var historySchema: String
 
-    private var historyServer: String
+    private lateinit var historyServer: String
 
-    private var historyPort: String
+    private lateinit var historyPort: String
 
-    private var logJdbcDriver: String
+    private lateinit var logJdbcDriver: String
 
-    private var logName: String
+    private lateinit var logName: String
 
-    private var logUserName: String
+    private lateinit var logUserName: String
 
-    private var logPassword: String
+    private lateinit var logPassword: String
 
-    private var logSchema: String
+    private lateinit var logSchema: String
 
-    private var logServer: String
+    private lateinit var logServer: String
 
-    private var logPort: String
+    private lateinit var logPort: String
 
-    private var inventoryJdbcDriver: String
+    private lateinit var inventoryJdbcDriver: String
 
-    private var inventoryName: String
+    private lateinit var inventoryName: String
 
-    private var inventoryUserName: String
+    private lateinit var inventoryUserName: String
 
-    private var inventoryPassword: String
+    private lateinit var inventoryPassword: String
 
-    private var inventorySchema: String
+    private lateinit var inventorySchema: String
 
-    private var inventoryServer: String
+    private lateinit var inventoryServer: String
 
-    private var inventoryPort: String
+    private lateinit var inventoryPort: String
 
-    private var staticPagesJdbcDriver: String
+    private lateinit var staticPagesJdbcDriver: String
 
-    private var staticPagesName: String
+    private lateinit var staticPagesName: String
 
-    private var staticPagesUserName: String
+    private lateinit var staticPagesUserName: String
 
-    private var staticPagesPassword: String
+    private lateinit var staticPagesPassword: String
 
-    private var staticPagesSchema: String
+    private lateinit var staticPagesSchema: String
 
-    private var staticPagesServer: String
+    private lateinit var staticPagesServer: String
 
-    private var staticPagesPort: String
+    private lateinit var staticPagesPort: String
 public constructor (map: Map)
             : super()
         {

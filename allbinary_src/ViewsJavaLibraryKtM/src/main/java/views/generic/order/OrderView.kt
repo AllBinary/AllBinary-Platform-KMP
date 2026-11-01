@@ -47,11 +47,11 @@ open public class OrderView : HttpStoreComponentView
 
     private var request: HttpServletRequest
 
-    var order: Order
+    lateinit var order: Order
 
-    var orderHistory: OrderHistory
+    lateinit var orderHistory: OrderHistory
 
-    var basketReview: BasketReview
+    lateinit var basketReview: BasketReview
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

@@ -54,9 +54,9 @@ var colorDelta = colorDelta
 
         }
             
-    private var point: GPoint
+    private lateinit var point: GPoint
 
-    private var colorDelta: ColorDelta
+    private lateinit var colorDelta: ColorDelta
 
     private var key: Any
 public constructor (point: GPoint, colorDelta: ColorDelta)

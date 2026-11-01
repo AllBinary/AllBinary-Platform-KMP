@@ -53,7 +53,7 @@ open public class BasicProfileActionScriptInput : BasicProfileActionScriptProces
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var inputRobotInterface: InputRobotInterface
+    private lateinit var inputRobotInterface: InputRobotInterface
 
     private var time: Int= 0
 public constructor (label: String, node: Node)                        

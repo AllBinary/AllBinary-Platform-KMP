@@ -51,17 +51,17 @@ open public class AuthenticationTag : CustomTagSupport {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var command: String
+    private lateinit var command: String
 
     private var userName: String
 
     private var password: String
 
-    private var newPassword: String
+    private lateinit var newPassword: String
 
-    private var roles: BasicArrayList
+    private lateinit var roles: BasicArrayList
 
-    private var propertiesHashMap: HashMap<Any, Any>
+    private lateinit var propertiesHashMap: HashMap<Any, Any>
 public constructor (){
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!

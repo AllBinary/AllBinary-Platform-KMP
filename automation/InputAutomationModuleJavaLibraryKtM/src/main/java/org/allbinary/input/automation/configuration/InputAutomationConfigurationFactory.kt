@@ -60,7 +60,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var inputAutomationConfiguration: InputAutomationConfiguration = 
+    var inputAutomationConfiguration: InputAutomationConfiguration? = 
                 null
             
 private constructor ()

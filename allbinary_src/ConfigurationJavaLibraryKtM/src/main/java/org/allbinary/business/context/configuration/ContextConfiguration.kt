@@ -42,7 +42,7 @@ open public class ContextConfiguration
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var emailServerConfigurationInterface: EmailServerConfigurationInterface
+    private lateinit var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor ()
             : super()
         {

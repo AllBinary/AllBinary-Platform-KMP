@@ -42,9 +42,9 @@ open public class PaymentTag : TableTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var storeName: String
+    private lateinit var storeName: String
 
-    private var propertiesHashMap: HashMap<Any, Any>
+    private lateinit var propertiesHashMap: HashMap<Any, Any>
 public constructor (){
 this.setTagHelperFactory(PaymentHelperFactory())
 this.setTagRequestHelperFactory(PaymentHelperFactory())

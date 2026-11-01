@@ -119,7 +119,7 @@ securedNativeLibraryInterface!!.load()
 
     private val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
-    private var helpSetListenerInterface: HelpSetListener
+    private lateinit var helpSetListenerInterface: HelpSetListener
 private constructor ()
             : super()
         {

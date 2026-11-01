@@ -32,9 +32,9 @@ open public class ImageColorResults
          {
         
 
-    private var colorRange: ColorRange
+    private lateinit var colorRange: ColorRange
 
-    private var colorAverage: ColorAverage
+    private lateinit var colorAverage: ColorAverage
 public constructor ()
             : super()
         {

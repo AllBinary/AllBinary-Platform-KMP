@@ -42,7 +42,7 @@ companion object {
 : ProfileActionScriptInputInterface{
 var node = node
 
-    var profileActionScriptInputInterface: ProfileActionScriptInputInterface = 
+    var profileActionScriptInputInterface: ProfileActionScriptInputInterface? = 
                 null
             
 

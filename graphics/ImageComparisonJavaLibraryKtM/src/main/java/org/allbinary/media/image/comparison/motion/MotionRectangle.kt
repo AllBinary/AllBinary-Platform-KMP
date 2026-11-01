@@ -39,9 +39,9 @@ open public class MotionRectangle
                 , Cloneable {
         
 
-    private var rectangle: Rectangle
+    private lateinit var rectangle: Rectangle
 
-    private var pixelDeltaVector: BasicArrayList
+    private lateinit var pixelDeltaVector: BasicArrayList
 public constructor (rectangle: Rectangle)
             : super()
         {

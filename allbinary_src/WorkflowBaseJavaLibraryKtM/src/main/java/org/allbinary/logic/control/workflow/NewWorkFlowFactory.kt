@@ -163,10 +163,9 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                                    throw Exception("No WorkFlow ClassName") }
+                            
 } catch(e: LicensingException)
             {
 

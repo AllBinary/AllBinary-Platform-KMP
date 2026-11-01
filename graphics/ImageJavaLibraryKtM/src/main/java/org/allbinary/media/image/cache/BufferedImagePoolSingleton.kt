@@ -39,7 +39,7 @@ open public class BufferedImagePoolSingleton
         
 companion object {
             
-    private var poolInterface: PoolInterface = 
+    private var poolInterface: PoolInterface? = 
                 null
             
 

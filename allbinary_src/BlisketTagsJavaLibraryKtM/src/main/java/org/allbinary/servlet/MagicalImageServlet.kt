@@ -60,7 +60,7 @@ open public class MagicalImageServlet : HttpServlet {
     //var request = request
     //var response = response
 
-    var inputStream: InputStream = 
+    var inputStream: InputStream? = 
                 null
             
 

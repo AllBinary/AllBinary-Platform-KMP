@@ -49,9 +49,9 @@ open public class OrderHistoryHelper : TagHelper {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var weblisketSession: WeblisketSession
+    private lateinit var weblisketSession: WeblisketSession
 
-    private var storeFrontInterface: StoreFrontInterface
+    private lateinit var storeFrontInterface: StoreFrontInterface
 
     private val propertiesHashMap: HashMap<Any, Any>
 
@@ -59,13 +59,13 @@ open public class OrderHistoryHelper : TagHelper {
 
     private val request: HttpServletRequest
 
-    private var streetAddress: StreetAddress
+    private lateinit var streetAddress: StreetAddress
 
-    private var id: String
+    private lateinit var id: String
 
-    private var groupId: String
+    private lateinit var groupId: String
 
-    private var status: String
+    private lateinit var status: String
 
     private var newStatus: String
 public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){

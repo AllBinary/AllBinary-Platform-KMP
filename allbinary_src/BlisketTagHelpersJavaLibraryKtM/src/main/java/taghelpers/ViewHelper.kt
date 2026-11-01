@@ -92,10 +92,8 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
                                     null
                                 )
                         error += this.componentInterface!!::class.toString()!!
-                             else 
-    
-                        if()
-                        
+                             else { error += "Unknown" }
+                            
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -136,10 +134,8 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
                                     null
                                 )
                         error += this.componentInterface!!::class.toString()!!
-                             else 
-    
-                        if()
-                        
+                             else { error += "Unknown" }
+                            
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))

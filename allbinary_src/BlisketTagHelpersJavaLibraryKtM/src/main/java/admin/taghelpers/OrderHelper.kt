@@ -54,7 +54,7 @@ open public class OrderHelper : TagHelper {
 
     private var weblisketSession: WeblisketSession
 
-    private var storeFrontInterface: StoreFrontInterface
+    private lateinit var storeFrontInterface: StoreFrontInterface
 
     private var propertiesHashMap: HashMap<Any, Any>
 

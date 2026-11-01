@@ -41,7 +41,7 @@ open public class SensorGameUpdateProcessor
             {
             }            
         
-    private var inputSensor: AllBinarySensor
+    private lateinit var inputSensor: AllBinarySensor
 
     open fun setInputSensor(inputSensor: AllBinarySensor)
         //nullable = true from not(false or (false and false)) = true

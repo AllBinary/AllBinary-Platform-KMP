@@ -50,7 +50,7 @@ companion object {
 
     private val PACKAGE: String = PATH_GLOBALS.getInstance()!!.INIT_PATH
 
-    private var logConfigInfoList: BasicArrayList = 
+    private var logConfigInfoList: BasicArrayList? = 
                 null
             
 

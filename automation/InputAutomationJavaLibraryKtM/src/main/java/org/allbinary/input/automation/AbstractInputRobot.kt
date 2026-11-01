@@ -39,7 +39,7 @@ open public class AbstractInputRobot
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var helpSet: HelpSet
+    private lateinit var helpSet: HelpSet
 public constructor (helpSet: HelpSet)
             : super()
         {

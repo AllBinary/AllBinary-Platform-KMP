@@ -44,7 +44,7 @@ open public class ImageComparatorConstraints
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var avoidVector: BasicArrayList
+    private lateinit var avoidVector: BasicArrayList
 
     private var maxNonMatchingPixelDeltas: Int= 0
 

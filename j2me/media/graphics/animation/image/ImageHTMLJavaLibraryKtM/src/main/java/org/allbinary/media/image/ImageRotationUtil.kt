@@ -74,7 +74,7 @@ companion object {
                         
                                     {
                                     
-    var originalPlayNImage: playn.core.Image = 
+    var originalPlayNImage: playn.core.Image? = 
                 null
             
 

@@ -173,7 +173,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
     //var image = image
     //var canvasSurface = canvasSurface
 
-    var originalPlayNImage: CoreImage = 
+    var originalPlayNImage: CoreImage? = 
                 null
             
 

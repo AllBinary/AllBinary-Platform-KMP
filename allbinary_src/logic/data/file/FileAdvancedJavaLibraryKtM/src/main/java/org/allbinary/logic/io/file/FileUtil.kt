@@ -1184,7 +1184,7 @@ skipFile= skipFiles[index]!!
     //var filePath = filePath
     //var string = string
 
-    var dataOutputStream: AbDataOutputStream = 
+    var dataOutputStream: AbDataOutputStream? = 
                 null
             
 

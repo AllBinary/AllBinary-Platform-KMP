@@ -57,7 +57,7 @@ open public class Cpu
 
     private val CPUFILE: String = "/proc/cpuinfo"
 
-    private var cpuHashMap: HashMap<Any, Any>
+    private lateinit var cpuHashMap: HashMap<Any, Any>
 public constructor (filePath: String)
             : super()
         {
@@ -79,7 +79,7 @@ this.init(this.CPUFILE)
 {
 var filePath = filePath
 
-    var lineNumberReader: LineNumberReader = 
+    var lineNumberReader: LineNumberReader? = 
                 null
             
 

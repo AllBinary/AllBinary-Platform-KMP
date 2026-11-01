@@ -44,9 +44,10 @@ open public class WaypointEventHandlerFactory : Object {
             : WaypointEventHandler {
             // var groupInterface = groupInterface
 
+            var groupId: Int = groupInterface!!.getGroupId().toInt()
+
             // if statement needs to be on the same line and ternary does not work the same way.
-            return WaypointEventHandlerFactory.eventHandlerArray[
-                    groupInterface!!.getGroupId().toInt()]!!
+            return WaypointEventHandlerFactory.eventHandlerArray[groupId]!!
         }
 
         open fun removeAll()

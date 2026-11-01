@@ -34,11 +34,11 @@ open public class ImageUnifierProperties
          {
         
 
-    private var rows: Integer
+    private lateinit var rows: Integer
 
-    private var columns: Integer
+    private lateinit var columns: Integer
 
-    private var imageUnifierCell: ImageUnifierCell
+    private lateinit var imageUnifierCell: ImageUnifierCell
 public constructor ()
             : super()
         {

@@ -186,7 +186,7 @@ open public class MotionGestureRecognizer : Object {
             diagonalToleranceLower = conf.getDiagonalTolerance().toDouble()
         }
 
-        if (absGradient > Math.tan(Math.toRadians(diagonalToleranceHigher))) {
+        if (absGradient > Math.tan(Math.toRadians(diagonalToleranceHigher).toDouble())) {
 
             if (this.line.getDeltaY() > 0) {
 
@@ -196,7 +196,7 @@ open public class MotionGestureRecognizer : Object {
             }
         } else {
 
-            if (absGradient < Math.tan(Math.toRadians(diagonalToleranceLower))) {
+            if (absGradient < Math.tan(Math.toRadians(diagonalToleranceLower).toDouble())) {
 
                 if (this.line.getDeltaX() > 0) {
 

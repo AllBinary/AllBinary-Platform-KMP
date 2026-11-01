@@ -42,11 +42,11 @@ open public class AbBasicCrypt
                 , CryptInterface {
         
 
-    private var cipher: Cipher
+    private lateinit var cipher: Cipher
 
-    private var secretKey: SecretKey
+    private lateinit var secretKey: SecretKey
 
-    private var algorithm: String
+    private lateinit var algorithm: String
 
     private var key: ByteArray
 public constructor (algorithm: String, key: String)

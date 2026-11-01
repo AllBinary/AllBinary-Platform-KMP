@@ -44,7 +44,7 @@ open public class PaymentGatewayHelper : BasicTable {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var weblisketSession: WeblisketSession
+    private lateinit var weblisketSession: WeblisketSession
 
     private val httpServletRequest: HttpServletRequest
 

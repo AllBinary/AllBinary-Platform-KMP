@@ -35,15 +35,20 @@ open public class AllAnimationsEverywhereTileMapPlacementVisitor : TileMapPlacem
 
         for (index in 0 until size) {
 
-            for (index2 in 0 until size2) {
+            run {
+                var index2: Int = 0
 
-                mapData[index]!![index2] = 1
-                mapData[index]!![index2 + 1] = 17
-                mapData[index]!![index2 + 2] = 33
-                mapData[index]!![index2 + 3] = 49
-                mapData[index]!![index2 + 4] = 65
-                mapData[index]!![index2 + 5] = 81
-                mapData[index]!![index2 + 6] = 97
+                while (index2 < size2) {
+                    mapData[index]!![index2] = 1
+                    mapData[index]!![index2 + 1] = 17
+                    mapData[index]!![index2 + 2] = 33
+                    mapData[index]!![index2 + 3] = 49
+                    mapData[index]!![index2 + 4] = 65
+                    mapData[index]!![index2 + 5] = 81
+                    mapData[index]!![index2 + 6] = 97
+
+                    index2 += 7
+                }
             }
         }
     }

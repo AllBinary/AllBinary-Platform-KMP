@@ -104,10 +104,9 @@ this.save(newChildCategoryInterface)
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                                    throw Exception("Will Not Add Null Category") }
+                            
 } catch(e: Exception)
             {
 
@@ -148,10 +147,9 @@ this.directory.remove(directoryToBeDeletedAbPath)
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                                    throw Exception("Will Not Add Null Category") }
+                            
 } catch(e: Exception)
             {
 

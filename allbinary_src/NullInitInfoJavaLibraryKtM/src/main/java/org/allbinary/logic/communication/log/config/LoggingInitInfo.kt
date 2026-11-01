@@ -35,7 +35,7 @@ open public class LoggingInitInfo
         
 companion object {
             
-    private var logConfigInfoList: BasicArrayList = 
+    private var logConfigInfoList: BasicArrayList? = 
                 null
             
 

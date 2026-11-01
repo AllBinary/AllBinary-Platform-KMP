@@ -36,9 +36,9 @@ open public class HtmlLengthInput : HtmlValueInput {
 
     private val SIZE: String = "SIZE"
 
-    private var length: String
+    private lateinit var length: String
 
-    private var size: String
+    private lateinit var size: String
 public constructor (before: String, type: String, name: String, value: String, after: String)                        
 
                             : super(before, type, name, value, after){

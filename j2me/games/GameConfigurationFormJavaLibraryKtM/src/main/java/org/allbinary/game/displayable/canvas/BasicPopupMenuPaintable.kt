@@ -63,7 +63,7 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
 
     private var offset: Int = 0
 
-    private var animationInterface: Animation
+    private lateinit var animationInterface: Animation
 
     public constructor(
         rectangle: Rectangle,

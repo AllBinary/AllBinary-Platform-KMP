@@ -15,8 +15,6 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.media.graphics.geography.pathfinding
 
-import java.util.HashSet
-import java.util.PriorityQueue
 import kotlin.Array
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.NullUtil
@@ -28,6 +26,8 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashSet
+import org.allbinary.util.ABPriorityQueue
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
@@ -43,10 +43,10 @@ open public class PathFinder : GeographicPathFinderBase {
 
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
-    private val openPriorityQueue: PriorityQueue<PathFindingNodeCost> =
-        PriorityQueue<PathFindingNodeCost>()
+    private val openPriorityQueue: ABPriorityQueue<PathFindingNodeCost> =
+        ABPriorityQueue<PathFindingNodeCost>()
 
-    private val closedSet: HashSet<PathFindingNodeCost> = HashSet<PathFindingNodeCost>()
+    private val closedSet: ABHashSet<PathFindingNodeCost> = ABHashSet<PathFindingNodeCost>()
 
     private var geographicMapInterface: Any = NullUtil.getInstance()!!.NULL_OBJECT
 

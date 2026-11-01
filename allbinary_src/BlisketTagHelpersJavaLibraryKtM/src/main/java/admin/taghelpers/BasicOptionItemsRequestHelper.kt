@@ -50,21 +50,21 @@ open public class BasicOptionItemsRequestHelper : ModifyTable {
 
     private var request: HttpServletRequest
 
-    private var id: String
+    private lateinit var id: String
 
-    private var optionOneTitle: String
+    private lateinit var optionOneTitle: String
 
-    private var defaultOptionItem: String
+    private lateinit var defaultOptionItem: String
 
-    private var defaultOptionValue: String
+    private lateinit var defaultOptionValue: String
 
-    private var optionItem: BasicArrayList
+    private lateinit var optionItem: BasicArrayList
 
-    private var optionValue: BasicArrayList
+    private lateinit var optionValue: BasicArrayList
 
-    private var timeEntered: String
+    private lateinit var timeEntered: String
 
-    private var lastModified: String
+    private lateinit var lastModified: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

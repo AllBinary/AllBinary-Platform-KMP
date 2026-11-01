@@ -39,9 +39,9 @@ open public class CategoryHierarchy
                 , CategoryHierarchyInterface {
         
 
-    private var rootCategoryInterface: CategoryInterface
+    private lateinit var rootCategoryInterface: CategoryInterface
 
-    private var parentCategoryInterface: CategoryInterface
+    private lateinit var parentCategoryInterface: CategoryInterface
 
     private var level: Int
 public constructor (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface)

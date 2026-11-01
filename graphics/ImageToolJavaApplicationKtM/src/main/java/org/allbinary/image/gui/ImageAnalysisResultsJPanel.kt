@@ -145,57 +145,57 @@ this.maxBlueJTextField!!.setText(imageColorResults!!.getColorRange()!!.getMaxBlu
 }
 
 
-    private var avgBlueJTextField: javax.swing.JTextField
+    private lateinit var avgBlueJTextField: javax.swing.JTextField
 
-    private var avgGreenJTextField: javax.swing.JTextField
+    private lateinit var avgGreenJTextField: javax.swing.JTextField
 
-    private var avgRedJTextField: javax.swing.JTextField
+    private lateinit var avgRedJTextField: javax.swing.JTextField
 
-    private var jComboBox1: javax.swing.JComboBox
+    private lateinit var jComboBox1: javax.swing.JComboBox
 
-    private var jLabel1: javax.swing.JLabel
+    private lateinit var jLabel1: javax.swing.JLabel
 
-    private var jLabel10: javax.swing.JLabel
+    private lateinit var jLabel10: javax.swing.JLabel
 
-    private var jLabel11: javax.swing.JLabel
+    private lateinit var jLabel11: javax.swing.JLabel
 
-    private var jLabel12: javax.swing.JLabel
+    private lateinit var jLabel12: javax.swing.JLabel
 
-    private var jLabel13: javax.swing.JLabel
+    private lateinit var jLabel13: javax.swing.JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private lateinit var jLabel2: javax.swing.JLabel
 
-    private var jLabel3: javax.swing.JLabel
+    private lateinit var jLabel3: javax.swing.JLabel
 
-    private var jLabel4: javax.swing.JLabel
+    private lateinit var jLabel4: javax.swing.JLabel
 
-    private var jLabel5: javax.swing.JLabel
+    private lateinit var jLabel5: javax.swing.JLabel
 
-    private var jLabel6: javax.swing.JLabel
+    private lateinit var jLabel6: javax.swing.JLabel
 
-    private var jLabel7: javax.swing.JLabel
+    private lateinit var jLabel7: javax.swing.JLabel
 
-    private var jLabel8: javax.swing.JLabel
+    private lateinit var jLabel8: javax.swing.JLabel
 
-    private var jLabel9: javax.swing.JLabel
+    private lateinit var jLabel9: javax.swing.JLabel
 
-    private var matchingPixelsJTextField: javax.swing.JTextField
+    private lateinit var matchingPixelsJTextField: javax.swing.JTextField
 
-    private var maxBlueJTextField: javax.swing.JTextField
+    private lateinit var maxBlueJTextField: javax.swing.JTextField
 
-    private var maxGreenJTextField: javax.swing.JTextField
+    private lateinit var maxGreenJTextField: javax.swing.JTextField
 
-    private var maxRedJTextField: javax.swing.JTextField
+    private lateinit var maxRedJTextField: javax.swing.JTextField
 
-    private var minBlueJTextField: javax.swing.JTextField
+    private lateinit var minBlueJTextField: javax.swing.JTextField
 
-    private var minGreenJTextField: javax.swing.JTextField
+    private lateinit var minGreenJTextField: javax.swing.JTextField
 
-    private var minRedJTextField: javax.swing.JTextField
+    private lateinit var minRedJTextField: javax.swing.JTextField
 
-    private var percentMatchingJTextField: javax.swing.JTextField
+    private lateinit var percentMatchingJTextField: javax.swing.JTextField
 
-    private var totalPixelsJTextField: javax.swing.JTextField
+    private lateinit var totalPixelsJTextField: javax.swing.JTextField
 
 }
                 

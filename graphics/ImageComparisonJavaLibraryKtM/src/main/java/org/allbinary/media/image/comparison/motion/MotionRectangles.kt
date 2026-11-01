@@ -37,9 +37,9 @@ open public class MotionRectangles
 
     private val name: String
 
-    private var rectangleVector: BasicArrayList
+    private lateinit var rectangleVector: BasicArrayList
 
-    private var imageComparisonResult: ImageComparisonResult
+    private lateinit var imageComparisonResult: ImageComparisonResult
 
     val MAX_PIXEL_DISTANCE_THRESHOLD: Int = 2
 public constructor (name: String, imageComparisonResult: ImageComparisonResult)

@@ -45,7 +45,7 @@ open public class SetLicenseInitInfo
         
 companion object {
             
-    private var stdinput: BufferedReader = BufferedReader(InputStreamReader(System.in))
+    private var stdinput: BufferedReader = BufferedReader(InputStreamReader(System.`in`))
 
                 @Throws(Exception::class)
             

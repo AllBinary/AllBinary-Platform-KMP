@@ -99,7 +99,7 @@ scaledImages[index]= this.scale(images[index]!!, width, height)!!
     //var width = width
     //var height = height
 
-    var originalPlayNImage: CoreImage = 
+    var originalPlayNImage: CoreImage? = 
                 null
             
 

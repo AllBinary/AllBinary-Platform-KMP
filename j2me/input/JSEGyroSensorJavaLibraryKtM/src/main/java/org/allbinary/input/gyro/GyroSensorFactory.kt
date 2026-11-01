@@ -33,7 +33,7 @@ open public class GyroSensorFactory
         
 companion object {
             
-    private var allBinaryGyroSensor: AllBinaryOrientationSensor
+    private lateinit var allBinaryGyroSensor: AllBinaryOrientationSensor
 
                 @Throws(Exception::class)
             

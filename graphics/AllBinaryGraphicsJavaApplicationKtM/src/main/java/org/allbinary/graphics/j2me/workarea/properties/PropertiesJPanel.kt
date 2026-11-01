@@ -97,31 +97,31 @@ add(this.modifierJPanel)
 }
 
 
-    private var rotateJButton: javax.swing.JButton
+    private lateinit var rotateJButton: javax.swing.JButton
 
-    private var copyVerticalJButton: javax.swing.JButton
+    private lateinit var copyVerticalJButton: javax.swing.JButton
 
-    private var leftJButton: javax.swing.JButton
+    private lateinit var leftJButton: javax.swing.JButton
 
-    private var rotateJPanel: javax.swing.JPanel
+    private lateinit var rotateJPanel: javax.swing.JPanel
 
-    private var angleJTextField: javax.swing.JTextField
+    private lateinit var angleJTextField: javax.swing.JTextField
 
-    private var workAreaPropertiesJPanel: javax.swing.JPanel
+    private lateinit var workAreaPropertiesJPanel: javax.swing.JPanel
 
-    private var modifierJPanel: javax.swing.JPanel
+    private lateinit var modifierJPanel: javax.swing.JPanel
 
-    private var upJButton: javax.swing.JButton
+    private lateinit var upJButton: javax.swing.JButton
 
-    private var jPanel8: javax.swing.JPanel
+    private lateinit var jPanel8: javax.swing.JPanel
 
-    private var downJButton: javax.swing.JButton
+    private lateinit var downJButton: javax.swing.JButton
 
-    private var jPanel7: javax.swing.JPanel
+    private lateinit var jPanel7: javax.swing.JPanel
 
-    private var rightJButton: javax.swing.JButton
+    private lateinit var rightJButton: javax.swing.JButton
 
-    private var copyHorizontalJButton: javax.swing.JButton
+    private lateinit var copyHorizontalJButton: javax.swing.JButton
 
 }
                 

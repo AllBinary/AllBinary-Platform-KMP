@@ -51,7 +51,7 @@ open public class EditValidationView : DownloadableInventoryItemView
                 , ValidationComponentInterface {
         
 
-    private var downloadItemId: String
+    private lateinit var downloadItemId: String
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){

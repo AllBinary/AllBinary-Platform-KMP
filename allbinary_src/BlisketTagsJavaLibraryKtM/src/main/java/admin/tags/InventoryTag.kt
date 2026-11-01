@@ -36,7 +36,7 @@ import org.allbinary.logic.communication.http.request.AbResponseHandler
 open public class InventoryTag : TableTag {
         
 
-    private var storeName: String
+    private lateinit var storeName: String
 public constructor ()                        
 
                             : super(){

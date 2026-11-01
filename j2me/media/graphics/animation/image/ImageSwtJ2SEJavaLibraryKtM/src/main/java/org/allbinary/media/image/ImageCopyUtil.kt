@@ -122,7 +122,7 @@ image= this.openGLUtil!!.addImage(image)!!
             
     open fun createImage(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image?{
     //var originalImage = originalImage
 
     
@@ -160,7 +160,7 @@ originalImage2= openGLESImage!!.openGLBitmap!!.getImage()!!
                                     }
                                 
 
-    var image: Image = 
+    var image: Image? = 
                 null
             
 
@@ -195,7 +195,7 @@ image= this.openGLUtil!!.addImage(image)!!
             
     open fun createImageWH(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image?{
     //var originalImage = originalImage
     //var width = width
     //var height = height
@@ -247,7 +247,7 @@ originalImage2= openGLESImage!!.openGLBitmap!!.getImage()!!
                                     }
                                 
 
-    var image: Image = 
+    var image: Image? = 
                 null
             
 
@@ -342,7 +342,7 @@ image= this.openGLUtil!!.addImage(image)!!
             
     open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image?{
     //var originalImage = originalImage
     //var width = width
     //var height = height
@@ -363,7 +363,7 @@ image= this.openGLUtil!!.addImage(image)!!
                                     }
                                 
 
-    var image: Image = 
+    var image: Image? = 
                 null
             
 

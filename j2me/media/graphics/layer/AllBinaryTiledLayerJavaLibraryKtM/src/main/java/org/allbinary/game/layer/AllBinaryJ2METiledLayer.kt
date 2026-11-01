@@ -96,38 +96,54 @@ open public class AllBinaryJ2METiledLayer : AllBinaryTiledLayer {
 
         var stringMaker: StringMaker = StringMaker()
 
-        for (rowIndex in firstRow until totalRows) {
+        run {
+            var rowIndex: Int = firstRow
 
-            x = x0
+            while (rowIndex < totalRows) {
+                try {
+                    x = x0
 
-            for (columnIndex in firstColumn until totalColumns) {
+                    run {
+                        var columnIndex: Int = firstColumn
 
-                tile = this.tiledLayerP!!.getCell(columnIndex, rowIndex)
+                        while (columnIndex < totalColumns) {
+                            try {
+                                tile = this.tiledLayerP!!.getCell(columnIndex, rowIndex)
 
-                if (tile < 0) {
+                                if (tile < 0) {
 
-                    tile = this.tiledLayerP!!.getAnimatedTile(tile)
+                                    tile = this.tiledLayerP!!.getAnimatedTile(tile)
+                                }
+
+                                if (tile == 0) {
+
+                                    continue
+                                }
+
+                                tile--
+                                stringMaker!!.delete(0, stringMaker!!.length())
+                                graphics.drawString(
+                                    stringMaker!!
+                                        .appendint(columnIndex)!!
+                                        .append(commonSeps!!.COMMA)!!
+                                        .appendint(rowIndex)!!
+                                        .append(commonSeps!!.COLON)!!
+                                        .appendint(tile)!!
+                                        .toString(),
+                                    x + 5,
+                                    y + 10,
+                                    0,
+                                )
+                            } finally {
+                                columnIndex++
+                                x += tileWidth
+                            }
+                        }
+                    }
+                } finally {
+                    rowIndex++
+                    y += tileHeight
                 }
-
-                if (tile == 0) {
-
-                    continue
-                }
-
-                tile--
-                stringMaker!!.delete(0, stringMaker!!.length())
-                graphics.drawString(
-                    stringMaker!!
-                        .appendint(columnIndex)!!
-                        .append(commonSeps!!.COMMA)!!
-                        .appendint(rowIndex)!!
-                        .append(commonSeps!!.COLON)!!
-                        .appendint(tile)!!
-                        .toString(),
-                    x + 5,
-                    y + 10,
-                    0,
-                )
             }
         }
 

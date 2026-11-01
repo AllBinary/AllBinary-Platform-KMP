@@ -57,9 +57,9 @@ open public class BasketRequestHelper : TagHelper {
 
     private val request: HttpServletRequest
 
-    private var id: String
+    private lateinit var id: String
 
-    private var num: String
+    private lateinit var num: String
 
     private val MAX: Int = 200
 public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){

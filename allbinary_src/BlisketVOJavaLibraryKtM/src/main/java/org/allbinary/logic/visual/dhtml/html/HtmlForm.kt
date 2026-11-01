@@ -54,7 +54,7 @@ open public class HtmlForm
 
     private val METHOD: String = "METHOD=\""
 
-    private var method: String
+    private lateinit var method: String
 
     private var action: String
 

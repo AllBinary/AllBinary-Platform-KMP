@@ -46,7 +46,7 @@ open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
 
     private var defaultMutableTreeNode: DefaultMutableTreeNode = DefaultMutableTreeNode("Root")
 
-    private var genericProfileActionScript: GenericProfileActionScript
+    private lateinit var genericProfileActionScript: GenericProfileActionScript
 public constructor (){
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.initComponents()
@@ -187,9 +187,9 @@ var evt = evt
 }
 
 
-    private var actionScriptJTree: javax.swing.JTree
+    private lateinit var actionScriptJTree: javax.swing.JTree
 
-    private var jScrollPane1: javax.swing.JScrollPane
+    private lateinit var jScrollPane1: javax.swing.JScrollPane
 
 }
                 

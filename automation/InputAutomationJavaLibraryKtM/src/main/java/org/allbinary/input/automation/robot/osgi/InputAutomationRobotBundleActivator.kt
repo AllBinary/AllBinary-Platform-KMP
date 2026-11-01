@@ -49,7 +49,7 @@ open public class InputAutomationRobotBundleActivator
 
     private var inputRobotInterface: Array<InputRobotInterface?>
 
-    private var serviceFactory: ServiceFactory
+    private lateinit var serviceFactory: ServiceFactory
 public constructor ()
             : super()
         {

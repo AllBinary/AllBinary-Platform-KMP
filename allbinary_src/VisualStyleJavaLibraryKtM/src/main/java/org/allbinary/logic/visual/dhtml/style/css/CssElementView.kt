@@ -64,7 +64,7 @@ open public class CssElementView
 
     private var description: String
 
-    var cssElementVector: BasicArrayList
+    lateinit var cssElementVector: BasicArrayList
 
     var cssPropertyVector: BasicArrayList
 public constructor ()

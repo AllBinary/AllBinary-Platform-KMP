@@ -66,7 +66,7 @@ var node = node
 
         }
             
-    private var name: String
+    private lateinit var name: String
 public constructor (name: String)
             : super()
         {

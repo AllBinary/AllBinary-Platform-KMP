@@ -39,7 +39,7 @@ open public class TimeLastModifiedView
                 , DomNodeInterface {
         
 
-    private var timeLastModified: TimeLastModified
+    private lateinit var timeLastModified: TimeLastModified
 public constructor (timeLastModified: TimeLastModified)
             : super()
         {

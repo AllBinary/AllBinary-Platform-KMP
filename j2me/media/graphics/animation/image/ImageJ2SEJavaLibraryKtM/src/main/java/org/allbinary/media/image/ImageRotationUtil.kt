@@ -76,7 +76,7 @@ private constructor ()
     var newBufferedImage: BufferedImage = j2seImage!!.getImage() as BufferedImage
 
 
-    var originalAwtImage: java.awt.Image = 
+    var originalAwtImage: java.awt.Image? = 
                 null
             
 
@@ -128,7 +128,7 @@ var rotationInDegrees = rotationInDegrees
                         
                                     {
                                     
-    var originalAwtImage: java.awt.Image = 
+    var originalAwtImage: java.awt.Image? = 
                 null
             
 

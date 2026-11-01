@@ -173,19 +173,19 @@ this.getTimeIntervalActionJDialog()!!.setVisible(true)
 }
 
 
-    private var jLabel1: javax.swing.JLabel
+    private lateinit var jLabel1: javax.swing.JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private lateinit var jLabel2: javax.swing.JLabel
 
-    private var okJButton: javax.swing.JButton
+    private lateinit var okJButton: javax.swing.JButton
 
-    private var timeIntervalActionJButton: javax.swing.JButton
+    private lateinit var timeIntervalActionJButton: javax.swing.JButton
 
-    private var timeIntervalActionJDialog: javax.swing.JDialog
+    private lateinit var timeIntervalActionJDialog: javax.swing.JDialog
 
-    private var timeIntervalJTextField: javax.swing.JTextField
+    private lateinit var timeIntervalJTextField: javax.swing.JTextField
 
-    private var titleJLabel: javax.swing.JLabel
+    private lateinit var titleJLabel: javax.swing.JLabel
 
 }
                 

@@ -63,13 +63,13 @@ companion object {
 
     private val commonFileStrings: CommonDataFileStrings = CommonDataFileStrings.getInstance()!!
 
-    private var name: String
+    private lateinit var name: String
 
-    private var genericProfileActionsJPanel: GenericProfileActionsJPanel
+    private lateinit var genericProfileActionsJPanel: GenericProfileActionsJPanel
 
-    private var actionsDefaultListModelHelper: DefaultListModelHelper
+    private lateinit var actionsDefaultListModelHelper: DefaultListModelHelper
 
-    private var hashMap: HashMap<Any, Any>
+    private lateinit var hashMap: HashMap<Any, Any>
 public constructor (genericProfileActionsJPanel: GenericProfileActionsJPanel, name: String)
             : super()
         {

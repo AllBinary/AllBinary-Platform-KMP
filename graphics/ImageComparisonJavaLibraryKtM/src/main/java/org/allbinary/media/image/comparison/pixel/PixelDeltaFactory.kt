@@ -43,7 +43,7 @@ open public class PixelDeltaFactory
         
 companion object {
             
-    private var cacheInterface: AutomaticCacheInterface = 
+    private var cacheInterface: AutomaticCacheInterface? = 
                 null
             
 

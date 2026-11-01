@@ -133,7 +133,7 @@ this.logUtil!!.putF("Processing Individual Cells cellHeight: " +cellHeight +" ce
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
 
 
-    var nameEnding: String = 
+    var nameEnding: String? = 
                 null
             
 
@@ -250,7 +250,7 @@ generatedBufferedImageArray= Array(rows) { arrayOfNulls<BufferedImage?>(columns)
                                                             
 this.logUtil!!.putF("Processing Individual Cells for each Direction", this, this.commonStrings!!.RUN)
 
-    var nameEnding: String = 
+    var nameEnding: String? = 
                 null
             
 

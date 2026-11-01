@@ -61,7 +61,7 @@ open public class RootStoreCategoryProperties
 
     private val pathData: AbPathData = AbPathData.getInstance()!!
 
-    private var fileAbPath: AbPath
+    private lateinit var fileAbPath: AbPath
 
     private var abPath: AbPath
 
@@ -69,7 +69,7 @@ open public class RootStoreCategoryProperties
 
     private var isRealRoot: Boolean
 
-    var webAppAbPath: AbPath
+    lateinit var webAppAbPath: AbPath
 
     var transformInfoInterface: TransformInfoInterface
 public constructor (transformInfoInterface: TransformInfoInterface)

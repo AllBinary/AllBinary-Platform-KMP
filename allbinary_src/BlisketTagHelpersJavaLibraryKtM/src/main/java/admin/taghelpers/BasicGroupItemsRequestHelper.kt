@@ -50,31 +50,31 @@ open public class BasicGroupItemsRequestHelper : ModifyTable {
 
     private var request: HttpServletRequest
 
-    private var id: String
+    private lateinit var id: String
 
-    private var itemOne: String
+    private lateinit var itemOne: String
 
-    private var itemTwo: String
+    private lateinit var itemTwo: String
 
-    private var itemThree: String
+    private lateinit var itemThree: String
 
-    private var itemFour: String
+    private lateinit var itemFour: String
 
-    private var itemFive: String
+    private lateinit var itemFive: String
 
-    private var itemSix: String
+    private lateinit var itemSix: String
 
-    private var itemSeven: String
+    private lateinit var itemSeven: String
 
-    private var itemEight: String
+    private lateinit var itemEight: String
 
-    private var itemNine: String
+    private lateinit var itemNine: String
 
-    private var itemTen: String
+    private lateinit var itemTen: String
 
-    private var timeEntered: String
+    private lateinit var timeEntered: String
 
-    private var lastModified: String
+    private lateinit var lastModified: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

@@ -39,7 +39,7 @@ open public class TimeCreatedView
                 , DomNodeInterface {
         
 
-    private var timeCreated: TimeCreated
+    private lateinit var timeCreated: TimeCreated
 public constructor (timeCreated: TimeCreated)
             : super()
         {

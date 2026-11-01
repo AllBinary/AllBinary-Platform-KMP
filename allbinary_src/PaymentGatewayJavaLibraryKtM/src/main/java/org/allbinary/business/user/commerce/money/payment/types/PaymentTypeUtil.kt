@@ -78,7 +78,7 @@ companion object {
 
     private val SHIPPINGMETHODSFILENAME: String = "paymentGatewayTypes.xml"
 
-    private var defaultName: String = 
+    private var defaultName: String? = 
                 null
             
 

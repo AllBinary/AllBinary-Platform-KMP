@@ -46,7 +46,7 @@ open public class QuoteRequestHelper : ModifyTable {
 
     private var weblisketSession: WeblisketSession
 
-    private var storeFrontInterface: StoreFrontInterface
+    private lateinit var storeFrontInterface: StoreFrontInterface
 
     private var quoteRequest: QuoteRequest
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){

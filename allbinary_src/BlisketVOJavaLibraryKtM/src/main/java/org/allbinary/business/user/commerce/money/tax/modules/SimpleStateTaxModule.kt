@@ -58,9 +58,9 @@ open public class SimpleStateTaxModule
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var streetAddress: StreetAddress
+    private lateinit var streetAddress: StreetAddress
 
-    private var storeFrontInterface: StoreFrontInterface
+    private lateinit var storeFrontInterface: StoreFrontInterface
 
     private val ALL: String = CommonPhoneStrings.getInstance()!!.STAR
 
@@ -68,7 +68,7 @@ open public class SimpleStateTaxModule
 
     private val STATETAXFILE: String = "stateTaxation.xml"
 
-    private var document: Document
+    private lateinit var document: Document
 public constructor ()
             : super()
         {

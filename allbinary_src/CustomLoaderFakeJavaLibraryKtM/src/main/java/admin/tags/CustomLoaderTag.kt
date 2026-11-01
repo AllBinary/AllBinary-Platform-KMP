@@ -40,9 +40,9 @@ open public class CustomLoaderTag : CustomTagSupport {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var command: String
+    private lateinit var command: String
 
-    private var webappPath: String
+    private lateinit var webappPath: String
 public constructor (){
 }
 

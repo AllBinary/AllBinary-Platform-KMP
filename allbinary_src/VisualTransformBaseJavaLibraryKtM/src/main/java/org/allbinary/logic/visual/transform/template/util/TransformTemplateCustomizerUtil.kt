@@ -119,7 +119,7 @@ hashMap!!.put(arrayOf(this.GLOBALS_DELETE), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(this.GLOBALS_EDIT), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(this.GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
 
-    var replace: Replace = 
+    var replace: Replace? = 
                 null
             
 

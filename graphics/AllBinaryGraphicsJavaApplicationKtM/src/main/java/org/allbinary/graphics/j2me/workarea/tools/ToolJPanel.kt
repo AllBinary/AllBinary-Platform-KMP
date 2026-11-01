@@ -446,41 +446,41 @@ ToolFactory.getInstance()!!.setSelectedTool(this.lineJButton!!.getText())
 }
 
 
-    private var arcJButton: javax.swing.JButton
+    private lateinit var arcJButton: javax.swing.JButton
 
-    private var charJButton: javax.swing.JButton
+    private lateinit var charJButton: javax.swing.JButton
 
-    private var colorJList: javax.swing.JList
+    private lateinit var colorJList: javax.swing.JList
 
-    private var colorJPanel: javax.swing.JPanel
+    private lateinit var colorJPanel: javax.swing.JPanel
 
-    private var dottedArcJButton: javax.swing.JButton
+    private lateinit var dottedArcJButton: javax.swing.JButton
 
-    private var dottedFillArcJButton: javax.swing.JButton
+    private lateinit var dottedFillArcJButton: javax.swing.JButton
 
-    private var dottedFillRectJButton: javax.swing.JButton
+    private lateinit var dottedFillRectJButton: javax.swing.JButton
 
-    private var dottedFillRountRectJButton: javax.swing.JButton
+    private lateinit var dottedFillRountRectJButton: javax.swing.JButton
 
-    private var dottedLineJButton: javax.swing.JButton
+    private lateinit var dottedLineJButton: javax.swing.JButton
 
-    private var dottedRectButton: javax.swing.JButton
+    private lateinit var dottedRectButton: javax.swing.JButton
 
-    private var fillArcJButton: javax.swing.JButton
+    private lateinit var fillArcJButton: javax.swing.JButton
 
-    private var fillRectJButton: javax.swing.JButton
+    private lateinit var fillRectJButton: javax.swing.JButton
 
-    private var fillRoundRectJButton: javax.swing.JButton
+    private lateinit var fillRoundRectJButton: javax.swing.JButton
 
-    private var imageJButton: javax.swing.JButton
+    private lateinit var imageJButton: javax.swing.JButton
 
-    private var lineJButton: javax.swing.JButton
+    private lateinit var lineJButton: javax.swing.JButton
 
-    private var rectJButton: javax.swing.JButton
+    private lateinit var rectJButton: javax.swing.JButton
 
-    private var roundRectJButton: javax.swing.JButton
+    private lateinit var roundRectJButton: javax.swing.JButton
 
-    private var stringJButton: javax.swing.JButton
+    private lateinit var stringJButton: javax.swing.JButton
 
 }
                 

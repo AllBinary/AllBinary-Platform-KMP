@@ -43,73 +43,73 @@ open public class PaymentGateway
                 , PaymentGatewayInterface {
         
 
-    private var storeName: String
+    private lateinit var storeName: String
 
-    private var name: String
+    private lateinit var name: String
 
-    private var enable: String
+    private lateinit var enable: String
 
-    private var paymentMethod: String
+    private lateinit var paymentMethod: String
 
-    private var mode: String
+    private lateinit var mode: String
 
-    private var testProtocol: String
+    private lateinit var testProtocol: String
 
-    private var testServer: String
+    private lateinit var testServer: String
 
-    private var testPort: String
+    private lateinit var testPort: String
 
-    private var testPath: String
+    private lateinit var testPath: String
 
-    private var serverProtocol: String
+    private lateinit var serverProtocol: String
 
-    private var server: String
+    private lateinit var server: String
 
-    private var serverPort: String
+    private lateinit var serverPort: String
 
-    private var serverPath: String
+    private lateinit var serverPath: String
 
-    private var timeout: String
+    private lateinit var timeout: String
 
-    private var userName: String
+    private lateinit var userName: String
 
-    private var password: String
+    private lateinit var password: String
 
-    private var proxyProtocol: String
+    private lateinit var proxyProtocol: String
 
-    private var proxyServer: String
+    private lateinit var proxyServer: String
 
-    private var proxyPort: String
+    private lateinit var proxyPort: String
 
-    private var proxyPath: String
+    private lateinit var proxyPath: String
 
-    private var proxyUserName: String
+    private lateinit var proxyUserName: String
 
-    private var proxyPassword: String
+    private lateinit var proxyPassword: String
 
-    private var proxyTimeout: String
+    private lateinit var proxyTimeout: String
 
-    private var special1: String
+    private lateinit var special1: String
 
-    private var special2: String
+    private lateinit var special2: String
 
-    private var special3: String
+    private lateinit var special3: String
 
-    private var special4: String
+    private lateinit var special4: String
 
-    private var special5: String
+    private lateinit var special5: String
 
-    private var special6: String
+    private lateinit var special6: String
 
-    private var special7: String
+    private lateinit var special7: String
 
-    private var special8: String
+    private lateinit var special8: String
 
-    private var special9: String
+    private lateinit var special9: String
 
-    private var lastModified: String
+    private lateinit var lastModified: String
 
-    private var timeEntered: String
+    private lateinit var timeEntered: String
 public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {

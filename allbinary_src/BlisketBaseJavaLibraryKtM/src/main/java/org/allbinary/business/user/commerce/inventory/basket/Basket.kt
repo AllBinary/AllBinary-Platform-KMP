@@ -183,7 +183,7 @@ totalWeight!!.add(weightFloat!!.toString())
         //nullable = true from not(false or (false and true)) = true
 : Set{
 
-    var set: Set = this.items.keySet()!!
+    var set: Set = this.items.keys!!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

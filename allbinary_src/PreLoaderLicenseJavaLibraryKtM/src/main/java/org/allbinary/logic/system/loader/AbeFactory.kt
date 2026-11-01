@@ -124,7 +124,7 @@ var className = className
 var classes = classes
 var params = params
 
-    var constructor: Constructor = 
+    var constructor: Constructor? = 
                 null
             
 

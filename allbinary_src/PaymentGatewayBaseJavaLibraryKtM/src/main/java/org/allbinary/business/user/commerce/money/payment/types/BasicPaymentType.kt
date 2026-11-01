@@ -42,9 +42,9 @@ open public class BasicPaymentType
          {
         
 
-    private var name: String
+    private lateinit var name: String
 
-    private var value: String
+    private lateinit var value: String
 
     private var paymentGatewayInterfaceFactoryInterface: PaymentGatewayInterfaceFactoryInterface
 

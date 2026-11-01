@@ -69,7 +69,7 @@ companion object {
 
     private var installed: Boolean= false
 
-    private var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>
+    private lateinit var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>
 public constructor ()
             : super()
         {

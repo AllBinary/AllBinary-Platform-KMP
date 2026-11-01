@@ -63,9 +63,9 @@ open public class UploadFileServlet : HttpServlet {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    var requestHashMap: HashMap<Any, Any>
+    lateinit var requestHashMap: HashMap<Any, Any>
 
-    private var fileName: String
+    private lateinit var fileName: String
 
                 @Throws(ServletException::class, IOException::class)
             
@@ -78,7 +78,7 @@ var response = response
     var isError: Boolean = false
 
 
-    var inputStream: InputStream = 
+    var inputStream: InputStream? = 
                 null
             
 
@@ -189,7 +189,7 @@ response.sendError(HttpServletResponse.SC_NOT_FOUND)
 {
 var filePath = filePath
 
-    var fileOutputStream: AbFileOutputStream = 
+    var fileOutputStream: AbFileOutputStream? = 
                 null
             
 

@@ -52,13 +52,12 @@ var min_x = min_x
 var max_x = max_x
 var y = y
 
+        run {
+        
+    var index: Int = max_x.toInt()
 
-
-
-                        for (index in max_x.toInt()!! downTo min_x.toInt()!!)
-
-        {
-
+        while (index > min_x.toInt()) {
+        
     var colorInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(index, y.toInt())))!!
 
 
@@ -85,8 +84,11 @@ var y = y
 
                         }
                             
-}
 
+index -= 1
+        }
+        }
+    
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0.0

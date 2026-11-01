@@ -44,11 +44,11 @@ open public class OrderTag : CustomTagSupport {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var command: String
+    private lateinit var command: String
 
-    private var storeName: String
+    private lateinit var storeName: String
 
-    private var propertiesHashMap: HashMap<Any, Any>
+    private lateinit var propertiesHashMap: HashMap<Any, Any>
 public constructor (){
 }
 

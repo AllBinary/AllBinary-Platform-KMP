@@ -155,22 +155,28 @@ open public class GLUtil : Object {
 
         var sinA: Double = Math.sin(angleRad)
 
-        for (i in 0 until uvs.size) {
+        run {
+            var i: Int = 0
 
-            var u: Float = uvs[i]!!
+            while (i < uvs.size) {
 
-            var v: Float = uvs[i + 1]!!
+                var u: Float = uvs[i]!!
 
-            var du: Float = u - pivotU
+                var v: Float = uvs[i + 1]!!
 
-            var dv: Float = v - pivotV
+                var du: Float = u - pivotU
 
-            var ru: Float = (du * cosA - dv * sinA).toFloat() + pivotU
+                var dv: Float = v - pivotV
 
-            var rv: Float = (du * sinA + dv * cosA).toFloat() + pivotV
+                var ru: Float = (du * cosA - dv * sinA).toFloat() + pivotU
 
-            uvs[i] = ru
-            uvs[i + 1] = rv
+                var rv: Float = (du * sinA + dv * cosA).toFloat() + pivotV
+
+                uvs[i] = ru
+                uvs[i + 1] = rv
+
+                i += 2
+            }
         }
     }
 }

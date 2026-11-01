@@ -50,15 +50,15 @@ open public class XmlOptionItemsRequestHelper : ModifyTable {
 
     private var request: HttpServletRequest
 
-    private var id: String
+    private lateinit var id: String
 
-    private var xmlFileStatus: String
+    private lateinit var xmlFileStatus: String
 
-    private var optionXmlFile: String
+    private lateinit var optionXmlFile: String
 
-    private var timeEntered: String
+    private lateinit var timeEntered: String
 
-    private var lastModified: String
+    private lateinit var lastModified: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

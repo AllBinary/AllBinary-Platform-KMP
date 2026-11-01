@@ -74,12 +74,12 @@ this.setTemplateAsInputStream()
 {
     //var file = file
 
-    var outputStream: ByteArrayOutputStream = 
+    var outputStream: ByteArrayOutputStream? = 
                 null
             
 
 
-    var inputStream: AbFileInputStream = 
+    var inputStream: AbFileInputStream? = 
                 null
             
 
@@ -144,12 +144,12 @@ this.streamUtil!!.close(inputStream)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var outputStream: ByteArrayOutputStream = 
+    var outputStream: ByteArrayOutputStream? = 
                 null
             
 
 
-    var inputStream: ByteArrayInputStream = 
+    var inputStream: ByteArrayInputStream? = 
                 null
             
 
@@ -207,12 +207,12 @@ this.streamUtil!!.close(inputStream)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var inputStream: AbFileInputStream = 
+    var inputStream: AbFileInputStream? = 
                 null
             
 
 
-    var outputStream: ByteArrayOutputStream = 
+    var outputStream: ByteArrayOutputStream? = 
                 null
             
 

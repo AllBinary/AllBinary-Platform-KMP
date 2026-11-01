@@ -90,13 +90,13 @@ companion object {
 
     private val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
-    private var treeNode: DefaultMutableTreeNode
+    private lateinit var treeNode: DefaultMutableTreeNode
 
-    private var pointTreeNodeVector: BasicArrayList
+    private lateinit var pointTreeNodeVector: BasicArrayList
 
-    private var currentMousePoint: GPoint
+    private lateinit var currentMousePoint: GPoint
 
-    private var fulcrumPoint: GPoint
+    private lateinit var fulcrumPoint: GPoint
 
     private var active: Boolean = false
 
@@ -321,9 +321,9 @@ this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.si
 
     open fun removePoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint?{
 
-    var point: GPoint = 
+    var point: GPoint? = 
                 null
             
 
@@ -495,7 +495,7 @@ graphics.setStroke(BasicStroke(x))
     var size: Int = tempPointVector!!.size()
 
 
-    var firstPoint: GPoint = 
+    var firstPoint: GPoint? = 
                 null
             
 

@@ -82,12 +82,12 @@ var fileItem = fileItem
     var streamUtil: StreamUtil = StreamUtil.getInstance()!!
 
 
-    var inputStream: InputStream = 
+    var inputStream: InputStream? = 
                 null
             
 
 
-    var outputStream: ByteArrayOutputStream = 
+    var outputStream: ByteArrayOutputStream? = 
                 null
             
 

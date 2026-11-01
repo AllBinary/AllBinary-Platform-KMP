@@ -99,7 +99,7 @@ open public class BasicItem
 
     var customs: String
 
-    private var downloads: String
+    private lateinit var downloads: String
 
     var groups: String
 

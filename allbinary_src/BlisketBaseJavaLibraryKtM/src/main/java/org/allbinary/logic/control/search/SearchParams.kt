@@ -45,15 +45,15 @@ open public class SearchParams
 
     private var columnsAndSearchValues: HashMap<Any, Any>
 
-    private var order: String
+    private lateinit var order: String
 
-    private var sortBy: String
+    private lateinit var sortBy: String
 
-    private var listLength: String
+    private lateinit var listLength: String
 
-    private var startPage: String
+    private lateinit var startPage: String
 
-    private var endPage: String
+    private lateinit var endPage: String
 public constructor (request: HttpServletRequest)
             : super()
         {
@@ -191,10 +191,10 @@ this.endPage= value
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Integer(0) }
+                            
 }
 
 
@@ -232,10 +232,10 @@ this.endPage= value
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Integer(0) }
+                            
 }
 
 
@@ -255,10 +255,10 @@ this.endPage= value
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Integer(0) }
+                            
 }
 
 
@@ -292,7 +292,7 @@ var document = document
                             toString())!!
 
 
-    var set: Set = this.columnsAndSearchValues!!.keySet()!!
+    var set: Set = this.columnsAndSearchValues!!.keys!!
 
 
     var searchValueArray: Array<Any?> = set.toTypedArray()!!

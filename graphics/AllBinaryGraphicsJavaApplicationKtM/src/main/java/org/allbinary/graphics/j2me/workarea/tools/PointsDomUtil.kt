@@ -95,12 +95,12 @@ var pointVector = pointVector
     var size: Int = pointVector!!.size()
 
 
-    var firstPoint: GPoint = 
+    var firstPoint: GPoint? = 
                 null
             
 
 
-    var rotatedFirstPoint: GPoint = 
+    var rotatedFirstPoint: GPoint? = 
                 null
             
 

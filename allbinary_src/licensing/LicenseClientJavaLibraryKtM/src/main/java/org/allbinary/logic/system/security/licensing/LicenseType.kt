@@ -32,7 +32,7 @@ open public class LicenseType
          {
         
 
-    private var name: String
+    private lateinit var name: String
 protected constructor (name: String)
             : super()
         {

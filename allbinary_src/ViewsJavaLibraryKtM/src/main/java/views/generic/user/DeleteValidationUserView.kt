@@ -96,10 +96,10 @@ this.userName= UserName(hashMap).
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false }
+                            
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
@@ -145,10 +145,8 @@ this.userName= UserName(hashMap).
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { stringBuffer!!.append("User Name is not valid.<br />") }
+                            
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()

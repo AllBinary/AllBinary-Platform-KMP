@@ -45,7 +45,7 @@ open public class UserEmailEventsConfiguration
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var emailEventHashMap: HashMap<Any, Any>
+    private lateinit var emailEventHashMap: HashMap<Any, Any>
 public constructor ()
             : super()
         {

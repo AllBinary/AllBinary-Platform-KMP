@@ -48,9 +48,9 @@ open public class MetaValidation : Validation
 
     private var label: String
 
-    private var name: String
+    private lateinit var name: String
 
-    private var httpEquiv: String
+    private lateinit var httpEquiv: String
 
     private var content: String
 public constructor (htmlMetaAttributeData: HtmlMetaAttributeData, label: String, attributeValue: String, contentValue: String){

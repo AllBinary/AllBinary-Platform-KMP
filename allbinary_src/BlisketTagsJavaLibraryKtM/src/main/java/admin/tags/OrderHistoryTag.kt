@@ -41,7 +41,7 @@ open public class OrderHistoryTag : TableTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var status: String
+    private lateinit var status: String
 public constructor (){
 this.setTagHelperFactory(OrderHistoryHelperFactory())
 this.setTagRequestHelperFactory(OrderHistoryRequestHelperFactory())

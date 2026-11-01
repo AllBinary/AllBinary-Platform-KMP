@@ -177,7 +177,7 @@ var fileName = fileName
     var buffer: ByteArray = ByteArray(16384)
 
 
-    var inputStream: ZipInputStream = 
+    var inputStream: ZipInputStream? = 
                 null
             
 

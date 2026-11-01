@@ -32,6 +32,7 @@ import java.io.InputStream
 import java.io.StringBufferInputStream
 import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
+import org.allbinary.string.CommonPhoneStrings
 import org.w3c.dom.Document
 
 open public class DomDocumentHelper
@@ -43,9 +44,12 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-System.setProperty("jdk.xml.maxElementDepth", "0")
-System.setProperty("jdk.xml.xpathExprOpLimit", "0")
-System.setProperty("jdk.xml.xpathTotalOpLimit", "0")
+
+    var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
+
+System.setProperty("jdk.xml.maxElementDepth", commonPhoneStrings!!.ZERO)
+System.setProperty("jdk.xml.xpathExprOpLimit", commonPhoneStrings!!.ZERO)
+System.setProperty("jdk.xml.xpathTotalOpLimit", commonPhoneStrings!!.ZERO)
 
     var LIMIT: String = "500000"
 

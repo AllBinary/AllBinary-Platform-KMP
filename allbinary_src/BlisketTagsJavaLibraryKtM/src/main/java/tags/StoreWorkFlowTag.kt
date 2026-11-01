@@ -41,9 +41,9 @@ open public class StoreWorkFlowTag : HelperTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var viewName: String
+    private lateinit var viewName: String
 
-    private var viewFile: String
+    private lateinit var viewFile: String
 public constructor ()                        
 
                             : super(StoreTagWorkFlowHelperFactory()){

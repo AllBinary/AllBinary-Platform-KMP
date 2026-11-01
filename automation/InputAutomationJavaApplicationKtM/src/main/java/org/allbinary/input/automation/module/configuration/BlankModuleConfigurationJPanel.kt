@@ -48,7 +48,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-    private var jLabel1: javax.swing.JLabel
+    private lateinit var jLabel1: javax.swing.JLabel
 
 }
                 

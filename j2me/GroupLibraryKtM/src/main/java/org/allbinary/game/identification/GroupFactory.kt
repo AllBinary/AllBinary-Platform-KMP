@@ -27,7 +27,7 @@ open public class GroupFactory : Object {
 
     companion object {
 
-        private var instance: GroupFactory = GroupFactory()
+        private val instance: GroupFactory = GroupFactory()
 
         open fun getInstance()
         // nullable =  from not(true or (false and true)) =
@@ -79,8 +79,8 @@ open public class GroupFactory : Object {
     open fun init(groups: Short, nameArray: Array<String?>)
         // nullable = true from not(false or (false and false)) = true
     {
-        var groups = groups
-        var nameArray = nameArray
+        // var groups = groups
+        // var nameArray = nameArray
 
         var stringMaker: StringMaker = StringMaker()
 
@@ -93,9 +93,10 @@ open public class GroupFactory : Object {
 
         var size: Int = this.list.size()
 
-        while (size < groups) {
+        var name: String
 
-            var name: String = stringUtil!!.EMPTY_STRING
+        while (size < groups) {
+            name = stringUtil!!.EMPTY_STRING
 
             if (size < nameArray!!.size) {
 

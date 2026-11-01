@@ -308,7 +308,7 @@ this.firstTime= false
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var lazyImageRotationAnimation: LazyImageRotationAnimation = 
+    var lazyImageRotationAnimation: LazyImageRotationAnimation? = 
                 null
             
 
@@ -527,7 +527,7 @@ this.loadImageForAnimation()
 }
 
 
-    var lazyImageRotationAnimation: LazyImageRotationAnimation = 
+    var lazyImageRotationAnimation: LazyImageRotationAnimation? = 
                 null
             
 
@@ -593,7 +593,7 @@ this.loadImageForAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var image: Image = 
+    var image: Image? = 
                 null
             
 
@@ -812,7 +812,7 @@ this.listOfList[foundIndex]!!.add(image)
                         
                                     {
                                     
-    var inputStream: InputStream = 
+    var inputStream: InputStream? = 
                 null
             
 
@@ -979,7 +979,7 @@ this.loadList!!.add(image)
         //mutex.withLock
         {
 
-    var lazyImageRotationAnimation2: LazyImageRotationAnimation = 
+    var lazyImageRotationAnimation2: LazyImageRotationAnimation? = 
                 null
             
 

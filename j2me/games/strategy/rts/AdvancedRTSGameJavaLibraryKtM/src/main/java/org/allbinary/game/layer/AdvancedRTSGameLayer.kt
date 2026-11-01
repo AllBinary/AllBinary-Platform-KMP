@@ -35,7 +35,6 @@ import org.allbinary.game.input.event.GameKeyEventFactory
 import org.allbinary.game.input.form.NullRTSFormInputFactory
 import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.layer.building.event.BuildingEventHandler
-import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.game.layer.waypoint.Waypoint2LogHelper
 import org.allbinary.game.layer.waypoint.Waypoint2SelectedLogHelper
 import org.allbinary.game.layer.waypoint.WaypointBase
@@ -304,7 +303,7 @@ open public class AdvancedRTSGameLayer : RTSLayer, DestroyedEventListenerInterfa
             var parentAdvancedRTSGameLayer: AdvancedRTSGameLayer =
                 this.parentLayer as AdvancedRTSGameLayer
 
-            if (parentAdvancedRTSGameLayer!!.getType() != UnitLayer.getStaticType()) {
+            if (parentAdvancedRTSGameLayer!!.getType() != 1) {
 
                 // if statement needs to be on the same line and ternary does not work the same way.
                 return true
@@ -319,7 +318,7 @@ open public class AdvancedRTSGameLayer : RTSLayer, DestroyedEventListenerInterfa
     // nullable = true from not(false or (false and true)) = true
     : Boolean {
 
-        if (this.getType() != UnitLayer.getStaticType()) {
+        if (this.getType() != 1) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return true

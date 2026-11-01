@@ -71,7 +71,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
     private var inputBasicColorArray: Array<Array<BasicColor?>?> =
         Array(0) { arrayOfNulls<BasicColor?>(0) }
 
-    private var selectedBasicColor: BasicColor
+    private lateinit var selectedBasicColor: BasicColor
 
     open public inner class UpdateMyFontProperties : Object {
 
@@ -92,7 +92,8 @@ open public class InputMappingHelpPaintable : HelpPaintable {
 
         var inputDeltaXArray: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
 
-        var sepArray: Array<Array<String?>?> = Array(0) { arrayOfNulls<String?>(0) }
+        var sepArray: Array<Array<String?>?> =
+            StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY_OF_ARRAYS
 
         var sepWidthArray: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
 

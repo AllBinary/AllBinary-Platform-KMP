@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
                     
         
+import jsinterop.annotations.JsType
 import org.allbinary.logic.io.file.FilePathData
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
-
+//Used to correct user input for paths
 open public class AbPathData
             : Object
          {

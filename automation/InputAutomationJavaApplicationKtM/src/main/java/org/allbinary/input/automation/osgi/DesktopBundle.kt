@@ -42,7 +42,7 @@ companion object {
 
         }
             
-    private var bundle: Bundle
+    private lateinit var bundle: Bundle
 public constructor ()
             : super()
         {

@@ -130,7 +130,7 @@ object: Thread()
     var files: Array<File?> = imageProcessorInput!!.getFiles()!!
 
 
-    var generatedBufferedImageArray: Array<BufferedImage?> = 
+    var generatedBufferedImageArray: Array<BufferedImage?>? = 
                 null
             
 
@@ -392,7 +392,7 @@ this.imageProcessorInput= imageProcessorInput
         //nullable = true from not(false or (false and true)) = true
 {
 this.jLabel1= javax.swing.JLabel()
-this.jComboBox1= javax.swing.JComboBox<>()
+this.jComboBox1= javax.swing.JComboBox()
 this.aboveJButton= javax.swing.JButton()
 this.jTextField1= javax.swing.JTextField()
 this.jLabel2= javax.swing.JLabel()
@@ -403,7 +403,7 @@ this.floatPercentJTextField= javax.swing.JTextField()
 this.adjustFor16AboveJButton= javax.swing.JButton()
 this.adjustFor16BelowJButton= javax.swing.JButton()
 this.jLabel1!!.setText("Percent:")
-this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel<>(arrayOf("Item 1","Item 2","Item 3","Item 4")))
+this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("Item 1","Item 2","Item 3","Item 4")))
 this.aboveJButton!!.setText("Process")
 this.aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
@@ -505,27 +505,27 @@ this.updateFor16Below()
 }
 
 
-    private var aboveJButton: javax.swing.JButton
+    private lateinit var aboveJButton: javax.swing.JButton
 
-    private var adjustFor16AboveJButton: javax.swing.JButton
+    private lateinit var adjustFor16AboveJButton: javax.swing.JButton
 
-    private var adjustFor16BelowJButton: javax.swing.JButton
+    private lateinit var adjustFor16BelowJButton: javax.swing.JButton
 
-    private var floatPercentJTextField: javax.swing.JTextField
+    private lateinit var floatPercentJTextField: javax.swing.JTextField
 
-    private var jComboBox1: javax.swing.JComboBox<String>
+    private lateinit var jComboBox1: javax.swing.JComboBox<String>
 
-    private var jLabel1: javax.swing.JLabel
+    private lateinit var jLabel1: javax.swing.JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private lateinit var jLabel2: javax.swing.JLabel
 
-    private var jLabel3: javax.swing.JLabel
+    private lateinit var jLabel3: javax.swing.JLabel
 
-    private var jTextField1: javax.swing.JTextField
+    private lateinit var jTextField1: javax.swing.JTextField
 
-    private var jTextField2: javax.swing.JTextField
+    private lateinit var jTextField2: javax.swing.JTextField
 
-    private var updateJButton: javax.swing.JButton
+    private lateinit var updateJButton: javax.swing.JButton
 
 }
                 

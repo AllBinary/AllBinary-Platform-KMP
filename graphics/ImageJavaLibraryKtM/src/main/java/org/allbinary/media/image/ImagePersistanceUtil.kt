@@ -105,12 +105,12 @@ this.saveWithImageIO(File(filePath), bufferedImage)
     //var file = file
     //var bufferedImage = bufferedImage
 
-    var writer: ImageWriter = 
+    var writer: ImageWriter? = 
                 null
             
 
 
-    var ios: ImageOutputStream = 
+    var ios: ImageOutputStream? = 
                 null
             
 

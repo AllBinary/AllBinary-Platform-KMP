@@ -34,9 +34,9 @@ open public class ImageUnifierCell
          {
         
 
-    private var width: Integer
+    private lateinit var width: Integer
 
-    private var height: Integer
+    private lateinit var height: Integer
 public constructor (width: Integer, height: Integer)
             : super()
         {

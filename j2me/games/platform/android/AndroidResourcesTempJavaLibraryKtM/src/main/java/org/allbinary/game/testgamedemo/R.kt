@@ -40,21 +40,18 @@ open public class R : Object {
 
         open public class id : Object {
 
-            /*Static stuff is not allowed for Kotlin inner classescompanion object {
-             */
-            val custom_web_view: Int = 0x7f050000
+            companion object {
 
-            val ad_area_bottom: Int = 0x7f060002
+                val custom_web_view: Int = 0x7f050000
 
-            val ad_area_left: Int = 0x7f060003
+                val ad_area_bottom: Int = 0x7f060002
 
-            val ad_area_right: Int = 0x7f060004
+                val ad_area_left: Int = 0x7f060003
 
-            val ad_area_top: Int = 0x7f060001
+                val ad_area_right: Int = 0x7f060004
 
-            /*
+                val ad_area_top: Int = 0x7f060001
             }
-                */
 
             // Auto Generated
             public constructor() : super() {}
@@ -62,13 +59,10 @@ open public class R : Object {
 
         open public class layout : Object {
 
-            /*Static stuff is not allowed for Kotlin inner classescompanion object {
-             */
-            val webview_layout: Int = 0x7f020000
+            companion object {
 
-            /*
+                val webview_layout: Int = 0x7f020000
             }
-                */
 
             // Auto Generated
             public constructor() : super() {}
@@ -76,75 +70,72 @@ open public class R : Object {
 
         open public class raw : Object {
 
-            /*Static stuff is not allowed for Kotlin inner classescompanion object {
-             */
-            val about: Int = 0x7f030000
+            companion object {
 
-            val privacy_policy: Int = 0x7f030001
+                val about: Int = 0x7f030000
 
-            val error: Int = 0x7f040000
+                val privacy_policy: Int = 0x7f030001
 
-            val licenseinitdata: Int = 0x7f040001
+                val error: Int = 0x7f040000
 
-            val partner: Int = 0x7f040002
+                val licenseinitdata: Int = 0x7f040001
 
-            val select: Int = 0x7f040003
+                val partner: Int = 0x7f040002
 
-            val test: Int = 0x7f040004
+                val select: Int = 0x7f040003
 
-            val testgamedemo_wait_256_by_256: Int = 0x7f040005
+                val test: Int = 0x7f040004
 
-            val touch_button_128_by_128: Int = 0x7f040026
+                val testgamedemo_wait_256_by_256: Int = 0x7f040005
 
-            val touch_button_64_by_64: Int = 0x7f040027
+                val touch_button_128_by_128: Int = 0x7f040026
 
-            val touch_button_down_arrow_128_by_128: Int = 0x7f04002a
+                val touch_button_64_by_64: Int = 0x7f040027
 
-            val touch_button_down_arrow_64_by_64: Int = 0x7f04002b
+                val touch_button_down_arrow_128_by_128: Int = 0x7f04002a
 
-            val touch_button_generic_action_128_by_128: Int = 0x7f04002c
+                val touch_button_down_arrow_64_by_64: Int = 0x7f04002b
 
-            val touch_button_generic_action_64_by_64: Int = 0x7f04002d
+                val touch_button_generic_action_128_by_128: Int = 0x7f04002c
 
-            val touch_button_start_128_by_128: Int = 0x7f040038
+                val touch_button_generic_action_64_by_64: Int = 0x7f04002d
 
-            val touch_button_start_64_by_64: Int = 0x7f040039
+                val touch_button_start_128_by_128: Int = 0x7f040038
 
-            val touch_button_strafe_left_arrow_128_by_128: Int = 0x7f04003a
+                val touch_button_start_64_by_64: Int = 0x7f040039
 
-            val touch_button_strafe_left_arrow_64_by_64: Int = 0x7f04003b
+                val touch_button_strafe_left_arrow_128_by_128: Int = 0x7f04003a
 
-            val touch_button_strafe_right_arrow_128_by_128: Int = 0x7f04003c
+                val touch_button_strafe_left_arrow_64_by_64: Int = 0x7f04003b
 
-            val touch_button_strafe_right_arrow_64_by_64: Int = 0x7f04003d
+                val touch_button_strafe_right_arrow_128_by_128: Int = 0x7f04003c
 
-            val touch_button_turn_left_arrow_128_by_128: Int = 0x7f04003e
+                val touch_button_strafe_right_arrow_64_by_64: Int = 0x7f04003d
 
-            val touch_button_turn_left_arrow_64_by_64: Int = 0x7f04003f
+                val touch_button_turn_left_arrow_128_by_128: Int = 0x7f04003e
 
-            val touch_button_turn_right_arrow_128_by_128: Int = 0x7f040040
+                val touch_button_turn_left_arrow_64_by_64: Int = 0x7f04003f
 
-            val touch_button_turn_right_arrow_64_by_64: Int = 0x7f040041
+                val touch_button_turn_right_arrow_128_by_128: Int = 0x7f040040
 
-            val touch_button_up_arrow_128_by_128: Int = 0x7f040042
+                val touch_button_turn_right_arrow_64_by_64: Int = 0x7f040041
 
-            val touch_button_up_arrow_64_by_64: Int = 0x7f040043
+                val touch_button_up_arrow_128_by_128: Int = 0x7f040042
 
-            val ouya_a: Int = 0x7f040012
+                val touch_button_up_arrow_64_by_64: Int = 0x7f040043
 
-            val ouya_o: Int = 0x7f040014
+                val ouya_a: Int = 0x7f040012
 
-            val ouya_u: Int = 0x7f040015
+                val ouya_o: Int = 0x7f040014
 
-            val ouya_y: Int = 0x7f040016
+                val ouya_u: Int = 0x7f040015
 
-            val ouya_key: Int = 0x7f040013
+                val ouya_y: Int = 0x7f040016
 
-            val google_key: Int = 0x7f040013
+                val ouya_key: Int = 0x7f040013
 
-            /*
+                val google_key: Int = 0x7f040013
             }
-                */
 
             // Auto Generated
             public constructor() : super() {}
@@ -152,13 +143,10 @@ open public class R : Object {
 
         open public class string : Object {
 
-            /*Static stuff is not allowed for Kotlin inner classescompanion object {
-             */
-            val progressbar_in_title_string: Int = 0x7f050001
+            companion object {
 
-            /*
+                val progressbar_in_title_string: Int = 0x7f050001
             }
-                */
 
             // Auto Generated
             public constructor() : super() {}

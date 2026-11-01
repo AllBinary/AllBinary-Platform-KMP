@@ -51,7 +51,7 @@ open public class WorkAreaJTreeJPanel : javax.swing.JPanel {
 
     private var rootTreeNode: DefaultMutableTreeNode
 
-    private var workAreaJTree: JTree
+    private lateinit var workAreaJTree: JTree
 
     private var highlightedBasicArrayList: BasicArrayList
 public constructor (workAreaName: String){
@@ -663,17 +663,17 @@ var evt = evt
 }
 
 
-    private var copyJMenuItem: javax.swing.JMenuItem
+    private lateinit var copyJMenuItem: javax.swing.JMenuItem
 
-    private var deleteJMenuItem: javax.swing.JMenuItem
+    private lateinit var deleteJMenuItem: javax.swing.JMenuItem
 
-    private var itemJPopupMenu: javax.swing.JPopupMenu
+    private lateinit var itemJPopupMenu: javax.swing.JPopupMenu
 
-    private var itemJScrollPane1: javax.swing.JScrollPane
+    private lateinit var itemJScrollPane1: javax.swing.JScrollPane
 
-    private var rotateJMenuItem: javax.swing.JMenuItem
+    private lateinit var rotateJMenuItem: javax.swing.JMenuItem
 
-    private var workAreaPropertiesJPanel: javax.swing.JPanel
+    private lateinit var workAreaPropertiesJPanel: javax.swing.JPanel
 
 }
                 

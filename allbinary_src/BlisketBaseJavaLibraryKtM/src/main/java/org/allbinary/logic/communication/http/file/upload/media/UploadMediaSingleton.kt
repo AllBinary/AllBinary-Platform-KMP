@@ -43,7 +43,7 @@ open public class UploadMediaSingleton
         
 companion object {
             
-    private var uploadMedia: UploadMediaSingleton
+    private lateinit var uploadMedia: UploadMediaSingleton
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     open fun getInstance()

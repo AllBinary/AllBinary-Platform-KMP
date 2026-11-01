@@ -70,15 +70,15 @@ open public class InitSql
 
     val UPDATE: String = "update"
 
-    private var databaseConnectionInfoInterface: DbConnectionInfo
+    private lateinit var databaseConnectionInfoInterface: DbConnectionInfo
 
-    private var userid: String
+    private lateinit var userid: String
 
-    private var password: String
+    private lateinit var password: String
 
-    private var tableName: String
+    private lateinit var tableName: String
 
-    private var conn: Connection
+    private lateinit var conn: Connection
 
     private var useridAndPassword: Boolean= false
 
@@ -204,7 +204,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
         try {
             
-    var result: HashMap<Any, Any> = 
+    var result: HashMap<Any, Any>? = 
                 null
             
 

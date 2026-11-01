@@ -78,13 +78,12 @@ var evt = evt
     var listeners: Array<Any?> = listenerList!!.getListenerList()!!
 
 
+        run {
+        
+    var i: Int = 0
 
-
-
-                        for (i in 0 until listeners.size)
-
-        {
-
+        while (i < listeners.size) {
+        
     
                         if(listeners[i] == listeners[i +1]!!.::class)
                         
@@ -155,8 +154,11 @@ var evt = evt
 
                                     }
                                 
-}
 
+i += 2
+        }
+        }
+    
 }
 
 

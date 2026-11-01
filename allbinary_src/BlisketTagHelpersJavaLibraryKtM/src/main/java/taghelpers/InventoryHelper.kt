@@ -53,17 +53,17 @@ open public class InventoryHelper : TagHelper {
 
     val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
-    private var weblisketSession: WeblisketSession
+    private lateinit var weblisketSession: WeblisketSession
 
     private var response: HttpServletResponse
 
     private var request: HttpServletRequest
 
-    private var streetAddress: StreetAddress
+    private lateinit var streetAddress: StreetAddress
 
-    private var id: String
+    private lateinit var id: String
 
-    private var searchRequest: SearchRequest
+    private lateinit var searchRequest: SearchRequest
 public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext

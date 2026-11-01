@@ -42,7 +42,7 @@ open public class DeleteFileValidationView : InventoryItemView
                 , ValidationComponentInterface {
         
 
-    private var id: String
+    private lateinit var id: String
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){

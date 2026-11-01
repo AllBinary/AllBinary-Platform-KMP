@@ -67,39 +67,39 @@ open public class DateRangeOrderHistoryView : HttpStoreComponentView
 
     private var request: HttpServletRequest
 
-    private var shipped: String
+    private lateinit var shipped: String
 
-    private var partiallyShipped: String
+    private lateinit var partiallyShipped: String
 
-    private var processing: String
+    private lateinit var processing: String
 
-    private var preprocessing: String
+    private lateinit var preprocessing: String
 
-    private var cancelled: String
+    private lateinit var cancelled: String
 
-    private var dateType: String
+    private lateinit var dateType: String
 
-    private var toDate: String
+    private lateinit var toDate: String
 
-    private var fromDate: String
+    private lateinit var fromDate: String
 
-    private var fromYear: String
+    private lateinit var fromYear: String
 
-    private var fromMonth: String
+    private lateinit var fromMonth: String
 
-    private var fromDay: String
+    private lateinit var fromDay: String
 
-    private var fromHour: String
+    private lateinit var fromHour: String
 
-    private var toYear: String
+    private lateinit var toYear: String
 
-    private var toMonth: String
+    private lateinit var toMonth: String
 
-    private var toDay: String
+    private lateinit var toDay: String
 
-    private var toHour: String
+    private lateinit var toHour: String
 
-    private var command: String
+    private lateinit var command: String
 
     private val ON: String = "on"
 

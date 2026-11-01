@@ -37,7 +37,7 @@ open public class ThemeCustomizerView : HttpStoreComponentView {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var validationInterface: ValidationInterface
+    lateinit var validationInterface: ValidationInterface
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

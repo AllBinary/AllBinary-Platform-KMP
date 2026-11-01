@@ -61,7 +61,7 @@ companion object {
 
     private var checkPeriod: Int = 36000000
 
-    private var abeLicenseInterface: AbeLicenseInterface = 
+    private var abeLicenseInterface: AbeLicenseInterface? = 
                 null
             
 private constructor ()
@@ -171,10 +171,10 @@ this.time= currentTime
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false }
+                            
 }
 
 

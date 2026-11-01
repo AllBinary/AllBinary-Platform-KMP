@@ -39,7 +39,7 @@ open public class ShippingAddressTag : TableTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var value: String
+    private lateinit var value: String
 public constructor (){
 this.setTagHelperFactory(ShippingAddressHelperFactory())
 this.setTagRequestHelperFactory(ShippingAddressHelperFactory())

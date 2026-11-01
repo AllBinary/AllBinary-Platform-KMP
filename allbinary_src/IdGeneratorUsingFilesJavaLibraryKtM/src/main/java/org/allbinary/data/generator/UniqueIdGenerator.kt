@@ -50,7 +50,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var newFile: AbFile
+    private lateinit var newFile: AbFile
 
     private var id: Long = 0
 public constructor ()
@@ -108,12 +108,12 @@ this.newFile= AbFile.createAbFile(filePathName)!!
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var idData: AbDataInputStream = 
+    var idData: AbDataInputStream? = 
                 null
             
 
 
-    var idOutData: AbDataOutputStream = 
+    var idOutData: AbDataOutputStream? = 
                 null
             
 

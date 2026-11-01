@@ -49,7 +49,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun putF(specialMessage: String, className: String, functionName: String)
+    open fun putFS(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 
 

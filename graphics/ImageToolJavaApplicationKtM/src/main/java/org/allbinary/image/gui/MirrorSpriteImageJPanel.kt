@@ -53,7 +53,7 @@ open public class MirrorSpriteImageJPanel : javax.swing.JPanel
 
     private var imageProcessorInput: ImageProcessorInput
 
-    private var result: BufferedImage
+    private lateinit var result: BufferedImage
 public constructor (imageProcessorInput: ImageProcessorInput)                        
 
                             : super(){
@@ -258,25 +258,25 @@ var evt = evt
 }
 
 
-    private var generateJButton: javax.swing.JButton
+    private lateinit var generateJButton: javax.swing.JButton
 
-    private var horizontalJCheckBox: javax.swing.JCheckBox
+    private lateinit var horizontalJCheckBox: javax.swing.JCheckBox
 
-    private var imageHeightIsFrameSizeJCheckBox: javax.swing.JCheckBox
+    private lateinit var imageHeightIsFrameSizeJCheckBox: javax.swing.JCheckBox
 
-    private var jLabel2: javax.swing.JLabel
+    private lateinit var jLabel2: javax.swing.JLabel
 
-    private var jLayeredPane1: javax.swing.JLayeredPane
+    private lateinit var jLayeredPane1: javax.swing.JLayeredPane
 
-    private var jPanel1: javax.swing.JPanel
+    private lateinit var jPanel1: javax.swing.JPanel
 
-    private var jPanel2: javax.swing.JPanel
+    private lateinit var jPanel2: javax.swing.JPanel
 
-    private var jPanel3: javax.swing.JPanel
+    private lateinit var jPanel3: javax.swing.JPanel
 
-    private var verticleJCheckBox: javax.swing.JCheckBox
+    private lateinit var verticleJCheckBox: javax.swing.JCheckBox
 
-    private var writeOverOriginalJCheckBox: javax.swing.JCheckBox
+    private lateinit var writeOverOriginalJCheckBox: javax.swing.JCheckBox
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

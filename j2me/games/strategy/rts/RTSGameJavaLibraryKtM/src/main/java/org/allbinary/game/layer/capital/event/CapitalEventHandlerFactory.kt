@@ -23,10 +23,9 @@ open public class CapitalEventHandlerFactory : Object {
 
     companion object {
 
-        private val capitalEventHandlerArray: Array<CapitalEventHandler?>
+        private val capitalEventHandlerArray: Array<CapitalEventHandler?> = arrayOfNulls(10)
 
         init {
-            capitalEventHandlerArray = arrayOfNulls(10)
 
             for (index in CapitalEventHandlerFactory.capitalEventHandlerArray!!.size - 1 downTo 0) {
 
@@ -41,9 +40,10 @@ open public class CapitalEventHandlerFactory : Object {
             : CapitalEventHandler {
             var groupInterface = groupInterface
 
+            var groupId: Int = groupInterface!!.getGroupId().toInt()
+
             // if statement needs to be on the same line and ternary does not work the same way.
-            return CapitalEventHandlerFactory.capitalEventHandlerArray[
-                    groupInterface!!.getGroupId().toInt()]!!
+            return CapitalEventHandlerFactory.capitalEventHandlerArray[groupId]!!
         }
 
         open fun removeAll()

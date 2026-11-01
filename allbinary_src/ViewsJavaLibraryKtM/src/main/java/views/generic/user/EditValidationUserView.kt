@@ -81,10 +81,10 @@ this.userName= this.getWeblisketSession()!!.getUserName()!!
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false }
+                            
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.user.isValid()

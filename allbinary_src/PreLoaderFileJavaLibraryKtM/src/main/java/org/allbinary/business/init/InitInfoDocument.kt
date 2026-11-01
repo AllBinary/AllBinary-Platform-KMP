@@ -33,7 +33,7 @@ open public class InitInfoDocument
          {
         
 
-    private var initInfoDocument: Document
+    private lateinit var initInfoDocument: Document
 public constructor ()
             : super()
         {

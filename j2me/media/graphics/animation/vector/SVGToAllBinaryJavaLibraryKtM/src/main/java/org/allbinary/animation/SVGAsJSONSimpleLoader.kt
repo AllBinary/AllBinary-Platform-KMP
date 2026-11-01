@@ -362,7 +362,7 @@ this.addSeparator(pointVector)
 
         {
 
-    var angle: Double = (Math.PI *2.0d *index) /CIRCLE_SEGMENTS
+    var angle: Double = (Math.PI *2.0 *index) /CIRCLE_SEGMENTS
 
 
     var x: Int = Math.round(cx +(Math.cos(angle) *radius)).toInt()
@@ -571,9 +571,7 @@ value.
 
         {
 
-    var point: IntArray = pointVector!!.get(index)
-                        //Otherwise - castExpression - ArrayType - INT
-
+    var point: IntArray = pointVector!!.get(index) as IntArray
 
 points[index]= point
 }

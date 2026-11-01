@@ -32,7 +32,7 @@ open public class InputAutomationRobotChangeEvent
          {
         
 
-    private var inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper
+    private lateinit var inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper
 public constructor (inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper)
             : super()
         {

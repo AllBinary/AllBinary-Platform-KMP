@@ -36,6 +36,8 @@ open public class UnitWaypointStrings : Object {
     // Auto Generated
     public constructor() : super() {}
 
+    val PATHING: String = "Pathing"
+
     val WANDERING: String = "Order?"
 
     val THINKING: String = "Thinking"
@@ -61,4 +63,13 @@ open public class UnitWaypointStrings : Object {
     val ALREADY_THERE: String = "Already There"
 
     val NEXT_PATH_NODE: String = CommonLabels.getInstance()!!.NEXT + " Path Node"
+
+    val _ALL_VISITED_SHORT: String = " Arrived"
+
+    val _ALREADY_THERE_SHORT: String = " Again?"
+
+    val VISITED_MOST_OF_THE_PATH: String = " visited most of the path"
+
+    val RETURNING_AS_WAYPOINT_PATH_LIST: String =
+        " returning as waypointPathsList was runningWaypointPathList"
 }

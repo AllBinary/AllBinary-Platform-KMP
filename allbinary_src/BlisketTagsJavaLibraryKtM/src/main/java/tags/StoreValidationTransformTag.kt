@@ -36,7 +36,7 @@ open public class StoreValidationTransformTag : ValidationTransformTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var storeName: String
+    private lateinit var storeName: String
 public constructor ()                        
 
                             : super(){

@@ -37,9 +37,9 @@ open public class GenericProfileActionsJPanel : javax.swing.JPanel {
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var genericProfileActions: GenericProfileActions
+    private lateinit var genericProfileActions: GenericProfileActions
 
-    private var genericProfileActionJPanel: GenericProfileActionJPanel
+    private lateinit var genericProfileActionJPanel: GenericProfileActionJPanel
 public constructor (){
 this.initComponents()
 }
@@ -362,27 +362,27 @@ this.newProfileActionJDialog!!.setVisible(true)
 }
 
 
-    private var blankGenericProfileActionJPanel: javax.swing.JPanel
+    private lateinit var blankGenericProfileActionJPanel: javax.swing.JPanel
 
-    private var deleteActionJButton: javax.swing.JButton
+    private lateinit var deleteActionJButton: javax.swing.JButton
 
-    private var genericProfileActionsJList: javax.swing.JList
+    private lateinit var genericProfileActionsJList: javax.swing.JList
 
-    private var genericProfileActionsJPanel: javax.swing.JPanel
+    private lateinit var genericProfileActionsJPanel: javax.swing.JPanel
 
-    private var genericProfileActionsJScrollPane: javax.swing.JScrollPane
+    private lateinit var genericProfileActionsJScrollPane: javax.swing.JScrollPane
 
-    private var newActionJButton: javax.swing.JButton
+    private lateinit var newActionJButton: javax.swing.JButton
 
-    private var newProfileActionJDialog: javax.swing.JDialog
+    private lateinit var newProfileActionJDialog: javax.swing.JDialog
 
-    private var newProfileActionJLabel: javax.swing.JLabel
+    private lateinit var newProfileActionJLabel: javax.swing.JLabel
 
-    private var newProfileActionJTextField: javax.swing.JTextField
+    private lateinit var newProfileActionJTextField: javax.swing.JTextField
 
-    private var okNewProfileActionJButton: javax.swing.JButton
+    private lateinit var okNewProfileActionJButton: javax.swing.JButton
 
-    private var saveJButton: javax.swing.JButton
+    private lateinit var saveJButton: javax.swing.JButton
 
 }
                 

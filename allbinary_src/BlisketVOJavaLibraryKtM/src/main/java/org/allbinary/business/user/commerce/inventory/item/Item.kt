@@ -48,11 +48,11 @@ open public class Item : BasicItem
 
     private var shippingCost: String
 
-    private var shippedDate: String
+    private lateinit var shippedDate: String
 
     private var shippingAddress: StreetAddress
 
-    private var special: String
+    private lateinit var special: String
 public constructor (itemHashMap: HashMap<Any, Any>)                        
 
                             : super(itemHashMap){

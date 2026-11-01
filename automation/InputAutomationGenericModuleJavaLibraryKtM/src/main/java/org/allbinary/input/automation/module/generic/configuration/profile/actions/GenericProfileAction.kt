@@ -47,9 +47,9 @@ open public class GenericProfileAction
 
     private var name: String
 
-    private var genericProfileActionScript: GenericProfileActionScript
+    private lateinit var genericProfileActionScript: GenericProfileActionScript
 
-    private var genericProfileActionJPanel: GenericProfileActionJPanel
+    private lateinit var genericProfileActionJPanel: GenericProfileActionJPanel
 public constructor (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)
             : super()
         {

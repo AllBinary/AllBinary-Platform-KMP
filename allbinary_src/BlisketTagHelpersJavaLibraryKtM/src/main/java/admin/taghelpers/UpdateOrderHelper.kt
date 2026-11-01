@@ -49,79 +49,79 @@ open public class UpdateOrderHelper : TagHelper {
 
     private var request: HttpServletRequest
 
-    private var entryId: String
+    private lateinit var entryId: String
 
-    private var orderId: String
+    private lateinit var orderId: String
 
-    private var userName: String
+    private lateinit var userName: String
 
-    private var storeName: String
+    private lateinit var storeName: String
 
-    private var shipDate: String
+    private lateinit var shipDate: String
 
-    private var orderDate: String
+    private lateinit var orderDate: String
 
-    private var transDate: String
+    private lateinit var transDate: String
 
-    private var cancelDate: String
+    private lateinit var cancelDate: String
 
-    private var status: String
+    private lateinit var status: String
 
-    private var paymentMethod: String
+    private lateinit var paymentMethod: String
 
-    private var name: String
+    private lateinit var name: String
 
-    private var type: String
+    private lateinit var type: String
 
-    private var expiration: String
+    private lateinit var expiration: String
 
-    private var number: String
+    private lateinit var number: String
 
-    private var encryption: String
+    private lateinit var encryption: String
 
-    private var billingName: String
+    private lateinit var billingName: String
 
-    private var billingStreet: String
+    private lateinit var billingStreet: String
 
-    private var billingCity: String
+    private lateinit var billingCity: String
 
-    private var billingState: String
+    private lateinit var billingState: String
 
-    private var billingCode: String
+    private lateinit var billingCode: String
 
-    private var billingCountry: String
+    private lateinit var billingCountry: String
 
-    private var shippingName: String
+    private lateinit var shippingName: String
 
-    private var shippingStreet: String
+    private lateinit var shippingStreet: String
 
-    private var shippingCity: String
+    private lateinit var shippingCity: String
 
-    private var shippingState: String
+    private lateinit var shippingState: String
 
-    private var shippingCode: String
+    private lateinit var shippingCode: String
 
-    private var shippingCountry: String
+    private lateinit var shippingCountry: String
 
-    private var shippingMethodName: String
+    private lateinit var shippingMethodName: String
 
-    private var subTotal: String
+    private lateinit var subTotal: String
 
-    private var shippingCost: String
+    private lateinit var shippingCost: String
 
-    private var tax: String
+    private lateinit var tax: String
 
-    private var total: String
+    private lateinit var total: String
 
-    private var special: String
+    private lateinit var special: String
 
-    private var userComment: String
+    private lateinit var userComment: String
 
-    private var userCancelComment: String
+    private lateinit var userCancelComment: String
 
-    private var storeComment: String
+    private lateinit var storeComment: String
 
-    private var storeCancelComment: String
+    private lateinit var storeCancelComment: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

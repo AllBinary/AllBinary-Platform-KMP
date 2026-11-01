@@ -207,13 +207,12 @@ scanlineX[j]= temp
 }
 
 
+        run {
+        
+    var i: Int = 0
 
-
-
-                        for (i in 0 until intersectCount)
-
-        {
-
+        while (i < intersectCount) {
+        
     
                         if(i +1 >= intersectCount)
                         
@@ -246,8 +245,11 @@ scanlineX[j]= temp
 buffer[rowOffset +pixelX]= colorRGB
 }
 
-}
 
+i += 2
+        }
+        }
+    
 }
 
 }

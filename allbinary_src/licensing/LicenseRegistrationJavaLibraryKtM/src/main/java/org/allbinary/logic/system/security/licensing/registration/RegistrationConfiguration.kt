@@ -121,7 +121,7 @@ PreLogUtil.put(StringMaker().
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var dataOutputStream: AbDataOutputStream = 
+    var dataOutputStream: AbDataOutputStream? = 
                 null
             
 

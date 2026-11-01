@@ -156,9 +156,9 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
         {
 index3= (index2 *imageData!!.bytesPerLine) +(index *4)
-rx= (imageData!!.data[index3] and 0xFF) shl 16
-gx= (imageData!!.data[index3 +1] and 0xFF) shl 8
-bx= (imageData!!.data[index3 +2] and 0xFF)
+rx= (imageData!!.data[index3].toInt() and 0xFF) shl 16
+gx= (imageData!!.data[index3 +1].toInt() and 0xFF) shl 8
+bx= (imageData!!.data[index3 +2].toInt() and 0xFF)
 
     
                         if(rx != 0 || gx != 0 || bx != 0)
@@ -269,23 +269,25 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
     var size: Int = imageData!!.data.length
 
 
+        run {
+        
+    var index: Int = 0
 
-
-
-                        for (index in 0 until size)
-
-        {
-rx= (imageData!!.data[index] and 0xFF) shl 16
-gx= (imageData!!.data[index +1] and 0xFF) shl 8
-bx= (imageData!!.data[index +2] and 0xFF)
+        while (index < size) {
+        rx= (imageData!!.data[index].toInt() and 0xFF) shl 16
+gx= (imageData!!.data[index +1].toInt() and 0xFF) shl 8
+bx= (imageData!!.data[index +2].toInt() and 0xFF)
 rx = (rx * r).toInt()
 gx = (gx * g).toInt()
 bx = (bx * b).toInt()
 imageData!!.data[index]= rx.toByte()
 imageData!!.data[index +1]= gx.toByte()
 imageData!!.data[index +2]= bx.toByte()
-}
 
+index += 4
+        }
+        }
+    
 
                                     }
                                 

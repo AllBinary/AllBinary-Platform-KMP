@@ -268,7 +268,7 @@ this.setVolumeF((leftVolume.toFloat()) /100.0f)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Math.pow(10f, masterGainFloatControl!!.getValue() /20f).toFloat()
+                        return Math.pow(10f.toDouble(), (masterGainFloatControl!!.getValue() /20f).toDouble()).toFloat()
 }
 
 

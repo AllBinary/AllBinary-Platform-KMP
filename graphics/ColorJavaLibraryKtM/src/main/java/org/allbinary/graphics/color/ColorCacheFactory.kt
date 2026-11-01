@@ -39,7 +39,7 @@ open public class ColorCacheFactory
         
 companion object {
             
-    private var cacheInterface: AutomaticCacheInterface = 
+    private var cacheInterface: AutomaticCacheInterface? = 
                 null
             
 

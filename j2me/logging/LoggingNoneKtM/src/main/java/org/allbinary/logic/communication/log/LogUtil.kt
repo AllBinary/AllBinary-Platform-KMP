@@ -49,7 +49,7 @@ import java.lang.Object
         // var functionName = functionName
     }
 
-    /*actual*/ open fun putF(specialMessage: String, className: String, functionName: String)
+    /*actual*/ open fun putFS(specialMessage: String, className: String, functionName: String)
         // nullable = true from not(false or (false and false)) = true
     {
         // var specialMessage = specialMessage

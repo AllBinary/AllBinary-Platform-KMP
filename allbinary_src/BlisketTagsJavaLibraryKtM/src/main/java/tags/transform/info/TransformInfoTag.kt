@@ -41,27 +41,27 @@ open public class TransformInfoTag : ModifyTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var name: String
+    private lateinit var name: String
 
-    private var storeName: String
+    private lateinit var storeName: String
 
-    private var objectFile: String
+    private lateinit var objectFile: String
 
-    private var anyType: String
+    private lateinit var anyType: String
 
-    private var objectConfigFile: String
+    private lateinit var objectConfigFile: String
 
-    private var objectConfig: String
+    private lateinit var objectConfig: String
 
-    private var templateFile: String
+    private lateinit var templateFile: String
 
-    private var template: String
+    private lateinit var template: String
 
-    private var dataFile: String
+    private lateinit var dataFile: String
 
-    private var data: String
+    private lateinit var data: String
 
-    private var type: String
+    private lateinit var type: String
 public constructor ()                        
 
                             : super(TransformInfoRequestHelperFactory()){

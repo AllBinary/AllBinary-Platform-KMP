@@ -62,15 +62,15 @@ open public class InitDbCrypted : AbDatabaseManagement {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var userDbInitInfo: UserDbInitInfo
+    private lateinit var userDbInitInfo: UserDbInitInfo
 
-    private var inventoryDbInitInfo: InventoryDbInitInfo
+    private lateinit var inventoryDbInitInfo: InventoryDbInitInfo
 
-    private var historyDbInitInfo: HistoryDbInitInfo
+    private lateinit var historyDbInitInfo: HistoryDbInitInfo
 
-    private var staticpagesDbInitInfo: StaticPagesDbInitInfo
+    private lateinit var staticpagesDbInitInfo: StaticPagesDbInitInfo
 
-    private var logDbInitInfo: LogDbInitInfo
+    private lateinit var logDbInitInfo: LogDbInitInfo
 
     private val SQL_FILE: String = "initWeblisket.sql"
 public constructor (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        

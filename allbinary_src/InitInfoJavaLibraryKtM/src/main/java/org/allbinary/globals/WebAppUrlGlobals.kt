@@ -37,7 +37,7 @@ open public class WebAppUrlGlobals : UrlGlobalsInterface {
             {
             }            
         
-    private var path: String
+    private lateinit var path: String
 
     private var isWebappPathSet: Boolean = false
 

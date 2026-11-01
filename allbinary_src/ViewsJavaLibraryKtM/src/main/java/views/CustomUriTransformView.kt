@@ -51,9 +51,9 @@ open public class CustomUriTransformView
 
     val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
-    private var transformInfoInterface: TransformInfoInterface
+    private lateinit var transformInfoInterface: TransformInfoInterface
 
-    private var transformDocumentInterface: TransformDocumentInterface
+    private lateinit var transformDocumentInterface: TransformDocumentInterface
 public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {

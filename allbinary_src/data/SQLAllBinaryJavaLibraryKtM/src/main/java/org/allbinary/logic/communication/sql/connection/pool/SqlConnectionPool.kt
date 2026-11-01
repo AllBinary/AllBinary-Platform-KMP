@@ -59,7 +59,7 @@ companion object {
 
     val stdUtil: StdUtil = StdUtil.getInstance()!!
 
-    private var connectionHashMap: HashMap<Any, Any> = 
+    private var connectionHashMap: HashMap<Any, Any>? = 
                 null
             
 

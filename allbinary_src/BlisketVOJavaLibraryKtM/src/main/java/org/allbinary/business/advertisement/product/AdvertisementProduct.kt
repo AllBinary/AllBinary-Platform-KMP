@@ -34,13 +34,13 @@ open public class AdvertisementProduct
                 , AdvertisementProductInterface {
         
 
-    private var type: String
+    private lateinit var type: String
 
-    private var link: String
+    private lateinit var link: String
 
     private var number: Int= 0
 
-    private var constraint: TwoDimensionalConstraintInterface
+    private lateinit var constraint: TwoDimensionalConstraintInterface
 public constructor ()
             : super()
         {

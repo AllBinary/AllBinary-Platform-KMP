@@ -119,13 +119,12 @@ var document = document
 
 node.appendChild(blackNode)
 
+        run {
+        
+    var index: Int = 0
 
-
-
-                        for (index in 0 until this.MAX)
-
-        {
-
+        while (index < this.MAX) {
+        
     var hexColorStringBuffer: StringMaker = StringMaker()
 
 
@@ -162,124 +161,151 @@ hexColorStringBuffer!!.append(index, HEXRADIX.toString())
     var colorNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, hexColorStringBuffer!!.toString())!!
 
 node.appendChild(colorNode)
-}
 
+index += this.delta
+        }
+        }
+    
 
     var whiteNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, "FFFFFF")!!
 
 node.appendChild(whiteNode)
 
-
-
-
-                        for (blueIndex in this.MAX /2 until this.MAX)
-
-        {
-
-
-
-
-                        for (greenIndex in 0 until this.MAX /2)
-
-        {
-
-
-
-
-                        for (redIndex in 0 until this.MAX /2)
-
-        {
-node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
-}
-
-}
-
-}
-
-
-
-
-
-                        for (redIndex in this.MAX /2 until this.MAX)
-
-        {
-
-
-
-
-                        for (greenIndex in 0 until this.MAX /2)
-
-        {
-
-
-
-
-                        for (blueIndex in 0 until this.MAX /2)
-
-        {
-node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
-}
-
-}
-
-}
-
-
-
-
-
-                        for (greenIndex in this.MAX /2 until this.MAX)
-
-        {
-
-
-
-
-                        for (redIndex in 0 until this.MAX /2)
-
-        {
-
-
-
-
-                        for (blueIndex in 0 until this.MAX /2)
-
-        {
-node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
-}
-
-}
-
-}
-
-
-
-
-
-                        for (greenIndex in 0 until this.MAX)
-
-        {
-
-
-
-
-                        for (redIndex in 0 until this.MAX)
-
-        {
-
-
-
-
-                        for (blueIndex in 0 until this.MAX)
-
-        {
-node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
-}
-
-}
-
-}
-
+        run {
+        
+    var blueIndex: Int = this.MAX /2
+
+        while (blueIndex < this.MAX) {
+        
+        run {
+        
+    var greenIndex: Int = 0
+
+        while (greenIndex < this.MAX /2) {
+        
+        run {
+        
+    var redIndex: Int = 0
+
+        while (redIndex < this.MAX /2) {
+        node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+
+redIndex += this.delta
+        }
+        }
+    
+
+greenIndex += this.delta
+        }
+        }
+    
+
+blueIndex += this.delta
+        }
+        }
+    
+
+        run {
+        
+    var redIndex: Int = this.MAX /2
+
+        while (redIndex < this.MAX) {
+        
+        run {
+        
+    var greenIndex: Int = 0
+
+        while (greenIndex < this.MAX /2) {
+        
+        run {
+        
+    var blueIndex: Int = 0
+
+        while (blueIndex < this.MAX /2) {
+        node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+
+blueIndex += this.delta
+        }
+        }
+    
+
+greenIndex += this.delta
+        }
+        }
+    
+
+redIndex += this.delta
+        }
+        }
+    
+
+        run {
+        
+    var greenIndex: Int = this.MAX /2
+
+        while (greenIndex < this.MAX) {
+        
+        run {
+        
+    var redIndex: Int = 0
+
+        while (redIndex < this.MAX /2) {
+        
+        run {
+        
+    var blueIndex: Int = 0
+
+        while (blueIndex < this.MAX /2) {
+        node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+
+blueIndex += this.delta
+        }
+        }
+    
+
+redIndex += this.delta
+        }
+        }
+    
+
+greenIndex += this.delta
+        }
+        }
+    
+
+        run {
+        
+    var greenIndex: Int = 0
+
+        while (greenIndex < this.MAX) {
+        
+        run {
+        
+    var redIndex: Int = 0
+
+        while (redIndex < this.MAX) {
+        
+        run {
+        
+    var blueIndex: Int = 0
+
+        while (blueIndex < this.MAX) {
+        node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+
+blueIndex += 2 *this.delta
+        }
+        }
+    
+
+redIndex += 2 *this.delta
+        }
+        }
+    
+
+greenIndex += 2 *this.delta
+        }
+        }
+    
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node

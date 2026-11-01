@@ -51,9 +51,9 @@ open public class BasicComponentView
 
     val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
-    private var transformDocumentInterface: TransformDocumentInterface
+    private lateinit var transformDocumentInterface: TransformDocumentInterface
 
-    private var transformInfoInterface: TransformInfoInterface
+    private lateinit var transformInfoInterface: TransformInfoInterface
 public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {

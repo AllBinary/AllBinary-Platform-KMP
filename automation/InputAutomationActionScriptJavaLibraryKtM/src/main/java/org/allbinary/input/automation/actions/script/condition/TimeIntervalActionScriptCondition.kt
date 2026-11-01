@@ -50,9 +50,9 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var timeIntervalActionScriptConditionJPanel: TimeIntervalActionScriptConditionJPanel
+    private lateinit var timeIntervalActionScriptConditionJPanel: TimeIntervalActionScriptConditionJPanel
 
-    private var timeHelper: TimeDelayHelper
+    private lateinit var timeHelper: TimeDelayHelper
 public constructor (node: Node)                        
 
                             : super(TimeIntervalActionScriptCondition.NAME, node){

@@ -104,12 +104,12 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
     var originalSwtImage: org.eclipse.swt.graphics.Image = (originalImage2!!.getImage() as org.eclipse.swt.graphics.Image)
 
 
-    var gc: GC = 
+    var gc: GC? = 
                 null
             
 
 
-    var copySwtImage: org.eclipse.swt.graphics.Image = 
+    var copySwtImage: org.eclipse.swt.graphics.Image? = 
                 null
             
 

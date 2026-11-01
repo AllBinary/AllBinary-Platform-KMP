@@ -40,7 +40,7 @@ open public class OrderHistoryTag : StoreValidationTransformTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var status: String
+    private lateinit var status: String
 public constructor (){
 }
 

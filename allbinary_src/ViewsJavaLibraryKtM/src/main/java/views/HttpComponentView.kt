@@ -53,7 +53,7 @@ open public class HttpComponentView : TransformInfoHttpComposite
 
     private var domNodeInterfaceVector: BasicArrayList
 
-    private var transformDocumentInterface: TransformDocumentInterface
+    private lateinit var transformDocumentInterface: TransformDocumentInterface
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

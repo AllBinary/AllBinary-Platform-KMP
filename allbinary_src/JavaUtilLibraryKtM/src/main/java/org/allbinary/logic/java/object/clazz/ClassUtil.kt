@@ -55,10 +55,10 @@ var lineBreak = lineBreak
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return "Object Null" }
+                            
 }
 
 
@@ -113,10 +113,10 @@ stringBuffer!!.append(MethodUtil.viewAll(myClass::class.java, lineBreak))
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return "Class Null" }
+                            
 }
 
 

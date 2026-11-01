@@ -49,9 +49,9 @@ open public class AbTransformer
 
     private var transformInfoInterface: TransformInfoInterface
 
-    private var inputStream: InputStream
+    private lateinit var inputStream: InputStream
 
-    private var uriResolver: URIResolver
+    private lateinit var uriResolver: URIResolver
 public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {

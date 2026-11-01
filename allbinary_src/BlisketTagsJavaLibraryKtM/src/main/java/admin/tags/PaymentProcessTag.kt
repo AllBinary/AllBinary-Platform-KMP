@@ -122,10 +122,10 @@ public constructor (){
                         
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.SKIP_BODY
-                             else 
-    
-                        if()
-                        
+                             else { 
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.EVAL_BODY_INCLUDE }
+                            
 
                                     }
                                 

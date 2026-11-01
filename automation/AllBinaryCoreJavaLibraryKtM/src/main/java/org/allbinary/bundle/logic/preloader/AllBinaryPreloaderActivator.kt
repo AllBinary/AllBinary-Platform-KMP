@@ -43,7 +43,7 @@ open public class AllBinaryPreloaderActivator
         
 companion object {
             
-    private var context: BundleContext
+    private lateinit var context: BundleContext
 
     private val CRYPT_REGISTRY_NAME: String = "bundle.abcs.logic.system.loader.CryptService"
 

@@ -373,39 +373,39 @@ this.getMouseActionJDialog()!!.setVisible(true)
 }
 
 
-    private var button1JCheckBox: javax.swing.JCheckBox
+    private lateinit var button1JCheckBox: javax.swing.JCheckBox
 
-    private var button2JCheckBox: javax.swing.JCheckBox
+    private lateinit var button2JCheckBox: javax.swing.JCheckBox
 
-    private var inputAutomationTypeJComboBox: javax.swing.JComboBox
+    private lateinit var inputAutomationTypeJComboBox: javax.swing.JComboBox
 
-    private var inputTypeJLabel: javax.swing.JLabel
+    private lateinit var inputTypeJLabel: javax.swing.JLabel
 
-    private var jLabel1: javax.swing.JLabel
+    private lateinit var jLabel1: javax.swing.JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private lateinit var jLabel2: javax.swing.JLabel
 
-    private var jLabel3: javax.swing.JLabel
+    private lateinit var jLabel3: javax.swing.JLabel
 
-    private var jLabel4: javax.swing.JLabel
+    private lateinit var jLabel4: javax.swing.JLabel
 
-    private var jLabel5: javax.swing.JLabel
+    private lateinit var jLabel5: javax.swing.JLabel
 
-    private var jLabel6: javax.swing.JLabel
+    private lateinit var jLabel6: javax.swing.JLabel
 
-    private var mouseActionJButton: javax.swing.JButton
+    private lateinit var mouseActionJButton: javax.swing.JButton
 
-    private var mouseActionJDialog: javax.swing.JDialog
+    private lateinit var mouseActionJDialog: javax.swing.JDialog
 
-    private var mouseDelayJTextField: javax.swing.JTextField
+    private lateinit var mouseDelayJTextField: javax.swing.JTextField
 
-    private var mouseXJTextField: javax.swing.JTextField
+    private lateinit var mouseXJTextField: javax.swing.JTextField
 
-    private var mouseYJTextField: javax.swing.JTextField
+    private lateinit var mouseYJTextField: javax.swing.JTextField
 
-    private var okJButton: javax.swing.JButton
+    private lateinit var okJButton: javax.swing.JButton
 
-    private var titleJLabel: javax.swing.JLabel
+    private lateinit var titleJLabel: javax.swing.JLabel
 
 }
                 

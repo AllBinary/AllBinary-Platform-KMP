@@ -38,7 +38,7 @@ open public class MathVector
 
     private var direction: Int
 
-    var resultBasicDecimal: BasicDecimal
+    lateinit var resultBasicDecimal: BasicDecimal
 public constructor (magnitudeBasicDecimal: BasicDecimal, direction: Int)
             : super()
         {

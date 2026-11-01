@@ -73,7 +73,7 @@ var xmlFile = xmlFile
 var file = file
 var document = document
 
-    var dataOutputStream: AbDataOutputStream = 
+    var dataOutputStream: AbDataOutputStream? = 
                 null
             
 

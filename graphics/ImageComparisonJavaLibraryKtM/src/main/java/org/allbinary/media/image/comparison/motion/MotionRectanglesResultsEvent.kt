@@ -33,7 +33,7 @@ open public class MotionRectanglesResultsEvent : AllBinaryEventObject {
 
     private val frame: Long
 
-    private var motionRectangles: MotionRectangles
+    private lateinit var motionRectangles: MotionRectangles
 public constructor (anyType: Any, frame: Long, motionRectangles: MotionRectangles)                        
 
                             : super(anyType){

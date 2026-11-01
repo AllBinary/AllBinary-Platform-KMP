@@ -573,7 +573,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
         try {
             
-    var result: HashMap<Any, Any> = 
+    var result: HashMap<Any, Any>? = 
                 null
             
 

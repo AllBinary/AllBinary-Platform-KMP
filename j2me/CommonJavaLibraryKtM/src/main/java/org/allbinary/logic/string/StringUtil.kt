@@ -41,6 +41,9 @@ open public class StringUtil : Object {
 
     var ONE_EMPTY_STRING_ARRAY: Array<String?> = arrayOf(this.EMPTY_STRING)
 
+    var ONE_EMPTY_STRING_ARRAY_OF_ARRAYS: Array<Array<String?>?> =
+        Array(0) { arrayOfNulls<String?>(0) }
+
     private val stringArray: Array<String?> = arrayOfNulls(0)
 
     private constructor() : super() {}

@@ -39,7 +39,7 @@ open public class ConsolidatedMotionRectanglesResultsCacheSingleton
         
 companion object {
             
-    private var cacheInterface: CacheInterface = 
+    private var cacheInterface: CacheInterface? = 
                 null
             
 

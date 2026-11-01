@@ -135,7 +135,7 @@ var scaleY = scaleY
                         
                                     {
                                     
-    var originalPlayNImage: playn.core.Image = 
+    var originalPlayNImage: playn.core.Image? = 
                 null
             
 

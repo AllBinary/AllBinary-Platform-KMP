@@ -19,6 +19,7 @@ import java.lang.Integer
 import java.lang.Object
 import org.allbinary.business.init.LicenseInitInfoUtil
 import org.allbinary.data.resource.ResourceUtil
+import org.allbinary.game.testgamedemo.R
 import org.allbinary.logic.system.security.licensing.PartnerIdentifierFileUtil
 
 open public class AllBinaryAndroidGameInitializationUtil : Object {
@@ -37,11 +38,15 @@ open public class AllBinaryAndroidGameInitializationUtil : Object {
 
             resourceUtil!!.addResource(
                 licenseInitInfoUtil!!.INITFILENAME,
-                Integer(Integer.valueOf(androidResources!!.raw.licenseinitdata)),
+                Integer(Integer.valueOf(R.Companion.raw.licenseinitdata)),
             )
             resourceUtil!!.addResource(
                 PartnerIdentifierFileUtil.getInstance()!!.FILE_NAME,
-                Integer(Integer.valueOf(androidResources!!.raw.partner)),
+                Integer(Integer.valueOf(R.Companion.raw.partner)),
+            )
+            resourceUtil!!.addResource(
+                licenseInitInfoUtil!!.ABOUT,
+                Integer(Integer.valueOf(R.Companion.raw.about)),
             )
         }
     }

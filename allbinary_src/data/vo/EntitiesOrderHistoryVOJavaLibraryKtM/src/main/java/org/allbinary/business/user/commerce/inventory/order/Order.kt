@@ -62,13 +62,13 @@ open public class Order
 
     private var id: String
 
-    private var userComment: String
+    private lateinit var userComment: String
 
-    private var userCancelComment: String
+    private lateinit var userCancelComment: String
 
-    private var storeComment: String
+    private lateinit var storeComment: String
 
-    private var storeCancelComment: String
+    private lateinit var storeCancelComment: String
 public constructor (basket: BasketInterface)
             : super()
         {

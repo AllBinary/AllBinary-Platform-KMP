@@ -137,7 +137,7 @@ private constructor ()
                         
                                     {
                                     
-    var originalPlayNImage: CoreImage = 
+    var originalPlayNImage: CoreImage? = 
                 null
             
 

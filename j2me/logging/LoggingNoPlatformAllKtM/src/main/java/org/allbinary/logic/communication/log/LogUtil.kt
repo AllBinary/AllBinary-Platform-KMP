@@ -87,7 +87,7 @@ var log = log
 }
 
 
-    open fun putF(specialMessage: String, className: String, functionName: String)
+    open fun putFS(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

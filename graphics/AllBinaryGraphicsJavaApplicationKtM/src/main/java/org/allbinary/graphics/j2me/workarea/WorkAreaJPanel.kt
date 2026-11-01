@@ -62,7 +62,7 @@ open public class WorkAreaJPanel : JPanel
         
 companion object {
             
-    private var document: org.w3c.dom.Document
+    private lateinit var document: org.w3c.dom.Document
 
     open fun getDocument()
         //nullable = true from not(false or (false and true)) = true
@@ -77,17 +77,17 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var canvasJPanelList: LinkedList
+    private lateinit var canvasJPanelList: LinkedList
 
-    private var canvasHolderJPanel: JPanel
+    private lateinit var canvasHolderJPanel: JPanel
 
-    private var name: String
+    private lateinit var name: String
 
     private var selectedFrame: Int= 0
 
-    private var propertiesJPanel: PropertiesJPanel
+    private lateinit var propertiesJPanel: PropertiesJPanel
 
-    private var workAreaJTreeJPanel: WorkAreaJTreeJPanel
+    private lateinit var workAreaJTreeJPanel: WorkAreaJTreeJPanel
 
     private var isPlaying: Boolean = false
 public constructor (name: String, dimension: Dimension, x: Int, y: Int){
@@ -860,7 +860,7 @@ Thread.sleep(250)
 }
 
 
-    private var innerJPanel: javax.swing.JPanel
+    private lateinit var innerJPanel: javax.swing.JPanel
 
 }
                 

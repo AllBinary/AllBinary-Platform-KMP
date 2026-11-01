@@ -73,23 +73,23 @@ open public class TransformInfo
 
     private var isChild: Boolean = false
 
-    private var name: String
+    private lateinit var name: String
 
-    private var storeName: String
+    private lateinit var storeName: String
 
-    private var objectFileName: String
+    private lateinit var objectFileName: String
 
     private var anyType: Any
 
-    private var objectConfigFileName: String
+    private lateinit var objectConfigFileName: String
 
-    private var objectConfigInterface: TransformInfoObjectConfigInterface
+    private lateinit var objectConfigInterface: TransformInfoObjectConfigInterface
 
-    private var template: String
+    private lateinit var template: String
 
-    private var templateFileName: String
+    private lateinit var templateFileName: String
 
-    private var dataFileName: String
+    private lateinit var dataFileName: String
 
     private var data: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor ()

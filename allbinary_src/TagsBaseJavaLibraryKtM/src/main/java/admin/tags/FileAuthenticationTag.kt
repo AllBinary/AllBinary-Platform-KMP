@@ -53,29 +53,29 @@ open public class FileAuthenticationTag : CustomTagSupport {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var attemptsInteger: Integer
+    private lateinit var attemptsInteger: Integer
 
-    private var weblisketSession: BasicWeblisketSession
+    private lateinit var weblisketSession: BasicWeblisketSession
 
-    private var request: HttpServletRequest
+    private lateinit var request: HttpServletRequest
 
-    private var command: String
+    private lateinit var command: String
 
-    private var userName: String
+    private lateinit var userName: String
 
-    private var password: String
+    private lateinit var password: String
 
-    private var newPassword: String
+    private lateinit var newPassword: String
 
-    private var authenticated: String
+    private lateinit var authenticated: String
 
-    private var sessionUserName: String
+    private lateinit var sessionUserName: String
 
-    private var role: BasicUserRole
+    private lateinit var role: BasicUserRole
 
-    private var timeout: String
+    private lateinit var timeout: String
 
-    private var roles: BasicArrayList
+    private lateinit var roles: BasicArrayList
 public constructor (){
 }
 

@@ -150,9 +150,9 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
     open fun getCurrentHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
-    var location: String = 
+    var location: String? = 
                 null
             
 
@@ -178,9 +178,9 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
     open fun getCurrentHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
-    var location: String = 
+    var location: String? = 
                 null
             
 
@@ -206,9 +206,9 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
     open fun getCurrentHomeHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
-    var location: String = 
+    var location: String? = 
                 null
             
 
@@ -234,9 +234,9 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
     open fun getCurrentHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
-    var location: String = 
+    var location: String? = 
                 null
             
 

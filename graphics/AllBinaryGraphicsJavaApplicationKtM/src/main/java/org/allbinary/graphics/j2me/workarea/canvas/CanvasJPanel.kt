@@ -86,21 +86,21 @@ companion object {
 
     private val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
-    private var selectedTool: GraphicItemInterface = 
+    private var selectedTool: GraphicItemInterface? = 
                 null
             
 
-    private var graphicItemHashMap: HashMap<Any, Any>
+    private lateinit var graphicItemHashMap: HashMap<Any, Any>
 
-    private var canvasDimension: IntegerDimension
+    private lateinit var canvasDimension: IntegerDimension
 
     private var angle: Double = 0.0
 
-    private var canvasTreeNode: DefaultMutableTreeNode
+    private lateinit var canvasTreeNode: DefaultMutableTreeNode
 
-    private var frameLabel: CanvasTreeLabel
+    private lateinit var frameLabel: CanvasTreeLabel
 
-    private var workAreaJTreeJPanel: WorkAreaJTreeJPanel
+    private lateinit var workAreaJTreeJPanel: WorkAreaJTreeJPanel
 
     private val grid: Grid
 public constructor (workAreaJTreeJPanel: WorkAreaJTreeJPanel, dimension: Dimension, x: Int, y: Int){
@@ -755,25 +755,29 @@ var graphics = graphics
 
 graphics.setColor(CanvasJPanel.gridColor)
 
+        run {
+        
+    var value: Int = yAdjust
 
+        while (value <= this.getHeight() -yAdjust) {
+        graphics.drawLine(xLeft, value, xRight, value)
 
+value += this.getYPixelsPerWorkAreaPixel()
+        }
+        }
+    
 
-                        for (value in yAdjust until this.getHeight() -yAdjust)
+        run {
+        
+    var value: Int = xAdjust
 
-        {
-graphics.drawLine(xLeft, value, xRight, value)
-}
+        while (value <= this.getWidth() -xAdjust) {
+        graphics.drawLine(value, yUpper, value, yLower)
 
-
-
-
-
-                        for (value in xAdjust until this.getWidth() -xAdjust)
-
-        {
-graphics.drawLine(value, yUpper, value, yLower)
-}
-
+value += this.getYPixelsPerWorkAreaPixel()
+        }
+        }
+    
 }
 
 

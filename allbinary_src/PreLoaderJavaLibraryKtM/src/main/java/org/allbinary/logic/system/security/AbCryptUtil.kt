@@ -66,7 +66,7 @@ private constructor ()
     //var inputStream = inputStream
     //var key = key
 
-    var outputStream: ByteArrayOutputStream = 
+    var outputStream: ByteArrayOutputStream? = 
                 null
             
 

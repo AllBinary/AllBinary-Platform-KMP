@@ -34,7 +34,7 @@ open public class AbSqlTable : AbSqlBasic {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var tableName: String
+    private lateinit var tableName: String
 
     private val METHOD_CREATED_TABLE: String = "createTable()"
 

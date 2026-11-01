@@ -58,11 +58,11 @@ companion object {
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var selectedTool: GraphicsItemInterfaceFactoryInterface = 
+    private var selectedTool: GraphicsItemInterfaceFactoryInterface? = 
                 null
             
 
-    private var tool: String = 
+    private var tool: String? = 
                 null
             
 

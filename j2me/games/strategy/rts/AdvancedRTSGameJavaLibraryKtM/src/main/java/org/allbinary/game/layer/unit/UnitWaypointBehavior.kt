@@ -43,12 +43,9 @@ import org.allbinary.util.BasicArrayListUtil
 
 open public class UnitWaypointBehavior : WaypointBehaviorBase, WaypointEventListenerInterface {
 
-    companion object {
+    val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-        private val PATHING: String = "Pathing"
-    }
-
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+    private val unitWaypointStrings: UnitWaypointStrings = UnitWaypointStrings.getInstance()!!
 
     private var longWeaponRange: Int = 0
 
@@ -283,7 +280,7 @@ open public class UnitWaypointBehavior : WaypointBehaviorBase, WaypointEventList
 
             this.associatedAdvancedRTSGameLayer!!
                 .getCaptionAnimationHelper()!!
-                .update(UnitWaypointBehavior.PATHING, BasicColorFactory.getInstance()!!.GREEN)
+                .update(this.unitWaypointStrings!!.PATHING, BasicColorFactory.getInstance()!!.GREEN)
         }
 
         this.currentGeographicMapCellHistoryP!!.init()

@@ -69,7 +69,7 @@ private constructor ()
     //var max = max
     //var byteArray1 = byteArray1
 
-    var inputStream: AbFileInputStream = 
+    var inputStream: AbFileInputStream? = 
                 null
             
 

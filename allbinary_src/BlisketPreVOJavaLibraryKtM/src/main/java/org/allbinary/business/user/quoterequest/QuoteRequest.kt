@@ -53,17 +53,17 @@ open public class QuoteRequest
 
     private var id: String
 
-    private var userName: String
+    private lateinit var userName: String
 
-    private var projectInfo: String
+    private lateinit var projectInfo: String
 
-    private var userComments: String
+    private lateinit var userComments: String
 
-    private var budget: String
+    private lateinit var budget: String
 
-    private var timeFrame: String
+    private lateinit var timeFrame: String
 
-    private var comments: String
+    private lateinit var comments: String
 public constructor (userName: String, request: HttpServletRequest)
             : super()
         {

@@ -33,7 +33,7 @@ open public class InputAutomationRobotInterfaceWrapper
          {
         
 
-    private var inputRobotInterface: InputRobotInterface
+    private lateinit var inputRobotInterface: InputRobotInterface
 public constructor (inputRobotInterface: InputRobotInterface)
             : super()
         {

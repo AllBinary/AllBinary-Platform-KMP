@@ -122,7 +122,7 @@ logUtil!!.putF(THIS_IS_SLOW, this, commonStrings!!.CONSTRUCTOR)
                                     }
                                 
 
-    var files: List<String> = ArrayList<>()
+    var files: List<String> = ArrayList()
 
 
     var start: Int = 0

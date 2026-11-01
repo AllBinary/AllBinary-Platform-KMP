@@ -98,7 +98,7 @@ var document = document
     var anyType: Any = childCategoryVector!!.get(i)!!
 
 
-    var categoryPropertiesInterface: CategoryPropertiesInterface = 
+    var categoryPropertiesInterface: CategoryPropertiesInterface? = 
                 null
             
 

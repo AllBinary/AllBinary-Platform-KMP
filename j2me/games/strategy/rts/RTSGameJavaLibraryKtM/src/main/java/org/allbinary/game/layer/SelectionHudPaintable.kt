@@ -39,7 +39,7 @@ open public class SelectionHudPaintable : InitUpdatePaintable, UpdateMyFontInter
 
     val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
 
-    var myFontProcessor: MyFontProcessor = updateMyFontProcessor
+    var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
 
     private var x: Int = 0
 

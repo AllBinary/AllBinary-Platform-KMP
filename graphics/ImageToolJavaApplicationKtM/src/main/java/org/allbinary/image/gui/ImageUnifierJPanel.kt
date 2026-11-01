@@ -60,13 +60,13 @@ open public class ImageUnifierJPanel : javax.swing.JPanel
 
     private val imagesRatioUtil: ImagesRatioUtil = ImagesRatioUtil.getInstance()!!
 
-    private var imageProcessorInput: ImageProcessorInput
+    private lateinit var imageProcessorInput: ImageProcessorInput
 
     private var icon: Array<ImageIconUnique?>
 
-    private var imageUnifierProperties: ImageUnifierProperties
+    private lateinit var imageUnifierProperties: ImageUnifierProperties
 
-    private var result: BufferedImage
+    private lateinit var result: BufferedImage
 
     private var isImageFillIn: Boolean = true
 public constructor (imageProcessorInput: ImageProcessorInput){
@@ -727,49 +727,49 @@ this.updateImage()
 }
 
 
-    private var avgRatioJTextField: javax.swing.JTextField
+    private lateinit var avgRatioJTextField: javax.swing.JTextField
 
-    private var cellHeightJTextField: javax.swing.JTextField
+    private lateinit var cellHeightJTextField: javax.swing.JTextField
 
-    private var cellRatioJTextField: javax.swing.JTextField
+    private lateinit var cellRatioJTextField: javax.swing.JTextField
 
-    private var cellWidthJTextField: javax.swing.JTextField
+    private lateinit var cellWidthJTextField: javax.swing.JTextField
 
-    private var columnsJTextField: javax.swing.JTextField
+    private lateinit var columnsJTextField: javax.swing.JTextField
 
-    private var downJButton: javax.swing.JButton
+    private lateinit var downJButton: javax.swing.JButton
 
-    private var fudgeItJButton: javax.swing.JButton
+    private lateinit var fudgeItJButton: javax.swing.JButton
 
-    private var imageJList: javax.swing.JList
+    private lateinit var imageJList: javax.swing.JList
 
-    private var jButton1: javax.swing.JButton
+    private lateinit var jButton1: javax.swing.JButton
 
-    private var jButton2: javax.swing.JButton
+    private lateinit var jButton2: javax.swing.JButton
 
-    private var jButtonOrder: javax.swing.JButton
+    private lateinit var jButtonOrder: javax.swing.JButton
 
-    private var jLabel1: javax.swing.JLabel
+    private lateinit var jLabel1: javax.swing.JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private lateinit var jLabel2: javax.swing.JLabel
 
-    private var jLabel3: javax.swing.JLabel
+    private lateinit var jLabel3: javax.swing.JLabel
 
-    private var jLabel4: javax.swing.JLabel
+    private lateinit var jLabel4: javax.swing.JLabel
 
-    private var jLabel5: javax.swing.JLabel
+    private lateinit var jLabel5: javax.swing.JLabel
 
-    private var jLabel6: javax.swing.JLabel
+    private lateinit var jLabel6: javax.swing.JLabel
 
-    private var jPanel1: javax.swing.JPanel
+    private lateinit var jPanel1: javax.swing.JPanel
 
-    private var jScrollPane1: javax.swing.JScrollPane
+    private lateinit var jScrollPane1: javax.swing.JScrollPane
 
-    private var jScrollPane2: javax.swing.JScrollPane
+    private lateinit var jScrollPane2: javax.swing.JScrollPane
 
-    private var rowsJTextField: javax.swing.JTextField
+    private lateinit var rowsJTextField: javax.swing.JTextField
 
-    private var upJButton: javax.swing.JButton
+    private lateinit var upJButton: javax.swing.JButton
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

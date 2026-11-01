@@ -56,9 +56,9 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var baseNode: Node
+    private lateinit var baseNode: Node
 
-    private var document: Document
+    private lateinit var document: Document
 public constructor (pageContext: PageContext, weblisketSession: WeblisketSession)
             : super()
         {

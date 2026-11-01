@@ -63,7 +63,7 @@ import org.allbinary.util.ABHashtable
 
     private var timeDelayHelper: TimeDelayHelper = TimeDelayHelper(200000)
 
-    var abeClientInformation: AbeClientInformationInterface
+    lateinit var abeClientInformation: AbeClientInformationInterface
 private constructor ()
             : super()
         {
@@ -114,7 +114,7 @@ this.put(specialMessage, anyType, functionName, exception)
 }
 
 
-    /*actual*/ open fun putF(specialMessage: String, className: String, functionName: String)
+    /*actual*/ open fun putFS(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

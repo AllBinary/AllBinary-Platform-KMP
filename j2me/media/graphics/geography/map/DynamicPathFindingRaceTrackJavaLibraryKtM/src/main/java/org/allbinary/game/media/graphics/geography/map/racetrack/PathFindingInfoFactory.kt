@@ -52,7 +52,7 @@ open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
 companion object {
             
-    private var instance: PathFindingInfoFactory
+    private lateinit var instance: PathFindingInfoFactory
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 

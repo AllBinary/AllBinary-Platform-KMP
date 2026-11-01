@@ -61,7 +61,7 @@ open public class SpriteSplitterImageJPanel : javax.swing.JPanel
 
     private var imageProcessorInput: ImageProcessorInput
 
-    private var result: BufferedImage
+    private lateinit var result: BufferedImage
 public constructor (imageProcessorInput: ImageProcessorInput)                        
 
                             : super(){
@@ -166,7 +166,7 @@ this.heightReductionTextField= javax.swing.JTextField()
 this.generateJButton= javax.swing.JButton()
 this.jPanel2= javax.swing.JPanel()
 this.jLabel1= javax.swing.JLabel()
-this.totalFramesJComboBox= javax.swing.JComboBox<>()
+this.totalFramesJComboBox= javax.swing.JComboBox()
 
     var size: Int = 70
 
@@ -185,7 +185,7 @@ animationStringArray2[index -1]= index.toString()!!
 
 this.totalFramesJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(animationStringArray2))
 this.jLabel2= javax.swing.JLabel()
-this.totalAnimationsJComboBox= javax.swing.JComboBox<>()
+this.totalAnimationsJComboBox= javax.swing.JComboBox()
 
     var animationStringArray: Array<String?> = arrayOfNulls(size -1)
 
@@ -201,7 +201,7 @@ animationStringArray[index -1]= index.toString()!!
 
 this.totalAnimationsJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(animationStringArray))
 this.jLabel3= javax.swing.JLabel()
-this.spriteTypeJComboBox= javax.swing.JComboBox<>()
+this.spriteTypeJComboBox= javax.swing.JComboBox()
 this.spriteTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.DIRECTIONAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_SPRITE)))
 jLabel7= javax.swing.JLabel()
 this.increaseWidthTextField= javax.swing.JTextField()
@@ -390,43 +390,43 @@ var evt = evt
 }
 
 
-    private var generateJButton: javax.swing.JButton
+    private lateinit var generateJButton: javax.swing.JButton
 
-    private var heightReductionTextField: javax.swing.JTextField
+    private lateinit var heightReductionTextField: javax.swing.JTextField
 
-    private var increaseHeightTextField: javax.swing.JTextField
+    private lateinit var increaseHeightTextField: javax.swing.JTextField
 
-    private var increaseWidthTextField: javax.swing.JTextField
+    private lateinit var increaseWidthTextField: javax.swing.JTextField
 
-    private var jLabel1: javax.swing.JLabel
+    private lateinit var jLabel1: javax.swing.JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private lateinit var jLabel2: javax.swing.JLabel
 
-    private var jLabel3: javax.swing.JLabel
+    private lateinit var jLabel3: javax.swing.JLabel
 
-    private var jLabel4: javax.swing.JLabel
+    private lateinit var jLabel4: javax.swing.JLabel
 
-    private var jLabel5: javax.swing.JLabel
+    private lateinit var jLabel5: javax.swing.JLabel
 
-    private var jLabel6: javax.swing.JLabel
+    private lateinit var jLabel6: javax.swing.JLabel
 
-    private var jLabel7: javax.swing.JLabel
+    private lateinit var jLabel7: javax.swing.JLabel
 
-    private var jLabel8: javax.swing.JLabel
+    private lateinit var jLabel8: javax.swing.JLabel
 
-    private var jPanel1: javax.swing.JPanel
+    private lateinit var jPanel1: javax.swing.JPanel
 
-    private var jPanel2: javax.swing.JPanel
+    private lateinit var jPanel2: javax.swing.JPanel
 
-    private var spriteTypeJComboBox: javax.swing.JComboBox<String>
+    private lateinit var spriteTypeJComboBox: javax.swing.JComboBox<String>
 
-    private var totalAnimationsJComboBox: javax.swing.JComboBox<String>
+    private lateinit var totalAnimationsJComboBox: javax.swing.JComboBox<String>
 
-    private var totalFramesJComboBox: javax.swing.JComboBox<String>
+    private lateinit var totalFramesJComboBox: javax.swing.JComboBox<String>
 
-    private var widthReductionTextField: javax.swing.JTextField
+    private lateinit var widthReductionTextField: javax.swing.JTextField
 
-    private var writeOverOriginalJCheckBox: javax.swing.JCheckBox
+    private lateinit var writeOverOriginalJCheckBox: javax.swing.JCheckBox
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

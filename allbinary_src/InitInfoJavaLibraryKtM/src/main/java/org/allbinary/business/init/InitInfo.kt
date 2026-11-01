@@ -60,15 +60,15 @@ companion object {
 
     val TESTHTMLPATH: String = "TESTHTMLPATH"
 
-    private var testing: String = 
+    private var testing: String? = 
                 null
             
 
-    private var mainPath: AbPath = 
+    private var mainPath: AbPath? = 
                 null
             
 
-    private var testHtmlPath: AbPath = 
+    private var testHtmlPath: AbPath? = 
                 null
             
 
@@ -101,7 +101,7 @@ private constructor ()
                                 
 
     
-                        if(!initInfoEntity!!.is())
+                        if(!initInfoEntity!!.`is`())
                         
                                     {
                                     

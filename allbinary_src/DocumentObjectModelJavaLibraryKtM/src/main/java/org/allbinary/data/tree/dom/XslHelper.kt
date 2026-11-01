@@ -30,6 +30,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.OutputStream
 import java.io.StringBufferInputStream
+import javax.xml.transform.Templates
 import javax.xml.transform.Transformer
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.URIResolver
@@ -115,6 +116,36 @@ transformer.transform(xmlStreamSource, streamResult)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streamResult!!.getOutputStream()
+} catch(e: Exception)
+            {
+
+
+
+                            throw e
+}
+
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun translateTemplate(templates: Templates, xmlStreamSource: StreamSource)
+        //nullable = true from not(false or (false and false)) = true
+: String{
+    //var templates = templates
+    //var xmlStreamSource = xmlStreamSource
+
+        try {
+            
+    var outputStream: ByteArrayOutputStream = ByteArrayOutputStream()
+
+
+    var streamResult: StreamResult = StreamResult(outputStream)
+
+templates.newTransformer()!!.transform(xmlStreamSource, streamResult)
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return streamResult!!.getOutputStream()!!.toString()
 } catch(e: Exception)
             {
 

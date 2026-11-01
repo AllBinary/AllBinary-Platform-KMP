@@ -42,7 +42,7 @@ companion object {
 : ProfileActionScriptConditionInterface{
 var node = node
 
-    var profileActionScriptConditionInterface: ProfileActionScriptConditionInterface = 
+    var profileActionScriptConditionInterface: ProfileActionScriptConditionInterface? = 
                 null
             
 
