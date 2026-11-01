@@ -40,15 +40,15 @@ open public class LineReader
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private lateinit var fileName: String
+    private var fileName: String
 
-    private lateinit var string: String
+    private var string: String
 
     private var index: Int = 0
 
-    private lateinit var idFile: AbFileInputStream
+    private var idFile: AbFileInputStream
 
-    private lateinit var idData: DataInputStream
+    private var idData: DataInputStream
 public constructor (fileName: String)
             : super()
         {

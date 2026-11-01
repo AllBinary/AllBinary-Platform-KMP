@@ -33,7 +33,7 @@ import admin.taghelpers.BasicGroupItemsRequestHelperFactory
 open public class BasicGroupItemsTag : TableTag {
         
 
-    private lateinit var propertiesHashMap: HashMap<Any, Any>
+    private var propertiesHashMap: HashMap<Any, Any>
 public constructor (){
 this.setTagHelperFactory(BasicGroupItemsHelperFactory())
 this.setTagRequestHelperFactory(BasicGroupItemsRequestHelperFactory())

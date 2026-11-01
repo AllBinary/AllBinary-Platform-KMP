@@ -35,7 +35,7 @@ import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 open public class PaymentGatewayViewAbstract : TransformInfoHttpComposite {
         
 
-    private lateinit var paymentGatewayPrimaryKey: PaymentGatewayPrimaryKey
+    private var paymentGatewayPrimaryKey: PaymentGatewayPrimaryKey
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

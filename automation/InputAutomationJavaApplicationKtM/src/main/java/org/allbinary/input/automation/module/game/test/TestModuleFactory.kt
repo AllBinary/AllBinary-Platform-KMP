@@ -40,7 +40,7 @@ companion object {
 
         }
             
-    private lateinit var blankModuleConfigurationJPanel: BlankModuleConfigurationJPanel
+    private var blankModuleConfigurationJPanel: BlankModuleConfigurationJPanel
 public constructor ()                        
 
                             : super(NAME, BlankModuleConfigurationJPanel()){

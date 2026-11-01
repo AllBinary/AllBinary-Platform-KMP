@@ -44,11 +44,11 @@ open public class GenericProfile
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var name: String
+    private var name: String
 
     private var vector: BasicArrayList
 
-    private lateinit var genericProfileActions: GenericProfileActions
+    private var genericProfileActions: GenericProfileActions
 public constructor (node: Node)
             : super()
         {

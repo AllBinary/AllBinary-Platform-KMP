@@ -50,11 +50,11 @@ open public class OrderHistoryRequestHelper : TagHelper {
 
     private var request: HttpServletRequest
 
-    private lateinit var id: String
+    private var id: String
 
-    private lateinit var groupId: String
+    private var groupId: String
 
-    private lateinit var status: String
+    private var status: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

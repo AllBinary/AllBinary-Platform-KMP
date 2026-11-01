@@ -36,9 +36,9 @@ open public class PaymentGatewayPrimaryKey
                 , java.io.Serializable {
         
 
-    private lateinit var storeName: String
+    private var storeName: String
 
-    private lateinit var name: String
+    private var name: String
 public constructor (storeName: String, gatewayName: String)
             : super()
         {

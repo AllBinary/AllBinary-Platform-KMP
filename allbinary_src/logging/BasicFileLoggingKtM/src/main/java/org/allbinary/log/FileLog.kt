@@ -63,9 +63,9 @@ companion object {
 
     private var logFile: File = File(FileLog.logPath, FileLog.fileName)
 
-    private lateinit var logFileBak: File
+    private var logFileBak: File
 
-    private lateinit var fileOut: BufferedWriter
+    private var fileOut: BufferedWriter
 
     private var backupIndex: Int= 0
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.

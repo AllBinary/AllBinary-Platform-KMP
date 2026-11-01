@@ -31,7 +31,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 open public class ImageComparisonResultsEvent : AllBinaryEventObject {
         
 
-    private lateinit var imageComparisonResult: ImageComparisonResult
+    private var imageComparisonResult: ImageComparisonResult
 public constructor (anyType: Any, imageComparisonInfo: ImageComparisonResult)                        
 
                             : super(anyType){

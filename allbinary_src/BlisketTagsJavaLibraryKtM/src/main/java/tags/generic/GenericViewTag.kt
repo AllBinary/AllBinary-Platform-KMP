@@ -35,9 +35,9 @@ open public class GenericViewTag : TransformTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var output: String
+    private var output: String
 
-    private lateinit var file: String
+    private var file: String
 public constructor (){
 
     

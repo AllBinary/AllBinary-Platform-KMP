@@ -53,29 +53,29 @@ open public class WindowsHardware
                 , HardwareInterface {
         
 
-    private lateinit var componentInterfaceVector: BasicArrayList
+    private var componentInterfaceVector: BasicArrayList
 
-    private lateinit var videoInterfaceVector: BasicArrayList
+    private var videoInterfaceVector: BasicArrayList
 
-    private lateinit var hardDriveControllerInterfaceVector: BasicArrayList
+    private var hardDriveControllerInterfaceVector: BasicArrayList
 
-    private lateinit var cpuInterfaceVector: BasicArrayList
+    private var cpuInterfaceVector: BasicArrayList
 
-    private lateinit var usbInterfaceVector: BasicArrayList
+    private var usbInterfaceVector: BasicArrayList
 
-    private lateinit var ethernetInterfaceVector: BasicArrayList
+    private var ethernetInterfaceVector: BasicArrayList
 
-    private lateinit var multimediaInterfaceVector: BasicArrayList
+    private var multimediaInterfaceVector: BasicArrayList
 
-    private lateinit var fireWireInterfaceVector: BasicArrayList
+    private var fireWireInterfaceVector: BasicArrayList
 
-    private lateinit var bridgeInterfaceVector: BasicArrayList
+    private var bridgeInterfaceVector: BasicArrayList
 
-    private lateinit var hardDriveInterfaceVector: BasicArrayList
+    private var hardDriveInterfaceVector: BasicArrayList
 
-    private lateinit var macInterfaceVector: BasicArrayList
+    private var macInterfaceVector: BasicArrayList
 
-    private lateinit var monitorInterfaceVector: BasicArrayList
+    private var monitorInterfaceVector: BasicArrayList
 
     private val NAME: String = "Windows Hardware Profile"
 

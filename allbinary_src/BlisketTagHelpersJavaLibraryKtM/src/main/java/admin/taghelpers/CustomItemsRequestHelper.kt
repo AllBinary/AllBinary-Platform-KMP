@@ -51,15 +51,15 @@ open public class CustomItemsRequestHelper : ModifyTable {
 
     private var request: HttpServletRequest
 
-    private lateinit var id: String
+    private var id: String
 
-    private lateinit var className: String
+    private var className: String
 
-    private lateinit var packageName: String
+    private var packageName: String
 
-    private lateinit var timeEntered: String
+    private var timeEntered: String
 
-    private lateinit var lastModified: String
+    private var lastModified: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

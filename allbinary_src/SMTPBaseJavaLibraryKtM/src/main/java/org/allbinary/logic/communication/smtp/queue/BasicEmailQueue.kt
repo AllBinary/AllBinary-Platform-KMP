@@ -38,7 +38,7 @@ companion object {
             
     private val instance: BasicEmailQueue = BasicEmailQueue()
 
-    private lateinit var basicEmailQueue: BasicEmailQueue
+    private var basicEmailQueue: BasicEmailQueue
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     open fun getInstance()

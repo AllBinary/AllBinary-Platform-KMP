@@ -63,7 +63,7 @@ import org.allbinary.util.ABHashtable
 
     private var timeDelayHelper: TimeDelayHelper = TimeDelayHelper(200000)
 
-    lateinit var abeClientInformation: AbeClientInformationInterface
+    var abeClientInformation: AbeClientInformationInterface
 private constructor ()
             : super()
         {

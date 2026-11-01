@@ -36,7 +36,7 @@ companion object {
 
         }
             
-    private lateinit var path: String
+    private var path: String
 
     private var lastFrame: Int= 0
 public constructor (name: String, path: String, lastFrame: Int)                        

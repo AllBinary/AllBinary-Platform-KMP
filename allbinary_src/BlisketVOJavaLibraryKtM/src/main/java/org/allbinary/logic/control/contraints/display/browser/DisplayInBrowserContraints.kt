@@ -40,7 +40,7 @@ open public class DisplayInBrowserContraints
 
     private var quickFrameable: Boolean= false
 
-    private lateinit var mountedLink: String
+    private var mountedLink: String
 public constructor (node: Node)
             : super()
         {

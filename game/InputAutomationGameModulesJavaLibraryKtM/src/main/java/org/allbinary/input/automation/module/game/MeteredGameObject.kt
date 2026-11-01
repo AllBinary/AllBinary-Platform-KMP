@@ -44,13 +44,13 @@ open public class MeteredGameObject
 
     private var dropping: Boolean = false
 
-    private lateinit var minX: Integer
+    private var minX: Integer
 
-    private lateinit var maxX: Integer
+    private var maxX: Integer
 
-    private lateinit var y: Integer
+    private var y: Integer
 
-    private lateinit var size: Integer
+    private var size: Integer
 
     private val RATIOS_LABEL: String = "Ratios: "
 

@@ -63,49 +63,49 @@ open public class User
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var userName: String
+    private var userName: String
 
-    private lateinit var prefixName: String
+    private var prefixName: String
 
-    private lateinit var firstName: String
+    private var firstName: String
 
-    private lateinit var lastName: String
+    private var lastName: String
 
-    private lateinit var middleName: String
+    private var middleName: String
 
-    private lateinit var suffixName: String
+    private var suffixName: String
 
-    private lateinit var company: String
+    private var company: String
 
-    private lateinit var positionAtCompany: String
+    private var positionAtCompany: String
 
-    private lateinit var mainEmail: String
+    private var mainEmail: String
 
-    private lateinit var secondaryEmail: String
+    private var secondaryEmail: String
 
-    private lateinit var homePhone: String
+    private var homePhone: String
 
-    private lateinit var cellPhone: String
+    private var cellPhone: String
 
-    private lateinit var workPhone: String
+    private var workPhone: String
 
-    private lateinit var otherContact: String
+    private var otherContact: String
 
-    private lateinit var electronicDevice: String
+    private var electronicDevice: String
 
-    private lateinit var fax: String
+    private var fax: String
 
-    private lateinit var role: UserRole
+    private var role: UserRole
 
-    private lateinit var encryption: String
+    private var encryption: String
 
-    private lateinit var secret: String
+    private var secret: String
 
     private var password: Password
 
-    private lateinit var enable: String
+    private var enable: String
 
-    private lateinit var permissions: String
+    private var permissions: String
 
     private var userConfigurationInterface: UserConfigurationInterface
 public constructor ()

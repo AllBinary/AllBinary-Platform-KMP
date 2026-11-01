@@ -62,7 +62,7 @@ open public class TransformInfoObjectConfig
 
     private var document: Document
 
-    private lateinit var outputTypeName: String
+    private var outputTypeName: String
 public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {

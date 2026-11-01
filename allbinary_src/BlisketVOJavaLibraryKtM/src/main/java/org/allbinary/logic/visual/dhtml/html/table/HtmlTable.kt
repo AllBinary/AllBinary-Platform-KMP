@@ -74,15 +74,15 @@ open public class HtmlTable : HtmlTag {
 
     private var before: String
 
-    private lateinit var border: String
+    private var border: String
 
     private var cellpadding: String
 
     private var cellspacing: String
 
-    private lateinit var style: String
+    private var style: String
 
-    private lateinit var name: String
+    private var name: String
 
     private var after: String
 

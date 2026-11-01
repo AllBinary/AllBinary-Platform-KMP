@@ -58,19 +58,19 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var adminDbUserName: String
+    private var adminDbUserName: String
 
-    private lateinit var adminDbPassword: String
+    private var adminDbPassword: String
 
-    private lateinit var adminJdbcDriver: String
+    private var adminJdbcDriver: String
 
-    private lateinit var adminSchema: String
+    private var adminSchema: String
 
-    private lateinit var adminServer: String
+    private var adminServer: String
 
-    private lateinit var adminPort: String
+    private var adminPort: String
 
-    private lateinit var initDb: DynamicInitDb
+    private var initDb: DynamicInitDb
 public constructor (abeClientInformation: AbeClientInformationInterface, map: Map)
             : super()
         {

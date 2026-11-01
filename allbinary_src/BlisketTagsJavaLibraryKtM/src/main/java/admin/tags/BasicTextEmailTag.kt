@@ -40,9 +40,9 @@ open public class BasicTextEmailTag : CustomTagSupport {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var subject: String
+    private var subject: String
 
-    private lateinit var body: String
+    private var body: String
 public constructor (){
 }
 

@@ -56,7 +56,7 @@ open public class GenericInputAutomationWorker : AbstractInputAutomationWorker {
 
     private var frame: Long
 
-    private lateinit var genericProfile: GenericProfile
+    private var genericProfile: GenericProfile
 public constructor (inputAutomationActionInterface: InputAutomationActionInterface, genericProfile: GenericProfile, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)                        
 
                             : super(inputAutomationActionInterface){

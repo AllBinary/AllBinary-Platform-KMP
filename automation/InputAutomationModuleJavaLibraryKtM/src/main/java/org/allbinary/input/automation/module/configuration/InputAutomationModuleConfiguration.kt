@@ -55,11 +55,11 @@ open public class InputAutomationModuleConfiguration
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private lateinit var className: String
+    private var className: String
 
-    private lateinit var name: String
+    private var name: String
 
-    private lateinit var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface
+    private var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface
 public constructor ()
             : super()
         {

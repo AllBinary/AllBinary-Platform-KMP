@@ -181,19 +181,19 @@ this.getAlwaysActionJDialog()!!.setVisible(true)
 }
 
 
-    private lateinit var alwaysActionJButton: javax.swing.JButton
+    private var alwaysActionJButton: javax.swing.JButton
 
-    private lateinit var alwaysActionJDialog: javax.swing.JDialog
+    private var alwaysActionJDialog: javax.swing.JDialog
 
-    private lateinit var alwaysJComboBox: javax.swing.JComboBox
+    private var alwaysJComboBox: javax.swing.JComboBox
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var jLabel2: javax.swing.JLabel
+    private var jLabel2: javax.swing.JLabel
 
-    private lateinit var okJButton: javax.swing.JButton
+    private var okJButton: javax.swing.JButton
 
-    private lateinit var titleJLabel: javax.swing.JLabel
+    private var titleJLabel: javax.swing.JLabel
 
 }
                 

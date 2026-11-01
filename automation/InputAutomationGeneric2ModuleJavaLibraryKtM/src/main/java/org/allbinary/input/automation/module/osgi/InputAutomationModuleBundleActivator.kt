@@ -51,7 +51,7 @@ open public class InputAutomationModuleBundleActivator
 
     private var inputAutomationModuleInterface: Array<InputAutomationModuleFactoryInterface?>
 
-    private lateinit var serviceFactory: ServiceFactory
+    private var serviceFactory: ServiceFactory
 public constructor ()
             : super()
         {

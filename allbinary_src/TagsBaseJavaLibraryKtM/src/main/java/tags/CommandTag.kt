@@ -32,7 +32,7 @@ open public class CommandTag : CustomTagSupport {
 
     val tagStrings: TagStrings = TagStrings.getInstance()!!
 
-    private lateinit var command: String
+    private var command: String
 public constructor (){
 }
 

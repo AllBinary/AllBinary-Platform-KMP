@@ -38,7 +38,7 @@ open public class BufferedImageCacheable
 
     private var key: BufferedImageInfo
 
-    private lateinit var bufferedImage: BufferedImage
+    private var bufferedImage: BufferedImage
 public constructor (key: BufferedImageInfo)
             : super()
         {

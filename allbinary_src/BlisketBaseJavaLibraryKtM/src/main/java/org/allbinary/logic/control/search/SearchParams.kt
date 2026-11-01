@@ -45,15 +45,15 @@ open public class SearchParams
 
     private var columnsAndSearchValues: HashMap<Any, Any>
 
-    private lateinit var order: String
+    private var order: String
 
-    private lateinit var sortBy: String
+    private var sortBy: String
 
-    private lateinit var listLength: String
+    private var listLength: String
 
-    private lateinit var startPage: String
+    private var startPage: String
 
-    private lateinit var endPage: String
+    private var endPage: String
 public constructor (request: HttpServletRequest)
             : super()
         {

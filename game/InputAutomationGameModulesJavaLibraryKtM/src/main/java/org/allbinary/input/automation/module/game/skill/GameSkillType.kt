@@ -47,7 +47,7 @@ companion object {
             
     private val SPELL_GAME_SKILL_TYPE: String = "SpellGameSkillType: "
 
-    private lateinit var name: String
+    private var name: String
 private constructor (name: String)
             : super()
         {

@@ -48,7 +48,7 @@ open public class DeleteFileValidationView : DownloadableInventoryItemView
                 , ValidationComponentInterface {
         
 
-    private lateinit var downloadItemId: String
+    private var downloadItemId: String
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){

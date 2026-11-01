@@ -47,7 +47,7 @@ open public class InputAutomationModuleConfigurations
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var hashMap: HashMap<Any, Any>
+    private var hashMap: HashMap<Any, Any>
 public constructor (abeClientInformation: AbeClientInformationInterface, file: File)
             : super()
         {

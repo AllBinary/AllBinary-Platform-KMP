@@ -57,7 +57,7 @@ open public class RotationSpriteImageJPanel : javax.swing.JPanel
 
     private var imageProcessorInput: ImageProcessorInput
 
-    private lateinit var result: BufferedImage
+    private var result: BufferedImage
 public constructor (imageProcessorInput: ImageProcessorInput)                        
 
                             : super(){
@@ -264,25 +264,25 @@ var evt = evt
 }
 
 
-    private lateinit var generateJButton: javax.swing.JButton
+    private var generateJButton: javax.swing.JButton
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var jLabel2: javax.swing.JLabel
+    private var jLabel2: javax.swing.JLabel
 
-    private lateinit var jLabel3: javax.swing.JLabel
+    private var jLabel3: javax.swing.JLabel
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var jPanel2: javax.swing.JPanel
+    private var jPanel2: javax.swing.JPanel
 
-    private lateinit var jPanel3: javax.swing.JPanel
+    private var jPanel3: javax.swing.JPanel
 
-    private lateinit var totalAngleJComboBox: javax.swing.JComboBox
+    private var totalAngleJComboBox: javax.swing.JComboBox
 
-    private lateinit var totalFramesJComboBox: javax.swing.JComboBox
+    private var totalFramesJComboBox: javax.swing.JComboBox
 
-    private lateinit var writeOverOriginalJCheckBox: javax.swing.JCheckBox
+    private var writeOverOriginalJCheckBox: javax.swing.JCheckBox
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

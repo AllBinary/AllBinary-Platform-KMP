@@ -57,7 +57,7 @@ open public class Cpu
 
     private val CPUFILE: String = "/proc/cpuinfo"
 
-    private lateinit var cpuHashMap: HashMap<Any, Any>
+    private var cpuHashMap: HashMap<Any, Any>
 public constructor (filePath: String)
             : super()
         {

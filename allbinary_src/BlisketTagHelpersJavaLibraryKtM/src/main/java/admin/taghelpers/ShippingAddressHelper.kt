@@ -54,9 +54,9 @@ open public class ShippingAddressHelper : BasicTable {
 
     private var request: HttpServletRequest
 
-    private lateinit var userName: String
+    private var userName: String
 
-    private lateinit var streetAddress: StreetAddress
+    private var streetAddress: StreetAddress
 
     private val portion: Portion
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){

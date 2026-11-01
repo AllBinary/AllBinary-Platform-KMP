@@ -40,7 +40,7 @@ open public class WorkFlowView : HttpStoreComponentView
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    lateinit var workFlowInterface: WorkFlowInterface
+    var workFlowInterface: WorkFlowInterface
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

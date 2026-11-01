@@ -104,7 +104,7 @@ copyTransformer!!.transform(domSource, streamResult)
 
     private val INDENT_NUMBER: String = "indent-number"
 
-    private lateinit var transformer: Transformer
+    private var transformer: Transformer
 private constructor ()
             : super()
         {

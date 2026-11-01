@@ -47,7 +47,7 @@ open public class TestInputAutomationCaptureWorker : AbstractInputAutomationWork
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var genericProfileActions: GenericProfileActions
+    private var genericProfileActions: GenericProfileActions
 
     private val MESSAGE: String = "GenericInputAutomationCaptureWorker"
 

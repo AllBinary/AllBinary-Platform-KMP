@@ -40,7 +40,7 @@ open public class ValidationStoreFrontStatisticsView : StoreFrontStatisticsCompo
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    lateinit var newStoreFrontInterface: StoreFrontInterface
+    var newStoreFrontInterface: StoreFrontInterface
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

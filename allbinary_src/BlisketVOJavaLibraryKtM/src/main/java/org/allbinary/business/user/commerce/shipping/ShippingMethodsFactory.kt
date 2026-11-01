@@ -77,7 +77,7 @@ SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()!!
 
         }
             
-    private lateinit var defaultShippingMethodInterface: ShippingInterface
+    private var defaultShippingMethodInterface: ShippingInterface
 
     private var document: Document
 

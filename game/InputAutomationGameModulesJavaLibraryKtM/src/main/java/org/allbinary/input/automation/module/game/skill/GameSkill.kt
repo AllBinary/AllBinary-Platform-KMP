@@ -55,9 +55,9 @@ var extra = extra
 
         }
             
-    private lateinit var gameSkillType: GameSkillType
+    private var gameSkillType: GameSkillType
 
-    private lateinit var extra: String
+    private var extra: String
 
     private var time: Int= 0
 

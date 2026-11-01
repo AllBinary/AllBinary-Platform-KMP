@@ -58,15 +58,15 @@ var args = args
 
         }
             
-    private lateinit var parent: MyFrame
+    private var parent: MyFrame
 
-    private lateinit var dimension: Dimension
+    private var dimension: Dimension
 
-    private lateinit var xSizeJTextField: JTextField
+    private var xSizeJTextField: JTextField
 
-    private lateinit var ySizeJTextField: JTextField
+    private var ySizeJTextField: JTextField
 
-    private lateinit var nameJTextField: JTextField
+    private var nameJTextField: JTextField
 public constructor (parent: MyFrame, modal: Boolean, dimension: Dimension, newName: String)                        
 
                             : super(parent as java.awt.Frame, modal){

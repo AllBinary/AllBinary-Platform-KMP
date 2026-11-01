@@ -62,9 +62,9 @@ open public class StoreFrontsRequestHelper : ModifyTable {
 
     private val weblisketSession: WeblisketSession
 
-    private lateinit var storeName: String
+    private var storeName: String
 
-    private lateinit var modifyingStoreFrontInterface: StoreFrontInterface
+    private var modifyingStoreFrontInterface: StoreFrontInterface
 
     private val portion: Portion
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){

@@ -52,7 +52,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    lateinit var body: GenericBodyValidation
+    var body: GenericBodyValidation
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

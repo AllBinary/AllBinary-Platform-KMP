@@ -62,7 +62,7 @@ open public class CanvasImageJPanel : javax.swing.JPanel
 
     private var imageProcessorInput: ImageProcessorInput
 
-    private lateinit var result: BufferedImage
+    private var result: BufferedImage
 public constructor (imageProcessorInput: ImageProcessorInput)                        
 
                             : super(){
@@ -291,31 +291,31 @@ var evt = evt
 }
 
 
-    private lateinit var generateJButton: javax.swing.JButton
+    private var generateJButton: javax.swing.JButton
 
-    private lateinit var heightReductionTextField: javax.swing.JTextField
+    private var heightReductionTextField: javax.swing.JTextField
 
-    private lateinit var heightReductionTextField1: javax.swing.JTextField
+    private var heightReductionTextField1: javax.swing.JTextField
 
-    private lateinit var jLabel4: javax.swing.JLabel
+    private var jLabel4: javax.swing.JLabel
 
-    private lateinit var jLabel5: javax.swing.JLabel
+    private var jLabel5: javax.swing.JLabel
 
-    private lateinit var jLabel6: javax.swing.JLabel
+    private var jLabel6: javax.swing.JLabel
 
-    private lateinit var jLabel7: javax.swing.JLabel
+    private var jLabel7: javax.swing.JLabel
 
-    private lateinit var jLabel8: javax.swing.JLabel
+    private var jLabel8: javax.swing.JLabel
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var jPanel2: javax.swing.JPanel
+    private var jPanel2: javax.swing.JPanel
 
-    private lateinit var widthReductionTextField: javax.swing.JTextField
+    private var widthReductionTextField: javax.swing.JTextField
 
-    private lateinit var widthReductionTextField1: javax.swing.JTextField
+    private var widthReductionTextField1: javax.swing.JTextField
 
-    private lateinit var writeOverOriginalJCheckBox: javax.swing.JCheckBox
+    private var writeOverOriginalJCheckBox: javax.swing.JCheckBox
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

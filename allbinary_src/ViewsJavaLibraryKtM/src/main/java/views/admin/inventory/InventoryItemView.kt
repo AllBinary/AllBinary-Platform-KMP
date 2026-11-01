@@ -69,15 +69,15 @@ companion object {
 
     val request: HttpServletRequest
 
-    private lateinit var imageFileName: String
+    private var imageFileName: String
 
-    private lateinit var mediaData: MediaData
+    private var mediaData: MediaData
 
-    lateinit var itemInterface: ItemInterface
+    var itemInterface: ItemInterface
 
-    lateinit var downloadableItemVector: BasicArrayList
+    var downloadableItemVector: BasicArrayList
 
-    private lateinit var requestHashMap: HashMap<Any, Any>
+    private var requestHashMap: HashMap<Any, Any>
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

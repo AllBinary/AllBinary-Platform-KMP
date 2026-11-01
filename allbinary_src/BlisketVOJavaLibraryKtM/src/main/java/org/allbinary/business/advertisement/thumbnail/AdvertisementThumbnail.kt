@@ -34,11 +34,11 @@ open public class AdvertisementThumbnail
                 , AdvertisementThumbnailInterface {
         
 
-    private lateinit var imageFileName: String
+    private var imageFileName: String
 
-    private lateinit var imageUrl: String
+    private var imageUrl: String
 
-    private lateinit var constraint: TwoDimensionalConstraintInterface
+    private var constraint: TwoDimensionalConstraintInterface
 public constructor ()
             : super()
         {

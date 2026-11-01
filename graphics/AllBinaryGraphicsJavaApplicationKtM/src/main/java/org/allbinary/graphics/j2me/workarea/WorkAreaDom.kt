@@ -46,9 +46,9 @@ companion object {
 
         }
             
-    private lateinit var name: String
+    private var name: String
 
-    private lateinit var canvasNodeList: BasicArrayList
+    private var canvasNodeList: BasicArrayList
 public constructor (document: Document)
             : super()
         {

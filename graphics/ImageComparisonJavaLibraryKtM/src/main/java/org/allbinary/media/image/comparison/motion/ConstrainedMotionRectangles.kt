@@ -43,7 +43,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface
+    private var motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface
 public constructor (motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, motionRectangles: MotionRectangles)                        
 
                             : super(NAME, motionRectangles!!.getImageComparisonResult()){

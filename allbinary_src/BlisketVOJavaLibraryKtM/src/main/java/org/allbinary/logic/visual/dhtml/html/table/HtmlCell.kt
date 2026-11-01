@@ -48,7 +48,7 @@ open public class HtmlCell : HtmlTag {
 
     private var before: String
 
-    private lateinit var body: String
+    private var body: String
 
     private var after: String
 public constructor (before: String, width: String, height: String, after: String){

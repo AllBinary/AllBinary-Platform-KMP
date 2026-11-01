@@ -50,7 +50,7 @@ companion object {
 
     private val idGeneratorEntity: IdGeneratorEntity
 
-    private lateinit var name: String
+    private var name: String
 public constructor ()
             : super()
         {

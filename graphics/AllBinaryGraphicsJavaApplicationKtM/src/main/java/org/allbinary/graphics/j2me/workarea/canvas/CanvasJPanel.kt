@@ -90,17 +90,17 @@ companion object {
                 null
             
 
-    private lateinit var graphicItemHashMap: HashMap<Any, Any>
+    private var graphicItemHashMap: HashMap<Any, Any>
 
-    private lateinit var canvasDimension: IntegerDimension
+    private var canvasDimension: IntegerDimension
 
     private var angle: Double = 0.0
 
-    private lateinit var canvasTreeNode: DefaultMutableTreeNode
+    private var canvasTreeNode: DefaultMutableTreeNode
 
-    private lateinit var frameLabel: CanvasTreeLabel
+    private var frameLabel: CanvasTreeLabel
 
-    private lateinit var workAreaJTreeJPanel: WorkAreaJTreeJPanel
+    private var workAreaJTreeJPanel: WorkAreaJTreeJPanel
 
     private val grid: Grid
 public constructor (workAreaJTreeJPanel: WorkAreaJTreeJPanel, dimension: Dimension, x: Int, y: Int){

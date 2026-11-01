@@ -40,7 +40,7 @@ open public class BooleanFileVisitor
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private lateinit var filterStringBasicArrayList: BasicArrayList
+    private var filterStringBasicArrayList: BasicArrayList
 public constructor (filterStringBasicArrayList: BasicArrayList)
             : super()
         {

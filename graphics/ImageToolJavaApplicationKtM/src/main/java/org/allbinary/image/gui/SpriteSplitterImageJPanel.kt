@@ -61,7 +61,7 @@ open public class SpriteSplitterImageJPanel : javax.swing.JPanel
 
     private var imageProcessorInput: ImageProcessorInput
 
-    private lateinit var result: BufferedImage
+    private var result: BufferedImage
 public constructor (imageProcessorInput: ImageProcessorInput)                        
 
                             : super(){
@@ -390,43 +390,43 @@ var evt = evt
 }
 
 
-    private lateinit var generateJButton: javax.swing.JButton
+    private var generateJButton: javax.swing.JButton
 
-    private lateinit var heightReductionTextField: javax.swing.JTextField
+    private var heightReductionTextField: javax.swing.JTextField
 
-    private lateinit var increaseHeightTextField: javax.swing.JTextField
+    private var increaseHeightTextField: javax.swing.JTextField
 
-    private lateinit var increaseWidthTextField: javax.swing.JTextField
+    private var increaseWidthTextField: javax.swing.JTextField
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var jLabel2: javax.swing.JLabel
+    private var jLabel2: javax.swing.JLabel
 
-    private lateinit var jLabel3: javax.swing.JLabel
+    private var jLabel3: javax.swing.JLabel
 
-    private lateinit var jLabel4: javax.swing.JLabel
+    private var jLabel4: javax.swing.JLabel
 
-    private lateinit var jLabel5: javax.swing.JLabel
+    private var jLabel5: javax.swing.JLabel
 
-    private lateinit var jLabel6: javax.swing.JLabel
+    private var jLabel6: javax.swing.JLabel
 
-    private lateinit var jLabel7: javax.swing.JLabel
+    private var jLabel7: javax.swing.JLabel
 
-    private lateinit var jLabel8: javax.swing.JLabel
+    private var jLabel8: javax.swing.JLabel
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var jPanel2: javax.swing.JPanel
+    private var jPanel2: javax.swing.JPanel
 
-    private lateinit var spriteTypeJComboBox: javax.swing.JComboBox<String>
+    private var spriteTypeJComboBox: javax.swing.JComboBox<String>
 
-    private lateinit var totalAnimationsJComboBox: javax.swing.JComboBox<String>
+    private var totalAnimationsJComboBox: javax.swing.JComboBox<String>
 
-    private lateinit var totalFramesJComboBox: javax.swing.JComboBox<String>
+    private var totalFramesJComboBox: javax.swing.JComboBox<String>
 
-    private lateinit var widthReductionTextField: javax.swing.JTextField
+    private var widthReductionTextField: javax.swing.JTextField
 
-    private lateinit var writeOverOriginalJCheckBox: javax.swing.JCheckBox
+    private var writeOverOriginalJCheckBox: javax.swing.JCheckBox
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

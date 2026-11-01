@@ -58,7 +58,7 @@ companion object {
 
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 
-    private lateinit var profileActionConditionInterfaceVector: BasicArrayList
+    private var profileActionConditionInterfaceVector: BasicArrayList
 public constructor (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)                        
 
                             : super(NAME){

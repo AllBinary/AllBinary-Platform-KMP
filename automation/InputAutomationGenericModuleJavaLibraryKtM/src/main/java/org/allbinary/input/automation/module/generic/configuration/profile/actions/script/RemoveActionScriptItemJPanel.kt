@@ -97,7 +97,7 @@ this.genericProfileActionJPanel!!.updateProfileActionUI()
 }
 
 
-    private lateinit var removeJButton: javax.swing.JButton
+    private var removeJButton: javax.swing.JButton
 
 }
                 

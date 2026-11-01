@@ -61,7 +61,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var colorAtActionScriptConditionJPanel: ColorAtActionScriptConditionJPanel
+    private var colorAtActionScriptConditionJPanel: ColorAtActionScriptConditionJPanel
 
     private var point: Point
 

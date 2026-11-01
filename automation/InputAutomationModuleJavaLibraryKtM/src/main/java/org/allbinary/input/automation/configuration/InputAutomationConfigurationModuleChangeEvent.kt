@@ -33,7 +33,7 @@ open public class InputAutomationConfigurationModuleChangeEvent
          {
         
 
-    private lateinit var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
+    private var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
 public constructor (inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
             : super()
         {

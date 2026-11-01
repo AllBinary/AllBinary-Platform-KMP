@@ -67,9 +67,9 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-    private lateinit var inputAutomationTypeJComboBox: javax.swing.JComboBox
+    private var inputAutomationTypeJComboBox: javax.swing.JComboBox
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
 }
                 

@@ -37,7 +37,7 @@ open public class CssCustomizerView : HttpStoreComponentView {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    lateinit var styleValidationInterface: ValidationInterface
+    var styleValidationInterface: ValidationInterface
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

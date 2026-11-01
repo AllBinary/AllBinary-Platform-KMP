@@ -545,49 +545,49 @@ this.normalJRadioButton!!.setSelected(false)
 }
 
 
-    private lateinit var addKeyJLabel: javax.swing.JLabel
+    private var addKeyJLabel: javax.swing.JLabel
 
-    private lateinit var delayBetweenJLabel: javax.swing.JLabel
+    private var delayBetweenJLabel: javax.swing.JLabel
 
-    private lateinit var delayJTextField: javax.swing.JTextField
+    private var delayJTextField: javax.swing.JTextField
 
-    private lateinit var holdTimeJLabel: javax.swing.JLabel
+    private var holdTimeJLabel: javax.swing.JLabel
 
-    private lateinit var inputAutomationTypeJComboBox: javax.swing.JComboBox
+    private var inputAutomationTypeJComboBox: javax.swing.JComboBox
 
-    private lateinit var inputTypeJLabel: javax.swing.JLabel
+    private var inputTypeJLabel: javax.swing.JLabel
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var keyActionJButton: javax.swing.JButton
+    private var keyActionJButton: javax.swing.JButton
 
-    private lateinit var keyActionJDialog: javax.swing.JDialog
+    private var keyActionJDialog: javax.swing.JDialog
 
-    private lateinit var keyIntegerJComboBox: javax.swing.JComboBox
+    private var keyIntegerJComboBox: javax.swing.JComboBox
 
-    private lateinit var keyNameJComboBox: javax.swing.JComboBox
+    private var keyNameJComboBox: javax.swing.JComboBox
 
-    private lateinit var normalJRadioButton: javax.swing.JRadioButton
+    private var normalJRadioButton: javax.swing.JRadioButton
 
-    private lateinit var okJButton: javax.swing.JButton
+    private var okJButton: javax.swing.JButton
 
-    private lateinit var pressJRadioButton: javax.swing.JRadioButton
+    private var pressJRadioButton: javax.swing.JRadioButton
 
-    private lateinit var releaseJRadioButton: javax.swing.JRadioButton
+    private var releaseJRadioButton: javax.swing.JRadioButton
 
-    private lateinit var sequenceJRadioButton: javax.swing.JRadioButton
+    private var sequenceJRadioButton: javax.swing.JRadioButton
 
-    private lateinit var simultaneousJRadioButton: javax.swing.JRadioButton
+    private var simultaneousJRadioButton: javax.swing.JRadioButton
 
-    private lateinit var testJLabel: javax.swing.JLabel
+    private var testJLabel: javax.swing.JLabel
 
-    private lateinit var textJTextField: javax.swing.JTextField
+    private var textJTextField: javax.swing.JTextField
 
-    private lateinit var timeJTextField: javax.swing.JTextField
+    private var timeJTextField: javax.swing.JTextField
 
-    private lateinit var titleJLabel: javax.swing.JLabel
+    private var titleJLabel: javax.swing.JLabel
 
 }
                 

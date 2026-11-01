@@ -65,9 +65,9 @@ open public class StaticPagesRequestHelper : AbContext
 
     private var request: HttpServletRequest
 
-    private lateinit var storeName: String
+    private var storeName: String
 
-    private lateinit var searchParams: SearchParams
+    private var searchParams: SearchParams
 
     private var xslFile: String
 public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        

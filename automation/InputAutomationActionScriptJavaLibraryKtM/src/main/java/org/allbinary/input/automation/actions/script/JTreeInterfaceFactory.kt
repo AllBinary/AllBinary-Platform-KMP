@@ -43,7 +43,7 @@ companion object {
             {
             }            
         
-    private lateinit var jTreeInterface: JTreeInterface
+    private var jTreeInterface: JTreeInterface
 
     open fun set(jTreeInterface: JTreeInterface)
         //nullable = true from not(false or (false and false)) = true

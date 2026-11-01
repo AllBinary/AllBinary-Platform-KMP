@@ -67,13 +67,13 @@ companion object {
 
     val request: HttpServletRequest
 
-    lateinit var id: String
+    var id: String
 
-    lateinit var itemInterface: ItemInterface
+    var itemInterface: ItemInterface
 
-    lateinit var downloadableItem: DownloadableItem
+    var downloadableItem: DownloadableItem
 
-    private lateinit var requestHashMap: HashMap<Any, Any>
+    private var requestHashMap: HashMap<Any, Any>
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

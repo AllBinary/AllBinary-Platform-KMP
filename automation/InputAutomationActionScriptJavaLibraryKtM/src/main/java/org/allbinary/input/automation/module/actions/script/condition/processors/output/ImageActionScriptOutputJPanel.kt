@@ -320,23 +320,23 @@ this.getCapturedImageActionJDialog()!!.setVisible(true)
 }
 
 
-    private lateinit var capturedImageActionJButton: javax.swing.JButton
+    private var capturedImageActionJButton: javax.swing.JButton
 
-    private lateinit var capturedImageActionJDialog: javax.swing.JDialog
+    private var capturedImageActionJDialog: javax.swing.JDialog
 
-    private lateinit var displayJCheckBox: javax.swing.JCheckBox
+    private var displayJCheckBox: javax.swing.JCheckBox
 
-    private lateinit var itemTypesJList: javax.swing.JList
+    private var itemTypesJList: javax.swing.JList
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var jScrollPane1: javax.swing.JScrollPane
+    private var jScrollPane1: javax.swing.JScrollPane
 
-    private lateinit var okJButton: javax.swing.JButton
+    private var okJButton: javax.swing.JButton
 
-    private lateinit var saveJCheckBox: javax.swing.JCheckBox
+    private var saveJCheckBox: javax.swing.JCheckBox
 
-    private lateinit var titleJLabel: javax.swing.JLabel
+    private var titleJLabel: javax.swing.JLabel
 
 }
                 

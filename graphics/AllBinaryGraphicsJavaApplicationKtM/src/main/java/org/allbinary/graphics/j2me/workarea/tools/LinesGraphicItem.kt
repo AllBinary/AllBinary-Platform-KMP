@@ -90,13 +90,13 @@ companion object {
 
     private val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
-    private lateinit var treeNode: DefaultMutableTreeNode
+    private var treeNode: DefaultMutableTreeNode
 
-    private lateinit var pointTreeNodeVector: BasicArrayList
+    private var pointTreeNodeVector: BasicArrayList
 
-    private lateinit var currentMousePoint: GPoint
+    private var currentMousePoint: GPoint
 
-    private lateinit var fulcrumPoint: GPoint
+    private var fulcrumPoint: GPoint
 
     private var active: Boolean = false
 

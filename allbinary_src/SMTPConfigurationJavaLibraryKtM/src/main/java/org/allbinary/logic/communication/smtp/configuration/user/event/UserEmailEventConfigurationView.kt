@@ -41,7 +41,7 @@ open public class UserEmailEventConfigurationView
                 , DomNodeInterface {
         
 
-    private lateinit var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface
+    private var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface
 public constructor (node: Node)
             : super()
         {

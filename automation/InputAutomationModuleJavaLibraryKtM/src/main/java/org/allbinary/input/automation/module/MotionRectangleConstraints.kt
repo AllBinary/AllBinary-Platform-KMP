@@ -36,9 +36,9 @@ open public class MotionRectangleConstraints
                 , MotionRectangleConstraintsInterface {
         
 
-    private lateinit var minDimension: Dimension
+    private var minDimension: Dimension
 
-    private lateinit var maxDimension: Dimension
+    private var maxDimension: Dimension
 
     private var maxMotionRectangles: Int= 0
 

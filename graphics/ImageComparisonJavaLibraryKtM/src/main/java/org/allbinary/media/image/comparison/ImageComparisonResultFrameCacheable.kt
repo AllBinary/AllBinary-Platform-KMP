@@ -37,7 +37,7 @@ open public class ImageComparisonResultFrameCacheable
 
     private var frame: Long
 
-    private lateinit var imageComparisonResult: ImageComparisonResult
+    private var imageComparisonResult: ImageComparisonResult
 public constructor (imageComparisonResult: ImageComparisonResult, frame: Long)
             : super()
         {

@@ -50,7 +50,7 @@ open public class PaymentHelper : Table {
 
     private var request: HttpServletRequest
 
-    private lateinit var value: String
+    private var value: String
 
     private val portion: Portion
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){

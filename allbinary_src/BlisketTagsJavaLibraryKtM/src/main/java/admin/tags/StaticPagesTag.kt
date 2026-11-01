@@ -41,7 +41,7 @@ open public class StaticPagesTag : TableTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var xslFile: String
+    private var xslFile: String
 public constructor (){
 this.setTagHelperFactory(StaticPagesHelperFactory())
 this.setTagRequestHelperFactory(StaticPagesRequestHelperFactory())

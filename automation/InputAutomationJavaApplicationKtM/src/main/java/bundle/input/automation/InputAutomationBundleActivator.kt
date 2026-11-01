@@ -49,9 +49,9 @@ open public class InputAutomationBundleActivator
         
 companion object {
             
-    private lateinit var moduleManagementThread: Thread
+    private var moduleManagementThread: Thread
 
-    private lateinit var bundleContext: BundleContext
+    private var bundleContext: BundleContext
 
     open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true

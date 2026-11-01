@@ -40,7 +40,7 @@ open public class ValidationTransformTag : TransformTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var xslFile: String
+    private var xslFile: String
 
     private var logic: Boolean
 public constructor ()                        

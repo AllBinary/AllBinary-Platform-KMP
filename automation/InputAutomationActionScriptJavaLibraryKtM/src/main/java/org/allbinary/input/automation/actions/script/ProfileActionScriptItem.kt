@@ -70,7 +70,7 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private lateinit var jPopupMenu: JPopupMenu
+    private var jPopupMenu: JPopupMenu
 public constructor (label: String, node: Node)                        
 
                             : super(label){

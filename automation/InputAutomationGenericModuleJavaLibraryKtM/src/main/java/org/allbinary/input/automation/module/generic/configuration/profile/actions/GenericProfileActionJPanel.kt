@@ -39,9 +39,9 @@ open public class GenericProfileActionJPanel : javax.swing.JPanel {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var genericProfileAction: GenericProfileAction
+    private var genericProfileAction: GenericProfileAction
 
-    private lateinit var genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel
+    private var genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel
 public constructor (){
 this.initComponents()
 }
@@ -203,17 +203,17 @@ this.updateProfileActionUI()
 }
 
 
-    private lateinit var blankProfileActionScriptJPanel: javax.swing.JPanel
+    private var blankProfileActionScriptJPanel: javax.swing.JPanel
 
-    private lateinit var genericProfileActionScriptJScrollPane: javax.swing.JScrollPane
+    private var genericProfileActionScriptJScrollPane: javax.swing.JScrollPane
 
-    private lateinit var ifJLabel: javax.swing.JLabel
+    private var ifJLabel: javax.swing.JLabel
 
-    private lateinit var newAlwaysJButton: javax.swing.JButton
+    private var newAlwaysJButton: javax.swing.JButton
 
-    private lateinit var newColorAtJButton: javax.swing.JButton
+    private var newColorAtJButton: javax.swing.JButton
 
-    private lateinit var newTimeIntervalJButton: javax.swing.JButton
+    private var newTimeIntervalJButton: javax.swing.JButton
 
 }
                 

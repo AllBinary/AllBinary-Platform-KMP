@@ -36,11 +36,11 @@ open public class EmailInfo
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var basicEmailInfo: BasicEmailInfo
+    private var basicEmailInfo: BasicEmailInfo
 
-    private lateinit var htmlAttachment: String
+    private var htmlAttachment: String
 
-    private lateinit var contentBase: String
+    private var contentBase: String
 public constructor (basicEmailInfo: BasicEmailInfo)
             : super()
         {

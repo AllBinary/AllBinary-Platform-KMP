@@ -49,7 +49,7 @@ open public class LogoValidation : Validation
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var logoFileItem: FileItem
+    private var logoFileItem: FileItem
 
     private var logoAbPath: AbPath
 

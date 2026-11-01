@@ -38,7 +38,7 @@ open public class UserView : HttpContextView {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    lateinit var user: UserInterface
+    var user: UserInterface
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

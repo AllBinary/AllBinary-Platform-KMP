@@ -64,19 +64,19 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var pageContext: PageContext
+    private var pageContext: PageContext
 
-    private lateinit var hashMap: HashMap<Any, Any>
+    private var hashMap: HashMap<Any, Any>
 
-    private lateinit var request: HttpServletRequest
+    private var request: HttpServletRequest
 
-    private lateinit var categoryLoaderInterface: CategoryLoaderInterface
+    private var categoryLoaderInterface: CategoryLoaderInterface
 
-    private lateinit var categoryInterface: CategoryInterface
+    private var categoryInterface: CategoryInterface
 
-    private lateinit var childCategoryInterface: CategoryInterface
+    private var childCategoryInterface: CategoryInterface
 
-    private lateinit var transformInfoInterface: TransformInfoInterface
+    private var transformInfoInterface: TransformInfoInterface
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

@@ -99,7 +99,7 @@ logUtil!!.put(CommonStrings.getInstance()!!.EXCEPTION,
 }
 
 
-    lateinit var statusJLabel: javax.swing.JLabel
+    var statusJLabel: javax.swing.JLabel
 
         }
             
@@ -1038,97 +1038,97 @@ var keyEvent = keyEvent
 }
 
 
-    private lateinit var animateJButton: javax.swing.JButton
+    private var animateJButton: javax.swing.JButton
 
-    private lateinit var autoDamageJMenuItem: javax.swing.JMenuItem
+    private var autoDamageJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var autoExplodeJMenuItem: javax.swing.JMenuItem
+    private var autoExplodeJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var autoGrowJMenuItem: javax.swing.JMenuItem
+    private var autoGrowJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var autoRotateGenerationJMenuItem: javax.swing.JMenuItem
+    private var autoRotateGenerationJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var autoSheildMenuItem: javax.swing.JMenuItem
+    private var autoSheildMenuItem: javax.swing.JMenuItem
 
-    private lateinit var autoShrinkJMenuItem: javax.swing.JMenuItem
+    private var autoShrinkJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var centerJMenuItem: javax.swing.JMenuItem
+    private var centerJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var copyJMenuItem1: javax.swing.JMenuItem
+    private var copyJMenuItem1: javax.swing.JMenuItem
 
-    private lateinit var exitJMenuItem: javax.swing.JMenuItem
+    private var exitJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var explodeAllJMenuItem: javax.swing.JMenuItem
+    private var explodeAllJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var exportJMenuItem1: javax.swing.JMenuItem
+    private var exportJMenuItem1: javax.swing.JMenuItem
 
-    private lateinit var fileJMenu: javax.swing.JMenu
+    private var fileJMenu: javax.swing.JMenu
 
-    private lateinit var frameJMenu: javax.swing.JMenu
+    private var frameJMenu: javax.swing.JMenu
 
-    private lateinit var generateJMenu: javax.swing.JMenu
+    private var generateJMenu: javax.swing.JMenu
 
-    private lateinit var insertAfterJMenuItem: javax.swing.JMenuItem
+    private var insertAfterJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var insertBeforeJMenuItem: javax.swing.JMenuItem
+    private var insertBeforeJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var jButton1: javax.swing.JButton
+    private var jButton1: javax.swing.JButton
 
-    private lateinit var jButton2: javax.swing.JButton
+    private var jButton2: javax.swing.JButton
 
-    private lateinit var jButton3: javax.swing.JButton
+    private var jButton3: javax.swing.JButton
 
-    private lateinit var jButton4: javax.swing.JButton
+    private var jButton4: javax.swing.JButton
 
-    private lateinit var jButton41: javax.swing.JButton
+    private var jButton41: javax.swing.JButton
 
-    private lateinit var jButton5: javax.swing.JButton
+    private var jButton5: javax.swing.JButton
 
-    private lateinit var jMenu1: javax.swing.JMenu
+    private var jMenu1: javax.swing.JMenu
 
-    private lateinit var jMenuItem1: javax.swing.JMenuItem
+    private var jMenuItem1: javax.swing.JMenuItem
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var jTabbedPane: javax.swing.JTabbedPane
+    private var jTabbedPane: javax.swing.JTabbedPane
 
-    private lateinit var jToolBar1: javax.swing.JToolBar
+    private var jToolBar1: javax.swing.JToolBar
 
-    private lateinit var mainJPanel: javax.swing.JPanel
+    private var mainJPanel: javax.swing.JPanel
 
-    private lateinit var menuJMenuBar: javax.swing.JMenuBar
+    private var menuJMenuBar: javax.swing.JMenuBar
 
-    private lateinit var newJMenuItem: javax.swing.JMenuItem
+    private var newJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var nextFrameJMenuItem: javax.swing.JMenuItem
+    private var nextFrameJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var objectJMenu: javax.swing.JMenu
+    private var objectJMenu: javax.swing.JMenu
 
-    private lateinit var openJButton: javax.swing.JButton
+    private var openJButton: javax.swing.JButton
 
-    private lateinit var openJMenuItem: javax.swing.JMenuItem
+    private var openJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var playJButton: javax.swing.JButton
+    private var playJButton: javax.swing.JButton
 
-    private lateinit var previousFrameJMenuItem: javax.swing.JMenuItem
+    private var previousFrameJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var removeJMenuItem: javax.swing.JMenuItem
+    private var removeJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var saveAsJMenuItem: javax.swing.JMenuItem
+    private var saveAsJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var saveJButton: javax.swing.JButton
+    private var saveJButton: javax.swing.JButton
 
-    private lateinit var saveJMenuItem: javax.swing.JMenuItem
+    private var saveJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var statusJPanel: javax.swing.JPanel
+    private var statusJPanel: javax.swing.JPanel
 
-    private lateinit var stopJjButton: javax.swing.JButton
+    private var stopJjButton: javax.swing.JButton
 
-    private lateinit var viewJMenu: javax.swing.JMenu
+    private var viewJMenu: javax.swing.JMenu
 
-    private lateinit var zoomInJMenuItem: javax.swing.JMenuItem
+    private var zoomInJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var zoomOutJMenuItem: javax.swing.JMenuItem
+    private var zoomOutJMenuItem: javax.swing.JMenuItem
 
 }
                 

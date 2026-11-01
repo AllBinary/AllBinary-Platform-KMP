@@ -46,11 +46,11 @@ open public class InputAutomationServiceConsumer
 
     val osgiServiceUtil: OSGIServiceUtil = OSGIServiceUtil.getInstance()!!
 
-    private lateinit var registryName: String
+    private var registryName: String
 
-    private lateinit var bundleContext: BundleContext
+    private var bundleContext: BundleContext
 
-    private lateinit var osgiServiceVisitorInterface: OSGIServiceVisitorInterface
+    private var osgiServiceVisitorInterface: OSGIServiceVisitorInterface
 public constructor (registryName: String, bundleContext: BundleContext, osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
             : super()
         {

@@ -71,7 +71,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
     private var inputBasicColorArray: Array<Array<BasicColor?>?> =
         Array(0) { arrayOfNulls<BasicColor?>(0) }
 
-    private lateinit var selectedBasicColor: BasicColor
+    private var selectedBasicColor: BasicColor
 
     open public inner class UpdateMyFontProperties : Object {
 

@@ -34,9 +34,9 @@ open public class TwoDimensionalConstraint
                 , TwoDimensionalConstraintInterface {
         
 
-    private lateinit var widthSizeConstraintInterface: SizeConstraintInterface
+    private var widthSizeConstraintInterface: SizeConstraintInterface
 
-    private lateinit var heightSizeConstraintInterface: SizeConstraintInterface
+    private var heightSizeConstraintInterface: SizeConstraintInterface
 public constructor (node: Node)
             : super()
         {

@@ -37,7 +37,7 @@ open public class AbEmail
                 , EmailInterface {
         
 
-    private lateinit var email: Email
+    private var email: Email
 public constructor (server: String, from: String, to: String, subject: String, textBody: String, htmlAttachment: String, contentBase: String)
             : super()
         {

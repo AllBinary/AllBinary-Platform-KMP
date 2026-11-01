@@ -35,7 +35,7 @@ open public class MotionRectanglesResultsFrameCacheable
                 , CacheableInterface {
         
 
-    private lateinit var motionRectangles: MotionRectangles
+    private var motionRectangles: MotionRectangles
 
     private var frame: Long
 public constructor (motionRectangles: MotionRectangles, frame: Long)

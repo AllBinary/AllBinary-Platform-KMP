@@ -71,7 +71,7 @@ open public class InputAutomationJFrame : javax.swing.JFrame
         
 companion object {
             
-    private lateinit var INPUTAUTOMATION_JFRAME: InputAutomationJFrame
+    private var INPUTAUTOMATION_JFRAME: InputAutomationJFrame
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -162,13 +162,13 @@ InputAutomationJFrame.create(
 
     private var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurations()
 
-    private lateinit var inputAutomationModuleFactory: InputAutomationModuleFactoryFactory
+    private var inputAutomationModuleFactory: InputAutomationModuleFactoryFactory
 
-    private lateinit var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface
+    private var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface
 
-    private lateinit var runnableInterface: RunnableInterface
+    private var runnableInterface: RunnableInterface
 
-    private lateinit var thread: Thread
+    private var thread: Thread
 
     private var helpSet: HelpSet
 
@@ -858,43 +858,43 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
 }
 
 
-    private lateinit var aboutJMenuItem: javax.swing.JMenuItem
+    private var aboutJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var automationModuleConfigurationJPanel: javax.swing.JPanel
+    private var automationModuleConfigurationJPanel: javax.swing.JPanel
 
-    private lateinit var gameRobotJTabbedPane: javax.swing.JTabbedPane
+    private var gameRobotJTabbedPane: javax.swing.JTabbedPane
 
-    private lateinit var helpJMenuItem: javax.swing.JMenuItem
+    private var helpJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var inputAutomationModuleJList: javax.swing.JList
+    private var inputAutomationModuleJList: javax.swing.JList
 
-    private lateinit var inputAutomationModuleJPanel: javax.swing.JPanel
+    private var inputAutomationModuleJPanel: javax.swing.JPanel
 
-    private lateinit var jScrollPane1: javax.swing.JScrollPane
+    private var jScrollPane1: javax.swing.JScrollPane
 
-    private lateinit var mainJMenuBar: javax.swing.JMenuBar
+    private var mainJMenuBar: javax.swing.JMenuBar
 
-    private lateinit var modulesJMenuItem: javax.swing.JMenuItem
+    private var modulesJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var noModuleSelectedJDialog: javax.swing.JDialog
+    private var noModuleSelectedJDialog: javax.swing.JDialog
 
-    private lateinit var noModuleSelectedJLabel: javax.swing.JLabel
+    private var noModuleSelectedJLabel: javax.swing.JLabel
 
-    private lateinit var optionsJMenu: javax.swing.JMenu
+    private var optionsJMenu: javax.swing.JMenu
 
-    private lateinit var processingJMenu: javax.swing.JMenu
+    private var processingJMenu: javax.swing.JMenu
 
-    private lateinit var startJMenuItem: javax.swing.JMenuItem
+    private var startJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var stopJMenuItem: javax.swing.JMenuItem
+    private var stopJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var stopOnFocusJCheckBoxMenuItem: javax.swing.JCheckBoxMenuItem
+    private var stopOnFocusJCheckBoxMenuItem: javax.swing.JCheckBoxMenuItem
 
-    private lateinit var subscriptionJMenuItem: javax.swing.JMenuItem
+    private var subscriptionJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var toolsJMenu: javax.swing.JMenu
+    private var toolsJMenu: javax.swing.JMenu
 
-    private lateinit var updatesJMenuItem: javax.swing.JMenuItem
+    private var updatesJMenuItem: javax.swing.JMenuItem
 
 }
                 

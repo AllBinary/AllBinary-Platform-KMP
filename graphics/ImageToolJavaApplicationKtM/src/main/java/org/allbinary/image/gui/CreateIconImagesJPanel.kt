@@ -263,7 +263,7 @@ this.process()
 }
 
 
-    private lateinit var aboveJButton: javax.swing.JButton
+    private var aboveJButton: javax.swing.JButton
 
 }
                 

@@ -159,17 +159,17 @@ this.logUtil!!.putF(commonStrings!!.EXCEPTION, this, "jButton1ActionPerformed")
 }
 
 
-    private lateinit var angleIncrementJTextField: javax.swing.JTextField
+    private var angleIncrementJTextField: javax.swing.JTextField
 
-    private lateinit var jButton1: javax.swing.JButton
+    private var jButton1: javax.swing.JButton
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var jLabel2: javax.swing.JLabel
+    private var jLabel2: javax.swing.JLabel
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var totalRotationJTextField: javax.swing.JTextField
+    private var totalRotationJTextField: javax.swing.JTextField
 
 }
                 

@@ -51,15 +51,15 @@ open public class AbstractInputAutomationWorker
 
     private var running: Boolean= false
 
-    private lateinit var inputAutomationActionInterface: InputAutomationActionInterface
+    private var inputAutomationActionInterface: InputAutomationActionInterface
 
-    private lateinit var captureWorkerInterface: CaptureWorkerInterface
+    private var captureWorkerInterface: CaptureWorkerInterface
 
-    private lateinit var imageComparisonWorker: ImageComparisonWorker
+    private var imageComparisonWorker: ImageComparisonWorker
 
-    private lateinit var motionRectanglesWorker: MotionRectanglesWorker
+    private var motionRectanglesWorker: MotionRectanglesWorker
 
-    private lateinit var captureThread: Thread
+    private var captureThread: Thread
 public constructor (inputAutomationActionInterface: InputAutomationActionInterface)
             : super()
         {

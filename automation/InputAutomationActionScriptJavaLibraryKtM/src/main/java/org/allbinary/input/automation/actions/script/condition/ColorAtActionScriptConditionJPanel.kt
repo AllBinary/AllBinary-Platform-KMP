@@ -378,49 +378,49 @@ this.getColorAtActionJDialog()!!.setVisible(true)
 }
 
 
-    private lateinit var blueJLabel: javax.swing.JLabel
+    private var blueJLabel: javax.swing.JLabel
 
-    private lateinit var colorAtActionJButton: javax.swing.JButton
+    private var colorAtActionJButton: javax.swing.JButton
 
-    private lateinit var colorAtActionJDialog: javax.swing.JDialog
+    private var colorAtActionJDialog: javax.swing.JDialog
 
-    private lateinit var colorAtXJTextField: javax.swing.JTextField
+    private var colorAtXJTextField: javax.swing.JTextField
 
-    private lateinit var colorAtYJTextField: javax.swing.JTextField
+    private var colorAtYJTextField: javax.swing.JTextField
 
-    private lateinit var colorRangeJLabel: javax.swing.JLabel
+    private var colorRangeJLabel: javax.swing.JLabel
 
-    private lateinit var greenJLabel: javax.swing.JLabel
+    private var greenJLabel: javax.swing.JLabel
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var locationJLabel: javax.swing.JLabel
+    private var locationJLabel: javax.swing.JLabel
 
-    private lateinit var maxBlueJTextField: javax.swing.JTextField
+    private var maxBlueJTextField: javax.swing.JTextField
 
-    private lateinit var maxGreenJTextField: javax.swing.JTextField
+    private var maxGreenJTextField: javax.swing.JTextField
 
-    private lateinit var maxJLabel: javax.swing.JLabel
+    private var maxJLabel: javax.swing.JLabel
 
-    private lateinit var maxRedJTextField: javax.swing.JTextField
+    private var maxRedJTextField: javax.swing.JTextField
 
-    private lateinit var minBlueJTextField: javax.swing.JTextField
+    private var minBlueJTextField: javax.swing.JTextField
 
-    private lateinit var minGreenJTextField: javax.swing.JTextField
+    private var minGreenJTextField: javax.swing.JTextField
 
-    private lateinit var minJLabel: javax.swing.JLabel
+    private var minJLabel: javax.swing.JLabel
 
-    private lateinit var minRedJTextField: javax.swing.JTextField
+    private var minRedJTextField: javax.swing.JTextField
 
-    private lateinit var okJButton: javax.swing.JButton
+    private var okJButton: javax.swing.JButton
 
-    private lateinit var redJLabel: javax.swing.JLabel
+    private var redJLabel: javax.swing.JLabel
 
-    private lateinit var titleJLabel: javax.swing.JLabel
+    private var titleJLabel: javax.swing.JLabel
 
-    private lateinit var xJLabel: javax.swing.JLabel
+    private var xJLabel: javax.swing.JLabel
 
-    private lateinit var yJLabel: javax.swing.JLabel
+    private var yJLabel: javax.swing.JLabel
 
 }
                 

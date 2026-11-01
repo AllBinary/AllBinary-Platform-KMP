@@ -47,7 +47,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var alwaysActionScriptConditionJPanel: AlwaysActionScriptConditionJPanel
+    private var alwaysActionScriptConditionJPanel: AlwaysActionScriptConditionJPanel
 
     private var isOn: Boolean= false
 public constructor (node: Node)                        

@@ -147,15 +147,15 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-    private lateinit var childActionScriptConditionJPanel: javax.swing.JPanel
+    private var childActionScriptConditionJPanel: javax.swing.JPanel
 
-    private lateinit var newActionScriptConditionJPanel: javax.swing.JPanel
+    private var newActionScriptConditionJPanel: javax.swing.JPanel
 
-    private lateinit var newActionScriptInputJPanel: javax.swing.JPanel
+    private var newActionScriptInputJPanel: javax.swing.JPanel
 
-    private lateinit var removeJPanel: javax.swing.JPanel
+    private var removeJPanel: javax.swing.JPanel
 
-    private lateinit var scriptItemJPanel: javax.swing.JPanel
+    private var scriptItemJPanel: javax.swing.JPanel
 
 }
                 

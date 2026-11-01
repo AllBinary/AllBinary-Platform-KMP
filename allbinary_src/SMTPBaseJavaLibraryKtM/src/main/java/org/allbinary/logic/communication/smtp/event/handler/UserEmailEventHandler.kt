@@ -41,9 +41,9 @@ open public class UserEmailEventHandler
 
     private var emailVector: BasicArrayList
 
-    private lateinit var emailInfo: EmailInfo
+    private var emailInfo: EmailInfo
 
-    private lateinit var userEmailEventNameData: UserEmailEventNameData
+    private var userEmailEventNameData: UserEmailEventNameData
 public constructor ()
             : super()
         {

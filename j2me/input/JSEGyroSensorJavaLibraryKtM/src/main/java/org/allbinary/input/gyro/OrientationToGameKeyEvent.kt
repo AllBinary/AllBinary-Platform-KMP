@@ -35,7 +35,7 @@ open public class OrientationToGameKeyEvent
          {
         
 
-    private lateinit var allBinaryGyroSensor: AllBinaryOrientationSensor
+    private var allBinaryGyroSensor: AllBinaryOrientationSensor
 
     private val MIN: Int = 15
 public constructor ()

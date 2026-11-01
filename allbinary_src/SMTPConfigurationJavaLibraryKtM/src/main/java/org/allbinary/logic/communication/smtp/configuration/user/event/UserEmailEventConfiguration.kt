@@ -38,9 +38,9 @@ open public class UserEmailEventConfiguration
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var name: String
+    private var name: String
 
-    private lateinit var eventListenerClassPath: String
+    private var eventListenerClassPath: String
 public constructor ()
             : super()
         {

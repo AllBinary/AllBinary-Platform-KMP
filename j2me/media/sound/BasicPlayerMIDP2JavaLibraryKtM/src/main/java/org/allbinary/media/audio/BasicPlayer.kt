@@ -50,7 +50,7 @@ companion object {
             
     val listenersList: BasicArrayList = BasicArrayListD()
 
-    private lateinit var timeBase: TimeBase
+    private var timeBase: TimeBase
 
     var stateP: Int= 0
 

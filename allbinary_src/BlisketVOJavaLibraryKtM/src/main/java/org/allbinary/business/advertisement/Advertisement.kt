@@ -38,29 +38,29 @@ open public class Advertisement
                 , AdvertisementInterface {
         
 
-    private lateinit var artist: String
+    private var artist: String
 
-    private lateinit var artistLink: String
+    private var artistLink: String
 
-    private lateinit var title: String
+    private var title: String
 
-    private lateinit var dateAdded: String
+    private var dateAdded: String
 
-    private lateinit var directory: String
+    private var directory: String
 
-    private lateinit var framedLink: String
+    private var framedLink: String
 
     private var rank: Int= 0
 
-    private lateinit var listPrice: Money
+    private var listPrice: Money
 
-    private lateinit var ourPrice: Money
+    private var ourPrice: Money
 
-    private lateinit var image: AdvertisementImageInterface
+    private var image: AdvertisementImageInterface
 
-    private lateinit var product: AdvertisementProductInterface
+    private var product: AdvertisementProductInterface
 
-    private lateinit var thumbnail: AdvertisementThumbnailInterface
+    private var thumbnail: AdvertisementThumbnailInterface
 
     private val displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface
 public constructor ()

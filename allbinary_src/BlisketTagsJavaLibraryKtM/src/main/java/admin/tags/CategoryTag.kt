@@ -41,7 +41,7 @@ open public class CategoryTag : TableTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var xsl: String
+    private var xsl: String
 public constructor (){
 this.setTagHelperFactory(CategoryHelperFactory())
 this.setTagRequestHelperFactory(CategoryRequestHelperFactory())

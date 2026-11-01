@@ -32,7 +32,7 @@ open public class ImageColorRangeResults
          {
         
 
-    private lateinit var colorRangeInterface: ColorRangeInterface
+    private var colorRangeInterface: ColorRangeInterface
 
     private var matchingPixelsChecked: Long= 0
 

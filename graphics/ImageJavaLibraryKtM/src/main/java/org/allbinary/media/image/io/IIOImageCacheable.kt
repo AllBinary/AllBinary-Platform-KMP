@@ -39,7 +39,7 @@ open public class IIOImageCacheable
 
     private var key: String
 
-    private lateinit var iioImage: IIOImage
+    private var iioImage: IIOImage
 public constructor (key: String)
             : super()
         {

@@ -44,15 +44,15 @@ open public class ShippingHelper : TagHelper {
 
     private var weblisketSession: WeblisketSession
 
-    private lateinit var storeFrontInterface: StoreFrontInterface
+    private var storeFrontInterface: StoreFrontInterface
 
-    private lateinit var propertiesHashMap: HashMap<Any, Any>
+    private var propertiesHashMap: HashMap<Any, Any>
 
     private var pageContext: PageContext
 
     private var request: HttpServletRequest
 
-    private lateinit var shippingType: String
+    private var shippingType: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

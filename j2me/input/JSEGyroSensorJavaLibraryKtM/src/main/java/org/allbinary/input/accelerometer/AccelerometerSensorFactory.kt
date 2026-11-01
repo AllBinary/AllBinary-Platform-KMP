@@ -36,7 +36,7 @@ open public class AccelerometerSensorFactory
         
 companion object {
             
-    private lateinit var allBinaryAccelerometerSensor: AllBinaryOrientationSensor
+    private var allBinaryAccelerometerSensor: AllBinaryOrientationSensor
 
                 @Throws(Exception::class)
             

@@ -51,7 +51,7 @@ open public class BillingAddressesView : HttpStoreComponentView
 
     private var request: HttpServletRequest
 
-    lateinit var streetAddresses: BasicArrayList
+    var streetAddresses: BasicArrayList
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

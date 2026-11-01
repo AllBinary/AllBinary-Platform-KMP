@@ -39,9 +39,9 @@ open public class NativeLibraryHelperWrapper
          {
         
 
-    private lateinit var libraryName: String
+    private var libraryName: String
 
-    private lateinit var loader: ClassLoader
+    private var loader: ClassLoader
 
     private var anyType: Any
 public constructor (libraryName: String)

@@ -54,7 +54,7 @@ BasicTextJDialog(javax.swing.JFrame(), true, "Test").
 
         }
             
-    private lateinit var closeListenerInterface: CloseJDialogListenerInterface
+    private var closeListenerInterface: CloseJDialogListenerInterface
 public constructor (parent: java.awt.Frame, modal: Boolean, text: String)                        
 
                             : super(parent, modal){
@@ -142,9 +142,9 @@ this.setVisible(false)
 }
 
 
-    private lateinit var jButton1: javax.swing.JButton
+    private var jButton1: javax.swing.JButton
 
-    private lateinit var textJLabel: javax.swing.JLabel
+    private var textJLabel: javax.swing.JLabel
 
 }
                 

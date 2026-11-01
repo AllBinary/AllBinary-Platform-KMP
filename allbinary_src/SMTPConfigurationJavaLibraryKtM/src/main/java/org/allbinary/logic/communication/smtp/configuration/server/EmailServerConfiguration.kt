@@ -39,11 +39,11 @@ open public class EmailServerConfiguration
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var accountName: String
+    private var accountName: String
 
-    private lateinit var password: String
+    private var password: String
 
-    private lateinit var smtpServer: String
+    private var smtpServer: String
 public constructor ()
             : super()
         {

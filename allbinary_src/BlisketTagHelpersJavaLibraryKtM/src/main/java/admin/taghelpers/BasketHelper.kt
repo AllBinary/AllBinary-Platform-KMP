@@ -42,7 +42,7 @@ open public class BasketHelper : TagHelper {
 
     private var weblisketSession: WeblisketSession
 
-    private lateinit var storeFrontInterface: StoreFrontInterface
+    private var storeFrontInterface: StoreFrontInterface
 
     private var propertiesHashMap: HashMap<Any, Any>
 

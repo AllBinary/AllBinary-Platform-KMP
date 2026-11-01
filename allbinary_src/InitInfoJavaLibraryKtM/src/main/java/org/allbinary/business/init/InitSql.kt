@@ -70,15 +70,15 @@ open public class InitSql
 
     val UPDATE: String = "update"
 
-    private lateinit var databaseConnectionInfoInterface: DbConnectionInfo
+    private var databaseConnectionInfoInterface: DbConnectionInfo
 
-    private lateinit var userid: String
+    private var userid: String
 
-    private lateinit var password: String
+    private var password: String
 
-    private lateinit var tableName: String
+    private var tableName: String
 
-    private lateinit var conn: Connection
+    private var conn: Connection
 
     private var useridAndPassword: Boolean= false
 

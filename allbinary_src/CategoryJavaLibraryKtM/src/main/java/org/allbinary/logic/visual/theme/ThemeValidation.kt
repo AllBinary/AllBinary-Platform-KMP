@@ -84,7 +84,7 @@ open public class ThemeValidation
 
     private var categoryAbPath: AbPath
 
-    private lateinit var fileAbPath: AbPath
+    private var fileAbPath: AbPath
 public constructor (transformInfoInterface: TransformInfoInterface, cssStyleValidation: CssStyleValidation, categoryThemePath: String)
             : super()
         {

@@ -34,7 +34,7 @@ import tags.StoreValidationTransformTag
 open public class UsersTag : StoreValidationTransformTag {
         
 
-    private lateinit var role: String
+    private var role: String
 public constructor (){
 }
 

@@ -46,11 +46,11 @@ open public class MultipartRequestParamForwardTag : CustomTagSupport {
             {
             }            
         
-    private lateinit var page: String
+    private var page: String
 
-    private lateinit var command: String
+    private var command: String
 
-    private lateinit var paramVector: BasicArrayList
+    private var paramVector: BasicArrayList
 
     open fun setPage(page: String)
         //nullable = true from not(false or (false and false)) = true

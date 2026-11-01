@@ -33,7 +33,7 @@ import tags.StoreValidationTransformTag
 open public class UserNameOrderHistoryTag : StoreValidationTransformTag {
         
 
-    private lateinit var status: String
+    private var status: String
 public constructor ()                        
 
                             : super(){

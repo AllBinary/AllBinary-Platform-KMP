@@ -36,23 +36,23 @@ open public class DbConnectionInfo
                 , DatabaseConnectionInfoInterface {
         
 
-    private lateinit var jdbcDriver: String
+    private var jdbcDriver: String
 
-    private lateinit var name: String
+    private var name: String
 
-    private lateinit var userName: String
+    private var userName: String
 
-    private lateinit var password: String
+    private var password: String
 
-    private lateinit var schema: String
+    private var schema: String
 
-    private lateinit var server: String
+    private var server: String
 
-    private lateinit var port: String
+    private var port: String
 
-    private lateinit var url: String
+    private var url: String
 
-    private lateinit var host: String
+    private var host: String
 
     private val SCHEMA_SEP: String = "://"
 

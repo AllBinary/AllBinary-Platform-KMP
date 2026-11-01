@@ -77,7 +77,7 @@ var resultHashtable = resultHashtable
 
     private var servers: BasicArrayList
 
-    private lateinit var special: String
+    private var special: String
 
     private var licenseType: LicenseType
 public constructor (hashtable: ABHashtable<Any, Any>)

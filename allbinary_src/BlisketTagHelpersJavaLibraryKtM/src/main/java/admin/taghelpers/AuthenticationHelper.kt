@@ -56,15 +56,15 @@ open public class AuthenticationHelper : TagHelper {
 
     private var weblisketSession: WeblisketSession
 
-    private lateinit var authenticated: String
+    private var authenticated: String
 
-    private lateinit var sessionUserName: String
+    private var sessionUserName: String
 
-    private lateinit var role: UserRole
+    private var role: UserRole
 
-    private lateinit var timeout: String
+    private var timeout: String
 
-    private lateinit var attemptsInteger: Integer
+    private var attemptsInteger: Integer
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : this(hashMap, pageContext!!.getRequest() as HttpServletRequest){

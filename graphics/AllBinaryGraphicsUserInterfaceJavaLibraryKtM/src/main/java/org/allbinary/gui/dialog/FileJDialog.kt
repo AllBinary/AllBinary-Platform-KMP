@@ -58,7 +58,7 @@ FileJDialog(javax.swing.JFrame(), true).
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var finishedListenerInterface: FileJDialogListenerInterface
+    private var finishedListenerInterface: FileJDialogListenerInterface
 public constructor ()                        
 
                             : super(){
@@ -176,7 +176,7 @@ this.jFileChooser1= jFileChooser1
 }
 
 
-    private lateinit var jFileChooser1: javax.swing.JFileChooser
+    private var jFileChooser1: javax.swing.JFileChooser
 
 }
                 

@@ -31,9 +31,9 @@ import javax.swing
 open public class JListSwingWorker : SwingWorker {
         
 
-    private lateinit var jList: JList
+    private var jList: JList
 
-    private lateinit var listModel: ListModel
+    private var listModel: ListModel
 public constructor (jList: JList, listModel: ListModel){
 var jList = jList
 var listModel = listModel

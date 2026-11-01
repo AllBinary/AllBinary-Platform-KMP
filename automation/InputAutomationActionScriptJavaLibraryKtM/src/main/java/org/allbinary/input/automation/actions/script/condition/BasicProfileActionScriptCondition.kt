@@ -54,9 +54,9 @@ open public class BasicProfileActionScriptCondition : ProfileActionScriptItem
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var profileActionProcessorInterfaceVector: BasicArrayList
+    private var profileActionProcessorInterfaceVector: BasicArrayList
 
-    private lateinit var profileActionConditionInterfaceVector: BasicArrayList
+    private var profileActionConditionInterfaceVector: BasicArrayList
 public constructor (label: String, node: Node)                        
 
                             : super(label, node){

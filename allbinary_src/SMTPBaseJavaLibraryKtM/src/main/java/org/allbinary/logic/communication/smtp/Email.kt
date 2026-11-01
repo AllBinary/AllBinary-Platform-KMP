@@ -74,11 +74,11 @@ companion object {
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private lateinit var msg: MimeMessage
+    private var msg: MimeMessage
 
-    private lateinit var properties: Properties
+    private var properties: Properties
 
-    private lateinit var bs: ByteArrayOutputStream
+    private var bs: ByteArrayOutputStream
 
     private var isDebug: Boolean
 public constructor (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String)

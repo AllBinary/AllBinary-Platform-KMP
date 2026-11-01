@@ -52,7 +52,7 @@ companion object {
 
     private var display: Boolean = false
 
-    private lateinit var imageTypes: ImageTypes
+    private var imageTypes: ImageTypes
 
     private var actionScriptOutputJPanel: ImageActionScriptOutputJPanel
 public constructor (node: Node)                        

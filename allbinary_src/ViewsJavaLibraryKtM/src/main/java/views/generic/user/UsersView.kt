@@ -44,7 +44,7 @@ open public class UsersView : HttpStoreComponentView
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    lateinit var userVector: BasicArrayList
+    var userVector: BasicArrayList
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

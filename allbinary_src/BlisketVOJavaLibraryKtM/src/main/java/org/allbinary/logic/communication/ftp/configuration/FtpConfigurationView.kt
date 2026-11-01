@@ -40,7 +40,7 @@ open public class FtpConfigurationView
                 , DomNodeInterface {
         
 
-    private lateinit var ftpConfigurationInterface: FtpConfigurationInterface
+    private var ftpConfigurationInterface: FtpConfigurationInterface
 public constructor (node: Node)
             : super()
         {

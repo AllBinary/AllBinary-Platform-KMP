@@ -50,29 +50,29 @@ open public class PermissionItemsRequestHelper : ModifyTable {
 
     private var request: HttpServletRequest
 
-    private lateinit var id: String
+    private var id: String
 
-    private lateinit var enabled: String
+    private var enabled: String
 
-    private lateinit var number: String
+    private var number: String
 
-    private lateinit var who: String
+    private var who: String
 
-    private lateinit var what: String
+    private var what: String
 
-    private lateinit var type: String
+    private var type: String
 
-    private lateinit var remoteAddr: String
+    private var remoteAddr: String
 
-    private lateinit var startTime: String
+    private var startTime: String
 
-    private lateinit var endTime: String
+    private var endTime: String
 
-    private lateinit var price: String
+    private var price: String
 
-    private lateinit var timeEntered: String
+    private var timeEntered: String
 
-    private lateinit var lastModified: String
+    private var lastModified: String
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext

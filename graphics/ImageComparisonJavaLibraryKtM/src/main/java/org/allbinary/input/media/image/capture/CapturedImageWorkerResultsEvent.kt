@@ -34,7 +34,7 @@ open public class CapturedImageWorkerResultsEvent : AllBinaryEventObject {
 
     private val frame: Long
 
-    private lateinit var bufferedImage: BufferedImage
+    private var bufferedImage: BufferedImage
 public constructor (anyType: Any, frame: Long, bufferedImage: BufferedImage)                        
 
                             : super(anyType){

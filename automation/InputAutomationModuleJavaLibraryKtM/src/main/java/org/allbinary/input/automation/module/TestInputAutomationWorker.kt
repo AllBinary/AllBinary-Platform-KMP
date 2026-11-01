@@ -40,9 +40,9 @@ open public class TestInputAutomationWorker
 
     private var captureWorker: ScreenCaptureImagesWorker
 
-    private lateinit var imageComparisonWorker: ImageComparisonWorker
+    private var imageComparisonWorker: ImageComparisonWorker
 
-    private lateinit var motionRectanglesWorker: MotionRectanglesWorker
+    private var motionRectanglesWorker: MotionRectanglesWorker
 
     private var changedPixelsImageComparisonResultsWorker: SaveImageComparisonWorker
 

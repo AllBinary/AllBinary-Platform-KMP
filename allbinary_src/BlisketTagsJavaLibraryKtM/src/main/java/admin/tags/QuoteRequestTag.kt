@@ -40,7 +40,7 @@ open public class QuoteRequestTag : TableTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var storeName: String
+    private var storeName: String
 public constructor (){
 this.setTagHelperFactory(QuoteHelperFactory())
 this.setTagRequestHelperFactory(QuoteRequestHelperFactory())

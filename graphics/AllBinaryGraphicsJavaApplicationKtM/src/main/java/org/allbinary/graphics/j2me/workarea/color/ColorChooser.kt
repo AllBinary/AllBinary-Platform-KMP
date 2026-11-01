@@ -43,7 +43,7 @@ add(this.jColorChooser1, java.awt.BorderLayout.CENTER)
 }
 
 
-    private lateinit var jColorChooser1: javax.swing.JColorChooser
+    private var jColorChooser1: javax.swing.JColorChooser
 
 }
                 

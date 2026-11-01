@@ -50,7 +50,7 @@ open public class ImageToolJFrame : javax.swing.JFrame
         
 companion object {
             
-    private lateinit var imageProcessorInputCompositeInterface: ImageProcessorInputCompositeInterface
+    private var imageProcessorInputCompositeInterface: ImageProcessorInputCompositeInterface
 
         }
             
@@ -60,7 +60,7 @@ companion object {
 
     private var fileJDialog: FileJDialog
 
-    private lateinit var imageProcessorInput: ImageProcessorInput
+    private var imageProcessorInput: ImageProcessorInput
 public constructor (){
 this.initComponents()
 
@@ -844,65 +844,65 @@ this.minRedJTextField= this.minRedJTextField
 }
 
 
-    private lateinit var analysisActionJDialog: javax.swing.JDialog
+    private var analysisActionJDialog: javax.swing.JDialog
 
-    private lateinit var analyzeJMenuItem: javax.swing.JMenuItem
+    private var analyzeJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var blueJLabel: javax.swing.JLabel
+    private var blueJLabel: javax.swing.JLabel
 
-    private lateinit var colorRangeJLabel: javax.swing.JLabel
+    private var colorRangeJLabel: javax.swing.JLabel
 
-    private lateinit var createStripImageJMenuItem: javax.swing.JMenuItem
+    private var createStripImageJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var fileJMenu: javax.swing.JMenu
+    private var fileJMenu: javax.swing.JMenu
 
-    private lateinit var generateSpriteSplitterMenuItem: javax.swing.JMenuItem
+    private var generateSpriteSplitterMenuItem: javax.swing.JMenuItem
 
-    private lateinit var generateRotationMenuItem: javax.swing.JMenuItem
+    private var generateRotationMenuItem: javax.swing.JMenuItem
 
-    private lateinit var generateMirrorSpriteMenuItem: javax.swing.JMenuItem
+    private var generateMirrorSpriteMenuItem: javax.swing.JMenuItem
 
-    private lateinit var generateRotationSpriteJMenuItem: javax.swing.JMenuItem
+    private var generateRotationSpriteJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var greenJLabel: javax.swing.JLabel
+    private var greenJLabel: javax.swing.JLabel
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var mainJMenuBar: javax.swing.JMenuBar
+    private var mainJMenuBar: javax.swing.JMenuBar
 
-    private lateinit var maxBlueJTextField: javax.swing.JTextField
+    private var maxBlueJTextField: javax.swing.JTextField
 
-    private lateinit var maxGreenJTextField: javax.swing.JTextField
+    private var maxGreenJTextField: javax.swing.JTextField
 
-    private lateinit var maxJLabel: javax.swing.JLabel
+    private var maxJLabel: javax.swing.JLabel
 
-    private lateinit var maxRedJTextField: javax.swing.JTextField
+    private var maxRedJTextField: javax.swing.JTextField
 
-    private lateinit var minBlueJTextField: javax.swing.JTextField
+    private var minBlueJTextField: javax.swing.JTextField
 
-    private lateinit var minGreenJTextField: javax.swing.JTextField
+    private var minGreenJTextField: javax.swing.JTextField
 
-    private lateinit var minJLabel: javax.swing.JLabel
+    private var minJLabel: javax.swing.JLabel
 
-    private lateinit var minRedJTextField: javax.swing.JTextField
+    private var minRedJTextField: javax.swing.JTextField
 
-    private lateinit var mirrorJMenuItem: javax.swing.JMenuItem
+    private var mirrorJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var okJButton: javax.swing.JButton
+    private var okJButton: javax.swing.JButton
 
-    private lateinit var openImageJMenuItem: javax.swing.JMenuItem
+    private var openImageJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var processingJMenu: javax.swing.JMenu
+    private var processingJMenu: javax.swing.JMenu
 
-    private lateinit var redJLabel: javax.swing.JLabel
+    private var redJLabel: javax.swing.JLabel
 
-    private lateinit var scaleImagesJMenuItem: javax.swing.JMenuItem
+    private var scaleImagesJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var canvasImagesJMenuItem: javax.swing.JMenuItem
+    private var canvasImagesJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var createIconImagesJMenuItem: javax.swing.JMenuItem
+    private var createIconImagesJMenuItem: javax.swing.JMenuItem
 
-    private lateinit var titleJLabel: javax.swing.JLabel
+    private var titleJLabel: javax.swing.JLabel
 
 }
                 

@@ -35,9 +35,9 @@ import org.allbinary.logic.communication.http.request.AbResponseHandler
 open public class UserTag : TableTag {
         
 
-    private lateinit var role: String
+    private var role: String
 
-    private lateinit var enable: String
+    private var enable: String
 public constructor (){
 this.setTagHelperFactory(UserHelperFactory())
 this.setTagRequestHelperFactory(UserHelperFactory())

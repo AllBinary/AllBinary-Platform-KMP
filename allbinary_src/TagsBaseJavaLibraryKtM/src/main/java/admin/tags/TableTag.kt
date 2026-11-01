@@ -46,17 +46,17 @@ open public class TableTag : PropertiesTag {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var enabled: String
+    private var enabled: String
 
-    private lateinit var tagHelperFactoryInterface: TagHelperFactoryInterface
+    private var tagHelperFactoryInterface: TagHelperFactoryInterface
 
-    private lateinit var tagRequestHelperFactoryInterface: TagHelperFactoryInterface
+    private var tagRequestHelperFactoryInterface: TagHelperFactoryInterface
 
     private var requestObject: Any
 
-    private lateinit var current: Integer
+    private var current: Integer
 
-    private lateinit var total: Integer
+    private var total: Integer
 public constructor (){
 
     

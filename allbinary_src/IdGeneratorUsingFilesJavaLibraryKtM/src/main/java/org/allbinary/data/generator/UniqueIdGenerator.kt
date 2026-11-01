@@ -50,7 +50,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private lateinit var newFile: AbFile
+    private var newFile: AbFile
 
     private var id: Long = 0
 public constructor ()

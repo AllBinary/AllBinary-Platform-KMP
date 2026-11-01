@@ -47,7 +47,7 @@ open public class EditValidationView : InventoryItemView
                 , ValidationComponentInterface {
         
 
-    private lateinit var id: String
+    private var id: String
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){

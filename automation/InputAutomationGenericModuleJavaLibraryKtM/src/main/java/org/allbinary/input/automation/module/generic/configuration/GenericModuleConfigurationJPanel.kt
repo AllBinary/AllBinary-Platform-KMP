@@ -47,9 +47,9 @@ open public class GenericModuleConfigurationJPanel : javax.swing.JPanel
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private lateinit var genericProfiles: GenericProfiles
+    private var genericProfiles: GenericProfiles
 
-    private lateinit var selectedGenericProfile: GenericProfile
+    private var selectedGenericProfile: GenericProfile
 public constructor (){
 this.initComponents()
 this.setGenericProfiles(GenericProfiles(GenericProfiles.DEFAULT_FILE))
@@ -637,45 +637,45 @@ this.newProfileJDialog!!.setVisible(true)
 }
 
 
-    private lateinit var blankGenericProfileActionsJPanel: javax.swing.JPanel
+    private var blankGenericProfileActionsJPanel: javax.swing.JPanel
 
-    private lateinit var buttonGroup2: javax.swing.ButtonGroup
+    private var buttonGroup2: javax.swing.ButtonGroup
 
-    private lateinit var captureComparisonJCheckBox: javax.swing.JCheckBox
+    private var captureComparisonJCheckBox: javax.swing.JCheckBox
 
-    private lateinit var captureMotionAnalysisJCheckBox: javax.swing.JCheckBox
+    private var captureMotionAnalysisJCheckBox: javax.swing.JCheckBox
 
-    private lateinit var deleteProfileJButton: javax.swing.JButton
+    private var deleteProfileJButton: javax.swing.JButton
 
-    private lateinit var genericJTabbedPane: javax.swing.JTabbedPane
+    private var genericJTabbedPane: javax.swing.JTabbedPane
 
-    private lateinit var genericProfilesJList: javax.swing.JList
+    private var genericProfilesJList: javax.swing.JList
 
-    private lateinit var genericProfilesJPanel: javax.swing.JPanel
+    private var genericProfilesJPanel: javax.swing.JPanel
 
-    private lateinit var genericProfilesJScrollPane: javax.swing.JScrollPane
+    private var genericProfilesJScrollPane: javax.swing.JScrollPane
 
-    private lateinit var jLabel1: javax.swing.JLabel
+    private var jLabel1: javax.swing.JLabel
 
-    private lateinit var jLabel2: javax.swing.JLabel
+    private var jLabel2: javax.swing.JLabel
 
-    private lateinit var jLabel3: javax.swing.JLabel
+    private var jLabel3: javax.swing.JLabel
 
-    private lateinit var jPanel1: javax.swing.JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private lateinit var newProfileJButton: javax.swing.JButton
+    private var newProfileJButton: javax.swing.JButton
 
-    private lateinit var newProfileJDialog: javax.swing.JDialog
+    private var newProfileJDialog: javax.swing.JDialog
 
-    private lateinit var newProfileNameJLabel: javax.swing.JLabel
+    private var newProfileNameJLabel: javax.swing.JLabel
 
-    private lateinit var newProfileNameJTextField: javax.swing.JTextField
+    private var newProfileNameJTextField: javax.swing.JTextField
 
-    private lateinit var okNewProfileJButton: javax.swing.JButton
+    private var okNewProfileJButton: javax.swing.JButton
 
-    private lateinit var savedCaptureJRadioButton: javax.swing.JRadioButton
+    private var savedCaptureJRadioButton: javax.swing.JRadioButton
 
-    private lateinit var screenCaptureJRadioButton: javax.swing.JRadioButton
+    private var screenCaptureJRadioButton: javax.swing.JRadioButton
 
 }
                 

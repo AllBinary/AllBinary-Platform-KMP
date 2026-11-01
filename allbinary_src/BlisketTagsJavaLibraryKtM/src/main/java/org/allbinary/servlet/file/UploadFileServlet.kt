@@ -63,9 +63,9 @@ open public class UploadFileServlet : HttpServlet {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    lateinit var requestHashMap: HashMap<Any, Any>
+    var requestHashMap: HashMap<Any, Any>
 
-    private lateinit var fileName: String
+    private var fileName: String
 
                 @Throws(ServletException::class, IOException::class)
             

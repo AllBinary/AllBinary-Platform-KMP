@@ -60,7 +60,7 @@ open public class HtmlSelect : HtmlTag {
 
     private var size: String
 
-    private lateinit var selected: String
+    private var selected: String
 
     private var options: BasicArrayList
 

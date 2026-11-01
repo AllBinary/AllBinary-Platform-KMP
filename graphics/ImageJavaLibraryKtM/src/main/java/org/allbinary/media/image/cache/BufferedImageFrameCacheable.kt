@@ -38,7 +38,7 @@ open public class BufferedImageFrameCacheable
 
     private var frame: Long
 
-    private lateinit var bufferedImage: BufferedImage
+    private var bufferedImage: BufferedImage
 public constructor (bufferedImage: BufferedImage, frame: Long)
             : super()
         {
