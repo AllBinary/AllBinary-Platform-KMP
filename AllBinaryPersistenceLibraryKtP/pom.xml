@@ -33,21 +33,22 @@
         <!--
         -->
         <module>../allbinary_src/cache/AllBinaryCacheLibraryKtM</module>
+        <module>../allbinary_src/PermutationsJavaLibraryKtM</module>
         <module>../allbinary_src/logic/BasePreloaderFileJavaLibraryKtM</module>
         <module>../allbinary_src/logic/data/file/FileJavaLibraryKtM</module>
         <module>../allbinary_src/logic/data/file/FileJ2SEJavaLibraryKtM</module>
-        <module>../allbinary_src/data/DataJavaLibraryKtM</module>
-        <module>../allbinary_src/logic/data/file/FileUnamedJavaLibraryKtM</module>
-        <module>../allbinary_src/logic/data/file/FileAdvancedJavaLibraryKtM</module>
-        <module>../allbinary_src/PreLoaderJavaLibraryKtM</module>
-        <module>../allbinary_src/FileInitInfoJavaLibraryKtM</module>
+<!--        <module>../allbinary_src/data/DataJavaLibraryKtM</module>-->
+<!--        <module>../allbinary_src/logic/data/file/FileUnamedJavaLibraryKtM</module>
+        <module>../allbinary_src/logic/data/file/FileAdvancedJavaLibraryKtM</module>-->
+<!--        <module>../allbinary_src/PreLoaderJavaLibraryKtM</module>-->
+<!--        <module>../allbinary_src/FileInitInfoJavaLibraryKtM</module>
         <module>../allbinary_src/PreLoaderFileJavaLibraryKtM</module>
-        <module>../allbinary_src/PreLoaderLicenseJavaLibraryKtM</module>
+        <module>../allbinary_src/PreLoaderLicenseJavaLibraryKtM</module>-->
         <module>../j2me/PCResourceLibraryKtM</module>
         <module>../j2me/ProgressJ2MEJavaLibraryKtM</module>
         <module>../allbinary_src/licensing/ClientInfoBaseJavaLibraryKtM</module>
-        <module>../allbinary_src/licensing/RemoteXmlRpcJavaLibraryKtM</module>
-        <module>../allbinary_src/licensing/LicenseClientJavaLibraryKtM</module>
+<!--        <module>../allbinary_src/licensing/RemoteXmlRpcJavaLibraryKtM</module>
+        <module>../allbinary_src/licensing/LicenseClientJavaLibraryKtM</module>-->
 
         <!--
         <module>../allbinary_src/PreLoaderLicenseJavaLibraryKtM</module>
