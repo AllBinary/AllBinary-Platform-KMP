@@ -56,6 +56,8 @@ import org.allbinary.logic.communication.sql.AbSqlTableUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ServiceClientInformationInterfaceFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class QuoteHelper : BasicTable {
         
@@ -247,7 +249,7 @@ this.emailAdmins(quoteRequest)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "email", e)
@@ -272,7 +274,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, this.commonStrings!!.DROP)
@@ -289,7 +291,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.DROP, e)
@@ -314,7 +316,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, "create()")
@@ -331,7 +333,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "create()", e)
@@ -359,7 +361,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, "restore()")
@@ -376,7 +378,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "restore()", e)
@@ -404,7 +406,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, "backup()")
@@ -421,7 +423,7 @@ this.emailAdmins(quoteRequest)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)

@@ -46,6 +46,8 @@ import org.allbinary.logic.communication.http.request.session.WeblisketSession
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringValidationUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class OrderHelper : TagHelper {
         
@@ -136,7 +138,7 @@ paymentGatewayBoolean= true
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     
@@ -157,7 +159,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "setPaymentGateway()")
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     
@@ -213,7 +215,7 @@ order.setStoreName(this.storeFrontInterface!!.getName())
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF("Successfully Processed Order: " +result, this, "processOrder()")
@@ -242,7 +244,7 @@ stringBuffer!!.append(" Exception Getting Id")
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)

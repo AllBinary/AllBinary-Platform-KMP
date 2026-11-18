@@ -266,9 +266,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
     var nextLine: String = lineNumberReader!!.readLine()!!
 
 
-        while(lineNumberReader != 
-                                    null
-                                 && nextLine != 
+        while(nextLine != 
                                     null
                                 )
         {
@@ -308,9 +306,7 @@ nextLine= lineNumberReader!!.readLine()!!
     var componentType: String = PCComponentFactory.getInstance()!!.java.componentType!!
 
 
-        while(lineNumberReader != 
-                                    null
-                                )
+        while(true)
         {
 componentData!!.append(nextLine)
 componentData!!.append(CommonSeps.getInstance()!!.NEW_LINE)

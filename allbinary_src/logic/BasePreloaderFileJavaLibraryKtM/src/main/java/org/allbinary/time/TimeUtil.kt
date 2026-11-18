@@ -65,7 +65,7 @@ open public class TimeUtil : Object {
         calendar.set(year, month, day, hour, 0)
     }
 
-    open fun setCalendar(
+    open fun setCalendarWithTime(
         calendar: Calendar,
         yearString: String,
         monthString: String,

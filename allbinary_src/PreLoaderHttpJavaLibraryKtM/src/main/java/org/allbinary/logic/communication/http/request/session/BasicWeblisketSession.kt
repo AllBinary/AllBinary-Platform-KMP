@@ -37,6 +37,7 @@ import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGateway
 import org.allbinary.business.user.role.BasicUserRole
 import org.allbinary.business.user.role.BasicUserRoleData
 import org.allbinary.logic.java.bool.BooleanFactory
+import org.allbinary.globals.GLOBALS2
 
 open public class BasicWeblisketSession
             : Object
@@ -135,7 +136,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 : String{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.session.getAttribute(org.allbinary.globals.GLOBALS2.WEBAPPPATH) as String
+                        return this.session.getAttribute(GLOBALS2.WEBAPPPATH) as String
 }
 
 

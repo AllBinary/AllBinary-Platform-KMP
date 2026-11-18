@@ -26,8 +26,15 @@
         import kotlin.reflect.KClass
                     
         
+import java.awt.Font
+import java.awt.GridLayout
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+import javax.swing.JButton
+import javax.swing.JList
+import javax.swing.JPanel
 
-open public class ToolJPanel : javax.swing.JPanel {
+open public class ToolJPanel : JPanel {
         
 public constructor (){
 this.initComponents()
@@ -37,32 +44,32 @@ this.initComponents()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-lineJButton= javax.swing.JButton()
-this.rectJButton= javax.swing.JButton()
-this.arcJButton= javax.swing.JButton()
-this.stringJButton= javax.swing.JButton()
-this.charJButton= javax.swing.JButton()
-this.roundRectJButton= javax.swing.JButton()
-this.imageJButton= javax.swing.JButton()
-this.fillArcJButton= javax.swing.JButton()
-this.fillRectJButton= javax.swing.JButton()
-this.fillRoundRectJButton= javax.swing.JButton()
-this.dottedLineJButton= javax.swing.JButton()
-this.dottedRectButton= javax.swing.JButton()
-this.dottedArcJButton= javax.swing.JButton()
-this.dottedFillRectJButton= javax.swing.JButton()
-this.dottedFillArcJButton= javax.swing.JButton()
-this.dottedFillRountRectJButton= javax.swing.JButton()
-this.colorJPanel= javax.swing.JPanel()
-this.colorJList= javax.swing.JList()
-this.setLayout(java.awt.GridLayout(17, 1))
-lineJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+lineJButton= JButton()
+this.rectJButton= JButton()
+this.arcJButton= JButton()
+this.stringJButton= JButton()
+this.charJButton= JButton()
+this.roundRectJButton= JButton()
+this.imageJButton= JButton()
+this.fillArcJButton= JButton()
+this.fillRectJButton= JButton()
+this.fillRoundRectJButton= JButton()
+this.dottedLineJButton= JButton()
+this.dottedRectButton= JButton()
+this.dottedArcJButton= JButton()
+this.dottedFillRectJButton= JButton()
+this.dottedFillArcJButton= JButton()
+this.dottedFillRountRectJButton= JButton()
+this.colorJPanel= JPanel()
+this.colorJList= JList()
+this.setLayout(GridLayout(17, 1))
+lineJButton!!.setFont(Font("Dialog", 0, 10))
 lineJButton!!.setText(LinesGraphicItem.getStaticName())
-lineJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+lineJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mouseClicked(evt: java.awt.event.MouseEvent)
+    open override fun mouseClicked(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -72,13 +79,13 @@ lineJButtonMouseClicked(evt)
                                 }
                             )
 add(this.lineJButton)
-this.rectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.rectJButton!!.setFont(Font("Dialog", 0, 10))
 this.rectJButton!!.setText("Rect")
-this.rectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.rectJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mouseClicked(evt: java.awt.event.MouseEvent)
+    open override fun mouseClicked(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -88,13 +95,13 @@ rectJButtonMouseClicked(evt)
                                 }
                             )
 add(this.rectJButton)
-this.arcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.arcJButton!!.setFont(Font("Dialog", 0, 10))
 this.arcJButton!!.setText("Arc")
-this.arcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.arcJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -104,13 +111,13 @@ arcJButtonMousePressed(evt)
                                 }
                             )
 add(this.arcJButton)
-this.stringJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.stringJButton!!.setFont(Font("Dialog", 0, 10))
 this.stringJButton!!.setText("String")
-this.stringJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.stringJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -120,13 +127,13 @@ stringJButtonMousePressed(evt)
                                 }
                             )
 add(this.stringJButton)
-this.charJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.charJButton!!.setFont(Font("Dialog", 0, 10))
 this.charJButton!!.setText("Char")
-this.charJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.charJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -136,13 +143,13 @@ charJButtonMousePressed(evt)
                                 }
                             )
 add(this.charJButton)
-this.roundRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.roundRectJButton!!.setFont(Font("Dialog", 0, 10))
 this.roundRectJButton!!.setText("Round Rect")
-this.roundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.roundRectJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -152,13 +159,13 @@ roundRectJButtonMousePressed(evt)
                                 }
                             )
 add(this.roundRectJButton)
-this.imageJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.imageJButton!!.setFont(Font("Dialog", 0, 10))
 this.imageJButton!!.setText("Image")
-this.imageJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.imageJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -168,13 +175,13 @@ imageJButtonMousePressed(evt)
                                 }
                             )
 add(this.imageJButton)
-this.fillArcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.fillArcJButton!!.setFont(Font("Dialog", 0, 10))
 this.fillArcJButton!!.setText("Fill Arc")
-this.fillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.fillArcJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -184,13 +191,13 @@ fillArcJButtonMousePressed(evt)
                                 }
                             )
 add(this.fillArcJButton)
-this.fillRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.fillRectJButton!!.setFont(Font("Dialog", 0, 10))
 this.fillRectJButton!!.setText("Fill Rect")
-this.fillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.fillRectJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -200,13 +207,13 @@ fillRectJButtonMousePressed(evt)
                                 }
                             )
 add(this.fillRectJButton)
-this.fillRoundRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.fillRoundRectJButton!!.setFont(Font("Dialog", 0, 10))
 this.fillRoundRectJButton!!.setText("Fill Rnd Rect")
-this.fillRoundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.fillRoundRectJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -216,13 +223,13 @@ fillRoundRectJButtonMousePressed(evt)
                                 }
                             )
 add(this.fillRoundRectJButton)
-this.dottedLineJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.dottedLineJButton!!.setFont(Font("Dialog", 0, 10))
 this.dottedLineJButton!!.setText("Dot Line")
-this.dottedLineJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedLineJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -232,13 +239,13 @@ dottedLineJButtonMousePressed(evt)
                                 }
                             )
 add(this.dottedLineJButton)
-this.dottedRectButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.dottedRectButton!!.setFont(Font("Dialog", 0, 10))
 this.dottedRectButton!!.setText("Dot Rect")
-this.dottedRectButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedRectButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -248,13 +255,13 @@ dottedRectButtonMousePressed(evt)
                                 }
                             )
 add(this.dottedRectButton)
-this.dottedArcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.dottedArcJButton!!.setFont(Font("Dialog", 0, 10))
 this.dottedArcJButton!!.setText("Dot Arc")
-this.dottedArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedArcJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -264,13 +271,13 @@ dottedArcJButtonMousePressed(evt)
                                 }
                             )
 add(this.dottedArcJButton)
-this.dottedFillRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.dottedFillRectJButton!!.setFont(Font("Dialog", 0, 10))
 this.dottedFillRectJButton!!.setText("Dot Fill Rect")
-this.dottedFillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedFillRectJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -280,13 +287,13 @@ dottedFillRectJButtonMousePressed(evt)
                                 }
                             )
 add(this.dottedFillRectJButton)
-this.dottedFillArcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.dottedFillArcJButton!!.setFont(Font("Dialog", 0, 10))
 this.dottedFillArcJButton!!.setText("Dot Fill Arc")
-this.dottedFillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedFillArcJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -296,13 +303,13 @@ dottedFillArcJButtonMousePressed(evt)
                                 }
                             )
 add(this.dottedFillArcJButton)
-this.dottedFillRountRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
+this.dottedFillRountRectJButton!!.setFont(Font("Dialog", 0, 10))
 this.dottedFillRountRectJButton!!.setText("Dot Fill Rnd Rect")
-this.dottedFillRountRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedFillRountRectJButton!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -312,13 +319,13 @@ dottedFillRountRectJButtonMousePressed(evt)
                                 }
                             )
 add(this.dottedFillRountRectJButton)
-this.colorJPanel!!.setLayout(java.awt.GridLayout(1, 1))
+this.colorJPanel!!.setLayout(GridLayout(1, 1))
 this.colorJPanel!!.add(this.colorJList)
 add(this.colorJPanel)
 }
 
 
-    open fun dottedFillRountRectJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun dottedFillRountRectJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -326,7 +333,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.dottedFillRountRectJButton!!.ge
 }
 
 
-    open fun dottedFillArcJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun dottedFillArcJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -334,7 +341,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.dottedFillArcJButton!!.getText(
 }
 
 
-    open fun dottedFillRectJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun dottedFillRectJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -342,7 +349,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.dottedFillRectJButton!!.getText
 }
 
 
-    open fun dottedArcJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun dottedArcJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -350,7 +357,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.dottedArcJButton!!.getText())
 }
 
 
-    open fun dottedRectButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun dottedRectButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -358,7 +365,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.dottedRectButton!!.getText())
 }
 
 
-    open fun dottedLineJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun dottedLineJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -366,7 +373,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.dottedLineJButton!!.getText())
 }
 
 
-    open fun fillRoundRectJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun fillRoundRectJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -374,7 +381,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.fillRoundRectJButton!!.getText(
 }
 
 
-    open fun fillRectJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun fillRectJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -382,7 +389,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.fillRectJButton!!.getText())
 }
 
 
-    open fun fillArcJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun fillArcJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -390,7 +397,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.fillArcJButton!!.getText())
 }
 
 
-    open fun imageJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun imageJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -398,7 +405,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.imageJButton!!.getText())
 }
 
 
-    open fun roundRectJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun roundRectJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -406,7 +413,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.roundRectJButton!!.getText())
 }
 
 
-    open fun charJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun charJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -414,7 +421,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.charJButton!!.getText())
 }
 
 
-    open fun stringJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun stringJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -422,7 +429,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.stringJButton!!.getText())
 }
 
 
-    open fun arcJButtonMousePressed(evt: java.awt.event.MouseEvent)
+    open fun arcJButtonMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -430,7 +437,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.arcJButton!!.getText())
 }
 
 
-    open fun rectJButtonMouseClicked(evt: java.awt.event.MouseEvent)
+    open fun rectJButtonMouseClicked(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -438,7 +445,7 @@ ToolFactory.getInstance()!!.setSelectedTool(this.rectJButton!!.getText())
 }
 
 
-    open fun lineJButtonMouseClicked(evt: java.awt.event.MouseEvent)
+    open fun lineJButtonMouseClicked(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -446,41 +453,41 @@ ToolFactory.getInstance()!!.setSelectedTool(this.lineJButton!!.getText())
 }
 
 
-    private var arcJButton: javax.swing.JButton
+    private var arcJButton: JButton
 
-    private var charJButton: javax.swing.JButton
+    private var charJButton: JButton
 
-    private var colorJList: javax.swing.JList
+    private var colorJList: JList
 
-    private var colorJPanel: javax.swing.JPanel
+    private var colorJPanel: JPanel
 
-    private var dottedArcJButton: javax.swing.JButton
+    private var dottedArcJButton: JButton
 
-    private var dottedFillArcJButton: javax.swing.JButton
+    private var dottedFillArcJButton: JButton
 
-    private var dottedFillRectJButton: javax.swing.JButton
+    private var dottedFillRectJButton: JButton
 
-    private var dottedFillRountRectJButton: javax.swing.JButton
+    private var dottedFillRountRectJButton: JButton
 
-    private var dottedLineJButton: javax.swing.JButton
+    private var dottedLineJButton: JButton
 
-    private var dottedRectButton: javax.swing.JButton
+    private var dottedRectButton: JButton
 
-    private var fillArcJButton: javax.swing.JButton
+    private var fillArcJButton: JButton
 
-    private var fillRectJButton: javax.swing.JButton
+    private var fillRectJButton: JButton
 
-    private var fillRoundRectJButton: javax.swing.JButton
+    private var fillRoundRectJButton: JButton
 
-    private var imageJButton: javax.swing.JButton
+    private var imageJButton: JButton
 
-    private var lineJButton: javax.swing.JButton
+    private var lineJButton: JButton
 
-    private var rectJButton: javax.swing.JButton
+    private var rectJButton: JButton
 
-    private var roundRectJButton: javax.swing.JButton
+    private var roundRectJButton: JButton
 
-    private var stringJButton: javax.swing.JButton
+    private var stringJButton: JButton
 
 }
                 

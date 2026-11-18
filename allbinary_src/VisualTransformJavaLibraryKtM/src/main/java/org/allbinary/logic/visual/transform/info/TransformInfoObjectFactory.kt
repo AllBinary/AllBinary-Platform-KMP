@@ -33,6 +33,8 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.logic.system.security.licensing.LicensingException
 import org.allbinary.logic.visual.transform.TransformInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformInfoObjectFactory
             : Object
@@ -71,7 +73,7 @@ private constructor ()
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     
@@ -154,7 +156,7 @@ stringBuffer!!.append(transformInfoInterface!!.getObjectFile())
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     
@@ -187,7 +189,7 @@ this.logUtil!!.put(error, this, commonStrings!!.GET_INSTANCE, e)
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     

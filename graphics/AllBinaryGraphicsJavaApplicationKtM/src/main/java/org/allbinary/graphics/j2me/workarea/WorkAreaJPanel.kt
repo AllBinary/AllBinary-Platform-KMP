@@ -53,6 +53,11 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import java.awt.GridBagConstraints
+import java.awt.GridLayout
+import java.awt.event.KeyAdapter
+import java.awt.event.KeyEvent
+import javax.swing.JPanel
 
 open public class WorkAreaJPanel : JPanel
                 , WorkAreaJPanelInterface
@@ -62,7 +67,7 @@ open public class WorkAreaJPanel : JPanel
         
 companion object {
             
-    private var document: org.w3c.dom.Document
+    private var document: Document
 
     open fun getDocument()
         //nullable = true from not(false or (false and true)) = true
@@ -191,7 +196,7 @@ this.innerJPanel!!.setLayout(gridBagLayout)
 gridBagConstraints!!.gridx= 0
 gridBagConstraints!!.gridy= 0
 gridBagConstraints!!.gridwidth= 1
-gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
+gridBagConstraints!!.fill= GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= .05
 gridBagConstraints!!.weighty= .05
 
@@ -203,7 +208,7 @@ gridBagConstraints= GridBagConstraints()
 gridBagConstraints!!.gridx= 1
 gridBagConstraints!!.gridy= 0
 gridBagConstraints!!.gridwidth= 6
-gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
+gridBagConstraints!!.fill= GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= 1
 gridBagConstraints!!.weighty= 1
 gridBagLayout!!.setConstraints(this.canvasHolderJPanel, gridBagConstraints)
@@ -211,8 +216,8 @@ this.innerJPanel!!.add(this.canvasHolderJPanel)
 gridBagConstraints= GridBagConstraints()
 gridBagConstraints!!.gridx= 8
 gridBagConstraints!!.gridy= 0
-gridBagConstraints!!.gridwidth= java.awt.GridBagConstraints.REMAINDER
-gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
+gridBagConstraints!!.gridwidth= GridBagConstraints.REMAINDER
+gridBagConstraints!!.fill= GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= .1
 gridBagConstraints!!.weighty= .1
 this.propertiesJPanel= PropertiesJPanel()
@@ -610,27 +615,27 @@ WorkAreaJPanel.document.appendChild(workAreaNode)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.innerJPanel= javax.swing.JPanel()
-setLayout(java.awt.GridLayout(1, 1))
-this.innerJPanel!!.addKeyListener(object: java.awt.event.KeyAdapter()
+this.innerJPanel= JPanel()
+setLayout(GridLayout(1, 1))
+this.innerJPanel!!.addKeyListener(object: KeyAdapter()
                                 {
                                 
                                 
-    open override fun keyTyped(evt: java.awt.event.KeyEvent)
+    open override fun keyTyped(evt: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 innerJPanelKeyTyped(evt)
 }
 
-    open override fun keyPressed(evt: java.awt.event.KeyEvent)
+    open override fun keyPressed(evt: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 innerJPanelKeyPressed(evt)
 }
 
-    open override fun keyReleased(evt: java.awt.event.KeyEvent)
+    open override fun keyReleased(evt: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -643,7 +648,7 @@ add(this.innerJPanel)
 }
 
 
-    open fun innerJPanelKeyReleased(evt: java.awt.event.KeyEvent)
+    open fun innerJPanelKeyReleased(evt: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -651,7 +656,7 @@ StatusFactory.getInstance()!!.setStatus("Key Pressed1")
 }
 
 
-    open fun innerJPanelKeyPressed(evt: java.awt.event.KeyEvent)
+    open fun innerJPanelKeyPressed(evt: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -659,7 +664,7 @@ StatusFactory.getInstance()!!.setStatus("Key Pressed2")
 }
 
 
-    open fun innerJPanelKeyTyped(evt: java.awt.event.KeyEvent)
+    open fun innerJPanelKeyTyped(evt: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -667,7 +672,7 @@ StatusFactory.getInstance()!!.setStatus("Key Pressed3")
 }
 
 
-    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
+    open fun keyPressed(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent
@@ -675,14 +680,14 @@ this.getCurrentFrame()!!.keyPressed(keyEvent)
 }
 
 
-    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
+    open fun keyReleased(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent
 }
 
 
-    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
+    open fun keyTyped(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent
@@ -860,7 +865,7 @@ Thread.sleep(250)
 }
 
 
-    private var innerJPanel: javax.swing.JPanel
+    private var innerJPanel: JPanel
 
 }
                 

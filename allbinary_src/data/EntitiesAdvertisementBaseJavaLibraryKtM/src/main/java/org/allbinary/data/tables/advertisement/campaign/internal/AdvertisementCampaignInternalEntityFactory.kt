@@ -28,6 +28,8 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AdvertisementCampaignInternalEntityFactory
             : Object
@@ -52,7 +54,7 @@ companion object {
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     

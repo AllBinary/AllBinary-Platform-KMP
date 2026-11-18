@@ -27,8 +27,9 @@
                     
         
 import javax.swing.tree.MutableTreeNode
+import java.util.EventObject
 
-open public class MyCanvasEvent : java.util.EventObject {
+open public class MyCanvasEvent : EventObject {
         
 public constructor (source: Any)                        
 

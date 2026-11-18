@@ -44,8 +44,16 @@ import org.allbinary.media.image.ImageStrings
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import java.awt.event.ActionEvent
+import java.awt.event.ActionListener
+import javax.swing.DefaultComboBoxModel
+import javax.swing.JButton
+import javax.swing.JCheckBox
+import javax.swing.JComboBox
+import javax.swing.JLabel
+import javax.swing.JPanel
 
-open public class RotationSpriteImageJPanel : javax.swing.JPanel
+open public class RotationSpriteImageJPanel : JPanel
                 , ImageProcessorInputCompositeInterface {
         
 
@@ -154,7 +162,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.jPanel1= object: javax.swing.JPanel()
+this.jPanel1= object: JPanel()
                                 {
                                 
                                 
@@ -180,29 +188,29 @@ var graphics = graphics
 
                                 }
                             
-this.jPanel2= javax.swing.JPanel()
-this.totalFramesJComboBox= javax.swing.JComboBox()
-this.jLabel1= javax.swing.JLabel()
-this.generateJButton= javax.swing.JButton()
-this.totalAngleJComboBox= javax.swing.JComboBox()
-this.jLabel3= javax.swing.JLabel()
-this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
-this.jPanel3= javax.swing.JPanel()
-this.jLabel2= javax.swing.JLabel()
+this.jPanel2= JPanel()
+this.totalFramesJComboBox= JComboBox()
+this.jLabel1= JLabel()
+this.generateJButton= JButton()
+this.totalAngleJComboBox= JComboBox()
+this.jLabel3= JLabel()
+this.writeOverOriginalJCheckBox= JCheckBox()
+this.jPanel3= JPanel()
+this.jLabel2= JLabel()
 
     var jPanel1Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel1)
 
 this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 436, Short.MAX_VALUE))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 227, Short.MAX_VALUE))
-this.totalFramesJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(CommonPhoneStrings.getInstance()!!.FOUR,CommonPhoneStrings.getInstance()!!.NINE,"18","20","36")))
+this.totalFramesJComboBox!!.setModel(DefaultComboBoxModel(arrayOf(CommonPhoneStrings.getInstance()!!.FOUR,CommonPhoneStrings.getInstance()!!.NINE,"18","20","36")))
 this.jLabel1!!.setText("Total Frames:")
 this.generateJButton!!.setText("Generate")
-this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -211,12 +219,12 @@ generateJButtonActionPerformed(evt)
 
                                 }
                             )
-this.totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("360","90")))
-this.totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.totalAngleJComboBox!!.setModel(DefaultComboBoxModel(arrayOf("360","90")))
+this.totalAngleJComboBox!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -249,7 +257,7 @@ layout.setVerticalGroup(layout.createParallelGroup(org.jdesktop.layout.GroupLayo
 }
 
 
-    open fun generateJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun generateJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -257,32 +265,32 @@ this.process()
 }
 
 
-    open fun totalAngleJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun totalAngleJComboBoxActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-    private var generateJButton: javax.swing.JButton
+    private var generateJButton: JButton
 
-    private var jLabel1: javax.swing.JLabel
+    private var jLabel1: JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private var jLabel2: JLabel
 
-    private var jLabel3: javax.swing.JLabel
+    private var jLabel3: JLabel
 
-    private var jPanel1: javax.swing.JPanel
+    private var jPanel1: JPanel
 
-    private var jPanel2: javax.swing.JPanel
+    private var jPanel2: JPanel
 
-    private var jPanel3: javax.swing.JPanel
+    private var jPanel3: JPanel
 
-    private var totalAngleJComboBox: javax.swing.JComboBox
+    private var totalAngleJComboBox: JComboBox
 
-    private var totalFramesJComboBox: javax.swing.JComboBox
+    private var totalFramesJComboBox: JComboBox
 
-    private var writeOverOriginalJCheckBox: javax.swing.JCheckBox
+    private var writeOverOriginalJCheckBox: JCheckBox
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

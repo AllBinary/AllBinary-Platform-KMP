@@ -31,6 +31,8 @@ import org.allbinary.business.user.commerce.money.payment.types.PaymentType
 import org.allbinary.business.user.commerce.money.payment.types.PaymentTypeUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class PaymentTransactionInterfaceFactory
             : Object
@@ -99,7 +101,7 @@ var orderReview = orderReview
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
                                     

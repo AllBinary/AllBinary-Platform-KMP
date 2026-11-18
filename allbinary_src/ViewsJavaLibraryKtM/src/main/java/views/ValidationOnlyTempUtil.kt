@@ -30,6 +30,8 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.ValidationComponentInterface
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 //Replace when validation node is added
 open public class ValidationOnlyTempUtil
             : Object
@@ -70,7 +72,7 @@ var validationComponentInterface = validationComponentInterface
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +validationComponentInterface!!.getTransformInfoInterface()!!.getName(), this, "view()")
@@ -84,7 +86,7 @@ var validationComponentInterface = validationComponentInterface
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)

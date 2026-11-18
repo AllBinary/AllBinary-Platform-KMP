@@ -44,4 +44,37 @@ open public class ABTextItem : CustomCustomItem, ABCustomItemInterface {
         // if statement needs to be on the same line and ternary does not work the same way.
         return ABStringComponent.NULL_STRING_COMPONENT
     }
+
+    override fun getMinimumWidth()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getMinimumWidth()
+    }
+
+    override fun getMinimumHeight()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getMinimumHeight()
+    }
+
+    override fun getLabel()
+    // nullable = true from not(false or (false and true)) = true
+    : String {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getLabel()
+    }
+
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
+        super.paintXY(graphics, x, y)
+    }
 }

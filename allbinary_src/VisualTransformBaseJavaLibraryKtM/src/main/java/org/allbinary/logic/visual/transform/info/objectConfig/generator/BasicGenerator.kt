@@ -27,6 +27,8 @@
                     
         
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class BasicGenerator : TransformInfoObjectConfigGenerator {
         
@@ -42,7 +44,7 @@ public constructor (){
 var input = input
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Processing", this, this.commonStrings!!.PROCESS)

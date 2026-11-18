@@ -28,11 +28,12 @@
         
 import java.lang.reflect.Method
 import java.lang.reflect.Proxy
+import java.lang.reflect.InvocationHandler
 
 open public class InterfaceCastProxy
             : Object
         
-                , java.lang.reflect.InvocationHandler {
+                , InvocationHandler {
         
 companion object {
             

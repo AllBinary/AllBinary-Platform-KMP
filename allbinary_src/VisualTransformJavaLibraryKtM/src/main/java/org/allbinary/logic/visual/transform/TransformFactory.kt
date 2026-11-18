@@ -39,6 +39,8 @@ import org.allbinary.logic.visual.transform.info.TransformInfoHttpInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoObjectFactory
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformFactory
             : Object
@@ -80,7 +82,7 @@ private constructor ()
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF("Creating Transform: " +viewName, this, this.commonStrings!!.GET_INSTANCE)
@@ -116,7 +118,7 @@ transformInfoInterface!!.setChild()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF("Created Transform: " +viewName, this, this.commonStrings!!.GET_INSTANCE)
@@ -130,7 +132,7 @@ transformInfoInterface!!.setChild()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET_INSTANCE, e)
@@ -161,7 +163,7 @@ transformInfoInterface!!.setChild()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF("Creating Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, this.commonStrings!!.GET_INSTANCE)
@@ -195,7 +197,7 @@ transformInfoInterface!!.setChild()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF("Created Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, this.commonStrings!!.GET_INSTANCE)
@@ -209,7 +211,7 @@ transformInfoInterface!!.setChild()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     
@@ -242,7 +244,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.GET_INS
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF("Creating Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
@@ -254,7 +256,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.GET_INS
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF("Created Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
@@ -268,7 +270,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.GET_INS
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(TransformInfoInterface)", e)

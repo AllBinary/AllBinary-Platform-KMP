@@ -32,6 +32,8 @@ import org.allbinary.globals.AppUrlGlobals
 import org.allbinary.globals.URLGLOBALS
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class CustomLoaderHelper
             : Object
@@ -63,7 +65,7 @@ public constructor ()
         try {
             
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org.allbinary.globals.URLGLOBALS.getWebappPath()
+                        return URLGLOBALS.getWebappPath()
 } catch(e: Exception)
             {
 
@@ -91,7 +93,7 @@ URLGLOBALS.init(urlGlobals)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setWebappPath()", e)

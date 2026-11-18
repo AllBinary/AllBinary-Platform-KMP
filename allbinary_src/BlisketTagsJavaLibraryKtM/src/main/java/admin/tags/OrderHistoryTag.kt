@@ -35,6 +35,8 @@ import org.allbinary.business.user.commerce.inventory.order.OrderHistoryData
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class OrderHistoryTag : TableTag {
         
@@ -130,7 +132,7 @@ this.status= value
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)

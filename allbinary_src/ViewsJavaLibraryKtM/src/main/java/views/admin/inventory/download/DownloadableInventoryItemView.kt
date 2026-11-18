@@ -51,6 +51,8 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.apache.commons.fileupload.FileItem
 import views.business.context.modules.storefront.HttpStoreComponentView
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class DownloadableInventoryItemView : HttpStoreComponentView
                 , RequestMapInterface {
@@ -155,7 +157,7 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)

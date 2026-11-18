@@ -31,6 +31,7 @@ import org.allbinary.business.user.address.BillingAddressData
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.system.security.licensing.LicensingException
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
 
 open public class BillingAddressTag : StoreValidationTransformTag {
         
@@ -54,7 +55,7 @@ public constructor (){
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     this.setName("Basic Billing Address View")
@@ -64,7 +65,7 @@ this.setObjectFile("views.generic.address.billing.ValidationView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.EDIT) == 0)
                         
                                     {
                                     this.setName("Basic Billing Address View")
@@ -74,7 +75,7 @@ this.setObjectFile("views.generic.address.billing.EditValidationView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.NEW) == 0)
                         
                                     {
                                     this.setName("Basic Billing Address View")

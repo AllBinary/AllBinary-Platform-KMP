@@ -46,8 +46,13 @@ import org.allbinary.media.image.ImageUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
+import java.awt.event.ActionEvent
+import java.awt.event.ActionListener
+import javax.swing.GroupLayout
+import javax.swing.JButton
+import javax.swing.JPanel
 
-open public class CreateIconImagesJPanel : javax.swing.JPanel
+open public class CreateIconImagesJPanel : JPanel
                 , ImageProcessorInputCompositeInterface {
         
 
@@ -231,13 +236,13 @@ this.imageProcessorInput= imageProcessorInput
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.aboveJButton= javax.swing.JButton()
+this.aboveJButton= JButton()
 this.aboveJButton!!.setText("Process")
-this.aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.aboveJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -247,15 +252,15 @@ aboveJButtonActionPerformed(evt)
                                 }
                             )
 
-    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
+    var layout: GroupLayout = GroupLayout(this)
 
 this.setLayout(layout)
-layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addComponent(aboveJButton)!!.addGap(0, 335, Short.MAX_VALUE)))
-layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(aboveJButton)!!.addContainerGap(286, Short.MAX_VALUE)))
+layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addComponent(aboveJButton)!!.addGap(0, 335, Short.MAX_VALUE)))
+layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(aboveJButton)!!.addContainerGap(286, Short.MAX_VALUE)))
 }
 
 
-    open fun aboveJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun aboveJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -263,7 +268,7 @@ this.process()
 }
 
 
-    private var aboveJButton: javax.swing.JButton
+    private var aboveJButton: JButton
 
 }
                 

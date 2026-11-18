@@ -29,11 +29,12 @@
 import org.allbinary.business.context.modules.storefront.StoreFront
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
+import java.io.Serializable
 
 open public class PaymentGatewayPrimaryKey
             : Object
         
-                , java.io.Serializable {
+                , Serializable {
         
 
     private var storeName: String

@@ -16,6 +16,7 @@
 package org.allbinary.game.ag.ai
 
 import javax.microedition.lcdui.Canvas
+import kotlin.Array
 import org.allbinary.ai.ArtificialIntelligenceInterface
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
@@ -25,6 +26,7 @@ import org.allbinary.game.ai.BasicAI
 import org.allbinary.game.combat.destroy.event.DestroyedEvent
 import org.allbinary.game.combat.destroy.event.DestroyedEventHandler
 import org.allbinary.game.combat.destroy.event.DestroyedEventListenerInterface
+import org.allbinary.game.identification.Group
 import org.allbinary.game.input.GameInput
 import org.allbinary.game.physics.velocity.BasicVelocityProperties
 import org.allbinary.game.physics.velocity.VelocityInterfaceCompositeInterface
@@ -163,7 +165,11 @@ open public class DiveAndDirectionalTrackingAI :
 
         var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-        if (layerInterface!!.getGroupInterface() == ownerLayerInterface!!.getGroupInterface()) {
+        var groupArray: Array<Group?> = layerInterface!!.getGroupInterface()!!
+
+        var ownerGroupArray: Array<Group?> = ownerLayerInterface!!.getGroupInterface()!!
+
+        if (groupArray == ownerGroupArray) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return

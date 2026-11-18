@@ -30,7 +30,6 @@
         import kotlin.reflect.KClass
                     
         
-import java.util.Enumeration
 import org.allbinary.graphics.GraphicsStrings
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.logic.string.StringMaker
@@ -194,13 +193,21 @@ System.out.println(stringBuilder!!.toString())
     var pointVector: BasicArrayList = BasicArrayListD()
 
 
-    var keys: Enumeration<Any?> = svg.keys()!!
+    var objectArray: Array<Any?> = svg.keysAsArray()!!
 
 
-        while(keys.hasMoreElements())
+    var size: Int = objectArray!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
         {
 
-    var key: String = keys.nextElement()!! as String
+    var key: String = objectArray[index]!! as String
 
 
     var value: Any = svg.opt(key)!!

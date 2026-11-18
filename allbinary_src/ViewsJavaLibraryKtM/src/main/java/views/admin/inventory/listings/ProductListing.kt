@@ -65,6 +65,8 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 import views.generic.inventory.InventoryColumnUtil
 import views.generic.inventory.InventorySearchUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class ProductListing
             : Object
@@ -153,7 +155,7 @@ var file = file
 var data = data
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Creating File: " +file, this, "generateAll()")
@@ -186,7 +188,7 @@ idOutData!!.flush()
 StreamUtil.getInstance()!!.close(idOutData)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Wrote Total Bytes: " +newFile!!.length(), this, "generateAll()")
@@ -265,7 +267,7 @@ this.searchRequest!!.setFileBaseName(pageName)
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Saving Listing: " +index, this, "generateAll()")
@@ -375,7 +377,7 @@ stringBuffer!!.append(storeFront!!.getStaticPath())
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Store Static Pages Path: " +staticPath, this, "generateAll()")

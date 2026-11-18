@@ -34,6 +34,8 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.LicensingException
 import taghelpers.ViewHelperFactory
 import tags.transform.info.TransformInfoTag
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformTag : TransformInfoTag {
         
@@ -48,7 +50,7 @@ public constructor ()
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -67,7 +69,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -96,7 +98,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)
@@ -121,7 +123,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("Creating with: \n" +this.getPropertiesHashMap()!!.toString(), this, tagStrings!!.DO_START_TAG)
@@ -130,7 +132,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     
@@ -148,7 +150,7 @@ this.setHelper()
 pageContext!!.getOut()!!.print(this.view())
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("Tag End", this, tagStrings!!.DO_START_TAG)

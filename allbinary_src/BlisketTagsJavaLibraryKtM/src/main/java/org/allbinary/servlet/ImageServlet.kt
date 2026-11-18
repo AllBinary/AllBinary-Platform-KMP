@@ -39,6 +39,8 @@ import org.allbinary.logic.io.CloudStreamUtil
 import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class ImageServlet : HttpServlet {
         
@@ -86,7 +88,7 @@ response.getOutputStream()!!.write(byteArray)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)

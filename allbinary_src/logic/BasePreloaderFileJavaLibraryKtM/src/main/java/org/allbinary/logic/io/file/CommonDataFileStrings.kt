@@ -179,6 +179,82 @@ open public class CommonDataFileStrings : Object {
 
     val _EXS: String = ".exs"
 
+    val M: String = "m"
+
+    val _M: String = ".m"
+
+    val SWIFT: String = "swift"
+
+    val _SWIFT: String = ".swift"
+
+    val ASM: String = "asm"
+
+    val _ASM: String = ".asm"
+
+    val S: String = "s"
+
+    val _S: String = ".s"
+
+    val NIM: String = "nim"
+
+    val _NIM: String = ".nim"
+
+    val VALA: String = "vala"
+
+    val _VALA: String = ".vala"
+
+    val LISP: String = "lisp"
+
+    val _LISP: String = ".lisp"
+
+    val RKT: String = "rkt"
+
+    val _RKT: String = ".rkt"
+
+    val SCM: String = "scm"
+
+    val _SCM: String = ".scm"
+
+    val AS: String = "as"
+
+    val _AS: String = ".as"
+
+    val OBX: String = "obx"
+
+    val _OBX: String = ".obx"
+
+    val SCALA: String = "scala"
+
+    val _SCALA: String = ".scala"
+
+    val GROOVY: String = "groovy"
+
+    val _GROOVY: String = ".groovy"
+
+    val JL: String = "jl"
+
+    val _JL: String = ".jl"
+
+    val TCL: String = "tcl"
+
+    val _TCL: String = ".tcl"
+
+    val WREN: String = "wren"
+
+    val _WREN: String = ".wren"
+
+    val JANET: String = "janet"
+
+    val _JANET: String = ".janet"
+
+    val GR: String = "gr"
+
+    val _GR: String = ".gr"
+
+    val ELM: String = "elm"
+
+    val _ELM: String = ".elm"
+
     val KOTLIN: String = "kotlin"
 
     val TYPESCRIPT: String = "typescript"
@@ -213,6 +289,20 @@ open public class CommonDataFileStrings : Object {
 
     val ELIXIR: String = "elixir"
 
+    val OBJECTIVE_C: String = "objective-c"
+
+    val RACKET: String = "racket"
+
+    val SCHEME: String = "scheme"
+
+    val ACTIONSCRIPT: String = "actionscript"
+
+    val OBERON_PLUS: String = "oberon+"
+
+    val JULIA: String = "julia"
+
+    val GRAIN: String = "grain"
+
     val CPLUSPLUS: String = "cplusplus"
 
     val GOLANG: String = "golang"
@@ -224,6 +314,18 @@ open public class CommonDataFileStrings : Object {
     val PASCAL: String = "pascal"
 
     val OBJECT_PASCAL_ALIAS: String = "object pascal"
+
+    val OBJC: String = "objc"
+
+    val OBJECTIVE_C_ALIAS: String = "objectivec"
+
+    val ASSEMBLY: String = "assembly"
+
+    val COMMON_LISP: String = "common lisp"
+
+    val OBERON: String = "oberon"
+
+    val OBERON_PLUS_ALIAS: String = "oberonplus"
 
     val KT_SHORT_NAME: String = "Kt"
 
@@ -270,6 +372,42 @@ open public class CommonDataFileStrings : Object {
     val DART_SHORT_NAME: String = "Dart"
 
     val EX_SHORT_NAME: String = "Ex"
+
+    val OBJC_SHORT_NAME: String = "ObjC"
+
+    val SWIFT_SHORT_NAME: String = "Swift"
+
+    val ASM_SHORT_NAME: String = "Asm"
+
+    val NIM_SHORT_NAME: String = "Nim"
+
+    val VALA_SHORT_NAME: String = "Vala"
+
+    val LISP_SHORT_NAME: String = "Lisp"
+
+    val RKT_SHORT_NAME: String = "Rkt"
+
+    val SCM_SHORT_NAME: String = "Scm"
+
+    val AS_SHORT_NAME: String = "As"
+
+    val OBX_SHORT_NAME: String = "Obx"
+
+    val SCALA_SHORT_NAME: String = "Scala"
+
+    val GROOVY_SHORT_NAME: String = "Groovy"
+
+    val JL_SHORT_NAME: String = "Jl"
+
+    val TCL_SHORT_NAME: String = "Tcl"
+
+    val WREN_SHORT_NAME: String = "Wren"
+
+    val JANET_SHORT_NAME: String = "Janet"
+
+    val GR_SHORT_NAME: String = "Gr"
+
+    val ELM_SHORT_NAME: String = "Elm"
 
     val UNCRYPTED_EXTENSION: String = this.XML
 

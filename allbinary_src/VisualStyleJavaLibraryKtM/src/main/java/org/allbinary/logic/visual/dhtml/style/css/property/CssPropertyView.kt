@@ -54,6 +54,13 @@ var node = node
 this.cssProperty= CssProperty(node)
 }
 
+public constructor (cssProperty: CssProperty)
+            : super()
+        {
+var cssProperty = cssProperty
+this.cssProperty= cssProperty
+}
+
 
     open fun getProperty()
         //nullable = true from not(false or (false and true)) = true

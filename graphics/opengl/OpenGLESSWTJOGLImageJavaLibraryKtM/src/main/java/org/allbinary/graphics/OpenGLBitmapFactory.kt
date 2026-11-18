@@ -41,32 +41,10 @@ companion object {
             {
             }            
         
-open public inner class Config
-            : Object
-         {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
-        }
-            */
-
-
-    val bitmapConfig: Any
-private constructor (bitmapConfig: Any)
-            : super()
-        {
-    //var bitmapConfig = bitmapConfig
-this.bitmapConfig= bitmapConfig
-}
-
-
-}
-                
-            
-    val ARGB_8888: Config = Config(
+    val ARGB_8888: OpenGLBitmapConfig = OpenGLBitmapConfig(
                             null)
 
-    open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Config)
+    open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapConfig)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
 var width = width

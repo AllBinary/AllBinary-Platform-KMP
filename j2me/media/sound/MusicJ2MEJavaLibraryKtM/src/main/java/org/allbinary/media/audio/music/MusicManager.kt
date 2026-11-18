@@ -56,24 +56,28 @@ open public inner class MusicManagerPlayerListener
                 , PlayerListener {
         
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    private val musicManager: MusicManager
+ constructor (musicManager: MusicManager)
+            : super()
+        {
+    //var musicManager = musicManager
+this.musicManager= musicManager
+}
+
+
     override fun playerUpdate(player: Player, event: String, eventData: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var player = player
     //var event = event
     //var eventData = eventData
-PreLogUtil.put(event, this, commonStrings!!.PROCESS)
+PreLogUtil.put(event, this, this.musicManager!!.commonStrings!!.PROCESS)
 
     
                         if(event == PlayerListener.END_OF_MEDIA || event == PlayerListener.STOPPED || event == PlayerListener.CLOSED)
                         
                                     {
-                                    reset()
+                                    this.musicManager!!.reset()
 
                                     }
                                 
@@ -83,7 +87,7 @@ PreLogUtil.put(event, this, commonStrings!!.PROCESS)
 }
                 
             
-    private val playerListener: PlayerListener = MusicManagerPlayerListener()
+    private val playerListener: PlayerListener = MusicManagerPlayerListener(this)
 
     private val PLAY: String = "Play "
 

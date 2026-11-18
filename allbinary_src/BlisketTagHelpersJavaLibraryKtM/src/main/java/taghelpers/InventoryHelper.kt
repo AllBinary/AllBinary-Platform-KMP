@@ -45,6 +45,8 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoData
 import views.admin.inventory.listings.InventoryViewFactory
 import views.admin.inventory.listings.InventoryViewSearchInterface
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class InventoryHelper : TagHelper {
         
@@ -119,7 +121,7 @@ this.id= this.request.getParameter(basicItemData!!.ID)!!
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF("Successfull Inventory View Summary", this, "viewSummary()")
@@ -136,7 +138,7 @@ this.id= this.request.getParameter(basicItemData!!.ID)!!
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "viewSummary()", e)
@@ -183,7 +185,7 @@ this.id= this.request.getParameter(basicItemData!!.ID)!!
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF("Successful Inventory Dynamic Search", this, "searchSingleDynamicPage()")
@@ -200,7 +202,7 @@ this.id= this.request.getParameter(basicItemData!!.ID)!!
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "searchSingleDynamicPage()", e)

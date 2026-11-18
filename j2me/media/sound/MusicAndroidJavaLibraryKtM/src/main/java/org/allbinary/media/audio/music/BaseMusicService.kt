@@ -17,6 +17,66 @@ import org.allbinary.thread.ARunnable
 
 open public class BaseMusicService : Service {
 
+    companion object {
+        // A member class instead of a local class using the method's player and intent since most
+        // of the converted languages do not have local classes.
+        open public class MusicRunnable : ARunnable {
+
+            /*Static stuff is not allowed for Kotlin inner classescompanion object {
+             */
+            /*
+            }
+                */
+
+            private val baseMusicService: BaseMusicService
+
+            private val player: MediaPlayer
+
+            private val intent: Intent
+
+            constructor(baseMusicService: BaseMusicService, player: MediaPlayer, intent: Intent) {
+                // var baseMusicService = baseMusicService
+                // var player = player
+                // var intent = intent
+                this.baseMusicService = baseMusicService
+                this.player = player
+                this.intent = intent
+            }
+
+            override fun run()
+                // nullable = true from not(false or (false and true)) = true
+            {
+
+                var logUtil: LogUtil = LogUtil.getInstance()!!
+
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+                var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
+
+                try {
+
+                    while (this.player.isPlaying()) {
+                        logUtil!!.putF(
+                            this.baseMusicService!!.WAITING_FOR_MUSIC_TO_END,
+                            this,
+                            commonStateStrings!!.ON_START_COMMAND,
+                        )
+                        Thread.sleep(1200)
+                    }
+
+                    this.baseMusicService!!.onStartCommandIntent(this.intent)
+                } catch (e: Exception) {
+                    logUtil!!.put(
+                        commonStrings!!.EXCEPTION,
+                        this,
+                        commonStateStrings!!.ON_START_COMMAND,
+                        e,
+                    )
+                }
+            }
+        }
+    }
+
     // Auto Generated
     public constructor() : super() {}
 
@@ -187,52 +247,7 @@ open public class BaseMusicService : Service {
                     this.commonStateStrings!!.ON_START_COMMAND,
                 )
 
-                open class MusicRunnable : ARunnable {
-
-                    private val baseMusicService: BaseMusicService
-
-                    constructor(baseMusicService: BaseMusicService) {
-                        // var baseMusicService = baseMusicService
-                        this.baseMusicService = baseMusicService
-                    }
-
-                    override fun run()
-                        // nullable = true from not(false or (false and true)) = true
-                    {
-
-                        var logUtil: LogUtil = LogUtil.getInstance()!!
-
-                        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-                        var commonStateStrings: CommonStateStrings =
-                            CommonStateStrings.getInstance()!!
-
-                        try {
-
-                            while (player.isPlaying()) {
-                                logUtil!!.putF(
-                                    this.baseMusicService!!.WAITING_FOR_MUSIC_TO_END,
-                                    this,
-                                    commonStateStrings!!.ON_START_COMMAND,
-                                )
-                                Thread.sleep(1200)
-                            }
-
-                            this.baseMusicService!!.onStartCommandIntent(intent)
-                        } catch (e: Exception) {
-                            logUtil!!.put(
-                                commonStrings!!.EXCEPTION,
-                                this,
-                                commonStateStrings!!.ON_START_COMMAND,
-                                e,
-                            )
-                        }
-                    }
-                }
-
-                // Otherwise - statement - EmptyStmt
-
-                var runnable: Runnable = MusicRunnable(this)
+                var runnable: Runnable = MusicRunnable(this, player, intent)
 
                 var thread: Thread = Thread(runnable)
 

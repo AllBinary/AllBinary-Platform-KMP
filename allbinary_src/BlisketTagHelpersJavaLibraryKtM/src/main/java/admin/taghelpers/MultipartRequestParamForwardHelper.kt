@@ -38,6 +38,8 @@ import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import tags.HelperTag
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class MultipartRequestParamForwardHelper
             : Object
@@ -102,7 +104,7 @@ this.pageContext!!.forward(stringBuffer!!.toString())
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "forward()", e)

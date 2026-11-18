@@ -208,6 +208,75 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
 }
 
 
+open public inner class ImageCopyCallback
+            : Object
+        
+                , Callback {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+
+    private val imageModifierUtil: ImageModifierUtil
+
+    private val imageArray: Array<Image?>
+
+    private val index: Int
+
+    private val image: Image
+
+    private val image3: CoreImage
+ constructor (imageModifierUtil: ImageModifierUtil, imageArray: Array<Image?>, index: Int, image: Image, image3: CoreImage)
+            : super()
+        {
+    //var imageModifierUtil = imageModifierUtil
+    //var imageArray = imageArray
+    //var index = index
+    //var image = image
+    //var image3 = image3
+this.imageModifierUtil= imageModifierUtil
+this.imageArray= imageArray
+this.index= index
+this.image= image
+this.image3= image3
+}
+
+
+    override fun onSuccess(resource: Any)
+        //nullable = true from not(false or (false and false)) = true
+{
+var resource = resource
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var resourceCallbackStrings: ResourceCallbackStrings = this.imageModifierUtil!!.resourceCallbackStrings
+
+logUtil!!.putF(resourceCallbackStrings!!.DONE +this.image.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
+this.imageModifierUtil!!.copy(this.imageArray, this.index, this.image, this.image3)
+}
+
+
+    override fun onFailure(e: Throwable)
+        //nullable = true from not(false or (false and false)) = true
+{
+var e = e
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var resourceCallbackStrings: ResourceCallbackStrings = this.imageModifierUtil!!.resourceCallbackStrings
+
+logUtil!!.put(StringMaker().
+                            append(this.imageModifierUtil!!.commonStrings!!.EXCEPTION_LABEL)!!.append(resourceCallbackStrings!!.ERROR)!!.append(this.image.getName())!!.toString(), this, resourceCallbackStrings!!.HANDLE_IMAGE, e)
+}
+
+
+}
+                
+            
     open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -235,34 +304,7 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
                                 
                         else {
                             
-    var callback: Callback = object: Callback()
-                                {
-                                
-                                
-    override fun onSuccess(resource: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-var resource = resource
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-logUtil!!.putF(resourceCallbackStrings!!.DONE +image.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
-copy(imageArray, index, image, image3)
-}
-
-    override fun onFailure(e: Throwable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var e = e
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-logUtil!!.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(resourceCallbackStrings!!.ERROR)!!.append(image.getName())!!.toString(), this, resourceCallbackStrings!!.HANDLE_IMAGE, e)
-}
-
-                                }
-                            
+    var callback: Callback = ImageCopyCallback(this, imageArray, index, image, image3)
 
 image3.addCallback(callback)
 

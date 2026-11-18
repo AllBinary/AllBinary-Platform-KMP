@@ -41,6 +41,7 @@ import org.allbinary.graphics.j2me.workarea.tools.LinesGraphicItem
 import org.allbinary.logic.StdUtil
 import org.allbinary.util.BasicArrayList
 import org.w3c.dom.Node
+import org.w3c.dom.Document
 
 open public class CanvasDom
             : Object
@@ -276,7 +277,7 @@ this.grid.grid= PointFactory.getInstance()!!.createXY(gridX, gridY)
 var point = point
 var pointName = pointName
 
-    var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!
+    var document: Document = WorkAreaJPanel.getDocument()!!
 
 
     var pointNode: Node = document.createElement(pointName) as Node
@@ -309,7 +310,7 @@ pointNode!!.appendChild(yNode)
         //nullable = true from not(false or (false and true)) = true
 : Node{
 
-    var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!
+    var document: Document = WorkAreaJPanel.getDocument()!!
 
 
     var frameNode: Node = document.createElement(this.FRAME) as Node

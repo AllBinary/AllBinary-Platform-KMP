@@ -31,6 +31,8 @@ import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AuthenticationRequestHelperFactory : TagHelperFactory {
         
@@ -56,7 +58,7 @@ var pageContext = pageContext
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET_INSTANCE, e)
@@ -87,7 +89,7 @@ var httpServletRequest = httpServletRequest
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET_INSTANCE, e)

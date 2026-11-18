@@ -32,6 +32,8 @@ import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import views.business.context.HttpContextView
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class UserView : HttpContextView {
         
@@ -72,7 +74,7 @@ this.addDomNodeInterface(UserDomNode(this.user) as DomNodeInterface)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)

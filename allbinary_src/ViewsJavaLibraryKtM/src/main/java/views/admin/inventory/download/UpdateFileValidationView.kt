@@ -52,6 +52,8 @@ import org.allbinary.string.CommonStrings
 import org.apache.commons.fileupload.FileItem
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class UpdateFileValidationView : DownloadableInventoryItemView
                 , ValidationComponentInterface {
@@ -86,7 +88,7 @@ var transformInfoInterface = transformInfoInterface
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Invalid AdminCommand=" +command, this, this.commonStrings!!.IS_VALID)
@@ -109,7 +111,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.put("Existing Item With MoneyException", this, this.commonStrings!!.IS_VALID, e)
@@ -127,7 +129,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Item Does Not Exist", this, this.commonStrings!!.IS_VALID)
@@ -148,7 +150,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("BasicItem is not valid", this, this.commonStrings!!.IS_VALID)
@@ -178,7 +180,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Category Does Not Exist: " +fullCategory, this, this.commonStrings!!.IS_VALID)
@@ -366,7 +368,7 @@ this.downloadableItem= DownloadableItem(hashMap)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("DownloadableItem is not valid", this, this.commonStrings!!.IS_VALID)
@@ -386,7 +388,7 @@ this.downloadableItem= DownloadableItem(hashMap)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Exception in validation", this, this.commonStrings!!.IS_VALID, e)
@@ -454,7 +456,7 @@ var document = document
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF(ITEM_NOT_FOUND, this, "validationInfo()")
@@ -489,7 +491,7 @@ stringBuffer!!.append("<br/>")
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Category: " +fullCategory, this, "validationInfo()")
@@ -608,7 +610,7 @@ this.validationInfo(stringBuffer, fileName, size)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF(log, this, this.commonStrings!!.IS_VALID)
@@ -630,7 +632,7 @@ stringBuffer!!.append("<br/>")
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
@@ -672,7 +674,7 @@ var size = size
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -700,7 +702,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -726,7 +728,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -805,6 +807,17 @@ stringBuffer!!.append("<br/>")
 
                                     }
                                 
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getTransformInfoInterface()
+        //nullable = true from not(false or (false and true)) = true
+: TransformInfoInterface{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getTransformInfoInterface()
 }
 
 

@@ -116,11 +116,6 @@ import org.allbinary.time.TimeStampUtil
         // var className = className
         var functionName = functionName
 
-        if (functionName == null) {
-
-            functionName = this.NONE
-        }
-
         var stringBuffer: StringMaker = StringMaker()
 
         stringBuffer!!.append(this.TIME)
@@ -155,13 +150,7 @@ import org.allbinary.time.TimeStampUtil
 
             var exceptionAsString: String = exception.toString()!!
 
-            if (exceptionAsString != null) {
-
-                stringBuffer!!.append(exceptionAsString)
-            } else {
-                stringBuffer!!.append(this.EMPTY)
-            }
-
+            stringBuffer!!.append(exceptionAsString)
             stringBuffer!!.append(this.STACK_TRACE)
 
             if (exception != this.nullUtil!!.NULL_OBJECT) {

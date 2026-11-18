@@ -35,8 +35,14 @@ import org.allbinary.input.automation.actions.script.JTreeInterface
 import org.allbinary.input.automation.actions.script.condition.CustomTreeNodeInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import java.awt.Dimension
+import java.awt.GridLayout
+import java.awt.event.MouseAdapter
+import javax.swing.JPanel
+import javax.swing.JScrollPane
+import javax.swing.JTree
 
-open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
+open public class GenericProfileActionScriptJPanel : JPanel
                 , JTreeInterface {
         
 
@@ -84,14 +90,14 @@ this.genericProfileActionScript= genericProfileActionScript
 
     open fun getActionScriptJTree()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTree{
+: JTree{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.actionScriptJTree
 }
 
 
-    open fun setActionScriptJTree(actionScriptJTree: javax.swing.JTree)
+    open fun setActionScriptJTree(actionScriptJTree: JTree)
         //nullable = true from not(false or (false and false)) = true
 {
 var actionScriptJTree = actionScriptJTree
@@ -102,22 +108,22 @@ this.actionScriptJTree= actionScriptJTree
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.jScrollPane1= javax.swing.JScrollPane()
-this.actionScriptJTree= javax.swing.JTree()
-setLayout(java.awt.GridLayout(1, 0))
-this.actionScriptJTree!!.setPreferredSize(java.awt.Dimension(500, 500))
-this.actionScriptJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.jScrollPane1= JScrollPane()
+this.actionScriptJTree= JTree()
+setLayout(GridLayout(1, 0))
+this.actionScriptJTree!!.setPreferredSize(Dimension(500, 500))
+this.actionScriptJTree!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mouseClicked(evt: java.awt.event.MouseEvent)
+    open override fun mouseClicked(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 actionScriptJTreeMouseClicked(evt)
 }
 
-    open override fun mouseReleased(evt: java.awt.event.MouseEvent)
+    open override fun mouseReleased(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -131,7 +137,7 @@ add(this.jScrollPane1)
 }
 
 
-    open fun actionScriptJTreeMouseReleased(evt: java.awt.event.MouseEvent)
+    open fun actionScriptJTreeMouseReleased(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -180,16 +186,16 @@ jPopupMenu!!.show(evt.getSource() as JComponent, evt.getX(), evt.getY())
 }
 
 
-    open fun actionScriptJTreeMouseClicked(evt: java.awt.event.MouseEvent)
+    open fun actionScriptJTreeMouseClicked(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-    private var actionScriptJTree: javax.swing.JTree
+    private var actionScriptJTree: JTree
 
-    private var jScrollPane1: javax.swing.JScrollPane
+    private var jScrollPane1: JScrollPane
 
 }
                 

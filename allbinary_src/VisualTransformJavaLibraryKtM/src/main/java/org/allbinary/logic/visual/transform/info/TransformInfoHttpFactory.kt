@@ -34,6 +34,8 @@ import org.allbinary.logic.communication.http.request.session.WeblisketSession
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformInfoHttpFactory
             : Object
@@ -99,7 +101,7 @@ var pageContext = pageContext
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     

@@ -33,6 +33,7 @@ import org.allbinary.string.CommonStrings
 import org.eclipse.swt.SWT
 import org.eclipse.swt.graphics.GC
 import org.eclipse.swt.graphics.ImageData
+import org.eclipse.swt.graphics.Image
 
 open public class ImageSwtRotationUtil
             : Object
@@ -70,9 +71,9 @@ private constructor ()
 }
 
 
-    open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, totalAngle: Int)
+    open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var bufferedImage = bufferedImage
     //var totalAngle = totalAngle
 
@@ -93,9 +94,9 @@ private constructor ()
 }
 
 
-    open fun getRotatedImage2(bufferedImage: org.eclipse.swt.graphics.Image, newBufferedImage: org.eclipse.swt.graphics.Image, gc: GC, angle: Float)
+    open fun getRotatedImage2(bufferedImage: Image, newBufferedImage: Image, gc: GC, angle: Float)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var bufferedImage = bufferedImage
     //var newBufferedImage = newBufferedImage
     //var gc = gc
@@ -118,9 +119,9 @@ private constructor ()
 }
 
 
-    open fun rotateImage(originalSwtImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
+    open fun rotateImage(originalSwtImage: Image, newSwtImage: Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var originalSwtImage = originalSwtImage
     //var newSwtImage = newSwtImage
     //var gc = gc
@@ -131,9 +132,9 @@ private constructor ()
 }
 
 
-    open fun getRotatedImageSWT(bufferedImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
+    open fun getRotatedImageSWT(bufferedImage: Image, newSwtImage: Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var bufferedImage = bufferedImage
     //var newSwtImage = newSwtImage
     //var gc = gc
@@ -144,14 +145,14 @@ private constructor ()
 }
 
 
-    open fun getRotatedImages(bufferedImage: org.eclipse.swt.graphics.Image, numberOfFrames: Int, totalAngle: Int)
+    open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>{
+: Array<Image?>{
     //var bufferedImage = bufferedImage
     //var numberOfFrames = numberOfFrames
     //var totalAngle = totalAngle
 
-    var bufferedImageArray: Array<org.eclipse.swt.graphics.Image?> = arrayOfNulls(numberOfFrames)
+    var bufferedImageArray: Array<Image?> = arrayOfNulls(numberOfFrames)
 
 
     var angle: Int= 0
@@ -177,9 +178,9 @@ bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)!!
 }
 
 
-    open fun createSpriteImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>)
+    open fun createSpriteImage(bufferedImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var bufferedImageArray = bufferedImageArray
 
     var columns: Int = 9
@@ -211,13 +212,13 @@ rows= (size /columns)
                                     }
                                 
 
-    var firstBufferedImage: org.eclipse.swt.graphics.Image = bufferedImageArray[0]!!
+    var firstBufferedImage: Image = bufferedImageArray[0]!!
 
 
     var imageData: ImageData = firstBufferedImage!!.getImageData()!!
 
 
-    var bufferedImage: org.eclipse.swt.graphics.Image = this.imageUtil!!.create(imageData!!.width *columns, imageData!!.height *rows)!!
+    var bufferedImage: Image = this.imageUtil!!.create(imageData!!.width *columns, imageData!!.height *rows)!!
 
 
     var gc: GC = GC(bufferedImage)
@@ -231,7 +232,7 @@ gc.setInterpolation(SWT.HIGH)
     var rowIndex: Int = 0
 
 
-    var nextBufferedImage: org.eclipse.swt.graphics.Image
+    var nextBufferedImage: Image
 
 
 

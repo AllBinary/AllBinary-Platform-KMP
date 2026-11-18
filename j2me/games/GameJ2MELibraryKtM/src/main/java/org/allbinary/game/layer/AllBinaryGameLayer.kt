@@ -39,31 +39,30 @@ import org.allbinary.view.event.ViewPositionEventListenerInterface
 open public class AllBinaryGameLayer :
     AllBinaryLayer, ViewPositionEventListenerInterface, OpenGLSurfaceChangedInterface {
 
+    companion object {
+
+        open fun createPaintable()
+        // nullable = true from not(false or (false and true)) = true
+        : Paintable {
+
+            if (SWTUtil.isSWT) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return SWTBlackPaintable()
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NullPaintable.getInstance()
+        }
+    }
+
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
 
     val RED: BasicColor = BasicColorFactory.getInstance()!!.RED
 
-    private val paintable: Paintable =
-        if (SWTUtil.isSWT) {
-
-            object : Paintable() {
-
-                private val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-
-                private val BLACK: BasicColor = BasicColorFactory.getInstance()!!.BLACK
-
-                open override fun paint(graphics: Graphics)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    var graphics = graphics
-                    this.basicSetColorUtil!!.setBasicColorP(graphics, this.BLACK)
-                }
-            }
-        } else {
-            NullPaintable.getInstance()
-        }
+    private val paintable: Paintable = createPaintable()!!
 
     private val gameKeyEventList: BasicArrayList = BasicArrayListD()
 

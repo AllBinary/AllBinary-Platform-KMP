@@ -68,6 +68,8 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ServiceClientInformationInterfaceFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class OrderHistoryEntity : AbSqlBean
                 , OrderHistoryEntityInterface {
@@ -262,7 +264,7 @@ vector.add(order.getStoreCancelComments())
 this.insert(vector)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, INSERT)
@@ -273,7 +275,7 @@ this.insert(vector)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put("Command Failed: " +vector, this, INSERT, e)
@@ -294,7 +296,7 @@ var values = values
             super.insert(values)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, INSERT)
@@ -305,7 +307,7 @@ var values = values
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
@@ -359,7 +361,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "setStatus", e)
@@ -396,7 +398,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "setPaymentMethod", e)

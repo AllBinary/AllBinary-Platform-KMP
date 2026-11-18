@@ -42,7 +42,7 @@ public constructor ()
 }
 
 
-    open fun accept(arg0: java.io.File)
+    open fun accept(arg0: File)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var arg0 = arg0

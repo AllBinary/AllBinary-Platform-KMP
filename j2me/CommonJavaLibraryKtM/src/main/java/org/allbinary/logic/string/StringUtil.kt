@@ -55,15 +55,8 @@ open public class StringUtil : Object {
         : String {
         var string = string
 
-        if (string == null) {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.EMPTY_STRING
-        } else {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return string
-        }
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return string
     }
 
     open fun getArrayInstance()

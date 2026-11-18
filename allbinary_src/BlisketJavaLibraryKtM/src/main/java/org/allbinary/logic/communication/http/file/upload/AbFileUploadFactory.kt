@@ -36,6 +36,8 @@ import org.allbinary.string.CommonStrings
 import org.apache.commons.fileupload.FileItemIterator
 import org.apache.commons.fileupload.FileItemStream
 import org.apache.commons.fileupload.FileItemUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AbFileUploadFactory
             : Object
@@ -100,7 +102,7 @@ items.add(fileItem)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
                                     {
                                     
@@ -140,7 +142,7 @@ var httpServletRequest = httpServletRequest
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "get()", e)

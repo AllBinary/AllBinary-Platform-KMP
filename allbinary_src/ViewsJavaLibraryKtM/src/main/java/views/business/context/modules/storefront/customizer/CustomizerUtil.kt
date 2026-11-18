@@ -39,6 +39,8 @@ import org.allbinary.logic.visual.transform.info.TransformInfoHttpInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjectConfigInterface
 import org.w3c.dom.Document
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class CustomizerUtil
             : Object
@@ -75,7 +77,7 @@ var customizerTransformInfoInterface = customizerTransformInfoInterface
 var transformInfoInterface = transformInfoInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +customizerTransformInfoInterface!!.getName(), this, "getTransformInfoInterfaceToCustomize()")
@@ -109,7 +111,7 @@ var customizerTransformInfoInterface = customizerTransformInfoInterface
 var transformInfoInterface = transformInfoInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +customizerTransformInfoInterface!!.getName(), this, "getTransformInfoObjectConfigComponentNodesToCustomize()")
@@ -142,7 +144,7 @@ var transformInfoInterface = transformInfoInterface
 var transformInfoInterface = transformInfoInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +transformInfoInterface!!.getName(), this, "getTransformInfoObjectConfigComponentNodes()")
@@ -166,7 +168,7 @@ var transformInfoInterface = transformInfoInterface
 var transformInfoInterface = transformInfoInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +transformInfoInterface!!.getName(), this, "getTransformInfoObjectConfigComponentNodes()")
@@ -191,7 +193,7 @@ var transformInfoInterface = transformInfoInterface
 var domNodeInterface = domNodeInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +transformInfoInterface!!.getName(), this, "insert()")
@@ -216,7 +218,7 @@ document.appendChild(domNodeInterface!!.toXmlNode(document))
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.append("Total Views For Modification: ")
@@ -246,7 +248,7 @@ transformInfoInterface!!.setData(documentString)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -272,7 +274,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -290,7 +292,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF(transformInfoInterface!!.getName() +" is adding data to view: " +viewNameOfViewToBeModified, this, "insert()")
@@ -299,7 +301,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -330,7 +332,7 @@ var specifiedTransformInfoInterface = specifiedTransformInfoInterface
 var documentString = documentString
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +specifiedTransformInfoInterface!!.getName(), this, "write()")
@@ -353,7 +355,7 @@ transformInfoEntityInterface!!.update(specifiedTransformInfoInterface!!.toHashMa
 var transformInfoInterface = transformInfoInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +transformInfoInterface!!.getName(), this, "getViewDataForComponentsInObjectConfig()")

@@ -36,6 +36,8 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformInfoHttpStore : TransformInfoHttp
                 , TransformInfoHttpStoreInterface {
@@ -53,7 +55,7 @@ var pageContext = pageContext
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Properties HashMap: " +propertiesHashMap!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -74,7 +76,7 @@ var pageContext = pageContext
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -103,7 +105,7 @@ var pageContext = pageContext
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Properties HashMap: " +propertiesHashMap!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -162,6 +164,23 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbPath(this.getPath(), this.getDataFile())
+}
+
+
+    override fun setStoreName(value: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var value = value
+super.setStoreName(value)
+}
+
+
+    override fun getStoreName()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getStoreName()
 }
 
 

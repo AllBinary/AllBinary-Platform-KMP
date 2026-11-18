@@ -17,11 +17,11 @@ package org.allbinary.game.configuration
 
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.TextField
+import org.allbinary.MIDPUtil
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.logic.ABSystemWrapper
-import org.allbinary.logic.MEUtil
 
 open public class SaveGameForm : CommandForm {
 
@@ -58,7 +58,7 @@ open public class SaveGameForm : CommandForm {
         }
     }
 
-    private val meUtil: MEUtil = MEUtil.getInstance()!!
+    private val meUtil: MIDPUtil = MIDPUtil.getInstance()!!
 
     private constructor(
         commandListener: CommandListener,

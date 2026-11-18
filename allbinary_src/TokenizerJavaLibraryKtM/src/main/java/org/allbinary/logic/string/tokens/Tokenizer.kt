@@ -32,10 +32,7 @@ open public class Tokenizer : Object {
     public constructor(sep: String) : super() {
         var sep = sep
 
-        if (
-            sep == null ||
-                TsUtil.getInstance()!!.compareTo(sep, StringUtil.getInstance()!!.EMPTY_STRING) == 0
-        ) {
+        if (TsUtil.getInstance()!!.compareTo(sep, StringUtil.getInstance()!!.EMPTY_STRING) == 0) {
 
             throw Exception("Sep provided is not valid")
         }

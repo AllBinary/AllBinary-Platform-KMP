@@ -30,6 +30,7 @@ import javax.servlet.jsp.JspTagException
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.system.security.licensing.LicensingException
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
 
 open public class StoreFrontTag : StoreValidationTransformTag {
         
@@ -63,7 +64,7 @@ this.setObjectFile("views.admin.storefront.AddValidationStoreFrontView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     
@@ -75,7 +76,7 @@ this.setObjectFile("views.admin.storefront.AddValidationStoreFrontView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.EDIT) == 0)
                         
                                     {
                                     this.setName("Edit Validation StoreFront View")
@@ -105,7 +106,7 @@ this.setObjectFile("views.admin.storefront.DeleteValidationStoreFrontView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.BACKUP) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.BACKUP) == 0)
                         
                                     {
                                     
@@ -117,7 +118,7 @@ this.setObjectFile("views.admin.storefront.DeleteValidationStoreFrontView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.RESTORE) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.RESTORE) == 0)
                         
                                     {
                                     

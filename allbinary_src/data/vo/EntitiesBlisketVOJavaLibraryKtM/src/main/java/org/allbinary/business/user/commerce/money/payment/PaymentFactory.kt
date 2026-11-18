@@ -29,6 +29,8 @@
 import javax.servlet.ServletRequest
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class PaymentFactory
             : Object
@@ -47,7 +49,7 @@ var request = request
         try {
             
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org.allbinary.business.user.commerce.money.payment.Payment(request) as PaymentInterface
+                        return Payment(request) as PaymentInterface
 } catch(e: Exception)
             {
 
@@ -55,7 +57,7 @@ var request = request
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, "PaymentFactory", commonStrings!!.GET_INSTANCE, e)

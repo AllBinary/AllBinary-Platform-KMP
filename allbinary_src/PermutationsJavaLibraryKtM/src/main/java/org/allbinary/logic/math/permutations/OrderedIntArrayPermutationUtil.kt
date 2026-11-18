@@ -18,6 +18,7 @@ package org.allbinary.logic.math.permutations
 import java.lang.Object
 import java.lang.System
 import kotlin.Array
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.visitor.Visitor
 
 open public class OrderedIntArrayPermutationUtil : Object {
@@ -53,7 +54,7 @@ open public class OrderedIntArrayPermutationUtil : Object {
             var ORIGINAL_DATA_LABEL: String = "Original Data: "
 
             System.out.print(ORIGINAL_DATA_LABEL)
-            permutationVisitor!!.print(data)
+            permutationVisitor!!.print(data, StringMaker())
             OrderedIntArrayPermutationUtil.getInstance()!!.generate(data, permutationVisitor)
         }
     }

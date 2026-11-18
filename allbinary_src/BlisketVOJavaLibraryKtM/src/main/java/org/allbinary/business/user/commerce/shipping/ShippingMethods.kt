@@ -33,6 +33,8 @@ import org.allbinary.business.user.commerce.shipping.modules.ShippingInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class ShippingMethods
             : Object
@@ -101,7 +103,7 @@ shipping= this.shippingVector!!.get(index) as ShippingInterface
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SHIPPINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SHIPPINGERROR))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, "getShippingInterface(String name)")

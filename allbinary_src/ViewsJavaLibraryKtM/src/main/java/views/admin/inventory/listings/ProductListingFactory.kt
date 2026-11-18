@@ -29,6 +29,8 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.search.SearchRequest
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class ProductListingFactory
             : Object
@@ -47,12 +49,12 @@ var searchRequest = searchRequest
         try {
             
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return views.admin.inventory.listings.ProductListing(searchRequest) as ProductListingInterface
+                        return ProductListing(searchRequest) as ProductListingInterface
 } catch(e: Exception)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     

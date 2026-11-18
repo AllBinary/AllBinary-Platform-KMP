@@ -41,6 +41,8 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpStoreInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.logic.visual.transform.info.template.TransformInfoTemplateData
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class StoreUriResolver
             : Object
@@ -86,7 +88,7 @@ stringBuffer!!.append(URLGLOBALS.getMainPath())!!.append(FREEBLISKET_PATH_GLOBAL
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())

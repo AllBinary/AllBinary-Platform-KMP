@@ -46,6 +46,8 @@ import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.crypt.SuperCrypt
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class PaymentEntity : AbSqlBean
                 , PaymentEntityInterface {
@@ -110,7 +112,7 @@ whereKeyAndValue!!.put(PaymentData.ID, index.toString())
 super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "setDefault")
@@ -121,7 +123,7 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "setDefault", e)
@@ -185,7 +187,7 @@ keyAndValue!!.put(UserData.USERNAME, userName)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.GET, e)
@@ -227,7 +229,7 @@ paymentHashMap= super.getRow(updateKeyAndValue)!!
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "getDefault")
@@ -251,7 +253,7 @@ paymentHashMap= super.getRow(updateKeyAndValue)!!
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDefault", e)
@@ -281,7 +283,7 @@ whereHashMap!!.put(PaymentData.ID, index.toString() as String)
 super.deleteWhere(whereHashMap)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "remove")
@@ -292,7 +294,7 @@ super.deleteWhere(whereHashMap)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "remove", e)
@@ -341,7 +343,7 @@ vector.add(time)
 super.insert(vector)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "add")
@@ -352,7 +354,7 @@ super.insert(vector)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)
@@ -390,6 +392,23 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 
 
     open fun drop()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.dropTable()
+}
+
+
+    override fun insert(values: BasicArrayList)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var values = values
+super.insert(values)
+}
+
+
+    override fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

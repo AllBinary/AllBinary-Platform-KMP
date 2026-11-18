@@ -39,6 +39,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 
 open public class Replace
             : Object
@@ -270,7 +271,7 @@ totalNumberOfReplaces++
                                     {
                                     
     
-                        if(LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, this.ALL)
@@ -366,7 +367,7 @@ totalNumberOfReplaces++
 
 
     
-                        if(LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, this.ALL)

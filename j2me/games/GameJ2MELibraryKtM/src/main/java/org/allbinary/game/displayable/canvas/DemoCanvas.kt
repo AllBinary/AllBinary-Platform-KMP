@@ -1426,4 +1426,20 @@ open public class DemoCanvas :
         // if statement needs to be on the same line and ternary does not work the same way.
         return DemoCanvas.TYPE
     }
+
+    override fun getTitle()
+    // nullable = true from not(false or (false and true)) = true
+    : String {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getTitle()
+    }
+
+    override fun isPaused()
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.isPaused()
+    }
 }

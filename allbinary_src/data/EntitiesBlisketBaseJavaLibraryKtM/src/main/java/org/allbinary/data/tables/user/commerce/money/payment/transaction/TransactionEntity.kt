@@ -40,6 +40,8 @@ import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransactionEntity : AbSqlBean
                 , TransactionEntityInterface {
@@ -74,7 +76,7 @@ whereHashMap!!.put(UserData.USERNAME, userName)
 super.deleteWhere(whereHashMap)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "remove")
@@ -85,7 +87,7 @@ super.deleteWhere(whereHashMap)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "remove", e)
@@ -124,7 +126,7 @@ values.add(time)
 super.insert(values)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "add")
@@ -135,7 +137,7 @@ super.insert(values)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)

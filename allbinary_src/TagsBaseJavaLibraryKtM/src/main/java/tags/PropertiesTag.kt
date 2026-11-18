@@ -29,6 +29,8 @@
 import java.util.HashMap
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class PropertiesTag : CommandTag {
         
@@ -39,7 +41,7 @@ open public class PropertiesTag : CommandTag {
 public constructor (){
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -64,7 +66,7 @@ this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()!!
 : Int{
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("Tag Ended", this, "doEndTag")

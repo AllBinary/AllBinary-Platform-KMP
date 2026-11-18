@@ -30,6 +30,7 @@ import org.allbinary.thread.ARunnable
 import org.allbinary.image.gui.ImageToolJFrame
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import java.awt.EventQueue
 
 open public class ImageTool
             : Object
@@ -41,7 +42,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
-java.awt.EventQueue.invokeLater(object: ARunnable()
+EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
                                 

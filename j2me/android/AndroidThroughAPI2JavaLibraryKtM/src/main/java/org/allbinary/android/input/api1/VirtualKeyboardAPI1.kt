@@ -17,7 +17,9 @@ package org.allbinary.android.input.api1
 
 import android.app.Activity
 import org.allbinary.android.input.VirtualKeyboard
+import org.allbinary.input.event.VirtualKeyboardEvent
 import org.allbinary.input.event.VirtualKeyboardEventListenerInterface
+import org.allbinary.logic.util.event.AllBinaryEventObject
 
 open public class VirtualKeyboardAPI1 : VirtualKeyboard, VirtualKeyboardEventListenerInterface {
 
@@ -30,5 +32,19 @@ open public class VirtualKeyboardAPI1 : VirtualKeyboard, VirtualKeyboardEventLis
 
     public constructor(activity: Activity) {
         // var activity = activity
+    }
+
+    override fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var virtualKeyboardEvent = virtualKeyboardEvent
+        super.onVirtualKeyboardEvent(virtualKeyboardEvent)
+    }
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        super.onEvent(eventObject)
     }
 }

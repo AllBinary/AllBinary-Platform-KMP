@@ -16,12 +16,8 @@
 package org.allbinary.animation
 
 import java.lang.Object
-import javax.microedition.lcdui.Graphics
 import kotlin.Array
-import org.allbinary.math.AngleFactory
-import org.allbinary.math.AngleInfo
 import org.allbinary.media.ScaleProperties
-import org.allbinary.util.CircularIndexUtil
 
 open public class NullRotationAnimationFactory :
     Object, AnimationInterfaceFactoryInterface, ProceduralAnimationInterfaceFactoryInterface {
@@ -41,34 +37,6 @@ open public class NullRotationAnimationFactory :
     }
 
     val NULL_ROTATION_ANIMATION_ARRAY: Array<RotationAnimation?> = arrayOfNulls(0)
-
-    open public inner class NullRotationAnimation2 : NullRotationAnimation {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
-        }
-            */
-
-        constructor() :
-            super(
-                AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE),
-                CircularIndexUtil.createInstance(4),
-                IndexedAnimationBehavior(1, 250),
-            ) {
-
-            // For kotlin this is before the body of the constructor.
-
-        }
-
-        override fun paintXY(graphics: Graphics, x: Int, y: Int)
-            // nullable = true from not(false or (false and false)) = true
-        {
-            // var graphics = graphics
-            // var x = x
-            // var y = y
-        }
-    }
 
     private val NULL_ANIMATION: Animation = NullRotationAnimation2()
 

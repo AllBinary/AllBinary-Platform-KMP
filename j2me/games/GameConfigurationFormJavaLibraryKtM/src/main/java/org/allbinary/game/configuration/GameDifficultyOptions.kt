@@ -20,18 +20,18 @@ import javax.microedition.lcdui.Choice
 import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.NullImage
+import org.allbinary.MIDPUtil
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.persistance.GameDifficultyFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
-import org.allbinary.logic.MEUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class GameDifficultyOptions : CommandForm {
 
-    private val meUtil: MEUtil = MEUtil.getInstance()!!
+    private val meUtil: MIDPUtil = MIDPUtil.getInstance()!!
 
     private val list: BasicArrayList
 

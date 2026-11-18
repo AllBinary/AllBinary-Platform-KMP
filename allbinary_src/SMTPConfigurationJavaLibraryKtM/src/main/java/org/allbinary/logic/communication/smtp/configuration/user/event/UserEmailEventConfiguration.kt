@@ -29,6 +29,8 @@
 import java.util.HashMap
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class UserEmailEventConfiguration
             : Object
@@ -48,7 +50,7 @@ this.setName(StringUtil.getInstance()!!.EMPTY_STRING)
 this.setEventListenerClassPath(StringUtil.getInstance()!!.EMPTY_STRING)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("New", this, " Constructor")
@@ -65,7 +67,7 @@ this.setName(hashMap!!.get(UserEmailEventConfigurationData.NAME) as String)
 this.setEventListenerClassPath(hashMap!!.get(UserEmailEventConfigurationData.LISTENER_CLASSPATH) as String)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Log: " +this.log(), this, " Constructor")

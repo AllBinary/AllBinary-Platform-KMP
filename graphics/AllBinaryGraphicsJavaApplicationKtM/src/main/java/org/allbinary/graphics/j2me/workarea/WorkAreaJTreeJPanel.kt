@@ -41,8 +41,17 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
+import java.awt.GridLayout
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+import javax.swing.JMenuItem
+import javax.swing.JPanel
+import javax.swing.JPopupMenu
+import javax.swing.JScrollPane
+import javax.swing.event.PopupMenuEvent
+import javax.swing.event.PopupMenuListener
 
-open public class WorkAreaJTreeJPanel : javax.swing.JPanel {
+open public class WorkAreaJTreeJPanel : JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
@@ -76,11 +85,11 @@ this.rootTreeNode!!.add(treeNode)
         //nullable = true from not(false or (false and true)) = true
 {
 this.workAreaJTree= JTree(this.rootTreeNode)
-this.workAreaJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.workAreaJTree!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -379,30 +388,30 @@ this.workAreaJTree!!.expandPath(treePath)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-itemJPopupMenu= javax.swing.JPopupMenu()
-this.deleteJMenuItem= javax.swing.JMenuItem()
-this.copyJMenuItem= javax.swing.JMenuItem()
-this.rotateJMenuItem= javax.swing.JMenuItem()
-this.itemJScrollPane1= javax.swing.JScrollPane()
-this.workAreaPropertiesJPanel= javax.swing.JPanel()
-itemJPopupMenu!!.addPopupMenuListener(object: javax.swing.event.PopupMenuListener()
+itemJPopupMenu= JPopupMenu()
+this.deleteJMenuItem= JMenuItem()
+this.copyJMenuItem= JMenuItem()
+this.rotateJMenuItem= JMenuItem()
+this.itemJScrollPane1= JScrollPane()
+this.workAreaPropertiesJPanel= JPanel()
+itemJPopupMenu!!.addPopupMenuListener(object: PopupMenuListener()
                                 {
                                 
                                 
-    open override fun popupMenuCanceled(evt: javax.swing.event.PopupMenuEvent)
+    open override fun popupMenuCanceled(evt: PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
-    open override fun popupMenuWillBecomeInvisible(evt: javax.swing.event.PopupMenuEvent)
+    open override fun popupMenuWillBecomeInvisible(evt: PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 itemJPopupMenuPopupMenuWillBecomeInvisible(evt)
 }
 
-    open override fun popupMenuWillBecomeVisible(evt: javax.swing.event.PopupMenuEvent)
+    open override fun popupMenuWillBecomeVisible(evt: PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -412,11 +421,11 @@ itemJPopupMenuPopupMenuWillBecomeVisible(evt)
                                 }
                             )
 this.deleteJMenuItem!!.setText("Delete")
-this.deleteJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.deleteJMenuItem!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -427,11 +436,11 @@ deleteJMenuItemMousePressed(evt)
                             )
 this.itemJPopupMenu!!.add(this.deleteJMenuItem)
 this.copyJMenuItem!!.setText("Copy")
-this.copyJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.copyJMenuItem!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -442,11 +451,11 @@ copyJMenuItemMousePressed(evt)
                             )
 this.itemJPopupMenu!!.add(this.copyJMenuItem)
 this.rotateJMenuItem!!.setText("Rotate 45*")
-this.rotateJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.rotateJMenuItem!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -456,12 +465,12 @@ rotateJMenuItemMousePressed(evt)
                                 }
                             )
 this.itemJPopupMenu!!.add(this.rotateJMenuItem)
-setLayout(java.awt.GridLayout(1, 1))
-this.workAreaPropertiesJPanel!!.addMouseListener(object: java.awt.event.MouseAdapter()
+setLayout(GridLayout(1, 1))
+this.workAreaPropertiesJPanel!!.addMouseListener(object: MouseAdapter()
                                 {
                                 
                                 
-    open override fun mousePressed(evt: java.awt.event.MouseEvent)
+    open override fun mousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -470,13 +479,13 @@ workAreaPropertiesJPanelMousePressed(evt)
 
                                 }
                             )
-this.workAreaPropertiesJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+this.workAreaPropertiesJPanel!!.setLayout(GridLayout(1, 0))
 this.itemJScrollPane1!!.setViewportView(this.workAreaPropertiesJPanel)
 add(this.itemJScrollPane1)
 }
 
 
-    open fun rotateJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
+    open fun rotateJMenuItemMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -497,7 +506,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "rotateJMenuItemMousePr
 }
 
 
-    open fun workAreaJTreeMousePressed(evt: java.awt.event.MouseEvent)
+    open fun workAreaJTreeMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -594,21 +603,21 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "workAreaJTreeMousePres
 }
 
 
-    open fun itemJPopupMenuPopupMenuWillBecomeInvisible(evt: javax.swing.event.PopupMenuEvent)
+    open fun itemJPopupMenuPopupMenuWillBecomeInvisible(evt: PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-    open fun itemJPopupMenuPopupMenuWillBecomeVisible(evt: javax.swing.event.PopupMenuEvent)
+    open fun itemJPopupMenuPopupMenuWillBecomeVisible(evt: PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-    open fun copyJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
+    open fun copyJMenuItemMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -623,7 +632,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "copyJMenuItemMousePres
 }
 
 
-    open fun deleteJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
+    open fun deleteJMenuItemMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -656,24 +665,24 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteJMenuItemMousePr
 }
 
 
-    open fun workAreaPropertiesJPanelMousePressed(evt: java.awt.event.MouseEvent)
+    open fun workAreaPropertiesJPanelMousePressed(evt: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-    private var copyJMenuItem: javax.swing.JMenuItem
+    private var copyJMenuItem: JMenuItem
 
-    private var deleteJMenuItem: javax.swing.JMenuItem
+    private var deleteJMenuItem: JMenuItem
 
-    private var itemJPopupMenu: javax.swing.JPopupMenu
+    private var itemJPopupMenu: JPopupMenu
 
-    private var itemJScrollPane1: javax.swing.JScrollPane
+    private var itemJScrollPane1: JScrollPane
 
-    private var rotateJMenuItem: javax.swing.JMenuItem
+    private var rotateJMenuItem: JMenuItem
 
-    private var workAreaPropertiesJPanel: javax.swing.JPanel
+    private var workAreaPropertiesJPanel: JPanel
 
 }
                 

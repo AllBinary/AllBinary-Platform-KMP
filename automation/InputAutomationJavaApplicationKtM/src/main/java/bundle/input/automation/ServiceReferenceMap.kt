@@ -37,11 +37,11 @@ import org.allbinary.logic.string.StringMaker
 open public class ServiceReferenceMap
             : Object
         
-                , Map {
+                , Map<Any, Any> {
         
 companion object {
             
-    open fun toString(map: Map)
+    open fun toString(map: Map<*, *>)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var map = map
@@ -134,7 +134,7 @@ var key = key
 }
 
 
-    open fun putAll(m: Map)
+    open fun putAll(m: Map<*, *>)
         //nullable = true from not(false or (false and false)) = true
 {
 var m = m
@@ -149,7 +149,7 @@ var m = m
 
     open fun keySet()
         //nullable = true from not(false or (false and true)) = true
-: Set?{
+: Set<Any>?{
 
     var keyStringArray: Array<String?> = this.serviceReference!!.getPropertyKeys()!!
 
@@ -170,7 +170,7 @@ var m = m
 
     open fun entrySet()
         //nullable = true from not(false or (false and true)) = true
-: Set?{
+: Set<Map.Entry<Any, Any>>?{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null

@@ -17,6 +17,7 @@ package javax.microedition.lcdui
 
 import java.lang.Object
 import kotlin.Array
+import org.allbinary.MIDPUtil
 
 open public class ChoiceGroupImageFactory : Object {
 
@@ -542,13 +543,19 @@ open public class ChoiceGroupImageFactory : Object {
             -126,
         )
 
-    private val imgMultiOffO: Image = Image.createImage(this.multiOff, 0, this.multiOff!!.size)!!
+    private val midpUtil: MIDPUtil = MIDPUtil.getInstance()!!
 
-    private val imgMultiOnO: Image = Image.createImage(this.multiOn, 0, this.multiOn!!.size)!!
+    private val imgMultiOffO: Image =
+        this.midpUtil!!.createImageFromByteArray(this.multiOff, 0, this.multiOff!!.size)!!
 
-    private val imgRadioOffO: Image = Image.createImage(this.radioOff, 0, this.radioOff!!.size)!!
+    private val imgMultiOnO: Image =
+        this.midpUtil!!.createImageFromByteArray(this.multiOn, 0, this.multiOn!!.size)!!
 
-    private val imgRadioOnO: Image = Image.createImage(this.radioOn, 0, this.radioOn!!.size)!!
+    private val imgRadioOffO: Image =
+        this.midpUtil!!.createImageFromByteArray(this.radioOff, 0, this.radioOff!!.size)!!
+
+    private val imgRadioOnO: Image =
+        this.midpUtil!!.createImageFromByteArray(this.radioOn, 0, this.radioOn!!.size)!!
 
     var imgMultiOff: Image = this.imgMultiOffO
 

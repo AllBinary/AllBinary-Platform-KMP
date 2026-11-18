@@ -22,18 +22,18 @@ import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Item
 import javax.microedition.lcdui.NullImage
 import javax.microedition.lcdui.StringItem
+import org.allbinary.MIDPUtil
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.persistance.GamePersistanceSingleton
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
-import org.allbinary.logic.MEUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class LoadGameForm : CommandForm {
 
-    private val meUtil: MEUtil = MEUtil.getInstance()!!
+    private val meUtil: MIDPUtil = MIDPUtil.getInstance()!!
 
     private var areChoices: Boolean = false
 

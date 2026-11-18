@@ -38,6 +38,8 @@ import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TitleView
             : Object
@@ -83,7 +85,7 @@ this.title= DomNodeHelper.getTextNodeValue(valueNode)!!
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Title: " +this.getTitle(), this, "Consructor()")
@@ -98,7 +100,7 @@ public constructor (hashMap: HashMap<Any, Any>)
 var hashMap = hashMap
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -159,7 +161,7 @@ var document = document
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("TitleView HashMap: " +hashMap!!.toString(), this, "toXmlNode()")

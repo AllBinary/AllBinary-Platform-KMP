@@ -15,6 +15,7 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.logic.system.security.crypt
 
+import java.lang.Byte
 import java.lang.Object
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -80,29 +81,16 @@ open public class DatabaseEncoder : Object {
                 var vector: BasicArrayList =
                     tokenizer.getTokensFromString(value, BasicArrayListD())!!
 
-                var byteVector: BasicArrayList = BasicArrayListD()
-
                 var size: Int = vector.size()
+
+                var decode: ByteArray = ByteArray(size)
 
                 var byteOfData: String
 
                 for (index in 0 until size) {
 
                     byteOfData = vector.objectArray[index]!! as String
-                    byteVector!!.add(byteOfData.toByte())
-                }
-
-                var decode: ByteArray = ByteArray(byteVector!!.size())
-
-                var decodeIndex: Int = 0
-
-                var aByte: Byte
-
-                for (index in 0 until size) {
-
-                    aByte = byteVector!!.objectArray[index]!! as Byte
-                    decode[decodeIndex] = aByte!!.toByte()
-                    decodeIndex++
+                    decode[index] = Byte.parseByte(byteOfData)
                 }
 
                 // if statement needs to be on the same line and ternary does not work the same way.

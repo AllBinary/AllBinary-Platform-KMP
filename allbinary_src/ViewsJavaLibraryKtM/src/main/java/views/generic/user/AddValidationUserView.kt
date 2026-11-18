@@ -36,6 +36,9 @@ import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import views.business.context.modules.storefront.HttpStoreComponentView
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
+import views.ValidationOnlyTempUtil
 
 open public class AddValidationUserView : HttpStoreComponentView
                 , ValidationComponentInterface {
@@ -70,7 +73,7 @@ this.user= NewUserFactory.getInstance(transformInfoInterface)!!
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("User already in existance.", this, this.commonStrings!!.IS_VALID)
@@ -101,7 +104,7 @@ this.user= NewUserFactory.getInstance(transformInfoInterface)!!
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to validate", this, this.commonStrings!!.IS_VALID, e)
@@ -133,7 +136,7 @@ this.user= NewUserFactory.getInstance(transformInfoInterface)!!
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("User already exists", this, "validationInfo()")
@@ -160,7 +163,7 @@ stringBuffer!!.append("The User Name you selected is already in use.<br/>  Pleas
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
@@ -201,7 +204,18 @@ var document = document
 : String{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return views.ValidationOnlyTempUtil.getInstance()!!.view(this)
+                        return ValidationOnlyTempUtil.getInstance()!!.view(this)
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getTransformInfoInterface()
+        //nullable = true from not(false or (false and true)) = true
+: TransformInfoInterface{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getTransformInfoInterface()
 }
 
 

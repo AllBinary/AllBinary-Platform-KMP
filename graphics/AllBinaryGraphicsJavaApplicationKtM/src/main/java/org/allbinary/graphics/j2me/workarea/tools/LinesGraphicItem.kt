@@ -51,6 +51,8 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
+import java.awt.event.KeyEvent
+import java.awt.event.MouseEvent
 
 open public class LinesGraphicItem
             : Object
@@ -585,7 +587,7 @@ this.color= color
 }
 
 
-    open fun mouseClicked(mouseEvent: java.awt.event.MouseEvent, x: Int, y: Int)
+    open fun mouseClicked(mouseEvent: MouseEvent, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -628,30 +630,21 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 
-    open fun mouseEntered(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseEntered(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
 }
 
 
-    open fun mouseExited(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseExited(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
 }
 
 
-    open fun mousePressed(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var mouseEvent = mouseEvent
-var xPixelsPerCell = xPixelsPerCell
-var yPixelsPerCell = yPixelsPerCell
-}
-
-
-    open fun mouseReleased(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mousePressed(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -660,7 +653,7 @@ var yPixelsPerCell = yPixelsPerCell
 }
 
 
-    open fun mouseDragged(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseReleased(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -669,7 +662,16 @@ var yPixelsPerCell = yPixelsPerCell
 }
 
 
-    open fun mouseMoved(mouseEvent: java.awt.event.MouseEvent, x: Int, y: Int)
+    open fun mouseDragged(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var mouseEvent = mouseEvent
+var xPixelsPerCell = xPixelsPerCell
+var yPixelsPerCell = yPixelsPerCell
+}
+
+
+    open fun mouseMoved(mouseEvent: MouseEvent, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -692,7 +694,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 
-    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
+    open fun keyPressed(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent
@@ -755,14 +757,14 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_
 }
 
 
-    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
+    open fun keyReleased(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent
 }
 
 
-    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
+    open fun keyTyped(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent

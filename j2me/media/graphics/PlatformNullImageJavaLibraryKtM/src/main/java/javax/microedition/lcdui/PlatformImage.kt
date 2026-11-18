@@ -94,7 +94,7 @@ open public class PlatformImage : Object {
         image: Image,
     )
         // nullable = true from not(false or (false and false)) = true
-        : javax.microedition.lcdui.Graphics {
+        : Graphics {
         // var graphicsSurface = graphicsSurface
         // var width = width
         // var height = height
@@ -103,14 +103,7 @@ open public class PlatformImage : Object {
         throw RuntimeException()
     }
 
-    open fun drawImage(
-        image: Image,
-        x: Int,
-        y: Int,
-        anchor: Int,
-        g2: javax.microedition.lcdui.Graphics,
-        g: Any,
-    )
+    open fun drawImage(image: Image, x: Int, y: Int, anchor: Int, g2: Graphics, g: Any)
         // nullable = true from not(false or (false and false)) = true
     {
         // var image = image
@@ -131,7 +124,7 @@ open public class PlatformImage : Object {
         x_dst: Int,
         y_dst: Int,
         anchor: Int,
-        g: javax.microedition.lcdui.Graphics,
+        g: Graphics,
     )
         // nullable = true from not(false or (false and false)) = true
     {

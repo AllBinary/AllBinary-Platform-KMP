@@ -31,6 +31,7 @@ import javax.servlet.jsp.tagext.Tag
 import admin.taghelpers.DownloadItemsHelperFactory
 import admin.taghelpers.DownloadItemsRequestHelperFactory
 import org.allbinary.logic.communication.http.request.AbResponseHandler
+import org.allbinary.globals.GLOBALS2
 
 open public class DownloadItemsTag : TableTag {
         
@@ -61,7 +62,7 @@ this.setTagRequestHelperFactory(DownloadItemsRequestHelperFactory())
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.BACKUP) != 0 && this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.RESTORE) != 0 && this.getCommand()!!.compareTo(this.commonStrings!!.CREATE) != 0 && this.getCommand()!!.compareTo(this.commonStrings!!.DROP) != 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.BACKUP) != 0 && this.getCommand()!!.compareTo(GLOBALS2.RESTORE) != 0 && this.getCommand()!!.compareTo(this.commonStrings!!.CREATE) != 0 && this.getCommand()!!.compareTo(this.commonStrings!!.DROP) != 0)
                         
                                     {
                                     

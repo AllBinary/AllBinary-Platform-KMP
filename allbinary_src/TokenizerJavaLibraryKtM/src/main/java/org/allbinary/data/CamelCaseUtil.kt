@@ -17,7 +17,6 @@ package org.allbinary.data
 
 import java.lang.Object
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
@@ -53,12 +52,6 @@ open public class CamelCaseUtil : Object {
         : String {
         // var string = string
         // var stringBuilder = stringBuilder
-
-        if (string == null) {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return StringUtil.getInstance()!!.EMPTY_STRING
-        }
 
         var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 

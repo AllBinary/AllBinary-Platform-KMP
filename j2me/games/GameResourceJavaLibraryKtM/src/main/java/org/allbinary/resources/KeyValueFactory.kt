@@ -46,15 +46,13 @@ open public class KeyValueFactory : Object {
         : String {
         var key = key
 
-        var value: String = this.MAP.get(key as Object) as String
-
-        if (value == null) {
+        if (!this.MAP.containsKey(key as Object)) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return key
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return value
+        return this.MAP.get(key as Object) as String
     }
 }

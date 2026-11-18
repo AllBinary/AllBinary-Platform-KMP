@@ -51,30 +51,40 @@ open public class PreGameSelectionGameInputProcessor :
 
     private val lockedIndex: Int
 
-    private val abRunnable: ABRunnable =
-        object : ABRunnable() {
+    open public inner class PreGameSelectionRunnable : ABRunnable {
 
-            override fun run()
-                // nullable = true from not(false or (false and true)) = true
-            {
+        private val inputProcessor: PreGameSelectionGameInputProcessor
 
-                try {
-                    this.setRunning(true)
-                    SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
-                    gameCanvas!!.setGameState(nextGameState)
-                    GameKeyEventHandler.getInstance()!!.removeListener(getPlayerGameInput())
-                    this.setRunning(false)
-                } catch (e: Exception) {
-                    this.setRunning(false)
+        constructor(inputProcessor: PreGameSelectionGameInputProcessor) {
+            // var inputProcessor = inputProcessor
+            this.inputProcessor = inputProcessor
+        }
 
-                    var logUtil: LogUtil = LogUtil.getInstance()!!
+        override fun run()
+            // nullable = true from not(false or (false and true)) = true
+        {
 
-                    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            try {
+                this.setRunning(true)
+                SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
+                this.inputProcessor!!.gameCanvas!!.setGameState(this.inputProcessor!!.nextGameState)
+                GameKeyEventHandler.getInstance()!!.removeListener(
+                    this.inputProcessor!!.getPlayerGameInput()
+                )
+                this.setRunning(false)
+            } catch (e: Exception) {
+                this.setRunning(false)
 
-                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-                }
+                var logUtil: LogUtil = LogUtil.getInstance()!!
+
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+                logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
             }
         }
+    }
+
+    private val abRunnable: ABRunnable = PreGameSelectionRunnable(this)
 
     public constructor(
         gameCanvas: AllBinaryGameCanvas,

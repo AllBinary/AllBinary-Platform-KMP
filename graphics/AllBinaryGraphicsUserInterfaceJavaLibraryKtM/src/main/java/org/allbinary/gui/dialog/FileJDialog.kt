@@ -29,8 +29,16 @@
 import org.allbinary.thread.ARunnable
 import java.io.File
 import org.allbinary.logic.communication.log.LogUtil
+import java.awt.EventQueue
+import java.awt.Frame
+import java.awt.event.ActionEvent
+import java.awt.event.ActionListener
+import javax.swing.JDialog
+import javax.swing.JFileChooser
+import javax.swing.JFrame
+import javax.swing.WindowConstants
 
-open public class FileJDialog : javax.swing.JDialog {
+open public class FileJDialog : JDialog {
         
 companion object {
             
@@ -38,14 +46,14 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
-java.awt.EventQueue.invokeLater(object: ARunnable()
+EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
                                 
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
-FileJDialog(javax.swing.JFrame(), true).
+FileJDialog(JFrame(), true).
                             setVisible(true)
 }
 
@@ -70,7 +78,7 @@ this.initComponents()
 this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 }
 
-public constructor (parent: java.awt.Frame, modal: Boolean)                        
+public constructor (parent: Frame, modal: Boolean)                        
 
                             : super(parent, modal){
 var parent = parent
@@ -95,13 +103,13 @@ this.finishedListenerInterface= finishedListenerInterface
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.jFileChooser1= javax.swing.JFileChooser()
-setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
-this.jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
+this.jFileChooser1= JFileChooser()
+setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE)
+this.jFileChooser1!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -120,7 +128,7 @@ pack()
 }
 
 
-    open fun jFileChooser1ActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun jFileChooser1ActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -161,14 +169,14 @@ this.logUtil!!.putF("Starting Action Command: " +evt.getActionCommand(), this, "
 
     open fun getJFileChooser1()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JFileChooser{
+: JFileChooser{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.jFileChooser1
 }
 
 
-    open fun setJFileChooser1(jFileChooser1: javax.swing.JFileChooser)
+    open fun setJFileChooser1(jFileChooser1: JFileChooser)
         //nullable = true from not(false or (false and false)) = true
 {
 var jFileChooser1 = jFileChooser1
@@ -176,7 +184,7 @@ this.jFileChooser1= jFileChooser1
 }
 
 
-    private var jFileChooser1: javax.swing.JFileChooser
+    private var jFileChooser1: JFileChooser
 
 }
                 

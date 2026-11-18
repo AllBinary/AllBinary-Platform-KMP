@@ -36,6 +36,8 @@ import org.allbinary.logic.io.DataOutputStreamFactory
 import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class UniqueIdGenerator
             : Object
@@ -74,7 +76,7 @@ idData!!.writeLong(value)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     
@@ -120,7 +122,7 @@ this.newFile= AbFile.createAbFile(filePathName)!!
 
         try {
             
-    var idFile: AbFileInputStream = AbFileInputStream(this.newFile)
+    var idFile: AbFileInputStream = AbFileInputStream.createFromAbFile(this.newFile)!!
 
 idData= AbDataInputStream(idFile)
 this.id= idData!!.readLong()
@@ -139,7 +141,7 @@ idOutData!!.writeLong(this.id +1)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     

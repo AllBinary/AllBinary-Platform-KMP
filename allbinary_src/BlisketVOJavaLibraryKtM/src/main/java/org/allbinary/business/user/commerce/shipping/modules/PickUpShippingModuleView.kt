@@ -31,6 +31,9 @@ import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
+import org.w3c.dom.Document
 
 open public class PickUpShippingModuleView : PickUpShippingModule
                 , DomNodeInterface {
@@ -52,16 +55,16 @@ public constructor (){
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document?{
+: Document?{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
 
 
-    open fun toValidationInfoNode(document: org.w3c.dom.Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node?{
+: Node?{
 var document = document
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,16 +74,16 @@ var document = document
 
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document?{
+: Document?{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
 
 
-    open fun toXmlNode(document: org.w3c.dom.Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node?{
+: Node?{
 var document = document
 
         try {
@@ -96,7 +99,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode", e)

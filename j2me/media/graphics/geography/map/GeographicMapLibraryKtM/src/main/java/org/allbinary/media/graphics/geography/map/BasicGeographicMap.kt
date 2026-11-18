@@ -449,4 +449,73 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.geographicMapCellTypeFactory
     }
+
+    override fun getId()
+    // nullable = true from not(false or (false and true)) = true
+    : Integer {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getId()
+    }
+
+    override fun getName()
+    // nullable = true from not(false or (false and true)) = true
+    : String {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getName()
+    }
+
+    override fun reset()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.reset()
+    }
+
+    override fun getAllBinaryTiledLayer()
+    // nullable = true from not(false or (false and true)) = true
+    : AllBinaryTiledLayer {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getAllBinaryTiledLayer()
+    }
+
+    override fun getCellTypeFromMapCellTypeInt(
+        cellTypeId: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var cellTypeId = cellTypeId
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getCellTypeFromMapCellTypeInt(cellTypeId)
+    }
+
+    @Throws(Exception::class)
+    override fun getCellTypeAt(
+        cellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GeographicMapCellType {
+        // var cellPosition = cellPosition
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getCellTypeAt(cellPosition)
+    }
+
+    override fun getForegroundBasicColor()
+    // nullable = true from not(false or (false and true)) = true
+    : BasicColor {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getForegroundBasicColor()
+    }
+
+    override fun getBackgroundBasicColor()
+    // nullable = true from not(false or (false and true)) = true
+    : BasicColor {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBackgroundBasicColor()
+    }
 }

@@ -133,7 +133,7 @@ open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
 
         var list: BasicArrayList = BasicArrayListD()
 
-        if (text != null && text.length > 0) {
+        if (text.length > 0) {
 
             var index: Int = 0
 

@@ -19,7 +19,6 @@ import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
 import kotlin.Array
-import org.allbinary.J2MEUtil
 import org.allbinary.game.GameInfo
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.displayable.canvas.GameCommandCanvas
@@ -40,11 +39,7 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.graphics.paint.SimpleTextPaintable
-import org.allbinary.logic.ABSystemWrapper
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.string.CommonStrings
-import org.allbinary.thread.ARunnable
 import org.allbinary.thread.SecondaryThreadPool
 
 open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListener {
@@ -79,7 +74,7 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
 
     private var currentCommand: Command = this.highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
 
-    private var hasPainted: Boolean = false
+    var hasPainted: Boolean = false
 
     public constructor(
         commandListener: CommandListener,
@@ -122,8 +117,8 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
             )!!
 
         if (
-            this.highScoresHelper!!.getHighScoresArray() ==
-                NoHighScoresFactory.getInstance()!!.NO_HIGH_SCORES
+            this.highScoresHelper!!.getHighScoresArray()!!.size ==
+                NoHighScoresFactory.getInstance()!!.NO_HIGH_SCORES.size
         ) {
             this.setPaintable(this.waitPaintable)
         } else {
@@ -135,77 +130,6 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
             this.updateCommand(this.currentCommand)
             this.setPaintable(this.getHighScoresPaintable())
         }
-
-        open class HighScoreRunnable : ARunnable {
-
-            val highScoresCanvas: HighScoresCanvas
-
-            constructor(highScoresCanvas: HighScoresCanvas) {
-                // var highScoresCanvas = highScoresCanvas
-                this.highScoresCanvas = highScoresCanvas
-            }
-
-            override fun run()
-                // nullable = true from not(false or (false and true)) = true
-            {
-
-                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-                var logUtil: LogUtil = LogUtil.getInstance()!!
-
-                var highScoresCanvas: HighScoresCanvas = this.highScoresCanvas
-
-                try {
-
-                    var isHTML: Boolean = J2MEUtil.isHTML()
-
-                    if (!isHTML) {
-
-                        while (!highScoresCanvas!!.hasPainted) {}
-
-                        highScoresCanvas!!.hasPainted = false
-                    }
-
-                    var stringMaker: StringMaker = StringMaker()
-
-                    var systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
-
-                    var currentTimeMillis: Long = systemWrapper!!.currentTimeMillis()
-
-                    logUtil!!.putF(
-                        stringMaker!!
-                            .append("HighScoresCanvas - Request repaint to be sure: ")!!
-                            .appendlong(currentTimeMillis)!!
-                            .toString(),
-                        this,
-                        commonStrings!!.RUN,
-                    )
-                    highScoresCanvas!!.repaintBehavior!!.onChangeRepaint(highScoresCanvas)
-
-                    if (!isHTML) {
-
-                        while (!highScoresCanvas!!.hasPainted) {}
-                    }
-
-                    stringMaker!!.delete(0, stringMaker!!.length())
-                    logUtil!!.putF(
-                        stringMaker!!
-                            .append(
-                                "HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: "
-                            )!!
-                            .appendlong(currentTimeMillis)!!
-                            .toString(),
-                        this,
-                        commonStrings!!.RUN,
-                    )
-                    highScoresCanvas!!.executeUpdate()
-                } catch (e: Exception) {
-                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-                }
-            }
-        }
-
-        // Otherwise - statement - EmptyStmt
 
         SecondaryThreadPool.getInstance()!!.runTask(HighScoreRunnable(this))
     }

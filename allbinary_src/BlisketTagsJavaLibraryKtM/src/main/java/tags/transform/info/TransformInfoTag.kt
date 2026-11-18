@@ -35,6 +35,8 @@ import org.allbinary.logic.io.OutputTypeData
 import org.allbinary.logic.visual.transform.info.TransformInfoData
 import taghelpers.transform.info.TransformInfoRequestHelperFactory
 import tags.ModifyTag
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformInfoTag : ModifyTag {
         
@@ -180,7 +182,7 @@ this.type= value
 this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("TransformInfoTag type set: " +this.type, this, "setType")

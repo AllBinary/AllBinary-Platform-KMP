@@ -17,30 +17,42 @@ package org.allbinary.logic.io
 
 import java.io.File
 import java.io.FileInputStream
+import java.io.FileNotFoundException
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.AbFileNativeUtil
 
 open public class AbFileInputStream : FileInputStream {
 
+    companion object {
+
+        @Throws(FileNotFoundException::class)
+        open fun createFromAbFile(
+            file: AbFile
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : AbFileInputStream {
+            // var file = file
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AbFileInputStream(AbFileNativeUtil.get(file)!!.getPath())
+        }
+
+        @Throws(FileNotFoundException::class)
+        open fun createFromFile(
+            file: File
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : AbFileInputStream {
+            // var file = file
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AbFileInputStream(file.getPath())
+        }
+    }
+
     public constructor(name: String) : super(name) {
 
         var name = name
-
-        // For kotlin this is before the body of the constructor.
-
-    }
-
-    public constructor(file: AbFile) : super(AbFileNativeUtil.get(file)) {
-
-        var file = file
-
-        // For kotlin this is before the body of the constructor.
-
-    }
-
-    protected constructor(file: File) : super(file) {
-
-        var file = file
 
         // For kotlin this is before the body of the constructor.
 

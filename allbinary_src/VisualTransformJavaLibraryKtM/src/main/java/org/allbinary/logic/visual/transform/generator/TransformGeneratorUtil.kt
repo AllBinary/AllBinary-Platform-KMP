@@ -35,6 +35,8 @@ import org.allbinary.logic.visual.transform.info.TransformInfoDomNode
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.logic.visual.transform.info.objectConfig.generator.StoreFileGenerator
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformGeneratorUtil
             : Object
@@ -74,7 +76,7 @@ private constructor ()
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Generating View: " +transformInfoInterface!!.getName(), this, "generate()")
@@ -113,7 +115,7 @@ StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to generate a view", this, "generate()", e)

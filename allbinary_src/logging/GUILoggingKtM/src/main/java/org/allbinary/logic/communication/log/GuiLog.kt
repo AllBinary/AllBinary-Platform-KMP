@@ -31,6 +31,9 @@
 import java.awt
 import javax.swing
 import org.allbinary.string.CommonStrings
+import javax.swing.JLabel
+import javax.swing.JScrollPane
+import javax.swing.JTextArea
 
 open public class GuiLog
             : Object
@@ -88,7 +91,7 @@ error.getContentPane()!!.setLayout(GridLayout(1, 1))
     var y: Int = 550
 
 error.setSize(x, y)
-error.getContentPane()!!.add(javax.swing.JScrollPane(javax.swing.JTextArea(msg)))
+error.getContentPane()!!.add(JScrollPane(JTextArea(msg)))
 
                                     }
                                 
@@ -101,7 +104,7 @@ error.getContentPane()!!.add(javax.swing.JScrollPane(javax.swing.JTextArea(msg))
     var y: Int = 50
 
 error.setSize(x, y)
-error.getContentPane()!!.add(javax.swing.JScrollPane(javax.swing.JLabel(msg)))
+error.getContentPane()!!.add(JScrollPane(JLabel(msg)))
 
                                     }
                                 

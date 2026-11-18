@@ -55,7 +55,11 @@ open public class BasePathFindingInfoFactory : Object {
 
             private var finishLineId: Int
 
-            public constructor() : super() {
+            private val pathFindingInfoFactory: BasePathFindingInfoFactory
+
+            public constructor(pathFindingInfoFactory: BasePathFindingInfoFactory) : super() {
+                // var pathFindingInfoFactory = pathFindingInfoFactory
+                this.pathFindingInfoFactory = pathFindingInfoFactory
 
                 var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory =
                     geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
@@ -87,7 +91,7 @@ open public class BasePathFindingInfoFactory : Object {
 
                     if (geographicCellType == this.startLineId) {
 
-                        this@BasePathFindingInfoFactory.addStartPathFindingNode(
+                        this.pathFindingInfoFactory!!.addStartPathFindingNode(
                             pathFindingInfo,
                             cellPosition,
                         )
@@ -97,7 +101,7 @@ open public class BasePathFindingInfoFactory : Object {
 
                         if (geographicCellType == this.startLineId) {
 
-                            this@BasePathFindingInfoFactory.addEndPathFindingNode(
+                            this.pathFindingInfoFactory!!.addEndPathFindingNode(
                                 pathFindingInfo,
                                 geographicMapInterface!!
                                     .getGeographicMapCellPositionFactoryInterface()!!
@@ -112,7 +116,7 @@ open public class BasePathFindingInfoFactory : Object {
                                     ),
                             )
                         } else {
-                            this@BasePathFindingInfoFactory.addEndPathFindingNode(
+                            this.pathFindingInfoFactory!!.addEndPathFindingNode(
                                 pathFindingInfo,
                                 cellPosition,
                             )
@@ -138,24 +142,26 @@ open public class BasePathFindingInfoFactory : Object {
 
                     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-                    logUtil!!.put(
-                        StringMaker()
-                            .append(commonSeps!!.BRACKET_OPEN)!!
-                            .appendint(row)!!
-                            .append(commonSeps!!.BRACKET_CLOSE)!!
-                            .append(commonSeps!!.BRACKET_OPEN)!!
-                            .appendint(column)!!
-                            .append("] in [")!!
-                            .appendint(mapArray!!.size)!!
-                            .append(commonSeps!!.BRACKET_CLOSE)!!
-                            .append(commonSeps!!.BRACKET_OPEN)!!
-                            .appendint(mapArray[0]!!.size)!!
-                            .append(commonSeps!!.BRACKET_CLOSE)!!
-                            .toString(),
-                        this,
-                        "visit",
-                        e,
-                    )
+                    this.pathFindingInfoFactory!!
+                        .logUtil!!
+                        .put(
+                            StringMaker()
+                                .append(commonSeps!!.BRACKET_OPEN)!!
+                                .appendint(row)!!
+                                .append(commonSeps!!.BRACKET_CLOSE)!!
+                                .append(commonSeps!!.BRACKET_OPEN)!!
+                                .appendint(column)!!
+                                .append("] in [")!!
+                                .appendint(mapArray!!.size)!!
+                                .append(commonSeps!!.BRACKET_CLOSE)!!
+                                .append(commonSeps!!.BRACKET_OPEN)!!
+                                .appendint(mapArray[0]!!.size)!!
+                                .append(commonSeps!!.BRACKET_CLOSE)!!
+                                .toString(),
+                            this,
+                            "visit",
+                            e,
+                        )
 
                     throw e
                 }
@@ -164,7 +170,7 @@ open public class BasePathFindingInfoFactory : Object {
 
         geographicMapInterface!!
             .getGeographicMapCellPositionFactory()!!
-            .visit(RaceTrackGeographicMapCellPositionFactoryInitVisitor())
+            .visit(RaceTrackGeographicMapCellPositionFactoryInitVisitor(this))
     }
 
     @Throws(Exception::class)

@@ -12,6 +12,7 @@
         import kotlin.reflect.KClass
                     
         
+import javax.swing.JTree
 
 interface JTreeInterface {
         
@@ -22,7 +23,7 @@ interface JTreeInterface {
 
     open fun getActionScriptJTree()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTree
+: JTree
 
 }
                 

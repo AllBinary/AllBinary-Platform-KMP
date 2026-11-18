@@ -40,6 +40,8 @@ import org.allbinary.logic.communication.sql.AbSqlData
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjectConfig
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformInfoHttp : TransformInfo
                 , TransformInfoHttpInterface {
@@ -61,7 +63,7 @@ var crud = crud
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HashMap, PageContext, boolean)")
@@ -84,7 +86,7 @@ var pageContext = pageContext
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HttpServletRequest, HashMap, PageContext)")
@@ -109,7 +111,7 @@ var pageContext = pageContext
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HashMap, HashMap, PageContext)")
@@ -131,7 +133,7 @@ var pageContext = pageContext
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HashMap, PageContext)")
@@ -161,7 +163,7 @@ this.abContext= AbContext(parentViewOfThisTransformInfoInterface!!.getProperties
 var hashMap = hashMap
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Properties HashMap: " +hashMap!!.toString(), this, "set()")
@@ -211,7 +213,7 @@ this.setDataFile(hashMap!!.get(transformInfoData!!.DATAFILENAME) as String)
 this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF(this.log(), this, "set()")

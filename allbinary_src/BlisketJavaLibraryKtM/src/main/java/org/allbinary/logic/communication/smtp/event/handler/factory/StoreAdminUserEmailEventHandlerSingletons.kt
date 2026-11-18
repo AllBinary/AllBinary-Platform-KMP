@@ -38,6 +38,8 @@ import org.allbinary.logic.communication.smtp.event.handler.EmailEventHandlerUti
 import org.allbinary.logic.communication.smtp.event.handler.UserEmailEventHandler
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class StoreAdminUserEmailEventHandlerSingletons
             : Object
@@ -68,7 +70,7 @@ private constructor ()
         {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -88,7 +90,7 @@ var userEmailEventNameData = userEmailEventNameData
 var storeFrontInterface = storeFrontInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.GET_INSTANCE)
@@ -107,7 +109,7 @@ var storeFrontInterface = storeFrontInterface
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Creating New Named UserEmailEventHandler", this, this.commonStrings!!.GET_INSTANCE)
@@ -130,7 +132,7 @@ this.userEmailEventHandlerHashMap!!.put(userEmailEventNameData, newUserEmailEven
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Returning existing UserEmailEventHandler", this, this.commonStrings!!.GET_INSTANCE)

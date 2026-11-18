@@ -41,6 +41,9 @@ import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.AbCryptUtil
+import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AbeClassLoader : ClassLoader {
         
@@ -71,7 +74,7 @@ var key = key
                             //For kotlin this is before the body of the constructor.
                     
 this.key= key
-AbeClassLoader.PATH= org.allbinary.globals.URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
+AbeClassLoader.PATH= URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
 }
 
 
@@ -205,7 +208,7 @@ resolveClass(myClass::class.java)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logBuffer!!.logAll()
@@ -247,7 +250,7 @@ var name = name
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.put("(Before LogBuffer Output) Failure loading Encrypted: " +name +" File: " +cname, "AbeClassLoader", "loadClassBytes", e)
@@ -263,7 +266,7 @@ StreamUtil.getInstance()!!.close(`in`)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.put("(Before LogBuffer Output) Failed to Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes", e)
@@ -278,7 +281,7 @@ StreamUtil.getInstance()!!.close(`in`)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.putF("(Before LogBuffer Output) NoClassDefFoundError Failed Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes")
@@ -339,7 +342,7 @@ var resolve = resolve
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     this.logUtil!!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
@@ -351,7 +354,7 @@ var resolve = resolve
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     this.logUtil!!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
@@ -363,7 +366,7 @@ var resolve = resolve
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     this.logUtil!!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
@@ -412,7 +415,7 @@ AbeClassLoader.classes.put(name, myClass::class.java)
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     this.logUtil!!.putF("Already Loaded: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
@@ -430,7 +433,7 @@ resolveClass(myClass::class.java)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.put("Failure loading: " +name, "AbeClassLoader", this.LOAD_CLASS, e)

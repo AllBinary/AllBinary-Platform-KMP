@@ -52,41 +52,57 @@ open public class MapSelectionGameInputProcessor :
 
     private val lockedIndex: Int
 
-    private val abRunnable: ABRunnable =
-        object : ABRunnable() {
+    open public inner class MapSelectionRunnable : ABRunnable {
 
-            override fun run()
-                // nullable = true from not(false or (false and true)) = true
-            {
+        private val inputProcessor: MapSelectionGameInputProcessor
 
-                try {
-                    this.setRunning(true)
-                    SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
+        constructor(inputProcessor: MapSelectionGameInputProcessor) {
+            // var inputProcessor = inputProcessor
+            this.inputProcessor = inputProcessor
+        }
 
-                    var track: Int =
-                        preGameSelectorPaintable!!.getPreGameSelectionForm()!!.getSelectedIndex() +
-                            1
+        override fun run()
+            // nullable = true from not(false or (false and true)) = true
+        {
 
-                    var wave: Int =
-                        raceTrackGeographicMapInterfaceFactoryInterface!!.getFirstWaveWithTrack(
-                            track
-                        )
+            try {
+                this.setRunning(true)
+                SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
 
-                    gameCanvas!!.getLayerManager()!!.getGameInfo()!!.setCurrentLevel(wave)
-                    gameCanvas!!.buildGameInit(false)
-                    GameKeyEventHandler.getInstance()!!.removeListener(getPlayerGameInput())
-                    this.setRunning(false)
-                } catch (e: Exception) {
-                    this.setRunning(false)
+                var track: Int =
+                    this.inputProcessor!!
+                        .preGameSelectorPaintable!!
+                        .getPreGameSelectionForm()!!
+                        .getSelectedIndex() + 1
 
-                    var logUtil: LogUtil = LogUtil.getInstance()!!
+                var wave: Int =
+                    this.inputProcessor!!
+                        .raceTrackGeographicMapInterfaceFactoryInterface!!
+                        .getFirstWaveWithTrack(track)
 
-                    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+                this.inputProcessor!!
+                    .gameCanvas!!
+                    .getLayerManager()!!
+                    .getGameInfo()!!
+                    .setCurrentLevel(wave)
+                this.inputProcessor!!.gameCanvas!!.buildGameInit(false)
+                GameKeyEventHandler.getInstance()!!.removeListener(
+                    this.inputProcessor!!.getPlayerGameInput()
+                )
+                this.setRunning(false)
+            } catch (e: Exception) {
+                this.setRunning(false)
 
-                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-                }
+                var logUtil: LogUtil = LogUtil.getInstance()!!
+
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+                logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
             }
         }
+    }
+
+    private val abRunnable: ABRunnable = MapSelectionRunnable(this)
 
     public constructor(
         gameCanvas: AllBinaryGameCanvas,

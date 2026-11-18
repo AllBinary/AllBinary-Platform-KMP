@@ -39,6 +39,8 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class DownloadableItemView
             : Object
@@ -67,7 +69,7 @@ this.downloadableItem= downloadableItem
 var document = document
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, "toXmlNode")

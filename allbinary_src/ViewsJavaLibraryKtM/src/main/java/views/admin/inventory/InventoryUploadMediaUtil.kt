@@ -41,6 +41,8 @@ import org.allbinary.logic.visual.media.MediaData
 import org.allbinary.logic.visual.media.MediaTypeData
 import org.allbinary.logic.visual.media.MediaUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class InventoryUploadMediaUtil
             : Object
@@ -92,7 +94,7 @@ var fileName = fileName
 var mediaData = mediaData
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF("Start FileName: " +fileName, this, "saveFiles()")
@@ -148,7 +150,7 @@ stringBuffer!!.append(mediaData!!.getName())
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF("Saving Original Image: " +originalImageFile, this, "saveFiles()")
@@ -165,7 +167,7 @@ fileUtil!!.write(ByteArrayInputStream(byteArray), originalImageFile)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -191,7 +193,7 @@ this.setFileNames(fileName)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -212,7 +214,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "saveFiles()")
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF("Saving Small Image: " +this.itemInterface!!.getSmallImage(), this, "saveFiles()")
@@ -231,7 +233,7 @@ this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getLargeI
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -252,7 +254,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "saveFiles()")
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF("Saving Small Image: " +this.itemInterface!!.getSmallImage(), this, "saveFiles()")
@@ -292,7 +294,7 @@ fileUtil!!.write(ByteArrayInputStream(byteArray), largeImageFile)
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     

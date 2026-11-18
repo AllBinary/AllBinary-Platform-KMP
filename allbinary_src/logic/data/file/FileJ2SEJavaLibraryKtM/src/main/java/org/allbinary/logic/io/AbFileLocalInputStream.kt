@@ -20,7 +20,7 @@ import org.allbinary.logic.io.file.AbFileNativeUtil
 
 open public class AbFileLocalInputStream : AbFileInputStream {
 
-    public constructor(file: AbFile) : super(AbFileNativeUtil.get(file)) {
+    public constructor(file: AbFile) : super(AbFileNativeUtil.get(file)!!.getPath()) {
 
         var file = file
 

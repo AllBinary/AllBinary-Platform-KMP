@@ -33,6 +33,8 @@ import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class CategoryModifierTree : CategoryPrivateTree
                 , CategoryModifierTreeInterface {
@@ -53,7 +55,7 @@ var categoryFactoryInterface = categoryFactoryInterface
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, "CategoryModifierTree(CategoryFactoryInterface categoryFactoryInterface)")
@@ -73,7 +75,7 @@ var newChildCategoryInterface = newChildCategoryInterface
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF("Inserting", this, "insert()")
@@ -92,7 +94,7 @@ var newChildCategoryInterface = newChildCategoryInterface
 this.directory.create(directoryToBeCreatedAbPath)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF("Saving", this, "insert()")
@@ -111,7 +113,7 @@ this.save(newChildCategoryInterface)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "insert", e)
@@ -154,7 +156,7 @@ this.directory.remove(directoryToBeDeletedAbPath)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.delete, e)

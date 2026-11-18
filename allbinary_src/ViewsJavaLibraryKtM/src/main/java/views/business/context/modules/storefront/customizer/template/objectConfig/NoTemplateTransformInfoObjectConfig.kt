@@ -39,6 +39,8 @@ import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjec
 import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjectConfigData
 import org.allbinary.logic.visual.transform.template.util.TransformTemplateCustomizerUtil
 import org.w3c.dom.Document
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class NoTemplateTransformInfoObjectConfig : TransformInfoObjectConfig {
         
@@ -91,7 +93,7 @@ var objectConfigDocument = objectConfigDocument
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Initial ObjectConfig: " +docString, this, "generate()")
@@ -124,7 +126,7 @@ hashMap!!.put(VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Final ObjectConfig: " +XmlDocumentHelper.toString(newObjectConfigDocument), this, "generate()")

@@ -31,7 +31,7 @@ open public class TimeHudWidget : BasicHud {
             location: Int,
             direction: Int,
             basicColor: BasicColor,
-            timer: Timer,
+            timer: HudTimer,
         )
             // nullable =  from not(true or (false and false)) =
             : TimeHudWidget {
@@ -55,14 +55,14 @@ open public class TimeHudWidget : BasicHud {
 
     private var totalDigits: Int = 1
 
-    private val timer: Timer
+    private val timer: HudTimer
 
     public constructor(
         location: Int,
         direction: Int,
         bufferZone: Int,
         basicColor: BasicColor,
-        timer: Timer,
+        timer: HudTimer,
     ) : super(location, direction, bufferZone, basicColor) {
         // var location = location
         // var direction = direction
@@ -106,7 +106,7 @@ open public class TimeHudWidget : BasicHud {
 
     open fun getTimer()
     // nullable = true from not(false or (false and true)) = true
-    : Timer {
+    : HudTimer {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.timer

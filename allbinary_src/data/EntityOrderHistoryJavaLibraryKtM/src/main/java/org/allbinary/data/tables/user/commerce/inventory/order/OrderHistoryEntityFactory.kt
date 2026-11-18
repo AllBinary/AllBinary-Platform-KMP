@@ -28,6 +28,8 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class OrderHistoryEntityFactory
             : Object
@@ -45,7 +47,7 @@ companion object {
         try {
             
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity()
+                        return OrderHistoryEntity()
 } catch(e: Exception)
             {
 
@@ -53,7 +55,7 @@ companion object {
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, "OrderHistoryEntityFactory", commonStrings!!.GET_INSTANCE, e)

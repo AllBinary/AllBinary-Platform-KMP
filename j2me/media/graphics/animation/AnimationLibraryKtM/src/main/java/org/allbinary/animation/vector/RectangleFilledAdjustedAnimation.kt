@@ -73,4 +73,19 @@ open public class RectangleFilledAdjustedAnimation :
         var offsetY = offsetY
         this.offsetY = offsetY
     }
+
+    override fun getBasicColorP()
+    // nullable = true from not(false or (false and true)) = true
+    : BasicColor {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBasicColorP()
+    }
+
+    override fun setBasicColorP(basicColor: BasicColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
+        super.setBasicColorP(basicColor)
+    }
 }

@@ -35,6 +35,8 @@ import org.w3c.dom.Document
 import org.w3c.dom.Node
 import views.business.context.modules.storefront.customizer.CustomizerUtil
 import views.business.context.modules.storefront.customizer.StoreCustomizerComponentUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class InsertCssValidationView : CssCustomizerView
                 , ValidationComponentInterface {
@@ -73,7 +75,7 @@ var transformInfoInterface = transformInfoInterface
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Started Validation", this, this.commonStrings!!.IS_VALID)
@@ -96,7 +98,7 @@ var transformInfoInterface = transformInfoInterface
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to validate", this, this.commonStrings!!.IS_VALID, e)
@@ -126,7 +128,7 @@ var transformInfoInterface = transformInfoInterface
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
@@ -174,7 +176,7 @@ var document = document
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)
@@ -187,6 +189,17 @@ var document = document
                             throw e
 }
 
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getTransformInfoInterface()
+        //nullable = true from not(false or (false and true)) = true
+: TransformInfoInterface{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getTransformInfoInterface()
 }
 
 

@@ -35,6 +35,7 @@ import org.allbinary.graphics.j2me.workarea.canvas.CanvasDom
 import org.allbinary.math.PositionStrings
 import org.allbinary.util.BasicArrayList
 import org.w3c.dom.Node
+import org.w3c.dom.Document
 
 open public class PointsDomUtil
             : Object
@@ -83,7 +84,7 @@ var pointVector = pointVector
     var tempPointVector: BasicArrayList = PointsUtil.getInstance()!!.doTransforms(pointVector, Double(canvasDom!!.getAngle()), PointFactory.getInstance()!!.createXY(canvasDom!!.getDimension()!!.getWidth(), canvasDom!!.getDimension()!!.getHeight()))!!
 
 
-    var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!
+    var document: Document = WorkAreaJPanel.getDocument()!!
 
 
     var linesNode: Node = document.createElement(this.LINES) as Node
@@ -164,7 +165,7 @@ index++
 var point = point
 var pointName = pointName
 
-    var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!
+    var document: Document = WorkAreaJPanel.getDocument()!!
 
 
     var pointNode: Node = document.createElement(pointName) as Node

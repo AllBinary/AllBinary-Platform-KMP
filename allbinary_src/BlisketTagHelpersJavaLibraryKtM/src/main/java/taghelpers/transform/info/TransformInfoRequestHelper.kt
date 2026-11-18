@@ -35,6 +35,8 @@ import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpStoreNoManipulation
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformInfoRequestHelper : ModifyTable {
         
@@ -63,7 +65,7 @@ this.transformInfoInterface= TransformInfoHttpStoreNoManipulation(propertiesHash
 TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, "update()")
@@ -80,7 +82,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "update()", e)
@@ -109,7 +111,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
 TransformInfoEntityBuilder.getInstance()!!.insert(values)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, "insert()")
@@ -126,7 +128,7 @@ TransformInfoEntityBuilder.getInstance()!!.insert(values)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "insert()", e)
@@ -152,7 +154,7 @@ TransformInfoEntityBuilder.getInstance()!!.insert(values)
 TransformInfoEntityBuilder.getInstance()!!.delete(this.transformInfoInterface!!.getKey() as String)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, "delete()")
@@ -169,7 +171,7 @@ TransformInfoEntityBuilder.getInstance()!!.delete(this.transformInfoInterface!!.
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "delete()", e)

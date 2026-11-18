@@ -1100,4 +1100,28 @@ open public class StartCanvas :
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.gameInitializationInterfaceFactoryInterface
     }
+
+    override fun getTitle()
+    // nullable = true from not(false or (false and true)) = true
+    : String {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getTitle()
+    }
+
+    override fun isPaused()
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.isPaused()
+    }
+
+    override fun getType()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getType()
+    }
 }

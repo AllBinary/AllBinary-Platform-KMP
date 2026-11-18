@@ -45,6 +45,9 @@ import java.io.OutputStream
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AbSqlTableUtil
             : Object
@@ -135,7 +138,7 @@ var tableName = tableName
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.SAVING +tableName, this, this.METHOD_GET_OUTPUT_STREAM)
@@ -169,7 +172,7 @@ backupFile!!.createNewFile()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put("Create File", this, this.METHOD_GET_OUTPUT_STREAM, e)
@@ -216,7 +219,7 @@ stringBuffer!!.append(time)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -241,7 +244,7 @@ FileUtil.getInstance()!!.copy(path, backupAbPath)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_BACKUP_FILE, e)
@@ -328,7 +331,7 @@ var abSqlTable = abSqlTable
     var sqlStatement: String = this.sqlStrings!!.SELECT_ALL_FROM +tableName
 
 
-    var path: String = org.allbinary.globals.URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
+    var path: String = URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
 
 
     
@@ -337,7 +340,7 @@ var abSqlTable = abSqlTable
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(ERROR_CREATING +path, this, this.METHOD_BACKUP_TABLE)
@@ -392,7 +395,7 @@ stringBuffer!!.append(this.END)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.APPENDING +sqlStatementLine, this, this.METHOD_BACKUP_TABLE)
@@ -410,7 +413,7 @@ StreamUtil.getInstance()!!.close(outputStream)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put("Backup Table Failed\nSQL Statement", this, this.METHOD_BACKUP_TABLE, e)
@@ -437,7 +440,7 @@ var portion = portion
 
         try {
             
-    var path: String = org.allbinary.globals.URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
+    var path: String = URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
 
 
     var current: Int = portion.getCurrent()!!.toInt()
@@ -454,7 +457,7 @@ var portion = portion
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.ERROR_CREATING +path, this, this.METHOD_RESTORE_TABLE)
@@ -505,7 +508,7 @@ stringBuffer!!.append(this.DASH)
 stringBuffer!!.append(end)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_RESTORE_TABLE)
@@ -517,12 +520,9 @@ bufferedLineReader!!.readUpToLines(start)
     var line: String = this.stringUtil!!.EMPTY_STRING
 
 
-        while(bufferedLineReader!!.getCurrent() < end && (
-                        { line= bufferedLineReader!!.readLine()!!; line }()
-                    ) != 
-                                    null
-                                )
+        while(bufferedLineReader!!.getCurrent() < end && bufferedLineReader!!.ready())
         {
+line= bufferedLineReader!!.readLine()!!
 
     
                         if(line.length > 1)
@@ -545,7 +545,7 @@ stringBuffer!!.append(this.PORTION_RESTORED)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put("Restore Table Failed\nSQL Statement", this, this.METHOD_RESTORE_TABLE, e)

@@ -29,6 +29,7 @@
 import javax.servlet.jsp.JspTagException
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
 
 open public class ViewUnusedTag : StoreValidationTransformTag {
         
@@ -52,7 +53,7 @@ public constructor (){
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     this.setName("Validation User View")

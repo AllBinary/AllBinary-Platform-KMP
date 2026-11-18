@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
                     
         
+import org.allbinary.logic.visual.dhtml.style.css.property.CssProperty
 import org.allbinary.logic.visual.dhtml.style.css.property.CssPropertyView
 import org.w3c.dom.Node
 
@@ -33,7 +34,7 @@ open public class FontFamilyView : CssPropertyView {
         
 public constructor ()                        
 
-                            : super(FontFamilyData.getInstance()!!.VALUE){
+                            : super(CssProperty(FontFamilyData.getInstance()!!.VALUE)){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -42,7 +43,7 @@ public constructor ()
 
 public constructor (node: Node)                        
 
-                            : super(node){
+                            : super(CssProperty(node)){
 var node = node
 
 

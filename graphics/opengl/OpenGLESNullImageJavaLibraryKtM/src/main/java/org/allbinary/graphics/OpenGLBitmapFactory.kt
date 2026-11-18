@@ -3,7 +3,6 @@ package org.allbinary.graphics
 
 import java.io.IOException
 import java.io.InputStream
-import java.lang.Object
 import javax.microedition.lcdui.Image
 import org.allbinary.logic.NullUtil
 import org.allbinary.platform.graphics.PlatformBitmapBase
@@ -27,28 +26,12 @@ open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
     // Auto Generated
     public constructor() : super() {}
 
-    open public inner class Config : Object {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
-        }
-            */
-
-        val bitmapConfig: Any
-
-        public constructor(bitmapConfig: Any) : super() {
-            // var bitmapConfig = bitmapConfig
-            this.bitmapConfig = bitmapConfig
-        }
-    }
-
-    val ARGB_8888: Config = Config(NullUtil.getInstance()!!.NULL_OBJECT)
+    val ARGB_8888: OpenGLBitmapConfig = OpenGLBitmapConfig(NullUtil.getInstance()!!.NULL_OBJECT)
 
     open fun createBitmap(
         width: Int,
         height: Int,
-        config: OpenGLBitmapFactory.Config,
+        config: OpenGLBitmapConfig,
     )
         // nullable = true from not(false or (false and false)) = true
         : OpenGLBitmap {

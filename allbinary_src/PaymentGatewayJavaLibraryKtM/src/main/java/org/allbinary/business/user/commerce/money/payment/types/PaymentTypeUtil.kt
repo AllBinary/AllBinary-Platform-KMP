@@ -47,6 +47,8 @@ import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class PaymentTypeUtil
             : Object
@@ -164,7 +166,7 @@ var paymentTypeString = paymentTypeString
 var storeName = storeName
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     this.logUtil!!.putF("initDefault Payment: " +this.defaultName, this, "initDefault")
@@ -215,7 +217,7 @@ stringBuffer!!.append(this.PAYMENTGATEWAYFILEPATHSTRING)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     this.logUtil!!.putF("DefaultPaymentGatewayNodeValue: " +defaultPaymentGatewayNodeValue, this, "initDefault")
@@ -247,7 +249,7 @@ stringBuffer!!.append(this.PAYMENTGATEWAYFILEPATHSTRING)
 var storeName = storeName
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, "getDefault")

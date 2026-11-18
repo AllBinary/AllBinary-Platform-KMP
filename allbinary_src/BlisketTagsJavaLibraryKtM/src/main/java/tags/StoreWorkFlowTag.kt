@@ -35,6 +35,8 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
 import org.allbinary.logic.visual.transform.info.TransformInfoData
 import taghelpers.StoreTagWorkFlowHelperFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 //and hidden field removal
 open public class StoreWorkFlowTag : HelperTag {
         
@@ -53,7 +55,7 @@ public constructor ()
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -81,7 +83,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.v
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
@@ -106,7 +108,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.v
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
@@ -131,7 +133,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.v
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, tagStrings!!.DO_START_TAG)

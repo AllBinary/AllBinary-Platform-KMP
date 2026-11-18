@@ -29,6 +29,8 @@
 import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 //Retrieves a single order for a user
 open public class OrderHistoryFactory
             : Object
@@ -46,7 +48,7 @@ var id = id
 
         try {
             
-    var orderHistoryEntityInterface: OrderHistoryEntity = org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity()
+    var orderHistoryEntityInterface: OrderHistoryEntity = OrderHistoryEntity()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,7 +60,7 @@ var id = id
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, "OrderHistoryFactory", commonStrings!!.GET_INSTANCE, e)

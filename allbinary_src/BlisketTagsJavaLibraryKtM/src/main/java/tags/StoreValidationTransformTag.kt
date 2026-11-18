@@ -30,6 +30,8 @@ import javax.servlet.jsp.JspTagException
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class StoreValidationTransformTag : ValidationTransformTag {
         
@@ -65,7 +67,7 @@ this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.stor
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("Tag Start", this, tagStrings!!.DO_START_TAG)

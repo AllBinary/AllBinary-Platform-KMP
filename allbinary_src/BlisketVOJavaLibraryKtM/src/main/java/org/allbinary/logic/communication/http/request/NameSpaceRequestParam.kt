@@ -36,6 +36,8 @@ import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.logic.visual.dhtml.html.name.HtmlNameMathData
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class NameSpaceRequestParam
             : Object
@@ -83,7 +85,7 @@ this.value= value
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("\nSep Tokens: " +nameSpaceWithPropertiesVector!!.toString(), this, "NameSpaceRequestParam()")
@@ -117,7 +119,7 @@ list.clear()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("\nPackageName and PackageName Properties Tokens: " +nameSpaceAndPropertiesVector!!.toString(), this, "NameSpaceRequestParam()")
@@ -170,7 +172,7 @@ packageIndex++
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("NameSpace: " +this.nameSpaceVector!!.toString(), this, "NameSpaceRequestParam()")
@@ -185,7 +187,7 @@ packageIndex++
 : BasicArrayList{
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("NameSpace: " +this.nameSpaceVector!!.toString(), this, "getPackages()")
@@ -218,7 +220,7 @@ var packageIndex = packageIndex
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("Package Properties: " +packagePropertiesHashMap!!.toString(), this, "getPackagesProperties()")
@@ -236,7 +238,7 @@ var packageIndex = packageIndex
 : String{
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("\nValue: " +this.value, this, "getValue()")
@@ -305,7 +307,7 @@ list.clear()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("\nProperty Name: " +propertyName +"\nProperty Value: " +propertyValue, this, "generatePackagePropertiesHashMap()")

@@ -35,6 +35,7 @@ import javax.crypto.SecretKeyFactory
 import org.allbinary.init.crypt.jcehelper.CryptInterface
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
+import com.sun.crypto.provider.SunJCE
 
 open public class AbBasicCrypt
             : Object
@@ -76,7 +77,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 
         try {
             
-    var sunJce: Provider = com.sun.crypto.provider.SunJCE()
+    var sunJce: Provider = SunJCE()
 
 Security.addProvider(sunJce)
 

@@ -1,0 +1,42 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
+
+/* Generated Code Do Not Modify */
+package org.allbinary.game.paint.help
+
+import java.lang.Object
+import kotlin.Array
+import org.allbinary.logic.NullUtil
+import org.allbinary.logic.string.StringUtil
+
+open public class UpdateMyFontProperties : Object {
+
+    // Auto Generated
+    public constructor() : super() {}
+
+    var actionStringArray: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
+
+    var keymappingBeginWidthArray: IntArray = NullUtil.getInstance()!!.NULL_INT_ARRAY
+
+    var actionStringDeltaXArray: IntArray = NullUtil.getInstance()!!.NULL_INT_ARRAY
+
+    var inputDeltaXArray: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
+
+    var sepArray: Array<Array<String?>?> =
+        StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY_OF_ARRAYS
+
+    var sepWidthArray: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
+
+    var charHeight: Int = 0
+}

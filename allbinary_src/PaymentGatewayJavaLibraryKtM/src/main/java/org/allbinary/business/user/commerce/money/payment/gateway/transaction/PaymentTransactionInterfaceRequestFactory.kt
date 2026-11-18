@@ -51,6 +51,9 @@ import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class PaymentTransactionInterfaceRequestFactory
             : Object
@@ -98,13 +101,13 @@ var transformInfoInterface = transformInfoInterface
     var httpServletRequest: HttpServletRequest = pageContext!!.getRequest() as HttpServletRequest
 
 
-    var command: String = httpServletRequest!!.getParameter(org.allbinary.globals.GLOBALS2.ADMINCOMMAND)!!
+    var command: String = httpServletRequest!!.getParameter(GLOBALS2.ADMINCOMMAND)!!
 
 
     
                         if(command != 
                                     null
-                                 && command.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
+                                 && command.compareTo(GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
                         
                                     {
                                     
@@ -143,7 +146,7 @@ orderPaymentInfo!!.setTenderType(TenderTypeFactory.getInstance()!!.CREDITCARD.to
 orderReview!!.setPaymentInfo(orderPaymentInfo)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     this.logUtil!!.putF(orderReview!!.getId(), this, "getPaymentTransactionInterface()")
@@ -163,7 +166,7 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "getPaymentTransactionInterface()", e)
@@ -326,7 +329,7 @@ orderReview!!.setPaymentInfo(payment)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generatePaymentTransactionInterfaceFromTestData()", e)

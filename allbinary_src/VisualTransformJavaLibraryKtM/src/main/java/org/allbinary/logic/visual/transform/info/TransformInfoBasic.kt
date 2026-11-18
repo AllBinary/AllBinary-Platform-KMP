@@ -35,6 +35,7 @@ import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjectConfigInterface
 import org.w3c.dom.Document
+import org.allbinary.logic.communication.http.request.session.WeblisketSessionInterface
 //Hack class should not exist
 open public class TransformInfoBasic : AbContext
                 , TransformInfoHttpInterface {
@@ -304,6 +305,33 @@ var importUriPath = importUriPath
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
+}
+
+
+    override fun getWeblisketSession()
+        //nullable = true from not(false or (false and true)) = true
+: WeblisketSessionInterface{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getWeblisketSession()
+}
+
+
+    override fun getPageContext()
+        //nullable = true from not(false or (false and true)) = true
+: PageContext{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getPageContext()
+}
+
+
+    override fun getPropertiesHashMap()
+        //nullable = true from not(false or (false and true)) = true
+: HashMap<Any, Any>{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getPropertiesHashMap()
 }
 
 

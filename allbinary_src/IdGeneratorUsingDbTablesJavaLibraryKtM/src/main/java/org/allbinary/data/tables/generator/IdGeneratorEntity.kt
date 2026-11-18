@@ -171,6 +171,15 @@ super.updateWhere(this.NAME, hashMap!!.get(this.NAME) as String, hashMap)
 }
 
 
+    override fun deleteWhere(key: String, value: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var key = key
+    //var value = value
+super.deleteWhere(key, value)
+}
+
+
 }
                 
             

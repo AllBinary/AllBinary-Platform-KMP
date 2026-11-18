@@ -37,6 +37,8 @@ import org.allbinary.logic.visual.transform.template.customizer.bodies.BodyData
 import org.allbinary.logic.visual.transform.template.customizer.widgets.title.TitleData
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformTemplateCustomizerUtil
             : Object
@@ -128,7 +130,7 @@ hashMap!!.put(arrayOf(this.GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("RootViewName for ObjectConfig: " +rootViewName, this, "getPageNameHack")

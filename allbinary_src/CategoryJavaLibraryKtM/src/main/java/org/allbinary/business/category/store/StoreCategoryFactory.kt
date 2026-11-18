@@ -38,6 +38,8 @@ import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class StoreCategoryFactory : CategoryAbstractFactory
                 , CategoryFactoryInterface {
@@ -50,7 +52,7 @@ public constructor (transformInfoInterface: TransformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, "StoreCategoryFactory(TransformInfoInterface transformInfoInterface)")
@@ -76,7 +78,7 @@ this.transformInfoInterface= transformInfoInterface
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "getInstance(String, int)", e)
@@ -110,7 +112,7 @@ var categoryPath = categoryPath
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(String, int)", e)
@@ -147,7 +149,7 @@ var node = node
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "getInstance(String, int)", e)

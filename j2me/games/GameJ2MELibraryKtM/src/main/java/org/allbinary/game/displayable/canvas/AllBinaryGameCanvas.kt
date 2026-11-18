@@ -17,7 +17,6 @@ package org.allbinary.game.displayable.canvas
 
 import java.lang.Integer
 import java.lang.Object
-import java.lang.Runnable
 import java.lang.Thread
 import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.CommandListener
@@ -124,7 +123,6 @@ import org.allbinary.input.motion.button.TouchButtonsPaintableFactory
 import org.allbinary.input.motion.button.TouchScreenFactory
 import org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -138,7 +136,6 @@ import org.allbinary.media.audio.PrimaryPlayerQueueFactory
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
 import org.allbinary.string.CommonSeps
-import org.allbinary.string.CommonStrings
 import org.allbinary.thread.SecondaryThreadPool
 import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
@@ -2047,38 +2044,7 @@ open public class AllBinaryGameCanvas :
 
         if (autoSubmit) {
 
-            open class SaveHighScoreRunnable : Object, Runnable {
-
-                // Auto Generated
-                public constructor() : super() {}
-
-                private val progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-
-                override fun run()
-                    // nullable = true from not(false or (false and true)) = true
-                {
-
-                    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-                    try {
-
-                        if (isLast) {
-
-                            textBox!!.submit()
-                        } else {
-                            textBox!!.saveHighScore()
-                        }
-                    } catch (e: Exception) {
-
-                        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-                        logUtil!!.put(commonStrings!!.EXCEPTION, this, "run", e)
-                        this.progressCanvas!!.end()
-                    }
-                }
-            }
-
-            SecondaryThreadPool.getInstance()!!.runTask(SaveHighScoreRunnable())
+            SecondaryThreadPool.getInstance()!!.runTask(SaveHighScoreRunnable(isLast, textBox))
         }
     }
 
@@ -2546,5 +2512,21 @@ open public class AllBinaryGameCanvas :
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return AllBinaryGameCanvas.TYPE
+    }
+
+    override fun getTitle()
+    // nullable = true from not(false or (false and true)) = true
+    : String {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getTitle()
+    }
+
+    override fun isPaused()
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.isPaused()
     }
 }

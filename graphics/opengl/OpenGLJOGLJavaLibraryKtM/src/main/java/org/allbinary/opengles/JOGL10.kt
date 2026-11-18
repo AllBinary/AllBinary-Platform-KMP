@@ -27,11 +27,17 @@
                     
         
 import com.jogamp.opengl.glu.GLU
+import com.jogamp.opengl.GL
+import com.jogamp.opengl.GL2
+import java.nio.Buffer
+import java.nio.FloatBuffer
+import java.nio.IntBuffer
+import javax.microedition.khronos.opengles.GL10
 //JOGLEToKhronosGL10
 open public class JOGL10
             : Object
         
-                , javax.microedition.khronos.opengles.GL10 {
+                , GL10 {
         
 
     val RED: String = "red: "
@@ -56,28 +62,28 @@ open public class JOGL10
 
     val TARGET: String = "target: "
 
-    private val gl10: com.jogamp.opengl.GL2
+    private val gl10: GL2
 
     val glu: GLU
 
     val GL_LINE: Int
 
     val GL_QUAD_STRIP: Int
-public constructor (gl: com.jogamp.opengl.GL, gl2: com.jogamp.opengl.GL2)
+public constructor (gl: GL, gl2: GL2)
             : super()
         {
     //var gl = gl
     //var gl2 = gl2
 this.gl10= gl2
 this.glu= GLU.createGLU(this.gl10)!!
-this.GL_LINE= com.jogamp.opengl.GL2.GL_LINE
-this.GL_QUAD_STRIP= com.jogamp.opengl.GL2.GL_QUAD_STRIP
+this.GL_LINE= GL2.GL_LINE
+this.GL_QUAD_STRIP= GL2.GL_QUAD_STRIP
 }
 
 
     open fun getJOGLGL()
         //nullable = true from not(false or (false and true)) = true
-: com.jogamp.opengl.GL2{
+: GL2{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.gl10
@@ -184,7 +190,7 @@ this.gl10.glColorMask(red, green, blue, alpha)
 }
 
 
-    open fun glColorPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glColorPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var size = size
@@ -195,7 +201,7 @@ this.gl10.glColorPointer(size, type, stride, pointer)
 }
 
 
-    open fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: java.nio.Buffer)
+    open fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var target = target
@@ -210,7 +216,7 @@ this.gl10.glCompressedTexImage2D(target, level, internalformat, width, height, b
 }
 
 
-    open fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: java.nio.Buffer)
+    open fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var target = target
@@ -274,7 +280,7 @@ this.gl10.glDeleteTextures(n, textures, offset)
 }
 
 
-    open fun glDeleteTextures(n: Int, textures: java.nio.IntBuffer)
+    open fun glDeleteTextures(n: Int, textures: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var n = n
@@ -334,7 +340,7 @@ this.gl10.glDrawArrays(mode, first, count)
 }
 
 
-    open fun glDrawElements(mode: Int, count: Int, type: Int, indices: java.nio.Buffer)
+    open fun glDrawElements(mode: Int, count: Int, type: Int, indices: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var mode = mode
@@ -394,7 +400,7 @@ this.gl10.glFogfv(pname, params, offset)
 }
 
 
-    open fun glFogfv(pname: Int, params: java.nio.FloatBuffer)
+    open fun glFogfv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var pname = pname
@@ -434,7 +440,7 @@ this.gl10.glGenTextures(n, textures, offset)
 }
 
 
-    open fun glGenTextures(n: Int, textures: java.nio.IntBuffer)
+    open fun glGenTextures(n: Int, textures: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var n = n
@@ -462,7 +468,7 @@ this.gl10.glGetIntegerv(pname, params, offset)
 }
 
 
-    open fun glGetIntegerv(pname: Int, params: java.nio.IntBuffer)
+    open fun glGetIntegerv(pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var pname = pname
@@ -509,7 +515,7 @@ this.gl10.glLightModelfv(pname, params, offset)
 }
 
 
-    open fun glLightModelfv(pname: Int, params: java.nio.FloatBuffer)
+    open fun glLightModelfv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var pname = pname
@@ -539,7 +545,7 @@ this.gl10.glLightfv(light, pname, params, offset)
 }
 
 
-    open fun glLightfv(light: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glLightfv(light: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var light = light
@@ -573,7 +579,7 @@ this.gl10.glLoadMatrixf(m, offset)
 }
 
 
-    open fun glLoadMatrixf(m: java.nio.FloatBuffer)
+    open fun glLoadMatrixf(m: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var m = m
@@ -610,7 +616,7 @@ this.gl10.glMaterialfv(face, pname, params, offset)
 }
 
 
-    open fun glMaterialfv(face: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glMaterialfv(face: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var face = face
@@ -637,7 +643,7 @@ this.gl10.glMultMatrixf(m, offset)
 }
 
 
-    open fun glMultMatrixf(m: java.nio.FloatBuffer)
+    open fun glMultMatrixf(m: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var m = m
@@ -667,7 +673,7 @@ this.gl10.glNormal3f(nx, ny, nz)
 }
 
 
-    open fun glNormalPointer(type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glNormalPointer(type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var type = type
@@ -730,7 +736,7 @@ this.gl10.glPushMatrix()
 }
 
 
-    open fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: java.nio.Buffer)
+    open fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -842,7 +848,7 @@ this.gl10.glStencilOp(fail, zfail, zpass)
 }
 
 
-    open fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var size = size
@@ -874,7 +880,7 @@ this.gl10.glTexEnvfv(target, pname, params, offset)
 }
 
 
-    open fun glTexEnvfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glTexEnvfv(target: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var target = target
@@ -884,7 +890,7 @@ this.gl10.glTexEnvfv(target, pname, params)
 }
 
 
-    open fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: java.nio.Buffer)
+    open fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var target = target
@@ -920,7 +926,7 @@ this.gl10.glTexParameteri(target, pname, param)
 }
 
 
-    open fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: java.nio.Buffer)
+    open fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var target = target
@@ -946,7 +952,7 @@ this.gl10.glTranslatef(x, y, z)
 }
 
 
-    open fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 var size = size

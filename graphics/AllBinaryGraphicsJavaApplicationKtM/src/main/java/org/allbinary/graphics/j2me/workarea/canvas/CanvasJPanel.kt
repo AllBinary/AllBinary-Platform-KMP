@@ -63,11 +63,18 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Node
+import java.awt.GridLayout
+import java.awt.event.KeyEvent
+import java.awt.event.KeyListener
+import java.awt.event.MouseEvent
+import java.awt.event.MouseListener
+import java.awt.event.MouseMotionListener
+import javax.swing.JPanel
 
-open public class CanvasJPanel : javax.swing.JPanel
-                , java.awt.event.MouseListener
-                , java.awt.event.MouseMotionListener
-                , java.awt.event.KeyListener
+open public class CanvasJPanel : JPanel
+                , MouseListener
+                , MouseMotionListener
+                , KeyListener
                 , MyGraphicItemEventListener {
         
 companion object {
@@ -220,7 +227,7 @@ MyGraphicItemEventService.addListener(this)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-setLayout(java.awt.GridLayout(1, 1))
+setLayout(GridLayout(1, 1))
 }
 
 
@@ -855,7 +862,7 @@ this.grid.isChanged= true
 }
 
 
-    open fun mouseClicked(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseClicked(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -901,7 +908,7 @@ this.workAreaJTreeJPanel!!.repaint()
 }
 
 
-    open fun mouseEntered(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseEntered(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -909,7 +916,7 @@ StatusFactory.getInstance()!!.setStatusNoLog(this.logMouseEvent(mouseEvent))
 }
 
 
-    open fun mouseExited(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseExited(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -917,7 +924,7 @@ StatusFactory.getInstance()!!.setStatusNoLog(this.logMouseEvent(mouseEvent))
 }
 
 
-    open fun mousePressed(mouseEvent: java.awt.event.MouseEvent)
+    open fun mousePressed(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -942,7 +949,7 @@ this.repaint()
 }
 
 
-    open fun mouseReleased(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseReleased(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -967,7 +974,7 @@ this.repaint()
 }
 
 
-    open fun mouseDragged(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseDragged(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -992,7 +999,7 @@ this.repaint()
 }
 
 
-    open fun mouseMoved(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseMoved(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseEvent = mouseEvent
@@ -1017,7 +1024,7 @@ this.repaint()
 }
 
 
-    open fun logMouseEvent(mouseEvent: java.awt.event.MouseEvent)
+    open fun logMouseEvent(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var mouseEvent = mouseEvent
@@ -1035,7 +1042,7 @@ stringBuffer!!.appendint((mouseEvent!!.getY() /this.getYPixelsPerWorkAreaPixel()
 }
 
 
-    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
+    open fun keyPressed(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent
@@ -1141,14 +1148,14 @@ this.repaint()
 }
 
 
-    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
+    open fun keyReleased(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent
 }
 
 
-    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
+    open fun keyTyped(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyEvent = keyEvent

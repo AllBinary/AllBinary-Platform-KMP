@@ -34,6 +34,9 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
 import taghelpers.OrderHistoryHelperFactory
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class OrderHistoryTag : StoreValidationTransformTag {
         
@@ -92,7 +95,7 @@ this.status= value
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)
@@ -135,7 +138,7 @@ pageContext!!.getOut()!!.print(this.setOrderStatus())
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     

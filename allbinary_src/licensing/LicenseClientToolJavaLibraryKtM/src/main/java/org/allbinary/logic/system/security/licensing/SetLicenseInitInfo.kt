@@ -145,29 +145,9 @@ licenseInitInfo!!.clearServers()
     var lineNumberReader: LineNumberReader = LineNumberReader(reader)
 
 
-        while(true)
+        while(lineNumberReader!!.ready())
         {
-
-    var line: String = lineNumberReader!!.readLine()!!
-
-
-    
-                        if(line != 
-                                    null
-                                )
-                        
-                                    {
-                                    licenseInitInfo!!.addServer(line)
-
-                                    }
-                                
-                        else {
-                            break;
-
-                    
-
-                        }
-                            
+licenseInitInfo!!.addServer(lineNumberReader!!.readLine())
 }
 
 LicenseInitInfoUtil.getInstance()!!.write(licenseInitInfo)

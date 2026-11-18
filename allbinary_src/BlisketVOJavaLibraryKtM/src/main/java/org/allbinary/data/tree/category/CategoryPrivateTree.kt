@@ -35,6 +35,8 @@ import org.allbinary.logic.control.crypt.file.CryptFileWriter
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class CategoryPrivateTree
             : Object
@@ -50,7 +52,7 @@ public constructor (categoryFactoryInterface: CategoryFactoryInterface)
 var categoryFactoryInterface = categoryFactoryInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     
@@ -73,7 +75,7 @@ this.categoryFactoryInterface= categoryFactoryInterface
 var categoryInterface = categoryInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Saving Category File: " +categoryInterface!!.getFilePath(), this, "save()")
@@ -90,7 +92,7 @@ var categoryInterface = categoryInterface
 cryptFileWriter!!.write(categoryInterface!!.getFilePath(), document)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("end", this, "save()")
@@ -122,7 +124,7 @@ var categoryInterface = categoryInterface
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Removed: " +categoryInterface!!.getFilePath(), this, "delete(CategoryInterface)")
@@ -138,7 +140,7 @@ var categoryInterface = categoryInterface
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Not a leaf unable to remove", this, "delete(CategoryInterface)")

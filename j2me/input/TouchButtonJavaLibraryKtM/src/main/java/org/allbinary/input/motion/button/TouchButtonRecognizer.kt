@@ -32,7 +32,7 @@ open public class TouchButtonRecognizer : Object {
     private val rectangleCollisionUtil: RectangleCollisionUtil =
         RectangleCollisionUtil.getInstance()!!
 
-    private val upGameKeyEventHandler: UpGameKeyEventHandler = UpGameKeyEventHandler.getInstance()!!
+    val upGameKeyEventHandler: UpGameKeyEventHandler = UpGameKeyEventHandler.getInstance()!!
 
     private val downGameKeyEventHandler: DownGameKeyEventHandler =
         DownGameKeyEventHandler.getInstance()!!
@@ -40,94 +40,8 @@ open public class TouchButtonRecognizer : Object {
     private var lastPressedTouchButtonInput: TouchButtonInput =
         BasicTouchInputFactory.getInstance()!!.NONE
 
-    private val currentlyPressedTouchButtonSingleton: CurrentlyPressedTouchButtonSingleton =
+    val currentlyPressedTouchButtonSingleton: CurrentlyPressedTouchButtonSingleton =
         CurrentlyPressedTouchButtonSingleton.getInstance()!!
-
-    // CurrentlyPressedTouchButtonSingletonDebug.getInstance();
-    open public inner class ReleaseHelper : Object {
-
-        val touchButtonRecognizer: TouchButtonRecognizer
-
-        public constructor(touchButtonRecognizer: TouchButtonRecognizer) : super() {
-            // var touchButtonRecognizer = touchButtonRecognizer
-            this.touchButtonRecognizer = touchButtonRecognizer
-        }
-
-        @Throws(Exception::class)
-        open fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
-            // nullable = true from not(false or (false and false)) = true
-        {
-            // var touchButtonInput = touchButtonInput
-            // var deviceId = deviceId
-
-            var nextTouchButtonInput: TouchButtonInput
-
-            var gameKeyEvent: GameKeyEvent
-
-            for (index in
-                this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.size() -
-                    1 downTo 0) {
-
-                nextTouchButtonInput =
-                    this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)!!
-                gameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
-                this.touchButtonRecognizer!!.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-                this.touchButtonRecognizer!!
-                    .upGameKeyEventHandler!!
-                    .getInstanceForDevice(deviceId)!!
-                    .fireEvent(gameKeyEvent)
-                this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.removeAt(index)
-            }
-        }
-    }
-
-    open public inner class MultitouchReleaseHelper : ReleaseHelper {
-
-        public constructor(
-            touchButtonRecognizer: TouchButtonRecognizer
-        ) : super(touchButtonRecognizer) {
-            // var touchButtonRecognizer = touchButtonRecognizer
-
-            // For kotlin this is before the body of the constructor.
-
-        }
-
-        @Throws(Exception::class)
-        override fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
-            // nullable = true from not(false or (false and false)) = true
-        {
-            // var touchButtonInput = touchButtonInput
-            // var deviceId = deviceId
-
-            var cancelTouchButtonInput: TouchButtonInput =
-                CancelTouchButtonInputFactory.getInstance()!!.getCancel(touchButtonInput)!!
-
-            var nextTouchButtonInput: TouchButtonInput
-
-            var gameKeyEvent: GameKeyEvent
-
-            for (index in
-                this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.size() -
-                    1 downTo 0) {
-
-                nextTouchButtonInput =
-                    this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)!!
-
-                if (cancelTouchButtonInput == nextTouchButtonInput) {
-
-                    gameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
-                    this.touchButtonRecognizer!!.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-                    this.touchButtonRecognizer!!
-                        .upGameKeyEventHandler!!
-                        .getInstanceForDevice(deviceId)!!
-                        .fireEvent(gameKeyEvent)
-                    this.touchButtonRecognizer!!
-                        .currentlyPressedTouchButtonSingleton!!
-                        .removeAt(index)
-                }
-            }
-        }
-    }
 
     private val releaseHelper: ReleaseHelper
 

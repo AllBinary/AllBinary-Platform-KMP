@@ -131,7 +131,7 @@ open public class StringValidationUtil : Object {
         var min = min
         var max = max
 
-        if (value == null || value.length < min || value.length > max) {
+        if (value.length < min || value.length > max) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return false
@@ -179,7 +179,7 @@ open public class StringValidationUtil : Object {
         var min = min
         var max = max
 
-        if (value != null) {
+        if (value.length > 0) {
 
             if (value.length < min || value.length > max) {
 
@@ -203,7 +203,7 @@ open public class StringValidationUtil : Object {
         var min = min
         var max = max
 
-        if (value != null) {
+        if (value.length > 0) {
 
             if (
                 this.tsUtil!!.compareTo(value, this.stringUtil!!.NULL_STRING) == 0 ||
@@ -234,8 +234,7 @@ open public class StringValidationUtil : Object {
         var string = string
 
         if (
-            string != null &&
-                this.tsUtil!!.compareTo(string, this.stringUtil!!.NULL_STRING) != 0 &&
+            this.tsUtil!!.compareTo(string, this.stringUtil!!.NULL_STRING) != 0 &&
                 this.tsUtil!!.compareTo(string, this.stringUtil!!.EMPTY_STRING) != 0
         ) {
 

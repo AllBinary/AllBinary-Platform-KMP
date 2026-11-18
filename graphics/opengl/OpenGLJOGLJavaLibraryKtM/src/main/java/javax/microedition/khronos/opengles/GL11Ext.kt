@@ -12,8 +12,12 @@
         import kotlin.reflect.KClass
                     
         
+import java.nio.Buffer
+import java.nio.FloatBuffer
+import java.nio.IntBuffer
+import java.nio.ShortBuffer
 
-interface GL11Ext : javax.microedition.khronos.opengles.GL {
+interface GL11Ext : GL {
         
 companion object {
             
@@ -67,7 +71,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glDrawTexfvOES(coords: java.nio.FloatBuffer)
+    open fun glDrawTexfvOES(coords: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -79,7 +83,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glDrawTexivOES(coords: java.nio.IntBuffer)
+    open fun glDrawTexivOES(coords: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -91,7 +95,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glDrawTexsvOES(coords: java.nio.ShortBuffer)
+    open fun glDrawTexsvOES(coords: ShortBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -103,7 +107,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glDrawTexxvOES(coords: java.nio.IntBuffer)
+    open fun glDrawTexxvOES(coords: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -119,7 +123,7 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 
 
-    open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -127,7 +131,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glWeightPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glWeightPointerOES(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 

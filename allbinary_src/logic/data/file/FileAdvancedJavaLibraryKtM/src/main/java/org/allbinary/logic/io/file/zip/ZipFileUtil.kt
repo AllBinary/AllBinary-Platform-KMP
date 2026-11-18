@@ -140,7 +140,7 @@ stringBuffer!!.append(file.getPath())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "create()")
 
         try {
-            fileInputStream= AbFileInputStream(file)
+            fileInputStream= AbFileInputStream.createFromAbFile(file)!!
 outputStream!!.putNextEntry(ZipEntry(file.getPath()))
 streamUtil!!.get(fileInputStream, outputStream, byteArray)
 outputStream!!.closeEntry()
@@ -183,7 +183,7 @@ var fileName = fileName
 
 
         try {
-            inputStream= ZipInputStream(AbFileInputStream(zipFile))
+            inputStream= ZipInputStream(AbFileInputStream.createFromAbFile(zipFile))
 
     var zipEntry: ZipEntry
 

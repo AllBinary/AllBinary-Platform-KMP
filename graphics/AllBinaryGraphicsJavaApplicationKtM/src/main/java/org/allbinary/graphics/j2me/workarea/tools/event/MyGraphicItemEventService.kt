@@ -26,6 +26,8 @@
         import kotlin.reflect.KClass
                     
         
+import java.util.EventListener
+import javax.swing.event.EventListenerList
 
 open public class MyGraphicItemEventService
             : Object
@@ -33,7 +35,7 @@ open public class MyGraphicItemEventService
         
 companion object {
             
-    private var listenerList: javax.swing.event.EventListenerList = javax.swing.event.EventListenerList()
+    private var listenerList: EventListenerList = EventListenerList()
 
     var DELETE: String = "delete"
 
@@ -50,7 +52,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener
-MyGraphicItemEventService.listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListener)
+MyGraphicItemEventService.listenerList!!.add(listener::class as Class<*><*> as Class<EventListener><*>, listener as EventListener)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -59,7 +61,7 @@ MyGraphicItemEventService.listenerList!!.add(listener::class as Class<*>, listen
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener
-MyGraphicItemEventService.listenerList!!.remove(listener::class as Class<*>, listener as java.util.EventListener)
+MyGraphicItemEventService.listenerList!!.remove(listener::class as Class<*><*> as Class<EventListener><*>, listener as EventListener)
 }
 
 

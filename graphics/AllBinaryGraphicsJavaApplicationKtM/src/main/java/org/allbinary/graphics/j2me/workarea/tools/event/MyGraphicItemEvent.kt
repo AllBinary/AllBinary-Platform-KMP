@@ -27,8 +27,9 @@
                     
         
 import javax.swing.tree.MutableTreeNode
+import java.util.EventObject
 
-open public class MyGraphicItemEvent : java.util.EventObject {
+open public class MyGraphicItemEvent : EventObject {
         
 public constructor (source: Any)                        
 

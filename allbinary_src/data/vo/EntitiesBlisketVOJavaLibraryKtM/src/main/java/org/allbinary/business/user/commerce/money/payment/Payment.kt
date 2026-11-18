@@ -38,6 +38,7 @@ import org.allbinary.logic.control.crypt.SuperCrypt
 import org.allbinary.logic.string.StringUtil
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import org.allbinary.business.user.commerce.money.payment.types.CreditCardType
 
 open public class Payment
             : Object
@@ -211,7 +212,7 @@ public constructor ()
                                 
 
     
-                        if(this.number.length > org.allbinary.business.user.commerce.money.payment.types.CreditCardType.MAXLEN)
+                        if(this.number.length > CreditCardType.MAXLEN)
                         
                                     {
                                     

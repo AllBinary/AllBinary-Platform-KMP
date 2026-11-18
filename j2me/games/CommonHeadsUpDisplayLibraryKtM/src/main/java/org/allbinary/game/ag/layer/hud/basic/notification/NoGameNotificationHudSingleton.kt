@@ -17,7 +17,6 @@ package org.allbinary.game.ag.layer.hud.basic.notification
 
 import java.lang.Object
 import org.allbinary.game.graphics.hud.BasicHudFactory
-import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -46,25 +45,6 @@ open public class NoGameNotificationHudSingleton : Object {
         try {
 
             var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
-
-            open class NoGameGameNotificationHud : GameNotificationHud {
-
-                constructor() :
-                    super(
-                        basicHudFactory!!.TOPCENTER,
-                        basicHudFactory!!.HORIZONTAL,
-                        2,
-                        BasicColorFactory.getInstance()!!.RED,
-                    ) {
-
-                    // For kotlin this is before the body of the constructor.
-
-                    this.updateMaxWidth = 40
-                    this.updateMaxHeight = 14
-                }
-            }
-
-            // Otherwise - statement - EmptyStmt
 
             this.gameNotificationHud = NoGameGameNotificationHud()
         } catch (e: Exception) {

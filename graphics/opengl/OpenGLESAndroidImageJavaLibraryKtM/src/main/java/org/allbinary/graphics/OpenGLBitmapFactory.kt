@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import java.io.IOException
 import java.io.InputStream
-import java.lang.Object
 import javax.microedition.lcdui.Image
 import org.allbinary.platform.graphics.PlatformBitmapBase
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
@@ -29,28 +28,12 @@ open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
     // Auto Generated
     public constructor() : super() {}
 
-    open public inner class Config : Object {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
-        }
-            */
-
-        val bitmapConfig: Bitmap.Config
-
-        constructor(bitmapConfig: Bitmap.Config) : super() {
-            // var bitmapConfig = bitmapConfig
-            this.bitmapConfig = bitmapConfig
-        }
-    }
-
-    val ARGB_8888: Config = Config(Bitmap.Config.ARGB_8888)
+    val ARGB_8888: OpenGLBitmapConfig = OpenGLBitmapConfig(Bitmap.Config.ARGB_8888)
 
     open fun createBitmap(
         width: Int,
         height: Int,
-        config: OpenGLBitmapFactory.Config,
+        config: OpenGLBitmapConfig,
     )
         // nullable = true from not(false or (false and false)) = true
         : OpenGLBitmap {

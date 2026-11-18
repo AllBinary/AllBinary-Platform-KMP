@@ -36,6 +36,8 @@ import org.allbinary.logic.system.security.licensing.ServiceClientInformationInt
 import org.allbinary.logic.visual.transform.AbTransformer
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import views.compound.objectConfig.CompoundContextTransformInfoObjectConfig
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class CompoundTransform : AbTransformer {
         
@@ -57,7 +59,7 @@ this.setURIResolver(StoreUriResolver(this.getTransformInfoInterface(), this.getU
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("\nObjectConfig: \n" +objectConfig!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)

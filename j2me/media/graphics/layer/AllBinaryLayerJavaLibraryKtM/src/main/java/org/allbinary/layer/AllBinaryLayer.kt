@@ -70,18 +70,12 @@ open public class AllBinaryLayer : Layer, LayerInterface {
 
         var localName: String
 
-        if (name == null) {
-
-            localName = this::class.toString()!! !!
-        } else {
-            localName =
-                StringMaker()
-                    .append(name)!!
-                    .append(CommonSeps.getInstance()!!.COLON)!!
-                    .append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(this)))!!
-                    .toString()!!
-        }
-
+        localName =
+            StringMaker()
+                .append(name)!!
+                .append(CommonSeps.getInstance()!!.COLON)!!
+                .append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(this)))!!
+                .toString()!!
         this.name = localName
 
         var point: GPoint = rectangle.getPoint()!!
@@ -91,6 +85,86 @@ open public class AllBinaryLayer : Layer, LayerInterface {
         this.setHalfHeight((this.getHeight() shr 1))
         this.viewPosition = viewPosition
         this.viewPosition!!.setAllbinaryLayer(this)
+    }
+
+    override fun setPosition(x: Int, y: Int, z: Int)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var x = x
+        // var y = y
+        // var z = z
+        super.setPosition(x, y, z)
+    }
+
+    override fun moveDXYZ(dx: Int, dy: Int, dz: Int)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var dx = dx
+        // var dy = dy
+        // var dz = dz
+        super.moveDXYZ(dx, dy, dz)
+    }
+
+    override fun getXP()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getXP()
+    }
+
+    override fun getYP()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getYP()
+    }
+
+    override fun getZP()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getZP()
+    }
+
+    override fun getWidth()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getWidth()
+    }
+
+    override fun getHeight()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getHeight()
+    }
+
+    override fun setVisible(visible: Boolean)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var visible = visible
+        super.setVisible(visible)
+    }
+
+    override fun isVisible()
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.isVisible()
+    }
+
+    override fun paint(graphics: Graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        super.paint(graphics)
     }
 
     @Throws(Exception::class)
@@ -272,19 +346,19 @@ open public class AllBinaryLayer : Layer, LayerInterface {
         stringBuffer!!.appendint(this.getType())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(positionStrings!!.X_LABEL)
-        stringBuffer!!.appendint(this.getXP().toInt())
+        stringBuffer!!.appendint(this.getXP())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(positionStrings!!.Y_LABEL)
-        stringBuffer!!.appendint(this.getYP().toInt())
+        stringBuffer!!.appendint(this.getYP())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(positionStrings!!.Z_LABEL)
-        stringBuffer!!.appendint(this.getZP().toInt())
+        stringBuffer!!.appendint(this.getZP())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-        stringBuffer!!.appendint(this.getWidth().toInt())
+        stringBuffer!!.appendint(this.getWidth())
         stringBuffer!!.append(commonSeps!!.SPACE)
         stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-        stringBuffer!!.appendint(this.getHeight().toInt())
+        stringBuffer!!.appendint(this.getHeight())
     }
 
     override fun toString()

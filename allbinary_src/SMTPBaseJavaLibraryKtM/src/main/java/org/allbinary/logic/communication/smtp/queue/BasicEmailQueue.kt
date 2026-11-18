@@ -30,6 +30,8 @@ import javax.mail.Transport
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.smtp.EmailInterface
 import org.allbinary.logic.util.queue.BasicQueue
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class BasicEmailQueue : BasicQueue
                 , EmailQueueInterface {
@@ -165,7 +167,7 @@ var emailInterface = emailInterface
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Sending: " +emailInterface!!.log(), this, "send")
@@ -175,7 +177,7 @@ var emailInterface = emailInterface
 Transport.send(emailInterface!!.getMimeMessage())
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("Email Send Debug: " +emailInterface!!.getDebugInfo(), this, "send")
@@ -189,7 +191,7 @@ Transport.send(emailInterface!!.getMimeMessage())
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.put("Failed Email Send Debug: " +emailInterface!!.getDebugInfo(), this, "send", e)

@@ -29,6 +29,8 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.smtp.event.EmailEvent
 import org.allbinary.logic.communication.smtp.event.UserEmailEventListenerInterface
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class LogUserEmailEventListenerModule
             : Object
@@ -51,7 +53,7 @@ public constructor ()
 var userEmailInfoEvent = userEmailInfoEvent
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     

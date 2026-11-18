@@ -41,6 +41,7 @@ import org.eclipse.swt.events.PaintListener
 import org.eclipse.swt.graphics.Transform
 import org.eclipse.swt.widgets.Display
 import org.microemu.app.BareMain
+import org.eclipse.swt.graphics.Image
 
 open public class ImageUtil
             : Object
@@ -86,7 +87,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 
     open fun create(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var width = width
     //var height = height
 
@@ -94,15 +95,15 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org.eclipse.swt.graphics.Image(display, width, height)
+                        return Image(display, width, height)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, percent: Int, scale: Boolean)
+    open fun createBufferedImage(bufferedImageArray: Array<Image?>, percent: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>{
+: Array<Image?>{
     //var bufferedImageArray = bufferedImageArray
     //var percent = percent
     //var scale = scale
@@ -111,10 +112,10 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
                 
 
 
-    var scaledBufferedImageArray: Array<org.eclipse.swt.graphics.Image?> = arrayOfNulls(size)
+    var scaledBufferedImageArray: Array<Image?> = arrayOfNulls(size)
 
 
-    var bufferedImage: org.eclipse.swt.graphics.Image
+    var bufferedImage: Image
 
 
     var imageData: ImageData
@@ -145,9 +146,9 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWid
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage2(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, percent: Float, scale: Boolean)
+    open fun createBufferedImage2(bufferedImageArray: Array<Image?>, percent: Float, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>{
+: Array<Image?>{
     //var bufferedImageArray = bufferedImageArray
     //var percent = percent
     //var scale = scale
@@ -156,10 +157,10 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWid
                 
 
 
-    var scaledBufferedImageArray: Array<org.eclipse.swt.graphics.Image?> = arrayOfNulls(size)
+    var scaledBufferedImageArray: Array<Image?> = arrayOfNulls(size)
 
 
-    var bufferedImage: org.eclipse.swt.graphics.Image
+    var bufferedImage: Image
 
 
     var imageData: ImageData
@@ -190,9 +191,9 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWid
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage3(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, width: Int, height: Int, scale: Boolean)
+    open fun createBufferedImage3(bufferedImageArray: Array<Image?>, width: Int, height: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>{
+: Array<Image?>{
     //var bufferedImageArray = bufferedImageArray
     //var width = width
     //var height = height
@@ -202,7 +203,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWid
                 
 
 
-    var scaledBufferedImageArray: Array<org.eclipse.swt.graphics.Image?> = arrayOfNulls(size)
+    var scaledBufferedImageArray: Array<Image?> = arrayOfNulls(size)
 
 
 
@@ -222,9 +223,9 @@ scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImageArray[in
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage4(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int)
+    open fun createBufferedImage4(bufferedImage: Image, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var bufferedImage = bufferedImage
     //var newWidth = newWidth
 var newHeight = newHeight
@@ -236,9 +237,9 @@ var newHeight = newHeight
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage5(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean)
+    open fun createBufferedImage5(bufferedImage: Image, newWidth: Int, newHeight: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var bufferedImage = bufferedImage
     //var newWidth = newWidth
 var newHeight = newHeight
@@ -251,9 +252,9 @@ var newHeight = newHeight
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage6(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
+    open fun createBufferedImage6(bufferedImage: Image, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image{
+: Image{
     //var bufferedImage = bufferedImage
     //var newWidth = newWidth
 var newHeight = newHeight
@@ -317,7 +318,7 @@ this.logUtil!!.putF(StringMaker().
                                     }
                                 
 
-    var newBufferedImage: org.eclipse.swt.graphics.Image = org.eclipse.swt.graphics.Image(BareMain.shell.getDisplay(), newWidth, newHeight)
+    var newBufferedImage: Image = Image(BareMain.shell.getDisplay(), newWidth, newHeight)
 
 
     var gc: GC = GC(newBufferedImage)
@@ -338,7 +339,7 @@ gc.dispose()
 }
 
 
-    open fun drawTransformedImage(image: org.eclipse.swt.graphics.Image, parent: Composite, dx: Int, dy: Int, width: Int, height: Int)
+    open fun drawTransformedImage(image: Image, parent: Composite, dx: Int, dy: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Canvas{
     //var image = image
@@ -378,7 +379,7 @@ gc.drawImage(image, 0, 0, image.getBounds()!!.width, image.getBounds()!!.height,
 }
 
 
-    open fun toString(bufferedImage: org.eclipse.swt.graphics.Image)
+    open fun toString(bufferedImage: Image)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var bufferedImage = bufferedImage

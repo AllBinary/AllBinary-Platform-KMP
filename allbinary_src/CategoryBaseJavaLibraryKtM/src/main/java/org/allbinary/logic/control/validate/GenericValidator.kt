@@ -44,7 +44,7 @@ public constructor (){
 }
 
 
-    open fun toValidationInfoNode(document: org.w3c.dom.Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node?{
 var document = document

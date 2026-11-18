@@ -33,6 +33,9 @@ import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class PaymentProcessTag : StoreValidationTransformTag {
         
@@ -71,7 +74,7 @@ public constructor (){
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
                                     this.logUtil!!.put("LicensingException", this, this.commonStrings!!.PROCESS, e)
@@ -87,7 +90,7 @@ public constructor (){
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
@@ -112,13 +115,13 @@ public constructor (){
         try {
             
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0 || this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDERANDEVALBODY) == 0 || this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0 || this.getCommand()!!.compareTo(GLOBALS2.AUTHORIZEORDERANDEVALBODY) == 0 || this.getCommand()!!.compareTo(GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(this.process() +"<br />")
 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)
                         
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.SKIP_BODY

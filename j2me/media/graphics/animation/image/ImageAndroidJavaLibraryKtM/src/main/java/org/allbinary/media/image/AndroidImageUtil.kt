@@ -50,7 +50,7 @@ open public class AndroidImageUtil : Object {
         // var paint = paint
         bitmap.eraseColor(Color.TRANSPARENT)
 
-        var canvas: Canvas = android.graphics.Canvas()
+        var canvas: Canvas = Canvas()
 
         canvas.setBitmap(bitmap)
         canvas.drawBitmap(originalBitmap, 0.0f, 0.0f, paint)

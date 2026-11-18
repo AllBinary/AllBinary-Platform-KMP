@@ -43,6 +43,8 @@ import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntit
 import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntityInterface
 import org.allbinary.logic.communication.http.request.session.WeblisketSession
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class OrderHistoryHelper : TagHelper {
         
@@ -187,7 +189,7 @@ orderHistoryEntityInterface!!.setStatus(this.id, this.newStatus)
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     this.logUtil!!.putF(success, this, "setOrderStatus()")
@@ -204,7 +206,7 @@ orderHistoryEntityInterface!!.setStatus(this.id, this.newStatus)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)

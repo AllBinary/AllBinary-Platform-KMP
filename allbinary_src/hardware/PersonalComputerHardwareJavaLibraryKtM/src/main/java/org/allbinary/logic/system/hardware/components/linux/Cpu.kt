@@ -167,9 +167,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
     var nextLine: String = lineNumberReader!!.readLine()!!
 
 
-        while(lineNumberReader != 
-                                    null
-                                 && nextLine != 
+        while(nextLine != 
                                     null
                                 )
         {

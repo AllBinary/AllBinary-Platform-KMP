@@ -30,6 +30,8 @@ import java.util.HashMap
 import javax.mail.internet.MimeMessage
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AbEmail
             : Object
@@ -50,7 +52,7 @@ var htmlAttachment = htmlAttachment
 var contentBase = contentBase
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     this.email= Email(from, to, subject, server, textBody, htmlAttachment, contentBase, true)

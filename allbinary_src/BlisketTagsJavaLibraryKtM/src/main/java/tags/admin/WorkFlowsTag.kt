@@ -29,6 +29,7 @@
 import javax.servlet.jsp.JspTagException
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
 
 open public class WorkFlowsTag : StoreValidationTransformTag {
         
@@ -52,7 +53,7 @@ public constructor (){
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.NEW) == 0)
                         
                                     {
                                     this.setName("New WorkFlow View")
@@ -72,7 +73,7 @@ this.setObjectFile("views.admin.workflow.AddValidationView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     this.setName("Validation WorkFlow View")
@@ -82,7 +83,7 @@ this.setObjectFile("views.admin.workflow.WorkflowsValidationView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.EDIT) == 0)
                         
                                     {
                                     this.setName("Validation WorkFlow View")
@@ -112,7 +113,7 @@ this.setObjectFile("views.admin.workflow.DeleteValidationView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.BACKUP) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.BACKUP) == 0)
                         
                                     {
                                     
@@ -124,7 +125,7 @@ this.setObjectFile("views.admin.workflow.DeleteValidationView")
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.RESTORE) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.RESTORE) == 0)
                         
                                     {
                                     

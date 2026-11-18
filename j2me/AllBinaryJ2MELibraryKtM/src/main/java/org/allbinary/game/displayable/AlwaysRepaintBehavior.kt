@@ -20,9 +20,6 @@ import javax.microedition.lcdui.Canvas
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
-import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
-import org.allbinary.thread.ARunnable
 
 open public class AlwaysRepaintBehavior : RepaintBehavior {
 
@@ -58,34 +55,7 @@ open public class AlwaysRepaintBehavior : RepaintBehavior {
             DisplayInfoSingleton.getInstance()!!.process()
         } else {
 
-            var thread: Thread =
-                Thread(
-                    object : ARunnable() {
-
-                        override fun run()
-                            // nullable = true from not(false or (false and true)) = true
-                        {
-
-                            try {
-                                canvas.repaint()
-                                DisplayInfoSingleton.getInstance()!!.process()
-                            } catch (e: Exception) {
-
-                                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-                                var logUtil: LogUtil = LogUtil.getInstance()!!
-
-                                logUtil!!.put(
-                                    commonStrings!!.EXCEPTION,
-                                    this,
-                                    commonStrings!!.RUN,
-                                    e,
-                                )
-                            }
-                        }
-                    },
-                    this.NAME,
-                )
+            var thread: Thread = Thread(RepaintRunnable(canvas), this.NAME)
 
             thread.start()
         }

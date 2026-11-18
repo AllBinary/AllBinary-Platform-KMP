@@ -75,7 +75,7 @@ private constructor ()
 
 
         try {
-            inputStream= AbFileInputStream(file)
+            inputStream= AbFileInputStream.createFromAbFile(file)!!
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)

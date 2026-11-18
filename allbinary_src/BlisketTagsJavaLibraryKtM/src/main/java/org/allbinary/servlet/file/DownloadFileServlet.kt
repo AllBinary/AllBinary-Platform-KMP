@@ -47,6 +47,8 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.servlet.BlisketServletUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class DownloadFileServlet : HttpServlet {
         
@@ -197,7 +199,7 @@ StreamUtil.getInstance()!!.get(inputStream, response.getOutputStream(), ByteArra
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)

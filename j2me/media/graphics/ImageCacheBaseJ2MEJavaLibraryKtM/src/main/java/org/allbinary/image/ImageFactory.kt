@@ -18,6 +18,7 @@ package org.allbinary.image
 import java.io.InputStream
 import java.lang.Object
 import javax.microedition.lcdui.Image
+import org.allbinary.MIDPUtil
 
 // ImageCacheBaseJavaLibrary - J2ME
 open public class ImageFactory : Object {
@@ -63,7 +64,7 @@ open public class ImageFactory : Object {
         // var height = height
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return Image.createImage(width, height)
+        return MIDPUtil.getInstance()!!.createImageWH(width, height)
     }
 
     @Throws(Exception::class)
@@ -76,7 +77,7 @@ open public class ImageFactory : Object {
         // var key = key
         // var inputStream = inputStream
 
-        var image: Image = Image.createImage(inputStream)!!
+        var image: Image = MIDPUtil.getInstance()!!.createImageFromInputStream(inputStream)!!
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return image
@@ -91,6 +92,6 @@ open public class ImageFactory : Object {
         // var inputStream = inputStream
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return Image.createImage(inputStream)
+        return MIDPUtil.getInstance()!!.createImageFromInputStream(inputStream)
     }
 }

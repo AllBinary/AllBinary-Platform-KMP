@@ -31,6 +31,8 @@ import org.allbinary.logic.control.search.SearchRequest
 import org.allbinary.logic.system.security.licensing.LicensingException
 import org.allbinary.string.CommonStrings
 import views.generic.inventory.InventorySearch
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class InventoryViewFactory
             : Object
@@ -56,7 +58,7 @@ var searchRequest = searchRequest
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     

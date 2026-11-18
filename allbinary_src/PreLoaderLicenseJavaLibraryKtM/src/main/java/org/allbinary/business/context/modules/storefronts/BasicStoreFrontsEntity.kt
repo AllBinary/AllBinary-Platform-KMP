@@ -32,6 +32,8 @@ import org.allbinary.business.init.InitSql
 import org.allbinary.business.init.db.UserDbInitInfo
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class BasicStoreFrontsEntity : InitSql {
         
@@ -72,7 +74,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
                                     throw Exception("No Such Store: " +name)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     this.logUtil!!.putF("StoreFront: " +storeHashMap!!.toString(), this, "getStore()")

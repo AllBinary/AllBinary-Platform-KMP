@@ -42,8 +42,19 @@ import org.allbinary.media.image.ImageProcessorInput
 import org.allbinary.media.image.ImageProcessorInputCompositeInterface
 import org.allbinary.media.image.ImageUtil
 import org.allbinary.string.CommonStrings
+import java.awt.Dimension
+import java.awt.event.ActionEvent
+import java.awt.event.ActionListener
+import javax.swing.DefaultComboBoxModel
+import javax.swing.GroupLayout
+import javax.swing.JButton
+import javax.swing.JComboBox
+import javax.swing.JLabel
+import javax.swing.JPanel
+import javax.swing.JTextField
+import javax.swing.LayoutStyle
 
-open public class ResizeImageJPanel : javax.swing.JPanel
+open public class ResizeImageJPanel : JPanel
                 , ImageProcessorInputCompositeInterface {
         
 
@@ -76,7 +87,7 @@ numberStringArray[0]= Integer.toString( -1)!!
 numberStringArray[index]= index.toString()!!
 }
 
-this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel(numberStringArray))
+this.jComboBox1!!.setModel(DefaultComboBoxModel(numberStringArray))
 
     var araster: Raster = this.imageProcessorInput!!.getBufferedImageArray()[0]!!.getAlphaRaster()!!
 
@@ -391,25 +402,25 @@ this.imageProcessorInput= imageProcessorInput
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.jLabel1= javax.swing.JLabel()
-this.jComboBox1= javax.swing.JComboBox()
-this.aboveJButton= javax.swing.JButton()
-this.jTextField1= javax.swing.JTextField()
-this.jLabel2= javax.swing.JLabel()
-this.jLabel3= javax.swing.JLabel()
-this.jTextField2= javax.swing.JTextField()
-this.updateJButton= javax.swing.JButton()
-this.floatPercentJTextField= javax.swing.JTextField()
-this.adjustFor16AboveJButton= javax.swing.JButton()
-this.adjustFor16BelowJButton= javax.swing.JButton()
+this.jLabel1= JLabel()
+this.jComboBox1= JComboBox()
+this.aboveJButton= JButton()
+this.jTextField1= JTextField()
+this.jLabel2= JLabel()
+this.jLabel3= JLabel()
+this.jTextField2= JTextField()
+this.updateJButton= JButton()
+this.floatPercentJTextField= JTextField()
+this.adjustFor16AboveJButton= JButton()
+this.adjustFor16BelowJButton= JButton()
 this.jLabel1!!.setText("Percent:")
-this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("Item 1","Item 2","Item 3","Item 4")))
+this.jComboBox1!!.setModel(DefaultComboBoxModel(arrayOf("Item 1","Item 2","Item 3","Item 4")))
 this.aboveJButton!!.setText("Process")
-this.aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.aboveJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -421,11 +432,11 @@ aboveJButtonActionPerformed(evt)
 this.jLabel2!!.setText("Width:")
 this.jLabel3!!.setText("Height:")
 this.updateJButton!!.setText("Update")
-this.updateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.updateJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -435,13 +446,13 @@ updateJButtonActionPerformed(evt)
                                 }
                             )
 this.floatPercentJTextField!!.setText("-1.000000")
-this.floatPercentJTextField!!.setMinimumSize(java.awt.Dimension(120, 22))
+this.floatPercentJTextField!!.setMinimumSize(Dimension(120, 22))
 this.adjustFor16AboveJButton!!.setText("Adjust for 16 Above")
-this.adjustFor16AboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.adjustFor16AboveJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -451,11 +462,11 @@ adjustFor16AboveJButtonActionPerformed(evt)
                                 }
                             )
 this.adjustFor16BelowJButton!!.setText("Adjust for 16 Below")
-this.adjustFor16BelowJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.adjustFor16BelowJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -465,15 +476,15 @@ adjustFor16BelowJButtonActionPerformed(evt)
                                 }
                             )
 
-    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
+    var layout: GroupLayout = GroupLayout(this)
 
 this.setLayout(layout)
-layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(jLabel1)!!.addComponent(jLabel2)!!.addComponent(jLabel3))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)!!.addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.addComponent(jTextField1)!!.addComponent(jTextField2))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(floatPercentJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(adjustFor16AboveJButton)!!.addComponent(adjustFor16BelowJButton))!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))!!.addGroup(layout.createSequentialGroup()!!.addComponent(updateJButton)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(aboveJButton)!!.addGap(0, 250, Short.MAX_VALUE)))
-layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel1)!!.addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(floatPercentJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel2)!!.addComponent(adjustFor16AboveJButton))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel3)!!.addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(adjustFor16BelowJButton))!!.addGap(18, 18, 18)!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(aboveJButton)!!.addComponent(updateJButton))!!.addContainerGap(175, Short.MAX_VALUE)))
+layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addComponent(jLabel1)!!.addComponent(jLabel2)!!.addComponent(jLabel3))!!.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)!!.addComponent(jComboBox1, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.addComponent(jTextField1)!!.addComponent(jTextField2))!!.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addComponent(floatPercentJTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)!!.addComponent(adjustFor16AboveJButton)!!.addComponent(adjustFor16BelowJButton))!!.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))!!.addGroup(layout.createSequentialGroup()!!.addComponent(updateJButton)!!.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(aboveJButton)!!.addGap(0, 250, Short.MAX_VALUE)))
+layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel1)!!.addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)!!.addComponent(floatPercentJTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)!!.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel2)!!.addComponent(adjustFor16AboveJButton))!!.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel3)!!.addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)!!.addComponent(adjustFor16BelowJButton))!!.addGap(18, 18, 18)!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)!!.addComponent(aboveJButton)!!.addComponent(updateJButton))!!.addContainerGap(175, Short.MAX_VALUE)))
 }
 
 
-    open fun aboveJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun aboveJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -481,7 +492,7 @@ this.process()
 }
 
 
-    open fun updateJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun updateJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -489,7 +500,7 @@ this.update()
 }
 
 
-    open fun adjustFor16AboveJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun adjustFor16AboveJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -497,7 +508,7 @@ this.updateFor16Above()
 }
 
 
-    open fun adjustFor16BelowJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun adjustFor16BelowJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -505,27 +516,27 @@ this.updateFor16Below()
 }
 
 
-    private var aboveJButton: javax.swing.JButton
+    private var aboveJButton: JButton
 
-    private var adjustFor16AboveJButton: javax.swing.JButton
+    private var adjustFor16AboveJButton: JButton
 
-    private var adjustFor16BelowJButton: javax.swing.JButton
+    private var adjustFor16BelowJButton: JButton
 
-    private var floatPercentJTextField: javax.swing.JTextField
+    private var floatPercentJTextField: JTextField
 
-    private var jComboBox1: javax.swing.JComboBox<String>
+    private var jComboBox1: JComboBox<String>
 
-    private var jLabel1: javax.swing.JLabel
+    private var jLabel1: JLabel
 
-    private var jLabel2: javax.swing.JLabel
+    private var jLabel2: JLabel
 
-    private var jLabel3: javax.swing.JLabel
+    private var jLabel3: JLabel
 
-    private var jTextField1: javax.swing.JTextField
+    private var jTextField1: JTextField
 
-    private var jTextField2: javax.swing.JTextField
+    private var jTextField2: JTextField
 
-    private var updateJButton: javax.swing.JButton
+    private var updateJButton: JButton
 
 }
                 

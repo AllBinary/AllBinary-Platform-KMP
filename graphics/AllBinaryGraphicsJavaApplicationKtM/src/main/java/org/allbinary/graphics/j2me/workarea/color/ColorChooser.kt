@@ -26,8 +26,11 @@
         import kotlin.reflect.KClass
                     
         
+import java.awt.BorderLayout
+import javax.swing.JColorChooser
+import javax.swing.JPanel
 
-open public class ColorChooser : javax.swing.JPanel {
+open public class ColorChooser : JPanel {
         
 public constructor (){
 this.initComponents()
@@ -37,13 +40,13 @@ this.initComponents()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.jColorChooser1= javax.swing.JColorChooser()
-setLayout(java.awt.BorderLayout())
-add(this.jColorChooser1, java.awt.BorderLayout.CENTER)
+this.jColorChooser1= JColorChooser()
+setLayout(BorderLayout())
+add(this.jColorChooser1, BorderLayout.CENTER)
 }
 
 
-    private var jColorChooser1: javax.swing.JColorChooser
+    private var jColorChooser1: JColorChooser
 
 }
                 

@@ -54,7 +54,7 @@ import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.AdvancedRTSProperties
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
-import org.allbinary.game.layer.CaptionResources
+import org.allbinary.game.layer.LayerCaptionResources
 import org.allbinary.game.layer.LinePathRelativeAnimation
 import org.allbinary.game.layer.PathAnimation
 import org.allbinary.game.layer.PathFindingLayerInterface
@@ -202,7 +202,7 @@ open public class UnitLayer :
     private val captionAnimationHelper: CaptionAnimationHelperBase =
         CaptionAnimationHelper(
             FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(
-                    CaptionResources.getInstance()!!.RESOURCE
+                    LayerCaptionResources.getInstance()!!.RESOURCE
                 )!!
                 .getInstance(0),
             -23,

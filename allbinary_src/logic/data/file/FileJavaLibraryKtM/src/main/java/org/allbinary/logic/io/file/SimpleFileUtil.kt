@@ -16,16 +16,17 @@
 package org.allbinary.logic.io.file
 
 import java.io.ByteArrayOutputStream
-import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
 import java.io.Reader
 import java.io.Writer
 import java.lang.Object
-import java.nio.CharBuffer
 import kotlin.Array
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.io.NullOutputStream
+import org.allbinary.logic.io.NullReader
+import org.allbinary.logic.io.NullWriter
 import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
@@ -51,28 +52,7 @@ open public class SimpleFileUtil : Object {
         : OutputStream {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return object : OutputStream() {
-
-                @Throws(IOException::class)
-                override fun write(b: Int)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    var b = b
-                }
-
-                @Throws(IOException::class)
-                override fun write(b: ByteArray, off: Int, len: Int)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    var b = b
-                    var off = off
-                    var len = len
-                }
-
-                override fun close()
-                    // nullable = true from not(false or (false and true)) = true
-                {}
-            }
+            return NullOutputStream.NULL_OUTPUT_STREAM
         }
 
         open fun nullWriter()
@@ -80,94 +60,7 @@ open public class SimpleFileUtil : Object {
         : Writer {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return object : Writer() {
-
-                private var closed: Boolean = false
-
-                @Throws(IOException::class)
-                override fun append(
-                    c: Char
-                )
-                    // nullable = true from not(false or (false and false)) = true
-                    : Writer {
-                    var c = c
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return this
-                }
-
-                @Throws(IOException::class)
-                override fun append(
-                    csq: CharSequence
-                )
-                    // nullable = true from not(false or (false and false)) = true
-                    : Writer {
-                    var csq = csq
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return this
-                }
-
-                @Throws(IOException::class)
-                override fun append(
-                    csq: CharSequence,
-                    start: Int,
-                    end: Int,
-                )
-                    // nullable = true from not(false or (false and false)) = true
-                    : Writer {
-                    var csq = csq
-                    var start = start
-                    var end = end
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return this
-                }
-
-                @Throws(IOException::class)
-                override fun write(c: Int)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    var c = c
-                }
-
-                @Throws(IOException::class)
-                override fun write(cbuf: CharArray, off: Int, len: Int)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    var cbuf = cbuf
-                    var off = off
-                    var len = len
-                }
-
-                @Throws(IOException::class)
-                override fun write(str: String)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    var str = str
-                }
-
-                @Throws(IOException::class)
-                override fun write(str: String, off: Int, len: Int)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    var str = str
-                    var off = off
-                    var len = len
-                }
-
-                @Throws(IOException::class)
-                override fun flush()
-                    // nullable = true from not(false or (false and true)) = true
-                {}
-
-                override fun close()
-                    // nullable = true from not(false or (false and true)) = true
-                {}
-            }
+            return NullWriter.NULL_WRITER
         }
 
         open fun nullReader()
@@ -175,75 +68,7 @@ open public class SimpleFileUtil : Object {
         : Reader {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return object : Reader() {
-
-                @Throws(IOException::class)
-                override fun read()
-                // nullable = true from not(false or (false and true)) = true
-                : Int {
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return -1
-                }
-
-                @Throws(IOException::class)
-                override fun read(
-                    cbuf: CharArray,
-                    off: Int,
-                    len: Int,
-                )
-                    // nullable = true from not(false or (false and false)) = true
-                    : Int {
-                    var cbuf = cbuf
-                    var off = off
-                    var len = len
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return -1
-                }
-
-                @Throws(IOException::class)
-                override fun read(
-                    target: CharBuffer
-                )
-                    // nullable = true from not(false or (false and false)) = true
-                    : Int {
-                    var target = target
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return -1
-                }
-
-                @Throws(IOException::class)
-                override fun ready()
-                // nullable = true from not(false or (false and true)) = true
-                : Boolean {
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return false
-                }
-
-                @Throws(IOException::class)
-                override fun skip(
-                    n: Long
-                )
-                    // nullable = true from not(false or (false and false)) = true
-                    : Long {
-                    var n = n
-
-                    // if statement needs to be on the same line and ternary does not work the same
-                    // way.
-                    return 0L
-                }
-
-                override fun close()
-                    // nullable = true from not(false or (false and true)) = true
-                {}
-            }
+            return NullReader.NULL_READER
         }
     }
 

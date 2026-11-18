@@ -12,8 +12,11 @@
         import kotlin.reflect.KClass
                     
         
+import java.nio.Buffer
+import java.nio.FloatBuffer
+import java.nio.IntBuffer
 
-interface GL10 : javax.microedition.khronos.opengles.GL {
+interface GL10 : GL {
         
 companion object {
             
@@ -537,15 +540,15 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glColorPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glColorPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: java.nio.Buffer)
+    open fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: java.nio.Buffer)
+    open fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -565,7 +568,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glDeleteTextures(n: Int, textures: java.nio.IntBuffer)
+    open fun glDeleteTextures(n: Int, textures: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -593,7 +596,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glDrawElements(mode: Int, count: Int, type: Int, indices: java.nio.Buffer)
+    open fun glDrawElements(mode: Int, count: Int, type: Int, indices: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -621,7 +624,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glFogfv(pname: Int, params: java.nio.FloatBuffer)
+    open fun glFogfv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -637,7 +640,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGenTextures(n: Int, textures: java.nio.IntBuffer)
+    open fun glGenTextures(n: Int, textures: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -649,7 +652,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetIntegerv(pname: Int, params: java.nio.IntBuffer)
+    open fun glGetIntegerv(pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -669,7 +672,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glLightModelfv(pname: Int, params: java.nio.FloatBuffer)
+    open fun glLightModelfv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -681,7 +684,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glLightfv(light: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glLightfv(light: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -697,7 +700,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glLoadMatrixf(m: java.nio.FloatBuffer)
+    open fun glLoadMatrixf(m: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -713,7 +716,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glMaterialfv(face: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glMaterialfv(face: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -725,7 +728,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glMultMatrixf(m: java.nio.FloatBuffer)
+    open fun glMultMatrixf(m: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -737,7 +740,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glNormalPointer(type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glNormalPointer(type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -765,7 +768,7 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 
 
-    open fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: java.nio.Buffer)
+    open fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -809,7 +812,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -821,11 +824,11 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glTexEnvfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glTexEnvfv(target: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: java.nio.Buffer)
+    open fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -837,7 +840,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: java.nio.Buffer)
+    open fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -845,7 +848,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
                     
         
+import org.allbinary.logic.string.StringUtil
 import java.io.IOException
 import org.apache.xmlrpc.XmlRpcClient
 import org.apache.xmlrpc.XmlRpcException
@@ -77,15 +78,13 @@ serverUrl= serverUrl!!.substring(0, index +1) +"logservssl.php"
     var xmlRpcClient: XmlRpcClient = XmlRpcClient(serverUrl)
 
 this.setClient(xmlRpcClient)
-xmlRpcClient!!.setBasicAuthentication(
-                            null, 
-                            null)
+xmlRpcClient!!.setBasicAuthentication(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var hashtable: ABHashtable<Any, Any> = anyType as ABHashtable<Any, Any>
 
 param.add(hashtable)
 
-    var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, this.noCrypt)!!
+    var result: Any = xmlRpcClient!!.executeWithCrypt(this.getRemoteMethod(), param, this.noCrypt)!!
 
 System.out.println(CommonLabels.getInstance()!!.RESULT_ +CommonSeps.getInstance()!!.NEW_LINE +result.toString())
 

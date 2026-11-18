@@ -23,6 +23,12 @@ import org.allbinary.logic.math.PrimitiveFloatUtil
 
 open public class AllBinaryOrientationSensor : AllBinarySensor {
 
+    companion object {
+
+        val NULL_ALLBINARY_ORIENTATION_SENSOR: AllBinaryOrientationSensor =
+            AllBinaryOrientationSensor()
+    }
+
     var sensorDataFloatArray: FloatArray = PrimitiveFloatUtil.getArrayInstance()!!
 
     var listener: CompleteMotionGestureInputEventListenerInterface =

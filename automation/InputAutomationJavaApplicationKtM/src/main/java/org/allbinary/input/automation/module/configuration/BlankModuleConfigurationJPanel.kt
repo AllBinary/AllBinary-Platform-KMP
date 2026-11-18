@@ -26,8 +26,11 @@
         import kotlin.reflect.KClass
                     
         
+import javax.swing.GroupLayout
+import javax.swing.JLabel
+import javax.swing.JPanel
 
-open public class BlankModuleConfigurationJPanel : javax.swing.JPanel {
+open public class BlankModuleConfigurationJPanel : JPanel {
         
 public constructor (){
 this.initComponents()
@@ -37,18 +40,18 @@ this.initComponents()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.jLabel1= javax.swing.JLabel()
+this.jLabel1= JLabel()
 this.jLabel1!!.setText("No Configuration Available")
 
-    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
+    var layout: GroupLayout = GroupLayout(this)
 
 this.setLayout(layout)
-layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()!!.addContainerGap(231, Short.MAX_VALUE)!!.addComponent(jLabel1)!!.addGap(225, 225, 225)))
-layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(jLabel1)!!.addContainerGap(362, Short.MAX_VALUE)))
+layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()!!.addContainerGap(231, Short.MAX_VALUE)!!.addComponent(jLabel1)!!.addGap(225, 225, 225)))
+layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(jLabel1)!!.addContainerGap(362, Short.MAX_VALUE)))
 }
 
 
-    private var jLabel1: javax.swing.JLabel
+    private var jLabel1: JLabel
 
 }
                 

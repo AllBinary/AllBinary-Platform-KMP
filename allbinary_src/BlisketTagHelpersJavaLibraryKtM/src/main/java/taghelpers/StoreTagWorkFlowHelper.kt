@@ -36,6 +36,8 @@ import org.allbinary.logic.control.workflow.StoreTagWorkFlowFactory
 import org.allbinary.logic.control.workflow.StoreWorkFlowInterface
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ServiceClientInformationInterfaceFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class StoreTagWorkFlowHelper : TagHelper {
         
@@ -50,7 +52,7 @@ var hashMap = hashMap
 var pageContext = pageContext
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     this.logUtil!!.putF("Properties: " +hashMap!!.toString(), this, "StoreTagWorkFlowHelper()")
@@ -70,7 +72,7 @@ this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     this.logUtil!!.putF("Process", this, this.commonStrings!!.PROCESS)
@@ -87,7 +89,7 @@ this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)

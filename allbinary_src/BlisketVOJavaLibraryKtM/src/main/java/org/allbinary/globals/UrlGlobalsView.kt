@@ -53,7 +53,7 @@ var document = document
 
     var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-hashMap!!.put(UrlGlobalsData.WEBAPPPATH, org.allbinary.globals.URLGLOBALS.getWebappPath())
+hashMap!!.put(UrlGlobalsData.WEBAPPPATH, URLGLOBALS.getWebappPath())
 
     var node: Node = ModDomHelper.createNameValueNodes(document, UrlGlobalsData.NAME, hashMap)!!
 

@@ -32,7 +32,8 @@ open public class TimeLastModified : Time {
         
 public constructor (time: String)                        
 
-                            : super(time){
+                            : super(time.toLong()
+    ){
 var time = time
 
 

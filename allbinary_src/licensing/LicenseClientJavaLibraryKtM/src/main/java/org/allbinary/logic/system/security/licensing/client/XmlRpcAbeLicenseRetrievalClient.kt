@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
                     
         
+import org.allbinary.logic.string.StringUtil
 import java.io.IOException
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -84,16 +85,14 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toS
     var xmlRpcClient: XmlRpcClient = XmlRpcClient(server)
 
 this.setClient(xmlRpcClient)
-xmlRpcClient!!.setBasicAuthentication(
-                            null, 
-                            null)
+xmlRpcClient!!.setBasicAuthentication(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var hashtable: ABHashtable<Any, Any> = this.getClientInfo()!!.toHashtable()!!
 
 this.logUtil!!.putF(CLIENT_INFO +hashtable.toString(), this, this.commonStrings!!.GET)
 param.add(hashtable)
 
-    var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
+    var result: Any = xmlRpcClient!!.executeWithCrypt(this.getRemoteMethod(), param, cryptInterface)!!
 
 this.logUtil!!.putF(RESULT +result.toString(), this, this.commonStrings!!.GET)
 

@@ -36,6 +36,8 @@ import org.allbinary.logic.system.security.AbKeys
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.LicensingException
 import org.allbinary.string.CommonSeps
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AbeFactory
             : Object
@@ -82,7 +84,7 @@ private constructor ()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.put("Failure for: " +className, this, "getInstance(classname)", e)
@@ -98,7 +100,7 @@ private constructor ()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.put("Failure for: " +className, this, "getInstance(classname)", e)
@@ -166,7 +168,7 @@ constructor= myClass!!.getConstructor(classes)!!
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     
@@ -189,7 +191,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     
@@ -255,7 +257,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.put("Failure for: " +className, this, "getClass(className)", e)
@@ -271,7 +273,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     this.logUtil!!.put("Failure for: " +className, this, "getClass(className)", e)

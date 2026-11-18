@@ -45,6 +45,7 @@ import org.allbinary.business.user.role.UserRoleB
 import org.allbinary.business.user.role.UserRoleData
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.string.StringValidationUtil
+import org.allbinary.globals.GLOBALS2
 
 open public class WeblisketSession
             : Object
@@ -167,7 +168,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 : String{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.session.getAttribute(org.allbinary.globals.GLOBALS2.WEBAPPPATH) as String
+                        return this.session.getAttribute(GLOBALS2.WEBAPPPATH) as String
 }
 
 

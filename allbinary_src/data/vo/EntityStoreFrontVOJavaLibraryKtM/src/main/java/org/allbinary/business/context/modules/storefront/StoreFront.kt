@@ -61,6 +61,8 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.apache.commons.lang3.StringEscapeUtils
 import org.w3c.dom.Document
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class StoreFront
             : Object
@@ -162,7 +164,7 @@ this.getFormData(RequestParams(request).
                             toHashMap())
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     this.logUtil!!.putF("TWB- needs update for adding and updating context configuration - currently defaults to admin context config", this, "StoreFront")
@@ -933,7 +935,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
@@ -953,7 +955,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 : String{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org.allbinary.globals.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
+                        return URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
 }
 
 
@@ -965,7 +967,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostName()!!
@@ -991,7 +993,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostNamePath()!!
@@ -1017,7 +1019,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostName()!!
@@ -1043,7 +1045,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostNamePath()!!
@@ -1741,7 +1743,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "install()", e)

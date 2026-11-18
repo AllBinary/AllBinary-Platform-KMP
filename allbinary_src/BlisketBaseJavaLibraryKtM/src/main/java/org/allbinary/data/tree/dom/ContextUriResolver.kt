@@ -39,6 +39,8 @@ import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.info.template.TransformInfoTemplateData
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class ContextUriResolver
             : Object
@@ -81,7 +83,7 @@ stringBuffer!!.append(href)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())

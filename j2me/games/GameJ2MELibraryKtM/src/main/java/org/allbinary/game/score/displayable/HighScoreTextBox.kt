@@ -103,12 +103,7 @@ open public class HighScoreTextBox : CustomTextBox {
 
             var username: String = InApplicationPurchaseFactory.getInstance()!!.getUserName()!!
 
-            if (username != null) {
-
-                this.getTextFieldItem()!!.setString(username)
-            } else {
-                this.getTextFieldItem()!!.setString("NoGamerInfo")
-            }
+            this.getTextFieldItem()!!.setString(username)
         }
     }
 

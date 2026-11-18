@@ -27,8 +27,18 @@
                     
         
 import org.allbinary.thread.ARunnable
+import java.awt.EventQueue
+import java.awt.Frame
+import java.awt.event.ActionEvent
+import java.awt.event.ActionListener
+import javax.swing.GroupLayout
+import javax.swing.JButton
+import javax.swing.JDialog
+import javax.swing.JFrame
+import javax.swing.JLabel
+import javax.swing.WindowConstants
 
-open public class BasicTextJDialog : javax.swing.JDialog {
+open public class BasicTextJDialog : JDialog {
         
 companion object {
             
@@ -36,14 +46,14 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
-java.awt.EventQueue.invokeLater(object: ARunnable()
+EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
                                 
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
-BasicTextJDialog(javax.swing.JFrame(), true, "Test").
+BasicTextJDialog(JFrame(), true, "Test").
                             setVisible(true)
 }
 
@@ -55,7 +65,7 @@ BasicTextJDialog(javax.swing.JFrame(), true, "Test").
         }
             
     private var closeListenerInterface: CloseJDialogListenerInterface
-public constructor (parent: java.awt.Frame, modal: Boolean, text: String)                        
+public constructor (parent: Frame, modal: Boolean, text: String)                        
 
                             : super(parent, modal){
 var parent = parent
@@ -95,15 +105,15 @@ this.textJLabel!!.setText(text)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.jButton1= javax.swing.JButton()
-this.textJLabel= javax.swing.JLabel()
-setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
+this.jButton1= JButton()
+this.textJLabel= JLabel()
+setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE)
 this.jButton1!!.setText("OK")
-jButton1!!.addActionListener(object: java.awt.event.ActionListener()
+jButton1!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -114,16 +124,16 @@ jButton1ActionPerformed(evt)
                             )
 this.textJLabel!!.setText("No Text Set")
 
-    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(getContentPane())
+    var layout: GroupLayout = GroupLayout(getContentPane())
 
 getContentPane()!!.setLayout(layout)
-layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGap(80, 80, 80)!!.addComponent(jButton1))!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(textJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)))!!.addContainerGap()))
-layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGap(20, 20, 20)!!.addComponent(textJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addGap(30, 30, 30)!!.addComponent(jButton1)))
+layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGap(80, 80, 80)!!.addComponent(jButton1))!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(textJLabel, GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)))!!.addContainerGap()))
+layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGap(20, 20, 20)!!.addComponent(textJLabel, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)!!.addGap(30, 30, 30)!!.addComponent(jButton1)))
 pack()
 }
 
 
-    open fun jButton1ActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun jButton1ActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -142,9 +152,9 @@ this.setVisible(false)
 }
 
 
-    private var jButton1: javax.swing.JButton
+    private var jButton1: JButton
 
-    private var textJLabel: javax.swing.JLabel
+    private var textJLabel: JLabel
 
 }
                 

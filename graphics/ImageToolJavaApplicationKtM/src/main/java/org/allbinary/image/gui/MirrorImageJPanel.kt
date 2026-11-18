@@ -39,8 +39,17 @@ import org.allbinary.media.image.ImageProcessorInputCompositeInterface
 import org.allbinary.media.image.ImageStrings
 import org.allbinary.media.image.MirrorImageUtil
 import org.allbinary.string.CommonStrings
+import java.awt.event.ActionEvent
+import java.awt.event.ActionListener
+import javax.swing.ButtonGroup
+import javax.swing.JButton
+import javax.swing.JCheckBox
+import javax.swing.JLabel
+import javax.swing.JLayeredPane
+import javax.swing.JPanel
+import javax.swing.JRadioButton
 
-open public class MirrorImageJPanel : javax.swing.JPanel
+open public class MirrorImageJPanel : JPanel
                 , ImageProcessorInputCompositeInterface {
         
 
@@ -147,9 +156,9 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jLayeredPane1= javax.swing.JLayeredPane()
-this.buttonGroup= javax.swing.ButtonGroup()
-this.jPanel1= object: javax.swing.JPanel()
+jLayeredPane1= JLayeredPane()
+this.buttonGroup= ButtonGroup()
+this.jPanel1= object: JPanel()
                                 {
                                 
                                 
@@ -175,14 +184,14 @@ var graphics = graphics
 
                                 }
                             
-this.jPanel2= javax.swing.JPanel()
-this.horizontalJCheckBox= javax.swing.JCheckBox()
-this.verticleJCheckBox= javax.swing.JCheckBox()
-this.generateJButton= javax.swing.JButton()
-this.renameJRadioButton= javax.swing.JRadioButton()
-this.writeOverOriginalJRadioButton= javax.swing.JRadioButton()
-this.jPanel3= javax.swing.JPanel()
-this.jLabel2= javax.swing.JLabel()
+this.jPanel2= JPanel()
+this.horizontalJCheckBox= JCheckBox()
+this.verticleJCheckBox= JCheckBox()
+this.generateJButton= JButton()
+this.renameJRadioButton= JRadioButton()
+this.writeOverOriginalJRadioButton= JRadioButton()
+this.jPanel3= JPanel()
+this.jLabel2= JLabel()
 
     var jPanel1Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel1)
 
@@ -195,11 +204,11 @@ this.horizontalJCheckBox!!.setEnabled(false)
 this.verticleJCheckBox!!.setText("Verticle")
 this.verticleJCheckBox!!.setEnabled(false)
 this.generateJButton!!.setText("Generate")
-this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -209,11 +218,11 @@ generateJButtonActionPerformed(evt)
                                 }
                             )
 this.renameJRadioButton!!.setText("Save As filename_mirror")
-this.renameJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.renameJRadioButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -245,7 +254,7 @@ layout.setVerticalGroup(layout.createParallelGroup(org.jdesktop.layout.GroupLayo
 }
 
 
-    open fun generateJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun generateJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -253,34 +262,34 @@ this.process()
 }
 
 
-    open fun renameJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun renameJRadioButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-    private var buttonGroup: javax.swing.ButtonGroup
+    private var buttonGroup: ButtonGroup
 
-    private var generateJButton: javax.swing.JButton
+    private var generateJButton: JButton
 
-    private var horizontalJCheckBox: javax.swing.JCheckBox
+    private var horizontalJCheckBox: JCheckBox
 
-    private var jLabel2: javax.swing.JLabel
+    private var jLabel2: JLabel
 
-    private var jLayeredPane1: javax.swing.JLayeredPane
+    private var jLayeredPane1: JLayeredPane
 
-    private var jPanel1: javax.swing.JPanel
+    private var jPanel1: JPanel
 
-    private var jPanel2: javax.swing.JPanel
+    private var jPanel2: JPanel
 
-    private var jPanel3: javax.swing.JPanel
+    private var jPanel3: JPanel
 
-    private var renameJRadioButton: javax.swing.JRadioButton
+    private var renameJRadioButton: JRadioButton
 
-    private var verticleJCheckBox: javax.swing.JCheckBox
+    private var verticleJCheckBox: JCheckBox
 
-    private var writeOverOriginalJRadioButton: javax.swing.JRadioButton
+    private var writeOverOriginalJRadioButton: JRadioButton
 
     open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true

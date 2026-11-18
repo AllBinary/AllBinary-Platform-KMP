@@ -37,6 +37,8 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AuthenticationHelperUtil
             : Object
@@ -73,7 +75,7 @@ var authenticationHelper = authenticationHelper
 var filePath = filePath
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.putF(CommonLabels.getInstance()!!.START +filePath, this, "isAuthorized()")
@@ -105,7 +107,7 @@ var filePath = filePath
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Authorized", this, "isAuthorized()")
@@ -121,7 +123,7 @@ var filePath = filePath
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Not Authorized: " +basicUserRole!!.toString(), this, "isAuthorized()")

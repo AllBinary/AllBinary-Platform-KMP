@@ -30,8 +30,13 @@ import org.allbinary.input.automation.actions.script.condition.ProfileActionScri
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileAction
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileActionJPanel
 import org.allbinary.logic.communication.log.LogUtil
+import java.awt.GridLayout
+import java.awt.Panel
+import java.awt.event.ActionEvent
+import java.awt.event.ActionListener
+import javax.swing.JButton
 
-open public class RemoveActionScriptItemJPanel : java.awt.Panel {
+open public class RemoveActionScriptItemJPanel : Panel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
@@ -51,14 +56,14 @@ this.profileActionScriptConditionInterface= profileActionScriptConditionInterfac
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.removeJButton= javax.swing.JButton()
-setLayout(java.awt.GridLayout())
+this.removeJButton= JButton()
+setLayout(GridLayout())
 this.removeJButton!!.setText("Remove")
-this.removeJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.removeJButton!!.addActionListener(object: ActionListener()
                                 {
                                 
                                 
-    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -71,7 +76,7 @@ add(this.removeJButton)
 }
 
 
-    open fun removeJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun removeJButtonActionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -97,7 +102,7 @@ this.genericProfileActionJPanel!!.updateProfileActionUI()
 }
 
 
-    private var removeJButton: javax.swing.JButton
+    private var removeJButton: JButton
 
 }
                 

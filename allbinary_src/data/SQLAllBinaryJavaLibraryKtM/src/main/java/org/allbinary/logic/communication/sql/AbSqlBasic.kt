@@ -42,6 +42,8 @@ import org.allbinary.logic.communication.sql.connection.pool.SqlConnectionPool
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AbSqlBasic
             : Object
@@ -140,7 +142,7 @@ this.sqlConnectionPool!!.add(this.getDatabaseConnectionInfoInterface()!!.getUrl(
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.FAILED_SQL_STATEMENT +statement, this, METHOD_EXECUTED_SQL_STATEMENT, e)
@@ -169,7 +171,7 @@ this.conn=
             this.executeSQLStatement(this.sqlStrings!!.CREATE_DATABASE +databaseName)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.DATABASE_CREATED_LABEL +databaseName, this, this.METHOD_CREATE)
@@ -183,7 +185,7 @@ this.conn=
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.DATABASE_CREATION_FAILED_LABEL +databaseName, this, this.METHOD_CREATE, e)
@@ -208,7 +210,7 @@ this.conn=
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.SQL_CONNECTION_RETRYING, this, METHOD_CREATE_CONNECTION, se)
@@ -232,7 +234,7 @@ this.initialize()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.SQL_CONNECTION_RETRY +se.message, this, this.METHOD_CREATE_CONNECTION, e)
@@ -267,7 +269,7 @@ jdbcDriverClass!!.newInstance()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.LOAD_JDBC_DRIVER_FAILED_LABEL +this.getDatabaseConnectionInfoInterface()!!.getJdbcDriver(), this, METHOD_INITIALIZE, e)
@@ -284,7 +286,7 @@ this.createConnection()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.SQL_CONNECTION_FAILED, this, this.METHOD_INITIALIZE, se)

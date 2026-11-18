@@ -53,13 +53,7 @@ import java.lang.Object
 
         var output: String = bs.toString()!!
 
-        if (output != null) {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return output.toCharArray().concatToString()
-        }
-
         // if statement needs to be on the same line and ternary does not work the same way.
-        return this.NONE
+        return output.toCharArray().concatToString()
     }
 }

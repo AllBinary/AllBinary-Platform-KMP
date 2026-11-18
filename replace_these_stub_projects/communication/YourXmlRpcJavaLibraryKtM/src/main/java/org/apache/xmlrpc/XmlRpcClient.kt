@@ -67,7 +67,7 @@ var params = params
 
                 @Throws(XmlRpcException::class, IOException::class)
             
-    open fun execute(method: String, params: BasicArrayList, cryptInterface: CryptInterface)
+    open fun executeWithCrypt(method: String, params: BasicArrayList, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var method = method

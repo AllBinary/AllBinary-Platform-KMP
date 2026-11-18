@@ -29,7 +29,7 @@
 import org.allbinary.logic.communication.log.GuiLog
 import org.allbinary.logic.communication.log.LogUtil
 
-open public class GraphicsException : java.lang.Exception {
+open public class GraphicsException : Exception {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

@@ -37,6 +37,8 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.apache.commons.fileupload.FileItem
 import org.apache.commons.fileupload.FileUploadBase.InvalidContentTypeException
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class MultipartRequestParams : RequestParams {
         
@@ -95,7 +97,7 @@ var request = request
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("FileItem List Size: " +multipartRequestList!!.size, this, "processMultipartRequest()")
@@ -140,7 +142,7 @@ var request = request
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("Special Request Data: " +specialRequest!!.toString(), this, "processMultipartRequest()")
@@ -156,7 +158,7 @@ this.setMap(specialRequest)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     this.logUtil!!.putF("Using Normal RequestParams", this, "processMultipartRequest()")
@@ -169,7 +171,7 @@ super.setMap(request.getParameterMap())
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUESTERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUESTERROR))
                         
                                     {
                                     this.logUtil!!.putF("Should Not Occur", this, "processMultipartRequest()")

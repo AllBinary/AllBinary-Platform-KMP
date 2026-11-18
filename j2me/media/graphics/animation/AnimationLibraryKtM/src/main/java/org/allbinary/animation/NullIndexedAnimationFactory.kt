@@ -16,7 +16,6 @@
 package org.allbinary.animation
 
 import java.lang.Object
-import javax.microedition.lcdui.Graphics
 import kotlin.Array
 import org.allbinary.media.ScaleProperties
 
@@ -36,29 +35,6 @@ open public class NullIndexedAnimationFactory :
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return NullIndexedAnimationFactory.NULL_INDEXED_ANIMATION_FACTORY
-        }
-    }
-
-    open public inner class NullIndexedAnimationInner : NullIndexedAnimation {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
-        }
-            */
-
-        constructor() : super(IndexedAnimationBehavior(1, 250)) {
-
-            // For kotlin this is before the body of the constructor.
-
-        }
-
-        override fun paintXY(graphics: Graphics, x: Int, y: Int)
-            // nullable = true from not(false or (false and false)) = true
-        {
-            // var graphics = graphics
-            // var x = x
-            // var y = y
         }
     }
 

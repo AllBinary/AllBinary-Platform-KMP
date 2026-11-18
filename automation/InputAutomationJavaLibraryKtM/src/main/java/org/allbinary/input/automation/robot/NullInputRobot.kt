@@ -208,6 +208,36 @@ var isOn = isOn
 }
 
 
+    override fun mouseMove(point: Point)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var point = point
+super.mouseMove(point)
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun mouseMoveToTarget(rectangle: Rectangle)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var rectangle = rectangle
+super.mouseMoveToTarget(rectangle)
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var rectangle = rectangle
+    //var x = x
+    //var y = y
+super.mouseMoveToTarget(rectangle, x, y)
+}
+
+
 }
                 
             

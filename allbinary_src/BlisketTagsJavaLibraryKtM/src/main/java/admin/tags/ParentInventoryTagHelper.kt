@@ -28,6 +28,7 @@
         
 import javax.servlet.jsp.tagext.Tag
 import org.allbinary.logic.string.StringMaker
+import tags.HelperTag
 
 open public class ParentInventoryTagHelper
             : Object

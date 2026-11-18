@@ -30,6 +30,7 @@ import javax.servlet.jsp.JspTagException
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.system.security.licensing.LicensingException
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
 
 open public class ShippingMethodsTag : StoreValidationTransformTag {
         
@@ -55,7 +56,7 @@ public constructor (){
 this.setObjectFile("views.generic.shipping.ValidationView")
 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     

@@ -51,4 +51,19 @@ open public class CircleAnimation : Animation, ColorCompositeInterface {
         this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
         graphics.drawArc(x, y, this.width, this.height, 0, this.TOTAL_ANGLE)
     }
+
+    override fun getBasicColorP()
+    // nullable = true from not(false or (false and true)) = true
+    : BasicColor {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBasicColorP()
+    }
+
+    override fun setBasicColorP(basicColor: BasicColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
+        super.setBasicColorP(basicColor)
+    }
 }

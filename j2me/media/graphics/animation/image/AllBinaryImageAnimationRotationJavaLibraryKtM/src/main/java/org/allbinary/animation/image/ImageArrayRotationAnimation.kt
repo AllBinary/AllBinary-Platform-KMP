@@ -62,11 +62,11 @@ open public class ImageArrayRotationAnimation : ImageArrayBaseRotationAnimation 
 
         // For kotlin this is before the body of the constructor.
 
-        this.init(imageArray, angleInfo, totalAngle)
+        this.initImageArray(imageArray, angleInfo, totalAngle)
     }
 
     @Throws(Exception::class)
-    open fun init(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int)
+    open fun initImageArray(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int)
         // nullable = true from not(false or (false and false)) = true
     {
         // var imageArray = imageArray

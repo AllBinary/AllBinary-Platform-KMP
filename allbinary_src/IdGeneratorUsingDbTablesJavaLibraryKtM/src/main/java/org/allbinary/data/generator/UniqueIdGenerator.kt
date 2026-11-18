@@ -34,6 +34,8 @@ import org.allbinary.data.tables.generator.IdGeneratorEntityFactory
 import org.allbinary.logic.StdUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class UniqueIdGenerator
             : Object
@@ -74,7 +76,7 @@ this.idGeneratorEntity!!.insert(vector)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     
@@ -123,7 +125,7 @@ this.idGeneratorEntity!!.update(this.name, newValue)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     

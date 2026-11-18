@@ -34,6 +34,8 @@ import org.allbinary.logic.system.security.licensing.LicensingException
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.workflow.WorkFlowInterface
 import org.allbinary.logic.control.workflow.RequestWorkFlowFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class RequestHandler : HttpServlet {
         
@@ -94,7 +96,7 @@ out.close()
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
                                     {
                                     this.logUtil!!.put("Servlet LicensingException", this, "processRequest()", e)
@@ -107,7 +109,7 @@ response.sendRedirect(abcs.globals.URLGLOBALS.LICENSEERRORPAGE)
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
                                     {
                                     this.logUtil!!.put("Servlet Exception", this, "processRequest()", e)

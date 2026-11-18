@@ -28,6 +28,8 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransactionResultEntityFactory
             : Object
@@ -62,7 +64,7 @@ private constructor ()
         try {
             
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org.allbinary.data.tables.user.commerce.money.payment.transaction.TransactionResultEntity()
+                        return TransactionResultEntity()
 } catch(e: Exception)
             {
 
@@ -70,7 +72,7 @@ private constructor ()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)

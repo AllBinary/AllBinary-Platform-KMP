@@ -29,6 +29,8 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.InputOutputTypeData
 import tags.TransformTag
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class GenericViewTag : TransformTag {
         
@@ -41,7 +43,7 @@ open public class GenericViewTag : TransformTag {
 public constructor (){
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)

@@ -30,6 +30,9 @@ import javax.servlet.jsp.JspTagException
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class DateRangeOrderHistoryTag : StoreValidationTransformTag {
         
@@ -64,7 +67,7 @@ this.status= value
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("Tag Start", this, tagStrings!!.DO_START_TAG)
@@ -82,7 +85,7 @@ this.setObjectFile("views.admin.orderhistory.DateRangeOrderHistoryView")
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     

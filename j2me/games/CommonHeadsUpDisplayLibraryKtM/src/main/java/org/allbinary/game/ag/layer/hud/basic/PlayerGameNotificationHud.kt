@@ -55,40 +55,6 @@ open public class PlayerGameNotificationHud : GameNotificationHud, UpdateMyFontI
 
     private val permanentGameNotification: GameNotification = GameNotification()
 
-    open public inner class SetAndRemoveProcessor : Processor {
-
-        private val updateMeasurementProcessor: PlayerGameNotificationHud
-
-        public constructor(updateMeasurementProcessor: PlayerGameNotificationHud) {
-            // var updateMeasurementProcessor = updateMeasurementProcessor
-            this.updateMeasurementProcessor = updateMeasurementProcessor
-        }
-
-        @Throws(Exception::class)
-        override fun process()
-            // nullable = true from not(false or (false and true)) = true
-        {
-            this.updateMeasurementProcessor!!.setAndRemoveProcess()
-        }
-    }
-
-    open public inner class NextUnremoveableProcessor : Processor {
-
-        private val updateMeasurementProcessor: PlayerGameNotificationHud
-
-        public constructor(updateMeasurementProcessor: PlayerGameNotificationHud) {
-            // var updateMeasurementProcessor = updateMeasurementProcessor
-            this.updateMeasurementProcessor = updateMeasurementProcessor
-        }
-
-        @Throws(Exception::class)
-        override fun process()
-            // nullable = true from not(false or (false and true)) = true
-        {
-            this.updateMeasurementProcessor!!.setNextUnremoveableProcess()
-        }
-    }
-
     private val setAndRemoveProcessor: Processor = SetAndRemoveProcessor(this)
 
     private val nextUnremoveableProcessor: Processor = NextUnremoveableProcessor(this)

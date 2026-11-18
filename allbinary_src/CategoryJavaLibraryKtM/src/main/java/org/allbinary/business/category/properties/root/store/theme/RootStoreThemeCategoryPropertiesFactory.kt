@@ -34,6 +34,8 @@ import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class RootStoreThemeCategoryPropertiesFactory
             : Object
@@ -91,7 +93,7 @@ this.categoryPropertiesInterface= RootStoreThemeCategoryProperties(transformInfo
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)

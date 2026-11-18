@@ -31,8 +31,10 @@ import java.awt.image.BufferedImage
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import javax.swing.GroupLayout
+import javax.swing.JPanel
 
-open public class ImageJPanel : javax.swing.JPanel {
+open public class ImageJPanel : JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
@@ -79,11 +81,11 @@ this.isDrawn= true
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
+    var layout: GroupLayout = GroupLayout(this)
 
 this.setLayout(layout)
-layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 400, Short.MAX_VALUE))
-layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 300, Short.MAX_VALUE))
+layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGap(0, 400, Short.MAX_VALUE))
+layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)!!.addGap(0, 300, Short.MAX_VALUE))
 }
 
 

@@ -34,6 +34,8 @@ import org.allbinary.data.tables.user.commerce.money.payment.gateway.PaymentGate
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import views.admin.payment.gateway.PaymentGatewayViewAbstract
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class SelectNewView : PaymentGatewayViewAbstract {
         
@@ -74,7 +76,7 @@ var transformInfoInterface = transformInfoInterface
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view", e)

@@ -43,7 +43,7 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
 
     private var listString: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private var append: String = StringUtil.getInstance()!!.EMPTY_STRING
+    private var appendText: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private val PRESSED_AND_FIRED: String = "pressed & fired"
 
@@ -68,16 +68,16 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
         stringBuffer!!.append(touchButtonInput!!.toString())
         stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
         stringBuffer!!.append(append)
-        this.append = stringBuffer!!.toString()!!
-        this.string = StringMaker().append(this.listString)!!.append(this.append)!!.toString()!!
+        this.appendText = stringBuffer!!.toString()!!
+        this.string = StringMaker().append(this.listString)!!.append(this.appendText)!!.toString()!!
     }
 
     open fun append(append: String)
         // nullable = true from not(false or (false and false)) = true
     {
         var append = append
-        this.append = StringMaker().append(this.append)!!.append(append)!!.toString()!!
-        this.string = StringMaker().append(this.listString)!!.append(this.append)!!.toString()!!
+        this.appendText = StringMaker().append(this.appendText)!!.append(append)!!.toString()!!
+        this.string = StringMaker().append(this.listString)!!.append(this.appendText)!!.toString()!!
     }
 
     open fun clearLog(x: Int, y: Int)
@@ -85,12 +85,12 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
     {
         var x = x
         var y = y
-        this.append =
+        this.appendText =
             StringMaker()
                 .append(GPoint.toStringStatic(x, y, 0))!!
                 .append(CommonSeps.getInstance()!!.SPACE)!!
                 .toString()!!
-        this.string = StringMaker().append(this.listString)!!.append(this.append)!!.toString()!!
+        this.string = StringMaker().append(this.listString)!!.append(this.appendText)!!.toString()!!
     }
 
     open fun releaseAndNotFired()
@@ -144,7 +144,7 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
         var touchButtonInput: TouchButtonInput = super.removeAt(index)!!
 
         this.listString = this.list.toString()!!
-        this.string = StringMaker().append(this.listString)!!.append(this.append)!!.toString()!!
+        this.string = StringMaker().append(this.listString)!!.append(this.appendText)!!.toString()!!
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return touchButtonInput
@@ -160,7 +160,7 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
         var isRemoved: Boolean = super.remove(touchButtonInput)
 
         this.listString = this.list.toString()!!
-        this.string = StringMaker().append(this.listString)!!.append(this.append)!!.toString()!!
+        this.string = StringMaker().append(this.listString)!!.append(this.appendText)!!.toString()!!
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return isRemoved
@@ -172,7 +172,7 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
         var touchButtonInput = touchButtonInput
         super.add(touchButtonInput)
         this.listString = this.list.toString()!!
-        this.string = StringMaker().append(this.listString)!!.append(this.append)!!.toString()!!
+        this.string = StringMaker().append(this.listString)!!.append(this.appendText)!!.toString()!!
     }
 
     override fun toString()

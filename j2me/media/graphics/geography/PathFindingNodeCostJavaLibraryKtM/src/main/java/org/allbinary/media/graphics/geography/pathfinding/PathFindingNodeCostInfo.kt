@@ -85,8 +85,18 @@ open public class PathFindingNodeCostInfo : Object, Comparable<PathFindingNodeCo
         : Int {
         var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 
+        if (this.totalCostP < pathFindingNodeCostInfo!!.totalCostP) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return -1
+        } else if (this.totalCostP > pathFindingNodeCostInfo!!.totalCostP) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 1
+        }
+
         // if statement needs to be on the same line and ternary does not work the same way.
-        return java.lang.Long.compare(this.totalCostP, pathFindingNodeCostInfo!!.totalCostP)
+        return 0
     }
 
     override fun toString()

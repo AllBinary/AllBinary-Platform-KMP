@@ -35,6 +35,9 @@ import org.allbinary.business.user.group.GroupData
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.util.BasicArrayList
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class AffiliateSalesEntity : AbSqlBean
                 , AffiliateSalesEntityInterface {
@@ -63,7 +66,7 @@ var value = value
             super.deleteWhere(StoreFrontData.getInstance()!!.NAME, value)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, this.commonStrings!!.delete)
@@ -74,7 +77,7 @@ var value = value
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.delete, e)
@@ -131,6 +134,14 @@ super.updateWhere(EntryData.getInstance()!!.ID, updatedValues!!.get(EntryData.ge
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.dropTable()
+}
+
+
+    override fun insert(values: BasicArrayList)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var values = values
+super.insert(values)
 }
 
 

@@ -23,6 +23,7 @@ import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.animation.NullIndexedAnimationFactory
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
+import org.allbinary.animation.RotationAnimation
 import org.allbinary.animation.RotationAnimationInterfaceCompositeInterface
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
@@ -647,5 +648,20 @@ open public class BuildingLayer :
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return BuildingLayer.getStaticType()
+    }
+
+    override fun getRotationAnimationInterface()
+    // nullable = true from not(false or (false and true)) = true
+    : RotationAnimation {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getRotationAnimationInterface()
+    }
+
+    override fun setFrame(index: Int)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var index = index
+        super.setFrame(index)
     }
 }

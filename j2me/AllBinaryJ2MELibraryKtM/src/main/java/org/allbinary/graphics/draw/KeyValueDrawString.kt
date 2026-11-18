@@ -66,10 +66,6 @@ open public class KeyValueDrawString : Object, UpdateMyFontInterface {
         // nullable = true from not(false or (false and false)) = true
     {
         var value = value
-
-        if (value != null) {
-
-            this.value = value
-        }
+        this.value = value
     }
 }

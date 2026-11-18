@@ -36,6 +36,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.client.XmlRpcAbeLicenseRetrievalClient
 import org.allbinary.globals.PATH_GLOBALS
 import org.allbinary.util.BasicArrayList
+import org.allbinary.string.CommonStrings
 
 open public class LicenseClientAndServerTest
             : Object
@@ -58,7 +59,7 @@ licensingTest!!.test()
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
+logUtil!!.put(CommonStrings.getInstance()!!.EXCEPTION, "main()", "main()", e)
 }
 
 }
@@ -99,29 +100,9 @@ this.vector.add(options[index]!!)
     var lineNumberReader: LineNumberReader = LineNumberReader(reader)
 
 
-        while(true)
+        while(lineNumberReader!!.ready())
         {
-
-    var line: String = lineNumberReader!!.readLine()!!
-
-
-    
-                        if(line != 
-                                    null
-                                )
-                        
-                                    {
-                                    this.vector.add(line)
-
-                                    }
-                                
-                        else {
-                            break;
-
-                    
-
-                        }
-                            
+this.vector.add(lineNumberReader!!.readLine())
 }
 
 

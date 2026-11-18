@@ -50,6 +50,8 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.servlet.BlisketServletUtil
 import org.allbinary.string.CommonStrings
 import org.apache.commons.fileupload.FileItem
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class UploadFileServlet : HttpServlet {
         
@@ -147,7 +149,7 @@ response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Please Login")
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)
@@ -220,7 +222,7 @@ var filePath = filePath
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     

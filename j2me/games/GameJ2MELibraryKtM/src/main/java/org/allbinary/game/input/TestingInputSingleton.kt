@@ -58,7 +58,7 @@ open public class TestingInputSingleton : AllBinaryGameLayer, GameInputInterface
         GameInputProcessorUtil.init(this.inputProcessorArray)
     }
 
-    private var paintable: PaintableInterface = NullPaintable.getInstance()!!
+    private var testInputPaintable: PaintableInterface = NullPaintable.getInstance()!!
 
     override fun initInputProcessors()
         // nullable = true from not(false or (false and true)) = true
@@ -71,7 +71,7 @@ open public class TestingInputSingleton : AllBinaryGameLayer, GameInputInterface
 
         var testInputInterface: TestInputInterface = aTestInputInterface
 
-        this.paintable = testInputInterface
+        this.testInputPaintable = testInputInterface
         this.inputProcessorArray[Canvas.UP] =
             object : GameInputProcessor() {
 
@@ -209,7 +209,7 @@ open public class TestingInputSingleton : AllBinaryGameLayer, GameInputInterface
         // nullable = true from not(false or (false and false)) = true
     {
         var graphics = graphics
-        this.paintable.paint(graphics)
+        this.testInputPaintable!!.paint(graphics)
     }
 
     override fun implmentsGameInputInterface()

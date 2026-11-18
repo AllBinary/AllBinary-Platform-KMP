@@ -140,12 +140,9 @@ FileLog.logFileBak= File(logPath, stringMaker!!.append(backupFileName)!!.append(
     var tmpIn: BufferedReader = BufferedReader(FileReader(logFile))
 
 
-        while((
-                        { line= tmpIn!!.readLine()!!; line }()
-                    ) != 
-                                    null
-                                )
+        while(tmpIn!!.ready())
         {
+line= tmpIn!!.readLine()!!
 tmpOut!!.write(line, 0, line.length)
 tmpOut!!.newLine()
 }

@@ -40,6 +40,8 @@ import org.apache.commons.lang3.StringEscapeUtils
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import views.business.context.modules.storefront.HttpStoreComponentView
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class GenericBodyCustomizerView : HttpStoreComponentView
                 , DomNodeInterface {
@@ -120,7 +122,7 @@ var document = document
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)

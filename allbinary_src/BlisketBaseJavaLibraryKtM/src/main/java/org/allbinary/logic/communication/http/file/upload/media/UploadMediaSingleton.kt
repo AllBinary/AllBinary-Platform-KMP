@@ -36,6 +36,8 @@ import org.allbinary.logic.visual.media.MediaData
 import org.allbinary.logic.visual.media.MediaIOUtil
 import org.allbinary.logic.visual.media.MediaTypeData
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class UploadMediaSingleton
             : Object
@@ -143,7 +145,7 @@ this.writerFileTypesHashMap!!.put(writerFileTypes[index]!!, RESIZABLE_MEDIA)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     

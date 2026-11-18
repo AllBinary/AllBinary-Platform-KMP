@@ -89,29 +89,16 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
         if (newDisplay != NullCanvas.NULL_CANVAS) {
 
             title = newDisplay!!.getTitle()!!
-
-            if (title != null) {
-
-                this.logUtil!!.putF(
-                    StringMaker()
-                        .append(this.SETTING_)!!
-                        .append(title)!!
-                        .append(this._DISPLAY_)!!
-                        .append(StringUtil.getInstance()!!.toString(newDisplay))!!
-                        .toString(),
-                    this,
-                    this.SET_DISPLAY,
-                )
-            } else {
-                this.logUtil!!.putF(
-                    StringMaker()
-                        .append(this.SETTING_NO_TITLE)!!
-                        .append(StringUtil.getInstance()!!.toString(newDisplay))!!
-                        .toString(),
-                    this,
-                    this.SET_DISPLAY,
-                )
-            }
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append(this.SETTING_)!!
+                    .append(title)!!
+                    .append(this._DISPLAY_)!!
+                    .append(StringUtil.getInstance()!!.toString(newDisplay))!!
+                    .toString(),
+                this,
+                this.SET_DISPLAY,
+            )
         }
 
         var display: Display = this.getDisplay()!!

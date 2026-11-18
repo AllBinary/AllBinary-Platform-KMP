@@ -42,6 +42,8 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class CssPropertyValues
             : Object
@@ -71,7 +73,7 @@ this.propertyValueVector= BasicArrayListD()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
                                     this.logUtil!!.putF("Number Of Properties: " +cssPropertyNodeVector!!.size(), this, "CssProperties()")
@@ -99,7 +101,7 @@ this.propertyValueVector= BasicArrayListD()
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
                                     this.logUtil!!.putF("Property Value: " +propertyValue, this, "CssProperties()")
@@ -188,7 +190,7 @@ index++
 var document = document
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     

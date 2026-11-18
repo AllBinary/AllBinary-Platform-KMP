@@ -66,7 +66,7 @@ companion object {
     //var bits = bits
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return java.lang.Double.longBitsToDouble(bits)
+                        return Double.fromBits(bits)
 }
 
 
@@ -76,7 +76,7 @@ companion object {
     //var bits = bits
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return java.lang.Float.intBitsToFloat(bits)
+                        return Float.fromBits(bits)
 }
 
 

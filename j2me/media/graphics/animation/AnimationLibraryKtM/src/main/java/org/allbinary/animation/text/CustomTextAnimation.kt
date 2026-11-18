@@ -79,6 +79,14 @@ open public class CustomTextAnimation : TextAnimation, TextInterface {
             Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (this.fontSize * scaleX).toInt())!!
     }
 
+    override fun setTextWithOnMeasure(text: String, textChangeListener: TextChangeListener)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var text = text
+        // var textChangeListener = textChangeListener
+        super.setTextWithOnMeasure(text, textChangeListener)
+    }
+
     override fun setText(text: String)
         // nullable = true from not(false or (false and false)) = true
     {

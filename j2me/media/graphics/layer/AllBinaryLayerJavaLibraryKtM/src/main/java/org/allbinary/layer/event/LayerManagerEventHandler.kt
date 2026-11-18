@@ -134,13 +134,14 @@ open public class LayerManagerEventHandler : BasicEventHandler {
 
         var layerManagerEventListenerInterface: LayerManagerEventListenerInterface
 
-        var index: Int = 0
+        var listenerIndex: Int = 0
 
-        while (index < eventListenerInterfaceList!!.size()) {
+        while (listenerIndex < eventListenerInterfaceList!!.size()) {
 
             try {
                 eventListenerInterface =
-                    eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
+                    eventListenerInterfaceList!!.objectArray[listenerIndex]!!
+                        as EventListenerInterface
                 layerManagerEventListenerInterface =
                     (eventListenerInterface as LayerManagerEventListenerInterface)
                 layerManagerEventListenerInterface!!.onDeleteLayerManagerEvent(
@@ -155,7 +156,7 @@ open public class LayerManagerEventHandler : BasicEventHandler {
                 )
             }
 
-            index++
+            listenerIndex++
         }
     }
 

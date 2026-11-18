@@ -40,6 +40,8 @@ import org.allbinary.logic.control.crypt.SuperCrypt
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class Password
             : Object
@@ -87,7 +89,7 @@ this.password= value
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATION))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VALIDATION))
                         
                                     {
                                     this.logUtil!!.putF("Password: " +this.password, this, commonStrings!!.IS_VALID)
@@ -101,7 +103,7 @@ this.password= value
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATION))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VALIDATION))
                         
                                     {
                                     this.logUtil!!.putF("Password is invalid", this, commonStrings!!.IS_VALID)
@@ -119,7 +121,7 @@ valid= false
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to validate form", "Password", commonStrings!!.IS_VALID, e)

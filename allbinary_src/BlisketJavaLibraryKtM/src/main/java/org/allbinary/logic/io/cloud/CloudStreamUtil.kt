@@ -29,6 +29,8 @@
 import java.io.InputStream
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.AbFile
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class CloudStreamUtil
             : Object
@@ -63,7 +65,7 @@ companion object {
 : InputStream{
 var file = file
 
-    var inputStream: InputStream = AbFileInputStream(file)
+    var inputStream: InputStream = AbFileInputStream.createFromAbFile(file)!!
 
 
     var available: Int = inputStream!!.available()
@@ -75,7 +77,7 @@ var file = file
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Cloud File Bytes: " +available, this, "processRequest()")
@@ -110,7 +112,7 @@ var file = file
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Local File Bytes: " +available, this, "processRequest()")
@@ -121,7 +123,7 @@ var file = file
                                     }
                                 
                         else {
-                            inputStream= AbFileInputStream(file)
+                            inputStream= AbFileInputStream.createFromAbFile(file)!!
 available= inputStream!!.available()
 
     
@@ -130,7 +132,7 @@ available= inputStream!!.available()
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.putF("Cloud File Bytes: " +available, this, "processRequest()")
@@ -168,7 +170,7 @@ var file = file
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Local File Bytes: " +available, this, "processRequest()")

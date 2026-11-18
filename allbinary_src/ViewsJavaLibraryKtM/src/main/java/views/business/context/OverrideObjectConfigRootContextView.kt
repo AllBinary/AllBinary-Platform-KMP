@@ -41,6 +41,8 @@ import org.allbinary.logic.visual.transform.template.TransformTemplateInterface
 import org.allbinary.string.CommonSeps
 import org.w3c.dom.Document
 import views.business.context.modules.storefront.HttpStoreComponentView
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class OverrideObjectConfigRootContextView : HttpStoreComponentView {
         
@@ -56,7 +58,7 @@ var transformInfoInterface = transformInfoInterface
                     
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +transformInfoInterface!!.getName(), this, "OverrideObjectRootContextView()")
@@ -75,7 +77,7 @@ var transformInfoInterface = transformInfoInterface
         try {
             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("View Name: " +this.getTransformInfoInterface()!!.getName(), this, "view()")
@@ -124,7 +126,7 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Retrieved OverrideObjectConfig: " +XmlDocumentHelper.toString(overrideObjectConfigDocument), this, "view()")
@@ -149,7 +151,7 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 componentInterface!!.getTransformInfoInterface()!!.setObjectConfigInterface(transformInfoObjectConfigInterface)
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Set OverrideObjectConfig: " +componentInterface!!.getTransformInfoInterface()!!.getObjectConfigInterface()!!.toString(), this, "view()")
@@ -163,7 +165,7 @@ componentInterface!!.getTransformInfoInterface()!!.setObjectConfigInterface(tran
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)

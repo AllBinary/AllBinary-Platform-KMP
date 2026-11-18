@@ -36,8 +36,12 @@ import org.allbinary.graphics.j2me.GraphicsException
 import org.allbinary.graphics.j2me.MyFrame
 import org.allbinary.graphics.j2me.workarea.WorkAreaJPanel
 import org.allbinary.graphics.j2me.workarea.WorkAreaJPanelInterface
+import java.awt.Frame
+import java.awt.event.WindowAdapter
+import java.awt.event.WindowEvent
+import javax.swing.JDialog
 
-open public class NewWorkAreaJDialog : javax.swing.JDialog {
+open public class NewWorkAreaJDialog : JDialog {
         
 companion object {
             
@@ -69,7 +73,7 @@ var args = args
     private var nameJTextField: JTextField
 public constructor (parent: MyFrame, modal: Boolean, dimension: Dimension, newName: String)                        
 
-                            : super(parent as java.awt.Frame, modal){
+                            : super(parent as Frame, modal){
 var parent = parent
 var modal = modal
 var dimension = dimension
@@ -174,11 +178,11 @@ this.dispose()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-addWindowListener(object: java.awt.event.WindowAdapter()
+addWindowListener(object: WindowAdapter()
                                 {
                                 
                                 
-    open override fun windowClosing(evt: java.awt.event.WindowEvent)
+    open override fun windowClosing(evt: WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -191,7 +195,7 @@ pack()
 }
 
 
-    open fun closeDialog(evt: java.awt.event.WindowEvent)
+    open fun closeDialog(evt: WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

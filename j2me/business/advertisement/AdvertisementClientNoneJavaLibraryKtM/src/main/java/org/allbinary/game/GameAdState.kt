@@ -20,6 +20,7 @@ import org.allbinary.business.advertisement.GameAdStateBase
 import org.allbinary.input.event.VirtualKeyboardEvent
 import org.allbinary.input.event.VirtualKeyboardEventHandler
 import org.allbinary.input.event.VirtualKeyboardEventListenerInterface
+import org.allbinary.logic.util.event.AllBinaryEventObject
 
 open public class GameAdState : GameAdStateBase, VirtualKeyboardEventListenerInterface {
 
@@ -37,5 +38,12 @@ open public class GameAdState : GameAdStateBase, VirtualKeyboardEventListenerInt
         // nullable = true from not(false or (false and false)) = true
     {
         var virtualKeyboardEvent = virtualKeyboardEvent
+    }
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        super.onEvent(eventObject)
     }
 }

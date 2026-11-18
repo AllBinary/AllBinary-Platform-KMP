@@ -58,6 +58,8 @@ import org.allbinary.logic.visual.transform.info.viewObject.TransformInfoObjectD
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class TransformInfo
             : Object
@@ -146,7 +148,7 @@ var hashMap = hashMap
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -204,7 +206,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("TransformInfo override view Object for: " +this.getName(), this, "override(HashMap hashMap)")
@@ -236,7 +238,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("TransformInfo override ObjectConfig for: " +this.getName(), this, "override(HashMap hashMap)")
@@ -257,7 +259,7 @@ this.setObjectConfig(hashMap!!.get(transformInfoData!!.OBJECTCONFIG) as String)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("TransformInfo override ObjectConfig File for: " +this.getName(), this, "override(HashMap hashMap)")
@@ -313,7 +315,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("TransformInfo override Template for: " +this.getName(), this, "override(HashMap hashMap)")
@@ -358,7 +360,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("TransformInfo override Data for: " +this.getName(), this, "override(HashMap hashMap)")
@@ -383,7 +385,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer= StringMaker()
@@ -408,7 +410,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "TransformInfoInterface(Has
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     this.logUtil!!.putF(this.log(), this, "override")
@@ -667,7 +669,7 @@ this.data= value
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Data File overriding existing data: " +this.getDataFilePath(), this, "getData()")
@@ -682,7 +684,7 @@ this.data= fileData
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Could Not Load Data from: " +this.getDataFile(), this, "getData()", e)
@@ -703,7 +705,7 @@ this.data= fileData
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.putF("Data: " +XmlDocumentHelper.toString(DomDocumentHelper.create(data)), this, "getData()")
@@ -716,7 +718,7 @@ this.data= fileData
                         else {
                             
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     
@@ -730,7 +732,7 @@ stringBuffer!!.append("\nPath: ")
 stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.putF(stringBuffer!!.toString(), this, "getData()")
@@ -747,7 +749,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Could Not Preview Data: " +this.data, this, "getData()", e)
@@ -780,7 +782,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.putF("No Data So Creating New Document", this, "getDataDocument()")

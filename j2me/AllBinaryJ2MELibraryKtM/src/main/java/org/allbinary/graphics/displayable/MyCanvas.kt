@@ -67,6 +67,22 @@ open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
         this.commandStack = StdUtil.getInstance()!!.createStack()!!
     }
 
+    override fun getWidth()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getWidth()
+    }
+
+    override fun getHeight()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getHeight()
+    }
+
     override fun setFullScreenMode(mode: Boolean)
         // nullable = true from not(false or (false and false)) = true
     {

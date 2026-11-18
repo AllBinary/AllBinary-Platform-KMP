@@ -32,6 +32,8 @@ import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.j2me.workarea.canvas.CanvasDom
 import org.allbinary.graphics.j2me.workarea.canvas.IntegerDimension
 import org.w3c.dom.Node
+import java.awt.event.KeyEvent
+import java.awt.event.MouseEvent
 
 interface GraphicItemInterface {
         
@@ -120,43 +122,43 @@ interface GraphicItemInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun mouseClicked(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseClicked(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun mouseEntered(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseEntered(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun mouseExited(mouseEvent: java.awt.event.MouseEvent)
+    open fun mouseExited(mouseEvent: MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun mousePressed(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mousePressed(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun mouseReleased(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseReleased(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun mouseDragged(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseDragged(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun mouseMoved(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseMoved(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
+    open fun keyPressed(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
+    open fun keyReleased(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
+    open fun keyTyped(keyEvent: KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

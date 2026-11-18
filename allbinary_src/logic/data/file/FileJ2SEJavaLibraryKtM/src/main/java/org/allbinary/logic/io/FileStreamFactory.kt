@@ -57,7 +57,7 @@ open public class FileStreamFactory : Object {
         var file: AbFile = AbFile.createAbFileFromAbPath(FILEABPATH)!!
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return AbFileInputStream(file)
+        return AbFileInputStream.createFromAbFile(file)
     }
 
     @Throws(Exception::class)

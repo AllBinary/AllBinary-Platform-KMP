@@ -34,6 +34,8 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class HttpFilePermissions
             : Object
@@ -54,7 +56,7 @@ var fullPath = fullPath
 this.file= AbFile.createAbFileFromAbPath(AbPath(fullPath!!.toFileSystemString(), FileUploadData.getInstance()!!.FILE))!!
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.putF("Loading Privileges: " +fullPath!!.toFileSystemString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -72,7 +74,7 @@ this.file= AbFile.createAbFileFromAbPath(AbPath(fullPath!!.toFileSystemString(),
                                 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.putF("User Roles: " +this.userRoles, this, this.commonStrings!!.CONSTRUCTOR)

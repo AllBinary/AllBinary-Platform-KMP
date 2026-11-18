@@ -15,7 +15,6 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.game.paint.help
 
-import java.lang.Object
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import kotlin.Array
@@ -28,7 +27,6 @@ import org.allbinary.game.input.mapping.PersistentInputMapping
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.color.BasicColorUtil
-import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -72,33 +70,6 @@ open public class InputMappingHelpPaintable : HelpPaintable {
         Array(0) { arrayOfNulls<BasicColor?>(0) }
 
     private var selectedBasicColor: BasicColor
-
-    open public inner class UpdateMyFontProperties : Object {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
-        }
-            */
-
-        // Auto Generated
-        public constructor() : super() {}
-
-        var actionStringArray: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
-
-        var keymappingBeginWidthArray: IntArray = NullUtil.getInstance()!!.NULL_INT_ARRAY
-
-        var actionStringDeltaXArray: IntArray = NullUtil.getInstance()!!.NULL_INT_ARRAY
-
-        var inputDeltaXArray: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
-
-        var sepArray: Array<Array<String?>?> =
-            StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY_OF_ARRAYS
-
-        var sepWidthArray: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
-
-        var charHeight: Int = 0
-    }
 
     private var updateMyFontProperties: UpdateMyFontProperties = UpdateMyFontProperties()
 

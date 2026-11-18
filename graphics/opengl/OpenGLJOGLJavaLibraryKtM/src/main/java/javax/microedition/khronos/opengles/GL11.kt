@@ -12,8 +12,11 @@
         import kotlin.reflect.KClass
                     
         
+import java.nio.Buffer
+import java.nio.FloatBuffer
+import java.nio.IntBuffer
 
-interface GL11 : javax.microedition.khronos.opengles.GL10 {
+interface GL11 : GL10 {
         
 companion object {
             
@@ -267,11 +270,11 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glBufferData(target: Int, size: Int, data: java.nio.Buffer, usage: Int)
+    open fun glBufferData(target: Int, size: Int, data: Buffer, usage: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glBufferSubData(target: Int, offset: Int, size: Int, data: java.nio.Buffer)
+    open fun glBufferSubData(target: Int, offset: Int, size: Int, data: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -279,7 +282,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glClipPlanef(plane: Int, equation: java.nio.FloatBuffer)
+    open fun glClipPlanef(plane: Int, equation: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -295,7 +298,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glDeleteBuffers(n: Int, buffers: java.nio.IntBuffer)
+    open fun glDeleteBuffers(n: Int, buffers: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -307,7 +310,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGenBuffers(n: Int, buffers: java.nio.IntBuffer)
+    open fun glGenBuffers(n: Int, buffers: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -315,7 +318,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetBufferParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
+    open fun glGetBufferParameteriv(target: Int, pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -323,7 +326,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetClipPlanef(pname: Int, eqn: java.nio.FloatBuffer)
+    open fun glGetClipPlanef(pname: Int, eqn: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -331,7 +334,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetFloatv(pname: Int, params: java.nio.FloatBuffer)
+    open fun glGetFloatv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -339,7 +342,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetLightfv(light: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glGetLightfv(light: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -347,7 +350,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetMaterialfv(face: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glGetMaterialfv(face: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -355,7 +358,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetTexEnviv(env: Int, pname: Int, params: java.nio.IntBuffer)
+    open fun glGetTexEnviv(env: Int, pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -363,7 +366,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetTexParameterfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glGetTexParameterfv(target: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -371,7 +374,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glGetTexParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
+    open fun glGetTexParameteriv(target: Int, pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -399,7 +402,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glPointParameterfv(pname: Int, params: java.nio.FloatBuffer)
+    open fun glPointParameterfv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -415,7 +418,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glTexEnviv(target: Int, pname: Int, params: java.nio.IntBuffer)
+    open fun glTexEnviv(target: Int, pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -423,7 +426,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glTexParameterfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
+    open fun glTexParameterfv(target: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -435,7 +438,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun glTexParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
+    open fun glTexParameteriv(target: Int, pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 

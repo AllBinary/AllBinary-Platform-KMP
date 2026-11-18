@@ -20,10 +20,10 @@ import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.Item
 import javax.microedition.lcdui.NullImage
 import kotlin.Array
+import org.allbinary.MIDPUtil
 import org.allbinary.game.configuration.GameConfigurationGauge
 import org.allbinary.game.configuration.GameConfigurationUtil
 import org.allbinary.graphics.displayable.screen.CommandForm
-import org.allbinary.logic.MEUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -51,7 +51,7 @@ open public class GameFeatureFormUtil : Object {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val meUtil: MEUtil = MEUtil.getInstance()!!
+    private val meUtil: MIDPUtil = MIDPUtil.getInstance()!!
 
     open fun getChoiceGroup(
         hashtable: ABHashtable<Any, Any>,

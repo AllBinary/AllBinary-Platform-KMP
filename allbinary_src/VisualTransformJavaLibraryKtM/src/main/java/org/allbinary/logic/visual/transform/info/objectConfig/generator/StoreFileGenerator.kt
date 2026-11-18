@@ -48,6 +48,8 @@ import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.logic.visual.transform.info.TransformInfosData
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class StoreFileGenerator : TransformInfoObjectConfigGenerator {
         
@@ -152,7 +154,7 @@ this.fileAbPath= abPath
 this.file= AbFile.createAbFileFromAbPath(this.fileAbPath)!!
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("File: " +this.fileAbPath!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -170,7 +172,7 @@ this.file= AbFile.createAbFileFromAbPath(this.fileAbPath)!!
 var input = input
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Processing", this, this.commonStrings!!.PROCESS)
@@ -208,7 +210,7 @@ FileUtil.getInstance()!!.write(inputStream, this.file)
                             
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     this.logUtil!!.putF("Processed", this, this.commonStrings!!.PROCESS)

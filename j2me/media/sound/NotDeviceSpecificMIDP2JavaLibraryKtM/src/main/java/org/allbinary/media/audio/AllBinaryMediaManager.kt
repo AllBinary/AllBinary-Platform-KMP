@@ -20,6 +20,7 @@ import java.lang.Object
 import javax.microedition.media.Manager
 import javax.microedition.media.MediaException
 import javax.microedition.media.Player
+import org.allbinary.MIDPUtil
 import org.allbinary.TsUtil
 import org.allbinary.audio.AudioContentTypeDataFactory
 import org.allbinary.data.resource.ResourceUtil
@@ -105,7 +106,7 @@ open public class AllBinaryMediaManager : Object {
 
                     // if statement needs to be on the same line and ternary does not work the same
                     // way.
-                    return Manager.createPlayer(
+                    return MIDPUtil.getInstance()!!.createPlayerFromInputStream(
                         inputStream,
                         AudioContentTypeDataFactory.getInstance()!!.MIME_AUDIO_WAV.getName(),
                     )

@@ -29,6 +29,8 @@
 import org.allbinary.globals.MESSAGES
 import org.allbinary.logic.control.validate.ValidationComponentInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
+import org.w3c.dom.Document
+import org.w3c.dom.Node
 
 open public class ValidationView : ShippingMethodsView
                 , ValidationComponentInterface {
@@ -55,16 +57,16 @@ var transformInfoInterface = transformInfoInterface
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document?{
+: Document?{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
 
 
-    open fun toValidationInfoNode(document: org.w3c.dom.Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node?{
+: Node?{
 var document = document
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,6 +80,17 @@ var document = document
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MESSAGES.CONTACTADMIN
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getTransformInfoInterface()
+        //nullable = true from not(false or (false and true)) = true
+: TransformInfoInterface{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getTransformInfoInterface()
 }
 
 

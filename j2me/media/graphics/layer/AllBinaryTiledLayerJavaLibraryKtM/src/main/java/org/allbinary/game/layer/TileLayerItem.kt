@@ -122,4 +122,12 @@ open public class TileLayerItem : ABCustomItem, ABCustomItemInterface {
         var x = x
         var y = y
     }
+
+    override fun getLabel()
+    // nullable = true from not(false or (false and true)) = true
+    : String {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return super.getLabel()
+    }
 }

@@ -31,6 +31,7 @@ import org.allbinary.business.init.db.LogDbInitInfo
 import org.allbinary.logic.communication.http.request.AbeHttpRequestInfoData
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.util.BasicArrayList
 
 open public class LogTableEntity : AbSqlBean
                 , LogTableEntityInterface {
@@ -70,6 +71,32 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.createTable(this.createTableStatement())
+}
+
+
+    override fun deleteWhere(key: String, value: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var key = key
+    //var value = value
+super.deleteWhere(key, value)
+}
+
+
+    override fun insert(values: BasicArrayList)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var values = values
+super.insert(values)
+}
+
+
+    override fun dropTable()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.dropTable()
 }
 
 

@@ -59,78 +59,6 @@ open public class MultipleScrollSelectionHorizontalForm :
         }
     }
 
-    open public inner class MultipleScrollSelectionFormHorizontalPaintable : ItemIndexPaintable {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
-        }
-            */
-
-        private val multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm
-
-        constructor(multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm) {
-            // var multipleScrollSelectionForm = multipleScrollSelectionForm
-            this.multipleScrollSelectionForm = multipleScrollSelectionForm
-        }
-
-        @Throws(Exception::class)
-        override fun paint(
-            graphics: Graphics,
-            index: Int,
-            item: ABCustomItem,
-            dx: Int,
-            dy: Int,
-        )
-            // nullable = true from not(false or (false and false)) = true
-            : Int {
-            // var graphics = graphics
-            // var index = index
-            // var item = item
-            var dx = dx
-            // var dy = dy
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.multipleScrollSelectionForm!!.paintHorizontal(graphics, index, item, dx, dy)
-        }
-    }
-
-    open public inner class MultipleScrollSelectionFormVerticalPaintable : ItemIndexPaintable {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
-        }
-            */
-
-        private val multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm
-
-        constructor(multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm) {
-            // var multipleScrollSelectionForm = multipleScrollSelectionForm
-            this.multipleScrollSelectionForm = multipleScrollSelectionForm
-        }
-
-        @Throws(Exception::class)
-        override fun paint(
-            graphics: Graphics,
-            index: Int,
-            item: ABCustomItem,
-            dx: Int,
-            dy: Int,
-        )
-            // nullable = true from not(false or (false and false)) = true
-            : Int {
-            // var graphics = graphics
-            // var index = index
-            // var item = item
-            var dx = dx
-            // var dy = dy
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.multipleScrollSelectionForm!!.paintVertical(graphics, index, item, dx, dy)
-        }
-    }
-
     private var rectPaintable: Paintable = NullPaintable.getInstance()!!
 
     private var multipleScrollSelectionHorizontalFormTypeItemIndexPaintable: ItemIndexPaintable =
@@ -171,22 +99,7 @@ open public class MultipleScrollSelectionHorizontalForm :
 
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {} else {
 
-            open class MPaintable : Paintable {
-
-                // Auto Generated
-                public constructor() : super() {}
-
-                override fun paint(graphics: Graphics)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    // var graphics = graphics
-                    this@MultipleScrollSelectionHorizontalForm.fillRect(graphics)
-                }
-            }
-
-            // Otherwise - statement - EmptyStmt
-
-            this.rectPaintable = MPaintable()
+            this.rectPaintable = MultipleScrollSelectionFormRectPaintable(this)
         }
     }
 

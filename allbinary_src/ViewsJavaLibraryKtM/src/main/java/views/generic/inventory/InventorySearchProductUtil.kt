@@ -41,6 +41,8 @@ import org.allbinary.logic.visual.transform.data.TransformStoreDocumentFactory
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpSearch
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class InventorySearchProductUtil
             : Object
@@ -124,7 +126,7 @@ viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface,
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "getProduct", e)

@@ -27,8 +27,9 @@
                     
         
 import org.w3c.dom.Document
+import java.awt.event.KeyListener
 
-interface WorkAreaJPanelInterface : java.awt.event.KeyListener {
+interface WorkAreaJPanelInterface : KeyListener {
         
 
     open fun getName()

@@ -34,6 +34,7 @@ import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
+import org.allbinary.globals.URLGLOBALS
 
 open public class BasicStoreFront
             : Object
@@ -144,7 +145,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 : String{
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org.allbinary.globals.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
+                        return URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
 }
 
 
@@ -158,7 +159,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostName()!!
@@ -186,7 +187,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostNamePath()!!
@@ -214,7 +215,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostName()!!
@@ -242,7 +243,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 
     
-                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
+                        if(URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostNamePath()!!

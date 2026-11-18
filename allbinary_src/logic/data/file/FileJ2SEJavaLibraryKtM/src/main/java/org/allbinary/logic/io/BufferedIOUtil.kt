@@ -42,14 +42,8 @@ open public class BufferedIOUtil : Object {
 
             var tmpIn: BufferedReader = BufferedReader(FileReader(AbFileNativeUtil.get(backupFile)))
 
-            while (true) {
+            while (tmpIn!!.ready()) {
                 line = tmpIn!!.readLine()!!
-
-                if (line == null) {
-
-                    break
-                }
-
                 tmpOut!!.write(line, 0, line.length)
                 tmpOut!!.newLine()
             }

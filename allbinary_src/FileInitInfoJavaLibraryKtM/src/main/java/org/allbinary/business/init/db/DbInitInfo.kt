@@ -209,7 +209,7 @@ this.hasRead= false
                         
                                     {
                                     
-    var iFile: AbFileInputStream = AbFileInputStream(file)
+    var iFile: AbFileInputStream = AbFileInputStream.createFromAbFile(file)!!
 
 
     var iData: AbDataInputStream = AbDataInputStream(iFile)

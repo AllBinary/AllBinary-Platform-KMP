@@ -28,6 +28,8 @@
         
 import admin.taghelpers.TagHelperFactoryInterface
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class HelperTag : PropertiesTag {
         
@@ -41,7 +43,7 @@ public constructor (tagHelperFactoryInterface: TagHelperFactoryInterface){
     //var tagHelperFactoryInterface = tagHelperFactoryInterface
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -66,7 +68,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("Creating TagHelper with: \n" +this.getPropertiesHashMap()!!.toString(), this, "doStartTag")
@@ -94,7 +96,7 @@ this.anyType= this.tagHelperFactoryInterface!!.getInstance(this.getPropertiesHas
 : Int{
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     this.logUtil!!.putF("Tag Ended", this, "doEndTag")

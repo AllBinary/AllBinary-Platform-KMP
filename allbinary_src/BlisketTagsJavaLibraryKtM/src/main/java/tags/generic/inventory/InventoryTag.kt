@@ -33,6 +33,9 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
 import taghelpers.InventoryHelperFactory
 import tags.StoreValidationTransformTag
+import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class InventoryTag : StoreValidationTransformTag {
         
@@ -85,7 +88,7 @@ pageContext!!.getOut()!!.print(result)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "search()", e)
@@ -100,7 +103,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
                                     this.logUtil!!.put("Exception in Exception Handling", this, "search()", e)
@@ -151,7 +154,7 @@ pageContext!!.getOut()!!.print(result)
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "viewSummary()", e)
@@ -166,7 +169,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
                                     this.logUtil!!.put("Exception in Exception Handling", this, "viewSummary())", e)
@@ -196,7 +199,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.SEARCH) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.SEARCH) == 0)
                         
                                     {
                                     this.setName("Basic Search Inventory View")
@@ -210,7 +213,7 @@ this.search()
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEWSUMMARY) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEWSUMMARY) == 0)
                         
                                     {
                                     this.setName("Basic Inventory View")
@@ -224,7 +227,7 @@ this.viewSummary()
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(GLOBALS2.VIEW) == 0)
                         
                                     {
                                     this.setName("Basic Inventory View")

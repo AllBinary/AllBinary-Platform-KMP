@@ -47,6 +47,8 @@ import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
+import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class SimpleStateTaxModule
             : Object
@@ -94,7 +96,7 @@ this.storeFrontInterface= storeFrontInterface
 this.document= DomDocumentHelper.create(data)!!
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     this.logUtil!!.putF("Tax Doc: " +XmlDocumentHelper.toString(this.document), this, "getTaxRate")
@@ -193,7 +195,7 @@ this.storeFrontInterface= storeFrontInterface
 this.document= DomDocumentHelper.create(data)!!
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     this.logUtil!!.putF("Tax Doc: " +XmlDocumentHelper.toString(this.document), this, this.commonStrings!!.IS_VALID)
@@ -227,7 +229,7 @@ this.document= DomDocumentHelper.create(data)!!
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     
@@ -293,7 +295,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
             {
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     this.logUtil!!.put("Failed to validate", this, this.commonStrings!!.IS_VALID, e)
