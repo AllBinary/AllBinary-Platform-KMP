@@ -21,4 +21,12 @@
             <outputFileNameMapping></outputFileNameMapping>
         </dependencySet>
     </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <includes>
+                <include>*.kt</include>
+            </includes>
+        </fileSet>
+    </fileSets>
 </assembly>
