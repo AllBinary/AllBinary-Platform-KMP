@@ -35,7 +35,7 @@
         -->
         <module>../../AllBinary-Platform-Integrationkt</module>
         
-        <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryKtM</module>
+        <!-- Already in public build <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryKtM</module> -->
         <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEPlatformJavaLibraryKtM</module>
 
 <!--

@@ -43,7 +43,7 @@
         <!--        <module>../../media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>-->
         <module>../../media/graphics/LazyGameResourceNoneJavaLibraryKtM</module>
 
-        <module>../../../graphics/opengl/OpenGLNoneJavaLibraryKtM</module>
+        <!-- Already in public build <module>../../../graphics/opengl/OpenGLNoneJavaLibraryKtM</module> -->
 
         <!--
                 <module>../../../graphics/opengl/OpenGLESJavaLibraryKtM</module>

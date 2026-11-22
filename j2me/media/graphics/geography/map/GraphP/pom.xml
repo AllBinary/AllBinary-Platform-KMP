@@ -55,7 +55,7 @@
         <module>../../PathFindingNodeCostPerformantJavaLibraryKtM</module><!--
         <module>../../../../../../../workkt/j2me/media/graphics/geography/PathFindingNodeCostComplexJavaLibraryKtM</module>-->
         
-        <module>../../../../../../physics/FrictionJavaLibraryKtM</module>
+        <!-- Already in public build <module>../../../../../../physics/FrictionJavaLibraryKtM</module> -->
 <!--    
         <module>../StaticPathFindingRaceTrackJavaLibraryKtM</module>
         <module>../DynamicPathFindingRaceTrackJavaLibraryKtM</module>
